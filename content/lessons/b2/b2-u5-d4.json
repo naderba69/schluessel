@@ -134,6 +134,23 @@
               }
             ],
             "why": "der Arbeitgeber bezahlt! · die Anstellung finden (يجد!) · in den Ruhestand gehen (den — النصب!) · der Ruhestand (der!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يموّل",
+                "de": "finanzieren"
+              },
+              {
+                "ar": "المالية",
+                "de": "die Finanzen"
+              },
+              {
+                "ar": "الفوائد",
+                "de": "die Zinsen"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: finanzieren = «يموّل» · die Finanzen = «المالية» · die Zinsen = «الفوائد»"
           }
         ]
       },
@@ -169,6 +186,21 @@
             "q": "Wir ___ die Anstellung. (نجد!)",
             "a": "finden",
             "why": "finden يجد (Präsens wir: finden!) — Wir finden die Anstellung."
+          },
+          {
+            "q": "Wir ___ die Produkte.",
+            "a": "produzieren",
+            "why": "الكلمة الناقصة «produzieren» تعني «ينتج» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ kommt.",
+            "a": "Lieferung",
+            "why": "الكلمة الناقصة «Lieferung» تعني «الشحنة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir leben ___.",
+            "a": "sparsam",
+            "why": "الكلمة الناقصة «sparsam» تعني «مقتصد» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +236,21 @@
             "q": "~~Der Arbeitgeber sind wichtig.~~",
             "a": "Der Arbeitgeber ist wichtig.",
             "why": "المفرد der Arbeitgeber مع ist (لا sind!)!"
+          },
+          {
+            "q": "~~Die wirtschaft ist wichtig.~~",
+            "a": "Die Wirtschaft ist wichtig.",
+            "why": "الخطأ في «wirtschaft»! الصواب «Wirtschaft» — راجع القاعدة (الاقتصاد)."
+          },
+          {
+            "q": "~~Der verbraucher kauft.~~",
+            "a": "Der Verbraucher kauft.",
+            "why": "الخطأ في «verbraucher»! الصواب «Verbraucher» — راجع القاعدة (المستهلك)."
+          },
+          {
+            "q": "~~Die verschwendung ist schlimm.~~",
+            "a": "Die Verschwendung ist schlimm.",
+            "why": "الخطأ في «verschwendung»! الصواب «Verschwendung» — راجع القاعدة (التبذير)."
           }
         ]
       },
@@ -234,6 +281,111 @@
             "q": "تحدّث عن التقاعد! (جملتان!)",
             "a": "Er geht in den Ruhestand. Der Ruhestand ist schön.",
             "why": "التقاعد! (in den Ruhestand gehen!) — schön (جميل!) من A2!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Aufklärung» («التوعية») ثم تحدّث بها.",
+            "a": "Die Aufklärung ist wichtig.",
+            "why": "استعمل «die Aufklärung» («التوعية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «sachlich» («موضوعي») ثم تحدّث بها.",
+            "a": "Wir schreiben sachlich.",
+            "why": "استعمل «sachlich» («موضوعي») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «gerecht» («عادل») ثم تحدّث بها.",
+            "a": "Wir bleiben gerecht.",
+            "why": "استعمل «gerecht» («عادل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "zinsen"
+        ],
+        "items": [
+          {
+            "audioId": "word-arbeitgeber",
+            "speakText": "der Arbeitgeber.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "صاحب العمل",
+              "التوظيف",
+              "التقاعد"
+            ],
+            "a": "صاحب العمل",
+            "why": "الصوت يقول «der Arbeitgeber» — معناها «صاحب العمل». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-anstellung",
+            "speakText": "die Anstellung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Anstellung",
+              "der Arbeitgeber",
+              "der Ruhestand"
+            ],
+            "a": "die Anstellung",
+            "why": "الكلمة المسموعة «die Anstellung» تعني «التوظيف». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-ruhestand",
+            "speakText": "der Ruhestand.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التقاعد",
+              "صاحب العمل",
+              "التوظيف"
+            ],
+            "a": "التقاعد",
+            "why": "الصوت يقول «der Ruhestand» — معناها «التقاعد». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-zinsen",
+            "speakText": "die Zinsen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Zinsen",
+              "der Arbeitgeber",
+              "die Anstellung"
+            ],
+            "a": "die Zinsen",
+            "why": "الكلمة المسموعة «die Zinsen» تعني «الفوائد». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "finanzen"
+        ],
+        "items": [
+          {
+            "audioId": "word-arbeitgeber",
+            "speakText": "der Arbeitgeber.",
+            "a": "der Arbeitgeber",
+            "why": "اكتب ما تسمعه حرفياً: «der Arbeitgeber» تعني «صاحب العمل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-anstellung",
+            "speakText": "die Anstellung.",
+            "a": "die Anstellung",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Anstellung» («التوظيف»)."
+          },
+          {
+            "audioId": "word-ruhestand",
+            "speakText": "der Ruhestand.",
+            "a": "der Ruhestand",
+            "why": "اكتب المسموع بدقة: der Ruhestand — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-finanzen",
+            "speakText": "die Finanzen.",
+            "a": "die Finanzen",
+            "why": "اكتب ما تسمعه حرفياً: «die Finanzen» تعني «المالية». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +416,14 @@
           {
             "q": "«صاحب العمل يدفع.»؟",
             "a": "Der Arbeitgeber bezahlt."
+          },
+          {
+            "q": "«الوظيفة»؟",
+            "a": "die Anstellung"
+          },
+          {
+            "q": "«يتقاعد.»؟",
+            "a": "Er geht in den Ruhestand."
           }
         ]
       },
@@ -284,6 +444,14 @@
           {
             "q": "die Anstellung",
             "a": "التوظيف"
+          },
+          {
+            "q": "«صاحب العمل»؟",
+            "a": "der Arbeitgeber"
+          },
+          {
+            "q": "«التوظيف»؟",
+            "a": "die Anstellung"
           }
         ]
       },
@@ -304,6 +472,14 @@
           {
             "q": "«صاحب العمل يدفع.»؟",
             "a": "Der Arbeitgeber bezahlt."
+          },
+          {
+            "q": "«صاحب العمل»؟",
+            "a": "der Arbeitgeber"
+          },
+          {
+            "q": "«التوظيف»؟",
+            "a": "die Anstellung"
           }
         ]
       }

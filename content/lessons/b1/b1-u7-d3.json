@@ -165,6 +165,23 @@
               }
             ],
             "why": "umweltfreundlich صديق للبيئة (umwelt+freundlich!) · die Demonstration المظاهرة (die! + Demonstrationen!) — ومراجعة: sammeln يجمع (hat gesammelt!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "البيئة",
+                "de": "die Umwelt"
+              },
+              {
+                "ar": "المناخ",
+                "de": "das Klima"
+              },
+              {
+                "ar": "المرج",
+                "de": "die Wiese"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Umwelt = «البيئة» · das Klima = «المناخ» · die Wiese = «المرج»"
           }
         ]
       },
@@ -199,6 +216,16 @@
             "q": "___ die Katastrophe kam, sammelten wir das Altglas. (als! مرة واحدة!)",
             "a": "Als",
             "why": "als للماضي مرة واحدة (Als … kam!) — لا wenn!"
+          },
+          {
+            "q": "Wir gehen in den ___.",
+            "a": "Wald",
+            "why": "الكلمة الناقصة «Wald» تعني «غابة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Dort sind ___.",
+            "a": "Wolken",
+            "why": "الكلمة الناقصة «Wolken» تعني «سحابة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -229,6 +256,21 @@
             "q": "~~Bevor wir die Blumen hatten gegossen, trennten wir den Abfall.~~",
             "a": "Bevor wir die Blumen gegossen hatten, trennten wir den Abfall.",
             "why": "بعد bevor: التصريف الثالث ثم hatten آخراً! (gegossen hatten — كـnachdem!)"
+          },
+          {
+            "q": "~~Die natur ist ruhig.~~",
+            "a": "Die Natur ist ruhig.",
+            "why": "الخطأ في «natur»! الصواب «Natur» — راجع القاعدة (طبيعة)."
+          },
+          {
+            "q": "~~Es regnet heute.~~ (ناقصة: der Regen)",
+            "a": "Es regnet heute. der Regen.",
+            "why": "الجملة تفتقد «der Regen» (المطر) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~Wie ist das wetter heute?~~",
+            "a": "Wie ist das Wetter heute?",
+            "why": "الخطأ في «wetter»! الصواب «Wetter» — راجع القاعدة (الطقس)."
           }
         ]
       },
@@ -253,6 +295,111 @@
             "q": "قل بالألمانية: «كلما أشرقت الشمس، نتجوّل.» (wenn + دأب!)",
             "a": "Wenn die Sonne scheint, wandern wir.",
             "why": "wenn + دأب! (Präsens: scheint/wandern — لا ماضٍ!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Katze» («القطة») ثم تحدّث بها.",
+            "a": "Das ist meine Katze.",
+            "why": "استعمل «die Katze» («القطة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Arbeit» («العمل») ثم تحدّث بها.",
+            "a": "Sie liebt ihre Arbeit.",
+            "why": "استعمل «die Arbeit» («العمل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Sommer» («الصيف») ثم تحدّث بها.",
+            "a": "Im Sommer ist es heiß.",
+            "why": "استعمل «der Sommer» («الصيف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "entwickeln"
+        ],
+        "items": [
+          {
+            "audioId": "word-verpackung",
+            "speakText": "die Verpackung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التغليف",
+              "المادة القابلة لإعادة التدوير",
+              "الزجاج القديم"
+            ],
+            "a": "التغليف",
+            "why": "الصوت يقول «die Verpackung» — معناها «التغليف». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-wertstoff",
+            "speakText": "der Wertstoff.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Wertstoff",
+              "die Verpackung",
+              "das Altglas"
+            ],
+            "a": "der Wertstoff",
+            "why": "الكلمة المسموعة «der Wertstoff» تعني «المادة القابلة لإعادة التدوير». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-altglas",
+            "speakText": "das Altglas.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الزجاج القديم",
+              "التغليف",
+              "المادة القابلة لإعادة التدوير"
+            ],
+            "a": "الزجاج القديم",
+            "why": "الصوت يقول «das Altglas» — معناها «الزجاج القديم». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-entwickeln",
+            "speakText": "entwickeln.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "entwickeln",
+              "die Verpackung",
+              "der Wertstoff"
+            ],
+            "a": "entwickeln",
+            "why": "الكلمة المسموعة «entwickeln» تعني «يطوّر». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "forschung"
+        ],
+        "items": [
+          {
+            "audioId": "word-demonstration",
+            "speakText": "die Demonstration.",
+            "a": "die Demonstration",
+            "why": "اكتب ما تسمعه حرفياً: «die Demonstration» تعني «المظاهرة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-feinstaub",
+            "speakText": "der Feinstaub.",
+            "a": "der Feinstaub",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Feinstaub» («الجسيمات الدقيقة»)."
+          },
+          {
+            "audioId": "word-katastrophe",
+            "speakText": "die Katastrophe.",
+            "a": "die Katastrophe",
+            "why": "اكتب المسموع بدقة: die Katastrophe — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-forschung",
+            "speakText": "die Forschung.",
+            "a": "die Forschung",
+            "why": "اكتب ما تسمعه حرفياً: «die Forschung» تعني «البحث العلمي». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -283,6 +430,14 @@
           {
             "q": "«صديق للبيئة»؟",
             "a": "umweltfreundlich"
+          },
+          {
+            "q": "«المادة القابلة لإعادة التدوير»؟",
+            "a": "der Wertstoff"
+          },
+          {
+            "q": "«الزجاج القديم»؟",
+            "a": "das Altglas"
           }
         ],
         "passingScore": 0.75
@@ -304,6 +459,14 @@
           {
             "q": "«المادة القابلة لإعادة التدوير»؟",
             "a": "der Wertstoff"
+          },
+          {
+            "q": "«التغليف»؟",
+            "a": "die Verpackung"
+          },
+          {
+            "q": "«الزجاج القديم»؟",
+            "a": "das Altglas"
           }
         ],
         "passingScore": 0.75
@@ -325,6 +488,14 @@
           {
             "q": "«فرز النفايات»؟",
             "a": "die Mülltrennung"
+          },
+          {
+            "q": "«التغليف»؟",
+            "a": "die Verpackung"
+          },
+          {
+            "q": "«المادة القابلة لإعادة التدوير»؟",
+            "a": "der Wertstoff"
           }
         ],
         "passingScore": 0.75

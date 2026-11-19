@@ -134,6 +134,23 @@
               }
             ],
             "why": "die Meldung hinterfragen! · misstrauisch sein! · die Zensur nicht mögen (لا يحب!) · die Zensur (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الحدث",
+                "de": "das Ereignis"
+              },
+              {
+                "ar": "الوسيلة",
+                "de": "das Medium"
+              },
+              {
+                "ar": "يبثّ",
+                "de": "übertragen"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: das Ereignis = «الحدث» · das Medium = «الوسيلة» · übertragen = «يبثّ»"
           }
         ]
       },
@@ -169,6 +186,21 @@
             "q": "Wir hinterfragen die ___. (الخبر!)",
             "a": "Meldung",
             "why": "die Meldung الخبر (die! مُدرَّسة!) — Wir hinterfragen die Meldung."
+          },
+          {
+            "q": "Die ___ arbeitet.",
+            "a": "Redaktion",
+            "why": "الكلمة الناقصة «Redaktion» تعني «التحرير» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ berichtet.",
+            "a": "Sender",
+            "why": "الكلمة الناقصة «Sender» تعني «القناة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ kommt.",
+            "a": "Werbung",
+            "why": "الكلمة الناقصة «Werbung» تعني «الدعاية» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +236,21 @@
             "q": "~~Die Zensur sind schlimm.~~",
             "a": "Die Zensur ist schlimm.",
             "why": "المفرد die Zensur مع ist (لا sind!)!"
+          },
+          {
+            "q": "~~Die wissenschaft ist wichtig.~~",
+            "a": "Die Wissenschaft ist wichtig.",
+            "why": "الخطأ في «wissenschaft»! الصواب «Wissenschaft» — راجع القاعدة (العلم)."
+          },
+          {
+            "q": "~~Wir nutzen das gedächtnis.~~",
+            "a": "Wir nutzen das Gedächtnis.",
+            "why": "الخطأ في «gedächtnis»! الصواب «Gedächtnis» — راجع القاعدة (الذاكرة)."
+          },
+          {
+            "q": "~~Das gehirn arbeitet.~~",
+            "a": "Das Gehirn arbeitet.",
+            "why": "الخطأ في «gehirn»! الصواب «Gehirn» — راجع القاعدة (الدماغ)."
           }
         ]
       },
@@ -234,6 +281,111 @@
             "q": "تحدّث عن الريبة! (جملتان!)",
             "a": "Ich bin misstrauisch. Die Meldung ist komisch.",
             "why": "الريبة! (misstrauisch sein!) — komisch (غريبة!) من الوحدة 2!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Kenntnis» («الدراية») ثم تحدّث بها.",
+            "a": "Wir nutzen die Kenntnisse.",
+            "why": "استعمل «die Kenntnis» («الدراية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Fachwissen» («المعرفة التخصصية») ثم تحدّث بها.",
+            "a": "Wir brauchen Fachwissen.",
+            "why": "استعمل «das Fachwissen» («المعرفة التخصصية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «wandeln» («يحوّل») ثم تحدّث بها.",
+            "a": "Die Technik wandelt die Arbeit.",
+            "why": "استعمل «wandeln» («يحوّل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "uebertragen"
+        ],
+        "items": [
+          {
+            "audioId": "word-hinterfragen",
+            "speakText": "hinterfragen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يتشكّك في",
+              "غير واثق",
+              "الرقابة"
+            ],
+            "a": "يتشكّك في",
+            "why": "الصوت يقول «hinterfragen» — معناها «يتشكّك في». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-misstrauisch",
+            "speakText": "misstrauisch.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "misstrauisch",
+              "hinterfragen",
+              "die Zensur"
+            ],
+            "a": "misstrauisch",
+            "why": "الكلمة المسموعة «misstrauisch» تعني «غير واثق». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-zensur",
+            "speakText": "die Zensur.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الرقابة",
+              "يتشكّك في",
+              "غير واثق"
+            ],
+            "a": "الرقابة",
+            "why": "الصوت يقول «die Zensur» — معناها «الرقابة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-uebertragen",
+            "speakText": "übertragen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "übertragen",
+              "hinterfragen",
+              "misstrauisch"
+            ],
+            "a": "übertragen",
+            "why": "الكلمة المسموعة «übertragen» تعني «يبثّ». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "medium"
+        ],
+        "items": [
+          {
+            "audioId": "word-hinterfragen",
+            "speakText": "hinterfragen.",
+            "a": "hinterfragen",
+            "why": "اكتب ما تسمعه حرفياً: «hinterfragen» تعني «يتشكّك في». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-misstrauisch",
+            "speakText": "misstrauisch.",
+            "a": "misstrauisch",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «misstrauisch» («غير واثق»)."
+          },
+          {
+            "audioId": "word-zensur",
+            "speakText": "die Zensur.",
+            "a": "die Zensur",
+            "why": "اكتب المسموع بدقة: die Zensur — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-medium",
+            "speakText": "das Medium.",
+            "a": "das Medium",
+            "why": "اكتب ما تسمعه حرفياً: «das Medium» تعني «الوسيلة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +416,14 @@
           {
             "q": "«نتشكّك في الخبر.»؟",
             "a": "Wir hinterfragen die Meldung."
+          },
+          {
+            "q": "«يسأل بحرج»؟",
+            "a": "hinterfragen"
+          },
+          {
+            "q": "«مريب»؟",
+            "a": "misstrauisch"
           }
         ]
       },
@@ -284,6 +444,14 @@
           {
             "q": "hinterfragen",
             "a": "يتشكّك في"
+          },
+          {
+            "q": "«يتشكّك في»؟",
+            "a": "hinterfragen"
+          },
+          {
+            "q": "«غير واثق»؟",
+            "a": "misstrauisch"
           }
         ]
       },
@@ -304,6 +472,14 @@
           {
             "q": "«نتشكّك في الخبر.»؟",
             "a": "Wir hinterfragen die Meldung."
+          },
+          {
+            "q": "«يتشكّك في»؟",
+            "a": "hinterfragen"
+          },
+          {
+            "q": "«غير واثق»؟",
+            "a": "misstrauisch"
           }
         ]
       }

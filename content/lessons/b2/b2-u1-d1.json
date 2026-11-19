@@ -140,9 +140,8 @@
           "مع الناس!"
         ],
         "interleavedWith": [
-          "vorbild",
-          "toleranz",
-          "begegnung"
+          "puffer",
+          "mut"
         ],
         "items": [
           {
@@ -164,6 +163,16 @@
             "q": "Er zeigt die ___. (التسامح!)",
             "a": "Toleranz",
             "why": "die Toleranz التسامح (die!) — Er zeigt die Toleranz. (Toleranz zeigen!)"
+          },
+          {
+            "q": "Der ___ ist wichtig.",
+            "a": "Puffer",
+            "why": "الكلمة الناقصة «Puffer» تعني «الاحتياطي (الوقت الإضافي)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist wichtig.",
+            "a": "Mut",
+            "why": "الكلمة الناقصة «Mut» تعني «الشجاعة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -175,9 +184,8 @@
           "الأداة! الأداة! الجمع!"
         ],
         "interleavedWith": [
-          "vorbild",
-          "toleranz",
-          "begegnung"
+          "puffer",
+          "mut"
         ],
         "items": [
           {
@@ -199,6 +207,16 @@
             "q": "~~Der Begegnung ist gut.~~",
             "a": "Die Begegnung ist gut.",
             "why": "die Begegnung اللقاء (die! لا der!)"
+          },
+          {
+            "q": "~~Der puffer ist wichtig.~~",
+            "a": "Der Puffer ist wichtig.",
+            "why": "الخطأ في «puffer»! الصواب «Puffer» — راجع القاعدة (الاحتياطي (الوقت الإضافي))."
+          },
+          {
+            "q": "~~Der mut ist wichtig.~~",
+            "a": "Der Mut ist wichtig.",
+            "why": "الخطأ في «mut»! الصواب «Mut» — راجع القاعدة (الشجاعة)."
           }
         ]
       },
@@ -229,6 +247,111 @@
             "q": "تكلّم عن لقائك! (جملتان!)",
             "a": "Die Begegnung ist gut. Er hat eine Begegnung.",
             "why": "اللقاء! (eine Begegnung haben!)"
+          },
+          {
+            "q": "كوّن جملة فيها «der Mensch» («الإنسان») ثم تحدّث بها.",
+            "a": "In Berlin leben viele Menschen.",
+            "why": "استعمل «der Mensch» («الإنسان») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «freundlich» («ودود/لطيف») ثم تحدّث بها.",
+            "a": "Meine Tante ist freundlich.",
+            "why": "استعمل «freundlich» («ودود/لطيف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Ruhe» («الهدوء») ثم تحدّث بها.",
+            "a": "Ich brauche Ruhe.",
+            "why": "استعمل «die Ruhe» («الهدوء») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "puffer"
+        ],
+        "items": [
+          {
+            "audioId": "word-vorbild",
+            "speakText": "das Vorbild.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "القدوة (النموذج المحتذى)",
+              "التسامح",
+              "اللقاء (المقابلة)"
+            ],
+            "a": "القدوة (النموذج المحتذى)",
+            "why": "الصوت يقول «das Vorbild» — معناها «القدوة (النموذج المحتذى)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-toleranz",
+            "speakText": "die Toleranz.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Toleranz",
+              "das Vorbild",
+              "die Begegnung"
+            ],
+            "a": "die Toleranz",
+            "why": "الكلمة المسموعة «die Toleranz» تعني «التسامح». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-begegnung",
+            "speakText": "die Begegnung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "اللقاء (المقابلة)",
+              "القدوة (النموذج المحتذى)",
+              "التسامح"
+            ],
+            "a": "اللقاء (المقابلة)",
+            "why": "الصوت يقول «die Begegnung» — معناها «اللقاء (المقابلة)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-puffer",
+            "speakText": "der Puffer.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "der Puffer",
+              "das Vorbild",
+              "die Toleranz"
+            ],
+            "a": "der Puffer",
+            "why": "الكلمة المسموعة «der Puffer» تعني «الاحتياطي (الوقت الإضافي)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "mut"
+        ],
+        "items": [
+          {
+            "audioId": "word-vorbild",
+            "speakText": "das Vorbild.",
+            "a": "das Vorbild",
+            "why": "اكتب ما تسمعه حرفياً: «das Vorbild» تعني «القدوة (النموذج المحتذى)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-toleranz",
+            "speakText": "die Toleranz.",
+            "a": "die Toleranz",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Toleranz» («التسامح»)."
+          },
+          {
+            "audioId": "word-begegnung",
+            "speakText": "die Begegnung.",
+            "a": "die Begegnung",
+            "why": "اكتب المسموع بدقة: die Begegnung — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-mut",
+            "speakText": "der Mut.",
+            "a": "der Mut",
+            "why": "اكتب ما تسمعه حرفياً: «der Mut» تعني «الشجاعة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -259,6 +382,14 @@
           {
             "q": "«يُظهر التسامح.»؟",
             "a": "Er zeigt Toleranz."
+          },
+          {
+            "q": "«القدوة مهمة.»؟",
+            "a": "Das Vorbild ist wichtig."
+          },
+          {
+            "q": "«التسامح مهم.»؟",
+            "a": "Die Toleranz ist wichtig."
           }
         ]
       },
@@ -279,6 +410,14 @@
           {
             "q": "«يكون قدوة.»؟",
             "a": "Er ist ein Vorbild."
+          },
+          {
+            "q": "«القدوة (النموذج المحتذى)»؟",
+            "a": "das Vorbild"
+          },
+          {
+            "q": "«التسامح»؟",
+            "a": "die Toleranz"
           }
         ]
       },
@@ -299,6 +438,14 @@
           {
             "q": "«يكون لديه لقاء.»؟",
             "a": "Er hat eine Begegnung."
+          },
+          {
+            "q": "«القدوة (النموذج المحتذى)»؟",
+            "a": "das Vorbild"
+          },
+          {
+            "q": "«التسامح»؟",
+            "a": "die Toleranz"
           }
         ]
       }

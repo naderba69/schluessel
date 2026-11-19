@@ -170,6 +170,23 @@
               }
             ],
             "why": "hervorheben يُبرز (hebt … hervor! منفصل!) · das Argument الحجة (nennen!) · der Zuhörer المستمع (hört zu!) · die Überleitung الانتقال (kurz!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الرسم (الإحصائي)",
+                "de": "die Grafik"
+              },
+              {
+                "ar": "الجدول",
+                "de": "die Tabelle"
+              },
+              {
+                "ar": "المسار",
+                "de": "der Verlauf"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Grafik = «الرسم (الإحصائي)» · die Tabelle = «الجدول» · der Verlauf = «المسار»"
           }
         ]
       },
@@ -181,9 +198,8 @@
           "العرض الشفهي!"
         ],
         "interleavedWith": [
-          "vortrag",
-          "gliederung",
-          "stichwort"
+          "schwankung",
+          "abfallen"
         ],
         "items": [
           {
@@ -215,6 +231,16 @@
             "q": "Die ___ ist kurz. (الانتقال!)",
             "a": "Überleitung",
             "why": "die Überleitung الانتقال (Überleitungen!) — die Überleitung ist kurz."
+          },
+          {
+            "q": "Die ___ ist klein.",
+            "a": "Schwankung",
+            "why": "الكلمة الناقصة «Schwankung» تعني «التذبذب» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die Werte fallen ___.",
+            "a": "ab",
+            "why": "الكلمة الناقصة «ab» تعني «يهبط» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -226,9 +252,8 @@
           "الأداة! الانفصال! الأداة!"
         ],
         "interleavedWith": [
-          "argument",
-          "argumentation",
-          "zuhoererschaft"
+          "schwankung",
+          "abfallen"
         ],
         "items": [
           {
@@ -245,6 +270,16 @@
             "q": "~~der Betonung ist wichtig~~",
             "a": "die Betonung ist wichtig",
             "why": "die Betonung التأكيد (die! مؤنث — لا der!)"
+          },
+          {
+            "q": "~~Die schwankung ist klein.~~",
+            "a": "Die Schwankung ist klein.",
+            "why": "الخطأ في «schwankung»! الصواب «Schwankung» — راجع القاعدة (التذبذب)."
+          },
+          {
+            "q": "~~Die Werte fallen Ab.~~",
+            "a": "Die Werte fallen ab.",
+            "why": "الخطأ في «Ab»! الصواب «ab» — راجع القاعدة (يهبط)."
           }
         ]
       },
@@ -256,9 +291,8 @@
           "Vortrag! Folien! Fragen!"
         ],
         "interleavedWith": [
-          "erlaeutern",
-          "betonen",
-          "ausfuehren"
+          "schwankung",
+          "abfallen"
         ],
         "items": [
           {
@@ -275,6 +309,106 @@
             "q": "اختم بالتأكيد والأسئلة! (3 جمل!)",
             "a": "Er hebt das Argument hervor. Die Zuhörerschaft hört zu. Gibt es Fragen?",
             "why": "hervorheben! Zuhörerschaft! Gibt es Fragen? (الخاتمة!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Schwankung» («التذبذب») ثم تحدّث بها.",
+            "a": "Die Schwankung ist klein.",
+            "why": "استعمل «die Schwankung» («التذبذب») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «abfallen» («يهبط») ثم تحدّث بها.",
+            "a": "Die Werte fallen ab.",
+            "why": "استعمل «abfallen» («يهبط») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "schwankung"
+        ],
+        "items": [
+          {
+            "audioId": "word-argumentation",
+            "speakText": "die Argumentation.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "سلسلة الحجج",
+              "يشرح (بالتفصيل)",
+              "العرض (الشفهي)"
+            ],
+            "a": "سلسلة الحجج",
+            "why": "الصوت يقول «die Argumentation» — معناها «سلسلة الحجج». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ausfuehren",
+            "speakText": "ausführen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "ausführen",
+              "die Argumentation",
+              "der Vortrag"
+            ],
+            "a": "ausführen",
+            "why": "الكلمة المسموعة «ausführen» تعني «يشرح (بالتفصيل)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-vortrag",
+            "speakText": "der Vortrag.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "العرض (الشفهي)",
+              "سلسلة الحجج",
+              "يشرح (بالتفصيل)"
+            ],
+            "a": "العرض (الشفهي)",
+            "why": "الصوت يقول «der Vortrag» — معناها «العرض (الشفهي)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-schwankung",
+            "speakText": "die Schwankung.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Schwankung",
+              "die Argumentation",
+              "ausführen"
+            ],
+            "a": "die Schwankung",
+            "why": "الكلمة المسموعة «die Schwankung» تعني «التذبذب». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "abfallen"
+        ],
+        "items": [
+          {
+            "audioId": "word-gliederung",
+            "speakText": "die Gliederung.",
+            "a": "die Gliederung",
+            "why": "اكتب ما تسمعه حرفياً: «die Gliederung» تعني «الهيكل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-stichwort",
+            "speakText": "das Stichwort.",
+            "a": "das Stichwort",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «das Stichwort» («الكلمة المفتاحية»)."
+          },
+          {
+            "audioId": "word-folie",
+            "speakText": "die Folie.",
+            "a": "die Folie",
+            "why": "اكتب المسموع بدقة: die Folie — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-abfallen",
+            "speakText": "abfallen.",
+            "a": "abfallen",
+            "why": "اكتب ما تسمعه حرفياً: «abfallen» تعني «يهبط». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -305,6 +439,14 @@
           {
             "q": "«الكلمة المفتاحية»؟",
             "a": "das Stichwort"
+          },
+          {
+            "q": "«سلسلة الحجج»؟",
+            "a": "die Argumentation"
+          },
+          {
+            "q": "«يشرح (بالتفصيل)»؟",
+            "a": "ausführen"
           }
         ]
       },
@@ -325,6 +467,14 @@
           {
             "q": "«هل من أسئلة؟»؟",
             "a": "Gibt es Fragen?"
+          },
+          {
+            "q": "«سلسلة الحجج»؟",
+            "a": "die Argumentation"
+          },
+          {
+            "q": "«يشرح (بالتفصيل)»؟",
+            "a": "ausführen"
           }
         ]
       },
@@ -345,6 +495,14 @@
           {
             "q": "«الجمهور»؟",
             "a": "die Zuhörerschaft"
+          },
+          {
+            "q": "«سلسلة الحجج»؟",
+            "a": "die Argumentation"
+          },
+          {
+            "q": "«يشرح (بالتفصيل)»؟",
+            "a": "ausführen"
           }
         ]
       }

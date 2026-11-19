@@ -144,6 +144,23 @@
               }
             ],
             "why": "الكولوكيشنات الثابتة (u8-d5!): Anleitung geben! Betreuung übernehmen! Zusage bekommen!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الطلب (المهمة!)",
+                "de": "der Auftrag"
+              },
+              {
+                "ar": "المتدرّب (في الشمال!)",
+                "de": "der Azubi"
+              },
+              {
+                "ar": "القبول",
+                "de": "die Zusage"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Auftrag = «الطلب (المهمة!)» · der Azubi = «المتدرّب (في الشمال!)» · die Zusage = «القبول»"
           }
         ]
       },
@@ -174,6 +191,11 @@
             "q": "Der Meister gibt eine ___ und ich übernehme die Betreuung. (التعليمات!)",
             "a": "Anleitung",
             "why": "eine Anleitung geben! (u8-d5 — اسم+فعله الملازم!)"
+          },
+          {
+            "q": "Der ___ löst das Problem.",
+            "a": "Lehrling",
+            "why": "الكلمة الناقصة «Lehrling» تعني «المتدرّب (في الجنوب!)» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +226,21 @@
             "q": "~~Die Firma besetzt den Bewerber.~~",
             "a": "Die Firma besetzt die Stelle.",
             "why": "besetzen = يشغل الوظيفة — مفعوله die Stelle لا الشخص! (der Bewerber bekommt die Zusage!)"
+          },
+          {
+            "q": "~~Die leitung ist gut.~~",
+            "a": "Die Leitung ist gut.",
+            "why": "الخطأ في «leitung»! الصواب «Leitung» — راجع القاعدة (الإدارة)."
+          },
+          {
+            "q": "~~Das verhältnis zu den Kollegen ist gut.~~",
+            "a": "Das Verhältnis zu den Kollegen ist gut.",
+            "why": "الخطأ في «verhältnis»! الصواب «Verhältnis» — راجع القاعدة (العلاقة)."
+          },
+          {
+            "q": "~~Der Lehrling Löst das Problem.~~",
+            "a": "Der Lehrling löst das Problem.",
+            "why": "الخطأ في «Löst»! الصواب «löst» — راجع القاعدة (يحلّ (مشكلة!))."
           }
         ]
       },
@@ -239,6 +276,91 @@
             "q": "النهاية: Zusage أم Absage؟ (جملتان!)",
             "a": "Die Firma besetzt die Stelle — und ich bekomme eine Zusage, keine Absage!",
             "why": "zu- = قبول! ab- = رفض! (كلمتا اليوم!)"
+          },
+          {
+            "q": "كوّن جملة فيها «festlegen» («يحدّد») ثم تحدّث بها.",
+            "a": "Ich lege den Termin fest.",
+            "why": "استعمل «festlegen» («يحدّد») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «sichern» («يُؤمّن») ثم تحدّث بها.",
+            "a": "Wir sichern den Arbeitsplatz.",
+            "why": "استعمل «sichern» («يُؤمّن») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «unterrichten» («يُدرّس») ثم تحدّث بها.",
+            "a": "Der Meister unterrichtet den Lehrling.",
+            "why": "استعمل «unterrichten» («يُدرّس») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "geschickt"
+        ],
+        "items": [
+          {
+            "audioId": "word-zusage",
+            "speakText": "die Zusage.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "القبول",
+              "يشغل (الوظيفة)"
+            ],
+            "a": "القبول",
+            "why": "الصوت يقول «die Zusage» — معناها «القبول». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-besetzen",
+            "speakText": "besetzen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "besetzen",
+              "die Zusage"
+            ],
+            "a": "besetzen",
+            "why": "الكلمة المسموعة «besetzen» تعني «يشغل (الوظيفة)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-geschickt",
+            "speakText": "geschickt.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "بارعاة",
+              "القبول",
+              "يشغل (الوظيفة)"
+            ],
+            "a": "بارعاة",
+            "why": "الصوت يقول «geschickt» — معناها «بارعاة». ركّز على الصوت لا على الشكل!"
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "festlegen"
+        ],
+        "items": [
+          {
+            "audioId": "word-zusage",
+            "speakText": "die Zusage.",
+            "a": "die Zusage",
+            "why": "اكتب ما تسمعه حرفياً: «die Zusage» تعني «القبول». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-besetzen",
+            "speakText": "besetzen.",
+            "a": "besetzen",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «besetzen» («يشغل (الوظيفة)»)."
+          },
+          {
+            "audioId": "word-festlegen",
+            "speakText": "festlegen.",
+            "a": "festlegen",
+            "why": "اكتب المسموع بدقة: festlegen — ركّز على نهاية الكلمة!"
           }
         ]
       }
@@ -269,6 +391,14 @@
           {
             "q": "«المعلّم يُعطي تعليمات.»؟",
             "a": "Der Meister gibt eine Anleitung."
+          },
+          {
+            "q": "«يشغل (الوظيفة)»؟",
+            "a": "besetzen"
+          },
+          {
+            "q": "«الموافقة على الترشح»؟",
+            "a": "die Zusage"
           }
         ]
       },
@@ -289,6 +419,14 @@
           {
             "q": "«المقابلة مع الإدارة!»؟",
             "a": "das Interview mit der Leitung"
+          },
+          {
+            "q": "«القبول»؟",
+            "a": "die Zusage"
+          },
+          {
+            "q": "«الموافقة على الترشح»؟",
+            "a": "die Zusage"
           }
         ]
       },
@@ -309,6 +447,14 @@
           {
             "q": "«أحلّ المشاكل وأؤمّن مكان العمل!»؟",
             "a": "Ich löse die Probleme und sichere den Arbeitsplatz."
+          },
+          {
+            "q": "«القبول»؟",
+            "a": "die Zusage"
+          },
+          {
+            "q": "«يشغل (الوظيفة)»؟",
+            "a": "besetzen"
           }
         ]
       }

@@ -134,6 +134,23 @@
               }
             ],
             "why": "die Einsätze جمع قوي (der Einsatz ← die Einsätze!) · Höflichkeit zeigen! · zwischen Menschen vermitteln!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "القدوة (النموذج المحتذى)",
+                "de": "das Vorbild"
+              },
+              {
+                "ar": "التسامح",
+                "de": "die Toleranz"
+              },
+              {
+                "ar": "اللقاء (المقابلة)",
+                "de": "die Begegnung"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: das Vorbild = «القدوة (النموذج المحتذى)» · die Toleranz = «التسامح» · die Begegnung = «اللقاء (المقابلة)»"
           }
         ]
       },
@@ -169,6 +186,21 @@
             "q": "Er zeigt ___. (تفانياً!)",
             "a": "Einsatz",
             "why": "Einsatz zeigen! يظهر تفانياً — Er zeigt Einsatz."
+          },
+          {
+            "q": "Das ___ ist wichtig.",
+            "a": "Vorbild",
+            "why": "الكلمة الناقصة «Vorbild» تعني «القدوة (النموذج المحتذى)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Toleranz",
+            "why": "الكلمة الناقصة «Toleranz» تعني «التسامح» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist gut.",
+            "a": "Begegnung",
+            "why": "الكلمة الناقصة «Begegnung» تعني «اللقاء (المقابلة)» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +236,16 @@
             "q": "~~Er zeigt den Einsatz.~~",
             "a": "Er zeigt Einsatz.",
             "why": "Einsatz zeigen — بلا أداة! (التفاني كميزة عامة)"
+          },
+          {
+            "q": "~~Meine Tante ist Freundlich.~~",
+            "a": "Meine Tante ist freundlich.",
+            "why": "الخطأ في «Freundlich»! الصواب «freundlich» — راجع القاعدة (ودود/لطيف)."
+          },
+          {
+            "q": "~~Ich brauche ruhe.~~",
+            "a": "Ich brauche Ruhe.",
+            "why": "الخطأ في «ruhe»! الصواب «Ruhe» — راجع القاعدة (الهدوء)."
           }
         ]
       },
@@ -234,6 +276,111 @@
             "q": "تحدث عن الوساطة! (جملتان!)",
             "a": "Sie vermittelt gut. Sie vermittelt zwischen den Menschen.",
             "why": "الوساطة! (zwischen Menschen vermitteln!)"
+          },
+          {
+            "q": "كوّن جملة فيها «das Vorbild» («القدوة (النموذج المحتذى)») ثم تحدّث بها.",
+            "a": "Das Vorbild ist wichtig.",
+            "why": "استعمل «das Vorbild» («القدوة (النموذج المحتذى)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Toleranz» («التسامح») ثم تحدّث بها.",
+            "a": "Die Toleranz ist wichtig.",
+            "why": "استعمل «die Toleranz» («التسامح») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Begegnung» («اللقاء (المقابلة)») ثم تحدّث بها.",
+            "a": "Die Begegnung ist gut.",
+            "why": "استعمل «die Begegnung» («اللقاء (المقابلة)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "begegnung"
+        ],
+        "items": [
+          {
+            "audioId": "word-einsatz",
+            "speakText": "der Einsatz.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التفاني",
+              "اللباقة",
+              "يتوسّط"
+            ],
+            "a": "التفاني",
+            "why": "الصوت يقول «der Einsatz» — معناها «التفاني». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-hoeflichkeit",
+            "speakText": "die Höflichkeit.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Höflichkeit",
+              "der Einsatz",
+              "vermitteln"
+            ],
+            "a": "die Höflichkeit",
+            "why": "الكلمة المسموعة «die Höflichkeit» تعني «اللباقة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-vermitteln",
+            "speakText": "vermitteln.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يتوسّط",
+              "التفاني",
+              "اللباقة"
+            ],
+            "a": "يتوسّط",
+            "why": "الصوت يقول «vermitteln» — معناها «يتوسّط». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-begegnung",
+            "speakText": "die Begegnung.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Begegnung",
+              "der Einsatz",
+              "die Höflichkeit"
+            ],
+            "a": "die Begegnung",
+            "why": "الكلمة المسموعة «die Begegnung» تعني «اللقاء (المقابلة)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "toleranz"
+        ],
+        "items": [
+          {
+            "audioId": "word-einsatz",
+            "speakText": "der Einsatz.",
+            "a": "der Einsatz",
+            "why": "اكتب ما تسمعه حرفياً: «der Einsatz» تعني «التفاني». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-hoeflichkeit",
+            "speakText": "die Höflichkeit.",
+            "a": "die Höflichkeit",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Höflichkeit» («اللباقة»)."
+          },
+          {
+            "audioId": "word-vermitteln",
+            "speakText": "vermitteln.",
+            "a": "vermitteln",
+            "why": "اكتب المسموع بدقة: vermitteln — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-toleranz",
+            "speakText": "die Toleranz.",
+            "a": "die Toleranz",
+            "why": "اكتب ما تسمعه حرفياً: «die Toleranz» تعني «التسامح». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +411,14 @@
           {
             "q": "«يظهر تفانياً.»؟",
             "a": "Er zeigt Einsatz."
+          },
+          {
+            "q": "«التفاني»؟",
+            "a": "der Einsatz"
+          },
+          {
+            "q": "«اللباقة»؟",
+            "a": "die Höflichkeit"
           }
         ]
       },
@@ -284,6 +439,14 @@
           {
             "q": "die Höflichkeit",
             "a": "اللباقة"
+          },
+          {
+            "q": "«التفاني»؟",
+            "a": "der Einsatz"
+          },
+          {
+            "q": "«اللباقة»؟",
+            "a": "die Höflichkeit"
           }
         ]
       },
@@ -304,6 +467,14 @@
           {
             "q": "«أظهر اللباقة!»؟",
             "a": "Höflichkeit zeigen!"
+          },
+          {
+            "q": "«التفاني»؟",
+            "a": "der Einsatz"
+          },
+          {
+            "q": "«اللباقة»؟",
+            "a": "die Höflichkeit"
           }
         ]
       }

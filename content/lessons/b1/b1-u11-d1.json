@@ -170,6 +170,23 @@
               }
             ],
             "why": "erschließen يستنتج (erschloss! قويّ!) · der Absatz الفقرة (Absätze!) · die Gesellschaft المجتمع (leben!) · sich engagieren يتطوّع (FÜR!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الحصيلة",
+                "de": "die Bilanz"
+              },
+              {
+                "ar": "الخلاصة",
+                "de": "das Fazit"
+              },
+              {
+                "ar": "الدقّة",
+                "de": "die Genauigkeit"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Bilanz = «الحصيلة» · das Fazit = «الخلاصة» · die Genauigkeit = «الدقّة»"
           }
         ]
       },
@@ -181,9 +198,8 @@
           "استراتيجيات القراءة!"
         ],
         "interleavedWith": [
-          "strategie",
-          "kontext",
-          "absatz"
+          "genauigkeit",
+          "fazit"
         ],
         "items": [
           {
@@ -215,6 +231,16 @@
             "q": "Er engagiert sich ___ die Gemeinschaft. (لـ! الحرف!)",
             "a": "für",
             "why": "sich engagieren FÜR (لا in!) — الحرف الثابت!"
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Genauigkeit",
+            "why": "الكلمة الناقصة «Genauigkeit» تعني «الدقّة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist klar.",
+            "a": "Fazit",
+            "why": "الكلمة الناقصة «Fazit» تعني «الخلاصة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -226,9 +252,8 @@
           "الانفصال! القوة! الضمير!"
         ],
         "interleavedWith": [
-          "hauptaussage",
-          "schluesselbegriff",
-          "vermutung"
+          "genauigkeit",
+          "fazit"
         ],
         "items": [
           {
@@ -245,6 +270,16 @@
             "q": "~~Er engagiert für die Gemeinschaft.~~",
             "a": "Er engagiert sich für die Gemeinschaft.",
             "why": "sich engagieren انعكاسي! الضمير sich لازم!"
+          },
+          {
+            "q": "~~Die genauigkeit ist wichtig.~~",
+            "a": "Die Genauigkeit ist wichtig.",
+            "why": "الخطأ في «genauigkeit»! الصواب «Genauigkeit» — راجع القاعدة (الدقّة)."
+          },
+          {
+            "q": "~~Das fazit ist klar.~~",
+            "a": "Das Fazit ist klar.",
+            "why": "الخطأ في «fazit»! الصواب «Fazit» — راجع القاعدة (الخلاصة)."
           }
         ]
       },
@@ -256,9 +291,8 @@
           "überfliegen! suchen! erschließen!"
         ],
         "interleavedWith": [
-          "gezielt",
-          "vermuten",
-          "ehrenamtlich"
+          "genauigkeit",
+          "fazit"
         ],
         "items": [
           {
@@ -275,6 +309,106 @@
             "q": "اختم بالتحقّق والمجتمع! (3 جمل!)",
             "a": "Die Vermutung ist klar. Er engagiert sich für die Gemeinschaft. Die Arbeit ist ehrenamtlich!",
             "why": "Vermutung! engagieren! ehrenamtlich! (الخاتمة!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Genauigkeit» («الدقّة») ثم تحدّث بها.",
+            "a": "Die Genauigkeit ist wichtig.",
+            "why": "استعمل «die Genauigkeit» («الدقّة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Fazit» («الخلاصة») ثم تحدّث بها.",
+            "a": "Das Fazit ist klar.",
+            "why": "استعمل «das Fazit» («الخلاصة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "genauigkeit"
+        ],
+        "items": [
+          {
+            "audioId": "word-strategie",
+            "speakText": "die Strategie.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الاستراتيجية",
+              "يتفحّص (بسرعة)",
+              "موجَّهاً"
+            ],
+            "a": "الاستراتيجية",
+            "why": "الصوت يقول «die Strategie» — معناها «الاستراتيجية». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ueberfliegen",
+            "speakText": "überfliegen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "überfliegen",
+              "die Strategie",
+              "gezielt"
+            ],
+            "a": "überfliegen",
+            "why": "الكلمة المسموعة «überfliegen» تعني «يتفحّص (بسرعة)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-gezielt",
+            "speakText": "gezielt.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "موجَّهاً",
+              "الاستراتيجية",
+              "يتفحّص (بسرعة)"
+            ],
+            "a": "موجَّهاً",
+            "why": "الصوت يقول «gezielt» — معناها «موجَّهاً». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-genauigkeit",
+            "speakText": "die Genauigkeit.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Genauigkeit",
+              "die Strategie",
+              "überfliegen"
+            ],
+            "a": "die Genauigkeit",
+            "why": "الكلمة المسموعة «die Genauigkeit» تعني «الدقّة». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "fazit"
+        ],
+        "items": [
+          {
+            "audioId": "word-hauptaussage",
+            "speakText": "die Hauptaussage.",
+            "a": "die Hauptaussage",
+            "why": "اكتب ما تسمعه حرفياً: «die Hauptaussage» تعني «الرسالة الرئيسية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-schluesselbegriff",
+            "speakText": "der Schlüsselbegriff.",
+            "a": "der Schlüsselbegriff",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Schlüsselbegriff» («المصطلح المفتاحي»)."
+          },
+          {
+            "audioId": "word-kontext",
+            "speakText": "der Kontext.",
+            "a": "der Kontext",
+            "why": "اكتب المسموع بدقة: der Kontext — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-fazit",
+            "speakText": "das Fazit.",
+            "a": "das Fazit",
+            "why": "اكتب ما تسمعه حرفياً: «das Fazit» تعني «الخلاصة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -305,6 +439,14 @@
           {
             "q": "«المصطلح المفتاحي»؟",
             "a": "der Schlüsselbegriff"
+          },
+          {
+            "q": "«الاستراتيجية»؟",
+            "a": "die Strategie"
+          },
+          {
+            "q": "«يتفحّص (بسرعة)»؟",
+            "a": "überfliegen"
           }
         ]
       },
@@ -325,6 +467,14 @@
           {
             "q": "«الفقرة»؟",
             "a": "der Absatz"
+          },
+          {
+            "q": "«الاستراتيجية»؟",
+            "a": "die Strategie"
+          },
+          {
+            "q": "«يتفحّص (بسرعة)»؟",
+            "a": "überfliegen"
           }
         ]
       },
@@ -345,6 +495,14 @@
           {
             "q": "«طريقة طرح السؤال»؟",
             "a": "die Fragestellung"
+          },
+          {
+            "q": "«الاستراتيجية»؟",
+            "a": "die Strategie"
+          },
+          {
+            "q": "«يتفحّص (بسرعة)»؟",
+            "a": "überfliegen"
           }
         ]
       }

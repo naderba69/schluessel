@@ -134,6 +134,23 @@
               }
             ],
             "why": "die Armut ist schlimm! · der Reichtum ist groß! · die Spende geben (بالنصب!) · die Spende (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المصنّع",
+                "de": "der Hersteller"
+              },
+              {
+                "ar": "مستعمل",
+                "de": "gebraucht"
+              },
+              {
+                "ar": "الإرجاع",
+                "de": "die Rückgabe"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Hersteller = «المصنّع» · gebraucht = «مستعمل» · die Rückgabe = «الإرجاع»"
           }
         ]
       },
@@ -169,6 +186,21 @@
             "q": "Die Spende ist ___. (كبيرة!)",
             "a": "groß",
             "why": "groß كبير — Die Spende ist groß."
+          },
+          {
+            "q": "Der ___ bezahlt.",
+            "a": "Arbeitgeber",
+            "why": "الكلمة الناقصة «Arbeitgeber» تعني «صاحب العمل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir finden die ___.",
+            "a": "Anstellung",
+            "why": "الكلمة الناقصة «Anstellung» تعني «التوظيف» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Er geht in den ___.",
+            "a": "Ruhestand",
+            "why": "الكلمة الناقصة «Ruhestand» تعني «التقاعد» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +236,21 @@
             "q": "~~Die Armut sind schlimm.~~",
             "a": "Die Armut ist schlimm.",
             "why": "المفرد die Armut مع ist (لا sind!)!"
+          },
+          {
+            "q": "~~Wir Finanzieren das Haus.~~",
+            "a": "Wir finanzieren das Haus.",
+            "why": "الخطأ في «Finanzieren»! الصواب «finanzieren» — راجع القاعدة (يموّل)."
+          },
+          {
+            "q": "~~Wir prüfen die finanzen.~~",
+            "a": "Wir prüfen die Finanzen.",
+            "why": "الخطأ في «finanzen»! الصواب «Finanzen» — راجع القاعدة (المالية)."
+          },
+          {
+            "q": "~~Wir bezahlen die zinsen.~~",
+            "a": "Wir bezahlen die Zinsen.",
+            "why": "الخطأ في «zinsen»! الصواب «Zinsen» — راجع القاعدة (الفوائد)."
           }
         ]
       },
@@ -234,6 +281,111 @@
             "q": "تحدّث عن التبرّع! (جملتان!)",
             "a": "Wir geben die Spende. Wir helfen den Menschen.",
             "why": "التبرّع! (die Spende geben!) — helfen den Menschen (بالإعطاء!) من A1!"
+          },
+          {
+            "q": "كوّن جملة فيها «produzieren» («ينتج») ثم تحدّث بها.",
+            "a": "Wir produzieren die Produkte.",
+            "why": "استعمل «produzieren» («ينتج») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Lieferung» («الشحنة») ثم تحدّث بها.",
+            "a": "Die Lieferung kommt.",
+            "why": "استعمل «die Lieferung» («الشحنة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «sparsam» («مقتصد») ثم تحدّث بها.",
+            "a": "Wir leben sparsam.",
+            "why": "استعمل «sparsam» («مقتصد») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "rueckgabe"
+        ],
+        "items": [
+          {
+            "audioId": "word-armut",
+            "speakText": "die Armut.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الفقر",
+              "الغنى",
+              "التبرّع"
+            ],
+            "a": "الفقر",
+            "why": "الصوت يقول «die Armut» — معناها «الفقر». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-reichtum",
+            "speakText": "der Reichtum.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Reichtum",
+              "die Armut",
+              "die Spende"
+            ],
+            "a": "der Reichtum",
+            "why": "الكلمة المسموعة «der Reichtum» تعني «الغنى». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-spende",
+            "speakText": "die Spende.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التبرّع",
+              "الفقر",
+              "الغنى"
+            ],
+            "a": "التبرّع",
+            "why": "الصوت يقول «die Spende» — معناها «التبرّع». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-rueckgabe",
+            "speakText": "die Rückgabe.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Rückgabe",
+              "die Armut",
+              "der Reichtum"
+            ],
+            "a": "die Rückgabe",
+            "why": "الكلمة المسموعة «die Rückgabe» تعني «الإرجاع». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "gebraucht"
+        ],
+        "items": [
+          {
+            "audioId": "word-armut",
+            "speakText": "die Armut.",
+            "a": "die Armut",
+            "why": "اكتب ما تسمعه حرفياً: «die Armut» تعني «الفقر». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-reichtum",
+            "speakText": "der Reichtum.",
+            "a": "der Reichtum",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Reichtum» («الغنى»)."
+          },
+          {
+            "audioId": "word-spende",
+            "speakText": "die Spende.",
+            "a": "die Spende",
+            "why": "اكتب المسموع بدقة: die Spende — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-gebraucht",
+            "speakText": "gebraucht.",
+            "a": "gebraucht",
+            "why": "اكتب ما تسمعه حرفياً: «gebraucht» تعني «مستعمل». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +416,14 @@
           {
             "q": "«الفقر سيّئ.»؟",
             "a": "Die Armut ist schlimm."
+          },
+          {
+            "q": "«الغنى كبير.»؟",
+            "a": "Der Reichtum ist groß."
+          },
+          {
+            "q": "«نُعطي التبرّع.»؟",
+            "a": "Wir geben die Spende."
           }
         ]
       },
@@ -284,6 +444,14 @@
           {
             "q": "die Armut",
             "a": "الفقر"
+          },
+          {
+            "q": "«الفقر»؟",
+            "a": "die Armut"
+          },
+          {
+            "q": "«الغنى»؟",
+            "a": "der Reichtum"
           }
         ]
       },
@@ -304,6 +472,14 @@
           {
             "q": "«الفقر سيّئ.»؟",
             "a": "Die Armut ist schlimm."
+          },
+          {
+            "q": "«الفقر»؟",
+            "a": "die Armut"
+          },
+          {
+            "q": "«الغنى»؟",
+            "a": "der Reichtum"
           }
         ]
       }

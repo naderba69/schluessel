@@ -134,6 +134,23 @@
               }
             ],
             "why": "die Ressourcen schützen! · erneuerbare Energie nutzen (لاحقة -e قبل الاسم!) · nichts verbrennen! · die Ressourcen جمع -n"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الاستدامة",
+                "de": "die Nachhaltigkeit"
+              },
+              {
+                "ar": "التأثير",
+                "de": "die Auswirkung"
+              },
+              {
+                "ar": "يلوّث",
+                "de": "verschmutzen"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Nachhaltigkeit = «الاستدامة» · die Auswirkung = «التأثير» · verschmutzen = «يلوّث»"
           }
         ]
       },
@@ -169,6 +186,21 @@
             "q": "Wir nutzen ___ Energie. (متجدّدة!)",
             "a": "erneuerbare",
             "why": "الصفة قبل الاسم تأخذ لاحقة! (erneuerbare Energie!) — Wir nutzen erneuerbare Energie."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Gerechtigkeit",
+            "why": "الكلمة الناقصة «Gerechtigkeit» تعني «العدل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir ___ Geld.",
+            "a": "spenden",
+            "why": "الكلمة الناقصة «spenden» تعني «يتبرّع» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Alle Menschen haben ___.",
+            "a": "Würde",
+            "why": "الكلمة الناقصة «Würde» تعني «الكرامة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +236,21 @@
             "q": "~~Wir schützen die Ressourcen auf.~~",
             "a": "Wir schützen die Ressourcen.",
             "why": "schützen ليس فعلاً منفصلاً! (لا auf!)"
+          },
+          {
+            "q": "~~In Berlin leben viele menschen.~~",
+            "a": "In Berlin leben viele Menschen.",
+            "why": "الخطأ في «menschen»! الصواب «Menschen» — راجع القاعدة (الإنسان)."
+          },
+          {
+            "q": "~~Meine Tante ist Freundlich.~~",
+            "a": "Meine Tante ist freundlich.",
+            "why": "الخطأ في «Freundlich»! الصواب «freundlich» — راجع القاعدة (ودود/لطيف)."
+          },
+          {
+            "q": "~~Ich brauche ruhe.~~",
+            "a": "Ich brauche Ruhe.",
+            "why": "الخطأ في «ruhe»! الصواب «Ruhe» — راجع القاعدة (الهدوء)."
           }
         ]
       },
@@ -234,6 +281,111 @@
             "q": "تحدث عن الحرق! (جملتان!)",
             "a": "Verbrennen ist nicht gut. Wir verbrennen nichts.",
             "why": "الحرق! (nichts verbrennen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Ermutigung» («التشجيع») ثم تحدّث بها.",
+            "a": "Er gibt mir Ermutigung.",
+            "why": "استعمل «die Ermutigung» («التشجيع») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «warnen» («يحذّر») ثم تحدّث بها.",
+            "a": "Ich warne dich.",
+            "why": "استعمل «warnen» («يحذّر») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Ablehnung» («الرفض») ثم تحدّث بها.",
+            "a": "Er bekommt Ablehnung.",
+            "why": "استعمل «die Ablehnung» («الرفض») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "verschmutzen"
+        ],
+        "items": [
+          {
+            "audioId": "word-ressource",
+            "speakText": "die Ressource.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المورد",
+              "متجدّد",
+              "يحرق"
+            ],
+            "a": "المورد",
+            "why": "الصوت يقول «die Ressource» — معناها «المورد». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-erneuerbar",
+            "speakText": "erneuerbar.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "erneuerbar",
+              "die Ressource",
+              "verbrennen"
+            ],
+            "a": "erneuerbar",
+            "why": "الكلمة المسموعة «erneuerbar» تعني «متجدّد». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-verbrennen",
+            "speakText": "verbrennen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يحرق",
+              "المورد",
+              "متجدّد"
+            ],
+            "a": "يحرق",
+            "why": "الصوت يقول «verbrennen» — معناها «يحرق». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-verschmutzen",
+            "speakText": "verschmutzen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "verschmutzen",
+              "die Ressource",
+              "erneuerbar"
+            ],
+            "a": "verschmutzen",
+            "why": "الكلمة المسموعة «verschmutzen» تعني «يلوّث». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "auswirkung"
+        ],
+        "items": [
+          {
+            "audioId": "word-ressource",
+            "speakText": "die Ressource.",
+            "a": "die Ressource",
+            "why": "اكتب ما تسمعه حرفياً: «die Ressource» تعني «المورد». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-erneuerbar",
+            "speakText": "erneuerbar.",
+            "a": "erneuerbar",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «erneuerbar» («متجدّد»)."
+          },
+          {
+            "audioId": "word-verbrennen",
+            "speakText": "verbrennen.",
+            "a": "verbrennen",
+            "why": "اكتب المسموع بدقة: verbrennen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-auswirkung",
+            "speakText": "die Auswirkung.",
+            "a": "die Auswirkung",
+            "why": "اكتب ما تسمعه حرفياً: «die Auswirkung» تعني «التأثير». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +416,14 @@
           {
             "q": "«الطاقة متجدّدة.»؟",
             "a": "Die Energie ist erneuerbar."
+          },
+          {
+            "q": "«المورد»؟",
+            "a": "die Ressource"
+          },
+          {
+            "q": "«متجدّد»؟",
+            "a": "erneuerbar"
           }
         ]
       },
@@ -284,6 +444,14 @@
           {
             "q": "die Ressource",
             "a": "المورد"
+          },
+          {
+            "q": "«المورد»؟",
+            "a": "die Ressource"
+          },
+          {
+            "q": "«متجدّد»؟",
+            "a": "erneuerbar"
           }
         ]
       },
@@ -304,6 +472,14 @@
           {
             "q": "«الموارد مهمّة.»؟",
             "a": "Die Ressourcen sind wichtig."
+          },
+          {
+            "q": "«المورد»؟",
+            "a": "die Ressource"
+          },
+          {
+            "q": "«متجدّد»؟",
+            "a": "erneuerbar"
           }
         ]
       }

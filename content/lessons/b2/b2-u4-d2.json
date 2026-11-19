@@ -133,6 +133,23 @@
               }
             ],
             "why": "das Ereignis erzählen! · das Medium nutzen! · das Ereignis übertragen (يبثّ!) · das Medium (das!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التحرير",
+                "de": "die Redaktion"
+              },
+              {
+                "ar": "القناة",
+                "de": "der Sender"
+              },
+              {
+                "ar": "الدعاية",
+                "de": "die Werbung"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Redaktion = «التحرير» · der Sender = «القناة» · die Werbung = «الدعاية»"
           }
         ]
       },
@@ -168,6 +185,21 @@
             "q": "Das Medium ist ___. (مهمّ!)",
             "a": "wichtig",
             "why": "wichtig مهمّ — Das Medium ist wichtig."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Wissenschaft",
+            "why": "الكلمة الناقصة «Wissenschaft» تعني «العلم» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir nutzen das ___.",
+            "a": "Gedächtnis",
+            "why": "الكلمة الناقصة «Gedächtnis» تعني «الذاكرة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ arbeitet.",
+            "a": "Gehirn",
+            "why": "الكلمة الناقصة «Gehirn» تعني «الدماغ» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -203,6 +235,21 @@
             "q": "~~Das Ereignis sind wichtig.~~",
             "a": "Das Ereignis ist wichtig.",
             "why": "المفرد das Ereignis مع ist (لا sind!)!"
+          },
+          {
+            "q": "~~Wir nutzen die kenntnisse.~~",
+            "a": "Wir nutzen die Kenntnisse.",
+            "why": "الخطأ في «kenntnisse»! الصواب «Kenntnisse» — راجع القاعدة (الدراية)."
+          },
+          {
+            "q": "~~Wir brauchen fachwissen.~~",
+            "a": "Wir brauchen Fachwissen.",
+            "why": "الخطأ في «fachwissen»! الصواب «Fachwissen» — راجع القاعدة (المعرفة التخصصية)."
+          },
+          {
+            "q": "~~Die Technik Wandelt die Arbeit.~~",
+            "a": "Die Technik wandelt die Arbeit.",
+            "why": "الخطأ في «Wandelt»! الصواب «wandelt» — راجع القاعدة (يحوّل)."
           }
         ]
       },
@@ -233,6 +280,111 @@
             "q": "تحدّث عن البثّ! (جملتان!)",
             "a": "Der Sender überträgt das Ereignis. Das ist gut.",
             "why": "البثّ! (der Sender überträgt das Ereignis!)"
+          },
+          {
+            "q": "كوّن جملة فيها «programmieren» («يبرمج») ثم تحدّث بها.",
+            "a": "Wir programmieren den Roboter.",
+            "why": "استعمل «programmieren» («يبرمج») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Automatisierung» («الأتمتة») ثم تحدّث بها.",
+            "a": "Die Automatisierung kommt.",
+            "why": "استعمل «die Automatisierung» («الأتمتة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Technologie» («التكنولوجيا») ثم تحدّث بها.",
+            "a": "Wir entwickeln die Technologie.",
+            "why": "استعمل «die Technologie» («التكنولوجيا») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "werbung"
+        ],
+        "items": [
+          {
+            "audioId": "word-ereignis",
+            "speakText": "das Ereignis.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الحدث",
+              "الوسيلة",
+              "يبثّ"
+            ],
+            "a": "الحدث",
+            "why": "الصوت يقول «das Ereignis» — معناها «الحدث». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-medium",
+            "speakText": "das Medium.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "das Medium",
+              "das Ereignis",
+              "übertragen"
+            ],
+            "a": "das Medium",
+            "why": "الكلمة المسموعة «das Medium» تعني «الوسيلة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-uebertragen",
+            "speakText": "übertragen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يبثّ",
+              "الحدث",
+              "الوسيلة"
+            ],
+            "a": "يبثّ",
+            "why": "الصوت يقول «übertragen» — معناها «يبثّ». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-werbung",
+            "speakText": "die Werbung.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Werbung",
+              "das Ereignis",
+              "das Medium"
+            ],
+            "a": "die Werbung",
+            "why": "الكلمة المسموعة «die Werbung» تعني «الدعاية». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "sender"
+        ],
+        "items": [
+          {
+            "audioId": "word-ereignis",
+            "speakText": "das Ereignis.",
+            "a": "das Ereignis",
+            "why": "اكتب ما تسمعه حرفياً: «das Ereignis» تعني «الحدث». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-medium",
+            "speakText": "das Medium.",
+            "a": "das Medium",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «das Medium» («الوسيلة»)."
+          },
+          {
+            "audioId": "word-uebertragen",
+            "speakText": "übertragen.",
+            "a": "übertragen",
+            "why": "اكتب المسموع بدقة: übertragen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-sender",
+            "speakText": "der Sender.",
+            "a": "der Sender",
+            "why": "اكتب ما تسمعه حرفياً: «der Sender» تعني «القناة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -263,6 +415,14 @@
           {
             "q": "«القناة تبثّ الحدث.»؟",
             "a": "Der Sender überträgt das Ereignis."
+          },
+          {
+            "q": "«الواقعة»؟",
+            "a": "das Ereignis"
+          },
+          {
+            "q": "«الوسيلة الإعلامية»؟",
+            "a": "das Medium"
           }
         ]
       },
@@ -283,6 +443,14 @@
           {
             "q": "übertragen",
             "a": "يبثّ"
+          },
+          {
+            "q": "«الحدث»؟",
+            "a": "das Ereignis"
+          },
+          {
+            "q": "«الوسيلة»؟",
+            "a": "das Medium"
           }
         ]
       },
@@ -303,6 +471,14 @@
           {
             "q": "«القناة تبثّ الحدث.»؟",
             "a": "Der Sender überträgt das Ereignis."
+          },
+          {
+            "q": "«الحدث»؟",
+            "a": "das Ereignis"
+          },
+          {
+            "q": "«الوسيلة»؟",
+            "a": "das Medium"
           }
         ]
       }

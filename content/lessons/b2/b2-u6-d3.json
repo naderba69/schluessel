@@ -129,6 +129,23 @@
               }
             ],
             "why": "die Heilung brauchen (الحاجة!) · das Symptom haben (الظهور!) · die Operation ist wichtig!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التغذية",
+                "de": "die Ernährung"
+              },
+              {
+                "ar": "الاسترخاء",
+                "de": "die Entspannung"
+              },
+              {
+                "ar": "الرعاية",
+                "de": "die Pflege"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Ernährung = «التغذية» · die Entspannung = «الاسترخاء» · die Pflege = «الرعاية»"
           }
         ]
       },
@@ -164,6 +181,21 @@
             "q": "Die Heilung ist ___. (جيّدة!)",
             "a": "gut",
             "why": "gut جيّد — Die Heilung ist gut."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Behandlung",
+            "why": "الكلمة الناقصة «Behandlung» تعني «العلاج» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Vorsorge",
+            "why": "الكلمة الناقصة «Vorsorge» تعني «الوقاية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist klar.",
+            "a": "Diagnose",
+            "why": "الكلمة الناقصة «Diagnose» تعني «التشخيص» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -199,6 +231,21 @@
             "q": "~~Die Operation sind wichtig.~~",
             "a": "Die Operation ist wichtig.",
             "why": "المفرد die Operation مع ist (لا sind!)!"
+          },
+          {
+            "q": "~~Die armut ist schlimm.~~",
+            "a": "Die Armut ist schlimm.",
+            "why": "الخطأ في «armut»! الصواب «Armut» — راجع القاعدة (الفقر)."
+          },
+          {
+            "q": "~~Der reichtum ist groß.~~",
+            "a": "Der Reichtum ist groß.",
+            "why": "الخطأ في «reichtum»! الصواب «Reichtum» — راجع القاعدة (الغنى)."
+          },
+          {
+            "q": "~~Wir geben die spende.~~",
+            "a": "Wir geben die Spende.",
+            "why": "الخطأ في «spende»! الصواب «Spende» — راجع القاعدة (التبرّع)."
           }
         ]
       },
@@ -229,6 +276,111 @@
             "q": "تحدّث عن الشفاء! (جملتان!)",
             "a": "Die Heilung ist gut. Wir brauchen die Heilung.",
             "why": "الشفاء! (die Heilung brauchen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «der Hersteller» («المصنّع») ثم تحدّث بها.",
+            "a": "Der Hersteller produziert.",
+            "why": "استعمل «der Hersteller» («المصنّع») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «gebraucht» («مستعمل») ثم تحدّث بها.",
+            "a": "Wir kaufen gebraucht.",
+            "why": "استعمل «gebraucht» («مستعمل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Rückgabe» («الإرجاع») ثم تحدّث بها.",
+            "a": "Die Rückgabe ist möglich.",
+            "why": "استعمل «die Rückgabe» («الإرجاع») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "pflege"
+        ],
+        "items": [
+          {
+            "audioId": "word-operation",
+            "speakText": "die Operation.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العملية الجراحية",
+              "الشفاء",
+              "العَرَض (المرض!)"
+            ],
+            "a": "العملية الجراحية",
+            "why": "الصوت يقول «die Operation» — معناها «العملية الجراحية». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-heilung",
+            "speakText": "die Heilung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Heilung",
+              "die Operation",
+              "das Symptom"
+            ],
+            "a": "die Heilung",
+            "why": "الكلمة المسموعة «die Heilung» تعني «الشفاء». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-symptom",
+            "speakText": "das Symptom.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "العَرَض (المرض!)",
+              "العملية الجراحية",
+              "الشفاء"
+            ],
+            "a": "العَرَض (المرض!)",
+            "why": "الصوت يقول «das Symptom» — معناها «العَرَض (المرض!)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-pflege",
+            "speakText": "die Pflege.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Pflege",
+              "die Operation",
+              "die Heilung"
+            ],
+            "a": "die Pflege",
+            "why": "الكلمة المسموعة «die Pflege» تعني «الرعاية». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "entspannung"
+        ],
+        "items": [
+          {
+            "audioId": "word-operation",
+            "speakText": "die Operation.",
+            "a": "die Operation",
+            "why": "اكتب ما تسمعه حرفياً: «die Operation» تعني «العملية الجراحية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-heilung",
+            "speakText": "die Heilung.",
+            "a": "die Heilung",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Heilung» («الشفاء»)."
+          },
+          {
+            "audioId": "word-symptom",
+            "speakText": "das Symptom.",
+            "a": "das Symptom",
+            "why": "اكتب المسموع بدقة: das Symptom — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-entspannung",
+            "speakText": "die Entspannung.",
+            "a": "die Entspannung",
+            "why": "اكتب ما تسمعه حرفياً: «die Entspannung» تعني «الاسترخاء». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -259,6 +411,14 @@
           {
             "q": "«العملية الجراحية مهمة.»؟",
             "a": "Die Operation ist wichtig."
+          },
+          {
+            "q": "«الشفاء جيّد.»؟",
+            "a": "Die Heilung ist gut."
+          },
+          {
+            "q": "«العَرَض (المرض!)»؟",
+            "a": "das Symptom"
           }
         ]
       },
@@ -279,6 +439,14 @@
           {
             "q": "das Symptom",
             "a": "العَرَض (المرض!)"
+          },
+          {
+            "q": "«العملية الجراحية»؟",
+            "a": "die Operation"
+          },
+          {
+            "q": "«الشفاء»؟",
+            "a": "die Heilung"
           }
         ]
       },
@@ -299,6 +467,14 @@
           {
             "q": "«العملية تساعد.»؟",
             "a": "Die Operation hilft."
+          },
+          {
+            "q": "«العملية الجراحية»؟",
+            "a": "die Operation"
+          },
+          {
+            "q": "«الشفاء»؟",
+            "a": "die Heilung"
           }
         ]
       }

@@ -176,6 +176,23 @@
               }
             ],
             "why": "مراجعة أفعال الكتابة! schreiben · korrigieren · überarbeiten · skizzieren"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "ضغط الوقت",
+                "de": "der Zeitdruck"
+              },
+              {
+                "ar": "بسلاسة",
+                "de": "flüssig"
+              },
+              {
+                "ar": "يسرّع",
+                "de": "beschleunigen"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Zeitdruck = «ضغط الوقت» · flüssig = «بسلاسة» · beschleunigen = «يسرّع»"
           }
         ]
       },
@@ -187,9 +204,8 @@
           "الكتابة تحت الضغط!"
         ],
         "interleavedWith": [
-          "formulierung",
-          "verfassen",
-          "einhalten"
+          "beschleunigen",
+          "fluessig"
         ],
         "items": [
           {
@@ -216,6 +232,16 @@
             "q": "Er findet die ___. (يجد الصياغة!)",
             "a": "Formulierung",
             "why": "die Formulierung finden — المفردة الثابتة! (findet!)"
+          },
+          {
+            "q": "Er ___ die Arbeit.",
+            "a": "beschleunigt",
+            "why": "الكلمة الناقصة «beschleunigt» تعني «يسرّع» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Er spricht ___.",
+            "a": "flüssig",
+            "why": "الكلمة الناقصة «flüssig» تعني «بسلاسة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -246,6 +272,16 @@
             "q": "~~Er verfassen den Text.~~",
             "a": "Er verfasst den Text.",
             "why": "المضارع لا المصدر! er verfasst (لا verfassen!)"
+          },
+          {
+            "q": "~~Der entwurf ist kurz.~~",
+            "a": "Der Entwurf ist kurz.",
+            "why": "الخطأ في «entwurf»! الصواب «Entwurf» — راجع القاعدة (المسودة)."
+          },
+          {
+            "q": "~~Der absatz ist kurz.~~",
+            "a": "Der Absatz ist kurz.",
+            "why": "الخطأ في «absatz»! الصواب «Absatz» — راجع القاعدة (الفقرة (في النص))."
           }
         ]
       },
@@ -281,6 +317,111 @@
             "q": "اختم بالموعد! (جملتان!)",
             "a": "Er hält die Frist ein. Die Zeit ist knapp.",
             "why": "الالتزام ثم الوقت! (die Frist einhalten!)"
+          },
+          {
+            "q": "كوّن جملة فيها «schreiben» («يكتب») ثم تحدّث بها.",
+            "a": "Ich schreibe meinen Namen.",
+            "why": "استعمل «schreiben» («يكتب») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «korrigieren» («يصحّح») ثم تحدّث بها.",
+            "a": "Könnten Sie das bitte korrigieren?",
+            "why": "استعمل «korrigieren» («يصحّح») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «rechtzeitig» («في الوقت المحدد») ثم تحدّث بها.",
+            "a": "Ich komme rechtzeitig zur Arbeit.",
+            "why": "استعمل «rechtzeitig» («في الوقت المحدد») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "beschleunigen"
+        ],
+        "items": [
+          {
+            "audioId": "word-formulierung",
+            "speakText": "die Formulierung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الصياغة",
+              "يؤلّف",
+              "يلتزم بـ"
+            ],
+            "a": "الصياغة",
+            "why": "الصوت يقول «die Formulierung» — معناها «الصياغة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-verfassen",
+            "speakText": "verfassen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "verfassen",
+              "die Formulierung",
+              "einhalten"
+            ],
+            "a": "verfassen",
+            "why": "الكلمة المسموعة «verfassen» تعني «يؤلّف». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-einhalten",
+            "speakText": "einhalten.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يلتزم بـ",
+              "الصياغة",
+              "يؤلّف"
+            ],
+            "a": "يلتزم بـ",
+            "why": "الصوت يقول «einhalten» — معناها «يلتزم بـ». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-beschleunigen",
+            "speakText": "beschleunigen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "beschleunigen",
+              "die Formulierung",
+              "verfassen"
+            ],
+            "a": "beschleunigen",
+            "why": "الكلمة المسموعة «beschleunigen» تعني «يسرّع». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "fluessig"
+        ],
+        "items": [
+          {
+            "audioId": "word-formulierung",
+            "speakText": "die Formulierung.",
+            "a": "die Formulierung",
+            "why": "اكتب ما تسمعه حرفياً: «die Formulierung» تعني «الصياغة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-verfassen",
+            "speakText": "verfassen.",
+            "a": "verfassen",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «verfassen» («يؤلّف»)."
+          },
+          {
+            "audioId": "word-einhalten",
+            "speakText": "einhalten.",
+            "a": "einhalten",
+            "why": "اكتب المسموع بدقة: einhalten — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-fluessig",
+            "speakText": "flüssig.",
+            "a": "flüssig",
+            "why": "اكتب ما تسمعه حرفياً: «flüssig» تعني «بسلاسة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -311,6 +452,14 @@
           {
             "q": "«يجد الصياغة.»؟",
             "a": "Er findet die Formulierung."
+          },
+          {
+            "q": "«يؤلّف»؟",
+            "a": "verfassen"
+          },
+          {
+            "q": "«يلتزم بـ»؟",
+            "a": "einhalten"
           }
         ]
       },
@@ -331,6 +480,14 @@
           {
             "q": "«الموعد»؟ (مراجعة!)",
             "a": "die Frist"
+          },
+          {
+            "q": "«الصياغة»؟",
+            "a": "die Formulierung"
+          },
+          {
+            "q": "«يؤلّف»؟",
+            "a": "verfassen"
           }
         ]
       },
@@ -351,6 +508,14 @@
           {
             "q": "«يلتزم بالموعد»؟ (المفردة الثابتة!)",
             "a": "die Frist einhalten"
+          },
+          {
+            "q": "«الصياغة»؟",
+            "a": "die Formulierung"
+          },
+          {
+            "q": "«يؤلّف»؟",
+            "a": "verfassen"
           }
         ]
       }

@@ -169,6 +169,23 @@
               }
             ],
             "why": "überwiegend في الغالب (ظرف!) · knapp بالكاد/ضيّق (لا «قليل»!) · reichlich وفير (ظرف!) · die Million المليون (die Millionen!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "بالمئة",
+                "de": "das Prozent"
+              },
+              {
+                "ar": "النصف",
+                "de": "die Hälfte"
+              },
+              {
+                "ar": "العدد (الكمّي)",
+                "de": "die Anzahl"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: das Prozent = «بالمئة» · die Hälfte = «النصف» · die Anzahl = «العدد (الكمّي)»"
           }
         ]
       },
@@ -180,9 +197,8 @@
           "الكمّيات!"
         ],
         "interleavedWith": [
-          "drittel",
-          "handvoll",
-          "million"
+          "anzahl",
+          "stand"
         ],
         "items": [
           {
@@ -214,6 +230,16 @@
             "q": "Die ___ ist hoch. (المعدل!)",
             "a": "Rate",
             "why": "die Rate المعدل (die Raten!) — die Rate ist hoch."
+          },
+          {
+            "q": "Die ___ steigt.",
+            "a": "Anzahl",
+            "why": "الكلمة الناقصة «Anzahl» تعني «العدد (الكمّي)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist stabil.",
+            "a": "Stand",
+            "why": "الكلمة الناقصة «Stand» تعني «المستوى (الحالي)» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -225,9 +251,8 @@
           "الجمع! الأداة! المعنى!"
         ],
         "interleavedWith": [
-          "zehntel",
-          "dutzend",
-          "bruch"
+          "anzahl",
+          "stand"
         ],
         "items": [
           {
@@ -244,6 +269,16 @@
             "q": "~~Die Menge ist knapp.~~ (بمعنى قليلة!)",
             "a": "Die Menge ist klein.",
             "why": "knapp = بالكاد تكفي/ضيّقة! (لا «قليل»!) — القليل = klein/wenig!"
+          },
+          {
+            "q": "~~Die anzahl steigt.~~",
+            "a": "Die Anzahl steigt.",
+            "why": "الخطأ في «anzahl»! الصواب «Anzahl» — راجع القاعدة (العدد (الكمّي))."
+          },
+          {
+            "q": "~~Der stand ist stabil.~~",
+            "a": "Der Stand ist stabil.",
+            "why": "الخطأ في «stand»! الصواب «Stand» — راجع القاعدة (المستوى (الحالي))."
           }
         ]
       },
@@ -255,9 +290,8 @@
           "Drittel! Handvoll! Rate!"
         ],
         "interleavedWith": [
-          "teilweise",
-          "vollstaendig",
-          "ueberwiegend"
+          "anzahl",
+          "stand"
         ],
         "items": [
           {
@@ -274,6 +308,106 @@
             "q": "اختم بالتوزيع والمعدل! (3 جمل!)",
             "a": "Die Werte sind überwiegend hoch. Die Summe ist vollständig. Die Rate ist hoch!",
             "why": "überwiegend! vollständig! Rate! (الخاتمة!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Anzahl» («العدد (الكمّي)») ثم تحدّث بها.",
+            "a": "Die Anzahl steigt.",
+            "why": "استعمل «die Anzahl» («العدد (الكمّي)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Stand» («المستوى (الحالي)») ثم تحدّث بها.",
+            "a": "Der Stand ist stabil.",
+            "why": "استعمل «der Stand» («المستوى (الحالي)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "anzahl"
+        ],
+        "items": [
+          {
+            "audioId": "word-genuegend",
+            "speakText": "genügend.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "كافٍ",
+              "الثلث",
+              "العُشر"
+            ],
+            "a": "كافٍ",
+            "why": "الصوت يقول «genügend» — معناها «كافٍ». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-drittel",
+            "speakText": "das Drittel.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "das Drittel",
+              "genügend",
+              "das Zehntel"
+            ],
+            "a": "das Drittel",
+            "why": "الكلمة المسموعة «das Drittel» تعني «الثلث». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-zehntel",
+            "speakText": "das Zehntel.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "العُشر",
+              "كافٍ",
+              "الثلث"
+            ],
+            "a": "العُشر",
+            "why": "الصوت يقول «das Zehntel» — معناها «العُشر». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-anzahl",
+            "speakText": "die Anzahl.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Anzahl",
+              "genügend",
+              "das Drittel"
+            ],
+            "a": "die Anzahl",
+            "why": "الكلمة المسموعة «die Anzahl» تعني «العدد (الكمّي)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "stand"
+        ],
+        "items": [
+          {
+            "audioId": "word-handvoll",
+            "speakText": "die Handvoll.",
+            "a": "die Handvoll",
+            "why": "اكتب ما تسمعه حرفياً: «die Handvoll» تعني «حفنة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-dutzend",
+            "speakText": "das Dutzend.",
+            "a": "das Dutzend",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «das Dutzend» («الدزينة (اثنا عشر)»)."
+          },
+          {
+            "audioId": "word-bruch",
+            "speakText": "der Bruch.",
+            "a": "der Bruch",
+            "why": "اكتب المسموع بدقة: der Bruch — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-stand",
+            "speakText": "der Stand.",
+            "a": "der Stand",
+            "why": "اكتب ما تسمعه حرفياً: «der Stand» تعني «المستوى (الحالي)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -304,6 +438,14 @@
           {
             "q": "«العُشر»؟",
             "a": "das Zehntel"
+          },
+          {
+            "q": "«كافٍ»؟",
+            "a": "genügend"
+          },
+          {
+            "q": "«الثلث»؟",
+            "a": "das Drittel"
           }
         ]
       },
@@ -324,6 +466,14 @@
           {
             "q": "«المليون»؟",
             "a": "die Million"
+          },
+          {
+            "q": "«كافٍ»؟",
+            "a": "genügend"
+          },
+          {
+            "q": "«الثلث»؟",
+            "a": "das Drittel"
           }
         ]
       },
@@ -344,6 +494,14 @@
           {
             "q": "«المعدل»؟",
             "a": "die Rate"
+          },
+          {
+            "q": "«كافٍ»؟",
+            "a": "genügend"
+          },
+          {
+            "q": "«الثلث»؟",
+            "a": "das Drittel"
           }
         ]
       }

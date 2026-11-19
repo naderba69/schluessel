@@ -153,6 +153,23 @@
               }
             ],
             "why": "Störung عطل (die! + Störungen!) · Ursache سبب (die! + Ursachen!) · Geduld صبر (die! بلا-جمع!) · höflich مهذب (صفة!) · Verspätung تأخير (استرجاع A1! die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الازدحام المروري",
+                "de": "der Stau"
+              },
+              {
+                "ar": "جدول المواعيد",
+                "de": "der Fahrplan"
+              },
+              {
+                "ar": "رغم ذلك",
+                "de": "trotzdem"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Stau = «الازدحام المروري» · der Fahrplan = «جدول المواعيد» · trotzdem = «رغم ذلك»"
           }
         ]
       },
@@ -199,6 +216,16 @@
             "q": "Vielen Dank für Ihr ___. (Verständnis!)",
             "a": "Verständnis",
             "why": "تفهّم! — das Verständnis — العبارة المهذبة الجاهزة للاعتذار!"
+          },
+          {
+            "q": "Der Zug hat ___.",
+            "a": "Verspätung",
+            "why": "الكلمة الناقصة «Verspätung» تعني «تأخير» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Ich bin ___.",
+            "a": "krank",
+            "why": "الكلمة الناقصة «krank» تعني «مريض» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -230,6 +257,21 @@
             "q": "~~Der Zug fällt aus. Deshalb komme ich rechtzeitig zur Arbeit.~~",
             "a": "Der Zug fällt aus. Trotzdem komme ich rechtzeitig zur Arbeit.",
             "why": "المعنى! — deshalb «لذلك» (النتيجة!) وtrotzdem «رغم ذلك» (رغم السبب!) — العربية «مع ذلك/لذلك» أقوى تشابهاً!"
+          },
+          {
+            "q": "~~Ich komme aus Tunesien.~~ (ناقصة: kommen)",
+            "a": "Ich komme aus Tunesien. kommen.",
+            "why": "الجملة تفتقد «kommen» (يأتي / يكون من) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~Meine Mutter Arbeitet viel.~~",
+            "a": "Meine Mutter arbeitet viel.",
+            "why": "الخطأ في «Arbeitet»! الصواب «arbeitet» — راجع القاعدة (يعمل)."
+          },
+          {
+            "q": "~~danke! — Bitte!~~",
+            "a": "Danke! — Bitte!",
+            "why": "الخطأ في «danke»! الصواب «Danke» — راجع القاعدة (شكراً)."
           }
         ]
       },
@@ -250,6 +292,96 @@
             "q": "احكِ للرئيس (سجّل): 8 جمل — التأخير! + السبب! + deshalb! + رغم ذلك! + تُبلِّغ! + اعتذار! + صبر! + شكر!",
             "a": "Der Zug fällt heute aus. Es gibt eine Störung. Deshalb komme ich mit dem Bus. Der Streik ist schlimm. Trotzdem komme ich rechtzeitig zur Arbeit. Ich melde mich beim Chef. Entschuldigung! Bitte haben Sie Geduld! Vielen Dank für Ihr Verständnis!",
             "why": "الاعتذار المهذب (B1): سبب محدَّد! + deshalb للنتيجة! + trotzdem للرغم! + sich melden! + Entschuldigung + شكر — لا اعتذار بلا سبب!"
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "in-der-nacht"
+        ],
+        "items": [
+          {
+            "audioId": "word-muehe",
+            "speakText": "die Mühe.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "مجهود",
+              "رغم ذلك",
+              "في الوقت المحدد"
+            ],
+            "a": "مجهود",
+            "why": "الصوت يقول «die Mühe» — معناها «مجهود». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-trotzdem",
+            "speakText": "trotzdem.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "trotzdem",
+              "die Mühe",
+              "rechtzeitig"
+            ],
+            "a": "trotzdem",
+            "why": "الكلمة المسموعة «trotzdem» تعني «رغم ذلك». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-rechtzeitig",
+            "speakText": "rechtzeitig.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "في الوقت المحدد",
+              "مجهود",
+              "رغم ذلك"
+            ],
+            "a": "في الوقت المحدد",
+            "why": "الصوت يقول «rechtzeitig» — معناها «في الوقت المحدد». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-in-der-nacht",
+            "speakText": "in der Nacht.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "in der Nacht",
+              "die Mühe",
+              "trotzdem"
+            ],
+            "a": "in der Nacht",
+            "why": "الكلمة المسموعة «in der Nacht» تعني «في الليل». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "pferd"
+        ],
+        "items": [
+          {
+            "audioId": "word-ausfallen",
+            "speakText": "ausfallen.",
+            "a": "ausfallen",
+            "why": "اكتب ما تسمعه حرفياً: «ausfallen» تعني «يُلغى». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-umleitung",
+            "speakText": "die Umleitung.",
+            "a": "die Umleitung",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Umleitung» («طريق بديل»)."
+          },
+          {
+            "audioId": "word-streik",
+            "speakText": "der Streik.",
+            "a": "der Streik",
+            "why": "اكتب المسموع بدقة: der Streik — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-pferd",
+            "speakText": "das Pferd.",
+            "a": "das Pferd",
+            "why": "اكتب ما تسمعه حرفياً: «das Pferd» تعني «حصان». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -280,6 +412,14 @@
           {
             "q": "«أُعلم الرئيس بوصولي.»؟",
             "a": "Ich melde mich beim Chef."
+          },
+          {
+            "q": "«مجهود»؟",
+            "a": "die Mühe"
+          },
+          {
+            "q": "«يُلغى»؟",
+            "a": "ausfallen"
           }
         ],
         "passingScore": 0.75
@@ -301,6 +441,14 @@
           {
             "q": "«رجاءً كونوا صبورين!»؟",
             "a": "Bitte haben Sie Geduld!"
+          },
+          {
+            "q": "«مجهود»؟",
+            "a": "die Mühe"
+          },
+          {
+            "q": "«رغم ذلك»؟",
+            "a": "trotzdem"
           }
         ],
         "passingScore": 0.75
@@ -322,6 +470,14 @@
           {
             "q": "«هناك طريق بديل.»؟",
             "a": "Es gibt eine Umleitung."
+          },
+          {
+            "q": "«مجهود»؟",
+            "a": "die Mühe"
+          },
+          {
+            "q": "«رغم ذلك»؟",
+            "a": "trotzdem"
           }
         ],
         "passingScore": 0.75

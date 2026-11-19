@@ -176,6 +176,23 @@
               }
             ],
             "why": "مراجعة أدوات الكلام! sprechen · antworten · fragen · das Gespräch (das!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "منطقي",
+                "de": "logisch"
+              },
+              {
+                "ar": "الاتّساق",
+                "de": "der Zusammenhang"
+              },
+              {
+                "ar": "الشرط",
+                "de": "die Bedingung"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: logisch = «منطقي» · der Zusammenhang = «الاتّساق» · die Bedingung = «الشرط»"
           }
         ]
       },
@@ -187,9 +204,8 @@
           "الكلام تحت الضغط!"
         ],
         "interleavedWith": [
-          "zeitdruck",
-          "fluessig",
-          "beschleunigen"
+          "bedingung",
+          "zusammenhang"
         ],
         "items": [
           {
@@ -216,6 +232,16 @@
             "q": "Drei ___ statt vier! (المحاكاة!)",
             "a": "Minuten",
             "why": "die Minute الدقيقة (die!) — drei Minuten statt vier! (ثلاثة أرباع الوقت!)"
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Bedingung",
+            "why": "الكلمة الناقصة «Bedingung» تعني «الشرط» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist klar.",
+            "a": "Zusammenhang",
+            "why": "الكلمة الناقصة «Zusammenhang» تعني «الاتّساق» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -246,6 +272,21 @@
             "q": "~~Er beschleunigen die Arbeit.~~",
             "a": "Er beschleunigt die Arbeit.",
             "why": "المضارع لا المصدر! er beschleunigt (لا beschleunigen!)"
+          },
+          {
+            "q": "~~Ich habe zeit.~~",
+            "a": "Ich habe Zeit.",
+            "why": "الخطأ في «zeit»! الصواب «Zeit» — راجع القاعدة (الوقت)."
+          },
+          {
+            "q": "~~Fünf minuten, bitte!~~",
+            "a": "Fünf Minuten, bitte!",
+            "why": "الخطأ في «minuten»! الصواب «Minuten» — راجع القاعدة (الدقيقة)."
+          },
+          {
+            "q": "~~Die pause ist kurz: zehn Minuten.~~",
+            "a": "Die Pause ist kurz: zehn Minuten.",
+            "why": "الخطأ في «pause»! الصواب «Pause» — راجع القاعدة (استراحة)."
           }
         ]
       },
@@ -281,6 +322,101 @@
             "q": "اختم بقوة! (جملتان!)",
             "a": "Er beschleunigt die Arbeit. Drei Minuten — geschafft!",
             "why": "التسريع ثم الإنجاز! (die Arbeit beschleunigen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «antworten» («يجيب (بالردّ)») ثم تحدّث بها.",
+            "a": "Ich antworte später.",
+            "why": "استعمل «antworten» («يجيب (بالردّ)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "bedingung"
+        ],
+        "items": [
+          {
+            "audioId": "word-zeitdruck",
+            "speakText": "der Zeitdruck.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "ضغط الوقت",
+              "بسلاسة",
+              "يسرّع"
+            ],
+            "a": "ضغط الوقت",
+            "why": "الصوت يقول «der Zeitdruck» — معناها «ضغط الوقت». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-fluessig",
+            "speakText": "flüssig.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "flüssig",
+              "der Zeitdruck",
+              "beschleunigen"
+            ],
+            "a": "flüssig",
+            "why": "الكلمة المسموعة «flüssig» تعني «بسلاسة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-beschleunigen",
+            "speakText": "beschleunigen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يسرّع",
+              "ضغط الوقت",
+              "بسلاسة"
+            ],
+            "a": "يسرّع",
+            "why": "الصوت يقول «beschleunigen» — معناها «يسرّع». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-bedingung",
+            "speakText": "die Bedingung.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Bedingung",
+              "der Zeitdruck",
+              "flüssig"
+            ],
+            "a": "die Bedingung",
+            "why": "الكلمة المسموعة «die Bedingung» تعني «الشرط». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "zusammenhang"
+        ],
+        "items": [
+          {
+            "audioId": "word-zeitdruck",
+            "speakText": "der Zeitdruck.",
+            "a": "der Zeitdruck",
+            "why": "اكتب ما تسمعه حرفياً: «der Zeitdruck» تعني «ضغط الوقت». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-fluessig",
+            "speakText": "flüssig.",
+            "a": "flüssig",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «flüssig» («بسلاسة»)."
+          },
+          {
+            "audioId": "word-beschleunigen",
+            "speakText": "beschleunigen.",
+            "a": "beschleunigen",
+            "why": "اكتب المسموع بدقة: beschleunigen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-zusammenhang",
+            "speakText": "der Zusammenhang.",
+            "a": "der Zusammenhang",
+            "why": "اكتب ما تسمعه حرفياً: «der Zusammenhang» تعني «الاتّساق». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -311,6 +447,14 @@
           {
             "q": "«يتحدّث تحت ضغط الوقت.»؟",
             "a": "Er spricht unter Zeitdruck."
+          },
+          {
+            "q": "«يسرّع»؟",
+            "a": "beschleunigen"
+          },
+          {
+            "q": "«ضيق الوقت»؟",
+            "a": "der Zeitdruck"
           }
         ]
       },
@@ -331,6 +475,14 @@
           {
             "q": "«الحوار»؟ (مراجعة!)",
             "a": "das Gespräch"
+          },
+          {
+            "q": "«ضغط الوقت»؟",
+            "a": "der Zeitdruck"
+          },
+          {
+            "q": "«بسلاسة»؟",
+            "a": "flüssig"
           }
         ]
       },
@@ -351,6 +503,14 @@
           {
             "q": "«يتحدّث بطلاقة.»؟ (المفردة الثابتة!)",
             "a": "Er spricht flüssig."
+          },
+          {
+            "q": "«ضغط الوقت»؟",
+            "a": "der Zeitdruck"
+          },
+          {
+            "q": "«بسلاسة»؟",
+            "a": "flüssig"
           }
         ]
       }

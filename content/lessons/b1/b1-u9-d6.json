@@ -157,6 +157,23 @@
               }
             ],
             "why": "die Runde الجولة (beginnen!) · die Abstimmung التصويت (kommen!) · der Beschluss القرار (treffen!) · umsetzen يُنفّذ (مراجعة d5!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "البروتوكول",
+                "de": "das Protokoll"
+              },
+              {
+                "ar": "الاتفاق المسبق",
+                "de": "die Absprache"
+              },
+              {
+                "ar": "نظرة عامة",
+                "de": "die Übersicht"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: das Protokoll = «البروتوكول» · die Absprache = «الاتفاق المسبق» · die Übersicht = «نظرة عامة»"
           }
         ]
       },
@@ -202,6 +219,21 @@
             "q": "Die Zufriedenheit ist ___. (مراجعة d4!)",
             "a": "wichtig",
             "why": "die Zufriedenheit ist wichtig! (الخاتمة الثابتة d4!)"
+          },
+          {
+            "q": "Das ist die ___.",
+            "a": "Entschädigung",
+            "why": "الكلمة الناقصة «Entschädigung» تعني «التعويض» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ist die ___.",
+            "a": "Reklamation",
+            "why": "الكلمة الناقصة «Reklamation» تعني «الشكوى (على البضاعة)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist gut.",
+            "a": "Regelung",
+            "why": "الكلمة الناقصة «Regelung» تعني «التسوية» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -232,6 +264,21 @@
             "q": "~~die Versöhnung machen~~",
             "a": "die Versöhnung finden",
             "why": "die Versöhnung finden! (الشريك الثابت — لا machen!)"
+          },
+          {
+            "q": "~~Das ist kulanz!~~",
+            "a": "Das ist Kulanz!",
+            "why": "الخطأ في «kulanz»! الصواب «Kulanz» — راجع القاعدة (التفضّل (بلا ضمان!))."
+          },
+          {
+            "q": "~~Hier ist ein gutschein.~~",
+            "a": "Hier ist ein Gutschein.",
+            "why": "الخطأ في «gutschein»! الصواب «Gutschein» — راجع القاعدة (القسيمة)."
+          },
+          {
+            "q": "~~Das ist eine ausnahme.~~",
+            "a": "Das ist eine Ausnahme.",
+            "why": "الخطأ في «ausnahme»! الصواب «Ausnahme» — راجع القاعدة (الاستثناء)."
           }
         ]
       },
@@ -262,6 +309,106 @@
             "q": "اختم بالتصالح والسلام! (3 جمل!)",
             "a": "Die Versöhnung ist möglich. Wir versöhnen uns. Der Frieden kommt und bleibt!",
             "why": "Versöhnung! sich versöhnen! Frieden! (خاتمة الوحدة!)"
+          },
+          {
+            "q": "كوّن جملة فيها «das Anliegen» («الطلب») ثم تحدّث بها.",
+            "a": "Das ist mein Anliegen.",
+            "why": "استعمل «das Anliegen» («الطلب») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «beilegen» («يسوّي (النزاع)») ثم تحدّث بها.",
+            "a": "Er legt den Streit bei.",
+            "why": "استعمل «beilegen» («يسوّي (النزاع)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "these"
+        ],
+        "items": [
+          {
+            "audioId": "word-versoehnung",
+            "speakText": "die Versöhnung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التصالح",
+              "يتصالح",
+              "السلام"
+            ],
+            "a": "التصالح",
+            "why": "الصوت يقول «die Versöhnung» — معناها «التصالح». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-versoehnen",
+            "speakText": "sich versöhnen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "sich versöhnen",
+              "die Versöhnung",
+              "der Frieden"
+            ],
+            "a": "sich versöhnen",
+            "why": "الكلمة المسموعة «sich versöhnen» تعني «يتصالح». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-frieden",
+            "speakText": "der Frieden.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "السلام",
+              "التصالح",
+              "يتصالح"
+            ],
+            "a": "السلام",
+            "why": "الصوت يقول «der Frieden» — معناها «السلام». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-these",
+            "speakText": "die These.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die These",
+              "die Versöhnung",
+              "sich versöhnen"
+            ],
+            "a": "die These",
+            "why": "الكلمة المسموعة «die These» تعني «الفرضية». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "rolle"
+        ],
+        "items": [
+          {
+            "audioId": "word-versoehnung",
+            "speakText": "die Versöhnung.",
+            "a": "die Versöhnung",
+            "why": "اكتب ما تسمعه حرفياً: «die Versöhnung» تعني «التصالح». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-versoehnen",
+            "speakText": "sich versöhnen.",
+            "a": "sich versöhnen",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «sich versöhnen» («يتصالح»)."
+          },
+          {
+            "audioId": "word-frieden",
+            "speakText": "der Frieden.",
+            "a": "der Frieden",
+            "why": "اكتب المسموع بدقة: der Frieden — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-rolle",
+            "speakText": "die Rolle.",
+            "a": "die Rolle",
+            "why": "اكتب ما تسمعه حرفياً: «die Rolle» تعني «الدور». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -292,6 +439,14 @@
           {
             "q": "«الاتفاق جاهز.»؟ (مراجعة!)",
             "a": "Die Einigung ist fertig."
+          },
+          {
+            "q": "«التصالح»؟",
+            "a": "die Versöhnung"
+          },
+          {
+            "q": "«يتصالح»؟",
+            "a": "sich versöhnen"
           }
         ]
       },
@@ -312,6 +467,14 @@
           {
             "q": "«الرضا مهم!»؟ (مراجعة!)",
             "a": "Die Zufriedenheit ist wichtig!"
+          },
+          {
+            "q": "«التصالح»؟",
+            "a": "die Versöhnung"
+          },
+          {
+            "q": "«يتصالح»؟",
+            "a": "sich versöhnen"
           }
         ]
       },
@@ -332,6 +495,14 @@
           {
             "q": "«هذه شكواي.»؟ (مراجعة!)",
             "a": "Das ist meine Reklamation."
+          },
+          {
+            "q": "«يتصالح»؟",
+            "a": "sich versöhnen"
+          },
+          {
+            "q": "«السلام»؟",
+            "a": "der Frieden"
           }
         ]
       }

@@ -140,9 +140,8 @@
           "الكتابة في الامتحان!"
         ],
         "interleavedWith": [
-          "handschrift",
-          "schreibweise",
-          "satzzeichen"
+          "block",
+          "einzelheit"
         ],
         "items": [
           {
@@ -164,6 +163,16 @@
             "q": "Er liest die ___. (الخط اليدوي!)",
             "a": "Handschrift",
             "why": "die Handschrift الخط اليدوي (die!) — Er liest die Handschrift."
+          },
+          {
+            "q": "Der ___ ist neu.",
+            "a": "Block",
+            "why": "الكلمة الناقصة «Block» تعني «كراس الأسئلة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Einzelheit",
+            "why": "الكلمة الناقصة «Einzelheit» تعني «التفصيل · التفصيلة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -175,9 +184,8 @@
           "الأداة! الأداة! الجمع!"
         ],
         "interleavedWith": [
-          "handschrift",
-          "schreibweise",
-          "satzzeichen"
+          "block",
+          "einzelheit"
         ],
         "items": [
           {
@@ -199,6 +207,16 @@
             "q": "~~Der Schreibweise ist wichtig.~~",
             "a": "Die Schreibweise ist wichtig.",
             "why": "die Schreibweise طريقة الكتابة (die! لا der!)"
+          },
+          {
+            "q": "~~Der block ist neu.~~",
+            "a": "Der Block ist neu.",
+            "why": "الخطأ في «block»! الصواب «Block» — راجع القاعدة (كراس الأسئلة)."
+          },
+          {
+            "q": "~~Die einzelheit ist wichtig.~~",
+            "a": "Die Einzelheit ist wichtig.",
+            "why": "الخطأ في «einzelheit»! الصواب «Einzelheit» — راجع القاعدة (التفصيل · التفصيلة)."
           }
         ]
       },
@@ -224,6 +242,106 @@
             "q": "تكلّم عن الكتابة والعلامات! (جملتان!)",
             "a": "Die Schreibweise ist wichtig. Er schreibt die Satzzeichen.",
             "why": "الكتابة ثم العلامات! (die Schreibweise kennen! die Satzzeichen schreiben!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Prüfung» («الامتحان») ثم تحدّث بها.",
+            "a": "Die Prüfung ist bald.",
+            "why": "استعمل «die Prüfung» («الامتحان») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Text» («النص») ثم تحدّث بها.",
+            "a": "Der Text hat drei Fehler.",
+            "why": "استعمل «der Text» («النص») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "block"
+        ],
+        "items": [
+          {
+            "audioId": "word-handschrift",
+            "speakText": "die Handschrift.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الخط اليدوي",
+              "طريقة الكتابة",
+              "علامة الترقيم"
+            ],
+            "a": "الخط اليدوي",
+            "why": "الصوت يقول «die Handschrift» — معناها «الخط اليدوي». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-schreibweise",
+            "speakText": "die Schreibweise.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Schreibweise",
+              "die Handschrift",
+              "das Satzzeichen"
+            ],
+            "a": "die Schreibweise",
+            "why": "الكلمة المسموعة «die Schreibweise» تعني «طريقة الكتابة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-satzzeichen",
+            "speakText": "das Satzzeichen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "علامة الترقيم",
+              "الخط اليدوي",
+              "طريقة الكتابة"
+            ],
+            "a": "علامة الترقيم",
+            "why": "الصوت يقول «das Satzzeichen» — معناها «علامة الترقيم». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-block",
+            "speakText": "der Block.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "der Block",
+              "die Handschrift",
+              "die Schreibweise"
+            ],
+            "a": "der Block",
+            "why": "الكلمة المسموعة «der Block» تعني «كراس الأسئلة». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "einzelheit"
+        ],
+        "items": [
+          {
+            "audioId": "word-handschrift",
+            "speakText": "die Handschrift.",
+            "a": "die Handschrift",
+            "why": "اكتب ما تسمعه حرفياً: «die Handschrift» تعني «الخط اليدوي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-schreibweise",
+            "speakText": "die Schreibweise.",
+            "a": "die Schreibweise",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Schreibweise» («طريقة الكتابة»)."
+          },
+          {
+            "audioId": "word-satzzeichen",
+            "speakText": "das Satzzeichen.",
+            "a": "das Satzzeichen",
+            "why": "اكتب المسموع بدقة: das Satzzeichen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-einzelheit",
+            "speakText": "die Einzelheit.",
+            "a": "die Einzelheit",
+            "why": "اكتب ما تسمعه حرفياً: «die Einzelheit» تعني «التفصيل · التفصيلة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -254,6 +372,14 @@
           {
             "q": "«يكتب علامات الترقيم.»؟",
             "a": "Er schreibt die Satzzeichen."
+          },
+          {
+            "q": "«الخط اليدوي واضح.»؟",
+            "a": "Die Handschrift ist klar."
+          },
+          {
+            "q": "«طريقة الكتابة»؟",
+            "a": "die Schreibweise"
           }
         ]
       },
@@ -274,6 +400,14 @@
           {
             "q": "«يقرأ الخط اليدوي.»؟",
             "a": "Er liest die Handschrift."
+          },
+          {
+            "q": "«الخط اليدوي»؟",
+            "a": "die Handschrift"
+          },
+          {
+            "q": "«طريقة الكتابة»؟",
+            "a": "die Schreibweise"
           }
         ]
       },
@@ -294,6 +428,14 @@
           {
             "q": "«يعرف طريقة الكتابة.»؟",
             "a": "Er kennt die Schreibweise."
+          },
+          {
+            "q": "«الخط اليدوي»؟",
+            "a": "die Handschrift"
+          },
+          {
+            "q": "«طريقة الكتابة»؟",
+            "a": "die Schreibweise"
           }
         ]
       }

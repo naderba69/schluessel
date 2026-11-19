@@ -168,6 +168,23 @@
               }
             ],
             "why": "المستمعون ثم الأمان ثم الوقت! das Publikum (u5-d6!) · die Sicherheit الأمان · die Zeit الوقت (كلها مُدرَّسة!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "جدول الوقت",
+                "de": "der Zeitplan"
+              },
+              {
+                "ar": "يقسّم",
+                "de": "einteilen"
+              },
+              {
+                "ar": "الانضباط",
+                "de": "die Disziplin"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Zeitplan = «جدول الوقت» · einteilen = «يقسّم» · die Disziplin = «الانضباط»"
           }
         ]
       },
@@ -179,9 +196,8 @@
           "محاكاة الكلام!"
         ],
         "interleavedWith": [
-          "fliessend",
-          "aussprache",
-          "spontan"
+          "disziplin",
+          "einteilen"
         ],
         "items": [
           {
@@ -208,6 +224,16 @@
             "q": "Er übt die ___ jeden Tag. (النطق!)",
             "a": "Aussprache",
             "why": "die Aussprache النطق (die!) — er übt die Aussprache jeden Tag. (مراجعة!)"
+          },
+          {
+            "q": "Die ___ ist gut.",
+            "a": "Disziplin",
+            "why": "الكلمة الناقصة «Disziplin» تعني «الانضباط» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Er ___ die Zeit ein.",
+            "a": "teilt",
+            "why": "الكلمة الناقصة «teilt» تعني «يقسّم» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -238,6 +264,11 @@
             "q": "~~Er spricht fließend nicht.~~",
             "a": "Er spricht nicht fließend.",
             "why": "nicht قبل المكمّل لا بعده! Er spricht NICHT fließend."
+          },
+          {
+            "q": "~~Das publikum liest die Zeitung.~~",
+            "a": "Das Publikum liest die Zeitung.",
+            "why": "الخطأ في «publikum»! الصواب «Publikum» — راجع القاعدة (الجمهور)."
           }
         ]
       },
@@ -268,6 +299,106 @@
             "q": "اختم المحاكاة! (جملتان!)",
             "a": "Er spricht fließend. Die Aussprache ist gut.",
             "why": "الخاتمة بالجودة! (Schluss!)"
+          },
+          {
+            "q": "كوّن جملة فيها «deutlich» («واضح») ثم تحدّث بها.",
+            "a": "Ich spreche deutlich.",
+            "why": "استعمل «deutlich» («واضح») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «sicher» («متأكد») ثم تحدّث بها.",
+            "a": "Ich bin sicher.",
+            "why": "استعمل «sicher» («متأكد») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "disziplin"
+        ],
+        "items": [
+          {
+            "audioId": "word-fliessend",
+            "speakText": "fließend.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "ببطولة",
+              "النطق",
+              "عفوياً"
+            ],
+            "a": "ببطولة",
+            "why": "الصوت يقول «fließend» — معناها «ببطولة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-aussprache",
+            "speakText": "die Aussprache.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Aussprache",
+              "fließend",
+              "spontan"
+            ],
+            "a": "die Aussprache",
+            "why": "الكلمة المسموعة «die Aussprache» تعني «النطق». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-spontan",
+            "speakText": "spontan.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "عفوياً",
+              "ببطولة",
+              "النطق"
+            ],
+            "a": "عفوياً",
+            "why": "الصوت يقول «spontan» — معناها «عفوياً». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-disziplin",
+            "speakText": "die Disziplin.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Disziplin",
+              "fließend",
+              "die Aussprache"
+            ],
+            "a": "die Disziplin",
+            "why": "الكلمة المسموعة «die Disziplin» تعني «الانضباط». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "einteilen"
+        ],
+        "items": [
+          {
+            "audioId": "word-fliessend",
+            "speakText": "fließend.",
+            "a": "fließend",
+            "why": "اكتب ما تسمعه حرفياً: «fließend» تعني «ببطولة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-aussprache",
+            "speakText": "die Aussprache.",
+            "a": "die Aussprache",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Aussprache» («النطق»)."
+          },
+          {
+            "audioId": "word-spontan",
+            "speakText": "spontan.",
+            "a": "spontan",
+            "why": "اكتب المسموع بدقة: spontan — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-einteilen",
+            "speakText": "einteilen.",
+            "a": "einteilen",
+            "why": "اكتب ما تسمعه حرفياً: «einteilen» تعني «يقسّم». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -298,6 +429,14 @@
           {
             "q": "«يتحدث بطلاقة.»؟",
             "a": "Er spricht fließend."
+          },
+          {
+            "q": "«بلا تردّد»؟",
+            "a": "fließend"
+          },
+          {
+            "q": "«طريقة النطق»؟",
+            "a": "die Aussprache"
           }
         ]
       },
@@ -318,6 +457,14 @@
           {
             "q": "«المستمعون»؟ (مراجعة!)",
             "a": "das Publikum"
+          },
+          {
+            "q": "«ببطولة»؟",
+            "a": "fließend"
+          },
+          {
+            "q": "«النطق»؟",
+            "a": "die Aussprache"
           }
         ]
       },
@@ -338,6 +485,14 @@
           {
             "q": "«الأمان»؟ (مراجعة!)",
             "a": "die Sicherheit"
+          },
+          {
+            "q": "«ببطولة»؟",
+            "a": "fließend"
+          },
+          {
+            "q": "«النطق»؟",
+            "a": "die Aussprache"
           }
         ]
       }

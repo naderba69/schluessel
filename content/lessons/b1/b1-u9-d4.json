@@ -170,6 +170,23 @@
               }
             ],
             "why": "die Ausnahme الاستثناء (Ausnahmen!) · die Regelung التسوية (treffen!) · die Angelegenheit المسألة (Angelegenheiten!) · die Zufriedenheit الرضا (die! — الخاتمة!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "البروتوكول",
+                "de": "das Protokoll"
+              },
+              {
+                "ar": "الاتفاق المسبق",
+                "de": "die Absprache"
+              },
+              {
+                "ar": "نظرة عامة",
+                "de": "die Übersicht"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: das Protokoll = «البروتوكول» · die Absprache = «الاتفاق المسبق» · die Übersicht = «نظرة عامة»"
           }
         ]
       },
@@ -181,9 +198,8 @@
           "رسالة التسوية!"
         ],
         "interleavedWith": [
-          "entschaedigung",
-          "reklamation",
-          "regelung"
+          "auffallen",
+          "bummeln"
         ],
         "items": [
           {
@@ -215,6 +231,16 @@
             "q": "Die ___ ist wichtig. (الرضا! الخاتمة!)",
             "a": "Zufriedenheit",
             "why": "die Zufriedenheit الرضا — الخاتمة الثابتة للرسالة!"
+          },
+          {
+            "q": "Das ___ auf.",
+            "a": "fällt",
+            "why": "الكلمة الناقصة «fällt» تعني «يلفت الانتباه» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir ___ durch die Stadt.",
+            "a": "bummeln",
+            "why": "الكلمة الناقصة «bummeln» تعني «يتجوّل» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -226,9 +252,8 @@
           "الحرف! الانفصال! الشريك الثابت!"
         ],
         "interleavedWith": [
-          "kulanz",
-          "gutschein",
-          "ausnahme"
+          "auffallen",
+          "bummeln"
         ],
         "items": [
           {
@@ -245,6 +270,16 @@
             "q": "~~Wir zurückgeben die Kosten.~~",
             "a": "Wir erstatten die Kosten.",
             "why": "die Kosten erstatten! (الشريك الثابت — zurückgeben = يُعيد الشيء نفسه!)"
+          },
+          {
+            "q": "~~Das Fällt auf.~~",
+            "a": "Das fällt auf.",
+            "why": "الخطأ في «Fällt»! الصواب «fällt» — راجع القاعدة (يلفت الانتباه)."
+          },
+          {
+            "q": "~~Wir Bummeln durch die Stadt.~~",
+            "a": "Wir bummeln durch die Stadt.",
+            "why": "الخطأ في «Bummeln»! الصواب «bummeln» — راجع القاعدة (يتجوّل)."
           }
         ]
       },
@@ -256,9 +291,8 @@
           "Entschuldigung zuerst!"
         ],
         "interleavedWith": [
-          "schlichten",
-          "anliegen",
-          "beilegen"
+          "auffallen",
+          "bummeln"
         ],
         "items": [
           {
@@ -275,6 +309,106 @@
             "q": "اختم بالحلّ والرضا! (3 جمل!)",
             "a": "Wir schlichten den Streit und erstatten die Kosten. Das ist eine Ausnahme. Die Zufriedenheit ist wichtig!",
             "why": "schlichten! erstatten! Ausnahme! Zufriedenheit! (الخاتمة الثابتة!)"
+          },
+          {
+            "q": "كوّن جملة فيها «auffallen» («يلفت الانتباه») ثم تحدّث بها.",
+            "a": "Das fällt auf.",
+            "why": "استعمل «auffallen» («يلفت الانتباه») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «bummeln» («يتجوّل») ثم تحدّث بها.",
+            "a": "Wir bummeln durch die Stadt.",
+            "why": "استعمل «bummeln» («يتجوّل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "auffallen"
+        ],
+        "items": [
+          {
+            "audioId": "word-entschaedigung",
+            "speakText": "die Entschädigung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التعويض",
+              "يُعيد (المصاريف)",
+              "ردّ المبلغ"
+            ],
+            "a": "التعويض",
+            "why": "الصوت يقول «die Entschädigung» — معناها «التعويض». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-erstatten",
+            "speakText": "erstatten.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "erstatten",
+              "die Entschädigung",
+              "die Erstattung"
+            ],
+            "a": "erstatten",
+            "why": "الكلمة المسموعة «erstatten» تعني «يُعيد (المصاريف)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-erstattung",
+            "speakText": "die Erstattung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "ردّ المبلغ",
+              "التعويض",
+              "يُعيد (المصاريف)"
+            ],
+            "a": "ردّ المبلغ",
+            "why": "الصوت يقول «die Erstattung» — معناها «ردّ المبلغ». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-auffallen",
+            "speakText": "auffallen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "auffallen",
+              "die Entschädigung",
+              "erstatten"
+            ],
+            "a": "auffallen",
+            "why": "الكلمة المسموعة «auffallen» تعني «يلفت الانتباه». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "bummeln"
+        ],
+        "items": [
+          {
+            "audioId": "word-kulanz",
+            "speakText": "die Kulanz.",
+            "a": "die Kulanz",
+            "why": "اكتب ما تسمعه حرفياً: «die Kulanz» تعني «التفضّل (بلا ضمان!)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gutschein",
+            "speakText": "der Gutschein.",
+            "a": "der Gutschein",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Gutschein» («القسيمة»)."
+          },
+          {
+            "audioId": "word-reklamieren",
+            "speakText": "reklamieren.",
+            "a": "reklamieren",
+            "why": "اكتب المسموع بدقة: reklamieren — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-bummeln",
+            "speakText": "bummeln.",
+            "a": "bummeln",
+            "why": "اكتب ما تسمعه حرفياً: «bummeln» تعني «يتجوّل». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -305,6 +439,14 @@
           {
             "q": "«القسيمة»؟",
             "a": "der Gutschein"
+          },
+          {
+            "q": "«يُعيد (المصاريف)»؟",
+            "a": "erstatten"
+          },
+          {
+            "q": "«ردّ المبلغ»؟",
+            "a": "die Erstattung"
           }
         ]
       },
@@ -325,6 +467,14 @@
           {
             "q": "«الرضا مهم!»؟",
             "a": "Die Zufriedenheit ist wichtig!"
+          },
+          {
+            "q": "«التعويض»؟",
+            "a": "die Entschädigung"
+          },
+          {
+            "q": "«يُعيد (المصاريف)»؟",
+            "a": "erstatten"
           }
         ]
       },
@@ -345,6 +495,14 @@
           {
             "q": "«هذا هو طلبي.»؟",
             "a": "Das ist mein Anliegen."
+          },
+          {
+            "q": "«التعويض»؟",
+            "a": "die Entschädigung"
+          },
+          {
+            "q": "«يُعيد (المصاريف)»؟",
+            "a": "erstatten"
           }
         ]
       }

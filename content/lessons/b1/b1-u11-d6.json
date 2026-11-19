@@ -178,9 +178,8 @@
           "توليف الوحدة!"
         ],
         "interleavedWith": [
-          "zusammenhalt",
-          "erfuellung",
-          "verwirklichen"
+          "vertiefen",
+          "faszinieren"
         ],
         "items": [
           {
@@ -207,6 +206,16 @@
             "q": "Er führt das Modell ___. (يعرض! الانفصال! مراجعة d3!)",
             "a": "vor",
             "why": "vorführen منفصل! Er führt das Modell vor. (الجزء vor آخر! مراجعة d3!)"
+          },
+          {
+            "q": "Er ___ die Antwort.",
+            "a": "vertieft",
+            "why": "الكلمة الناقصة «vertieft» تعني «يُعمّق» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das Hobby ___ ihn.",
+            "a": "fasziniert",
+            "why": "الكلمة الناقصة «fasziniert» تعني «يجذب بشدة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -237,6 +246,21 @@
             "q": "~~Er ausleiht das Buch.~~",
             "a": "Er leiht das Buch aus.",
             "why": "ausleihen منفصل! leiht … aus (مراجعة d2! خريطة التداخل 10‑ي!)"
+          },
+          {
+            "q": "~~Die strategie ist klar.~~",
+            "a": "Die Strategie ist klar.",
+            "why": "الخطأ في «strategie»! الصواب «Strategie» — راجع القاعدة (الاستراتيجية)."
+          },
+          {
+            "q": "~~Der roman ist spannend.~~",
+            "a": "Der Roman ist spannend.",
+            "why": "الخطأ في «roman»! الصواب «Roman» — راجع القاعدة (الرواية)."
+          },
+          {
+            "q": "~~Der hauptteil ist wichtig.~~",
+            "a": "Der Hauptteil ist wichtig.",
+            "why": "الخطأ في «hauptteil»! الصواب «Hauptteil» — راجع القاعدة (الجزء الرئيسي)."
           }
         ]
       },
@@ -267,6 +291,111 @@
             "q": "اختم بحصيلة المجتمع! (جملتان!)",
             "a": "Der Zusammenhalt ist wichtig. Die Erfüllung ist groß.",
             "why": "حصيلة الوحدة! (Zusammenhalt zeigen! Erfüllung finden!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Leidenschaft» («الشغف») ثم تحدّث بها.",
+            "a": "Seine Leidenschaft ist Musik.",
+            "why": "استعمل «die Leidenschaft» («الشغف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Ehrenamt» («العمل التطوعي») ثم تحدّث بها.",
+            "a": "Das Ehrenamt ist wichtig.",
+            "why": "استعمل «das Ehrenamt» («العمل التطوعي») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Wertschätzung» («التقدير») ثم تحدّث بها.",
+            "a": "Die Wertschätzung ist groß.",
+            "why": "استعمل «die Wertschätzung» («التقدير») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "vertiefen"
+        ],
+        "items": [
+          {
+            "audioId": "word-zusammenhalt",
+            "speakText": "der Zusammenhalt.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التماسك",
+              "الرضا",
+              "يحقّق"
+            ],
+            "a": "التماسك",
+            "why": "الصوت يقول «der Zusammenhalt» — معناها «التماسك». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-erfuellung",
+            "speakText": "die Erfüllung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Erfüllung",
+              "der Zusammenhalt",
+              "verwirklichen"
+            ],
+            "a": "die Erfüllung",
+            "why": "الكلمة المسموعة «die Erfüllung» تعني «الرضا». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-verwirklichen",
+            "speakText": "verwirklichen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يحقّق",
+              "التماسك",
+              "الرضا"
+            ],
+            "a": "يحقّق",
+            "why": "الصوت يقول «verwirklichen» — معناها «يحقّق». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-vertiefen",
+            "speakText": "vertiefen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "vertiefen",
+              "der Zusammenhalt",
+              "die Erfüllung"
+            ],
+            "a": "vertiefen",
+            "why": "الكلمة المسموعة «vertiefen» تعني «يُعمّق». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "faszinieren"
+        ],
+        "items": [
+          {
+            "audioId": "word-zusammenhalt",
+            "speakText": "der Zusammenhalt.",
+            "a": "der Zusammenhalt",
+            "why": "اكتب ما تسمعه حرفياً: «der Zusammenhalt» تعني «التماسك». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-erfuellung",
+            "speakText": "die Erfüllung.",
+            "a": "die Erfüllung",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Erfüllung» («الرضا»)."
+          },
+          {
+            "audioId": "word-verwirklichen",
+            "speakText": "verwirklichen.",
+            "a": "verwirklichen",
+            "why": "اكتب المسموع بدقة: verwirklichen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-faszinieren",
+            "speakText": "faszinieren.",
+            "a": "faszinieren",
+            "why": "اكتب ما تسمعه حرفياً: «faszinieren» تعني «يجذب بشدة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -297,6 +426,14 @@
           {
             "q": "«الشغف»؟ (مراجعة!)",
             "a": "die Leidenschaft"
+          },
+          {
+            "q": "«يحقّق»؟",
+            "a": "verwirklichen"
+          },
+          {
+            "q": "«التكافل الاجتماعي»؟",
+            "a": "der Zusammenhalt"
           }
         ]
       },
@@ -317,6 +454,14 @@
           {
             "q": "«العمل التطوعي»؟ (مراجعة!)",
             "a": "das Ehrenamt"
+          },
+          {
+            "q": "«التماسك»؟",
+            "a": "der Zusammenhalt"
+          },
+          {
+            "q": "«الرضا»؟",
+            "a": "die Erfüllung"
           }
         ]
       },
@@ -337,6 +482,14 @@
           {
             "q": "«الاستراتيجية»؟ (مراجعة!)",
             "a": "die Strategie"
+          },
+          {
+            "q": "«التماسك»؟",
+            "a": "der Zusammenhalt"
+          },
+          {
+            "q": "«الرضا»؟",
+            "a": "die Erfüllung"
           }
         ]
       }

@@ -170,6 +170,23 @@
               }
             ],
             "why": "das Gebäude المبنى (das! الجمع Gebäude نفسه!) · die Geste الإيماءة (Gesten!) · die Übersicht النظرة العامة (Übersichten! geben!) · auffallen يلفت (fällt auf! ist aufgefallen!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يسأل مجدداً",
+                "de": "nachfragen"
+              },
+              {
+                "ar": "يقاطع",
+                "de": "unterbrechen"
+              },
+              {
+                "ar": "الاعتراض",
+                "de": "der Einwand"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: nachfragen = «يسأل مجدداً» · unterbrechen = «يقاطع» · der Einwand = «الاعتراض»"
           }
         ]
       },
@@ -181,9 +198,8 @@
           "الوصف والبروتوكول!"
         ],
         "interleavedWith": [
-          "vordergrund",
-          "hintergrund",
-          "protokoll"
+          "erwidern",
+          "etwa"
         ],
         "items": [
           {
@@ -215,6 +231,16 @@
             "q": "Er ___ die Szene. (يوجز!)",
             "a": "skizziert",
             "why": "skizzieren يوجز — Er skizziert die Szene. (صيغة الشخص الثالث!)"
+          },
+          {
+            "q": "Er ___ höflich.",
+            "a": "erwidert",
+            "why": "الكلمة الناقصة «erwidert» تعني «يردّ (بالمقابل)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Meinen Sie ___ mich?",
+            "a": "etwa",
+            "why": "الكلمة الناقصة «etwa» تعني «ربّما — «هل تقصد …؟!»» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -226,9 +252,8 @@
           "الترتيب! الفعل! التمام!"
         ],
         "interleavedWith": [
-          "rand",
-          "szene",
-          "geste"
+          "erwidern",
+          "etwa"
         ],
         "items": [
           {
@@ -245,6 +270,16 @@
             "q": "~~Das hat aufgefallen.~~",
             "a": "Das ist aufgefallen.",
             "why": "auffallen = تغيّر حالة/لحظة — التمام ist لا hat! (مثل abschweifen — u9-d2!)"
+          },
+          {
+            "q": "~~Er Erwidert höflich.~~",
+            "a": "Er erwidert höflich.",
+            "why": "الخطأ في «Erwidert»! الصواب «erwidert» — راجع القاعدة (يردّ (بالمقابل))."
+          },
+          {
+            "q": "~~Meinen Sie Etwa mich?~~",
+            "a": "Meinen Sie etwa mich?",
+            "why": "الخطأ في «Etwa»! الصواب «etwa» — راجع القاعدة (ربّما — «هل تقصد …؟!»)."
           }
         ]
       },
@@ -256,9 +291,8 @@
           "Vordergrund zuerst!"
         ],
         "interleavedWith": [
-          "uhrzeit",
-          "absprache",
-          "uebersicht"
+          "erwidern",
+          "etwa"
         ],
         "items": [
           {
@@ -275,6 +309,106 @@
             "q": "اكتب البروتوكول! (3 جمل!)",
             "a": "Bitte beachten Sie die Uhrzeit! Das war eine Absprache. Das ist die Übersicht.",
             "why": "Uhrzeit beachten! Absprache treffen! Übersicht geben! (البروتوكول الثلاثي!)"
+          },
+          {
+            "q": "كوّن جملة فيها «erwidern» («يردّ (بالمقابل)») ثم تحدّث بها.",
+            "a": "Er erwidert höflich.",
+            "why": "استعمل «erwidern» («يردّ (بالمقابل)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «etwa» («ربّما — «هل تقصد …؟!»») ثم تحدّث بها.",
+            "a": "Meinen Sie etwa mich?",
+            "why": "استعمل «etwa» («ربّما — «هل تقصد …؟!»») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "erwidern"
+        ],
+        "items": [
+          {
+            "audioId": "word-vordergrund",
+            "speakText": "der Vordergrund.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المقدمة (من الصورة)",
+              "الخلفية",
+              "المركز"
+            ],
+            "a": "المقدمة (من الصورة)",
+            "why": "الصوت يقول «der Vordergrund» — معناها «المقدمة (من الصورة)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-hintergrund",
+            "speakText": "der Hintergrund.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Hintergrund",
+              "der Vordergrund",
+              "der Mittelpunkt"
+            ],
+            "a": "der Hintergrund",
+            "why": "الكلمة المسموعة «der Hintergrund» تعني «الخلفية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-mittelpunkt",
+            "speakText": "der Mittelpunkt.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "المركز",
+              "المقدمة (من الصورة)",
+              "الخلفية"
+            ],
+            "a": "المركز",
+            "why": "الصوت يقول «der Mittelpunkt» — معناها «المركز». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-erwidern",
+            "speakText": "erwidern.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "erwidern",
+              "der Vordergrund",
+              "der Hintergrund"
+            ],
+            "a": "erwidern",
+            "why": "الكلمة المسموعة «erwidern» تعني «يردّ (بالمقابل)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "etwa"
+        ],
+        "items": [
+          {
+            "audioId": "word-rand",
+            "speakText": "der Rand.",
+            "a": "der Rand",
+            "why": "اكتب ما تسمعه حرفياً: «der Rand» تعني «الحافة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-szene",
+            "speakText": "die Szene.",
+            "a": "die Szene",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Szene» («المشهد»)."
+          },
+          {
+            "audioId": "word-protokoll",
+            "speakText": "das Protokoll.",
+            "a": "das Protokoll",
+            "why": "اكتب المسموع بدقة: das Protokoll — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-etwa",
+            "speakText": "etwa.",
+            "a": "etwa",
+            "why": "اكتب ما تسمعه حرفياً: «etwa» تعني «ربّما — «هل تقصد …؟!»». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -305,6 +439,14 @@
           {
             "q": "«المبنى»؟",
             "a": "das Gebäude"
+          },
+          {
+            "q": "«المقدمة (من الصورة)»؟",
+            "a": "der Vordergrund"
+          },
+          {
+            "q": "«المركز»؟",
+            "a": "der Mittelpunkt"
           }
         ]
       },
@@ -325,6 +467,14 @@
           {
             "q": "«الحافة»؟",
             "a": "der Rand"
+          },
+          {
+            "q": "«المقدمة (من الصورة)»؟",
+            "a": "der Vordergrund"
+          },
+          {
+            "q": "«الخلفية»؟",
+            "a": "der Hintergrund"
           }
         ]
       },
@@ -345,6 +495,14 @@
           {
             "q": "«نتجوّل عبر المدينة.»؟",
             "a": "Wir bummeln durch die Stadt."
+          },
+          {
+            "q": "«المقدمة (من الصورة)»؟",
+            "a": "der Vordergrund"
+          },
+          {
+            "q": "«الخلفية»؟",
+            "a": "der Hintergrund"
           }
         ]
       }

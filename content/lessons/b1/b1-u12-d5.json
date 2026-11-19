@@ -176,6 +176,23 @@
               }
             ],
             "why": "مراجعة رحلة B1! die Erfahrung الخبرة · teilen يشارك · erleben يمرّ بـ · bekannt معروف"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الإملاء",
+                "de": "die Rechtschreibung"
+              },
+              {
+                "ar": "الأسلوب",
+                "de": "der Stil"
+              },
+              {
+                "ar": "يعيد العمل في",
+                "de": "überarbeiten"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Rechtschreibung = «الإملاء» · der Stil = «الأسلوب» · überarbeiten = «يعيد العمل في»"
           }
         ]
       },
@@ -187,9 +204,8 @@
           "الثقافة والشهادة!"
         ],
         "interleavedWith": [
-          "anerkennung",
-          "nachweisen",
-          "benoten"
+          "ueberarbeiten",
+          "stil"
         ],
         "items": [
           {
@@ -216,6 +232,16 @@
             "q": "Die ___ ist offiziell. (الشهادة!)",
             "a": "Prüfung",
             "why": "die Prüfung الامتحان (die!) — مراجعة الثقافة (البطاقة b1-landeskunde-u12!)"
+          },
+          {
+            "q": "Er ___ den Text über.",
+            "a": "arbeitet",
+            "why": "الكلمة الناقصة «arbeitet» تعني «يعيد العمل في» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist klar.",
+            "a": "Stil",
+            "why": "الكلمة الناقصة «Stil» تعني «الأسلوب» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -246,6 +272,11 @@
             "q": "~~Er benotet die Prüfung auf.~~",
             "a": "Er benotet die Prüfung.",
             "why": "benoten بادئته be- غير منفصلة — لا ينفلت ولا زيادة تمام: hat benotet!"
+          },
+          {
+            "q": "~~Das niveau ist hoch.~~",
+            "a": "Das Niveau ist hoch.",
+            "why": "الخطأ في «niveau»! الصواب «Niveau» — راجع القاعدة (المستوى)."
           }
         ]
       },
@@ -283,6 +314,96 @@
             "why": "التجربة ثم المستوى! (b1-landeskunde-u12!)"
           }
         ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "ueberarbeiten"
+        ],
+        "items": [
+          {
+            "audioId": "word-anerkennung",
+            "speakText": "die Anerkennung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الاعتراف",
+              "يُثبت",
+              "يُقيّم بدرجة"
+            ],
+            "a": "الاعتراف",
+            "why": "الصوت يقول «die Anerkennung» — معناها «الاعتراف». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-nachweisen",
+            "speakText": "nachweisen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "nachweisen",
+              "die Anerkennung",
+              "benoten"
+            ],
+            "a": "nachweisen",
+            "why": "الكلمة المسموعة «nachweisen» تعني «يُثبت». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-benoten",
+            "speakText": "benoten.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يُقيّم بدرجة",
+              "الاعتراف",
+              "يُثبت"
+            ],
+            "a": "يُقيّم بدرجة",
+            "why": "الصوت يقول «benoten» — معناها «يُقيّم بدرجة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ueberarbeiten",
+            "speakText": "überarbeiten.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "überarbeiten",
+              "die Anerkennung",
+              "nachweisen"
+            ],
+            "a": "überarbeiten",
+            "why": "الكلمة المسموعة «überarbeiten» تعني «يعيد العمل في». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "stil"
+        ],
+        "items": [
+          {
+            "audioId": "word-anerkennung",
+            "speakText": "die Anerkennung.",
+            "a": "die Anerkennung",
+            "why": "اكتب ما تسمعه حرفياً: «die Anerkennung» تعني «الاعتراف». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-nachweisen",
+            "speakText": "nachweisen.",
+            "a": "nachweisen",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «nachweisen» («يُثبت»)."
+          },
+          {
+            "audioId": "word-benoten",
+            "speakText": "benoten.",
+            "a": "benoten",
+            "why": "اكتب المسموع بدقة: benoten — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-stil",
+            "speakText": "der Stil.",
+            "a": "der Stil",
+            "why": "اكتب ما تسمعه حرفياً: «der Stil» تعني «الأسلوب». انتبه للحروف الكبيرة!"
+          }
+        ]
       }
     ]
   },
@@ -311,6 +432,14 @@
           {
             "q": "«الشهادة»؟ (الثقافة!)",
             "a": "das Zertifikat"
+          },
+          {
+            "q": "«يُثبت»؟",
+            "a": "nachweisen"
+          },
+          {
+            "q": "«يُقيّم بدرجة»؟",
+            "a": "benoten"
           }
         ]
       },
@@ -331,6 +460,14 @@
           {
             "q": "«رسمي»؟ (الثقافة!)",
             "a": "offiziell"
+          },
+          {
+            "q": "«الاعتراف»؟",
+            "a": "die Anerkennung"
+          },
+          {
+            "q": "«يُثبت»؟",
+            "a": "nachweisen"
           }
         ]
       },
@@ -351,6 +488,14 @@
           {
             "q": "«يُثبت الشهادة»؟ (المفردة الثابتة!)",
             "a": "das Zertifikat nachweisen"
+          },
+          {
+            "q": "«الاعتراف»؟",
+            "a": "die Anerkennung"
+          },
+          {
+            "q": "«يُثبت»؟",
+            "a": "nachweisen"
           }
         ]
       }

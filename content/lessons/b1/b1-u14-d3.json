@@ -140,9 +140,8 @@
           "القراءة في الامتحان!"
         ],
         "interleavedWith": [
-          "pruefungsteil",
-          "einzelheit",
-          "block"
+          "sitzplatz",
+          "zugang"
         ],
         "items": [
           {
@@ -164,6 +163,16 @@
             "q": "Er liest den ___. (جزء الامتحان!)",
             "a": "Prüfungsteil",
             "why": "der Prüfungsteil جزء الامتحان (der!) — Er liest den Prüfungsteil."
+          },
+          {
+            "q": "Der ___ ist frei.",
+            "a": "Sitzplatz",
+            "why": "الكلمة الناقصة «Sitzplatz» تعني «المقعد (المكان المخصص)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist dort.",
+            "a": "Zugang",
+            "why": "الكلمة الناقصة «Zugang» تعني «الدخول» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -175,9 +184,8 @@
           "الأداة! الأداة! المفرد!"
         ],
         "interleavedWith": [
-          "pruefungsteil",
-          "einzelheit",
-          "block"
+          "sitzplatz",
+          "zugang"
         ],
         "items": [
           {
@@ -199,6 +207,16 @@
             "q": "~~Die Einzelheiten ist wichtig.~~",
             "a": "Die Einzelheit ist wichtig.",
             "why": "المفرد لا الجمع! die Einzelheit (die Einzelheiten جمع!) — الجملة عن تفصيل واحد!"
+          },
+          {
+            "q": "~~Der sitzplatz ist frei.~~",
+            "a": "Der Sitzplatz ist frei.",
+            "why": "الخطأ في «sitzplatz»! الصواب «Sitzplatz» — راجع القاعدة (المقعد (المكان المخصص))."
+          },
+          {
+            "q": "~~Der zugang ist dort.~~",
+            "a": "Der Zugang ist dort.",
+            "why": "الخطأ في «zugang»! الصواب «Zugang» — راجع القاعدة (الدخول)."
           }
         ]
       },
@@ -224,6 +242,106 @@
             "q": "تكلّم عن التفاصيل والكراس! (جملتان!)",
             "a": "Er findet die Einzelheiten. Der Block ist neu.",
             "why": "التفاصيل ثم الكراس! (die Einzelheiten finden! den Block öffnen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Prüfung» («الامتحان») ثم تحدّث بها.",
+            "a": "Die Prüfung ist bald.",
+            "why": "استعمل «die Prüfung» («الامتحان») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Text» («النص») ثم تحدّث بها.",
+            "a": "Der Text hat drei Fehler.",
+            "why": "استعمل «der Text» («النص») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "sitzplatz"
+        ],
+        "items": [
+          {
+            "audioId": "word-pruefungsteil",
+            "speakText": "der Prüfungsteil.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "جزء الامتحان",
+              "التفصيل · التفصيلة",
+              "كراس الأسئلة"
+            ],
+            "a": "جزء الامتحان",
+            "why": "الصوت يقول «der Prüfungsteil» — معناها «جزء الامتحان». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-einzelheit",
+            "speakText": "die Einzelheit.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Einzelheit",
+              "der Prüfungsteil",
+              "der Block"
+            ],
+            "a": "die Einzelheit",
+            "why": "الكلمة المسموعة «die Einzelheit» تعني «التفصيل · التفصيلة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-block",
+            "speakText": "der Block.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "كراس الأسئلة",
+              "جزء الامتحان",
+              "التفصيل · التفصيلة"
+            ],
+            "a": "كراس الأسئلة",
+            "why": "الصوت يقول «der Block» — معناها «كراس الأسئلة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-sitzplatz",
+            "speakText": "der Sitzplatz.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "der Sitzplatz",
+              "der Prüfungsteil",
+              "die Einzelheit"
+            ],
+            "a": "der Sitzplatz",
+            "why": "الكلمة المسموعة «der Sitzplatz» تعني «المقعد (المكان المخصص)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "zugang"
+        ],
+        "items": [
+          {
+            "audioId": "word-pruefungsteil",
+            "speakText": "der Prüfungsteil.",
+            "a": "der Prüfungsteil",
+            "why": "اكتب ما تسمعه حرفياً: «der Prüfungsteil» تعني «جزء الامتحان». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-einzelheit",
+            "speakText": "die Einzelheit.",
+            "a": "die Einzelheit",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Einzelheit» («التفصيل · التفصيلة»)."
+          },
+          {
+            "audioId": "word-block",
+            "speakText": "der Block.",
+            "a": "der Block",
+            "why": "اكتب المسموع بدقة: der Block — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-zugang",
+            "speakText": "der Zugang.",
+            "a": "der Zugang",
+            "why": "اكتب ما تسمعه حرفياً: «der Zugang» تعني «الدخول». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -254,6 +372,14 @@
           {
             "q": "«يجد التفاصيل.»؟",
             "a": "Er findet die Einzelheiten."
+          },
+          {
+            "q": "«جزء الامتحان طويل.»؟",
+            "a": "Der Prüfungsteil ist lang."
+          },
+          {
+            "q": "«التفصيل مهم.»؟",
+            "a": "Die Einzelheit ist wichtig."
           }
         ]
       },
@@ -274,6 +400,14 @@
           {
             "q": "«يقرأ جزء الامتحان.»؟",
             "a": "Er liest den Prüfungsteil."
+          },
+          {
+            "q": "«جزء الامتحان»؟",
+            "a": "der Prüfungsteil"
+          },
+          {
+            "q": "«التفصيل · التفصيلة»؟",
+            "a": "die Einzelheit"
           }
         ]
       },
@@ -294,6 +428,14 @@
           {
             "q": "«يفتح كراس الأسئلة.»؟",
             "a": "Er öffnet den Block."
+          },
+          {
+            "q": "«جزء الامتحان»؟",
+            "a": "der Prüfungsteil"
+          },
+          {
+            "q": "«التفصيل · التفصيلة»؟",
+            "a": "die Einzelheit"
           }
         ]
       }

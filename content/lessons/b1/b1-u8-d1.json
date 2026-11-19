@@ -173,6 +173,23 @@
               }
             ],
             "why": "berufstätig على رأس العمل (Beruf+stätig!) · ausgebildet مدرَّب (aus+gebildet!) · leiten يدير (hat geleitet!) · beruflich مهنياً (Beruf+lich!) — (مراجعة: die Erfahrung! das Team!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "العمل",
+                "de": "die Arbeit"
+              },
+              {
+                "ar": "مدير",
+                "de": "der Chef"
+              },
+              {
+                "ar": "راتب",
+                "de": "das Gehalt"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Arbeit = «العمل» · der Chef = «مدير» · das Gehalt = «راتب»"
           }
         ]
       },
@@ -218,6 +235,21 @@
             "q": "Der Chef erkennt die Erfahrung ___. (anerkennen! المنفصل!)",
             "a": "an",
             "why": "الفعل المنفصل: erkennt … an! — anerkennen يعترف بـ!"
+          },
+          {
+            "q": "Mein ___ ist auf dem Tisch.",
+            "a": "Buch",
+            "why": "الكلمة الناقصة «Buch» تعني «كتاب» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist groß, die Stühle sind klein.",
+            "a": "Tisch",
+            "why": "الكلمة الناقصة «Tisch» تعني «طاولة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist neu für mich.",
+            "a": "Schule",
+            "why": "الكلمة الناقصة «Schule» تعني «المدرسة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -248,6 +280,21 @@
             "q": "~~Ich suche einen guten Lehrstelle.~~",
             "a": "Ich suche eine gute Lehrstelle.",
             "why": "die Lehrstelle مؤنث! eine gute! (einen guten للمذكر المنصوب!)"
+          },
+          {
+            "q": "~~Das auto ist teuer.~~",
+            "a": "Das Auto ist teuer.",
+            "why": "الخطأ في «auto»! الصواب «Auto» — راجع القاعدة (السيارة)."
+          },
+          {
+            "q": "~~Ich esse brot mit Käse.~~",
+            "a": "Ich esse Brot mit Käse.",
+            "why": "الخطأ في «brot»! الصواب «Brot» — راجع القاعدة (الخبز)."
+          },
+          {
+            "q": "~~Ein wasser, bitte!~~",
+            "a": "Ein Wasser, bitte!",
+            "why": "الخطأ في «wasser»! الصواب «Wasser» — راجع القاعدة (الماء)."
           }
         ]
       },
@@ -278,6 +325,111 @@
             "q": "قل بالألمانية: «مع أجر جيد!» (mit einem guten!)",
             "a": "Mit einem guten Lohn!",
             "why": "الداتيف: einem gutEN! (المخلوطة!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Frau» («المرأة / الزوجة (حسب السياق)») ثم تحدّث بها.",
+            "a": "Die Frau ist hier.",
+            "why": "استعمل «die Frau» («المرأة / الزوجة (حسب السياق)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Mann» («الرجل / الزوج (حسب السياق)») ثم تحدّث بها.",
+            "a": "Der Mann ist hier.",
+            "why": "استعمل «der Mann» («الرجل / الزوج (حسب السياق)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Kind» («الطفل») ثم تحدّث بها.",
+            "a": "Das ist das Kind.",
+            "why": "استعمل «das Kind» («الطفل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "zerstoeren"
+        ],
+        "items": [
+          {
+            "audioId": "word-taetigkeit",
+            "speakText": "die Tätigkeit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "النشاط",
+              "يعمل",
+              "مهنياً"
+            ],
+            "a": "النشاط",
+            "why": "الصوت يقول «die Tätigkeit» — معناها «النشاط». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-berufstaetig",
+            "speakText": "berufstätig.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "berufstätig",
+              "die Tätigkeit",
+              "beruflich"
+            ],
+            "a": "berufstätig",
+            "why": "الكلمة المسموعة «berufstätig» تعني «يعمل». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-beruflich",
+            "speakText": "beruflich.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "مهنياً",
+              "النشاط",
+              "يعمل"
+            ],
+            "a": "مهنياً",
+            "why": "الصوت يقول «beruflich» — معناها «مهنياً». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-zerstoeren",
+            "speakText": "zerstören.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "zerstören",
+              "die Tätigkeit",
+              "berufstätig"
+            ],
+            "a": "zerstören",
+            "why": "الكلمة المسموعة «zerstören» تعني «يُدمّر». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "sorge"
+        ],
+        "items": [
+          {
+            "audioId": "word-qualifikation",
+            "speakText": "die Qualifikation.",
+            "a": "die Qualifikation",
+            "why": "اكتب ما تسمعه حرفياً: «die Qualifikation» تعني «التأهيل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-bewerber",
+            "speakText": "der Bewerber.",
+            "a": "der Bewerber",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Bewerber» («المتقدّم للعمل»)."
+          },
+          {
+            "audioId": "word-vollzeit",
+            "speakText": "die Vollzeit.",
+            "a": "die Vollzeit",
+            "why": "اكتب المسموع بدقة: die Vollzeit — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-sorge",
+            "speakText": "die Sorge.",
+            "a": "die Sorge",
+            "why": "اكتب ما تسمعه حرفياً: «die Sorge» تعني «القلق». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -308,6 +460,14 @@
           {
             "q": "«أنا على رأس العمل.»؟",
             "a": "Ich bin berufstätig."
+          },
+          {
+            "q": "«النشاط»؟",
+            "a": "die Tätigkeit"
+          },
+          {
+            "q": "«يعمل»؟",
+            "a": "berufstätig"
           }
         ],
         "passingScore": 0.75
@@ -329,6 +489,14 @@
           {
             "q": "«النشاط»؟",
             "a": "die Tätigkeit"
+          },
+          {
+            "q": "«يعمل»؟",
+            "a": "berufstätig"
+          },
+          {
+            "q": "«مهنياً»؟",
+            "a": "beruflich"
           }
         ],
         "passingScore": 0.75
@@ -350,6 +518,14 @@
           {
             "q": "«التلمذة المهنية تبدأ في الصيف.»؟",
             "a": "Die Lehre beginnt im Sommer."
+          },
+          {
+            "q": "«النشاط»؟",
+            "a": "die Tätigkeit"
+          },
+          {
+            "q": "«يعمل»؟",
+            "a": "berufstätig"
           }
         ],
         "passingScore": 0.75

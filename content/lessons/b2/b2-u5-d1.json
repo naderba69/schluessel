@@ -134,6 +134,23 @@
               }
             ],
             "why": "die Wirtschaft ist wichtig! · der Verbraucher kauft! · die Verschwendung vermeiden (يتجنّب!) · der Verbraucher (der!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التوعية",
+                "de": "die Aufklärung"
+              },
+              {
+                "ar": "موضوعي",
+                "de": "sachlich"
+              },
+              {
+                "ar": "عادل",
+                "de": "gerecht"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Aufklärung = «التوعية» · sachlich = «موضوعي» · gerecht = «عادل»"
           }
         ]
       },
@@ -169,6 +186,21 @@
             "q": "Der Verbraucher ___. (يشتري!)",
             "a": "kauft",
             "why": "kaufen يشتري (Präsens er/sie: kauft!) — Der Verbraucher kauft."
+          },
+          {
+            "q": "Wir ___ die Meldung.",
+            "a": "kommentieren",
+            "why": "الكلمة الناقصة «kommentieren» تعني «يعلّق على» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir ___ die Menschen.",
+            "a": "befragen",
+            "why": "الكلمة الناقصة «befragen» تعني «يستطلع» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist wichtig.",
+            "a": "Datenschutz",
+            "why": "الكلمة الناقصة «Datenschutz» تعني «حماية البيانات» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +236,21 @@
             "q": "~~Die Wirtschaft sind wichtig.~~",
             "a": "Die Wirtschaft ist wichtig.",
             "why": "المفرد die Wirtschaft مع ist (لا sind!)!"
+          },
+          {
+            "q": "~~Wir Argumentieren für die Meinung.~~",
+            "a": "Wir argumentieren für die Meinung.",
+            "why": "الخطأ في «Argumentieren»! الصواب «argumentieren» — راجع القاعدة (يجادل)."
+          },
+          {
+            "q": "~~Wir Folgern die Antwort.~~",
+            "a": "Wir folgern die Antwort.",
+            "why": "الخطأ في «Folgern»! الصواب «folgern» — راجع القاعدة (يستنتج)."
+          },
+          {
+            "q": "~~Wir Belegen die Behauptung.~~",
+            "a": "Wir belegen die Behauptung.",
+            "why": "الخطأ في «Belegen»! الصواب «belegen» — راجع القاعدة (يثبت)."
           }
         ]
       },
@@ -234,6 +281,111 @@
             "q": "تحدّث عن التبذير! (جملتان!)",
             "a": "Die Verschwendung ist schlimm. Wir vermeiden die Verschwendung.",
             "why": "التبذير! (die Verschwendung vermeiden!)"
+          },
+          {
+            "q": "كوّن جملة فيها «hinterfragen» («يتشكّك في») ثم تحدّث بها.",
+            "a": "Wir hinterfragen die Meldung.",
+            "why": "استعمل «hinterfragen» («يتشكّك في») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «misstrauisch» («غير واثق») ثم تحدّث بها.",
+            "a": "Ich bin misstrauisch.",
+            "why": "استعمل «misstrauisch» («غير واثق») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Zensur» («الرقابة») ثم تحدّث بها.",
+            "a": "Die Zensur ist schlimm.",
+            "why": "استعمل «die Zensur» («الرقابة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "gerecht"
+        ],
+        "items": [
+          {
+            "audioId": "word-wirtschaft",
+            "speakText": "die Wirtschaft.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الاقتصاد",
+              "المستهلك",
+              "التبذير"
+            ],
+            "a": "الاقتصاد",
+            "why": "الصوت يقول «die Wirtschaft» — معناها «الاقتصاد». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-verbraucher",
+            "speakText": "der Verbraucher.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Verbraucher",
+              "die Wirtschaft",
+              "die Verschwendung"
+            ],
+            "a": "der Verbraucher",
+            "why": "الكلمة المسموعة «der Verbraucher» تعني «المستهلك». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-verschwendung",
+            "speakText": "die Verschwendung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التبذير",
+              "الاقتصاد",
+              "المستهلك"
+            ],
+            "a": "التبذير",
+            "why": "الصوت يقول «die Verschwendung» — معناها «التبذير». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-gerecht",
+            "speakText": "gerecht.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "gerecht",
+              "die Wirtschaft",
+              "der Verbraucher"
+            ],
+            "a": "gerecht",
+            "why": "الكلمة المسموعة «gerecht» تعني «عادل». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "sachlich"
+        ],
+        "items": [
+          {
+            "audioId": "word-wirtschaft",
+            "speakText": "die Wirtschaft.",
+            "a": "die Wirtschaft",
+            "why": "اكتب ما تسمعه حرفياً: «die Wirtschaft» تعني «الاقتصاد». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-verbraucher",
+            "speakText": "der Verbraucher.",
+            "a": "der Verbraucher",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Verbraucher» («المستهلك»)."
+          },
+          {
+            "audioId": "word-verschwendung",
+            "speakText": "die Verschwendung.",
+            "a": "die Verschwendung",
+            "why": "اكتب المسموع بدقة: die Verschwendung — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-sachlich",
+            "speakText": "sachlich.",
+            "a": "sachlich",
+            "why": "اكتب ما تسمعه حرفياً: «sachlich» تعني «موضوعي». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +416,14 @@
           {
             "q": "«المستهلك يشتري.»؟",
             "a": "Der Verbraucher kauft."
+          },
+          {
+            "q": "«الاقتصاد مهمّ.»؟",
+            "a": "Die Wirtschaft ist wichtig."
+          },
+          {
+            "q": "«الإسراف»؟",
+            "a": "die Verschwendung"
           }
         ]
       },
@@ -284,6 +444,14 @@
           {
             "q": "der Verbraucher",
             "a": "المستهلك"
+          },
+          {
+            "q": "«الاقتصاد»؟",
+            "a": "die Wirtschaft"
+          },
+          {
+            "q": "«المستهلك»؟",
+            "a": "der Verbraucher"
           }
         ]
       },
@@ -304,6 +472,14 @@
           {
             "q": "«التبذير سيّئ.»؟",
             "a": "Die Verschwendung ist schlimm."
+          },
+          {
+            "q": "«الاقتصاد»؟",
+            "a": "die Wirtschaft"
+          },
+          {
+            "q": "«المستهلك»؟",
+            "a": "der Verbraucher"
           }
         ]
       }

@@ -170,6 +170,23 @@
               }
             ],
             "why": "der Zeitraum المدة (der! Zeiträume!) · der Verlauf المسار (die Verläufe!) · stagnieren يركد (hat stagniert!) · rückläufig متراجع (صفة!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "بالمئة",
+                "de": "das Prozent"
+              },
+              {
+                "ar": "الحصة",
+                "de": "der Anteil"
+              },
+              {
+                "ar": "المتوسط",
+                "de": "der Durchschnitt"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: das Prozent = «بالمئة» · der Anteil = «الحصة» · der Durchschnitt = «المتوسط»"
           }
         ]
       },
@@ -181,9 +198,8 @@
           "وصف الرسوم!"
         ],
         "interleavedWith": [
-          "diagramm",
-          "grafik",
-          "tabelle"
+          "komma",
+          "kurve"
         ],
         "items": [
           {
@@ -215,6 +231,16 @@
             "q": "Die Zahl ist ___. (متراجع! صفة!)",
             "a": "rückläufig",
             "why": "rückläufig متراجع — Die Zahl ist rückläufig. (صفة لا تتصرّف!)"
+          },
+          {
+            "q": "Das ___ ist wichtig.",
+            "a": "Komma",
+            "why": "الكلمة الناقصة «Komma» تعني «الفاصلة (الرقمية)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ steigt.",
+            "a": "Kurve",
+            "why": "الكلمة الناقصة «Kurve» تعني «المنحنى» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -226,9 +252,8 @@
           "الأداة! الانفصال! الأداة!"
         ],
         "interleavedWith": [
-          "achse",
-          "balken",
-          "skala"
+          "komma",
+          "kurve"
         ],
         "items": [
           {
@@ -245,6 +270,16 @@
             "q": "~~das Verlauf ist deutlich~~",
             "a": "der Verlauf ist deutlich",
             "why": "der Verlauf المسار (der! مذكّر — لا das!)"
+          },
+          {
+            "q": "~~Das komma ist wichtig.~~",
+            "a": "Das Komma ist wichtig.",
+            "why": "الخطأ في «komma»! الصواب «Komma» — راجع القاعدة (الفاصلة (الرقمية))."
+          },
+          {
+            "q": "~~Die kurve steigt.~~",
+            "a": "Die Kurve steigt.",
+            "why": "الخطأ في «kurve»! الصواب «Kurve» — راجع القاعدة (المنحنى)."
           }
         ]
       },
@@ -256,9 +291,8 @@
           "Verlauf! Spitze! Tiefpunkt!"
         ],
         "interleavedWith": [
-          "spitze",
-          "tiefpunkt",
-          "stagnieren"
+          "komma",
+          "kurve"
         ],
         "items": [
           {
@@ -275,6 +309,106 @@
             "q": "اختم بالقاع والركود! (3 جمل!)",
             "a": "Der Tiefpunkt ist klar. Die Werte fallen ab und stagnieren. Die Schwankung ist klein!",
             "why": "Tiefpunkt! abfallen! stagnieren! Schwankung! (الخاتمة!)"
+          },
+          {
+            "q": "كوّن جملة فيها «das Komma» («الفاصلة (الرقمية)») ثم تحدّث بها.",
+            "a": "Das Komma ist wichtig.",
+            "why": "استعمل «das Komma» («الفاصلة (الرقمية)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Kurve» («المنحنى») ثم تحدّث بها.",
+            "a": "Die Kurve steigt.",
+            "why": "استعمل «die Kurve» («المنحنى») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "komma"
+        ],
+        "items": [
+          {
+            "audioId": "word-abfallen",
+            "speakText": "abfallen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يهبط",
+              "الرسم البياني",
+              "الرسم (الإحصائي)"
+            ],
+            "a": "يهبط",
+            "why": "الصوت يقول «abfallen» — معناها «يهبط». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-diagramm",
+            "speakText": "das Diagramm.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "das Diagramm",
+              "abfallen",
+              "die Grafik"
+            ],
+            "a": "das Diagramm",
+            "why": "الكلمة المسموعة «das Diagramm» تعني «الرسم البياني». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-grafik",
+            "speakText": "die Grafik.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الرسم (الإحصائي)",
+              "يهبط",
+              "الرسم البياني"
+            ],
+            "a": "الرسم (الإحصائي)",
+            "why": "الصوت يقول «die Grafik» — معناها «الرسم (الإحصائي)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-komma",
+            "speakText": "das Komma.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "das Komma",
+              "abfallen",
+              "das Diagramm"
+            ],
+            "a": "das Komma",
+            "why": "الكلمة المسموعة «das Komma» تعني «الفاصلة (الرقمية)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "kurve"
+        ],
+        "items": [
+          {
+            "audioId": "word-tabelle",
+            "speakText": "die Tabelle.",
+            "a": "die Tabelle",
+            "why": "اكتب ما تسمعه حرفياً: «die Tabelle» تعني «الجدول». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-achse",
+            "speakText": "die Achse.",
+            "a": "die Achse",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Achse» («المحور (في الرسم)»)."
+          },
+          {
+            "audioId": "word-balken",
+            "speakText": "der Balken.",
+            "a": "der Balken",
+            "why": "اكتب المسموع بدقة: der Balken — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-kurve",
+            "speakText": "die Kurve.",
+            "a": "die Kurve",
+            "why": "اكتب ما تسمعه حرفياً: «die Kurve» تعني «المنحنى». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -305,6 +439,14 @@
           {
             "q": "«العمود (الشريطي)»؟",
             "a": "der Balken"
+          },
+          {
+            "q": "«يهبط»؟",
+            "a": "abfallen"
+          },
+          {
+            "q": "«الرسم البياني»؟",
+            "a": "das Diagramm"
           }
         ]
       },
@@ -325,6 +467,14 @@
           {
             "q": "«القيم راكدة.»؟",
             "a": "Die Werte stagnieren."
+          },
+          {
+            "q": "«يهبط»؟",
+            "a": "abfallen"
+          },
+          {
+            "q": "«الرسم البياني»؟",
+            "a": "das Diagramm"
           }
         ]
       },
@@ -345,6 +495,14 @@
           {
             "q": "«التذبذب»؟",
             "a": "die Schwankung"
+          },
+          {
+            "q": "«يهبط»؟",
+            "a": "abfallen"
+          },
+          {
+            "q": "«الرسم البياني»؟",
+            "a": "das Diagramm"
           }
         ]
       }

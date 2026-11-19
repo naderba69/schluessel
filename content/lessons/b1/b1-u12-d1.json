@@ -171,6 +171,23 @@
               }
             ],
             "why": "مراجعة B1! die Sicherheit الأمان · das Ergebnis النتيجة · das Niveau المستوى (die! das! das!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التماسك",
+                "de": "der Zusammenhalt"
+              },
+              {
+                "ar": "الرضا",
+                "de": "die Erfüllung"
+              },
+              {
+                "ar": "يحقّق",
+                "de": "verwirklichen"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Zusammenhalt = «التماسك» · die Erfüllung = «الرضا» · verwirklichen = «يحقّق»"
           }
         ]
       },
@@ -182,9 +199,8 @@
           "المراجعة الأولى!"
         ],
         "interleavedWith": [
-          "wortschatz",
-          "zertifikat",
-          "konzentration"
+          "verwirklichen",
+          "erfuellung"
         ],
         "items": [
           {
@@ -211,6 +227,16 @@
             "q": "Er lernt jeden Tag, ___ ist die Prüfung schwer. (مع ذلك!)",
             "a": "trotzdem",
             "why": "trotzdem مع ذلك (trotzdem في الصدر ← الفعل ثانياً! مراجعة الوحدة الأولى!)"
+          },
+          {
+            "q": "Er ___ den Traum.",
+            "a": "verwirklicht",
+            "why": "الكلمة الناقصة «verwirklicht» تعني «يحقّق» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist groß.",
+            "a": "Erfüllung",
+            "why": "الكلمة الناقصة «Erfüllung» تعني «الرضا» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -241,6 +267,21 @@
             "q": "~~Deshalb er übt jeden Tag.~~",
             "a": "Deshalb übt er jeden Tag.",
             "why": "deshalb في الصدر ← الفعل ثانياً لا الضمير! (خريطة التداخل 10‑ي!)"
+          },
+          {
+            "q": "~~Der weg ist lang: eine Stunde.~~",
+            "a": "Der Weg ist lang: eine Stunde.",
+            "why": "الخطأ في «weg»! الصواب «Weg» — راجع القاعدة (طريق)."
+          },
+          {
+            "q": "~~Sie liebt ihre arbeit.~~",
+            "a": "Sie liebt ihre Arbeit.",
+            "why": "الخطأ في «arbeit»! الصواب «Arbeit» — راجع القاعدة (العمل)."
+          },
+          {
+            "q": "~~Ich habe zeit.~~",
+            "a": "Ich habe Zeit.",
+            "why": "الخطأ في «zeit»! الصواب «Zeit» — راجع القاعدة (الوقت)."
           }
         ]
       },
@@ -271,6 +312,111 @@
             "q": "اختم بالتركيز! (جملتان!)",
             "a": "Die Konzentration ist gut. Deshalb übt er jeden Tag.",
             "why": "التركيز ثم الربط! (Konzentration zeigen! deshalb!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Gesundheit» («الصحة») ثم تحدّث بها.",
+            "a": "Gesundheit! — Danke.",
+            "why": "استعمل «die Gesundheit» («الصحة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Wohnung» («شقة») ثم تحدّث بها.",
+            "a": "Die Wohnung ist neu.",
+            "why": "استعمل «die Wohnung» («شقة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Geld» («المال») ثم تحدّث بها.",
+            "a": "Wie viel Geld hast du?",
+            "why": "استعمل «das Geld» («المال») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "verwirklichen"
+        ],
+        "items": [
+          {
+            "audioId": "word-wortschatz",
+            "speakText": "der Wortschatz.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المفردات",
+              "الشهادة",
+              "التركيز"
+            ],
+            "a": "المفردات",
+            "why": "الصوت يقول «der Wortschatz» — معناها «المفردات». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-zertifikat",
+            "speakText": "das Zertifikat.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "das Zertifikat",
+              "der Wortschatz",
+              "die Konzentration"
+            ],
+            "a": "das Zertifikat",
+            "why": "الكلمة المسموعة «das Zertifikat» تعني «الشهادة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-konzentration",
+            "speakText": "die Konzentration.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التركيز",
+              "المفردات",
+              "الشهادة"
+            ],
+            "a": "التركيز",
+            "why": "الصوت يقول «die Konzentration» — معناها «التركيز». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-verwirklichen",
+            "speakText": "verwirklichen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "verwirklichen",
+              "der Wortschatz",
+              "das Zertifikat"
+            ],
+            "a": "verwirklichen",
+            "why": "الكلمة المسموعة «verwirklichen» تعني «يحقّق». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "erfuellung"
+        ],
+        "items": [
+          {
+            "audioId": "word-wortschatz",
+            "speakText": "der Wortschatz.",
+            "a": "der Wortschatz",
+            "why": "اكتب ما تسمعه حرفياً: «der Wortschatz» تعني «المفردات». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-zertifikat",
+            "speakText": "das Zertifikat.",
+            "a": "das Zertifikat",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «das Zertifikat» («الشهادة»)."
+          },
+          {
+            "audioId": "word-konzentration",
+            "speakText": "die Konzentration.",
+            "a": "die Konzentration",
+            "why": "اكتب المسموع بدقة: die Konzentration — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-erfuellung",
+            "speakText": "die Erfüllung.",
+            "a": "die Erfüllung",
+            "why": "اكتب ما تسمعه حرفياً: «die Erfüllung» تعني «الرضا». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -301,6 +447,14 @@
           {
             "q": "«الطريق»؟ (مراجعة!)",
             "a": "der Weg"
+          },
+          {
+            "q": "«حصيلة الكلمات»؟",
+            "a": "der Wortschatz"
+          },
+          {
+            "q": "«الإجازة»؟",
+            "a": "das Zertifikat"
           }
         ]
       },
@@ -321,6 +475,14 @@
           {
             "q": "«المال»؟ (مراجعة!)",
             "a": "das Geld"
+          },
+          {
+            "q": "«المفردات»؟",
+            "a": "der Wortschatz"
+          },
+          {
+            "q": "«الشهادة»؟",
+            "a": "das Zertifikat"
           }
         ]
       },
@@ -341,6 +503,14 @@
           {
             "q": "«الأمان»؟ (مراجعة!)",
             "a": "die Sicherheit"
+          },
+          {
+            "q": "«المفردات»؟",
+            "a": "der Wortschatz"
+          },
+          {
+            "q": "«الشهادة»؟",
+            "a": "das Zertifikat"
           }
         ]
       }

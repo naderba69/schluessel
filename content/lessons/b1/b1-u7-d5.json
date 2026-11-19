@@ -167,6 +167,23 @@
               }
             ],
             "why": "nutzen يستفيد (hat genutzt!) · vorhaben يعتزم (منفصل: habe … vor! + zu + مصدر!) — ومراجعة: verwenden يستخدم (hat verwendet!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "البيئة",
+                "de": "die Umwelt"
+              },
+              {
+                "ar": "المناخ",
+                "de": "das Klima"
+              },
+              {
+                "ar": "المرج",
+                "de": "die Wiese"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Umwelt = «البيئة» · das Klima = «المناخ» · die Wiese = «المرج»"
           }
         ]
       },
@@ -202,6 +219,21 @@
             "q": "___ das Recht noch das Gewissen! (weder! لا … ولا!)",
             "a": "Weder",
             "why": "weder … noch = لا … ولا! (الزوج كامل!)"
+          },
+          {
+            "q": "Wir gehen in den ___.",
+            "a": "Wald",
+            "why": "الكلمة الناقصة «Wald» تعني «غابة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Dort sind ___.",
+            "a": "Wolken",
+            "why": "الكلمة الناقصة «Wolken» تعني «سحابة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ sind für meine Mutter.",
+            "a": "Blumen",
+            "why": "الكلمة الناقصة «Blumen» تعني «زهرة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -232,6 +264,16 @@
             "q": "~~Weder das Verbot oder die Aktion.~~",
             "a": "Weder das Verbot noch die Aktion.",
             "why": "weder … noch = لا … ولا! (oder مع entweder فقط!)"
+          },
+          {
+            "q": "~~Es regnet heute.~~ (ناقصة: der Regen)",
+            "a": "Es regnet heute. der Regen.",
+            "why": "الجملة تفتقد «der Regen» (المطر) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~Wie ist das wetter heute?~~",
+            "a": "Wie ist das Wetter heute?",
+            "why": "الخطأ في «wetter»! الصواب «Wetter» — راجع القاعدة (الطقس)."
           }
         ]
       },
@@ -257,6 +299,111 @@
             "q": "قل بالألمانية: «أعتزم أن أساعد.» (vorhaben + zu + مصدر!)",
             "a": "Ich habe vor, zu helfen.",
             "why": "vorhaben منفصل: habe … vor! + zu helfen (zu + مصدر!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Katze» («القطة») ثم تحدّث بها.",
+            "a": "Das ist meine Katze.",
+            "why": "استعمل «die Katze» («القطة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Arbeit» («العمل») ثم تحدّث بها.",
+            "a": "Sie liebt ihre Arbeit.",
+            "why": "استعمل «die Arbeit» («العمل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Sommer» («الصيف») ثم تحدّث بها.",
+            "a": "Im Sommer ist es heiß.",
+            "why": "استعمل «der Sommer» («الصيف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "einfluss"
+        ],
+        "items": [
+          {
+            "audioId": "word-nutzen",
+            "speakText": "nutzen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يستفيد",
+              "الحظر",
+              "الحق"
+            ],
+            "a": "يستفيد",
+            "why": "الصوت يقول «nutzen» — معناها «يستفيد». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-verbot",
+            "speakText": "das Verbot.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "das Verbot",
+              "nutzen",
+              "das Recht"
+            ],
+            "a": "das Verbot",
+            "why": "الكلمة المسموعة «das Verbot» تعني «الحظر». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-recht",
+            "speakText": "das Recht.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الحق",
+              "يستفيد",
+              "الحظر"
+            ],
+            "a": "الحق",
+            "why": "الصوت يقول «das Recht» — معناها «الحق». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-einfluss",
+            "speakText": "der Einfluss.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "der Einfluss",
+              "nutzen",
+              "das Verbot"
+            ],
+            "a": "der Einfluss",
+            "why": "الكلمة المسموعة «der Einfluss» تعني «التأثير». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "protest"
+        ],
+        "items": [
+          {
+            "audioId": "word-vergangenheit",
+            "speakText": "die Vergangenheit.",
+            "a": "die Vergangenheit",
+            "why": "اكتب ما تسمعه حرفياً: «die Vergangenheit» تعني «الماضي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-modell",
+            "speakText": "das Modell.",
+            "a": "das Modell",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «das Modell» («النموذج»)."
+          },
+          {
+            "audioId": "word-gewinn",
+            "speakText": "der Gewinn.",
+            "a": "der Gewinn",
+            "why": "اكتب المسموع بدقة: der Gewinn — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-protest",
+            "speakText": "der Protest.",
+            "a": "der Protest",
+            "why": "اكتب ما تسمعه حرفياً: «der Protest» تعني «الاحتجاج». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -287,6 +434,14 @@
           {
             "q": "«يستفيد»؟",
             "a": "nutzen"
+          },
+          {
+            "q": "«الحق»؟",
+            "a": "das Recht"
+          },
+          {
+            "q": "«الماضي»؟",
+            "a": "die Vergangenheit"
           }
         ],
         "passingScore": 0.75
@@ -308,6 +463,14 @@
           {
             "q": "«يعتزم»؟",
             "a": "vorhaben"
+          },
+          {
+            "q": "«يستفيد»؟",
+            "a": "nutzen"
+          },
+          {
+            "q": "«الحظر»؟",
+            "a": "das Verbot"
           }
         ],
         "passingScore": 0.75
@@ -329,6 +492,14 @@
           {
             "q": "«ناضج»؟",
             "a": "reif"
+          },
+          {
+            "q": "«يستفيد»؟",
+            "a": "nutzen"
+          },
+          {
+            "q": "«الحظر»؟",
+            "a": "das Verbot"
           }
         ],
         "passingScore": 0.75

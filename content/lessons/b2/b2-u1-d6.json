@@ -134,6 +134,23 @@
               }
             ],
             "why": "in der Nachbarschaft helfen! · Anteilnahme zeigen! · jemandem vergeben (المجرور!) · die Nachbarschaften جمع -en"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التشجيع",
+                "de": "die Ermutigung"
+              },
+              {
+                "ar": "يحذّر",
+                "de": "warnen"
+              },
+              {
+                "ar": "الرفض",
+                "de": "die Ablehnung"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Ermutigung = «التشجيع» · warnen = «يحذّر» · die Ablehnung = «الرفض»"
           }
         ]
       },
@@ -169,6 +186,21 @@
             "q": "Wir helfen in der ___. (الحيّ!)",
             "a": "Nachbarschaft",
             "why": "الحيّ: in der Nachbarschaft helfen! — Wir helfen in der Nachbarschaft."
+          },
+          {
+            "q": "___ braucht Zeit.",
+            "a": "Integration",
+            "why": "الكلمة الناقصة «Integration» تعني «الاندماج» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Gleichheit",
+            "why": "الكلمة الناقصة «Gleichheit» تعني «المساواة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "«Wir stehen den Freunden bei.» — اكتب الكلمة التي تعني «يساند»: ___",
+            "a": "beistehen",
+            "why": "الكلمة «beistehen» تعني «يساند» — اكتبها كما تُقال في الجملة."
           }
         ]
       },
@@ -204,6 +236,11 @@
             "q": "~~Ich vergebe dich.~~",
             "a": "Ich vergebe dir.",
             "why": "vergeben يأخذ المجرور! (dir — لا dich!)"
+          },
+          {
+            "q": "~~Ich brauche ruhe.~~",
+            "a": "Ich brauche Ruhe.",
+            "why": "الخطأ في «ruhe»! الصواب «Ruhe» — راجع القاعدة (الهدوء)."
           }
         ]
       },
@@ -234,6 +271,111 @@
             "q": "تحدث عن المسامحة! (جملتان!)",
             "a": "Vergeben ist wichtig. Ich vergebe den Menschen.",
             "why": "المسامحة! (jemandem vergeben!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Gerechtigkeit» («العدل») ثم تحدّث بها.",
+            "a": "Die Gerechtigkeit ist wichtig.",
+            "why": "استعمل «die Gerechtigkeit» («العدل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «spenden» («يتبرّع») ثم تحدّث بها.",
+            "a": "Wir spenden Geld.",
+            "why": "استعمل «spenden» («يتبرّع») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Würde» («الكرامة») ثم تحدّث بها.",
+            "a": "Alle Menschen haben Würde.",
+            "why": "استعمل «die Würde» («الكرامة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "wuerde"
+        ],
+        "items": [
+          {
+            "audioId": "word-nachbarschaft",
+            "speakText": "die Nachbarschaft.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الحيّ",
+              "المواساة",
+              "يسامح"
+            ],
+            "a": "الحيّ",
+            "why": "الصوت يقول «die Nachbarschaft» — معناها «الحيّ». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-anteilnahme",
+            "speakText": "die Anteilnahme.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Anteilnahme",
+              "die Nachbarschaft",
+              "vergeben"
+            ],
+            "a": "die Anteilnahme",
+            "why": "الكلمة المسموعة «die Anteilnahme» تعني «المواساة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-vergeben",
+            "speakText": "vergeben.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يسامح",
+              "الحيّ",
+              "المواساة"
+            ],
+            "a": "يسامح",
+            "why": "الصوت يقول «vergeben» — معناها «يسامح». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-wuerde",
+            "speakText": "die Würde.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Würde",
+              "die Nachbarschaft",
+              "die Anteilnahme"
+            ],
+            "a": "die Würde",
+            "why": "الكلمة المسموعة «die Würde» تعني «الكرامة». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "spenden"
+        ],
+        "items": [
+          {
+            "audioId": "word-nachbarschaft",
+            "speakText": "die Nachbarschaft.",
+            "a": "die Nachbarschaft",
+            "why": "اكتب ما تسمعه حرفياً: «die Nachbarschaft» تعني «الحيّ». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-anteilnahme",
+            "speakText": "die Anteilnahme.",
+            "a": "die Anteilnahme",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Anteilnahme» («المواساة»)."
+          },
+          {
+            "audioId": "word-vergeben",
+            "speakText": "vergeben.",
+            "a": "vergeben",
+            "why": "اكتب المسموع بدقة: vergeben — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-spenden",
+            "speakText": "spenden.",
+            "a": "spenden",
+            "why": "اكتب ما تسمعه حرفياً: «spenden» تعني «يتبرّع». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +406,14 @@
           {
             "q": "«أنا أسامحك.»؟",
             "a": "Ich vergebe dir."
+          },
+          {
+            "q": "«الحيّ»؟",
+            "a": "die Nachbarschaft"
+          },
+          {
+            "q": "«المواساة»؟",
+            "a": "die Anteilnahme"
           }
         ]
       },
@@ -284,6 +434,14 @@
           {
             "q": "die Anteilnahme",
             "a": "المواساة"
+          },
+          {
+            "q": "«الحيّ»؟",
+            "a": "die Nachbarschaft"
+          },
+          {
+            "q": "«المواساة»؟",
+            "a": "die Anteilnahme"
           }
         ]
       },
@@ -304,6 +462,14 @@
           {
             "q": "«نسامح الناس!»؟",
             "a": "Wir vergeben den Menschen!"
+          },
+          {
+            "q": "«الحيّ»؟",
+            "a": "die Nachbarschaft"
+          },
+          {
+            "q": "«المواساة»؟",
+            "a": "die Anteilnahme"
           }
         ]
       }

@@ -170,6 +170,23 @@
               }
             ],
             "why": "die Mehrheit الأكثرية (stimmt zu!) · die Minderheit الأقلية (wartet!) · der Beschluss القرار (der! treffen!) · umsetzen يُنفّذ (den Beschluss umsetzen! منفصل!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التعويض",
+                "de": "die Entschädigung"
+              },
+              {
+                "ar": "الشكوى (على البضاعة)",
+                "de": "die Reklamation"
+              },
+              {
+                "ar": "التسوية",
+                "de": "die Regelung"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Entschädigung = «التعويض» · die Reklamation = «الشكوى (على البضاعة)» · die Regelung = «التسوية»"
           }
         ]
       },
@@ -181,9 +198,8 @@
           "إدارة النقاش!"
         ],
         "interleavedWith": [
-          "runde",
-          "abstimmung",
-          "mehrheit"
+          "zufriedenheit",
+          "beilegen"
         ],
         "items": [
           {
@@ -215,6 +231,16 @@
             "q": "Die ___ stimmt zu. (الأكثرية!)",
             "a": "Mehrheit",
             "why": "die Mehrheit الأكثرية — stimmt zu (تُوافق!)"
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Zufriedenheit",
+            "why": "الكلمة الناقصة «Zufriedenheit» تعني «الرضا» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Er ___ den Streit bei.",
+            "a": "legt",
+            "why": "الكلمة الناقصة «legt» تعني «يسوّي (النزاع)» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -226,9 +252,8 @@
           "الحرف! الانفصال! الجمع!"
         ],
         "interleavedWith": [
-          "moderation",
-          "beschluss",
-          "rolle"
+          "zufriedenheit",
+          "beilegen"
         ],
         "items": [
           {
@@ -245,6 +270,16 @@
             "q": "~~Wir setzen um den Beschluss.~~",
             "a": "Wir setzen den Beschluss um.",
             "why": "umsetzen منفصل: المفعول بينهما والجزء um آخر الجملة!"
+          },
+          {
+            "q": "~~Die zufriedenheit ist wichtig.~~",
+            "a": "Die Zufriedenheit ist wichtig.",
+            "why": "الخطأ في «zufriedenheit»! الصواب «Zufriedenheit» — راجع القاعدة (الرضا)."
+          },
+          {
+            "q": "~~Er Legt den Streit bei.~~",
+            "a": "Er legt den Streit bei.",
+            "why": "الخطأ في «Legt»! الصواب «legt» — راجع القاعدة (يسوّي (النزاع))."
           }
         ]
       },
@@ -256,9 +291,8 @@
           "Runde! Redebeitrag! Beschluss!"
         ],
         "interleavedWith": [
-          "moderieren",
-          "mitreden",
-          "these"
+          "zufriedenheit",
+          "beilegen"
         ],
         "items": [
           {
@@ -275,6 +309,106 @@
             "q": "اختم بالتصويت والتنفيذ! (3 جمل!)",
             "a": "Die Abstimmung kommt. Die Mehrheit stimmt zu. Wir setzen den Beschluss um!",
             "why": "Abstimmung! Mehrheit! Beschluss umsetzen! (الترتيب الإداري!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Zufriedenheit» («الرضا») ثم تحدّث بها.",
+            "a": "Die Zufriedenheit ist wichtig.",
+            "why": "استعمل «die Zufriedenheit» («الرضا») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «beilegen» («يسوّي (النزاع)») ثم تحدّث بها.",
+            "a": "Er legt den Streit bei.",
+            "why": "استعمل «beilegen» («يسوّي (النزاع)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "zufriedenheit"
+        ],
+        "items": [
+          {
+            "audioId": "word-rolle",
+            "speakText": "die Rolle.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الدور",
+              "يُدير (النقاش)",
+              "إدارة (النقاش)"
+            ],
+            "a": "الدور",
+            "why": "الصوت يقول «die Rolle» — معناها «الدور». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-moderieren",
+            "speakText": "moderieren.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "moderieren",
+              "die Rolle",
+              "die Moderation"
+            ],
+            "a": "moderieren",
+            "why": "الكلمة المسموعة «moderieren» تعني «يُدير (النقاش)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-moderation",
+            "speakText": "die Moderation.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "إدارة (النقاش)",
+              "الدور",
+              "يُدير (النقاش)"
+            ],
+            "a": "إدارة (النقاش)",
+            "why": "الصوت يقول «die Moderation» — معناها «إدارة (النقاش)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-zufriedenheit",
+            "speakText": "die Zufriedenheit.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Zufriedenheit",
+              "die Rolle",
+              "moderieren"
+            ],
+            "a": "die Zufriedenheit",
+            "why": "الكلمة المسموعة «die Zufriedenheit» تعني «الرضا». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "beilegen"
+        ],
+        "items": [
+          {
+            "audioId": "word-runde",
+            "speakText": "die Runde.",
+            "a": "die Runde",
+            "why": "اكتب ما تسمعه حرفياً: «die Runde» تعني «الجولة (من النقاش)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-redebeitrag",
+            "speakText": "der Redebeitrag.",
+            "a": "der Redebeitrag",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Redebeitrag» («المساهمة (الكلامية)»)."
+          },
+          {
+            "audioId": "word-beteiligen",
+            "speakText": "sich beteiligen.",
+            "a": "sich beteiligen",
+            "why": "اكتب المسموع بدقة: sich beteiligen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-beilegen",
+            "speakText": "beilegen.",
+            "a": "beilegen",
+            "why": "اكتب ما تسمعه حرفياً: «beilegen» تعني «يسوّي (النزاع)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -305,6 +439,14 @@
           {
             "q": "«التصويت»؟",
             "a": "die Abstimmung"
+          },
+          {
+            "q": "«الدور»؟",
+            "a": "die Rolle"
+          },
+          {
+            "q": "«يُدير (النقاش)»؟",
+            "a": "moderieren"
           }
         ]
       },
@@ -325,6 +467,14 @@
           {
             "q": "«الأقلية»؟",
             "a": "die Minderheit"
+          },
+          {
+            "q": "«الدور»؟",
+            "a": "die Rolle"
+          },
+          {
+            "q": "«يُدير (النقاش)»؟",
+            "a": "moderieren"
           }
         ]
       },
@@ -345,6 +495,14 @@
           {
             "q": "«الفرضية»؟",
             "a": "die These"
+          },
+          {
+            "q": "«الدور»؟",
+            "a": "die Rolle"
+          },
+          {
+            "q": "«إدارة (النقاش)»؟",
+            "a": "die Moderation"
           }
         ]
       }

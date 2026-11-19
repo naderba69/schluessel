@@ -134,6 +134,23 @@
               }
             ],
             "why": "das Experiment machen (يجري!) · die Innovation nutzen! · die Erkenntnis gewinnen (يتوصل إلى!) · das Experiment (das!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التعليم",
+                "de": "die Bildung"
+              },
+              {
+                "ar": "التقنية",
+                "de": "die Technik"
+              },
+              {
+                "ar": "الرقمنة",
+                "de": "die Digitalisierung"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Bildung = «التعليم» · die Technik = «التقنية» · die Digitalisierung = «الرقمنة»"
           }
         ]
       },
@@ -169,6 +186,21 @@
             "q": "Er ___ das Experiment. (يجري!)",
             "a": "macht",
             "why": "machen يجري (Präsens er: macht!) — Er macht das Experiment."
+          },
+          {
+            "q": "Das ___ ist wichtig.",
+            "a": "Gleichgewicht",
+            "why": "الكلمة الناقصة «Gleichgewicht» تعني «التوازن» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir leben ___.",
+            "a": "bewusst",
+            "why": "الكلمة الناقصة «bewusst» تعني «واعٍ» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir vermeiden die ___.",
+            "a": "Emissionen",
+            "why": "الكلمة الناقصة «Emissionen» تعني «الانبعاث» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +236,21 @@
             "q": "~~Wir machen das Experiment auf.~~",
             "a": "Wir machen das Experiment.",
             "why": "machen مع المفعول ليس فعلاً منفصلاً! (لا auf!)!"
+          },
+          {
+            "q": "~~Die gerechtigkeit ist wichtig.~~",
+            "a": "Die Gerechtigkeit ist wichtig.",
+            "why": "الخطأ في «gerechtigkeit»! الصواب «Gerechtigkeit» — راجع القاعدة (العدل)."
+          },
+          {
+            "q": "~~Ich warne dich.~~ (ناقصة: warnen)",
+            "a": "Ich warne dich. warnen.",
+            "why": "الجملة تفتقد «warnen» (يحذّر) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~Wir lösen den konflikt.~~",
+            "a": "Wir lösen den Konflikt.",
+            "why": "الخطأ في «konflikt»! الصواب «Konflikt» — راجع القاعدة (النزاع)."
           }
         ]
       },
@@ -234,6 +281,111 @@
             "q": "تحدّث عن المعرفة! (جملتان!)",
             "a": "Wir gewinnen die Erkenntnis. Das ist wichtig.",
             "why": "المعرفة! (die Erkenntnis gewinnen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Hitze» («الحرارة») ثم تحدّث بها.",
+            "a": "Die Hitze ist gefährlich.",
+            "why": "استعمل «die Hitze» («الحرارة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Erderwärmung» («إحماء الأرض») ثم تحدّث بها.",
+            "a": "Wir vermeiden die Erderwärmung.",
+            "why": "استعمل «die Erderwärmung» («إحماء الأرض») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «bewahren» («يصون») ثم تحدّث بها.",
+            "a": "Wir bewahren die Erde.",
+            "why": "استعمل «bewahren» («يصون») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "digitalisierung"
+        ],
+        "items": [
+          {
+            "audioId": "word-experiment",
+            "speakText": "das Experiment.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التجربة",
+              "الابتكار",
+              "المعرفة"
+            ],
+            "a": "التجربة",
+            "why": "الصوت يقول «das Experiment» — معناها «التجربة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-innovation",
+            "speakText": "die Innovation.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Innovation",
+              "das Experiment",
+              "die Erkenntnis"
+            ],
+            "a": "die Innovation",
+            "why": "الكلمة المسموعة «die Innovation» تعني «الابتكار». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-erkenntnis",
+            "speakText": "die Erkenntnis.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "المعرفة",
+              "التجربة",
+              "الابتكار"
+            ],
+            "a": "المعرفة",
+            "why": "الصوت يقول «die Erkenntnis» — معناها «المعرفة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-digitalisierung",
+            "speakText": "die Digitalisierung.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Digitalisierung",
+              "das Experiment",
+              "die Innovation"
+            ],
+            "a": "die Digitalisierung",
+            "why": "الكلمة المسموعة «die Digitalisierung» تعني «الرقمنة». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "technik"
+        ],
+        "items": [
+          {
+            "audioId": "word-experiment",
+            "speakText": "das Experiment.",
+            "a": "das Experiment",
+            "why": "اكتب ما تسمعه حرفياً: «das Experiment» تعني «التجربة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-innovation",
+            "speakText": "die Innovation.",
+            "a": "die Innovation",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Innovation» («الابتكار»)."
+          },
+          {
+            "audioId": "word-erkenntnis",
+            "speakText": "die Erkenntnis.",
+            "a": "die Erkenntnis",
+            "why": "اكتب المسموع بدقة: die Erkenntnis — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-technik",
+            "speakText": "die Technik.",
+            "a": "die Technik",
+            "why": "اكتب ما تسمعه حرفياً: «die Technik» تعني «التقنية». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +416,14 @@
           {
             "q": "«التجربة مهمّة.»؟",
             "a": "Das Experiment ist wichtig."
+          },
+          {
+            "q": "«التجربة»؟",
+            "a": "das Experiment"
+          },
+          {
+            "q": "«الابتكار مهمّ.»؟",
+            "a": "Die Innovation ist wichtig."
           }
         ]
       },
@@ -284,6 +444,14 @@
           {
             "q": "das Experiment",
             "a": "التجربة"
+          },
+          {
+            "q": "«التجربة»؟",
+            "a": "das Experiment"
+          },
+          {
+            "q": "«الابتكار»؟",
+            "a": "die Innovation"
           }
         ]
       },
@@ -304,6 +472,14 @@
           {
             "q": "«نجري التجربة.»؟",
             "a": "Wir machen das Experiment."
+          },
+          {
+            "q": "«التجربة»؟",
+            "a": "das Experiment"
+          },
+          {
+            "q": "«الابتكار»؟",
+            "a": "die Innovation"
           }
         ]
       }

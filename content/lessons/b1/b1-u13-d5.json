@@ -175,6 +175,23 @@
               }
             ],
             "why": "مراجعة الأفعال! erkennen · benutzen · prüfen · zeigen"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الصياغة",
+                "de": "die Formulierung"
+              },
+              {
+                "ar": "يؤلّف",
+                "de": "verfassen"
+              },
+              {
+                "ar": "يلتزم بـ",
+                "de": "einhalten"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Formulierung = «الصياغة» · verfassen = «يؤلّف» · einhalten = «يلتزم بـ»"
           }
         ]
       },
@@ -186,9 +203,8 @@
           "النماذج والقوالب!"
         ],
         "interleavedWith": [
-          "muster",
-          "vorlage",
-          "format"
+          "einhalten",
+          "verfassen"
         ],
         "items": [
           {
@@ -215,6 +231,16 @@
             "q": "Er prüft das ___. (يفحص التنسيق!)",
             "a": "Format",
             "why": "das Format prüfen — المفردة الثابتة! (prüft!)"
+          },
+          {
+            "q": "Er ___ die Frist ein.",
+            "a": "hält",
+            "why": "الكلمة الناقصة «hält» تعني «يلتزم بـ» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Er ___ den Text.",
+            "a": "verfasst",
+            "why": "الكلمة الناقصة «verfasst» تعني «يؤلّف» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -245,6 +271,21 @@
             "q": "~~Die Formate ist wichtig.~~",
             "a": "Das Format ist wichtig.",
             "why": "المفرد لا الجمع! das Format (die Formate جمع!) — الجملة عن تنسيق واحد!"
+          },
+          {
+            "q": "~~Die prüfung ist bald.~~",
+            "a": "Die Prüfung ist bald.",
+            "why": "الخطأ في «prüfung»! الصواب «Prüfung» — راجع القاعدة (الامتحان)."
+          },
+          {
+            "q": "~~Ich schreibe auf den antwortbogen!~~",
+            "a": "Ich schreibe auf den Antwortbogen!",
+            "why": "الخطأ في «antwortbogen»! الصواب «Antwortbogen» — راجع القاعدة (ورقة إجابة)."
+          },
+          {
+            "q": "~~Weißt du die lösung?~~",
+            "a": "Weißt du die Lösung?",
+            "why": "الخطأ في «lösung»! الصواب «Lösung» — راجع القاعدة (الحلّ)."
           }
         ]
       },
@@ -280,6 +321,111 @@
             "q": "اختم بالامتحان! (جملتان!)",
             "a": "Die Prüfung hat ein Muster. Die Lösung ist klar.",
             "why": "الامتحان بالنمط! (النماذج!)"
+          },
+          {
+            "q": "كوّن جملة فيها «das Beispiel» («مثال») ثم تحدّث بها.",
+            "a": "Das ist nur ein Beispiel.",
+            "why": "استعمل «das Beispiel» («مثال») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Teil» («الجزء») ثم تحدّث بها.",
+            "a": "Die Aufgabe hat zwei Teile.",
+            "why": "استعمل «der Teil» («الجزء») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Hinweis» («تنبيه») ثم تحدّث بها.",
+            "a": "Danke für den Hinweis!",
+            "why": "استعمل «der Hinweis» («تنبيه») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "einhalten"
+        ],
+        "items": [
+          {
+            "audioId": "word-muster",
+            "speakText": "das Muster.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "النموذج",
+              "القالب",
+              "التنسيق"
+            ],
+            "a": "النموذج",
+            "why": "الصوت يقول «das Muster» — معناها «النموذج». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-vorlage",
+            "speakText": "die Vorlage.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Vorlage",
+              "das Muster",
+              "das Format"
+            ],
+            "a": "die Vorlage",
+            "why": "الكلمة المسموعة «die Vorlage» تعني «القالب». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-format",
+            "speakText": "das Format.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التنسيق",
+              "النموذج",
+              "القالب"
+            ],
+            "a": "التنسيق",
+            "why": "الصوت يقول «das Format» — معناها «التنسيق». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-einhalten",
+            "speakText": "einhalten.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "einhalten",
+              "das Muster",
+              "die Vorlage"
+            ],
+            "a": "einhalten",
+            "why": "الكلمة المسموعة «einhalten» تعني «يلتزم بـ». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "verfassen"
+        ],
+        "items": [
+          {
+            "audioId": "word-muster",
+            "speakText": "das Muster.",
+            "a": "das Muster",
+            "why": "اكتب ما تسمعه حرفياً: «das Muster» تعني «النموذج». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-vorlage",
+            "speakText": "die Vorlage.",
+            "a": "die Vorlage",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Vorlage» («القالب»)."
+          },
+          {
+            "audioId": "word-format",
+            "speakText": "das Format.",
+            "a": "das Format",
+            "why": "اكتب المسموع بدقة: das Format — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-verfassen",
+            "speakText": "verfassen.",
+            "a": "verfassen",
+            "why": "اكتب ما تسمعه حرفياً: «verfassen» تعني «يؤلّف». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -310,6 +456,14 @@
           {
             "q": "«يتعرّف على النمط.»؟",
             "a": "Er erkennt das Muster."
+          },
+          {
+            "q": "«النمط»؟",
+            "a": "das Muster"
+          },
+          {
+            "q": "«النموذج الجاهز»؟",
+            "a": "die Vorlage"
           }
         ]
       },
@@ -330,6 +484,14 @@
           {
             "q": "«يعمل بالقالب.»؟",
             "a": "Er arbeitet mit der Vorlage."
+          },
+          {
+            "q": "«النموذج»؟",
+            "a": "das Muster"
+          },
+          {
+            "q": "«القالب»؟",
+            "a": "die Vorlage"
           }
         ]
       },
@@ -350,6 +512,14 @@
           {
             "q": "«ورقة الإجابة»؟ (المفردة الثابتة!)",
             "a": "der Antwortbogen"
+          },
+          {
+            "q": "«النموذج»؟",
+            "a": "das Muster"
+          },
+          {
+            "q": "«القالب»؟",
+            "a": "die Vorlage"
           }
         ]
       }

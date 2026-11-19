@@ -134,6 +134,23 @@
               }
             ],
             "why": "das Gleichgewicht bewahren! · bewusst leben (بعوعي!) · die Emissionen vermeiden! · das Gleichgewicht (das!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الحرارة",
+                "de": "die Hitze"
+              },
+              {
+                "ar": "إحماء الأرض",
+                "de": "die Erderwärmung"
+              },
+              {
+                "ar": "التوازن",
+                "de": "das Gleichgewicht"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Hitze = «الحرارة» · die Erderwärmung = «إحماء الأرض» · das Gleichgewicht = «التوازن»"
           }
         ]
       },
@@ -169,6 +186,21 @@
             "q": "Er ___ das Gleichgewicht. (يحفظ!)",
             "a": "bewahrt",
             "why": "bewahren يحفظ (Präsens er: bewahrt!) — Er bewahrt das Gleichgewicht."
+          },
+          {
+            "q": "Die ___ ist gefährlich.",
+            "a": "Flut",
+            "why": "الكلمة الناقصة «Flut» تعني «الفيضان» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist wichtig.",
+            "a": "Trinkwasser",
+            "why": "الكلمة الناقصة «Trinkwasser» تعني «ماء الشرب» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir machen eine ___.",
+            "a": "Entdeckung",
+            "why": "الكلمة الناقصة «Entdeckung» تعني «الاكتشاف» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +236,21 @@
             "q": "~~Wir bewahren das Gleichgewicht auf.~~",
             "a": "Wir bewahren das Gleichgewicht.",
             "why": "bewahren ليس فعلاً منفصلاً! (لا auf!)!"
+          },
+          {
+            "q": "~~Die gerechtigkeit ist wichtig.~~",
+            "a": "Die Gerechtigkeit ist wichtig.",
+            "why": "الخطأ في «gerechtigkeit»! الصواب «Gerechtigkeit» — راجع القاعدة (العدل)."
+          },
+          {
+            "q": "~~Ich warne dich.~~ (ناقصة: warnen)",
+            "a": "Ich warne dich. warnen.",
+            "why": "الجملة تفتقد «warnen» (يحذّر) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~Wir lösen den konflikt.~~",
+            "a": "Wir lösen den Konflikt.",
+            "why": "الخطأ في «konflikt»! الصواب «Konflikt» — راجع القاعدة (النزاع)."
           }
         ]
       },
@@ -234,6 +281,111 @@
             "q": "تحدّث عن الانبعاثات! (جملتان!)",
             "a": "Die Emissionen sind gefährlich. Wir vermeiden die Emissionen.",
             "why": "الانبعاثات! (die Emissionen vermeiden!)"
+          },
+          {
+            "q": "كوّن جملة فيها «der Klimawandel» («التغيّر المناخي») ثم تحدّث بها.",
+            "a": "Der Klimawandel ist gefährlich.",
+            "why": "استعمل «der Klimawandel» («التغيّر المناخي») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «recyceln» («يعيد التدوير») ثم تحدّث بها.",
+            "a": "Wir recyceln die Ressourcen.",
+            "why": "استعمل «recyceln» («يعيد التدوير») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «schonen» («يحافظ على») ثم تحدّث بها.",
+            "a": "Wir schonen die Umwelt.",
+            "why": "استعمل «schonen» («يحافظ على») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "bewahren"
+        ],
+        "items": [
+          {
+            "audioId": "word-gleichgewicht",
+            "speakText": "das Gleichgewicht.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التوازن",
+              "واعٍ",
+              "الانبعاث"
+            ],
+            "a": "التوازن",
+            "why": "الصوت يقول «das Gleichgewicht» — معناها «التوازن». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-bewusst",
+            "speakText": "bewusst.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "bewusst",
+              "das Gleichgewicht",
+              "die Emission"
+            ],
+            "a": "bewusst",
+            "why": "الكلمة المسموعة «bewusst» تعني «واعٍ». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-emission",
+            "speakText": "die Emission.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الانبعاث",
+              "التوازن",
+              "واعٍ"
+            ],
+            "a": "الانبعاث",
+            "why": "الصوت يقول «die Emission» — معناها «الانبعاث». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-bewahren",
+            "speakText": "bewahren.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "bewahren",
+              "das Gleichgewicht",
+              "bewusst"
+            ],
+            "a": "bewahren",
+            "why": "الكلمة المسموعة «bewahren» تعني «يصون». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "erderwaermung"
+        ],
+        "items": [
+          {
+            "audioId": "word-gleichgewicht",
+            "speakText": "das Gleichgewicht.",
+            "a": "das Gleichgewicht",
+            "why": "اكتب ما تسمعه حرفياً: «das Gleichgewicht» تعني «التوازن». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-bewusst",
+            "speakText": "bewusst.",
+            "a": "bewusst",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «bewusst» («واعٍ»)."
+          },
+          {
+            "audioId": "word-emission",
+            "speakText": "die Emission.",
+            "a": "die Emission",
+            "why": "اكتب المسموع بدقة: die Emission — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-erderwaermung",
+            "speakText": "die Erderwärmung.",
+            "a": "die Erderwärmung",
+            "why": "اكتب ما تسمعه حرفياً: «die Erderwärmung» تعني «إحماء الأرض». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +416,14 @@
           {
             "q": "«التوازن مهمّ.»؟",
             "a": "Das Gleichgewicht ist wichtig."
+          },
+          {
+            "q": "«الانبعاث»؟",
+            "a": "die Emission"
+          },
+          {
+            "q": "«واعٍ»؟",
+            "a": "bewusst"
           }
         ]
       },
@@ -284,6 +444,14 @@
           {
             "q": "das Gleichgewicht",
             "a": "التوازن"
+          },
+          {
+            "q": "«التوازن»؟",
+            "a": "das Gleichgewicht"
+          },
+          {
+            "q": "«واعٍ»؟",
+            "a": "bewusst"
           }
         ]
       },
@@ -304,6 +472,14 @@
           {
             "q": "«نعيش بوعي.»؟",
             "a": "Wir leben bewusst."
+          },
+          {
+            "q": "«التوازن»؟",
+            "a": "das Gleichgewicht"
+          },
+          {
+            "q": "«واعٍ»؟",
+            "a": "bewusst"
           }
         ]
       }

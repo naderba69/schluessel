@@ -176,6 +176,23 @@
               }
             ],
             "why": "das Klima المناخ · die Wanderung الرحلة التنزّهية · die Natur الطبيعة (مراجعة: natur من الوحدة 2!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "غابة",
+                "de": "der Wald"
+              },
+              {
+                "ar": "سحابة",
+                "de": "die Wolke"
+              },
+              {
+                "ar": "زهرة",
+                "de": "die Blume"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Wald = «غابة» · die Wolke = «سحابة» · die Blume = «زهرة»"
           }
         ]
       },
@@ -210,6 +227,21 @@
             "q": "Nachdem wir die Umwelt ___ (schützen), wanderten wir los. (nachdem + hatten!)",
             "a": "geschützt hatten",
             "why": "بعد + الماضي التام: hatten + التصريف الثالث (geschützt hatten!) — wie getrennt hatten!"
+          },
+          {
+            "q": "Die ___ ist ruhig.",
+            "a": "Natur",
+            "why": "الكلمة الناقصة «Natur» تعني «طبيعة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist lang.",
+            "a": "Fluss",
+            "why": "الكلمة الناقصة «Fluss» تعني «نهر» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Am Abend gehen wir oft ___.",
+            "a": "spazieren",
+            "why": "الكلمة الناقصة «spazieren» تعني «يتمشّى» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -239,6 +271,21 @@
             "q": "~~Nachdem wir hatten getrennt, wanderten wir los.~~",
             "a": "Nachdem wir getrennt hatten, wanderten wir los.",
             "why": "بعد nachdem: التصريف الثالث ثم hatte آخراً! (لا: hatten getrennt — انتبه للترتيب!)"
+          },
+          {
+            "q": "~~Was Fehlt dir? Hast du Fieber?~~",
+            "a": "Was fehlt dir? Hast du Fieber?",
+            "why": "الخطأ في «Fehlt»! الصواب «fehlt» — راجع القاعدة (يغيب)."
+          },
+          {
+            "q": "~~Obst ist Gesund.~~",
+            "a": "Obst ist gesund.",
+            "why": "الخطأ في «Gesund»! الصواب «gesund» — راجع القاعدة (صحّي)."
+          },
+          {
+            "q": "~~Ich Lebe in Berlin.~~",
+            "a": "Ich lebe in Berlin.",
+            "why": "الخطأ في «Lebe»! الصواب «lebe» — راجع القاعدة (يعيش (حياته))."
           }
         ]
       },
@@ -263,6 +310,111 @@
             "q": "قل بالألمانية: «بعد أن تجوّلنا عبر المرج، استمتعنا بالهدوء.» (wandern بـ ist — تذكّر!)",
             "a": "Nachdem wir über die Wiese gewandert waren, genossen wir die Ruhe.",
             "why": "wandern فعل ناقص ← waren! (gewandert waren — لا: hatten!)"
+          },
+          {
+            "q": "كوّن جملة فيها «der Garten» («حديقة») ثم تحدّث بها.",
+            "a": "Die Großeltern haben einen Garten.",
+            "why": "استعمل «der Garten» («حديقة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Meer» («بحر») ثم تحدّث بها.",
+            "a": "Das Meer ist groß.",
+            "why": "استعمل «das Meer» («بحر») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Wind» («الرياح») ثم تحدّث بها.",
+            "a": "Der Wind ist heute kalt.",
+            "why": "استعمل «der Wind» («الرياح») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "unvergesslich"
+        ],
+        "items": [
+          {
+            "audioId": "word-umwelt",
+            "speakText": "die Umwelt.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "البيئة",
+              "يحمي",
+              "المناخ"
+            ],
+            "a": "البيئة",
+            "why": "الصوت يقول «die Umwelt» — معناها «البيئة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-schuetzen",
+            "speakText": "schützen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "schützen",
+              "die Umwelt",
+              "das Klima"
+            ],
+            "a": "schützen",
+            "why": "الكلمة المسموعة «schützen» تعني «يحمي». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-klima",
+            "speakText": "das Klima.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "المناخ",
+              "البيئة",
+              "يحمي"
+            ],
+            "a": "المناخ",
+            "why": "الصوت يقول «das Klima» — معناها «المناخ». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-unvergesslich",
+            "speakText": "unvergesslich.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "unvergesslich",
+              "die Umwelt",
+              "schützen"
+            ],
+            "a": "unvergesslich",
+            "why": "الكلمة المسموعة «unvergesslich» تعني «لا يُنسى». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "rueckkehr"
+        ],
+        "items": [
+          {
+            "audioId": "word-geniessen",
+            "speakText": "genießen.",
+            "a": "genießen",
+            "why": "اكتب ما تسمعه حرفياً: «genießen» تعني «يستمتع». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-wiese",
+            "speakText": "die Wiese.",
+            "a": "die Wiese",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Wiese» («المرج»)."
+          },
+          {
+            "audioId": "word-wachsen",
+            "speakText": "wachsen.",
+            "a": "wachsen",
+            "why": "اكتب المسموع بدقة: wachsen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-rueckkehr",
+            "speakText": "die Rückkehr.",
+            "a": "die Rückkehr",
+            "why": "اكتب ما تسمعه حرفياً: «die Rückkehr» تعني «العودة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -293,6 +445,14 @@
           {
             "q": "«ينمو»؟",
             "a": "wachsen"
+          },
+          {
+            "q": "«يحمي»؟",
+            "a": "schützen"
+          },
+          {
+            "q": "«المناخ»؟",
+            "a": "das Klima"
           }
         ],
         "passingScore": 0.75
@@ -314,6 +474,14 @@
           {
             "q": "«يسقي»؟",
             "a": "gießen"
+          },
+          {
+            "q": "«البيئة»؟",
+            "a": "die Umwelt"
+          },
+          {
+            "q": "«يحمي»؟",
+            "a": "schützen"
           }
         ],
         "passingScore": 0.75
@@ -335,6 +503,14 @@
           {
             "q": "«الطاقة»؟",
             "a": "die Energie"
+          },
+          {
+            "q": "«البيئة»؟",
+            "a": "die Umwelt"
+          },
+          {
+            "q": "«المناخ»؟",
+            "a": "das Klima"
           }
         ],
         "passingScore": 0.75

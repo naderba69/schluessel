@@ -134,6 +134,23 @@
               }
             ],
             "why": "ينتج المنتجات! · die Lieferung kommt (تصل!) · sparsam leben (يعيش!) · die Lieferung (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الاقتصاد",
+                "de": "die Wirtschaft"
+              },
+              {
+                "ar": "المستهلك",
+                "de": "der Verbraucher"
+              },
+              {
+                "ar": "التبذير",
+                "de": "die Verschwendung"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Wirtschaft = «الاقتصاد» · der Verbraucher = «المستهلك» · die Verschwendung = «التبذير»"
           }
         ]
       },
@@ -169,6 +186,21 @@
             "q": "Wir produzieren die ___. (المنتجات!)",
             "a": "Produkte",
             "why": "die Produkte المنتجات (جمع das Produkt!) — Wir produzieren die Produkte."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Aufklärung",
+            "why": "الكلمة الناقصة «Aufklärung» تعني «التوعية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir schreiben ___.",
+            "a": "sachlich",
+            "why": "الكلمة الناقصة «sachlich» تعني «موضوعي» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir bleiben ___.",
+            "a": "gerecht",
+            "why": "الكلمة الناقصة «gerecht» تعني «عادل» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +236,21 @@
             "q": "~~Die Lieferung sind wichtig.~~",
             "a": "Die Lieferung ist wichtig.",
             "why": "المفرد die Lieferung مع ist (لا sind!)!"
+          },
+          {
+            "q": "~~Wir Kommentieren die Meldung.~~",
+            "a": "Wir kommentieren die Meldung.",
+            "why": "الخطأ في «Kommentieren»! الصواب «kommentieren» — راجع القاعدة (يعلّق على)."
+          },
+          {
+            "q": "~~Wir Befragen die Menschen.~~",
+            "a": "Wir befragen die Menschen.",
+            "why": "الخطأ في «Befragen»! الصواب «befragen» — راجع القاعدة (يستطلع)."
+          },
+          {
+            "q": "~~Der datenschutz ist wichtig.~~",
+            "a": "Der Datenschutz ist wichtig.",
+            "why": "الخطأ في «datenschutz»! الصواب «Datenschutz» — راجع القاعدة (حماية البيانات)."
           }
         ]
       },
@@ -234,6 +281,111 @@
             "q": "تحدّث عن الاقتصاد! (جملتان!)",
             "a": "Wir leben sparsam. Wir vermeiden die Verschwendung.",
             "why": "الاقتصاد! (sparsam leben!) — vermeiden من الوحدة 2 وd1!"
+          },
+          {
+            "q": "كوّن جملة فيها «argumentieren» («يجادل») ثم تحدّث بها.",
+            "a": "Wir argumentieren für die Meinung.",
+            "why": "استعمل «argumentieren» («يجادل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «folgern» («يستنتج») ثم تحدّث بها.",
+            "a": "Wir folgern die Antwort.",
+            "why": "استعمل «folgern» («يستنتج») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «belegen» («يثبت») ثم تحدّث بها.",
+            "a": "Wir belegen die Behauptung.",
+            "why": "استعمل «belegen» («يثبت») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "verschwendung"
+        ],
+        "items": [
+          {
+            "audioId": "word-produzieren",
+            "speakText": "produzieren.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "ينتج",
+              "الشحنة",
+              "مقتصد"
+            ],
+            "a": "ينتج",
+            "why": "الصوت يقول «produzieren» — معناها «ينتج». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-lieferung",
+            "speakText": "die Lieferung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Lieferung",
+              "produzieren",
+              "sparsam"
+            ],
+            "a": "die Lieferung",
+            "why": "الكلمة المسموعة «die Lieferung» تعني «الشحنة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-sparsam",
+            "speakText": "sparsam.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "مقتصد",
+              "ينتج",
+              "الشحنة"
+            ],
+            "a": "مقتصد",
+            "why": "الصوت يقول «sparsam» — معناها «مقتصد». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-verschwendung",
+            "speakText": "die Verschwendung.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Verschwendung",
+              "produzieren",
+              "die Lieferung"
+            ],
+            "a": "die Verschwendung",
+            "why": "الكلمة المسموعة «die Verschwendung» تعني «التبذير». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "verbraucher"
+        ],
+        "items": [
+          {
+            "audioId": "word-produzieren",
+            "speakText": "produzieren.",
+            "a": "produzieren",
+            "why": "اكتب ما تسمعه حرفياً: «produzieren» تعني «ينتج». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-lieferung",
+            "speakText": "die Lieferung.",
+            "a": "die Lieferung",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Lieferung» («الشحنة»)."
+          },
+          {
+            "audioId": "word-sparsam",
+            "speakText": "sparsam.",
+            "a": "sparsam",
+            "why": "اكتب المسموع بدقة: sparsam — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-verbraucher",
+            "speakText": "der Verbraucher.",
+            "a": "der Verbraucher",
+            "why": "اكتب ما تسمعه حرفياً: «der Verbraucher» تعني «المستهلك». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +416,14 @@
           {
             "q": "«تصل الشحنة.»؟",
             "a": "Die Lieferung kommt."
+          },
+          {
+            "q": "«ننتج المنتجات.»؟",
+            "a": "Wir produzieren die Produkte."
+          },
+          {
+            "q": "«التسليم»؟",
+            "a": "die Lieferung"
           }
         ]
       },
@@ -284,6 +444,14 @@
           {
             "q": "die Lieferung",
             "a": "الشحنة"
+          },
+          {
+            "q": "«ينتج»؟",
+            "a": "produzieren"
+          },
+          {
+            "q": "«الشحنة»؟",
+            "a": "die Lieferung"
           }
         ]
       },
@@ -304,6 +472,14 @@
           {
             "q": "«نعيش بمقتصد.»؟",
             "a": "Wir leben sparsam."
+          },
+          {
+            "q": "«ينتج»؟",
+            "a": "produzieren"
+          },
+          {
+            "q": "«الشحنة»؟",
+            "a": "die Lieferung"
           }
         ]
       }

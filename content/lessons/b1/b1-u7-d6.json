@@ -148,6 +148,23 @@
               }
             ],
             "why": "der Feinstaub الجسيمات الدقيقة (u7-d3!) · das Ozon الأوزون (u7-d3!) · der Wertstoff مادة القيمة (u7-d3!) — (مراجعة: die Katastrophe! der Wald!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "غابة",
+                "de": "der Wald"
+              },
+              {
+                "ar": "المرج",
+                "de": "die Wiese"
+              },
+              {
+                "ar": "القلق",
+                "de": "die Sorge"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Wald = «غابة» · die Wiese = «المرج» · die Sorge = «القلق»"
           }
         ]
       },
@@ -178,6 +195,21 @@
             "q": "Sowohl die Natur ___ die Erde sind wichtig. (als auch! الزوج!)",
             "a": "als auch",
             "why": "sowohl … als auch = كلاهما … وأيضاً! (الزوج كامل! u7-d5!)"
+          },
+          {
+            "q": "Das ist meine ___.",
+            "a": "Katze",
+            "why": "الكلمة الناقصة «Katze» تعني «القطة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Heute scheint die ___.",
+            "a": "Sonne",
+            "why": "الكلمة الناقصة «Sonne» تعني «الشمس» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Dort sind ___.",
+            "a": "Wolken",
+            "why": "الكلمة الناقصة «Wolken» تعني «سحابة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -208,6 +240,16 @@
             "q": "~~Ich versuche helfen.~~",
             "a": "Ich versuche zu helfen.",
             "why": "الفعل الثاني بعد zu + مصدر (zu helfen!)! (u7-d4!)"
+          },
+          {
+            "q": "~~Es regnet heute.~~ (ناقصة: der Regen)",
+            "a": "Es regnet heute. der Regen.",
+            "why": "الجملة تفتقد «der Regen» (المطر) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~Wie ist das wetter heute?~~",
+            "a": "Wie ist das Wetter heute?",
+            "why": "الخطأ في «wetter»! الصواب «Wetter» — راجع القاعدة (الطقس)."
           }
         ]
       },
@@ -243,6 +285,91 @@
             "q": "اختم: لا نُدمّر شيئاً!",
             "a": "Wir zerstören nichts!",
             "why": "zerstören يُدمّر! (nichts = لا شيء!)"
+          },
+          {
+            "q": "كوّن جملة فيها «der Vogel» («عصفور») ثم تحدّث بها.",
+            "a": "Der Vogel ist klein!",
+            "why": "استعمل «der Vogel» («عصفور») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Baum» («شجرة») ثم تحدّث بها.",
+            "a": "Im Park sind viele Bäume.",
+            "why": "استعمل «der Baum» («شجرة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Blume» («زهرة») ثم تحدّث بها.",
+            "a": "Die Blumen sind für meine Mutter.",
+            "why": "استعمل «die Blume» («زهرة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "entweder"
+        ],
+        "items": [
+          {
+            "audioId": "word-sorge",
+            "speakText": "die Sorge.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "القلق",
+              "يُدمّر"
+            ],
+            "a": "القلق",
+            "why": "الصوت يقول «die Sorge» — معناها «القلق». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-zerstoeren",
+            "speakText": "zerstören.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "zerstören",
+              "die Sorge"
+            ],
+            "a": "zerstören",
+            "why": "الكلمة المسموعة «zerstören» تعني «يُدمّر». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-entweder",
+            "speakText": "entweder.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "إمّا",
+              "القلق",
+              "يُدمّر"
+            ],
+            "a": "إمّا",
+            "why": "الصوت يقول «entweder» — معناها «إمّا». ركّز على الصوت لا على الشكل!"
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "weder"
+        ],
+        "items": [
+          {
+            "audioId": "word-sorge",
+            "speakText": "die Sorge.",
+            "a": "die Sorge",
+            "why": "اكتب ما تسمعه حرفياً: «die Sorge» تعني «القلق». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-zerstoeren",
+            "speakText": "zerstören.",
+            "a": "zerstören",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «zerstören» («يُدمّر»)."
+          },
+          {
+            "audioId": "word-weder",
+            "speakText": "weder.",
+            "a": "weder",
+            "why": "اكتب المسموع بدقة: weder — ركّز على نهاية الكلمة!"
           }
         ]
       }
@@ -273,6 +400,14 @@
           {
             "q": "«الجسيمات الدقيقة»؟",
             "a": "der Feinstaub"
+          },
+          {
+            "q": "«يُدمّر»؟",
+            "a": "zerstören"
+          },
+          {
+            "q": "«الهمّ»؟",
+            "a": "die Sorge"
           }
         ],
         "passingScore": 0.75
@@ -294,6 +429,14 @@
           {
             "q": "«أعتزم أن أساعد.»؟",
             "a": "Ich habe vor, zu helfen."
+          },
+          {
+            "q": "«القلق»؟",
+            "a": "die Sorge"
+          },
+          {
+            "q": "«الهمّ»؟",
+            "a": "die Sorge"
           }
         ],
         "passingScore": 0.75
@@ -315,6 +458,14 @@
           {
             "q": "«لا يجوز لنا أن نُدمّر الطبيعة.»؟",
             "a": "Wir dürfen die Natur nicht zerstören."
+          },
+          {
+            "q": "«القلق»؟",
+            "a": "die Sorge"
+          },
+          {
+            "q": "«يُدمّر»؟",
+            "a": "zerstören"
           }
         ],
         "passingScore": 0.75
