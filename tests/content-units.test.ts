@@ -1757,7 +1757,7 @@ describe("A2 يبدأ (D101) — الترتيب بالمستوى + قواعد A2
 
   it("a2-u1-d1: Perfekt منهجي — 13 كلمة A2 جديدة (لا تكرار لـA1) + أصوات مطابقة", async () => {
     const l = a2.find((x) => x.id === "a2-u1-d1")!;
-    expect(l.ziel.ar).toContain("Perfekt");
+    expect(l.ziel.ar).toContain("الماضي"); // D565: معدن A2 صار عربياً في الحقول الوصفية (كان «Perfekt»)
     const words = await wordsForLesson(l);
     expect(words).toHaveLength(13);
     for (const w of words) {
@@ -2104,12 +2104,17 @@ describe("A2 يبدأ (D101) — الترتيب بالمستوى + قواعد A2
     expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
   });
 
-  it("A2: كل محطة تخلط بنى A1 سابقة (interleaving) + تنوع المحطات ≥3 أنواع + المصائد على خريطة التداخل", () => {
+  it("A2: كل محطة تخلط بنى سابقة (interleaving) + تنوع المحطات ≥3 أنواع + المصائد على خريطة التداخل", () => {
     expect(a2.length).toBeGreaterThan(0);
     for (const l of a2) {
+      // F121 (D565): الاستدعاء لما سبق تعلمه فقط — أي مستوى سابق (A1 في أوائل A2، ثم كلمات A2 نفسها في وحداتها اللاحقة)
+      const beforeIds = new Set(
+        ALL_LESSONS.filter((x) => x.level < l.level || (x.level === l.level && (x.unit < l.unit || (x.unit === l.unit && x.day < l.day))))
+          .flatMap((x) => x.praesentation.wordIds),
+      );
       for (const s of l.uebung.stations) {
         expect(s.interleavedWith.length).toBeGreaterThan(0);
-        for (const ref of s.interleavedWith) expect(a1Ids.has(ref), `مرجع خلط غير موجود: ${ref}`).toBe(true);
+        for (const ref of s.interleavedWith) expect(beforeIds.has(ref), `مرجع خلط غير موجود: ${ref}`).toBe(true);
       }
       expect(new Set(l.uebung.stations.map((s) => s.type)).size).toBeGreaterThanOrEqual(3);
       expect(l.zusammenfassung.warningCards).toHaveLength(3);

@@ -229,6 +229,96 @@
             "why": "قارن تمييزك: mich بلا عضو × mir مع عضو (Hände/Haare/Zähne) — والفرق (Unterschied) واضح!"
           }
         ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "menge"
+        ],
+        "items": [
+          {
+            "audioId": "word-hinlegen",
+            "speakText": "sich hinlegen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يستلقي",
+              "الفرق",
+              "مختلف"
+            ],
+            "a": "يستلقي",
+            "why": "الصوت يقول «sich hinlegen» — معناها «يستلقي». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-unterschied",
+            "speakText": "der Unterschied.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Unterschied",
+              "sich hinlegen",
+              "verschieden"
+            ],
+            "a": "der Unterschied",
+            "why": "الكلمة المسموعة «der Unterschied» تعني «الفرق». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-verschieden",
+            "speakText": "verschieden.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "مختلف",
+              "يستلقي",
+              "الفرق"
+            ],
+            "a": "مختلف",
+            "why": "الصوت يقول «verschieden» — معناها «مختلف». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-menge",
+            "speakText": "die Menge.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Menge",
+              "sich hinlegen",
+              "der Unterschied"
+            ],
+            "a": "die Menge",
+            "why": "الكلمة المسموعة «die Menge» تعني «الكمية». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "mittel"
+        ],
+        "items": [
+          {
+            "audioId": "word-gegenteil",
+            "speakText": "das Gegenteil.",
+            "a": "das Gegenteil",
+            "why": "اكتب ما تسمعه حرفياً: «das Gegenteil» تعني «العكس». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-eigentlich",
+            "speakText": "eigentlich.",
+            "a": "eigentlich",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «eigentlich» («في الحقيقة»)."
+          },
+          {
+            "audioId": "word-aendern",
+            "speakText": "ändern.",
+            "a": "ändern",
+            "why": "اكتب المسموع بدقة: ändern — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-mittel",
+            "speakText": "das Mittel.",
+            "a": "das Mittel",
+            "why": "اكتب ما تسمعه حرفياً: «das Mittel» تعني «الوسيلة». انتبه للحروف الكبيرة!"
+          }
+        ]
       }
     ]
   },
@@ -258,6 +348,14 @@
           {
             "q": "Die Grippe ist ___. (schlimm)",
             "a": "schlimm"
+          },
+          {
+            "q": "«يستلقي»؟",
+            "a": "sich hinlegen"
+          },
+          {
+            "q": "«الفرق»؟",
+            "a": "der Unterschied"
           }
         ]
       },
@@ -279,6 +377,14 @@
           {
             "q": "Du bist ___ müde. (wahrscheinlich)",
             "a": "wahrscheinlich"
+          },
+          {
+            "q": "«يستلقي»؟",
+            "a": "sich hinlegen"
+          },
+          {
+            "q": "«الفرق»؟",
+            "a": "der Unterschied"
           }
         ]
       },
@@ -300,6 +406,14 @@
           {
             "q": "Ich wasche ___ die Hände. (mir)",
             "a": "mir"
+          },
+          {
+            "q": "«يستلقي»؟",
+            "a": "sich hinlegen"
+          },
+          {
+            "q": "«الفرق»؟",
+            "a": "der Unterschied"
           }
         ]
       }

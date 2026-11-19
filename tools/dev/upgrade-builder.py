@@ -164,14 +164,37 @@ def make_listening(w, words, tracks, i, extra_q=None):
     ar = ar0(w)
     spoken = tracks[f"word-{w['id']}"]
     others = [x for x in words if x["id"] != w["id"]]
-    if i % 2 == 0 and others:  # معنى (خيارات عربية)
-        distr = [ar0(x) for x in others[:2]]
+    if i % 2 == 0:  # معنى (خيارات عربية) — خيارات مميزة دائماً
+        distr: list[str] = []
+        for x in others:
+            a = ar0(x)
+            if a != ar and a not in distr:
+                distr.append(a)
+            if len(distr) >= 2:
+                break
+        if len(distr) < 2:  # لا خيارات كافية → تعرّف الشكل
+            dd: list[str] = []
+            for x in others:
+                v = display_of(x, tracks)
+                if v != d and v not in dd:
+                    dd.append(v)
+                if len(dd) >= 2:
+                    break
+            return {"audioId": f"word-{w['id']}", "speakText": spoken,
+                    "q": Q_LISTEN_FORM[i % len(Q_LISTEN_FORM)], "choices": [d] + dd, "a": d,
+                    "why": f"الكلمة المسموعة «{d}» تعني «{ar}». قارنها بالخيارات الأخرى صوتياً."}
         choices = [ar] + distr
         q = extra_q or Q_LISTEN_MEAN[i % len(Q_LISTEN_MEAN)]
         a = ar
         why = f"الصوت يقول «{d}» — معناها «{ar}». ركّز على الصوت لا على الشكل!"
     else:  # تعرّف على الشكل (خيارات ألمانية)
-        dd = [display_of(x, tracks) for x in others[:2]]
+        dd = []
+        for x in others:
+            v = display_of(x, tracks)
+            if v != d and v not in dd:
+                dd.append(v)
+            if len(dd) >= 2:
+                break
         choices = [d] + dd
         q = extra_q or Q_LISTEN_FORM[i % len(Q_LISTEN_FORM)]
         a = d
@@ -208,22 +231,24 @@ def make_match(pairs_w, tracks, lesson_words=None):
     return {"pairs": pairs, "why": why}
 
 
-def make_gap(w, tracks):
-    """فجوة من جملة المثال إن وُجدت صيغة فيها، وإلا فجوة تعريفية"""
+def make_gap(w, tracks, variant=0):
+    """فجوة من جملة المثال إن وُجدت صيغة فيها، وإلا فجوة تعريفية (3 صيغ لتفادي التكرار)"""
     sample = (w.get("sampleSentence") or {}).get("de") or ""
     d = display_of(w, tracks)
     ar = ar0(w)
     forms = sorted(set(known_forms(w)) - CLOSED - AUX, key=len, reverse=True)
-    for f in forms:
-        m = re.search(r"\b" + re.escape(f) + r"\b", sample, flags=re.IGNORECASE)
-        if m:
-            surface = sample[m.start():m.end()]
-            q = sample[: m.start()] + "___" + sample[m.end():]
-            return {"q": q, "a": surface, "why": f"الكلمة الناقصة «{surface}» تعني «{ar}» — تذكر صيغتها في السياق."}
-    if sample:
+    if variant == 0:
+        for f in forms:
+            m = re.search(r"\b" + re.escape(f) + r"\b", sample, flags=re.IGNORECASE)
+            if m:
+                surface = sample[m.start():m.end()]
+                q = sample[: m.start()] + "___" + sample[m.end():]
+                return {"q": q, "a": surface, "why": f"الكلمة الناقصة «{surface}» تعني «{ar}» — تذكر صيغتها في السياق."}
+    if variant <= 1 and sample:
         return {"q": f"«{sample}» — اكتب الكلمة التي تعني «{ar}»: ___", "a": d,
                 "why": f"الكلمة «{d}» تعني «{ar}» — اكتبها كما تُقال في الجملة."}
-    return {"q": f"اكتب الكلمة التي تعني «{ar}»: ___", "a": d, "why": f"«{d}» تعني «{ar}» — استرجعها واكتبها."}
+    return {"q": f"استرجع الكلمة التي تعني «{ar}» من درس سابق واكتبها: ___", "a": d,
+            "why": f"«{d}» تعني «{ar}» — استرجاع مُعلن: اكتبها من الذاكرة."}
 
 
 def make_error_hunt(w, tracks):
@@ -345,8 +370,28 @@ def process_lesson(path: Path, words: dict, tracks: dict, log: list[str]) -> boo
             log.append(f"  {lid}: دفء — أُسقطت بطاقات لم تُدرَّس بعد: {dropped} ← plerئت {kept}")
 
     moved: list[dict] = []  # كلمات تُنقل لمحطة الاستماع الجديدة (احتياط)
+    lesson_keys: set[str] = set()  # بصمات كل بنود الدرس (منع التكرار عبر المحطات)
+    for st in stations:
+        for it in st.get("items", []):
+            lesson_keys.add(json.dumps(item_texts(it), ensure_ascii=False))
+
+    def push_item(st, mk, words, tracks) -> bool:
+        """يولّد بنداً فريداً (3 صيغ) ويضيفه؛ False إن تعذّر"""
+        for variant in (0, 1, 2):
+            item = mk(variant)
+            if item is None:
+                continue
+            k = json.dumps(item_texts(item), ensure_ascii=False)
+            if k in lesson_keys:
+                continue
+            lesson_keys.add(k)
+            st["items"].append(item)
+            return True
+        return False
+
     for si, st in enumerate(stations):
-        iw = st.get("interleavedWith", [])
+        iw = list(dict.fromkeys(st.get("interleavedWith", [])))  # بلا تكرار
+        st["interleavedWith"] = iw
         bad = [r for r in iw if before and r not in before]
         if bad:
             st["interleavedWith"] = [r for r in iw if r not in bad]
@@ -365,23 +410,22 @@ def process_lesson(path: Path, words: dict, tracks: dict, log: list[str]) -> boo
         if t == "match":
             for i in range(0, len(missing), 6):
                 chunk = missing[i:i + 6]
-                st["items"].append(make_match(chunk, tracks, lesson_words))
+                push_item(st, lambda v, chunk=chunk: make_match(chunk, tracks, lesson_words) if v == 0 else None, words, tracks)
         elif t in ("gap-fill", "verb-bank"):
             for w in missing:
-                st["items"].append(make_gap(w, tracks))
+                push_item(st, lambda v, w=w: make_gap(w, tracks, v), words, tracks)
         elif t == "error-hunt":
             for w in missing:
-                item = make_error_hunt(w, tracks)
-                st["items"].append(item)
+                push_item(st, lambda v, w=w: make_error_hunt(w, tracks) if v == 0 else None, words, tracks)
         elif t in ("speaking", "writing"):
             for w in missing:
-                st["items"].append(make_speaking(w, tracks))
+                push_item(st, lambda v, w=w: make_speaking(w, tracks) if v == 0 else None, words, tracks)
         elif t in ("choice", "gender-drill", "case-drill"):
             for w in missing:
                 d = display_of(w, tracks)
                 others = [display_of(x, tracks) for x in lesson_words if x["id"] != w["id"]][:2]
-                st["items"].append({"q": f"اختر الكلمة الصحيحة التي تعني «{ar0(w)}».", "choices": [d] + others,
-                                    "a": d, "why": f"«{d}» تعني «{ar0(w)}» — لا تخلطها بالخيارات الأخرى."})
+                push_item(st, lambda v, w=w, d=d, others=others: {"q": f"اختر الكلمة الصحيحة التي تعني «{ar0(w)}».", "choices": [d] + others,
+                                    "a": d, "why": f"«{d}» تعني «{ar0(w)}» — لا تخلطها بالخيارات الأخرى."} if v == 0 else None, words, tracks)
         else:
             moved += missing
             continue
@@ -411,18 +455,18 @@ def process_lesson(path: Path, words: dict, tracks: dict, log: list[str]) -> boo
             if w is None or c in added_refs:
                 continue
             if t == "match":
-                st["items"].append(make_match([w], tracks, lesson_words))
+                push_item(st, lambda v, w=w: make_match([w], tracks, lesson_words) if v == 0 else None, words, tracks)
             elif t in ("gap-fill", "verb-bank"):
-                st["items"].append(make_gap(w, tracks))
+                push_item(st, lambda v, w=w: make_gap(w, tracks, v), words, tracks)
             elif t == "error-hunt":
-                st["items"].append(make_error_hunt(w, tracks))
+                push_item(st, lambda v, w=w: make_error_hunt(w, tracks) if v == 0 else None, words, tracks)
             elif t in ("speaking", "writing"):
-                st["items"].append(make_speaking(w, tracks))
+                push_item(st, lambda v, w=w: make_speaking(w, tracks) if v == 0 else None, words, tracks)
             elif t in ("choice", "gender-drill", "case-drill"):
                 d = display_of(w, tracks)
                 others = [display_of(x, tracks) for x in lesson_words if x["id"] != w["id"]][:2]
-                st["items"].append({"q": f"اختر الكلمة الصحيحة التي تعني «{ar0(w)}».", "choices": [d] + others,
-                                    "a": d, "why": f"«{d}» تعني «{ar0(w)}» — استرجاع من درس سابق."})
+                push_item(st, lambda v, w=w, d=d, others=others: {"q": f"اختر الكلمة الصحيحة التي تعني «{ar0(w)}».", "choices": [d] + others,
+                                    "a": d, "why": f"«{d}» تعني «{ar0(w)}» — استرجاع من درس سابق."} if v == 0 else None, words, tracks)
             else:
                 continue
             added_refs.append(c)
@@ -495,6 +539,29 @@ def process_lesson(path: Path, words: dict, tracks: dict, log: list[str]) -> boo
             v["items"].append(item)
             v_qs.add(item["q"])
             added += 1
+    # ضمان: لا سؤال مكرر في أي نسخة (احتياط أخير) + إعادة التغذية إن نقص العدد
+    for v in L["quiz"]["variants"]:
+        seen_q: set[str] = set()
+        uniq = []
+        for it in v["items"]:
+            if it["q"] in seen_q:
+                continue
+            seen_q.add(it["q"])
+            uniq.append(it)
+        v["items"] = uniq
+    for vi, v in enumerate(L["quiz"]["variants"]):
+        v_qs = {it["q"] for it in v["items"]}
+        guard = len(v["items"])
+        pool = [w for w in order] * 3
+        tries = 0
+        while len(v["items"]) < max(6, guard) and tries < len(pool):
+            w = pool[tries]
+            tries += 1
+            item = make_quiz(w, tracks, v_qs)
+            if item is None or item["q"] in v_qs:
+                continue
+            v_qs.add(item["q"])
+            v["items"].append(item)
 
     # 6) تغطية أخيرة: إن بقيت كلمة غير مغطاة → بند إملاء إضافي
     texts_all = []

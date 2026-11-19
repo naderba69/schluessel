@@ -105,7 +105,7 @@
             "why": "الم الماضي المركّب: ich habe … gekauft!"
           },
           {
-            "q": "Er ___ nach Hause gefahren. (sein — الماضي!)",
+            "q": "البادئة الملتصقة ___ nach Hause gefahren. (sein — الماضي!)",
             "a": "ist",
             "why": "الحركة في الماضي: er ist … gefahren!"
           },
@@ -120,9 +120,29 @@
             "why": "المقارنة +Umlaut: kalt → kälter (als gestern!)."
           },
           {
-            "q": "Zum Vergleich: klug → ___ (الدرجة الثانية!)",
+            "q": "للمقارنة: klug → ___ (الدرجة الثانية!)",
             "a": "klüger",
             "why": "klug → klüger (+Umlaut!) — والتفضيل am klügsten!"
+          },
+          {
+            "q": "Meine ___ ist groß.",
+            "a": "Familie",
+            "why": "الكلمة الناقصة «Familie» تعني «العائلة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir wohnen in einem ___.",
+            "a": "Haus",
+            "why": "الكلمة الناقصة «Haus» تعني «البيت (المبنى المستقل)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist neu.",
+            "a": "Wohnung",
+            "why": "الكلمة الناقصة «Wohnung» تعني «شقة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Ich bin neu im ___.",
+            "a": "Kurs",
+            "why": "الكلمة الناقصة «Kurs» تعني «الدورة» — تذكر صيغتها في السياق."
           }
         ],
         "interleavedWith": [
@@ -165,6 +185,16 @@
             "q": "Ich ___ die Nachrichten gelesen. (haben)",
             "a": "habe",
             "why": "habe gelesen — Partizip في آخر الجملة!"
+          },
+          {
+            "q": "Wir ___ am Sonntag zusammen.",
+            "a": "frühstücken",
+            "why": "الكلمة الناقصة «frühstücken» تعني «يتناول الفطور» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Ich bin heute zu Hause ___.",
+            "a": "geblieben",
+            "why": "الكلمة الناقصة «geblieben» تعني «يبقى» — تذكر صيغتها في السياق."
           }
         ],
         "interleavedWith": [
@@ -207,6 +237,26 @@
             "q": "~~Es ist kälter dann gestern.~~",
             "a": "Es ist kälter als gestern.",
             "why": "المقارنة: als للمختلف (وليس dann!) — so…wie للمتساوي!"
+          },
+          {
+            "q": "~~Mein Vater trägt eine brille.~~",
+            "a": "Mein Vater trägt eine Brille.",
+            "why": "الخطأ في «brille»! الصواب «Brille» — راجع القاعدة (النظارة)."
+          },
+          {
+            "q": "~~Das ist mein schlüssel.~~",
+            "a": "Das ist mein Schlüssel.",
+            "why": "الخطأ في «schlüssel»! الصواب «Schlüssel» — راجع القاعدة (المفتاح)."
+          },
+          {
+            "q": "~~Das ist eine frage.~~",
+            "a": "Das ist eine Frage.",
+            "why": "الخطأ في «frage»! الصواب «Frage» — راجع القاعدة (السؤال)."
+          },
+          {
+            "q": "~~danke! — Bitte!~~",
+            "a": "Danke! — Bitte!",
+            "why": "الخطأ في «danke»! الصواب «Danke» — راجع القاعدة (شكراً)."
           }
         ],
         "interleavedWith": [
@@ -229,6 +279,26 @@
             "q": "قدّم خبر الأسبوع بالماضي (جملتان: habe gekauft + war/ist gefahren!)",
             "a": "Ich habe gestern eingekauft. Die Sachen waren neu! Und ich bin nach Hause gefahren.",
             "why": "habe eingekauft (عمل!) · waren (الم الماضي القصير!) · bin gefahren (حركة!)"
+          },
+          {
+            "q": "كوّن جملة فيها «der Montag» («الاثنين») ثم تحدّث بها.",
+            "a": "Am Montag habe ich Kurs.",
+            "why": "استعمل «der Montag» («الاثنين») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Kurs» («الدورة») ثم تحدّث بها.",
+            "a": "Ich bin neu im Kurs.",
+            "why": "استعمل «der Kurs» («الدورة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Schwester» («الأخت») ثم تحدّث بها.",
+            "a": "Das ist die Schwester.",
+            "why": "استعمل «die Schwester» («الأخت») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Bruder» («الأخ») ثم تحدّث بها.",
+            "a": "Das ist der Bruder.",
+            "why": "استعمل «der Bruder» («الأخ») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
           }
         ],
         "interleavedWith": [
@@ -238,6 +308,76 @@
           "bruder"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "sache"
+        ],
+        "items": [
+          {
+            "audioId": "word-blog",
+            "speakText": "der Blog.",
+            "q": "استمع: أي كلمة سمعت؟",
+            "choices": [
+              "der Blog",
+              "eigen"
+            ],
+            "a": "der Blog",
+            "why": "الكلمة المسموعة «der Blog» تعني «مدونة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-eigen",
+            "speakText": "eigen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "eigen",
+              "der Blog"
+            ],
+            "a": "eigen",
+            "why": "الكلمة المسموعة «eigen» تعني «خاص (له وحده!)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-sache",
+            "speakText": "die Sache.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "شيء",
+              "مدونة",
+              "خاص (له وحده!)"
+            ],
+            "a": "شيء",
+            "why": "الصوت يقول «die Sache» — معناها «شيء». ركّز على الصوت لا على الشكل!"
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "wenigstens"
+        ],
+        "items": [
+          {
+            "audioId": "word-blog",
+            "speakText": "der Blog.",
+            "a": "der Blog",
+            "why": "اكتب ما تسمعه حرفياً: «der Blog» تعني «مدونة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-eigen",
+            "speakText": "eigen.",
+            "a": "eigen",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «eigen» («خاص (له وحده!)»)."
+          },
+          {
+            "audioId": "word-wenigstens",
+            "speakText": "wenigstens.",
+            "a": "wenigstens",
+            "why": "اكتب المسموع بدقة: wenigstens — ركّز على نهاية الكلمة!"
+          }
+        ]
       }
     ],
     "communicativeTask": {
@@ -306,6 +446,14 @@
               "Das Wetter ist gestern kalt."
             ],
             "why": "الم الماضي القصير: war!"
+          },
+          {
+            "q": "«مدونة»؟",
+            "a": "der Blog"
+          },
+          {
+            "q": "«خاص (له وحده!)»؟",
+            "a": "eigen"
           }
         ],
         "passingScore": 0.75
@@ -351,6 +499,14 @@
               "Er ist früh aufstehen."
             ],
             "why": "التغيّر: ist aufgestanden (المنفصل!)."
+          },
+          {
+            "q": "«مدونة»؟",
+            "a": "der Blog"
+          },
+          {
+            "q": "«خاص (له وحده!)»؟",
+            "a": "eigen"
           }
         ],
         "passingScore": 0.75
@@ -396,6 +552,14 @@
               "Ich habe die Nachrichten lesen."
             ],
             "why": "lesen عمل: haben + gelesen!"
+          },
+          {
+            "q": "«مدونة»؟",
+            "a": "der Blog"
+          },
+          {
+            "q": "«خاص (له وحده!)»؟",
+            "a": "eigen"
           }
         ],
         "passingScore": 0.75
@@ -453,7 +617,7 @@
           "de": "~~Es ist kälter dann gestern.~~ · ~~Es ist kalt als gestern.~~",
           "ar": "المقارنة: als لا dann"
         },
-        "whyArabicSpeakerFails": "العربية تقول «أبرد من» بحرف جر واحد (من!) فتُترجمها بـdann — والألمانية: الدرجة الثانية +er/‑r + als للمختلف (kälter als gestern!) وso…wie للمتساوي (خريطة التداخل 10‑ي).",
+        "whyArabicSpeakerFails": "العربية تقول «أبرد من» بحرف جر واحد (من!) فتُترجمها بـdann — والألمانية: الدرجة الثانية +البادئة الملتصقة/‑r + als للمختلف (kälter als gestern!) وso…wie للمتساوي (خريطة التداخل 10‑ي).",
         "correct": {
           "de": "Es ist kälter als gestern. · Es ist so kalt wie gestern.",
           "ar": "أبرد من أمس · بارد كأمس"

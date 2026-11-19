@@ -40,7 +40,7 @@
   "einstieg": {
     "guidedRetrieval": [
       "من U4: Übermorgen ist das Fest! (مستقبل) — واليوم الماضي: Die Party war gut! (كانت!)",
-      "من A1-U10: gestern + Perfekt (habe gemacht!) — واليوم الماضي القصير: war (كلمة واحدة!)"
+      "من A1-U10: gestern + الماضي التام (habe gemacht!) — واليوم الماضي القصير: war (كلمة واحدة!)"
     ],
     "pretestItems": [
       {
@@ -131,6 +131,14 @@
           {
             "a": "Radio",
             "q": "Das ___ spielt Musik. (Radio)"
+          },
+          {
+            "q": "«فرقة موسيقية»؟",
+            "a": "die Band"
+          },
+          {
+            "q": "«آلة موسيقية»؟",
+            "a": "das Instrument"
           }
         ],
         "passingScore": 0.75
@@ -152,6 +160,14 @@
           {
             "a": "kostenlos",
             "q": "Das Konzert ist ___. (kostenlos)"
+          },
+          {
+            "q": "«فرقة موسيقية»؟",
+            "a": "die Band"
+          },
+          {
+            "q": "«آلة موسيقية»؟",
+            "a": "das Instrument"
           }
         ],
         "passingScore": 0.75
@@ -173,6 +189,14 @@
           {
             "a": "Plakat",
             "q": "Das ___ ist bunt. (Plakat)"
+          },
+          {
+            "q": "«فرقة موسيقية»؟",
+            "a": "die Band"
+          },
+          {
+            "q": "«آلة موسيقية»؟",
+            "a": "das Instrument"
           }
         ],
         "passingScore": 0.75
@@ -222,7 +246,7 @@
           },
           {
             "a": "packt",
-            "q": "هو يحزم الحقيبة: Er ___ den Koffer. (packen)",
+            "q": "هو يحزم الحقيبة: البادئة الملتصقة ___ den Koffer. (packen)",
             "why": "Er packt den Koffer! (هو يحزم الحقيبة!) — er ← packt + مفعول!"
           },
           {
@@ -341,6 +365,96 @@
           }
         ],
         "type": "speaking"
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "drueben"
+        ],
+        "items": [
+          {
+            "audioId": "word-band",
+            "speakText": "die Band.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "فرقة موسيقية",
+              "آلة موسيقية",
+              "مذياع"
+            ],
+            "a": "فرقة موسيقية",
+            "why": "الصوت يقول «die Band» — معناها «فرقة موسيقية». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-instrument",
+            "speakText": "das Instrument.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "das Instrument",
+              "die Band",
+              "das Radio"
+            ],
+            "a": "das Instrument",
+            "why": "الكلمة المسموعة «das Instrument» تعني «آلة موسيقية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-radio",
+            "speakText": "das Radio.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "مذياع",
+              "فرقة موسيقية",
+              "آلة موسيقية"
+            ],
+            "a": "مذياع",
+            "why": "الصوت يقول «das Radio» — معناها «مذياع». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-drueben",
+            "speakText": "drüben.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "drüben",
+              "die Band",
+              "das Instrument"
+            ],
+            "a": "drüben",
+            "why": "الكلمة المسموعة «drüben» تعني «هناك (في الجهة المقابلة)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "drinnen"
+        ],
+        "items": [
+          {
+            "audioId": "word-raetsel",
+            "speakText": "das Rätsel.",
+            "a": "das Rätsel",
+            "why": "اكتب ما تسمعه حرفياً: «das Rätsel» تعني «لغز». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ball",
+            "speakText": "der Ball.",
+            "a": "der Ball",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Ball» («كرة»)."
+          },
+          {
+            "audioId": "word-plakat",
+            "speakText": "das Plakat.",
+            "a": "das Plakat",
+            "why": "اكتب المسموع بدقة: das Plakat — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-drinnen",
+            "speakText": "drinnen.",
+            "a": "drinnen",
+            "why": "اكتب ما تسمعه حرفياً: «drinnen» تعني «في الداخل». انتبه للحروف الكبيرة!"
+          }
+        ]
       }
     ]
   },

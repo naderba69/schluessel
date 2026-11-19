@@ -623,7 +623,7 @@ describe("D115 — أدوات القياس", () => {
     expect(r.practice.map((i) => i.code).sort()).toEqual([
       ...Array(6).fill("e-upgrade-item"), "e-upgrade-front", "e-upgrade-practice-audio", "e-upgrade-practice-audio", "e-upgrade-practice-size", "e-upgrade-practice-types",
     ].sort());
-    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/: dativ، ge، geeinpackt، gefotografiert، gehabt، gewesen$/); // hattest مغلقة منذ D185 (N-112)
+    expect(r.practice.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/: dativ، ge، geeinpackt، gefotografiert، gehabt$/); // hattest مغلقة منذ D185 (N-112) · gewesen صارت معروفة بـforms في D565 (ن + «gehabt»: haben بلا بطاقة)
     expect(r.quiz.map((i) => i.code).sort()).toEqual(["e-upgrade-front", "e-upgrade-quiz-size", "e-upgrade-quiz-size", "e-upgrade-quiz-size"]);
     expect(r.quiz.find((i) => i.code === "e-upgrade-front")?.message).toMatch(/: ge، welchem$/);
     expect(r.coverage.map((i) => i.code)).toEqual(["e-upgrade-word-unpracticed"]);

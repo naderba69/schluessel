@@ -1,463 +1,632 @@
 {
- "audioManifestRefs": [
-  "word-luxemburger",
-  "word-luxemburgisch",
-  "word-deutsche"
- ],
- "canDoDaily": [
-  "يعرّف بنفسه (لوكسمبورغي! + ألمانية!)",
-  "يميز (الاسم-الصفة-يُعرب! + der-Deutscher/die-Deutsche!) ويسترجع (dass/wenn/würde!)"
- ],
- "curriculumRef": {
-  "goetheWordListOverlap": [
-   "luxemburger",
-   "luxemburgisch",
-   "deutsche"
+  "audioManifestRefs": [
+    "word-luxemburger",
+    "word-luxemburgisch",
+    "word-deutsche"
   ],
-  "netzwerkChapter": "Netzwerk neu A2 — تباعد مُعلن: الموضوع من الدستور (السفر والبلدان) والفصل يُطابَق عند البناء (D368)"
- },
- "day": 5,
- "einstieg": {
-  "guidedRetrieval": [
-   "من d4: Ein Gramm Salz ist genug und ich kaufe ein Kilogramm Äpfel! (غرام-ملح-يكفي-وأشتري-كيلو-تفاح!) — المقاييس-الدقيقة تُوزن اليوم بهوية-لوكسمبورغ!",
-   "واليوم: لوكسمبورغ! Ich bin Luxemburger! (أنا-لوكسمبورغي!) + Ich spreche luxemburgisch! (أتكلم-اللوكسمبورغية!) + Ich bin Deutsche! (أنا-ألمانية!) + Er ist Deutscher und sie ist Deutsche! + Ich weiß, dass Luxemburg schön ist! + Wenn ich komme, ist die Schule offen! + Ich würde gern anders sein! + Ein Gramm Salz ist genug und ich kaufe ein Kilogramm Äpfel! — بهوية ولغة!"
-  ],
-  "pretestItems": [
-   {
-    "answer": "Luxemburger",
-    "choices": [
-     "Luxemburger",
-     "Deutsche",
-     "Deutscher"
-    ],
-    "prompt": {
-     "ar": "«لوكسمبورغي» — كيف تقول؟"
-    },
-    "revealNextSession": true
-   },
-   {
-    "answer": "Deutsche",
-    "choices": [
-     "Deutsche",
-     "Luxemburger",
-     "Deutscher"
-    ],
-    "prompt": {
-     "ar": "«ألمانية» — كيف تقول؟"
-    },
-    "revealNextSession": true
-   }
-  ]
- },
- "gReferences": {
-  "duden": [
-   "https://www.duden.de/rechtschreibung/luxemburgisch",
-   "https://www.duden.de/rechtschreibung/Luxemburger_Einwohner",
-   "https://www.duden.de/rechtschreibung/Deutsche_Frau"
-  ],
-  "goethe": [
-   "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
-  ],
-  "wiktionary": []
- },
- "id": "a2-u13-d5",
- "imageManifestRefs": [],
- "kind": "content",
- "level": "A2",
- "praesentation": {
-  "dualCodingRequired": true,
-  "grammarArsenalIds": [
-   "ars-dass-satz",
-   "ars-wuerde"
-  ],
-  "riskFlagsShown": [
-   "needs-ein"
-  ],
-  "storySentenceIds": [],
-  "wordIds": [
-   "luxemburger",
-   "luxemburgisch",
-   "deutsche"
-  ]
- },
- "quiz": {
-  "variants": [
-   {
-    "items": [
-     {
-      "a": "Ich bin Luxemburger!",
-      "q": "«أنا لوكسمبورغي!»؟"
-     },
-     {
-      "a": "Ich spreche luxemburgisch!",
-      "q": "«أتكلم اللوكسمبورغية!»؟"
-     },
-     {
-      "a": "Ich bin Deutsche!",
-      "q": "«أنا ألمانية!»؟"
-     },
-     {
-      "a": "Er ist Deutscher und sie ist Deutsche!",
-      "q": "«هو ألماني وهي ألمانية!»؟"
-     }
-    ],
-    "passingScore": 0.75
-   },
-   {
-    "items": [
-     {
-      "a": "Ich weiß, dass Luxemburg schön ist!",
-      "q": "«أعرف أن لوكسمبورغ جميلة!»؟"
-     },
-     {
-      "a": "Wenn ich komme, ist die Schule offen!",
-      "q": "«لو آتي المدرسة مفتوحة!»؟"
-     },
-     {
-      "a": "Ich würde gern anders sein!",
-      "q": "«أودّ لو أكون مختلفاً!»؟"
-     },
-     {
-      "a": "Ein Gramm Salz ist genug und ich kaufe ein Kilogramm Äpfel!",
-      "q": "«غرام ملح يكفي وأشتري كيلو تفاح!»؟"
-     }
-    ],
-    "passingScore": 0.75
-   },
-   {
-    "items": [
-     {
-      "a": "Ich bin Luxemburger! Ich spreche luxemburgisch!",
-      "q": "«أنا لوكسمبورغي وأتكلم اللوكسمبورغية!»؟"
-     },
-     {
-      "a": "Ich bin Deutsche! Er ist Deutscher und sie ist Deutsche!",
-      "q": "«أنا ألمانية! هو ألماني وهي ألمانية!»؟"
-     },
-     {
-      "a": "Ich weiß, dass Luxemburg schön ist!",
-      "q": "«أعرف أن لوكسمبورغ جميلة!»؟"
-     },
-     {
-      "a": "Ein Gramm Salz ist genug und ich kaufe ein Kilogramm Äpfel!",
-      "q": "«غرام ملح يكفي وأشتري كيلو تفاح!»؟"
-     }
-    ],
-    "passingScore": 0.75
-   }
-  ]
- },
- "schemaVersion": "1.0.0",
- "slider": {
-  "max": 100,
-  "min": 0,
-  "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
-  "questionDe": "Wie viel Prozent wirst du schaffen?"
- },
- "uebung": {
-  "communicativeTask": {
-   "goal": {
-    "ar": "يعرّف بنفسه (لوكسمبورغي! + ألمانية!)",
-    "de": "Ich bin Luxemburger! Ich spreche luxemburgisch!"
-   },
-   "situation": {
-    "ar": "يوم-الهوية الأوروبي",
-    "de": "Er ist Deutscher und sie ist Deutsche!"
-   },
-   "successCriteria": [
-    "يروي 8 جمل (هوية! + لغة! + جنسية! + تذكير-تأنيث! + محتوى! + شرط! + حلم! + استرجاع-d4!)",
-    "يستخدم الجديد (Luxemburger/luxemburgisch/Deutsche!)",
+  "canDoDaily": [
+    "يعرّف بنفسه (لوكسمبورغي! + ألمانية!)",
     "يميز (الاسم-الصفة-يُعرب! + der-Deutscher/die-Deutsche!) ويسترجع (dass/wenn/würde!)"
-   ]
-  },
-  "stations": [
-   {
-    "explanationRequired": true,
-    "interleavedWith": [
-     "schwester",
-     "bruder",
-     "fussball"
-    ],
-    "items": [
-     {
-      "pairs": [
-       {
-        "ar": "اللوكسمبورغي",
-        "de": "Luxemburger"
-       },
-       {
-        "ar": "الألمانية",
-        "de": "Deutsche"
-       },
-       {
-        "ar": "لوكسمبورغي",
-        "de": "luxemburgisch"
-       },
-       {
-        "ar": "ألماني",
-        "de": "deutsch"
-       },
-       {
-        "ar": "مختلف",
-        "de": "anders"
-       }
-      ],
-      "why": "هويتي: Luxemburger اللوكسمبورغي! · Deutsche الألمانية! · luxemburgisch لوكسمبورغي! · deutsch ألماني! · anders مختلف! — الاسم-الصفة-يُعرب!"
-     },
-     {
-      "pairs": [
-       {
-        "ar": "أنا أكون",
-        "de": "bin"
-       },
-       {
-        "ar": "هو يكون",
-        "de": "ist"
-       },
-       {
-        "ar": "أتكلم",
-        "de": "spreche"
-       },
-       {
-        "ar": "آتي",
-        "de": "komme"
-       },
-       {
-        "ar": "أتعلم",
-        "de": "lerne"
-       }
-      ],
-      "why": "أفعال-الهوية: bin أنا-أكون! · ist هو-يكون! · spreche أتكلم! · komme آتي! · lerne أتعلم!"
-     },
-     {
-      "pairs": [
-       {
-        "ar": "الغرام",
-        "de": "Gramm"
-       },
-       {
-        "ar": "الكيلوغرام",
-        "de": "Kilogramm"
-       },
-       {
-        "ar": "الملح",
-        "de": "Salz"
-       },
-       {
-        "ar": "السكر",
-        "de": "Zucker"
-       },
-       {
-        "ar": "الزبدة",
-        "de": "Butter"
-       }
-      ],
-      "why": "استرجاع-d4: Gramm الغرام! · Kilogramm الكيلوغرام! · Salz الملح! · Zucker السكر! · Butter الزبدة!"
-     }
-    ],
-    "type": "match"
-   },
-   {
-    "explanationRequired": true,
-    "hints": [
-     "الجديد (Luxemburger/luxemburgisch/Deutsche!)",
-     "الاسم-الصفة (Deutscher-مذكر! + Deutsche-مؤنث!)",
-     "الاسترجاع (dass/wenn/würde!)"
-    ],
-    "interleavedWith": [
-     "gut",
-     "neu",
-     "schoen"
-    ],
-    "type": "gap-fill",
-    "items": [
-     {
-      "a": "Luxemburger",
-      "q": "Ich bin ___! (Luxemburger!)",
-      "why": "لوكسمبورغي! — bin-هوية!"
-     },
-     {
-      "a": "luxemburgisch",
-      "q": "Ich spreche ___! (luxemburgisch!)",
-      "why": "اللوكسمبورغية! — spreche-لغة!"
-     },
-     {
-      "a": "Deutsche",
-      "q": "Ich bin ___! (Deutsche!)",
-      "why": "ألمانية! — bin-جنسية!"
-     },
-     {
-      "a": "Deutscher",
-      "q": "Er ist ___ und sie ist Deutsche! (Deutscher!)",
-      "why": "ألماني! — er-مذكر (Deutscher-بلا-مدخل-جذع!)!"
-     },
-     {
-      "a": "dass",
-      "q": "Ich weiß, ___ Luxemburg schön ist! (dass!)",
-      "why": "أعرف-أن! — dass-محتوى!"
-     },
-     {
-      "a": "komme",
-      "q": "Wenn ich ___, ist die Schule offen! (komme!)",
-      "why": "آتي! — wenn-شرط!"
-     },
-     {
-      "a": "anders",
-      "q": "Ich würde gern ___ sein! (anders!)",
-      "why": "مختلفاً! — würde-sein (أودّ-أكون!)."
-     },
-     {
-      "a": "Gramm",
-      "q": "Ein ___ Salz ist genug und ich kaufe ein Kilogramm Äpfel! (Gramm!)",
-      "why": "غرام! — Ein-Salz (استرجاع-d4!)."
-     }
-    ]
-   },
-   {
-    "explanationRequired": true,
-    "hints": [
-     "الخطأ كلمة واحدة — الباقي صحيح",
-     "التصريف (bist/sprechst!)",
-     "التذكير-التأنيث (Deutscher/Deutsche!)"
-    ],
-    "interleavedWith": [
-     "gut",
-     "neu",
-     "schoen"
-    ],
-    "type": "error-hunt",
-    "items": [
-     {
-      "a": "Ich bin Luxemburger!",
-      "q": "~~Ich bist Luxemburger!~~",
-      "why": "المتكلم-يكون (bin!) — bist-مخاطب خطأ!"
-     },
-     {
-      "a": "Ich spreche luxemburgisch!",
-      "q": "~~Ich sprechst luxemburgisch!~~",
-      "why": "المتكلم-يتكلم (spreche!) — sprechst-مخاطب خطأ!"
-     },
-     {
-      "a": "Ich bin Deutsche!",
-      "q": "~~Ich bin Deutsch!~~",
-      "why": "المؤنث-تُعرب (Deutsche!) — Deutsch-لغة خطأ!"
-     },
-     {
-      "a": "Wenn ich komme, ist die Schule offen!",
-      "q": "~~Wenn ich komme, die Schule ist offen!~~",
-      "why": "V2-بعد-الفاصلة (ist-die!) — die-ist خطأ!"
-     },
-     {
-      "a": "Ich weiß, dass Luxemburg schön ist!",
-      "q": "~~Ich weiß, dass Luxemburg schön sind!~~",
-      "why": "المفرد-يكون (ist!) — sind-جمع خطأ!"
-     },
-     {
-      "a": "Er ist Deutscher und sie ist Deutsche!",
-      "q": "~~Er ist Deutsche und sie ist Deutsche!~~",
-      "why": "المذكر-يُذكَّر (Deutscher!) — Deutsche-للمذكر خطأ!"
-     }
-    ]
-   },
-   {
-    "explanationRequired": true,
-    "hints": [
-     "ابدأ بهويتك (bin-Luxemburger!) وانهِ بلغتك (spreche-luxemburgisch!)",
-     "8 جمل: هوية! + لغة! + جنسية! + تذكير-تأنيث! + محتوى! + شرط! + حلم! + استرجاع-d4!"
-    ],
-    "interleavedWith": [
-     "spielen",
-     "gut",
-     "gern"
-    ],
-    "type": "speaking",
-    "items": [
-     {
-      "a": "Ich bin Luxemburger! Ich spreche luxemburgisch! Ich bin Deutsche! Er ist Deutscher und sie ist Deutsche! Ich weiß, dass Luxemburg schön ist! Wenn ich komme, ist die Schule offen! Ich würde gern anders sein! Ein Gramm Salz ist genug und ich kaufe ein Kilogramm Äpfel!",
-      "q": "احكِ هويتك (سجّل): 8 جمل — أنا-لوكسمبورغي! + أتكلم-اللوكسمبورغية! + أنا-ألمانية! + هو-ألماني-وهي-ألمانية! + أعرف-أن-لوكسمبورغ-جميلة! + لو-آتي-المدرسة-مفتوحة! + أودّ-لو-أكون-مختلفاً! + غرام-ملح-يكفي-وأشتري-كيلو-تفاح!",
-      "why": "قارن حكايتك: Luxemburger! + luxemburgisch! + Deutsche! + Deutscher! + dass! + wenn! + würde! + Gramm!"
-     },
-     {
-      "a": "Ich bin Luxemburger! Ich spreche luxemburgisch!",
-      "q": "جهّز للهوية (سجّل): 2 جمل — أنا-لوكسمبورغي! + أتكلم-اللوكسمبورغية!",
-      "why": "قارن تجهيزك: Luxemburger! + luxemburgisch!"
-     }
-    ]
-   }
-  ]
- },
- "unit": 13,
- "usedArsenalIds": [
-  "ars-dass-satz",
-  "ars-wuerde"
- ],
- "warmup": {
-  "cardIds": [
-   "gramm",
-   "kilogramm",
-   "salz"
-  ]
- },
- "ziel": {
-  "ar": "لوكسمبورغي-وفخور: لوكسمبورغي! + اللوكسمبورغية! + ألمانية! — والاسم-الصفة (يُعرب-مذكر-مؤنث!)",
-  "de": "Ich bin Luxemburger! — Er ist Deutscher und sie ist Deutsche!"
- },
- "zusammenfassung": {
-  "srsBundleWordIds": [
-   "luxemburger",
-   "luxemburgisch",
-   "deutsche"
   ],
-  "summary": {
-   "ar": "لوكسمبورغي-وفخور: أنا لوكسمبورغي. أتكلم اللوكسمبورغية. أنا ألمانية. هو ألماني وهي ألمانية. أعرف أن لوكسمبورغ جميلة. لو آتي المدرسة مفتوحة. أودّ لو أكون مختلفاً. غرام ملح يكفي وأشتري كيلو تفاح. النظام: الاسم-الصفة-يُعرب (der-Deutscher/die-Deutsche!) + المحتوى (dass-آخراً!) + الشرط (wenn-V2!) + الحلم (würde!).",
-   "de": "Ich bin Luxemburger! Ich spreche luxemburgisch! Ich bin Deutsche! Er ist Deutscher und sie ist Deutsche! Ich weiß, dass Luxemburg schön ist! Wenn ich komme, ist die Schule offen! Ich würde gern anders sein! Ein Gramm Salz ist genug und ich kaufe ein Kilogramm Äpfel!"
+  "curriculumRef": {
+    "goetheWordListOverlap": [
+      "luxemburger",
+      "luxemburgisch",
+      "deutsche"
+    ],
+    "netzwerkChapter": "Netzwerk neu A2 — تباعد مُعلن: الموضوع من الدستور (السفر والبلدان) والفصل يُطابَق عند البناء (D368)"
   },
-  "warningCards": [
-   {
-    "commonError": {
-     "ar": "مخاطب-للمتكلم",
-     "de": "~~Ich bist Luxemburger!~~"
+  "day": 5,
+  "einstieg": {
+    "guidedRetrieval": [
+      "من d4: Ein Gramm Salz ist genug und ich kaufe ein Kilogramm Äpfel! (غرام-ملح-يكفي-وأشتري-كيلو-تفاح!) — المقاييس-الدقيقة تُوزن اليوم بهوية-لوكسمبورغ!",
+      "واليوم: لوكسمبورغ! Ich bin Luxemburger! (أنا-لوكسمبورغي!) + Ich spreche luxemburgisch! (أتكلم-اللوكسمبورغية!) + Ich bin Deutsche! (أنا-ألمانية!) + البادئة الملتصقة ist Deutscher und sie ist Deutsche! + Ich weiß, dass Luxemburg schön ist! + Wenn ich komme, ist die Schule offen! + Ich würde gern anders sein! + Ein Gramm Salz ist genug und ich kaufe ein Kilogramm Äpfel! — بهوية ولغة!"
+    ],
+    "pretestItems": [
+      {
+        "answer": "Luxemburger",
+        "choices": [
+          "Luxemburger",
+          "Deutsche",
+          "Deutscher"
+        ],
+        "prompt": {
+          "ar": "«لوكسمبورغي» — كيف تقول؟"
+        },
+        "revealNextSession": true
+      },
+      {
+        "answer": "Deutsche",
+        "choices": [
+          "Deutsche",
+          "Luxemburger",
+          "Deutscher"
+        ],
+        "prompt": {
+          "ar": "«ألمانية» — كيف تقول؟"
+        },
+        "revealNextSession": true
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/luxemburgisch",
+      "https://www.duden.de/rechtschreibung/Luxemburger_Einwohner",
+      "https://www.duden.de/rechtschreibung/Deutsche_Frau"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ],
+    "wiktionary": []
+  },
+  "id": "a2-u13-d5",
+  "imageManifestRefs": [],
+  "kind": "content",
+  "level": "A2",
+  "praesentation": {
+    "dualCodingRequired": true,
+    "grammarArsenalIds": [
+      "ars-dass-satz",
+      "ars-wuerde"
+    ],
+    "riskFlagsShown": [
+      "needs-ein"
+    ],
+    "storySentenceIds": [],
+    "wordIds": [
+      "luxemburger",
+      "luxemburgisch",
+      "deutsche"
+    ]
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "a": "Ich bin Luxemburger!",
+            "q": "«أنا لوكسمبورغي!»؟"
+          },
+          {
+            "a": "Ich spreche luxemburgisch!",
+            "q": "«أتكلم اللوكسمبورغية!»؟"
+          },
+          {
+            "a": "Ich bin Deutsche!",
+            "q": "«أنا ألمانية!»؟"
+          },
+          {
+            "a": "Er ist Deutscher und sie ist Deutsche!",
+            "q": "«هو ألماني وهي ألمانية!»؟"
+          },
+          {
+            "q": "«اللوكسمبورغي»؟",
+            "a": "der Luxemburger"
+          },
+          {
+            "q": "«لوكسمبورغي»؟",
+            "a": "luxemburgisch"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "Ich weiß, dass Luxemburg schön ist!",
+            "q": "«أعرف أن لوكسمبورغ جميلة!»؟"
+          },
+          {
+            "a": "Wenn ich komme, ist die Schule offen!",
+            "q": "«لو آتي المدرسة مفتوحة!»؟"
+          },
+          {
+            "a": "Ich würde gern anders sein!",
+            "q": "«أودّ لو أكون مختلفاً!»؟"
+          },
+          {
+            "a": "Ein Gramm Salz ist genug und ich kaufe ein Kilogramm Äpfel!",
+            "q": "«غرام ملح يكفي وأشتري كيلو تفاح!»؟"
+          },
+          {
+            "q": "«اللوكسمبورغي»؟",
+            "a": "der Luxemburger"
+          },
+          {
+            "q": "«لوكسمبورغي»؟",
+            "a": "luxemburgisch"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "Ich bin Luxemburger! Ich spreche luxemburgisch!",
+            "q": "«أنا لوكسمبورغي وأتكلم اللوكسمبورغية!»؟"
+          },
+          {
+            "a": "Ich bin Deutsche! Er ist Deutscher und sie ist Deutsche!",
+            "q": "«أنا ألمانية! هو ألماني وهي ألمانية!»؟"
+          },
+          {
+            "a": "Ich weiß, dass Luxemburg schön ist!",
+            "q": "«أعرف أن لوكسمبورغ جميلة!»؟"
+          },
+          {
+            "a": "Ein Gramm Salz ist genug und ich kaufe ein Kilogramm Äpfel!",
+            "q": "«غرام ملح يكفي وأشتري كيلو تفاح!»؟"
+          },
+          {
+            "q": "«اللوكسمبورغي»؟",
+            "a": "der Luxemburger"
+          },
+          {
+            "q": "«لوكسمبورغي»؟",
+            "a": "luxemburgisch"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "slider": {
+    "max": 100,
+    "min": 0,
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "questionDe": "Wie viel Prozent wirst du schaffen?"
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "ar": "يعرّف بنفسه (لوكسمبورغي! + ألمانية!)",
+        "de": "Ich bin Luxemburger! Ich spreche luxemburgisch!"
+      },
+      "situation": {
+        "ar": "يوم-الهوية الأوروبي",
+        "de": "Er ist Deutscher und sie ist Deutsche!"
+      },
+      "successCriteria": [
+        "يروي 8 جمل (هوية! + لغة! + جنسية! + تذكير-تأنيث! + محتوى! + شرط! + حلم! + استرجاع-d4!)",
+        "يستخدم الجديد (Luxemburger/luxemburgisch/Deutsche!)",
+        "يميز (الاسم-الصفة-يُعرب! + der-Deutscher/die-Deutsche!) ويسترجع (dass/wenn/würde!)"
+      ]
     },
-    "correct": {
-     "ar": "أنا لوكسمبورغي!",
-     "de": "Ich bin Luxemburger!"
+    "stations": [
+      {
+        "explanationRequired": true,
+        "interleavedWith": [
+          "schwester",
+          "bruder",
+          "fussball"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "ar": "اللوكسمبورغي",
+                "de": "Luxemburger"
+              },
+              {
+                "ar": "الألمانية",
+                "de": "Deutsche"
+              },
+              {
+                "ar": "لوكسمبورغي",
+                "de": "luxemburgisch"
+              },
+              {
+                "ar": "ألماني",
+                "de": "deutsch"
+              },
+              {
+                "ar": "مختلف",
+                "de": "anders"
+              }
+            ],
+            "why": "هويتي: Luxemburger اللوكسمبورغي! · Deutsche الألمانية! · luxemburgisch لوكسمبورغي! · deutsch ألماني! · anders مختلف! — الاسم-الصفة-يُعرب!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "أنا أكون",
+                "de": "bin"
+              },
+              {
+                "ar": "هو يكون",
+                "de": "ist"
+              },
+              {
+                "ar": "أتكلم",
+                "de": "spreche"
+              },
+              {
+                "ar": "آتي",
+                "de": "komme"
+              },
+              {
+                "ar": "أتعلم",
+                "de": "lerne"
+              }
+            ],
+            "why": "أفعال-الهوية: bin أنا-أكون! · ist هو-يكون! · spreche أتكلم! · komme آتي! · lerne أتعلم!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الغرام",
+                "de": "Gramm"
+              },
+              {
+                "ar": "الكيلوغرام",
+                "de": "Kilogramm"
+              },
+              {
+                "ar": "الملح",
+                "de": "Salz"
+              },
+              {
+                "ar": "السكر",
+                "de": "Zucker"
+              },
+              {
+                "ar": "الزبدة",
+                "de": "Butter"
+              }
+            ],
+            "why": "استرجاع-d4: Gramm الغرام! · Kilogramm الكيلوغرام! · Salz الملح! · Zucker السكر! · Butter الزبدة!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الأخت",
+                "de": "die Schwester"
+              },
+              {
+                "ar": "الأخ",
+                "de": "der Bruder"
+              },
+              {
+                "ar": "كرة القدم",
+                "de": "der Fußball"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Schwester = «الأخت» · der Bruder = «الأخ» · der Fußball = «كرة القدم»"
+          }
+        ],
+        "type": "match"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الجديد (Luxemburger/luxemburgisch/Deutsche!)",
+          "الاسم-الصفة (Deutscher-مذكر! + Deutsche-مؤنث!)",
+          "الاسترجاع (dass/wenn/würde!)"
+        ],
+        "interleavedWith": [
+          "gut",
+          "neu"
+        ],
+        "type": "gap-fill",
+        "items": [
+          {
+            "a": "Luxemburger",
+            "q": "Ich bin ___! (Luxemburger!)",
+            "why": "لوكسمبورغي! — bin-هوية!"
+          },
+          {
+            "a": "luxemburgisch",
+            "q": "Ich spreche ___! (luxemburgisch!)",
+            "why": "اللوكسمبورغية! — spreche-لغة!"
+          },
+          {
+            "a": "Deutsche",
+            "q": "Ich bin ___! (Deutsche!)",
+            "why": "ألمانية! — bin-جنسية!"
+          },
+          {
+            "a": "Deutscher",
+            "q": "Er ist ___ und sie ist Deutsche! (Deutscher!)",
+            "why": "ألماني! — er-مذكر (Deutscher-بلا-مدخل-جذع!)!"
+          },
+          {
+            "a": "dass",
+            "q": "Ich weiß, ___ Luxemburg schön ist! (dass!)",
+            "why": "أعرف-أن! — dass-محتوى!"
+          },
+          {
+            "a": "komme",
+            "q": "Wenn ich ___, ist die Schule offen! (komme!)",
+            "why": "آتي! — wenn-شرط!"
+          },
+          {
+            "a": "anders",
+            "q": "Ich würde gern ___ sein! (anders!)",
+            "why": "مختلفاً! — würde-sein (أودّ-أكون!)."
+          },
+          {
+            "a": "Gramm",
+            "q": "Ein ___ Salz ist genug und ich kaufe ein Kilogramm Äpfel! (Gramm!)",
+            "why": "غرام! — Ein-Salz (استرجاع-d4!)."
+          },
+          {
+            "q": "Wie geht's? — Danke, ___.",
+            "a": "gut",
+            "why": "الكلمة الناقصة «gut» تعني «جيّد» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Ich bin ___.",
+            "a": "neu",
+            "why": "الكلمة الناقصة «neu» تعني «جديد» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das Foto ist sehr ___.",
+            "a": "schön",
+            "why": "الكلمة الناقصة «schön» تعني «جميل/حسن» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الخطأ كلمة واحدة — الباقي صحيح",
+          "التصريف (bist/sprechst!)",
+          "التذكير-التأنيث (Deutscher/Deutsche!)"
+        ],
+        "interleavedWith": [
+          "gut",
+          "neu"
+        ],
+        "type": "error-hunt",
+        "items": [
+          {
+            "a": "Ich bin Luxemburger!",
+            "q": "~~Ich bist Luxemburger!~~",
+            "why": "المتكلم-يكون (bin!) — bist-مخاطب خطأ!"
+          },
+          {
+            "a": "Ich spreche luxemburgisch!",
+            "q": "~~Ich sprechst luxemburgisch!~~",
+            "why": "المتكلم-يتكلم (spreche!) — sprechst-مخاطب خطأ!"
+          },
+          {
+            "a": "Ich bin Deutsche!",
+            "q": "~~Ich bin Deutsch!~~",
+            "why": "المؤنث-تُعرب (Deutsche!) — Deutsch-لغة خطأ!"
+          },
+          {
+            "a": "Wenn ich komme, ist die Schule offen!",
+            "q": "~~Wenn ich komme, die Schule ist offen!~~",
+            "why": "V2-بعد-الفاصلة (ist-die!) — die-ist خطأ!"
+          },
+          {
+            "a": "Ich weiß, dass Luxemburg schön ist!",
+            "q": "~~Ich weiß, dass Luxemburg schön sind!~~",
+            "why": "المفرد-يكون (ist!) — sind-جمع خطأ!"
+          },
+          {
+            "a": "Er ist Deutscher und sie ist Deutsche!",
+            "q": "~~Er ist Deutsche und sie ist Deutsche!~~",
+            "why": "المذكر-يُذكَّر (Deutscher!) — Deutsche-للمذكر خطأ!"
+          },
+          {
+            "q": "~~Wie geht's? — Danke, Gut.~~",
+            "a": "Wie geht's? — Danke, gut.",
+            "why": "الخطأ في «Gut»! الصواب «gut» — راجع القاعدة (جيّد)."
+          },
+          {
+            "q": "~~Ich bin Neu.~~",
+            "a": "Ich bin neu.",
+            "why": "الخطأ في «Neu»! الصواب «neu» — راجع القاعدة (جديد)."
+          },
+          {
+            "q": "~~Das Foto ist sehr Schön.~~",
+            "a": "Das Foto ist sehr schön.",
+            "why": "الخطأ في «Schön»! الصواب «schön» — راجع القاعدة (جميل/حسن)."
+          }
+        ]
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "ابدأ بهويتك (bin-Luxemburger!) وانهِ بلغتك (spreche-luxemburgisch!)",
+          "8 جمل: هوية! + لغة! + جنسية! + تذكير-تأنيث! + محتوى! + شرط! + حلم! + استرجاع-d4!"
+        ],
+        "interleavedWith": [
+          "spielen",
+          "gut",
+          "gern"
+        ],
+        "type": "speaking",
+        "items": [
+          {
+            "a": "Ich bin Luxemburger! Ich spreche luxemburgisch! Ich bin Deutsche! Er ist Deutscher und sie ist Deutsche! Ich weiß, dass Luxemburg schön ist! Wenn ich komme, ist die Schule offen! Ich würde gern anders sein! Ein Gramm Salz ist genug und ich kaufe ein Kilogramm Äpfel!",
+            "q": "احكِ هويتك (سجّل): 8 جمل — أنا-لوكسمبورغي! + أتكلم-اللوكسمبورغية! + أنا-ألمانية! + هو-ألماني-وهي-ألمانية! + أعرف-أن-لوكسمبورغ-جميلة! + لو-آتي-المدرسة-مفتوحة! + أودّ-لو-أكون-مختلفاً! + غرام-ملح-يكفي-وأشتري-كيلو-تفاح!",
+            "why": "قارن حكايتك: Luxemburger! + luxemburgisch! + Deutsche! + Deutscher! + dass! + wenn! + würde! + Gramm!"
+          },
+          {
+            "a": "Ich bin Luxemburger! Ich spreche luxemburgisch!",
+            "q": "جهّز للهوية (سجّل): 2 جمل — أنا-لوكسمبورغي! + أتكلم-اللوكسمبورغية!",
+            "why": "قارن تجهيزك: Luxemburger! + luxemburgisch!"
+          },
+          {
+            "q": "كوّن جملة فيها «spielen» («يلعب») ثم تحدّث بها.",
+            "a": "Die Zwillinge spielen im Garten.",
+            "why": "استعمل «spielen» («يلعب») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «gut» («جيّد») ثم تحدّث بها.",
+            "a": "Wie geht's? — Danke, gut.",
+            "why": "استعمل «gut» («جيّد») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "schoen"
+        ],
+        "items": [
+          {
+            "audioId": "word-luxemburger",
+            "speakText": "der Luxemburger.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "اللوكسمبورغي",
+              "لوكسمبورغي",
+              "الألمانية"
+            ],
+            "a": "اللوكسمبورغي",
+            "why": "الصوت يقول «der Luxemburger» — معناها «اللوكسمبورغي». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-luxemburgisch",
+            "speakText": "luxemburgisch.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "luxemburgisch",
+              "der Luxemburger",
+              "die Deutsche"
+            ],
+            "a": "luxemburgisch",
+            "why": "الكلمة المسموعة «luxemburgisch» تعني «لوكسمبورغي». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-deutsche",
+            "speakText": "die Deutsche.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الألمانية",
+              "اللوكسمبورغي",
+              "لوكسمبورغي"
+            ],
+            "a": "الألمانية",
+            "why": "الصوت يقول «die Deutsche» — معناها «الألمانية». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-schoen",
+            "speakText": "schön.",
+            "q": "استمع: الكلمة المسترجَعة من درس سابق — ما هي؟",
+            "choices": [
+              "schön",
+              "der Luxemburger",
+              "luxemburgisch"
+            ],
+            "a": "schön",
+            "why": "الكلمة المسموعة «schön» تعني «جميل/حسن». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "kilogramm"
+        ],
+        "items": [
+          {
+            "audioId": "word-luxemburger",
+            "speakText": "der Luxemburger.",
+            "a": "der Luxemburger",
+            "why": "اكتب ما تسمعه حرفياً: «der Luxemburger» تعني «اللوكسمبورغي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-luxemburgisch",
+            "speakText": "luxemburgisch.",
+            "a": "luxemburgisch",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «luxemburgisch» («لوكسمبورغي»)."
+          },
+          {
+            "audioId": "word-deutsche",
+            "speakText": "die Deutsche.",
+            "a": "die Deutsche",
+            "why": "اكتب المسموع بدقة: die Deutsche — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-kilogramm",
+            "speakText": "das Kilogramm.",
+            "a": "das Kilogramm",
+            "why": "اكتب ما تسمعه حرفياً: «das Kilogramm» تعني «الكيلوغرام». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "unit": 13,
+  "usedArsenalIds": [
+    "ars-dass-satz",
+    "ars-wuerde"
+  ],
+  "warmup": {
+    "cardIds": [
+      "gramm",
+      "kilogramm",
+      "salz"
+    ]
+  },
+  "ziel": {
+    "ar": "لوكسمبورغي-وفخور: لوكسمبورغي! + اللوكسمبورغية! + ألمانية! — والاسم-الصفة (يُعرب-مذكر-مؤنث!)",
+    "de": "Ich bin Luxemburger! — Er ist Deutscher und sie ist Deutsche!"
+  },
+  "zusammenfassung": {
+    "srsBundleWordIds": [
+      "luxemburger",
+      "luxemburgisch",
+      "deutsche"
+    ],
+    "summary": {
+      "ar": "لوكسمبورغي-وفخور: أنا لوكسمبورغي. أتكلم اللوكسمبورغية. أنا ألمانية. هو ألماني وهي ألمانية. أعرف أن لوكسمبورغ جميلة. لو آتي المدرسة مفتوحة. أودّ لو أكون مختلفاً. غرام ملح يكفي وأشتري كيلو تفاح. النظام: الاسم-الصفة-يُعرب (der-Deutscher/die-Deutsche!) + المحتوى (dass-آخراً!) + الشرط (wenn-V2!) + الحلم (würde!).",
+      "de": "Ich bin Luxemburger! Ich spreche luxemburgisch! Ich bin Deutsche! Er ist Deutscher und sie ist Deutsche! Ich weiß, dass Luxemburg schön ist! Wenn ich komme, ist die Schule offen! Ich würde gern anders sein! Ein Gramm Salz ist genug und ich kaufe ein Kilogramm Äpfel!"
     },
-    "exercise": {
-     "a": "bin",
-     "q": "Ich ___ Luxemburger! (bin!)"
-    },
-    "whyArabicSpeakerFails": "المتكلم-يكون-bin (bin! — العربية-أنا-بلا-يكون-ظاهر!) (خريطة التداخل 10‑ي)."
-   },
-   {
-    "commonError": {
-     "ar": "لغة-بدل-مؤنث",
-     "de": "~~Ich bin Deutsch!~~"
-    },
-    "correct": {
-     "ar": "أنا ألمانية!",
-     "de": "Ich bin Deutsche!"
-    },
-    "exercise": {
-     "a": "Deutsche",
-     "q": "Ich bin ___! (Deutsche!)"
-    },
-    "whyArabicSpeakerFails": "المؤنث-تُعرب-Deutsche (Deutsche! — العربية-ألمانية-واحدة-بلا-إعراب-ألماني!) (خريطة التداخل 10‑ي)."
-   },
-   {
-    "commonError": {
-     "ar": "مؤنث-للمذكر",
-     "de": "~~Er ist Deutsche und sie ist Deutsche!~~"
-    },
-    "correct": {
-     "ar": "هو ألماني وهي ألمانية!",
-     "de": "Er ist Deutscher und sie ist Deutsche!"
-    },
-    "exercise": {
-     "a": "Deutscher",
-     "q": "Er ist ___ und sie ist Deutsche! (Deutscher!)"
-    },
-    "whyArabicSpeakerFails": "المذكر-يُذكَّر-Deutscher (Deutscher! — العربية-ألماني-واحد-بلا-إعراب!) (خريطة التداخل 10‑ي)."
-   }
-  ]
- }
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "مخاطب-للمتكلم",
+          "de": "~~Ich bist Luxemburger!~~"
+        },
+        "correct": {
+          "ar": "أنا لوكسمبورغي!",
+          "de": "Ich bin Luxemburger!"
+        },
+        "exercise": {
+          "a": "bin",
+          "q": "Ich ___ Luxemburger! (bin!)"
+        },
+        "whyArabicSpeakerFails": "المتكلم-يكون-bin (bin! — العربية-أنا-بلا-يكون-ظاهر!) (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "لغة-بدل-مؤنث",
+          "de": "~~Ich bin Deutsch!~~"
+        },
+        "correct": {
+          "ar": "أنا ألمانية!",
+          "de": "Ich bin Deutsche!"
+        },
+        "exercise": {
+          "a": "Deutsche",
+          "q": "Ich bin ___! (Deutsche!)"
+        },
+        "whyArabicSpeakerFails": "المؤنث-تُعرب-Deutsche (Deutsche! — العربية-ألمانية-واحدة-بلا-إعراب-ألماني!) (خريطة التداخل 10‑ي)."
+      },
+      {
+        "commonError": {
+          "ar": "مؤنث-للمذكر",
+          "de": "~~Er ist Deutsche und sie ist Deutsche!~~"
+        },
+        "correct": {
+          "ar": "هو ألماني وهي ألمانية!",
+          "de": "Er ist Deutscher und sie ist Deutsche!"
+        },
+        "exercise": {
+          "a": "Deutscher",
+          "q": "Er ist ___ und sie ist Deutsche! (Deutscher!)"
+        },
+        "whyArabicSpeakerFails": "المذكر-يُذكَّر-Deutscher (Deutscher! — العربية-ألماني-واحد-بلا-إعراب!) (خريطة التداخل 10‑ي)."
+      }
+    ]
+  }
 }

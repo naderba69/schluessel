@@ -120,6 +120,26 @@
             "q": "Das Essen ___ gut. (sein)",
             "a": "war",
             "why": "الشيء كان: war (وليس hatte!) — الأصل: ist!"
+          },
+          {
+            "q": "Ich esse ___ mit Käse.",
+            "a": "Brot",
+            "why": "الكلمة الناقصة «Brot» تعني «الخبز» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Kaffee mit ___, bitte.",
+            "a": "Milch",
+            "why": "الكلمة الناقصة «Milch» تعني «الحليب» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Ein ___, bitte!",
+            "a": "Wasser",
+            "why": "الكلمة الناقصة «Wasser» تعني «الماء» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "In Tunesien trinken wir ___ im Glas.",
+            "a": "Tee",
+            "why": "الكلمة الناقصة «Tee» تعني «الشاي» — تذكر صيغتها في السياق."
           }
         ],
         "interleavedWith": [
@@ -162,6 +182,21 @@
             "q": "___ Sie Platz! (nehmen)",
             "a": "Nehmen",
             "why": "الأمر المهذب: المصدر + Sie!"
+          },
+          {
+            "q": "Der ___ schmeckt gut!",
+            "a": "Kuchen",
+            "why": "الكلمة الناقصة «Kuchen» تعني «كعكة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "___ ist mein Hobby.",
+            "a": "Musik",
+            "why": "الكلمة الناقصة «Musik» تعني «الموسيقى» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "«Ich koche Suppe.» — اكتب الكلمة التي تعني «يطبخ»: ___",
+            "a": "kochen",
+            "why": "الكلمة «kochen» تعني «يطبخ» — اكتبها كما تُقال في الجملة."
           }
         ],
         "interleavedWith": [
@@ -204,6 +239,16 @@
             "q": "~~Essen das Rind!~~",
             "a": "Essen Sie das Rind.",
             "why": "الأمر المهذب يذكر Sie بعد الفعل: Essen Sie!"
+          },
+          {
+            "q": "~~heute spreche ich Deutsch.~~",
+            "a": "Heute spreche ich Deutsch.",
+            "why": "الخطأ في «heute»! الصواب «Heute» — راجع القاعدة (اليوم)."
+          },
+          {
+            "q": "~~gestern habe ich Fisch gekocht.~~",
+            "a": "Gestern habe ich Fisch gekocht.",
+            "why": "الخطأ في «gestern»! الصواب «Gestern» — راجع القاعدة (أمس)."
           }
         ],
         "interleavedWith": [
@@ -226,6 +271,26 @@
             "q": "اطبخ وصفتك بالأمر الثلاثي (جملتان: du + ihr/Sie!)",
             "a": "Koch das Gericht! Iss die Bohnen! Kocht das Fleisch — oder: Essen Sie das Rind!",
             "why": "du=الجذع (koch/iss!) · ihr=+t (kocht!) · Sie=الصدر+Sie!"
+          },
+          {
+            "q": "كوّن جملة فيها «fahren» («يذهب بمركبة · يركب») ثم تحدّث بها.",
+            "a": "Fährst du heute Auto?",
+            "why": "استعمل «fahren» («يذهب بمركبة · يركب») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «helfen» («يساعد») ثم تحدّث بها.",
+            "a": "Können Sie mir helfen?",
+            "why": "استعمل «helfen» («يساعد») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «lernen» («يتعلم») ثم تحدّث بها.",
+            "a": "Gestern habe ich Deutsch gelernt.",
+            "why": "استعمل «lernen» («يتعلم») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «feiern» («يحتفل») ثم تحدّث بها.",
+            "a": "Am Sonntag feiern wir zusammen.",
+            "why": "استعمل «feiern» («يحتفل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
           }
         ],
         "interleavedWith": [
@@ -235,6 +300,76 @@
           "feiern"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "drinnen"
+        ],
+        "items": [
+          {
+            "audioId": "word-wenigstens",
+            "speakText": "wenigstens.",
+            "q": "استمع: أي كلمة سمعت؟",
+            "choices": [
+              "wenigstens",
+              "die Sache"
+            ],
+            "a": "wenigstens",
+            "why": "الكلمة المسموعة «wenigstens» تعني «على الأقل». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-sache",
+            "speakText": "die Sache.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Sache",
+              "wenigstens"
+            ],
+            "a": "die Sache",
+            "why": "الكلمة المسموعة «die Sache» تعني «شيء». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-drinnen",
+            "speakText": "drinnen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "في الداخل",
+              "على الأقل",
+              "شيء"
+            ],
+            "a": "في الداخل",
+            "why": "الصوت يقول «drinnen» — معناها «في الداخل». ركّز على الصوت لا على الشكل!"
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "modern"
+        ],
+        "items": [
+          {
+            "audioId": "word-wenigstens",
+            "speakText": "wenigstens.",
+            "a": "wenigstens",
+            "why": "اكتب ما تسمعه حرفياً: «wenigstens» تعني «على الأقل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-sache",
+            "speakText": "die Sache.",
+            "a": "die Sache",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Sache» («شيء»)."
+          },
+          {
+            "audioId": "word-modern",
+            "speakText": "modern.",
+            "a": "modern",
+            "why": "اكتب المسموع بدقة: modern — ركّز على نهاية الكلمة!"
+          }
+        ]
       }
     ],
     "communicativeTask": {
@@ -303,6 +438,14 @@
               "Kocht die Suppe!"
             ],
             "why": "الأمر للـdu: الجذع وحده (koch!) بلا ‑st."
+          },
+          {
+            "q": "«على الأقل»؟",
+            "a": "wenigstens"
+          },
+          {
+            "q": "«شيء»؟",
+            "a": "die Sache"
           }
         ],
         "passingScore": 0.75
@@ -348,6 +491,14 @@
               "Nehmen das Messer!"
             ],
             "why": "الأمر الشاذ: nimm (a→ä!) — بلا ‑st!"
+          },
+          {
+            "q": "«على الأقل»؟",
+            "a": "wenigstens"
+          },
+          {
+            "q": "«شيء»؟",
+            "a": "die Sache"
           }
         ],
         "passingScore": 0.75
@@ -393,6 +544,14 @@
               "Ich war gern Pizza."
             ],
             "why": "التمني المهذب: hätte gern (وليس hatte/war!)."
+          },
+          {
+            "q": "«على الأقل»؟",
+            "a": "wenigstens"
+          },
+          {
+            "q": "«شيء»؟",
+            "a": "die Sache"
           }
         ],
         "passingScore": 0.75

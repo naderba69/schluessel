@@ -97,6 +97,14 @@
           {
             "a": "Drüben",
             "q": "___ ist das Kino. (drüben)"
+          },
+          {
+            "q": "«الحفلة في الداخل.»؟",
+            "a": "Drinnen ist die Party."
+          },
+          {
+            "q": "«هناك (في الجهة المقابلة)»؟",
+            "a": "drüben"
           }
         ],
         "passingScore": 0.75
@@ -118,6 +126,14 @@
           {
             "a": "die Party",
             "q": "Drinnen ist ___. (Party)"
+          },
+          {
+            "q": "«في الداخل»؟",
+            "a": "drinnen"
+          },
+          {
+            "q": "«هناك (في الجهة المقابلة)»؟",
+            "a": "drüben"
           }
         ],
         "passingScore": 0.75
@@ -139,6 +155,14 @@
           {
             "a": "schenke",
             "q": "Ich ___ dir etwas. (schenken)"
+          },
+          {
+            "q": "«في الداخل»؟",
+            "a": "drinnen"
+          },
+          {
+            "q": "«هناك (في الجهة المقابلة)»؟",
+            "a": "drüben"
           }
         ],
         "passingScore": 0.75
@@ -194,7 +218,7 @@
           },
           {
             "a": "besteht",
-            "q": "هو يُصرّ على ذلك (d4): Er ___ darauf. (bestehen)",
+            "q": "هو يُصرّ على ذلك (d4): البادئة الملتصقة ___ darauf. (bestehen)",
             "why": "Er besteht darauf! (d4!) — الفعل مع da!"
           },
           {
@@ -338,6 +362,76 @@
           }
         ],
         "type": "speaking"
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "bloed"
+        ],
+        "items": [
+          {
+            "audioId": "word-drinnen",
+            "speakText": "drinnen.",
+            "q": "استمع: أي كلمة سمعت؟",
+            "choices": [
+              "drinnen",
+              "drüben"
+            ],
+            "a": "drinnen",
+            "why": "الكلمة المسموعة «drinnen» تعني «في الداخل». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-drueben",
+            "speakText": "drüben.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "drüben",
+              "drinnen"
+            ],
+            "a": "drüben",
+            "why": "الكلمة المسموعة «drüben» تعني «هناك (في الجهة المقابلة)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-bloed",
+            "speakText": "blöd.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "غبي/سخيف",
+              "في الداخل",
+              "هناك (في الجهة المقابلة)"
+            ],
+            "a": "غبي/سخيف",
+            "why": "الصوت يقول «blöd» — معناها «غبي/سخيف». ركّز على الصوت لا على الشكل!"
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "freiwillig"
+        ],
+        "items": [
+          {
+            "audioId": "word-drinnen",
+            "speakText": "drinnen.",
+            "a": "drinnen",
+            "why": "اكتب ما تسمعه حرفياً: «drinnen» تعني «في الداخل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-drueben",
+            "speakText": "drüben.",
+            "a": "drüben",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «drüben» («هناك (في الجهة المقابلة)»)."
+          },
+          {
+            "audioId": "word-freiwillig",
+            "speakText": "freiwillig.",
+            "a": "freiwillig",
+            "why": "اكتب المسموع بدقة: freiwillig — ركّز على نهاية الكلمة!"
+          }
+        ]
       }
     ]
   },
