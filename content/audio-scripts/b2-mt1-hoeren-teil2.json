@@ -1,0 +1,52 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "b2-mt1-hoeren-teil2",
+ "kind": "dialogue",
+ "level": "B2",
+ "title": {
+  "de": "Interview: Das Gedächtnis",
+  "ar": "مقابلة: الذاكرة"
+ },
+ "usedIn": [
+  "b2-modelltest-1#hoeren-teil2"
+ ],
+ "lengthScale": 1.1,
+ "lines": [
+  {
+   "id": "b2m1-h2-d1-l1",
+   "speaker": "thomas",
+   "text": "Guten Tag, Frau Schmidt. Sprechen wir heute über das Gedächtnis.",
+   "direction": "توماس — يفتتح"
+  },
+  {
+   "id": "b2m1-h2-d1-l2",
+   "speaker": "frau-schmidt",
+   "text": "Vielen Dank. Das Gedächtnis ist wie ein Computer: Es wird besser, wenn man es oft benutzt.",
+   "direction": "الخبيرة — تشرح"
+  },
+  {
+   "id": "b2m1-h2-d1-l3",
+   "speaker": "thomas",
+   "text": "Was hilft am meisten?",
+   "direction": "توماس — يسأل"
+  },
+  {
+   "id": "b2m1-h2-d1-l4",
+   "speaker": "frau-schmidt",
+   "text": "Wiederholung und Schlaf. Ohne Schlaf lernt man schlecht.",
+   "direction": "الخبيرة — تجيب"
+  },
+  {
+   "id": "b2m1-h2-d1-l5",
+   "speaker": "thomas",
+   "text": "Und die neuen Techniken?",
+   "direction": "توماس — يسأل"
+  },
+  {
+   "id": "b2m1-h2-d1-l6",
+   "speaker": "frau-schmidt",
+   "text": "Sie helfen ein wenig. Aber lesen und sprechen sind besser.",
+   "direction": "الخبيرة — تحكم"
+  }
+ ]
+}

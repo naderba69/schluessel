@@ -136,7 +136,7 @@ describe("D187 — البوابة الواحدة وفرق المحتوى وال�
 
   it("D234 (N-011/N-122/N-263): listening-sample.py تشتق 30 مقطعاً حتمياً وتكتب وثيقة العينة", () => {
     const out = execFileSync("python3", ["tools/dev/listening-sample.py"], { cwd: ROOT, encoding: "utf8", timeout: 60_000 });
-    expect(out.split("\n").filter((l) => /^\s*\d+\. \S+ /u.test(l))).toHaveLength(32); // D559: +b1m1-h3-d1-l2 · +b1m1-h3-d2-l1 (العينة 32 · N-364) // D408: +word-in-der-nacht (العينة 30) // D319: +Erlaubnis (العينة 29) // D318: +Projekt (العينة 28)
+    expect(out.split("\n").filter((l) => /^\s*\d+\. \S+ /u.test(l))).toHaveLength(33); // D562: +b2m1-h3-d5-l1 (العينة 33 · N-367) // D559: +b1m1-h3-d1-l2 · +b1m1-h3-d2-l1 (العينة 32 · N-364) // D408: +word-in-der-nacht (العينة 30) // D319: +Erlaubnis (العينة 29) // D318: +Projekt (العينة 28)
     expect(out).toContain("fc-11");
     expect(out).toContain("word-in-der-nacht"); // D408: المعلَّم الثاني
     expect(out).toContain("word-circa");
@@ -145,7 +145,7 @@ describe("D187 — البوابة الواحدة وفرق المحتوى وال�
     const doc = readFileSync(join(ROOT, "docs/reports/listening-sample.md"), "utf8");
     expect(doc).toContain("fc-11");
     expect(doc).toContain("word-in-der-nacht"); // D408
-    expect(doc.match(/☐ سليم/g)).toHaveLength(32); // D559: +b1m1-h3-d1-l2 · +b1m1-h3-d2-l1 (N-364) // D408: +word-in-der-nacht // D319: +Erlaubnis // D318: +Projekt
+    expect(doc.match(/☐ سليم/g)).toHaveLength(33); // D562: +b2m1-h3-d5-l1 (N-367) // D559: +b1m1-h3-d1-l2 · +b1m1-h3-d2-l1 (N-364) // D408: +word-in-der-nacht // D319: +Erlaubnis // D318: +Projekt
   }, 60_000);
 
   it("content-diff.ts --json بين التزامين: ملخّص + تقارير بنصوص قبل/بعد", () => {

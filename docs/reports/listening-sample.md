@@ -36,13 +36,14 @@
 | 23 | `ac-12` (a1-u8-d6) | «Und mein Vater holt mich ab — mit dem Auto. Er kommt aus Tunis.» | تصحيح يقيني (فونيم/نبر/طول) | هل o طويلة (hohlt) لا قصيرة (Holz)؟ | ☐ سليم · ☐ أعد |
 | 24 | `b1m1-h3-d1-l2` (—) | «Das tut mir leid. Kann ich etwas bringen?» | فوق العتبة: 200.5 كلمة/دقيقة (N-364) | هل يُفهم من أول استماع؟ «Das tut mir leid.» تُقال سريعة طبيعياً — لا ضبط ولا إعادة (D214). | ☐ سليم · ☐ أعد |
 | 25 | `b1m1-h3-d2-l1` (—) | «Ayse, ich bin noch im Büro. Ich komme in einer Stunde.» | فوق العتبة: 208.1 كلمة/دقيقة (N-364) | هل يُفهم من أول استماع؟ جملة توماس الطويلة سريعة — إن لزم يُعاد بصياغة أطول لا بضبط السرعة. | ☐ سليم · ☐ أعد |
-| 26 | `fc-11` (a1-u14-d5) | «Wo ist der Test? Da ist der Bogen!» | فوق العتبة: 203.5 كلمة/دقيقة (N-122) | هل يُفهم من أول استماع؟ إن بدا سريعاً يُعاد بصياغة أطول لا بضبط السرعة. | ☐ سليم · ☐ أعد |
-| 27 | `word-in-der-nacht` (a2-u13-d6) | «in der Nacht.» | فوق العتبة: 203.4 كلمة/دقيقة (N-263) | هل يُفهم من أول استماع؟ القطعة تُقال سريعة طبيعياً — «أعد» تعني قرار مالك. | ☐ سليم · ☐ أعد |
-| 28 | `nz-16` (a1-u9-d6) | «Am Abend sitzen wir am Ufer. Und morgen gehen wir um zehn zu Fuß ans Ufer.» | من أسرع الحوارات: 198.7 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
-| 29 | `vb-12` (a1-u8-d5) | «Für meine Mutter — ein Geschenk von mir. Der Ring ist auch vom Markt.» | من أسرع الحوارات: 198.6 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
-| 30 | `zf-9` (a1-u12-d6) | «Und bei mir: Ich darf wieder in die Schule gehen, aber ich soll noch nicht schwimmen.» | من أسرع الحوارات: 197.7 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
-| 31 | `mo-14` (a1-u7-d1) | «Und wann ziehst du dich an?» | من أسرع الحوارات: 197.3 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
-| 32 | `a2mt1-h2-d1-l8` (—) | «Am Sonntag bin ich zu Hause. Da koche ich eine Suppe.» | من أسرع الحوارات: 197.3 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
+| 26 | `b2m1-h3-d5-l1` (—) | «Ich bin in der Schule und warte auf meinen Sohn.» | فوق العتبة: 236.8 كلمة/دقيقة (N-367) | هل يُفهم من أول استماع؟ جملة بطيئة المعنى سريعة النطق (237) — إن لزم يُعاد بصياغة أطول لا بضبط السرعة. | ☐ سليم · ☐ أعد |
+| 27 | `fc-11` (a1-u14-d5) | «Wo ist der Test? Da ist der Bogen!» | فوق العتبة: 203.5 كلمة/دقيقة (N-122) | هل يُفهم من أول استماع؟ إن بدا سريعاً يُعاد بصياغة أطول لا بضبط السرعة. | ☐ سليم · ☐ أعد |
+| 28 | `word-in-der-nacht` (a2-u13-d6) | «in der Nacht.» | فوق العتبة: 203.4 كلمة/دقيقة (N-263) | هل يُفهم من أول استماع؟ القطعة تُقال سريعة طبيعياً — «أعد» تعني قرار مالك. | ☐ سليم · ☐ أعد |
+| 29 | `nz-16` (a1-u9-d6) | «Am Abend sitzen wir am Ufer. Und morgen gehen wir um zehn zu Fuß ans Ufer.» | من أسرع الحوارات: 198.7 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
+| 30 | `vb-12` (a1-u8-d5) | «Für meine Mutter — ein Geschenk von mir. Der Ring ist auch vom Markt.» | من أسرع الحوارات: 198.6 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
+| 31 | `zf-9` (a1-u12-d6) | «Und bei mir: Ich darf wieder in die Schule gehen, aber ich soll noch nicht schwimmen.» | من أسرع الحوارات: 197.7 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
+| 32 | `mo-14` (a1-u7-d1) | «Und wann ziehst du dich an?» | من أسرع الحوارات: 197.3 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
+| 33 | `a2mt1-h2-d1-l8` (—) | «Am Sonntag bin ich zu Hause. Da koche ich eine Suppe.» | من أسرع الحوارات: 197.3 كلمة/دقيقة | هل السرعة طبيعية والنطق واضح؟ | ☐ سليم · ☐ أعد |
 
 ## بعد الحكم
 
