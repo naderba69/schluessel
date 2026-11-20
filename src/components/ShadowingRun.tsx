@@ -38,8 +38,9 @@ export function ShadowingRun({ script, onFinish }: { script: AudioScript; onFini
       <button
         data-testid="shadow-play"
         onClick={() => {
+          // D567: مسار الحوار المُسجَّل أولاً (صوت الشخصية) — Web Speech احتياطاً
           void audioPlayer()
-            .play({ text: line.text })
+            .play({ trackId: line.id, text: line.text })
             .catch(() => {});
         }}
       >

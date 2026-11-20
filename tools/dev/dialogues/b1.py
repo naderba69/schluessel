@@ -487,7 +487,7 @@ DATA = {
  "title_de": "Ich ziehe in die Wohnung", "title_ar": "أنتقل إلى الشقة",
  "lines": [
  ("yusuf", "Ich ziehe in die Wohnung: Das Angebot gilt!", "أخبار الانتقال"),
- ("lena", "Wann ist der Beginn?", "استفسار"),
+ ("lena", "Wann geht es los?", "استفسار"),
  ("yusuf", "Am ersten Dezember. Ich muss den Vertrag lesen!", "مزاح بالتلاعب بالكلمة"),
  ("lena", "Lies genau! Und brich nichts beim Umzug.", "نصيحة + مزاح"),
  ("yusuf", "Natürlich. Ich ziehe mit zwei Freunden.", "توضيح"),

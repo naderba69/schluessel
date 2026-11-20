@@ -15,15 +15,21 @@ const d3 = ALL_LESSONS.find((l) => l.id === "a1-u1-d3")!;
 const anm = ALL_SCRIPTS.find((s) => s.id === "a1-u1-d3-anmeldung")!;
 
 describe("N-010 (D231) — الحوار الكامل قبل بنود الاستماع", () => {
-  it("المخطط يربط محطة الاستماع بحوارها (ومحطة مقاطع الكلمات وحدها بلا حوار)", async () => {
+  it("المخطط يربط محطة الاستماع بحوارها (D567: والدروس الثلاثة صارت مربوطة بحوارها الجديد)", async () => {
     const plan = planLessonStations(d3, await runtimeWordsForLesson(d3), [], [], ALL_SCRIPTS);
     expect(plan.practice.dialogues.map((d) => d.station)).toEqual([1]);
     expect(plan.practice.dialogues[0].script.id).toBe("a1-u1-d3-anmeldung");
     const d1 = ALL_LESSONS.find((l) => l.id === "a1-u1-d1")!;
-    expect(planLessonStations(d1, await runtimeWordsForLesson(d1), [], [], ALL_SCRIPTS).practice.dialogues).toEqual([]);
+    const p1 = planLessonStations(d1, await runtimeWordsForLesson(d1), [], [], ALL_SCRIPTS);
+    expect(p1.practice.dialogues.map((d) => d.script.id)).toEqual(["a1-u1-d1-hallo-ich-heisse-yusuf"]);
+  });
+  it("D567 (N-370): زر تمرّن الترديد داخل عرض الحوار — يشغّل ShadowingRun على سطوره", () => {
+    const html = renderToStaticMarkup(createElement(DialogueView, { script: anm }));
+    expect(html).toContain('data-testid="station-shadow-start"');
+    expect(html).toContain("تمرين الترديد");
   });
   it("DialogueView: كل سطر بنصه واسم قائله وزر صوته المسجل", () => {
-    const html = renderToStaticMarkup(DialogueView({ script: anm }));
+    const html = renderToStaticMarkup(createElement(DialogueView, { script: anm }));
     expect(html).toContain("Anmeldung, guten Tag!");
     expect(html).toContain("السيدة بيرغ");
     expect(html).toContain('data-audio-id="anm-1"');
