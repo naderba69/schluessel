@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u4-d2-wohin-faehrst-du",
+  "kind": "dialogue",
+  "level": "A2",
+  "title": {
+    "de": "Wohin fährst du?",
+    "ar": "إلى أين تسافر؟"
+  },
+  "usedIn": [
+    "a2-u4-d2"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a2u4d2-l1",
+      "speaker": "thomas",
+      "text": "Wohin fährst du am Samstag?",
+      "direction": "توماس يسأل عن الرحلة"
+    },
+    {
+      "id": "a2u4d2-l2",
+      "speaker": "yusuf",
+      "text": "Ich fahre in die Stadt, zum Flohmarkt.",
+      "direction": "يوسف يجيب عن وجهته"
+    },
+    {
+      "id": "a2u4d2-l3",
+      "speaker": "thomas",
+      "text": "Zum Flohmarkt? Ich komme mit!",
+      "direction": "توماس يرافقه"
+    },
+    {
+      "id": "a2u4d2-l4",
+      "speaker": "yusuf",
+      "text": "Gern! Wir fahren direkt und sind abends wieder hier.",
+      "direction": "يوسف يخطط ليومهما"
+    },
+    {
+      "id": "a2u4d2-l5",
+      "speaker": "thomas",
+      "text": "Und das Einkaufszentrum?",
+      "direction": "توماس يسأل عن المركز التجاري"
+    },
+    {
+      "id": "a2u4d2-l6",
+      "speaker": "yusuf",
+      "text": "Das ist hier heraus, aber wir gehen hindurch.",
+      "direction": "يوسف يصف الطريق"
+    },
+    {
+      "id": "a2u4d2-l7",
+      "speaker": "thomas",
+      "text": "Ach, die Ausstellung ist auch nett!",
+      "direction": "توماس يذكر المعرض"
+    },
+    {
+      "id": "a2u4d2-l8",
+      "speaker": "yusuf",
+      "text": "Nächste Mal! Jetzt: Flohmarkt.",
+      "direction": "يوسف يرتب الأولويات"
+    }
+  ]
+}

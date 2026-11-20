@@ -58,7 +58,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u14-s6"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": []
   },
@@ -126,6 +128,23 @@
               }
             ],
             "why": "توليف الأسبوع! die Urkunde الشهادة · die Punktzahl النقاط · der Prüfungsteil الجزء"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "اللكنة",
+                "de": "der Akzent"
+              },
+              {
+                "ar": "النبرة (التنغيم)",
+                "de": "die Intonation"
+              },
+              {
+                "ar": "الشجاعة",
+                "de": "der Mut"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Akzent = «اللكنة» · die Intonation = «النبرة (التنغيم)» · der Mut = «الشجاعة»"
           }
         ]
       },
@@ -137,8 +156,6 @@
           "اليام الأخير!"
         ],
         "interleavedWith": [
-          "mut",
-          "puffer",
           "urkunde"
         ],
         "items": [
@@ -172,8 +189,6 @@
           "الأداة! الأداة! الجمع!"
         ],
         "interleavedWith": [
-          "mut",
-          "puffer",
           "punktzahl"
         ],
         "items": [
@@ -221,6 +236,86 @@
             "q": "تكلّم عن أسبوعك! (ثلاث جمل!)",
             "a": "Der Puffer ist wichtig. Er findet den Zugang. Er bekommt die Urkunde.",
             "why": "التوليف! الاحتياطي ثم المدخل ثم الشهادة!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Punktzahl» («عدد النقاط») ثم تحدّث بها.",
+            "a": "Die Punktzahl ist hoch.",
+            "why": "استعمل «die Punktzahl» («عدد النقاط») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Sitzplatz» («المقعد (المكان المخصص)») ثم تحدّث بها.",
+            "a": "Der Sitzplatz ist frei.",
+            "why": "استعمل «der Sitzplatz» («المقعد (المكان المخصص)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "selbstvertrauen"
+        ],
+        "items": [
+          {
+            "audioId": "word-mut",
+            "speakText": "der Mut.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الشجاعة",
+              "الاحتياطي (الوقت الإضافي)"
+            ],
+            "a": "الشجاعة",
+            "why": "الصوت يقول «der Mut» — معناها «الشجاعة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-puffer",
+            "speakText": "der Puffer.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Puffer",
+              "der Mut"
+            ],
+            "a": "der Puffer",
+            "why": "الكلمة المسموعة «der Puffer» تعني «الاحتياطي (الوقت الإضافي)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-selbstvertrauen",
+            "speakText": "das Selbstvertrauen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "الثقة بالنفس",
+              "الشجاعة",
+              "الاحتياطي (الوقت الإضافي)"
+            ],
+            "a": "الثقة بالنفس",
+            "why": "الصوت يقول «das Selbstvertrauen» — معناها «الثقة بالنفس». ركّز على الصوت لا على الشكل!"
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "intonation"
+        ],
+        "items": [
+          {
+            "audioId": "word-mut",
+            "speakText": "der Mut.",
+            "a": "der Mut",
+            "why": "اكتب ما تسمعه حرفياً: «der Mut» تعني «الشجاعة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-puffer",
+            "speakText": "der Puffer.",
+            "a": "der Puffer",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Puffer» («الاحتياطي (الوقت الإضافي)»)."
+          },
+          {
+            "audioId": "word-intonation",
+            "speakText": "die Intonation.",
+            "a": "die Intonation",
+            "why": "اكتب المسموع بدقة: die Intonation — ركّز على نهاية الكلمة!"
           }
         ]
       }
@@ -251,6 +346,14 @@
           {
             "q": "«يستخدم الاحتياطي.»؟",
             "a": "Er nutzt den Puffer."
+          },
+          {
+            "q": "«الشجاعة مهمة.»؟",
+            "a": "Der Mut ist wichtig."
+          },
+          {
+            "q": "«الاحتياطي مهم.»؟",
+            "a": "Der Puffer ist wichtig."
           }
         ]
       },
@@ -271,6 +374,14 @@
           {
             "q": "«الشجاعة مهمة.»؟",
             "a": "Der Mut ist wichtig."
+          },
+          {
+            "q": "«الشجاعة»؟",
+            "a": "der Mut"
+          },
+          {
+            "q": "«الاحتياطي (الوقت الإضافي)»؟",
+            "a": "der Puffer"
           }
         ]
       },
@@ -291,6 +402,14 @@
           {
             "q": "«يُحرز نتيجة جيدة.»؟ (توليف!)",
             "a": "Er schneidet gut ab."
+          },
+          {
+            "q": "«الشجاعة»؟",
+            "a": "der Mut"
+          },
+          {
+            "q": "«الاحتياطي (الوقت الإضافي)»؟",
+            "a": "der Puffer"
           }
         ]
       }

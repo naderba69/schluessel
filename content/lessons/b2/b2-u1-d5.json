@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u1-s5"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ch-ich-laut",
@@ -134,6 +136,23 @@
               }
             ],
             "why": "Gerechtigkeit schaffen! · Geld spenden! · mit Würde leben! · die Gerechtigkeiten جمع -en"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الاندماج",
+                "de": "die Integration"
+              },
+              {
+                "ar": "المساواة",
+                "de": "die Gleichheit"
+              },
+              {
+                "ar": "يساند",
+                "de": "beistehen"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Integration = «الاندماج» · die Gleichheit = «المساواة» · beistehen = «يساند»"
           }
         ]
       },
@@ -169,6 +188,21 @@
             "q": "Er schafft ___. (عدلاً!)",
             "a": "Gerechtigkeit",
             "why": "العدل: Gerechtigkeit schaffen! — Er schafft Gerechtigkeit."
+          },
+          {
+            "q": "Ihr ___ für die Gemeinschaft ist groß.",
+            "a": "Einsatz",
+            "why": "الكلمة الناقصة «Einsatz» تعني «التفاني» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "___ ist in jeder Gesellschaft wichtig.",
+            "a": "Höflichkeit",
+            "why": "الكلمة الناقصة «Höflichkeit» تعني «اللباقة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Sie ___ zwischen den Menschen.",
+            "a": "vermittelt",
+            "why": "الكلمة الناقصة «vermittelt» تعني «يتوسّط» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +238,16 @@
             "q": "~~Ich lebe mit die Würde.~~",
             "a": "Ich lebe mit der Würde.",
             "why": "mit دائماً مع Dativ (mit der Würde!) — لا تحويل حرفي!"
+          },
+          {
+            "q": "~~Meine Tante ist Freundlich.~~",
+            "a": "Meine Tante ist freundlich.",
+            "why": "الخطأ في «Freundlich»! الصواب «freundlich» — راجع القاعدة (ودود/لطيف)."
+          },
+          {
+            "q": "~~Ich brauche ruhe.~~",
+            "a": "Ich brauche Ruhe.",
+            "why": "الخطأ في «ruhe»! الصواب «Ruhe» — راجع القاعدة (الهدوء)."
           }
         ]
       },
@@ -234,6 +278,111 @@
             "q": "تحدث عن الكرامة! (جملتان!)",
             "a": "Die Würde ist wichtig. Ich lebe mit Würde.",
             "why": "الكرامة! (mit Würde leben!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Ermutigung» («التشجيع») ثم تحدّث بها.",
+            "a": "Er gibt mir Ermutigung.",
+            "why": "استعمل «die Ermutigung» («التشجيع») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «warnen» («يحذّر») ثم تحدّث بها.",
+            "a": "Ich warne dich.",
+            "why": "استعمل «warnen» («يحذّر») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Ablehnung» («الرفض») ثم تحدّث بها.",
+            "a": "Er bekommt Ablehnung.",
+            "why": "استعمل «die Ablehnung» («الرفض») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "ablehnung"
+        ],
+        "items": [
+          {
+            "audioId": "word-gerechtigkeit",
+            "speakText": "die Gerechtigkeit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العدل",
+              "يتبرّع",
+              "الكرامة"
+            ],
+            "a": "العدل",
+            "why": "الصوت يقول «die Gerechtigkeit» — معناها «العدل». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-spenden",
+            "speakText": "spenden.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "spenden",
+              "die Gerechtigkeit",
+              "die Würde"
+            ],
+            "a": "spenden",
+            "why": "الكلمة المسموعة «spenden» تعني «يتبرّع». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-wuerde",
+            "speakText": "die Würde.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الكرامة",
+              "العدل",
+              "يتبرّع"
+            ],
+            "a": "الكرامة",
+            "why": "الصوت يقول «die Würde» — معناها «الكرامة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ablehnung",
+            "speakText": "die Ablehnung.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Ablehnung",
+              "die Gerechtigkeit",
+              "spenden"
+            ],
+            "a": "die Ablehnung",
+            "why": "الكلمة المسموعة «die Ablehnung» تعني «الرفض». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "warnen"
+        ],
+        "items": [
+          {
+            "audioId": "word-gerechtigkeit",
+            "speakText": "die Gerechtigkeit.",
+            "a": "die Gerechtigkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Gerechtigkeit» تعني «العدل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-spenden",
+            "speakText": "spenden.",
+            "a": "spenden",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «spenden» («يتبرّع»)."
+          },
+          {
+            "audioId": "word-wuerde",
+            "speakText": "die Würde.",
+            "a": "die Würde",
+            "why": "اكتب المسموع بدقة: die Würde — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-warnen",
+            "speakText": "warnen.",
+            "a": "warnen",
+            "why": "اكتب ما تسمعه حرفياً: «warnen» تعني «يحذّر». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +413,14 @@
           {
             "q": "«نتبرّع بالمال.»؟",
             "a": "Wir spenden Geld."
+          },
+          {
+            "q": "«العدل»؟",
+            "a": "die Gerechtigkeit"
+          },
+          {
+            "q": "«يتبرّع»؟",
+            "a": "spenden"
           }
         ]
       },
@@ -284,6 +441,14 @@
           {
             "q": "spenden",
             "a": "يتبرّع"
+          },
+          {
+            "q": "«العدل»؟",
+            "a": "die Gerechtigkeit"
+          },
+          {
+            "q": "«يتبرّع»؟",
+            "a": "spenden"
           }
         ]
       },
@@ -304,6 +469,14 @@
           {
             "q": "«نتبرّع للناس!»؟",
             "a": "Wir spenden den Menschen!"
+          },
+          {
+            "q": "«العدل»؟",
+            "a": "die Gerechtigkeit"
+          },
+          {
+            "q": "«يتبرّع»؟",
+            "a": "spenden"
           }
         ]
       }

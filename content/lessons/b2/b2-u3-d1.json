@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u3-s1"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ng-velar",
@@ -134,6 +136,23 @@
               }
             ],
             "why": "an die Bildung glauben (يؤمن بالتعليم — glauben an + Akkusativ!) · die Technik nutzen (يستخدم!) · die Digitalisierung verstehen (يفهم!) · die Bildung (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التوازن",
+                "de": "das Gleichgewicht"
+              },
+              {
+                "ar": "واعٍ",
+                "de": "bewusst"
+              },
+              {
+                "ar": "الانبعاث",
+                "de": "die Emission"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: das Gleichgewicht = «التوازن» · bewusst = «واعٍ» · die Emission = «الانبعاث»"
           }
         ]
       },
@@ -169,6 +188,21 @@
             "q": "Er ___ die Technik. (يستخدم!)",
             "a": "nutzt",
             "why": "nutzen يستخدم (Präsens er: nutzt!) — Er nutzt die Technik."
+          },
+          {
+            "q": "Die ___ ist gefährlich.",
+            "a": "Hitze",
+            "why": "الكلمة الناقصة «Hitze» تعني «الحرارة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir vermeiden die ___.",
+            "a": "Erderwärmung",
+            "why": "الكلمة الناقصة «Erderwärmung» تعني «إحماء الأرض» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir ___ die Erde.",
+            "a": "bewahren",
+            "why": "الكلمة الناقصة «bewahren» تعني «يصون» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +238,21 @@
             "q": "~~Wir verstehen auf die Digitalisierung.~~",
             "a": "Wir verstehen die Digitalisierung.",
             "why": "verstehen يتبع مفعوله مباشرة (Akkusativ)! (لا auf!)!"
+          },
+          {
+            "q": "~~Die gerechtigkeit ist wichtig.~~",
+            "a": "Die Gerechtigkeit ist wichtig.",
+            "why": "الخطأ في «gerechtigkeit»! الصواب «Gerechtigkeit» — راجع القاعدة (العدل)."
+          },
+          {
+            "q": "~~Ich warne dich.~~ (ناقصة: warnen)",
+            "a": "Ich warne dich. warnen.",
+            "why": "الجملة تفتقد «warnen» (يحذّر) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~Wir lösen den konflikt.~~",
+            "a": "Wir lösen den Konflikt.",
+            "why": "الخطأ في «konflikt»! الصواب «Konflikt» — راجع القاعدة (النزاع)."
           }
         ]
       },
@@ -234,6 +283,111 @@
             "q": "تحدّث عن الرقمنة! (جملتان!)",
             "a": "Die Digitalisierung kommt. Wir verstehen die Digitalisierung.",
             "why": "الرقمنة! (die Digitalisierung verstehen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «der Klimawandel» («التغيّر المناخي») ثم تحدّث بها.",
+            "a": "Der Klimawandel ist gefährlich.",
+            "why": "استعمل «der Klimawandel» («التغيّر المناخي») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «recyceln» («يعيد التدوير») ثم تحدّث بها.",
+            "a": "Wir recyceln die Ressourcen.",
+            "why": "استعمل «recyceln» («يعيد التدوير») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «schonen» («يحافظ على») ثم تحدّث بها.",
+            "a": "Wir schonen die Umwelt.",
+            "why": "استعمل «schonen» («يحافظ على») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "emission"
+        ],
+        "items": [
+          {
+            "audioId": "word-bildung",
+            "speakText": "die Bildung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التعليم",
+              "التقنية",
+              "الرقمنة"
+            ],
+            "a": "التعليم",
+            "why": "الصوت يقول «die Bildung» — معناها «التعليم». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-technik",
+            "speakText": "die Technik.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Technik",
+              "die Bildung",
+              "die Digitalisierung"
+            ],
+            "a": "die Technik",
+            "why": "الكلمة المسموعة «die Technik» تعني «التقنية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-digitalisierung",
+            "speakText": "die Digitalisierung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الرقمنة",
+              "التعليم",
+              "التقنية"
+            ],
+            "a": "الرقمنة",
+            "why": "الصوت يقول «die Digitalisierung» — معناها «الرقمنة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-emission",
+            "speakText": "die Emission.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Emission",
+              "die Bildung",
+              "die Technik"
+            ],
+            "a": "die Emission",
+            "why": "الكلمة المسموعة «die Emission» تعني «الانبعاث». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "bewusst"
+        ],
+        "items": [
+          {
+            "audioId": "word-bildung",
+            "speakText": "die Bildung.",
+            "a": "die Bildung",
+            "why": "اكتب ما تسمعه حرفياً: «die Bildung» تعني «التعليم». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-technik",
+            "speakText": "die Technik.",
+            "a": "die Technik",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Technik» («التقنية»)."
+          },
+          {
+            "audioId": "word-digitalisierung",
+            "speakText": "die Digitalisierung.",
+            "a": "die Digitalisierung",
+            "why": "اكتب المسموع بدقة: die Digitalisierung — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-bewusst",
+            "speakText": "bewusst.",
+            "a": "bewusst",
+            "why": "اكتب ما تسمعه حرفياً: «bewusst» تعني «واعٍ». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +418,14 @@
           {
             "q": "«التعليم مهمّ.»؟",
             "a": "Die Bildung ist wichtig."
+          },
+          {
+            "q": "«التعليم»؟",
+            "a": "die Bildung"
+          },
+          {
+            "q": "«نستخدم التقنية.»؟",
+            "a": "Wir nutzen die Technik."
           }
         ]
       },
@@ -284,6 +446,14 @@
           {
             "q": "die Bildung",
             "a": "التعليم"
+          },
+          {
+            "q": "«التعليم»؟",
+            "a": "die Bildung"
+          },
+          {
+            "q": "«التقنية»؟",
+            "a": "die Technik"
           }
         ]
       },
@@ -304,6 +474,14 @@
           {
             "q": "«التعليم مهمّ.»؟",
             "a": "Die Bildung ist wichtig."
+          },
+          {
+            "q": "«التعليم»؟",
+            "a": "die Bildung"
+          },
+          {
+            "q": "«التقنية»؟",
+            "a": "die Technik"
           }
         ]
       }

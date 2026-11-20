@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u1-d2-mein-tag",
+  "kind": "dialogue",
+  "level": "A2",
+  "title": {
+    "de": "Mein ganzer Tag",
+    "ar": "يومي كامل"
+  },
+  "usedIn": [
+    "a2-u1-d2"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a2u1d2-l1",
+      "speaker": "thomas",
+      "text": "Erzähl mal: Was hast du heute gemacht?",
+      "direction": "توماس يشجعه على الحكي"
+    },
+    {
+      "id": "a2u1d2-l2",
+      "speaker": "yusuf",
+      "text": "Ich bin um acht weggegangen und habe den Bus noch erreicht.",
+      "direction": "يوسف يسرد يومه"
+    },
+    {
+      "id": "a2u1d2-l3",
+      "speaker": "thomas",
+      "text": "Pünktlich! Und in der Arbeit?",
+      "direction": "توماس مهتم"
+    },
+    {
+      "id": "a2u1d2-l4",
+      "speaker": "yusuf",
+      "text": "Ich habe das Essen vorbereitet und Pakete geliefert.",
+      "direction": "يوسف يعدّ مهامه"
+    },
+    {
+      "id": "a2u1d2-l5",
+      "speaker": "thomas",
+      "text": "Warst du fleißig?",
+      "direction": "توماس يبتسم"
+    },
+    {
+      "id": "a2u1d2-l6",
+      "speaker": "yusuf",
+      "text": "Ja, aber mein Kollege war faul!",
+      "direction": "يوسف يضحك"
+    },
+    {
+      "id": "a2u1d2-l7",
+      "speaker": "thomas",
+      "text": "Und um sechs?",
+      "direction": "توماس يسأل عن المساء"
+    },
+    {
+      "id": "a2u1d2-l8",
+      "speaker": "yusuf",
+      "text": "Feierabend! Sonst wäre der Tag zu lang gewesen.",
+      "direction": "يوسف يرتاح وهو يحكي"
+    }
+  ]
+}

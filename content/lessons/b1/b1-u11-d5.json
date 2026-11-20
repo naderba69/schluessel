@@ -70,7 +70,9 @@
     "grammarArsenalIds": [
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u11-s5"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "v2-order",
@@ -187,6 +189,23 @@
               }
             ],
             "why": "beeindrucken يُبهر (ضعيف!) · faszinieren يجذب (ضعيف!) · vertiefen يُعمّق (ضعيف! — الثلاثة بلا تغيير!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الرواية",
+                "de": "der Roman"
+              },
+              {
+                "ar": "الجزء الرئيسي",
+                "de": "der Hauptteil"
+              },
+              {
+                "ar": "المسودة",
+                "de": "der Entwurf"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Roman = «الرواية» · der Hauptteil = «الجزء الرئيسي» · der Entwurf = «المسودة»"
           }
         ]
       },
@@ -198,9 +217,8 @@
           "جولة الأسئلة!"
         ],
         "interleavedWith": [
-          "sichtweise",
-          "schwerpunkt",
-          "wertschaetzung"
+          "vielfalt",
+          "ehrenamt"
         ],
         "items": [
           {
@@ -227,6 +245,16 @@
             "q": "Er ___ die Antwort. (يُعمّق!)",
             "a": "vertieft",
             "why": "vertiefen ضعيف! Er vertieft die Antwort. (hat vertieft!)"
+          },
+          {
+            "q": "Die ___ ist groß.",
+            "a": "Vielfalt",
+            "why": "الكلمة الناقصة «Vielfalt» تعني «التنوع» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist wichtig.",
+            "a": "Ehrenamt",
+            "why": "الكلمة الناقصة «Ehrenamt» تعني «العمل التطوعي» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -238,9 +266,8 @@
           "المرتبة الثانية! الأداة! الماضي!"
         ],
         "interleavedWith": [
-          "verstaendlich",
-          "ausfuehrlich",
-          "gespannt"
+          "vielfalt",
+          "ehrenamt"
         ],
         "items": [
           {
@@ -257,6 +284,16 @@
             "q": "~~Er hat die Frage beeindruckte.~~",
             "a": "Er hat die Frage beeindruckt.",
             "why": "beeindrucken ضعيف! hat beeindruckt (لا beeindruckte!)"
+          },
+          {
+            "q": "~~Die vielfalt ist groß.~~",
+            "a": "Die Vielfalt ist groß.",
+            "why": "الخطأ في «vielfalt»! الصواب «Vielfalt» — راجع القاعدة (التنوع)."
+          },
+          {
+            "q": "~~Das ehrenamt ist wichtig.~~",
+            "a": "Das Ehrenamt ist wichtig.",
+            "why": "الخطأ في «ehrenamt»! الصواب «Ehrenamt» — راجع القاعدة (العمل التطوعي)."
           }
         ]
       },
@@ -268,9 +305,8 @@
           "Frage! Antwort! Beispiel!"
         ],
         "interleavedWith": [
-          "geduldig",
-          "aufmerksam",
-          "hilfreich"
+          "vielfalt",
+          "ehrenamt"
         ],
         "items": [
           {
@@ -287,6 +323,106 @@
             "q": "اختم بالتركيز والتقدير! (جملتان!)",
             "a": "Der Schwerpunkt ist klar. Die Wertschätzung ist groß.",
             "why": "التركيز ثم التقدير! (Schwerpunkt! Wertschätzung!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Vielfalt» («التنوع») ثم تحدّث بها.",
+            "a": "Die Vielfalt ist groß.",
+            "why": "استعمل «die Vielfalt» («التنوع») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Ehrenamt» («العمل التطوعي») ثم تحدّث بها.",
+            "a": "Das Ehrenamt ist wichtig.",
+            "why": "استعمل «das Ehrenamt» («العمل التطوعي») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "vielfalt"
+        ],
+        "items": [
+          {
+            "audioId": "word-sichtweise",
+            "speakText": "die Sichtweise.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "زاوية النظر",
+              "محور التركيز",
+              "التقدير"
+            ],
+            "a": "زاوية النظر",
+            "why": "الصوت يقول «die Sichtweise» — معناها «زاوية النظر». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-schwerpunkt",
+            "speakText": "der Schwerpunkt.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Schwerpunkt",
+              "die Sichtweise",
+              "die Wertschätzung"
+            ],
+            "a": "der Schwerpunkt",
+            "why": "الكلمة المسموعة «der Schwerpunkt» تعني «محور التركيز». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-wertschaetzung",
+            "speakText": "die Wertschätzung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التقدير",
+              "زاوية النظر",
+              "محور التركيز"
+            ],
+            "a": "التقدير",
+            "why": "الصوت يقول «die Wertschätzung» — معناها «التقدير». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-vielfalt",
+            "speakText": "die Vielfalt.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Vielfalt",
+              "die Sichtweise",
+              "der Schwerpunkt"
+            ],
+            "a": "die Vielfalt",
+            "why": "الكلمة المسموعة «die Vielfalt» تعني «التنوع». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "ehrenamt"
+        ],
+        "items": [
+          {
+            "audioId": "word-verstaendlich",
+            "speakText": "verständlich.",
+            "a": "verständlich",
+            "why": "اكتب ما تسمعه حرفياً: «verständlich» تعني «مفهوم». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ausfuehrlich",
+            "speakText": "ausführlich.",
+            "a": "ausführlich",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «ausführlich» («بالتفصيل»)."
+          },
+          {
+            "audioId": "word-beispielsweise",
+            "speakText": "beispielsweise.",
+            "a": "beispielsweise",
+            "why": "اكتب المسموع بدقة: beispielsweise — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-ehrenamt",
+            "speakText": "das Ehrenamt.",
+            "a": "das Ehrenamt",
+            "why": "اكتب ما تسمعه حرفياً: «das Ehrenamt» تعني «العمل التطوعي». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -317,6 +453,14 @@
           {
             "q": "«مفهوم»؟",
             "a": "verständlich"
+          },
+          {
+            "q": "«بالتفصيل»؟",
+            "a": "ausführlich"
+          },
+          {
+            "q": "«على سبيل المثال»؟",
+            "a": "beispielsweise"
           }
         ]
       },
@@ -337,6 +481,14 @@
           {
             "q": "«صبور»؟",
             "a": "geduldig"
+          },
+          {
+            "q": "«زاوية النظر»؟",
+            "a": "die Sichtweise"
+          },
+          {
+            "q": "«محور التركيز»؟",
+            "a": "der Schwerpunkt"
           }
         ]
       },
@@ -357,6 +509,14 @@
           {
             "q": "«بالتأكيد»؟",
             "a": "selbstverständlich"
+          },
+          {
+            "q": "«زاوية النظر»؟",
+            "a": "die Sichtweise"
+          },
+          {
+            "q": "«محور التركيز»؟",
+            "a": "der Schwerpunkt"
           }
         ]
       }

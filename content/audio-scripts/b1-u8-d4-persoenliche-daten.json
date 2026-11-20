@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u8-d4-persoenliche-daten",
+  "kind": "dialogue",
+  "level": "B1",
+  "title": {
+    "de": "Persönliche Daten",
+    "ar": "البيانات الشخصية"
+  },
+  "usedIn": [
+    "b1-u8-d4"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b1u8d4-l1",
+      "speaker": "mueller",
+      "text": "Persönliche Daten: Name, Alter, Adresse.",
+      "direction": "ملء ملف"
+    },
+    {
+      "id": "b1u8d4-l2",
+      "speaker": "yusuf",
+      "text": "Hier. Und das Geburtsdatum auch?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b1u8d4-l3",
+      "speaker": "mueller",
+      "text": "Ja, bitte. Und die Telefonnummer.",
+      "direction": "توضيح"
+    },
+    {
+      "id": "b1u8d4-l4",
+      "speaker": "yusuf",
+      "text": "Fertig. Alle Daten sind richtig.",
+      "direction": "إنهاء"
+    },
+    {
+      "id": "b1u8d4-l5",
+      "speaker": "mueller",
+      "text": "Gut. Die Daten sind wichtig für die Datei.",
+      "direction": "تبرير"
+    },
+    {
+      "id": "b1u8d4-l6",
+      "speaker": "yusuf",
+      "text": "Alles klar. Und was kommt jetzt?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b1u8d4-l7",
+      "speaker": "mueller",
+      "text": "Die Unterschrift hier.",
+      "direction": "إجراء"
+    },
+    {
+      "id": "b1u8d4-l8",
+      "speaker": "yusuf",
+      "text": "Hier, bitte. Danke!",
+      "direction": "إغلاق"
+    }
+  ]
+}

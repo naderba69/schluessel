@@ -61,7 +61,9 @@
       "needs-ein",
       "v2-order"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a2-u3-s4"
+    ],
     "wordIds": [
       "erstens",
       "zweitens",
@@ -133,6 +135,11 @@
             "q": "دوّن (احترام)! ___ Sie alles. (notieren)",
             "a": "Notieren",
             "why": "أمر الاحترام = المصدر + Sie — Notieren Sie alles!"
+          },
+          {
+            "q": "Meine Brüder ___ noch.",
+            "a": "schlafen",
+            "why": "الكلمة الناقصة «schlafen» تعني «ينام» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -169,6 +176,11 @@
             "q": "Das ist ___. (egal)",
             "a": "egal",
             "why": "هذا سيّان — egal للامبالاة!"
+          },
+          {
+            "q": "«Ich trinke einen Kaffee.» — اكتب الكلمة التي تعني «يشرب»: ___",
+            "a": "trinken",
+            "why": "الكلمة «trinken» تعني «يشرب» — اكتبها كما تُقال في الجملة."
           }
         ]
       },
@@ -227,6 +239,96 @@
             "why": "قارن نصيحتك: أربع خطوات (Erstens…Viertens) وكلها بـsollen — والشاي (Tee) والنوم (gut schlafen)!"
           }
         ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "schokolade"
+        ],
+        "items": [
+          {
+            "audioId": "word-erstens",
+            "speakText": "erstens.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "أولا",
+              "ثانيا",
+              "ثالثا"
+            ],
+            "a": "أولا",
+            "why": "الصوت يقول «erstens» — معناها «أولا». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-zweitens",
+            "speakText": "zweitens.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "zweitens",
+              "erstens",
+              "drittens"
+            ],
+            "a": "zweitens",
+            "why": "الكلمة المسموعة «zweitens» تعني «ثانيا». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-drittens",
+            "speakText": "drittens.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "ثالثا",
+              "أولا",
+              "ثانيا"
+            ],
+            "a": "ثالثا",
+            "why": "الصوت يقول «drittens» — معناها «ثالثا». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-schokolade",
+            "speakText": "die Schokolade.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Schokolade",
+              "erstens",
+              "zweitens"
+            ],
+            "a": "die Schokolade",
+            "why": "الكلمة المسموعة «die Schokolade» تعني «شوكولاتة». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "sportlich"
+        ],
+        "items": [
+          {
+            "audioId": "word-viertens",
+            "speakText": "viertens.",
+            "a": "viertens",
+            "why": "اكتب ما تسمعه حرفياً: «viertens» تعني «رابعا». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-markieren",
+            "speakText": "markieren.",
+            "a": "markieren",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «markieren» («يبرز»)."
+          },
+          {
+            "audioId": "word-notieren",
+            "speakText": "notieren.",
+            "a": "notieren",
+            "why": "اكتب المسموع بدقة: notieren — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-sportlich",
+            "speakText": "sportlich.",
+            "a": "sportlich",
+            "why": "اكتب ما تسمعه حرفياً: «sportlich» تعني «رياضي». انتبه للحروف الكبيرة!"
+          }
+        ]
       }
     ]
   },
@@ -256,6 +358,14 @@
           {
             "q": "Ich muss ___ schlafen. (unbedingt)",
             "a": "unbedingt"
+          },
+          {
+            "q": "«أولا»؟",
+            "a": "erstens"
+          },
+          {
+            "q": "«رابعا»؟",
+            "a": "viertens"
           }
         ]
       },
@@ -277,6 +387,14 @@
           {
             "q": "«سيّان»؟",
             "a": "egal"
+          },
+          {
+            "q": "«أولا»؟",
+            "a": "erstens"
+          },
+          {
+            "q": "«ثانيا»؟",
+            "a": "zweitens"
           }
         ]
       },
@@ -298,6 +416,14 @@
           {
             "q": "Der Arzt ___ mich. (kontrollieren)",
             "a": "kontrolliert"
+          },
+          {
+            "q": "«أولا»؟",
+            "a": "erstens"
+          },
+          {
+            "q": "«ثانيا»؟",
+            "a": "zweitens"
           }
         ]
       }

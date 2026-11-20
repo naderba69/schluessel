@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u10-d1-die-zahlen-sprechen",
+  "kind": "dialogue",
+  "level": "B1",
+  "title": {
+    "de": "Die Zahlen sprechen",
+    "ar": "الأرقام تتحدث"
+  },
+  "usedIn": [
+    "b1-u10-d1"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b1u10d1-l1",
+      "speaker": "mueller",
+      "text": "Fünfundachtzig Komma drei Prozent — die Zahlen sprechen!",
+      "direction": "افتتاح العرض بالأرقام"
+    },
+    {
+      "id": "b1u10d1-l2",
+      "speaker": "yusuf",
+      "text": "Das ist ein großer Anteil!",
+      "direction": "تفاعل"
+    },
+    {
+      "id": "b1u10d1-l3",
+      "speaker": "mueller",
+      "text": "Ja. Die Statistik zeigt: mehr Leute lernen Deutsch.",
+      "direction": "تفسير"
+    },
+    {
+      "id": "b1u10d1-l4",
+      "speaker": "yusuf",
+      "text": "Und wie viele Prozent im letzten Jahr?",
+      "direction": "سؤال للتفصيل"
+    },
+    {
+      "id": "b1u10d1-l5",
+      "speaker": "mueller",
+      "text": "Achtzig. Der Anstieg ist deutlich.",
+      "direction": "إجابة + مقارنة"
+    },
+    {
+      "id": "b1u10d1-l6",
+      "speaker": "yusuf",
+      "text": "Interessant! Und bei den jungen Leuten?",
+      "direction": "استمرار"
+    },
+    {
+      "id": "b1u10d1-l7",
+      "speaker": "mueller",
+      "text": "Bei ihnen ist der Anteil am höchsten.",
+      "direction": "ذروة الرقم"
+    },
+    {
+      "id": "b1u10d1-l8",
+      "speaker": "yusuf",
+      "text": "Danke, die Zahlen sind wirklich klar!",
+      "direction": "إغلاق"
+    }
+  ]
+}

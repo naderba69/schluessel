@@ -1,0 +1,140 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "goethe-b2",
+ "level": "B2",
+ "exam": "Goethe-Zertifikat B2 (Modellsatz Erwachsene)",
+ "sources": [
+  {
+   "title": "Goethe-Institut — Goethe-Zertifikat B2 Modellsatz Erwachsene (Prüfungsteile im Überblick + Bestehensregel)",
+   "url": "https://www.goethe.de/pro/relaunch/prf/materialien/B2/B2_Modellsatz_Erwachsene.pdf"
+  },
+  {
+   "title": "Goethe-Institut — Goethe-Zertifikat B2: Übungs- und Testmaterialien Erwachsene",
+   "url": "https://www.goethe.de/de/spr/prf/mat.html"
+  }
+ ],
+ "passRule": {
+  "totalPoints": 100,
+  "passAt": 60,
+  "note": "قاعدة Goethe للنجاح: ≥60/100 نقطة إجمالاً (الموديولات الأربعة مجتمعة) — نموذجنا التدريبي يقيس النسبة نفسها بلا تزوير العلامات."
+ },
+ "skills": [
+  {
+   "skill": "lesen",
+   "minutes": 65,
+   "points": 30,
+   "parts": [
+    {
+     "part": 1,
+     "goal": "Themen, Texte und Personen zusammenbringen",
+     "taskType": "Zuordnen (5 Texte zu 5 Personen)",
+     "kind": "zuordnung",
+     "items": 5
+    },
+    {
+     "part": 2,
+     "goal": "Informationen in einer Nachricht verstehen",
+     "taskType": "Mehrfachauswahl, 3-gliedrig",
+     "kind": "mc3",
+     "items": 5
+    },
+    {
+     "part": 3,
+     "goal": "Text lesen und Aussagen beurteilen",
+     "taskType": "Richtig/Falsch",
+     "kind": "richtig-falsch",
+     "items": 5
+    },
+    {
+     "part": 4,
+     "goal": "Zwei Texte vergleichen (a/b)",
+     "taskType": "Zuordnen (a/b)",
+     "kind": "a-b",
+     "items": 5
+    },
+    {
+     "part": 5,
+     "goal": "Gebrauchstexte (Aushänge, Anzeigen, Webseiten) verstehen",
+     "taskType": "Mehrfachauswahl, 3-gliedrig",
+     "kind": "mc3",
+     "items": 5
+    }
+   ]
+  },
+  {
+   "skill": "schreiben",
+   "minutes": 75,
+   "points": 25,
+   "parts": [
+    {
+     "part": 1,
+     "goal": "Formelle E-Mail schreiben (80 Wörter oder mehr)",
+     "taskType": "Freies Schreiben (formelle E-Mail)",
+     "kind": "freies-schreiben"
+    },
+    {
+     "part": 2,
+     "goal": "Forenbeitrag schreiben — Meinung mit 3 Punkten (80 Wörter oder mehr)",
+     "taskType": "Freies Schreiben (Forenbeitrag)",
+     "kind": "freies-schreiben"
+    }
+   ]
+  },
+  {
+   "skill": "hoeren",
+   "minutes": 40,
+   "points": 25,
+   "parts": [
+    {
+     "part": 1,
+     "goal": "Kurze Gespräche im Alltag verstehen",
+     "taskType": "Mehrfachauswahl, 3-gliedrig",
+     "kind": "mc3",
+     "items": 5,
+     "playCount": 2
+    },
+    {
+     "part": 2,
+     "goal": "Interview verstehen und Aussagen beurteilen",
+     "taskType": "Richtig/Falsch",
+     "kind": "richtig-falsch",
+     "items": 5,
+     "playCount": 2
+    },
+    {
+     "part": 3,
+     "goal": "Kurze Gespräche: Wo ist die Person?",
+     "taskType": "Zuordnen (Orte)",
+     "kind": "zuordnung",
+     "items": 5,
+     "playCount": 2
+    }
+   ]
+  },
+  {
+   "skill": "sprechen",
+   "minutes": 15,
+   "points": 20,
+   "parts": [
+    {
+     "part": 1,
+     "goal": "Ein Thema 3 Minuten präsentieren (Kurzvortrag)",
+     "taskType": "Freies Sprechen (Kurzvortrag)",
+     "kind": "freies-sprechen"
+    },
+    {
+     "part": 2,
+     "goal": "Etwas gemeinsam planen und sich einigen",
+     "taskType": "Freies Sprechen (Planung)",
+     "kind": "freies-sprechen"
+    },
+    {
+     "part": 3,
+     "goal": "Gemeinsam eine Option wählen und begründen",
+     "taskType": "Freies Sprechen (Wahl und Begründung)",
+     "kind": "freies-sprechen"
+    }
+   ]
+  }
+ ]
+}

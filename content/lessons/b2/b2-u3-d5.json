@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u3-s5"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ch-ach-laut",
@@ -134,6 +136,23 @@
               }
             ],
             "why": "die Kenntnisse nutzen! · Fachwissen brauchen (يحتاج!) · die Arbeit wandeln (يحوّل مباشرة — Akkusativ!) · das Fachwissen (das!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يبرمج",
+                "de": "programmieren"
+              },
+              {
+                "ar": "الأتمتة",
+                "de": "die Automatisierung"
+              },
+              {
+                "ar": "التكنولوجيا",
+                "de": "die Technologie"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: programmieren = «يبرمج» · die Automatisierung = «الأتمتة» · die Technologie = «التكنولوجيا»"
           }
         ]
       },
@@ -169,6 +188,21 @@
             "q": "Wir ___ Fachwissen. (نحتاج!)",
             "a": "brauchen",
             "why": "brauchen يحتاج (Präsens wir: brauchen!) — Wir brauchen Fachwissen."
+          },
+          {
+            "q": "Der ___ arbeitet.",
+            "a": "Roboter",
+            "why": "الكلمة الناقصة «Roboter» تعني «الآلي» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir verstehen den ___.",
+            "a": "Algorithmus",
+            "why": "الكلمة الناقصة «Algorithmus» تعني «الخوارزمية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ kommt.",
+            "a": "Vernetzung",
+            "why": "الكلمة الناقصة «Vernetzung» تعني «الشبكة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +238,21 @@
             "q": "~~Wir brauchen das Fachwissen auf.~~",
             "a": "Wir brauchen das Fachwissen.",
             "why": "brauchen ليس فعلاً منفصلاً! (لا auf!)!"
+          },
+          {
+            "q": "~~Wir machen das experiment.~~",
+            "a": "Wir machen das Experiment.",
+            "why": "الخطأ في «experiment»! الصواب «Experiment» — راجع القاعدة (التجربة)."
+          },
+          {
+            "q": "~~Die innovation ist wichtig.~~",
+            "a": "Die Innovation ist wichtig.",
+            "why": "الخطأ في «innovation»! الصواب «Innovation» — راجع القاعدة (الابتكار)."
+          },
+          {
+            "q": "~~Wir haben eine erkenntnis.~~",
+            "a": "Wir haben eine Erkenntnis.",
+            "why": "الخطأ في «erkenntnis»! الصواب «Erkenntnis» — راجع القاعدة (المعرفة)."
           }
         ]
       },
@@ -234,6 +283,106 @@
             "q": "تحدّث عن التحوّل! (جملتان!)",
             "a": "Die Technik wandelt die Arbeit. Das ist wichtig.",
             "why": "التحوّل! (die Arbeit wandeln!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Bildung» («التعليم») ثم تحدّث بها.",
+            "a": "Die Bildung ist wichtig.",
+            "why": "استعمل «die Bildung» («التعليم») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Digitalisierung» («الرقمنة») ثم تحدّث بها.",
+            "a": "Wir verstehen die Digitalisierung.",
+            "why": "استعمل «die Digitalisierung» («الرقمنة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "technologie"
+        ],
+        "items": [
+          {
+            "audioId": "word-kenntnis",
+            "speakText": "die Kenntnis.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الدراية",
+              "المعرفة التخصصية",
+              "يحوّل"
+            ],
+            "a": "الدراية",
+            "why": "الصوت يقول «die Kenntnis» — معناها «الدراية». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-fachwissen",
+            "speakText": "das Fachwissen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "das Fachwissen",
+              "die Kenntnis",
+              "wandeln"
+            ],
+            "a": "das Fachwissen",
+            "why": "الكلمة المسموعة «das Fachwissen» تعني «المعرفة التخصصية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-wandeln",
+            "speakText": "wandeln.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يحوّل",
+              "الدراية",
+              "المعرفة التخصصية"
+            ],
+            "a": "يحوّل",
+            "why": "الصوت يقول «wandeln» — معناها «يحوّل». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-technologie",
+            "speakText": "die Technologie.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Technologie",
+              "die Kenntnis",
+              "das Fachwissen"
+            ],
+            "a": "die Technologie",
+            "why": "الكلمة المسموعة «die Technologie» تعني «التكنولوجيا». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "automatisierung"
+        ],
+        "items": [
+          {
+            "audioId": "word-kenntnis",
+            "speakText": "die Kenntnis.",
+            "a": "die Kenntnis",
+            "why": "اكتب ما تسمعه حرفياً: «die Kenntnis» تعني «الدراية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-fachwissen",
+            "speakText": "das Fachwissen.",
+            "a": "das Fachwissen",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «das Fachwissen» («المعرفة التخصصية»)."
+          },
+          {
+            "audioId": "word-wandeln",
+            "speakText": "wandeln.",
+            "a": "wandeln",
+            "why": "اكتب المسموع بدقة: wandeln — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-automatisierung",
+            "speakText": "die Automatisierung.",
+            "a": "die Automatisierung",
+            "why": "اكتب ما تسمعه حرفياً: «die Automatisierung» تعني «الأتمتة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +413,14 @@
           {
             "q": "«نحتاج معرفة تخصصية.»؟",
             "a": "Wir brauchen Fachwissen."
+          },
+          {
+            "q": "«الدراية»؟",
+            "a": "die Kenntnis"
+          },
+          {
+            "q": "«المعرفة»؟",
+            "a": "die Kenntnis"
           }
         ]
       },
@@ -284,6 +441,14 @@
           {
             "q": "die Kenntnisse",
             "a": "المعارف"
+          },
+          {
+            "q": "«الدراية»؟",
+            "a": "die Kenntnis"
+          },
+          {
+            "q": "«المعرفة التخصصية»؟",
+            "a": "das Fachwissen"
           }
         ]
       },
@@ -304,6 +469,14 @@
           {
             "q": "«نستخدم المعارف.»؟",
             "a": "Wir nutzen die Kenntnisse."
+          },
+          {
+            "q": "«الدراية»؟",
+            "a": "die Kenntnis"
+          },
+          {
+            "q": "«المعرفة التخصصية»؟",
+            "a": "das Fachwissen"
           }
         ]
       }

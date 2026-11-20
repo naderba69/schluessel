@@ -70,7 +70,9 @@
     "grammarArsenalIds": [
       "ars-vortragstext"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u11-s4"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "v2-order",
@@ -187,6 +189,23 @@
               }
             ],
             "why": "selten نادراً (ظرف!) · ziemlich إلى حد كبير (ظرف قبل الصفة!) · nachhaltig مستدام (صفة!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الاستراتيجية",
+                "de": "die Strategie"
+              },
+              {
+                "ar": "الرواية",
+                "de": "der Roman"
+              },
+              {
+                "ar": "الجزء الرئيسي",
+                "de": "der Hauptteil"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Strategie = «الاستراتيجية» · der Roman = «الرواية» · der Hauptteil = «الجزء الرئيسي»"
           }
         ]
       },
@@ -198,9 +217,8 @@
           "نص العرض!"
         ],
         "interleavedWith": [
-          "entwurf",
-          "formulieren",
-          "ueberblick"
+          "gestalten",
+          "erwaehnen"
         ],
         "items": [
           {
@@ -227,6 +245,16 @@
             "q": "Das Buch ist ___ lang. (إلى حد كبير!)",
             "a": "ziemlich",
             "why": "ziemlich قبل الصفة! Das Buch ist ziemlich lang. (ظرف + صفة!)"
+          },
+          {
+            "q": "Er ___ die Freizeit.",
+            "a": "gestaltet",
+            "why": "الكلمة الناقصة «gestaltet» تعني «يُصمّم» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Er ___ das Buch.",
+            "a": "erwähnt",
+            "why": "الكلمة الناقصة «erwähnt» تعني «يذكر» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -238,9 +266,8 @@
           "الماضي! الأداة! الصيغة!"
         ],
         "interleavedWith": [
-          "kreativitaet",
-          "handwerk",
-          "musizieren"
+          "gestalten",
+          "erwaehnen"
         ],
         "items": [
           {
@@ -257,6 +284,16 @@
             "q": "~~Das Buch ist lang ziemlich.~~",
             "a": "Das Buch ist ziemlich lang.",
             "why": "ziemlich قبل الصفة لا بعدها! (ظرف التقدير أولاً!)"
+          },
+          {
+            "q": "~~Er Gestaltet die Freizeit.~~",
+            "a": "Er gestaltet die Freizeit.",
+            "why": "الخطأ في «Gestaltet»! الصواب «gestaltet» — راجع القاعدة (يُصمّم)."
+          },
+          {
+            "q": "~~Er Erwähnt das Buch.~~",
+            "a": "Er erwähnt das Buch.",
+            "why": "الخطأ في «Erwähnt»! الصواب «erwähnt» — راجع القاعدة (يذكر)."
           }
         ]
       },
@@ -268,9 +305,8 @@
           "Entwurf! Sätze! Überblick!"
         ],
         "interleavedWith": [
-          "woechentlich",
-          "nachhaltig",
-          "vielfalt"
+          "gestalten",
+          "erwaehnen"
         ],
         "items": [
           {
@@ -287,6 +323,106 @@
             "q": "اختم بالنظرة العامة! (جملتان!)",
             "a": "Der Überblick ist gut. Die Vielfalt ist nachhaltig.",
             "why": "الخاتمة والنظرة العامة! (Überblick! + nachhaltig!)"
+          },
+          {
+            "q": "كوّن جملة فيها «gestalten» («يُصمّم») ثم تحدّث بها.",
+            "a": "Er gestaltet die Freizeit.",
+            "why": "استعمل «gestalten» («يُصمّم») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «erwähnen» («يذكر») ثم تحدّث بها.",
+            "a": "Er erwähnt das Buch.",
+            "why": "استعمل «erwähnen» («يذكر») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "gestalten"
+        ],
+        "items": [
+          {
+            "audioId": "word-entwurf",
+            "speakText": "der Entwurf.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المسودة",
+              "يصيغ",
+              "نظرة عامة"
+            ],
+            "a": "المسودة",
+            "why": "الصوت يقول «der Entwurf» — معناها «المسودة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-formulieren",
+            "speakText": "formulieren.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "formulieren",
+              "der Entwurf",
+              "der Überblick"
+            ],
+            "a": "formulieren",
+            "why": "الكلمة المسموعة «formulieren» تعني «يصيغ». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-ueberblick",
+            "speakText": "der Überblick.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "نظرة عامة",
+              "المسودة",
+              "يصيغ"
+            ],
+            "a": "نظرة عامة",
+            "why": "الصوت يقول «der Überblick» — معناها «نظرة عامة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-gestalten",
+            "speakText": "gestalten.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "gestalten",
+              "der Entwurf",
+              "formulieren"
+            ],
+            "a": "gestalten",
+            "why": "الكلمة المسموعة «gestalten» تعني «يُصمّم». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "erwaehnen"
+        ],
+        "items": [
+          {
+            "audioId": "word-darstellung",
+            "speakText": "die Darstellung.",
+            "a": "die Darstellung",
+            "why": "اكتب ما تسمعه حرفياً: «die Darstellung» تعني «العرض». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-kreativitaet",
+            "speakText": "die Kreativität.",
+            "a": "die Kreativität",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Kreativität» («الإبداع»)."
+          },
+          {
+            "audioId": "word-handwerk",
+            "speakText": "das Handwerk.",
+            "a": "das Handwerk",
+            "why": "اكتب المسموع بدقة: das Handwerk — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-erwaehnen",
+            "speakText": "erwähnen.",
+            "a": "erwähnen",
+            "why": "اكتب ما تسمعه حرفياً: «erwähnen» تعني «يذكر». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -317,6 +453,14 @@
           {
             "q": "«الإبداع»؟",
             "a": "die Kreativität"
+          },
+          {
+            "q": "«يصيغ»؟",
+            "a": "formulieren"
+          },
+          {
+            "q": "«الحرفة اليدوية»؟",
+            "a": "das Handwerk"
           }
         ]
       },
@@ -337,6 +481,14 @@
           {
             "q": "«يعتني بالحديقة.»؟",
             "a": "Er pflegt den Garten."
+          },
+          {
+            "q": "«المسودة»؟",
+            "a": "der Entwurf"
+          },
+          {
+            "q": "«يصيغ»؟",
+            "a": "formulieren"
           }
         ]
       },
@@ -357,6 +509,14 @@
           {
             "q": "«العمل التطوعي»؟",
             "a": "das Ehrenamt"
+          },
+          {
+            "q": "«المسودة»؟",
+            "a": "der Entwurf"
+          },
+          {
+            "q": "«يصيغ»؟",
+            "a": "formulieren"
           }
         ]
       }

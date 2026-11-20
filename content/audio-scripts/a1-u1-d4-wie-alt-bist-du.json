@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a1-u1-d4-wie-alt-bist-du",
+  "kind": "dialogue",
+  "level": "A1",
+  "title": {
+    "de": "Wie alt bist du?",
+    "ar": "كم عمرك؟"
+  },
+  "usedIn": [
+    "a1-u1-d4"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a1u1d4-l1",
+      "speaker": "yusuf",
+      "text": "Hallo Lena! Wie alt bist du?",
+      "direction": "سؤال عمر — بسيط"
+    },
+    {
+      "id": "a1u1d4-l2",
+      "speaker": "lena",
+      "text": "Ich bin neunzehn Jahre alt. Und du?",
+      "direction": "إجابة + سؤال"
+    },
+    {
+      "id": "a1u1d4-l3",
+      "speaker": "yusuf",
+      "text": "Ich bin zwanzig Jahre alt.",
+      "direction": "إجابة"
+    },
+    {
+      "id": "a1u1d4-l4",
+      "speaker": "lena",
+      "text": "Und deine Nummer?",
+      "direction": "سؤال رقم"
+    },
+    {
+      "id": "a1u1d4-l5",
+      "speaker": "yusuf",
+      "text": "Die Nummer ist: null, eins, sechs, zwei.",
+      "direction": "إملاء رقم"
+    },
+    {
+      "id": "a1u1d4-l6",
+      "speaker": "lena",
+      "text": "Danke! Das ist gut.",
+      "direction": "امتنان"
+    },
+    {
+      "id": "a1u1d4-l7",
+      "speaker": "yusuf",
+      "text": "Mein Telefon ist neu.",
+      "direction": "جملة بسيطة"
+    },
+    {
+      "id": "a1u1d4-l8",
+      "speaker": "lena",
+      "text": "Mein Telefon auch! Tschüss!",
+      "direction": "وداع"
+    }
+  ]
+}

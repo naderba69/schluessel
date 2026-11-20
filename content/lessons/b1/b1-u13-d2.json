@@ -59,7 +59,9 @@
       "ars-obwohl",
       "ars-konnektoren"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u13-s2"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "needs-ein"
@@ -175,6 +177,23 @@
               }
             ],
             "why": "مراجعة الأفعال! denken يفكّر · sehen يرى · erfüllen يُحقّق · sagen يقول"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "السمة المميزة",
+                "de": "das Merkmal"
+              },
+              {
+                "ar": "يتعرّف على",
+                "de": "erkennen"
+              },
+              {
+                "ar": "عن ظهر قلب",
+                "de": "auswendig"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: das Merkmal = «السمة المميزة» · erkennen = «يتعرّف على» · auswendig = «عن ظهر قلب»"
           }
         ]
       },
@@ -186,9 +205,8 @@
           "الاتّساق والروابط!"
         ],
         "interleavedWith": [
-          "logisch",
-          "zusammenhang",
-          "bedingung"
+          "auswendig",
+          "erkennen"
         ],
         "items": [
           {
@@ -215,6 +233,16 @@
             "q": "Er erfüllt die ___. (يُحقّق الشرط!)",
             "a": "Bedingung",
             "why": "die Bedingung erfüllen — المفردة الثابتة! (die Bedingung erfüllen!)"
+          },
+          {
+            "q": "Sie lernt ___.",
+            "a": "auswendig",
+            "why": "الكلمة الناقصة «auswendig» تعني «عن ظهر قلب» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Er ___ den Fehler.",
+            "a": "erkennt",
+            "why": "الكلمة الناقصة «erkennt» تعني «يتعرّف على» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -245,6 +273,16 @@
             "q": "~~Obwohl der Satz ist logisch.~~",
             "a": "Obwohl der Satz logisch ist.",
             "why": "obwohl يطلب الفعل آخرًا! (verb-last!) — obwohl der Satz logisch IST (ars-obwohl!)"
+          },
+          {
+            "q": "~~Das ist die regel.~~",
+            "a": "Das ist die Regel.",
+            "why": "الخطأ في «regel»! الصواب «Regel» — راجع القاعدة (قاعدة)."
+          },
+          {
+            "q": "~~Das ist nur ein beispiel.~~",
+            "a": "Das ist nur ein Beispiel.",
+            "why": "الخطأ في «beispiel»! الصواب «Beispiel» — راجع القاعدة (مثال)."
           }
         ]
       },
@@ -256,7 +294,6 @@
           "Zusammenhang! logisch! Bedingung!"
         ],
         "interleavedWith": [
-          "weil",
           "deshalb",
           "trotzdem"
         ],
@@ -280,6 +317,111 @@
             "q": "اختم بالرابط! (جملتان بـobwohl!)",
             "a": "Obwohl die Bedingung lang ist, ist sie klar. Der Zusammenhang ist logisch.",
             "why": "الرابط يطلب الفعل آخر الجملة! (قاعدة التناقض المُدرَّسة!)"
+          },
+          {
+            "q": "كوّن جملة فيها «weil» («لأن») ثم تحدّث بها.",
+            "a": "Ich brauche einen Termin, weil ich krank bin.",
+            "why": "استعمل «weil» («لأن») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «deshalb» («لهذا السبب») ثم تحدّث بها.",
+            "a": "Ich bin krank, deshalb brauche ich einen Termin.",
+            "why": "استعمل «deshalb» («لهذا السبب») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «trotzdem» («رغم ذلك») ثم تحدّث بها.",
+            "a": "Trotzdem komme ich pünktlich zur Arbeit.",
+            "why": "استعمل «trotzdem» («رغم ذلك») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "weil"
+        ],
+        "items": [
+          {
+            "audioId": "word-logisch",
+            "speakText": "logisch.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "منطقي",
+              "الاتّساق",
+              "الشرط"
+            ],
+            "a": "منطقي",
+            "why": "الصوت يقول «logisch» — معناها «منطقي». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-zusammenhang",
+            "speakText": "der Zusammenhang.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Zusammenhang",
+              "logisch",
+              "die Bedingung"
+            ],
+            "a": "der Zusammenhang",
+            "why": "الكلمة المسموعة «der Zusammenhang» تعني «الاتّساق». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-bedingung",
+            "speakText": "die Bedingung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الشرط",
+              "منطقي",
+              "الاتّساق"
+            ],
+            "a": "الشرط",
+            "why": "الصوت يقول «die Bedingung» — معناها «الشرط». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-weil",
+            "speakText": "weil.",
+            "q": "استمع: الكلمة المسترجَعة من درس سابق — ما هي؟",
+            "choices": [
+              "weil",
+              "logisch",
+              "der Zusammenhang"
+            ],
+            "a": "weil",
+            "why": "الكلمة المسموعة «weil» تعني «لأن». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "auswendig"
+        ],
+        "items": [
+          {
+            "audioId": "word-logisch",
+            "speakText": "logisch.",
+            "a": "logisch",
+            "why": "اكتب ما تسمعه حرفياً: «logisch» تعني «منطقي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-zusammenhang",
+            "speakText": "der Zusammenhang.",
+            "a": "der Zusammenhang",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Zusammenhang» («الاتّساق»)."
+          },
+          {
+            "audioId": "word-bedingung",
+            "speakText": "die Bedingung.",
+            "a": "die Bedingung",
+            "why": "اكتب المسموع بدقة: die Bedingung — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-auswendig",
+            "speakText": "auswendig.",
+            "a": "auswendig",
+            "why": "اكتب ما تسمعه حرفياً: «auswendig» تعني «عن ظهر قلب». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -310,6 +452,14 @@
           {
             "q": "«يفكّر بمنطق.»؟",
             "a": "Er denkt logisch."
+          },
+          {
+            "q": "«عقلاني»؟",
+            "a": "logisch"
+          },
+          {
+            "q": "«الصلة»؟",
+            "a": "der Zusammenhang"
           }
         ]
       },
@@ -330,6 +480,14 @@
           {
             "q": "«يرى الاتّساق.»؟",
             "a": "Er sieht den Zusammenhang."
+          },
+          {
+            "q": "«منطقي»؟",
+            "a": "logisch"
+          },
+          {
+            "q": "«الاتّساق»؟",
+            "a": "der Zusammenhang"
           }
         ]
       },
@@ -350,6 +508,14 @@
           {
             "q": "«يُحقّق الشرط.»؟ (المفردة الثابتة!)",
             "a": "Er erfüllt die Bedingung."
+          },
+          {
+            "q": "«منطقي»؟",
+            "a": "logisch"
+          },
+          {
+            "q": "«الاتّساق»؟",
+            "a": "der Zusammenhang"
           }
         ]
       }

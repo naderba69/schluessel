@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u3-s3"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ng-velar",
@@ -134,6 +136,23 @@
               }
             ],
             "why": "der Roboter arbeitet (يعمل!) · den Algorithmus verstehen (المذكّر في النصب: den!) · die Vernetzung nutzen! · der Algorithmus (der!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التجربة",
+                "de": "das Experiment"
+              },
+              {
+                "ar": "الابتكار",
+                "de": "die Innovation"
+              },
+              {
+                "ar": "المعرفة",
+                "de": "die Erkenntnis"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: das Experiment = «التجربة» · die Innovation = «الابتكار» · die Erkenntnis = «المعرفة»"
           }
         ]
       },
@@ -169,6 +188,21 @@
             "q": "Wir verstehen ___ Algorithmus. (الخوارزمية!)",
             "a": "den",
             "why": "verstehen + Akkusativ: den Algorithmus! (المذكّر في النصب: den!)!"
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Bildung",
+            "why": "الكلمة الناقصة «Bildung» تعني «التعليم» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir nutzen die ___.",
+            "a": "Technik",
+            "why": "الكلمة الناقصة «Technik» تعني «التقنية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir verstehen die ___.",
+            "a": "Digitalisierung",
+            "why": "الكلمة الناقصة «Digitalisierung» تعني «الرقمنة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +238,21 @@
             "q": "~~Wir verstehen auf den Algorithmus.~~",
             "a": "Wir verstehen den Algorithmus.",
             "why": "verstehen يتبع مفعوله مباشرة (Akkusativ: den Algorithmus!)! (لا auf!)!"
+          },
+          {
+            "q": "~~Die gerechtigkeit ist wichtig.~~",
+            "a": "Die Gerechtigkeit ist wichtig.",
+            "why": "الخطأ في «gerechtigkeit»! الصواب «Gerechtigkeit» — راجع القاعدة (العدل)."
+          },
+          {
+            "q": "~~Ich warne dich.~~ (ناقصة: warnen)",
+            "a": "Ich warne dich. warnen.",
+            "why": "الجملة تفتقد «warnen» (يحذّر) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~Wir lösen den konflikt.~~",
+            "a": "Wir lösen den Konflikt.",
+            "why": "الخطأ في «konflikt»! الصواب «Konflikt» — راجع القاعدة (النزاع)."
           }
         ]
       },
@@ -234,6 +283,111 @@
             "q": "تحدّث عن الشبكة! (جملتان!)",
             "a": "Die Vernetzung kommt. Wir nutzen die Vernetzung.",
             "why": "الشبكة! (die Vernetzung nutzen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Hitze» («الحرارة») ثم تحدّث بها.",
+            "a": "Die Hitze ist gefährlich.",
+            "why": "استعمل «die Hitze» («الحرارة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Erderwärmung» («إحماء الأرض») ثم تحدّث بها.",
+            "a": "Wir vermeiden die Erderwärmung.",
+            "why": "استعمل «die Erderwärmung» («إحماء الأرض») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «bewahren» («يصون») ثم تحدّث بها.",
+            "a": "Wir bewahren die Erde.",
+            "why": "استعمل «bewahren» («يصون») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "erkenntnis"
+        ],
+        "items": [
+          {
+            "audioId": "word-roboter",
+            "speakText": "der Roboter.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الآلي",
+              "الخوارزمية",
+              "الشبكة"
+            ],
+            "a": "الآلي",
+            "why": "الصوت يقول «der Roboter» — معناها «الآلي». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-algorithmus",
+            "speakText": "der Algorithmus.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Algorithmus",
+              "der Roboter",
+              "die Vernetzung"
+            ],
+            "a": "der Algorithmus",
+            "why": "الكلمة المسموعة «der Algorithmus» تعني «الخوارزمية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-vernetzung",
+            "speakText": "die Vernetzung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الشبكة",
+              "الآلي",
+              "الخوارزمية"
+            ],
+            "a": "الشبكة",
+            "why": "الصوت يقول «die Vernetzung» — معناها «الشبكة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-erkenntnis",
+            "speakText": "die Erkenntnis.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Erkenntnis",
+              "der Roboter",
+              "der Algorithmus"
+            ],
+            "a": "die Erkenntnis",
+            "why": "الكلمة المسموعة «die Erkenntnis» تعني «المعرفة». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "innovation"
+        ],
+        "items": [
+          {
+            "audioId": "word-roboter",
+            "speakText": "der Roboter.",
+            "a": "der Roboter",
+            "why": "اكتب ما تسمعه حرفياً: «der Roboter» تعني «الآلي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-algorithmus",
+            "speakText": "der Algorithmus.",
+            "a": "der Algorithmus",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Algorithmus» («الخوارزمية»)."
+          },
+          {
+            "audioId": "word-vernetzung",
+            "speakText": "die Vernetzung.",
+            "a": "die Vernetzung",
+            "why": "اكتب المسموع بدقة: die Vernetzung — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-innovation",
+            "speakText": "die Innovation.",
+            "a": "die Innovation",
+            "why": "اكتب ما تسمعه حرفياً: «die Innovation» تعني «الابتكار». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +418,14 @@
           {
             "q": "«الآلي يعمل.»؟",
             "a": "Der Roboter arbeitet."
+          },
+          {
+            "q": "«الآلي»؟",
+            "a": "der Roboter"
+          },
+          {
+            "q": "«نفهم الخوارزمية.»؟",
+            "a": "Wir verstehen den Algorithmus."
           }
         ]
       },
@@ -284,6 +446,14 @@
           {
             "q": "der Roboter",
             "a": "الآلي"
+          },
+          {
+            "q": "«الآلي»؟",
+            "a": "der Roboter"
+          },
+          {
+            "q": "«الخوارزمية»؟",
+            "a": "der Algorithmus"
           }
         ]
       },
@@ -304,6 +474,14 @@
           {
             "q": "«الآلي يعمل.»؟",
             "a": "Der Roboter arbeitet."
+          },
+          {
+            "q": "«الآلي»؟",
+            "a": "der Roboter"
+          },
+          {
+            "q": "«الخوارزمية»؟",
+            "a": "der Algorithmus"
           }
         ]
       }

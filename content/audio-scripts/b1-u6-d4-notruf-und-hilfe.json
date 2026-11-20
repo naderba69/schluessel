@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u6-d4-notruf-und-hilfe",
+  "kind": "dialogue",
+  "level": "B1",
+  "title": {
+    "de": "Notruf und Hilfe",
+    "ar": "الطوارئ والمساعدة"
+  },
+  "usedIn": [
+    "b1-u6-d4"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b1u6d4-l1",
+      "speaker": "lena",
+      "text": "Hilfe! Hier brennt es!",
+      "direction": "طوارئ"
+    },
+    {
+      "id": "b1u6d4-l2",
+      "speaker": "yusuf",
+      "text": "Ich rufe den Notruf an! Die Feuerwehr kommt.",
+      "direction": "سرعة تصرف"
+    },
+    {
+      "id": "b1u6d4-l3",
+      "speaker": "lena",
+      "text": "Danke! Können Sie die Nachbarn retten?",
+      "direction": "طلب"
+    },
+    {
+      "id": "b1u6d4-l4",
+      "speaker": "yusuf",
+      "text": "Ja. Gehen Sie nach draußen!",
+      "direction": "توجيه"
+    },
+    {
+      "id": "b1u6d4-l5",
+      "speaker": "lena",
+      "text": "Hätten Sie helfen können ohne mich?",
+      "direction": "سؤال لاحق"
+    },
+    {
+      "id": "b1u6d4-l6",
+      "speaker": "yusuf",
+      "text": "Immer. Helfen ist wichtig.",
+      "direction": "مبدأ"
+    },
+    {
+      "id": "b1u6d4-l7",
+      "speaker": "lena",
+      "text": "Die Feuerwehr ist da! Danke für alles.",
+      "direction": "ارتياح"
+    },
+    {
+      "id": "b1u6d4-l8",
+      "speaker": "yusuf",
+      "text": "Sehr gut! Alle sind gerettet!",
+      "direction": "إغلاق"
+    }
+  ]
+}

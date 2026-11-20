@@ -70,7 +70,9 @@
     "grammarArsenalIds": [
       "ars-dialog"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u9-s2"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "trennbar",
@@ -170,6 +172,23 @@
               }
             ],
             "why": "entscheidend حاسم · bestimmt بالتأكيد · vermutlich على الأرجح (تليين!) · erwidern يردّ (erwidert/erwiderte/hat erwidert!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يسأل مجدداً",
+                "de": "nachfragen"
+              },
+              {
+                "ar": "يوضّح",
+                "de": "klären"
+              },
+              {
+                "ar": "النزاع",
+                "de": "der Konflikt"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: nachfragen = «يسأل مجدداً» · klären = «يوضّح» · der Konflikt = «النزاع»"
           }
         ]
       },
@@ -181,9 +200,8 @@
           "أدوات الحوار!"
         ],
         "interleavedWith": [
-          "unterbrechen",
-          "einwand",
-          "zusammenfassung"
+          "bezweifeln",
+          "schildern"
         ],
         "items": [
           {
@@ -215,6 +233,16 @@
             "q": "Meinen Sie ___ mich? («هل تقصد…؟!»)",
             "a": "etwa",
             "why": "etwa في الاستفهام = التعجّب/الشكّ! Meinen Sie etwa mich?"
+          },
+          {
+            "q": "Er ___ das.",
+            "a": "bezweifelt",
+            "why": "الكلمة الناقصة «bezweifelt» تعني «يشكّك في» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "___ Sie die Situation!",
+            "a": "Schildern",
+            "why": "الكلمة الناقصة «Schildern» تعني «يصف (الأحداث)» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -226,9 +254,8 @@
           "التصريف! الانفصال! تمام ist!"
         ],
         "interleavedWith": [
-          "wohl",
-          "etwa",
-          "erwidern"
+          "bezweifeln",
+          "schildern"
         ],
         "items": [
           {
@@ -245,6 +272,16 @@
             "q": "~~Ich habe abgeschweift.~~",
             "a": "Ich bin abgeschweift.",
             "why": "abschweifen = تغيّر حالة (يجنح عن الموضوع!) — التمام ist لا habe! (u7: Bewegung!)"
+          },
+          {
+            "q": "~~Er Bezweifelt das.~~",
+            "a": "Er bezweifelt das.",
+            "why": "الخطأ في «Bezweifelt»! الصواب «bezweifelt» — راجع القاعدة (يشكّك في)."
+          },
+          {
+            "q": "~~schildern Sie die Situation!~~",
+            "a": "Schildern Sie die Situation!",
+            "why": "الخطأ في «schildern»! الصواب «Schildern» — راجع القاعدة (يصف (الأحداث))."
           }
         ]
       },
@@ -256,9 +293,8 @@
           "unterbrechen! einwenden! zusammenfassen!"
         ],
         "interleavedWith": [
-          "halt",
-          "wohl",
-          "bestimmt"
+          "bezweifeln",
+          "schildern"
         ],
         "items": [
           {
@@ -275,6 +311,106 @@
             "q": "اختم بالتليين! (3 جمل!)",
             "a": "Das ist wohl möglich. Vermutlich ist das richtig. Das ist halt so!",
             "why": "wohl/vermutlich/halt — أدوات التليين الثلاث! (النبرة جزء من المعنى!)"
+          },
+          {
+            "q": "كوّن جملة فيها «bezweifeln» («يشكّك في») ثم تحدّث بها.",
+            "a": "Er bezweifelt das.",
+            "why": "استعمل «bezweifeln» («يشكّك في») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «schildern» («يصف (الأحداث)») ثم تحدّث بها.",
+            "a": "Schildern Sie die Situation!",
+            "why": "استعمل «schildern» («يصف (الأحداث)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "bezweifeln"
+        ],
+        "items": [
+          {
+            "audioId": "word-unterbrechen",
+            "speakText": "unterbrechen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يقاطع",
+              "المقاطعة",
+              "يعترض"
+            ],
+            "a": "يقاطع",
+            "why": "الصوت يقول «unterbrechen» — معناها «يقاطع». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-unterbrechung",
+            "speakText": "die Unterbrechung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Unterbrechung",
+              "unterbrechen",
+              "einwenden"
+            ],
+            "a": "die Unterbrechung",
+            "why": "الكلمة المسموعة «die Unterbrechung» تعني «المقاطعة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-einwenden",
+            "speakText": "einwenden.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يعترض",
+              "يقاطع",
+              "المقاطعة"
+            ],
+            "a": "يعترض",
+            "why": "الصوت يقول «einwenden» — معناها «يعترض». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-bezweifeln",
+            "speakText": "bezweifeln.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "bezweifeln",
+              "unterbrechen",
+              "die Unterbrechung"
+            ],
+            "a": "bezweifeln",
+            "why": "الكلمة المسموعة «bezweifeln» تعني «يشكّك في». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "schildern"
+        ],
+        "items": [
+          {
+            "audioId": "word-einwand",
+            "speakText": "der Einwand.",
+            "a": "der Einwand",
+            "why": "اكتب ما تسمعه حرفياً: «der Einwand» تعني «الاعتراض». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-unterhaltung",
+            "speakText": "die Unterhaltung.",
+            "a": "die Unterhaltung",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Unterhaltung» («المحادثة»)."
+          },
+          {
+            "audioId": "word-zusammenfassung",
+            "speakText": "die Zusammenfassung.",
+            "a": "die Zusammenfassung",
+            "why": "اكتب المسموع بدقة: die Zusammenfassung — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-schildern",
+            "speakText": "schildern.",
+            "a": "schildern",
+            "why": "اكتب ما تسمعه حرفياً: «schildern» تعني «يصف (الأحداث)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -305,6 +441,14 @@
           {
             "q": "«حاسم»؟",
             "a": "entscheidend"
+          },
+          {
+            "q": "«يقاطع»؟",
+            "a": "unterbrechen"
+          },
+          {
+            "q": "«المقاطعة»؟",
+            "a": "die Unterbrechung"
           }
         ]
       },
@@ -325,6 +469,14 @@
           {
             "q": "«يشرد بالحديث»؟",
             "a": "abschweifen"
+          },
+          {
+            "q": "«يقاطع»؟",
+            "a": "unterbrechen"
+          },
+          {
+            "q": "«المقاطعة»؟",
+            "a": "die Unterbrechung"
           }
         ]
       },
@@ -345,6 +497,14 @@
           {
             "q": "«على أي حال»؟",
             "a": "jedenfalls"
+          },
+          {
+            "q": "«يقاطع»؟",
+            "a": "unterbrechen"
+          },
+          {
+            "q": "«المقاطعة»؟",
+            "a": "die Unterbrechung"
           }
         ]
       }

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u6-d2-ernaehrung-und-entspannung",
+  "kind": "dialogue",
+  "level": "B2",
+  "title": {
+    "de": "Ernährung und Entspannung",
+    "ar": "التغذية والاسترخاء"
+  },
+  "usedIn": [
+    "b2-u6-d2"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b2u6d2-l1",
+      "speaker": "lena",
+      "text": "Die Ernährung ist wichtig, die Entspannung ist gut und die Pflege hilft!",
+      "direction": "نمط حياة"
+    },
+    {
+      "id": "b2u6d2-l2",
+      "speaker": "yusuf",
+      "text": "Was ist gute Ernährung?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u6d2-l3",
+      "speaker": "lena",
+      "text": "Frisch, bunt, wenig Zucker. Und Entspannung nicht vergessen.",
+      "direction": "إجابة"
+    },
+    {
+      "id": "b2u6d2-l4",
+      "speaker": "yusuf",
+      "text": "Ich schlafe zu wenig.",
+      "direction": "اعتراف"
+    },
+    {
+      "id": "b2u6d2-l5",
+      "speaker": "lena",
+      "text": "Das ändert sich. Pflege dich selbst!",
+      "direction": "نصيحة"
+    },
+    {
+      "id": "b2u6d2-l6",
+      "speaker": "yusuf",
+      "text": "Gut. Mehr Gemüse, mehr Ruhe.",
+      "direction": "قرار"
+    },
+    {
+      "id": "b2u6d2-l7",
+      "speaker": "lena",
+      "text": "Gut. Das ist gute Pflege.",
+      "direction": "تعزيز"
+    },
+    {
+      "id": "b2u6d2-l8",
+      "speaker": "yusuf",
+      "text": "Danke! Ich fange heute an.",
+      "direction": "إغلاق"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u2-d6-der-wochenbericht",
+  "kind": "dialogue",
+  "level": "A2",
+  "title": {
+    "de": "Der Wochenbericht",
+    "ar": "التقرير الأسبوعي"
+  },
+  "usedIn": [
+    "a2-u2-d6"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a2u2d6-l1",
+      "speaker": "yusuf",
+      "text": "Thomas, ich berichte über meine Woche.",
+      "direction": "يوسف يبدأ التقرير"
+    },
+    {
+      "id": "a2u2d6-l2",
+      "speaker": "thomas",
+      "text": "Und? Wie war sie?",
+      "direction": "توماس يسأل"
+    },
+    {
+      "id": "a2u2d6-l3",
+      "speaker": "yusuf",
+      "text": "Gut! Ich habe eine Bewerbung geschrieben und ein Interview gemacht.",
+      "direction": "يوسف يسرد إنجازاته"
+    },
+    {
+      "id": "a2u2d6-l4",
+      "speaker": "thomas",
+      "text": "Gut! Und am Dienstag?",
+      "direction": "توماس يسأل عن يوم آخر"
+    },
+    {
+      "id": "a2u2d6-l5",
+      "speaker": "yusuf",
+      "text": "Da habe ich an einem Projekt gearbeitet.",
+      "direction": "يوسف يتذكر"
+    },
+    {
+      "id": "a2u2d6-l6",
+      "speaker": "thomas",
+      "text": "Und der Chef? Was hat er gesagt?",
+      "direction": "توماس يسأل عن المدير"
+    },
+    {
+      "id": "a2u2d6-l7",
+      "speaker": "yusuf",
+      "text": "Er hat gesagt: Du darfst nicht zu spät kommen!",
+      "direction": "يوسف يقلد صوت المدير"
+    },
+    {
+      "id": "a2u2d6-l8",
+      "speaker": "thomas",
+      "text": "Guter Bericht! Nächste Woche wieder.",
+      "direction": "توماس يضحك"
+    }
+  ]
+}

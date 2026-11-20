@@ -96,7 +96,9 @@
       "needs-ein",
       "needs-ist"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a2-u4-s5"
+    ],
     "wordIds": [
       "tafel",
       "fest",
@@ -132,6 +134,14 @@
           {
             "a": "Gitarre",
             "q": "Der Star spielt ___. (Gitarre)"
+          },
+          {
+            "q": "«لوحة (للكتابة/المعلومات)»؟",
+            "a": "die Tafel"
+          },
+          {
+            "q": "«احتفال/عيد»؟",
+            "a": "das Fest"
           }
         ],
         "passingScore": 0.75
@@ -153,6 +163,14 @@
           {
             "a": "etwas",
             "q": "Ich habe ___ für dich. (etwas)"
+          },
+          {
+            "q": "«لوحة (للكتابة/المعلومات)»؟",
+            "a": "die Tafel"
+          },
+          {
+            "q": "«احتفال/عيد»؟",
+            "a": "das Fest"
           }
         ],
         "passingScore": 0.75
@@ -174,6 +192,14 @@
           {
             "a": "blöd",
             "q": "Das ist ___. (blöd)"
+          },
+          {
+            "q": "«لوحة (للكتابة/المعلومات)»؟",
+            "a": "die Tafel"
+          },
+          {
+            "q": "«احتفال/عيد»؟",
+            "a": "das Fest"
           }
         ],
         "passingScore": 0.75
@@ -223,7 +249,7 @@
           },
           {
             "a": "schenkt",
-            "q": "هو يُهديك شيئاً للحفلة: Er ___ dir etwas zum Fest. (schenken)",
+            "q": "هو يُهديك شيئاً للحفلة: البادئة الملتصقة ___ dir etwas zum Fest. (schenken)",
             "why": "Er schenkt dir etwas! (هو يُهديك!) — er ← schenkt!"
           },
           {
@@ -330,6 +356,96 @@
           }
         ],
         "type": "speaking"
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "hauptstadt"
+        ],
+        "items": [
+          {
+            "audioId": "word-tafel",
+            "speakText": "die Tafel.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "لوحة (للكتابة/المعلومات)",
+              "احتفال/عيد",
+              "مهرجان"
+            ],
+            "a": "لوحة (للكتابة/المعلومات)",
+            "why": "الصوت يقول «die Tafel» — معناها «لوحة (للكتابة/المعلومات)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-fest",
+            "speakText": "das Fest.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "das Fest",
+              "die Tafel",
+              "das Festival"
+            ],
+            "a": "das Fest",
+            "why": "الكلمة المسموعة «das Fest» تعني «احتفال/عيد». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-festival",
+            "speakText": "das Festival.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "مهرجان",
+              "لوحة (للكتابة/المعلومات)",
+              "احتفال/عيد"
+            ],
+            "a": "مهرجان",
+            "why": "الصوت يقول «das Festival» — معناها «مهرجان». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-hauptstadt",
+            "speakText": "die Hauptstadt.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Hauptstadt",
+              "die Tafel",
+              "das Fest"
+            ],
+            "a": "die Hauptstadt",
+            "why": "الكلمة المسموعة «die Hauptstadt» تعني «عاصمة». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "ahnung"
+        ],
+        "items": [
+          {
+            "audioId": "word-etwas",
+            "speakText": "etwas.",
+            "a": "etwas",
+            "why": "اكتب ما تسمعه حرفياً: «etwas» تعني «شيء ما». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-schenken",
+            "speakText": "schenken.",
+            "a": "schenken",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «schenken» («يُهدي»)."
+          },
+          {
+            "audioId": "word-torte",
+            "speakText": "die Torte.",
+            "a": "die Torte",
+            "why": "اكتب المسموع بدقة: die Torte — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-ahnung",
+            "speakText": "die Ahnung.",
+            "a": "die Ahnung",
+            "why": "اكتب ما تسمعه حرفياً: «die Ahnung» تعني «فكرة/علم (لا علم لي!)». انتبه للحروف الكبيرة!"
+          }
+        ]
       }
     ]
   },

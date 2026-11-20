@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u1-s3"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ch-ich-laut",
@@ -134,6 +136,23 @@
               }
             ],
             "why": "Integration fördern! · Gleichheit leben! · Freunden beistehen (Dativ!) · die Gleichheiten جمع -en"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التفاني",
+                "de": "der Einsatz"
+              },
+              {
+                "ar": "اللباقة",
+                "de": "die Höflichkeit"
+              },
+              {
+                "ar": "يتوسّط",
+                "de": "vermitteln"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Einsatz = «التفاني» · die Höflichkeit = «اللباقة» · vermitteln = «يتوسّط»"
           }
         ]
       },
@@ -169,6 +188,21 @@
             "q": "Integration braucht ___. (وقتاً!)",
             "a": "Zeit",
             "why": "die Zeit الوقت (die!) — Integration braucht Zeit."
+          },
+          {
+            "q": "Das ___ ist wichtig.",
+            "a": "Vorbild",
+            "why": "الكلمة الناقصة «Vorbild» تعني «القدوة (النموذج المحتذى)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Toleranz",
+            "why": "الكلمة الناقصة «Toleranz» تعني «التسامح» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist gut.",
+            "a": "Begegnung",
+            "why": "الكلمة الناقصة «Begegnung» تعني «اللقاء (المقابلة)» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +238,21 @@
             "q": "~~Er steht die Freunde bei.~~",
             "a": "Er steht den Freunden bei.",
             "why": "beistehen يأخذ Dativ! (den Freunden — لا die Freunde!)"
+          },
+          {
+            "q": "~~In Berlin leben viele menschen.~~",
+            "a": "In Berlin leben viele Menschen.",
+            "why": "الخطأ في «menschen»! الصواب «Menschen» — راجع القاعدة (الإنسان)."
+          },
+          {
+            "q": "~~Meine Tante ist Freundlich.~~",
+            "a": "Meine Tante ist freundlich.",
+            "why": "الخطأ في «Freundlich»! الصواب «freundlich» — راجع القاعدة (ودود/لطيف)."
+          },
+          {
+            "q": "~~Ich brauche ruhe.~~",
+            "a": "Ich brauche Ruhe.",
+            "why": "الخطأ في «ruhe»! الصواب «Ruhe» — راجع القاعدة (الهدوء)."
           }
         ]
       },
@@ -234,6 +283,111 @@
             "q": "تحدث عن المساندة! (جملتان!)",
             "a": "Beistehen ist gut. Ich stehe meinen Freunden bei.",
             "why": "المساندة! (Freunden beistehen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «der Einsatz» («التفاني») ثم تحدّث بها.",
+            "a": "Ihr Einsatz für die Gemeinschaft ist groß.",
+            "why": "استعمل «der Einsatz» («التفاني») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Höflichkeit» («اللباقة») ثم تحدّث بها.",
+            "a": "Höflichkeit ist in jeder Gesellschaft wichtig.",
+            "why": "استعمل «die Höflichkeit» («اللباقة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «vermitteln» («يتوسّط») ثم تحدّث بها.",
+            "a": "Sie vermittelt zwischen den Menschen.",
+            "why": "استعمل «vermitteln» («يتوسّط») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "vermitteln"
+        ],
+        "items": [
+          {
+            "audioId": "word-integration",
+            "speakText": "die Integration.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الاندماج",
+              "المساواة",
+              "يساند"
+            ],
+            "a": "الاندماج",
+            "why": "الصوت يقول «die Integration» — معناها «الاندماج». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-gleichheit",
+            "speakText": "die Gleichheit.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Gleichheit",
+              "die Integration",
+              "beistehen"
+            ],
+            "a": "die Gleichheit",
+            "why": "الكلمة المسموعة «die Gleichheit» تعني «المساواة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-beistehen",
+            "speakText": "beistehen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يساند",
+              "الاندماج",
+              "المساواة"
+            ],
+            "a": "يساند",
+            "why": "الصوت يقول «beistehen» — معناها «يساند». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-vermitteln",
+            "speakText": "vermitteln.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "vermitteln",
+              "die Integration",
+              "die Gleichheit"
+            ],
+            "a": "vermitteln",
+            "why": "الكلمة المسموعة «vermitteln» تعني «يتوسّط». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "hoeflichkeit"
+        ],
+        "items": [
+          {
+            "audioId": "word-integration",
+            "speakText": "die Integration.",
+            "a": "die Integration",
+            "why": "اكتب ما تسمعه حرفياً: «die Integration» تعني «الاندماج». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gleichheit",
+            "speakText": "die Gleichheit.",
+            "a": "die Gleichheit",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Gleichheit» («المساواة»)."
+          },
+          {
+            "audioId": "word-beistehen",
+            "speakText": "beistehen.",
+            "a": "beistehen",
+            "why": "اكتب المسموع بدقة: beistehen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-hoeflichkeit",
+            "speakText": "die Höflichkeit.",
+            "a": "die Höflichkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Höflichkeit» تعني «اللباقة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +418,14 @@
           {
             "q": "«نحن نساند الأصدقاء.»؟",
             "a": "Wir stehen den Freunden bei."
+          },
+          {
+            "q": "«الاندماج»؟",
+            "a": "die Integration"
+          },
+          {
+            "q": "«المساواة»؟",
+            "a": "die Gleichheit"
           }
         ]
       },
@@ -284,6 +446,14 @@
           {
             "q": "beistehen",
             "a": "يساند"
+          },
+          {
+            "q": "«الاندماج»؟",
+            "a": "die Integration"
+          },
+          {
+            "q": "«المساواة»؟",
+            "a": "die Gleichheit"
           }
         ]
       },
@@ -304,6 +474,14 @@
           {
             "q": "«المساندة مهمّة!»؟",
             "a": "Beistehen ist wichtig!"
+          },
+          {
+            "q": "«الاندماج»؟",
+            "a": "die Integration"
+          },
+          {
+            "q": "«المساواة»؟",
+            "a": "die Gleichheit"
           }
         ]
       }

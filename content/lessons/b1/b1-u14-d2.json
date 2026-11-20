@@ -58,7 +58,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u14-s2"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ng-velar",
@@ -140,9 +142,8 @@
           "الاستماع للتعليمات!"
         ],
         "interleavedWith": [
-          "hilfsmittel",
-          "zugang",
-          "sitzplatz"
+          "abschneiden",
+          "punktzahl"
         ],
         "items": [
           {
@@ -164,6 +165,16 @@
             "q": "Er sitzt am ___. (المقعد!)",
             "a": "Sitzplatz",
             "why": "der Sitzplatz المقعد (der!) — Er sitzt am Sitzplatz."
+          },
+          {
+            "q": "Er ___ gut ab.",
+            "a": "schneidet",
+            "why": "الكلمة الناقصة «schneidet» تعني «يُحرز نتيجة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist hoch.",
+            "a": "Punktzahl",
+            "why": "الكلمة الناقصة «Punktzahl» تعني «عدد النقاط» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -175,9 +186,8 @@
           "الأداة! الأداة! المفرد!"
         ],
         "interleavedWith": [
-          "hilfsmittel",
-          "zugang",
-          "sitzplatz"
+          "abschneiden",
+          "punktzahl"
         ],
         "items": [
           {
@@ -199,6 +209,16 @@
             "q": "~~Das Zugang ist dort.~~",
             "a": "Der Zugang ist dort.",
             "why": "der Zugang المدخل (der! لا das!)"
+          },
+          {
+            "q": "~~Er Schneidet gut ab.~~",
+            "a": "Er schneidet gut ab.",
+            "why": "الخطأ في «Schneidet»! الصواب «schneidet» — راجع القاعدة (يُحرز نتيجة)."
+          },
+          {
+            "q": "~~Die punktzahl ist hoch.~~",
+            "a": "Die Punktzahl ist hoch.",
+            "why": "الخطأ في «punktzahl»! الصواب «Punktzahl» — راجع القاعدة (عدد النقاط)."
           }
         ]
       },
@@ -224,6 +244,111 @@
             "q": "تكلّم عن المقعد والوسائل! (جملتان!)",
             "a": "Der Sitzplatz ist frei. Die Hilfsmittel sind erlaubt.",
             "why": "المقعد ثم الوسائل! (am Sitzplatz sitzen! die Hilfsmittel nutzen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Prüfung» («الامتحان») ثم تحدّث بها.",
+            "a": "Die Prüfung ist bald.",
+            "why": "استعمل «die Prüfung» («الامتحان») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Urkunde» («الشهادة الرسمية») ثم تحدّث بها.",
+            "a": "Die Urkunde ist wichtig.",
+            "why": "استعمل «die Urkunde» («الشهادة الرسمية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «beginnen» («يبدأ») ثم تحدّث بها.",
+            "a": "Das Spiel hat schon begonnen.",
+            "why": "استعمل «beginnen» («يبدأ») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "abschneiden"
+        ],
+        "items": [
+          {
+            "audioId": "word-hilfsmittel",
+            "speakText": "das Hilfsmittel.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الوسيلة المساعدة",
+              "الدخول",
+              "المقعد (المكان المخصص)"
+            ],
+            "a": "الوسيلة المساعدة",
+            "why": "الصوت يقول «das Hilfsmittel» — معناها «الوسيلة المساعدة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-zugang",
+            "speakText": "der Zugang.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Zugang",
+              "das Hilfsmittel",
+              "der Sitzplatz"
+            ],
+            "a": "der Zugang",
+            "why": "الكلمة المسموعة «der Zugang» تعني «الدخول». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-sitzplatz",
+            "speakText": "der Sitzplatz.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "المقعد (المكان المخصص)",
+              "الوسيلة المساعدة",
+              "الدخول"
+            ],
+            "a": "المقعد (المكان المخصص)",
+            "why": "الصوت يقول «der Sitzplatz» — معناها «المقعد (المكان المخصص)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-abschneiden",
+            "speakText": "abschneiden.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "abschneiden",
+              "das Hilfsmittel",
+              "der Zugang"
+            ],
+            "a": "abschneiden",
+            "why": "الكلمة المسموعة «abschneiden» تعني «يُحرز نتيجة». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "punktzahl"
+        ],
+        "items": [
+          {
+            "audioId": "word-hilfsmittel",
+            "speakText": "das Hilfsmittel.",
+            "a": "das Hilfsmittel",
+            "why": "اكتب ما تسمعه حرفياً: «das Hilfsmittel» تعني «الوسيلة المساعدة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-zugang",
+            "speakText": "der Zugang.",
+            "a": "der Zugang",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Zugang» («الدخول»)."
+          },
+          {
+            "audioId": "word-sitzplatz",
+            "speakText": "der Sitzplatz.",
+            "a": "der Sitzplatz",
+            "why": "اكتب المسموع بدقة: der Sitzplatz — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-punktzahl",
+            "speakText": "die Punktzahl.",
+            "a": "die Punktzahl",
+            "why": "اكتب ما تسمعه حرفياً: «die Punktzahl» تعني «عدد النقاط». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -254,6 +379,14 @@
           {
             "q": "«يجد المدخل.»؟",
             "a": "Er findet den Zugang."
+          },
+          {
+            "q": "«الأداة المسموحة»؟",
+            "a": "das Hilfsmittel"
+          },
+          {
+            "q": "«الدخول»؟",
+            "a": "der Zugang"
           }
         ]
       },
@@ -274,6 +407,14 @@
           {
             "q": "«يجلس في مقعده.»؟",
             "a": "Er sitzt am Sitzplatz."
+          },
+          {
+            "q": "«الوسيلة المساعدة»؟",
+            "a": "das Hilfsmittel"
+          },
+          {
+            "q": "«الدخول»؟",
+            "a": "der Zugang"
           }
         ]
       },
@@ -294,6 +435,14 @@
           {
             "q": "«يسمع ويفهم.»؟",
             "a": "Er hört und versteht."
+          },
+          {
+            "q": "«الوسيلة المساعدة»؟",
+            "a": "das Hilfsmittel"
+          },
+          {
+            "q": "«الدخول»؟",
+            "a": "der Zugang"
           }
         ]
       }

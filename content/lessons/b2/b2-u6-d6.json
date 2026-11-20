@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u6-s6"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "umlaut-a",
@@ -131,6 +133,23 @@
               }
             ],
             "why": "die Erschöpfung haben (الملكية!) · die Aktivität ist wichtig! · das Gesundheitswesen ist wichtig!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الإجهاد (العبء!)",
+                "de": "die Belastung"
+              },
+              {
+                "ar": "التعافي",
+                "de": "die Genesung"
+              },
+              {
+                "ar": "الغذاء (المادة الغذائية!)",
+                "de": "das Nahrungsmittel"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Belastung = «الإجهاد (العبء!)» · die Genesung = «التعافي» · das Nahrungsmittel = «الغذاء (المادة الغذائية!)»"
           }
         ]
       },
@@ -166,6 +185,21 @@
             "q": "Die Aktivität ist ___. (مهمة!)",
             "a": "wichtig",
             "why": "wichtig مهم — Die Aktivität ist wichtig."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Hygiene",
+            "why": "الكلمة الناقصة «Hygiene» تعني «النظافة الصحية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist schlimm.",
+            "a": "Ansteckung",
+            "why": "الكلمة الناقصة «Ansteckung» تعني «العدوى» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist stark.",
+            "a": "Immunsystem",
+            "why": "الكلمة الناقصة «Immunsystem» تعني «الجهاز المناعي» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -201,6 +235,21 @@
             "q": "~~Die Aktivitäten ist wichtig.~~",
             "a": "Die Aktivität ist wichtig.",
             "why": "المفرد die Aktivität مع ist (الجمع die Aktivitäten مع sind!)!"
+          },
+          {
+            "q": "~~Die operation ist wichtig.~~",
+            "a": "Die Operation ist wichtig.",
+            "why": "الخطأ في «operation»! الصواب «Operation» — راجع القاعدة (العملية الجراحية)."
+          },
+          {
+            "q": "~~Die heilung ist gut.~~",
+            "a": "Die Heilung ist gut.",
+            "why": "الخطأ في «heilung»! الصواب «Heilung» — راجع القاعدة (الشفاء)."
+          },
+          {
+            "q": "~~Das symptom ist klar.~~",
+            "a": "Das Symptom ist klar.",
+            "why": "الخطأ في «symptom»! الصواب «Symptom» — راجع القاعدة (العَرَض (المرض!))."
           }
         ]
       },
@@ -231,6 +280,111 @@
             "q": "تحدّث عن النظام الصحي! (جملتان!)",
             "a": "Das Gesundheitswesen ist wichtig. Das Gesundheitswesen hilft.",
             "why": "النظام الصحي! (das Gesundheitswesen hilft!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Ernährung» («التغذية») ثم تحدّث بها.",
+            "a": "Die Ernährung ist wichtig.",
+            "why": "استعمل «die Ernährung» («التغذية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Entspannung» («الاسترخاء») ثم تحدّث بها.",
+            "a": "Die Entspannung ist gut.",
+            "why": "استعمل «die Entspannung» («الاسترخاء») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Pflege» («الرعاية») ثم تحدّث بها.",
+            "a": "Die Pflege ist wichtig.",
+            "why": "استعمل «die Pflege» («الرعاية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "nahrungsmittel"
+        ],
+        "items": [
+          {
+            "audioId": "word-aktivitaet",
+            "speakText": "die Aktivität.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "النشاط",
+              "الإرهاق (الإنهاك!)",
+              "نظام الصحّة"
+            ],
+            "a": "النشاط",
+            "why": "الصوت يقول «die Aktivität» — معناها «النشاط». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-erschoepfung",
+            "speakText": "die Erschöpfung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Erschöpfung",
+              "die Aktivität",
+              "das Gesundheitswesen"
+            ],
+            "a": "die Erschöpfung",
+            "why": "الكلمة المسموعة «die Erschöpfung» تعني «الإرهاق (الإنهاك!)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-gesundheitswesen",
+            "speakText": "das Gesundheitswesen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "نظام الصحّة",
+              "النشاط",
+              "الإرهاق (الإنهاك!)"
+            ],
+            "a": "نظام الصحّة",
+            "why": "الصوت يقول «das Gesundheitswesen» — معناها «نظام الصحّة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-nahrungsmittel",
+            "speakText": "das Nahrungsmittel.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "das Nahrungsmittel",
+              "die Aktivität",
+              "die Erschöpfung"
+            ],
+            "a": "das Nahrungsmittel",
+            "why": "الكلمة المسموعة «das Nahrungsmittel» تعني «الغذاء (المادة الغذائية!)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "genesung"
+        ],
+        "items": [
+          {
+            "audioId": "word-aktivitaet",
+            "speakText": "die Aktivität.",
+            "a": "die Aktivität",
+            "why": "اكتب ما تسمعه حرفياً: «die Aktivität» تعني «النشاط». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-erschoepfung",
+            "speakText": "die Erschöpfung.",
+            "a": "die Erschöpfung",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Erschöpfung» («الإرهاق (الإنهاك!)»)."
+          },
+          {
+            "audioId": "word-gesundheitswesen",
+            "speakText": "das Gesundheitswesen.",
+            "a": "das Gesundheitswesen",
+            "why": "اكتب المسموع بدقة: das Gesundheitswesen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-genesung",
+            "speakText": "die Genesung.",
+            "a": "die Genesung",
+            "why": "اكتب ما تسمعه حرفياً: «die Genesung» تعني «التعافي». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -261,6 +415,14 @@
           {
             "q": "«النشاط مهم.»؟",
             "a": "Die Aktivität ist wichtig."
+          },
+          {
+            "q": "«الإرهاق (الإنهاك!)»؟",
+            "a": "die Erschöpfung"
+          },
+          {
+            "q": "«نظام الصحّة مهم.»؟",
+            "a": "Das Gesundheitswesen ist wichtig."
           }
         ]
       },
@@ -281,6 +443,14 @@
           {
             "q": "die Aktivität",
             "a": "النشاط"
+          },
+          {
+            "q": "«النشاط»؟",
+            "a": "die Aktivität"
+          },
+          {
+            "q": "«الإرهاق (الإنهاك!)»؟",
+            "a": "die Erschöpfung"
           }
         ]
       },
@@ -301,6 +471,14 @@
           {
             "q": "«النشاط مهم.»؟",
             "a": "Die Aktivität ist wichtig."
+          },
+          {
+            "q": "«النشاط»؟",
+            "a": "die Aktivität"
+          },
+          {
+            "q": "«الإرهاق (الإنهاك!)»؟",
+            "a": "die Erschöpfung"
           }
         ]
       }

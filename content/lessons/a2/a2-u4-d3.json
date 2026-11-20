@@ -96,7 +96,9 @@
       "v2-order",
       "needs-ein"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a2-u4-s3"
+    ],
     "wordIds": [
       "zuhoeren",
       "wechseln",
@@ -132,6 +134,14 @@
           {
             "a": "vorn",
             "q": "Wir sitzen ___. (vorn)"
+          },
+          {
+            "q": "«الجولة (سيراً)»؟",
+            "a": "der Rundgang"
+          },
+          {
+            "q": "«يستمع بانتباه»؟",
+            "a": "zuhören"
           }
         ],
         "passingScore": 0.75
@@ -153,6 +163,14 @@
           {
             "a": "das Kaufhaus → die Kaufhäuser",
             "q": "«متجر كبير» — الأداة والجمع؟"
+          },
+          {
+            "q": "«الجولة (سيراً)»؟",
+            "a": "der Rundgang"
+          },
+          {
+            "q": "«يستمع بانتباه»؟",
+            "a": "zuhören"
           }
         ],
         "passingScore": 0.75
@@ -174,6 +192,14 @@
           {
             "a": "ist",
             "q": "Vorn links ___ das Kino."
+          },
+          {
+            "q": "«الجولة (سيراً)»؟",
+            "a": "der Rundgang"
+          },
+          {
+            "q": "«يستمع بانتباه»؟",
+            "a": "zuhören"
           }
         ],
         "passingScore": 0.75
@@ -241,6 +267,11 @@
             "a": "unternehmen",
             "q": "نقوم بجولة: Wir ___ eine Tour. (unternehmen)",
             "why": "wir ← unternehmen + eine Tour — unternehmen يأخذ مفعولاً!"
+          },
+          {
+            "q": "Das ___ ist heute geschlossen.",
+            "a": "Kino",
+            "why": "الكلمة الناقصة «Kino» تعني «سينما» — تذكر صيغتها في السياق."
           }
         ],
         "type": "verb-bank"
@@ -277,6 +308,21 @@
             "a": "schade",
             "q": "يا خسارة! Das ist ___. (schade)",
             "why": "Das ist schade! (يا خسارة!) — تعاطف في الحوار."
+          },
+          {
+            "q": "Berlin ist eine ___ in Deutschland.",
+            "a": "Stadt",
+            "why": "الكلمة الناقصة «Stadt» تعني «المدينة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Ich wohne in einer ___.",
+            "a": "Straße",
+            "why": "الكلمة الناقصة «Straße» تعني «الشارع» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir wohnen in einem ___.",
+            "a": "Haus",
+            "why": "الكلمة الناقصة «Haus» تعني «البيت (المبنى المستقل)» — تذكر صيغتها في السياق."
           }
         ],
         "type": "gap-fill"
@@ -290,7 +336,6 @@
         ],
         "interleavedWith": [
           "neu",
-          "schoen",
           "gut"
         ],
         "items": [
@@ -313,6 +358,21 @@
             "a": "Ich leihe ein Buch.",
             "q": "Ich leihe ein Bücher.",
             "why": "ein للمفرد! Bücher جمع (بلا ein) — Ich leihe ein Buch."
+          },
+          {
+            "q": "~~Ich bin Neu.~~",
+            "a": "Ich bin neu.",
+            "why": "الخطأ في «Neu»! الصواب «neu» — راجع القاعدة (جديد)."
+          },
+          {
+            "q": "~~Das Foto ist sehr Schön.~~",
+            "a": "Das Foto ist sehr schön.",
+            "why": "الخطأ في «Schön»! الصواب «schön» — راجع القاعدة (جميل/حسن)."
+          },
+          {
+            "q": "~~Wie geht's? — Danke, Gut.~~",
+            "a": "Wie geht's? — Danke, gut.",
+            "why": "الخطأ في «Gut»! الصواب «gut» — راجع القاعدة (جيّد)."
           }
         ],
         "type": "error-hunt"
@@ -331,9 +391,104 @@
             "a": "Wo ist die Messe? Vorn links ist die Messe. Wo ist der Club? Der Club ist rechts. Danke! Bitte!",
             "q": "مثّل حوار الطريق (سجّل): سائح يسأل وأنت توجّه — 6 جمل (سؤال + توجيه + سؤال + توجيه + شكر + عفو)",
             "why": "قارن تسجيلك: سؤالان (Wo ist...؟) + توجيهان (vorn links / rechts + V2!) + Danke/Bitte!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Stadt» («المدينة») ثم تحدّث بها.",
+            "a": "Berlin ist eine Stadt in Deutschland.",
+            "why": "استعمل «die Stadt» («المدينة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
           }
         ],
         "type": "speaking"
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "schoen"
+        ],
+        "items": [
+          {
+            "audioId": "word-rundgang",
+            "speakText": "der Rundgang.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الجولة (سيراً)",
+              "يستمع بانتباه",
+              "يبدّل/يغيّر"
+            ],
+            "a": "الجولة (سيراً)",
+            "why": "الصوت يقول «der Rundgang» — معناها «الجولة (سيراً)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-zuhoeren",
+            "speakText": "zuhören.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "zuhören",
+              "der Rundgang",
+              "wechseln"
+            ],
+            "a": "zuhören",
+            "why": "الكلمة المسموعة «zuhören» تعني «يستمع بانتباه». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-wechseln",
+            "speakText": "wechseln.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يبدّل/يغيّر",
+              "الجولة (سيراً)",
+              "يستمع بانتباه"
+            ],
+            "a": "يبدّل/يغيّر",
+            "why": "الصوت يقول «wechseln» — معناها «يبدّل/يغيّر». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-schoen",
+            "speakText": "schön.",
+            "q": "استمع: الكلمة المسترجَعة من درس سابق — ما هي؟",
+            "choices": [
+              "schön",
+              "der Rundgang",
+              "zuhören"
+            ],
+            "a": "schön",
+            "why": "الكلمة المسموعة «schön» تعني «جميل/حسن». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "krimi"
+        ],
+        "items": [
+          {
+            "audioId": "word-unternehmen",
+            "speakText": "unternehmen.",
+            "a": "unternehmen",
+            "why": "اكتب ما تسمعه حرفياً: «unternehmen» تعني «يقوم بـ (نشاط)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-leihen",
+            "speakText": "leihen.",
+            "a": "leihen",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «leihen» («يستعير»)."
+          },
+          {
+            "audioId": "word-verkehrsmittel",
+            "speakText": "das Verkehrsmittel.",
+            "a": "das Verkehrsmittel",
+            "why": "اكتب المسموع بدقة: das Verkehrsmittel — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-krimi",
+            "speakText": "der Krimi.",
+            "a": "der Krimi",
+            "why": "اكتب ما تسمعه حرفياً: «der Krimi» تعني «فيلم الجريمة». انتبه للحروف الكبيرة!"
+          }
+        ]
       }
     ]
   },

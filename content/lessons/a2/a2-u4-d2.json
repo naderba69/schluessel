@@ -94,7 +94,9 @@
       "trennbar",
       "needs-ein"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a2-u4-s2"
+    ],
     "wordIds": [
       "zurueckfahren",
       "einziehen",
@@ -130,6 +132,14 @@
           {
             "a": "ins",
             "q": "Wir gehen ___ Schloss."
+          },
+          {
+            "q": "«إلى الأمام»؟",
+            "a": "vorwärts"
+          },
+          {
+            "q": "«يعود بالسيارة»؟",
+            "a": "zurückfahren"
           }
         ],
         "passingScore": 0.75
@@ -151,6 +161,14 @@
           {
             "a": "hindurch",
             "q": "Wir fahren ___. (hindurch)"
+          },
+          {
+            "q": "«إلى الأمام»؟",
+            "a": "vorwärts"
+          },
+          {
+            "q": "«يعود بالسيارة»؟",
+            "a": "zurückfahren"
           }
         ],
         "passingScore": 0.75
@@ -172,6 +190,14 @@
           {
             "a": "das",
             "q": "Ich gehe in ___ Schloss."
+          },
+          {
+            "q": "«إلى الأمام»؟",
+            "a": "vorwärts"
+          },
+          {
+            "q": "«يعود بالسيارة»؟",
+            "a": "zurückfahren"
           }
         ],
         "passingScore": 0.75
@@ -239,6 +265,21 @@
             "a": "fahre",
             "q": "أسير مباشرة: Ich ___ direkt. (fahren)",
             "why": "Ich ← fahre + direkt (ظرف بلا تغيير — يصف كيف أسير)."
+          },
+          {
+            "q": "Das ___ ist teuer.",
+            "a": "Auto",
+            "why": "الكلمة الناقصة «Auto» تعني «السيارة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ kommt gleich.",
+            "a": "Bus",
+            "why": "الكلمة الناقصة «Bus» تعني «حافلة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist neben dem Kino.",
+            "a": "Bahnhof",
+            "why": "الكلمة الناقصة «Bahnhof» تعني «محطة القطار» — تذكر صيغتها في السياق."
           }
         ],
         "type": "verb-bank"
@@ -275,6 +316,21 @@
             "a": "zum",
             "q": "أذهب إلى الحلاق: Ich gehe ___ Friseur.",
             "why": "zu + الداتيف (استثناء الاتجاه!): der Friseur ← zu dem = zum — gehen (حركة) + zu (داتيف)."
+          },
+          {
+            "q": "Berlin ist eine ___ in Deutschland.",
+            "a": "Stadt",
+            "why": "الكلمة الناقصة «Stadt» تعني «المدينة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist heute geschlossen.",
+            "a": "Kino",
+            "why": "الكلمة الناقصة «Kino» تعني «سينما» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Auf dem ___ kaufe ich Obst und Brot.",
+            "a": "Markt",
+            "why": "الكلمة الناقصة «Markt» تعني «سوق» — تذكر صيغتها في السياق."
           }
         ],
         "type": "gap-fill"
@@ -311,6 +367,21 @@
             "a": "Kommen Sie herein!",
             "q": "Kommen herein Sie!",
             "why": "أمر Sie: المصدر + Sie مباشرةً ثم الباقي — Sie لا تتأخر!"
+          },
+          {
+            "q": "~~Meine Schwester ist Klein.~~",
+            "a": "Meine Schwester ist klein.",
+            "why": "الخطأ في «Klein»! الصواب «klein» — راجع القاعدة (صغير (الحجم/الطول))."
+          },
+          {
+            "q": "~~Ich bin Neu.~~",
+            "a": "Ich bin neu.",
+            "why": "الخطأ في «Neu»! الصواب «neu» — راجع القاعدة (جديد)."
+          },
+          {
+            "q": "~~Wie geht's? — Danke, Gut.~~",
+            "a": "Wie geht's? — Danke, gut.",
+            "why": "الخطأ في «Gut»! الصواب «gut» — راجع القاعدة (جيّد)."
           }
         ],
         "type": "error-hunt"
@@ -329,9 +400,104 @@
             "a": "Ich gehe in die Disko. Wir gehen ins Schloss. Wir fahren zurück. Wir gehen heraus. Wir fahren hindurch.",
             "q": "صِف رحلتك (سجّل): 5 جمل — إلى أين تذهب؟ (وجهتان + عودة + دخول + مرور: in die/ins/zurück/heraus/hindurch)",
             "why": "قارن تسجيلك: وجهتان بالأكوزاتيف (die/ins!) + zurück + heraus + hindurch — كلها اتجاه!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Stadt» («المدينة») ثم تحدّث بها.",
+            "a": "Berlin ist eine Stadt in Deutschland.",
+            "why": "استعمل «die Stadt» («المدينة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
           }
         ],
         "type": "speaking"
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "rund"
+        ],
+        "items": [
+          {
+            "audioId": "word-vorwaerts",
+            "speakText": "vorwärts.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "إلى الأمام",
+              "يعود بالسيارة",
+              "ينتقل للسكن"
+            ],
+            "a": "إلى الأمام",
+            "why": "الصوت يقول «vorwärts» — معناها «إلى الأمام». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-zurueckfahren",
+            "speakText": "zurückfahren.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "zurückfahren",
+              "vorwärts",
+              "einziehen"
+            ],
+            "a": "zurückfahren",
+            "why": "الكلمة المسموعة «zurückfahren» تعني «يعود بالسيارة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-einziehen",
+            "speakText": "einziehen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "ينتقل للسكن",
+              "إلى الأمام",
+              "يعود بالسيارة"
+            ],
+            "a": "ينتقل للسكن",
+            "why": "الصوت يقول «einziehen» — معناها «ينتقل للسكن». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-rund",
+            "speakText": "rund.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "rund",
+              "vorwärts",
+              "zurückfahren"
+            ],
+            "a": "rund",
+            "why": "الكلمة المسموعة «rund» تعني «مستدير». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "voll"
+        ],
+        "items": [
+          {
+            "audioId": "word-heraus",
+            "speakText": "heraus.",
+            "a": "heraus",
+            "why": "اكتب ما تسمعه حرفياً: «heraus» تعني «إلى الخارج». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-herein",
+            "speakText": "herein.",
+            "a": "herein",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «herein» («إلى الداخل»)."
+          },
+          {
+            "audioId": "word-hindurch",
+            "speakText": "hindurch.",
+            "a": "hindurch",
+            "why": "اكتب المسموع بدقة: hindurch — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-voll",
+            "speakText": "voll.",
+            "a": "voll",
+            "why": "اكتب ما تسمعه حرفياً: «voll» تعني «مليء». انتبه للحروف الكبيرة!"
+          }
+        ]
       }
     ]
   },

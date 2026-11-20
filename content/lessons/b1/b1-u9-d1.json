@@ -70,7 +70,9 @@
     "grammarArsenalIds": [
       "ars-nachfragen"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u9-s1"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "trennbar",
@@ -170,6 +172,23 @@
               }
             ],
             "why": "der Konflikt النزاع (der! جمعها Konflikte!) · die Vereinbarung الاتفاقية (treffen!) · die Einigung التوافق (finden!) · verzeihen يسامح (verzieh! فعل قويّ!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "القبول",
+                "de": "die Zusage"
+              },
+              {
+                "ar": "يشغل (الوظيفة)",
+                "de": "besetzen"
+              },
+              {
+                "ar": "الطلب (المهمة!)",
+                "de": "der Auftrag"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Zusage = «القبول» · besetzen = «يشغل (الوظيفة)» · der Auftrag = «الطلب (المهمة!)»"
           }
         ]
       },
@@ -181,9 +200,8 @@
           "نهايات الكلمات وحرفها!"
         ],
         "interleavedWith": [
-          "klaeren",
-          "konflikt",
-          "vereinbarung"
+          "besetzen",
+          "zusage"
         ],
         "items": [
           {
@@ -215,6 +233,16 @@
             "q": "Was meinen Sie ___? (على وجه التحديد!)",
             "a": "konkret",
             "why": "konkret محدَّد — Was meinen Sie konkret?"
+          },
+          {
+            "q": "Die Firma ___ die Stelle.",
+            "a": "besetzt",
+            "why": "الكلمة الناقصة «besetzt» تعني «يشغل (الوظيفة)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Nach dem Interview bekomme ich eine ___.",
+            "a": "Zusage",
+            "why": "الكلمة الناقصة «Zusage» تعني «القبول» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -226,9 +254,8 @@
           "الانفصال! الأداة! التصريف الثالث!"
         ],
         "interleavedWith": [
-          "hinweis",
-          "einigung",
-          "verzeihen"
+          "besetzen",
+          "zusage"
         ],
         "items": [
           {
@@ -245,6 +272,16 @@
             "q": "~~Ich habe dir verzeiht.~~",
             "a": "Ich habe dir verziehen.",
             "why": "verzeihen فعل قويّ! التصريف: verzeiht/verzieh/hat verziehen — لا verzeiht بعد haben!"
+          },
+          {
+            "q": "~~Die Firma Besetzt die Stelle.~~",
+            "a": "Die Firma besetzt die Stelle.",
+            "why": "الخطأ في «Besetzt»! الصواب «besetzt» — راجع القاعدة (يشغل (الوظيفة))."
+          },
+          {
+            "q": "~~Nach dem Interview bekomme ich eine zusage.~~",
+            "a": "Nach dem Interview bekomme ich eine Zusage.",
+            "why": "الخطأ في «zusage»! الصواب «Zusage» — راجع القاعدة (القبول)."
           }
         ]
       },
@@ -256,9 +293,8 @@
           "Nachfragen! Klären!"
         ],
         "interleavedWith": [
-          "schildern",
-          "bezweifeln",
-          "behauptung"
+          "besetzen",
+          "zusage"
         ],
         "items": [
           {
@@ -275,6 +311,106 @@
             "q": "النزاع والحلّ! (3 جمل!)",
             "a": "Wir lösen den Konflikt und finden eine Einigung. Wir treffen eine Vereinbarung. Kannst du mir verzeihen?",
             "why": "den Konflikt lösen! eine Einigung finden! eine Vereinbarung treffen! verzeihen يسامح!"
+          },
+          {
+            "q": "كوّن جملة فيها «besetzen» («يشغل (الوظيفة)») ثم تحدّث بها.",
+            "a": "Die Firma besetzt die Stelle.",
+            "why": "استعمل «besetzen» («يشغل (الوظيفة)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Zusage» («القبول») ثم تحدّث بها.",
+            "a": "Nach dem Interview bekomme ich eine Zusage.",
+            "why": "استعمل «die Zusage» («القبول») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "besetzen"
+        ],
+        "items": [
+          {
+            "audioId": "word-behauptung",
+            "speakText": "die Behauptung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الزعم",
+              "يصف (الأحداث)",
+              "يشكّك في"
+            ],
+            "a": "الزعم",
+            "why": "الصوت يقول «die Behauptung» — معناها «الزعم». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-schildern",
+            "speakText": "schildern.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "schildern",
+              "die Behauptung",
+              "bezweifeln"
+            ],
+            "a": "schildern",
+            "why": "الكلمة المسموعة «schildern» تعني «يصف (الأحداث)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-bezweifeln",
+            "speakText": "bezweifeln.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يشكّك في",
+              "الزعم",
+              "يصف (الأحداث)"
+            ],
+            "a": "يشكّك في",
+            "why": "الصوت يقول «bezweifeln» — معناها «يشكّك في». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-besetzen",
+            "speakText": "besetzen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "besetzen",
+              "die Behauptung",
+              "schildern"
+            ],
+            "a": "besetzen",
+            "why": "الكلمة المسموعة «besetzen» تعني «يشغل (الوظيفة)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "zusage"
+        ],
+        "items": [
+          {
+            "audioId": "word-nachfragen",
+            "speakText": "nachfragen.",
+            "a": "nachfragen",
+            "why": "اكتب ما تسمعه حرفياً: «nachfragen» تعني «يسأل مجدداً». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-rueckfrage",
+            "speakText": "die Rückfrage.",
+            "a": "die Rückfrage",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Rückfrage» («استفسار»)."
+          },
+          {
+            "audioId": "word-klaeren",
+            "speakText": "klären.",
+            "a": "klären",
+            "why": "اكتب المسموع بدقة: klären — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-zusage",
+            "speakText": "die Zusage.",
+            "a": "die Zusage",
+            "why": "اكتب ما تسمعه حرفياً: «die Zusage» تعني «القبول». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -305,6 +441,14 @@
           {
             "q": "«النزاع»؟",
             "a": "der Konflikt"
+          },
+          {
+            "q": "«الزعم»؟",
+            "a": "die Behauptung"
+          },
+          {
+            "q": "«يصف (الأحداث)»؟",
+            "a": "schildern"
           }
         ]
       },
@@ -325,6 +469,14 @@
           {
             "q": "«يسامح»؟",
             "a": "verzeihen"
+          },
+          {
+            "q": "«الزعم»؟",
+            "a": "die Behauptung"
+          },
+          {
+            "q": "«يصف (الأحداث)»؟",
+            "a": "schildern"
           }
         ]
       },
@@ -345,6 +497,14 @@
           {
             "q": "«نجد اتفاقاً!»؟",
             "a": "Wir finden eine Einigung."
+          },
+          {
+            "q": "«الزعم»؟",
+            "a": "die Behauptung"
+          },
+          {
+            "q": "«يصف (الأحداث)»؟",
+            "a": "schildern"
           }
         ]
       }

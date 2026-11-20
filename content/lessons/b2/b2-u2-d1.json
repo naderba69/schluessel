@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u2-s1"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ch-ach-laut",
@@ -134,6 +136,23 @@
               }
             ],
             "why": "Nachhaltigkeit leben! · große Auswirkung haben! · die Luft verschmutzen! · die Auswirkungen جمع -en"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الحيّ",
+                "de": "die Nachbarschaft"
+              },
+              {
+                "ar": "المواساة",
+                "de": "die Anteilnahme"
+              },
+              {
+                "ar": "يسامح",
+                "de": "vergeben"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Nachbarschaft = «الحيّ» · die Anteilnahme = «المواساة» · vergeben = «يسامح»"
           }
         ]
       },
@@ -169,6 +188,21 @@
             "q": "Die ___ auf die Menschen ist wichtig. (التأثير!)",
             "a": "Auswirkung",
             "why": "التأثير: Auswirkung auf die Menschen! — Die Auswirkung auf die Menschen ist wichtig."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Gerechtigkeit",
+            "why": "الكلمة الناقصة «Gerechtigkeit» تعني «العدل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir ___ Geld.",
+            "a": "spenden",
+            "why": "الكلمة الناقصة «spenden» تعني «يتبرّع» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Alle Menschen haben ___.",
+            "a": "Würde",
+            "why": "الكلمة الناقصة «Würde» تعني «الكرامة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +238,21 @@
             "q": "~~Nachhaltigkeit wir leben.~~",
             "a": "Wir leben Nachhaltigkeit.",
             "why": "الترتيب: الفعل في المرتبة الثانية! (Wir leben Nachhaltigkeit!)"
+          },
+          {
+            "q": "~~In Berlin leben viele menschen.~~",
+            "a": "In Berlin leben viele Menschen.",
+            "why": "الخطأ في «menschen»! الصواب «Menschen» — راجع القاعدة (الإنسان)."
+          },
+          {
+            "q": "~~Meine Tante ist Freundlich.~~",
+            "a": "Meine Tante ist freundlich.",
+            "why": "الخطأ في «Freundlich»! الصواب «freundlich» — راجع القاعدة (ودود/لطيف)."
+          },
+          {
+            "q": "~~Ich brauche ruhe.~~",
+            "a": "Ich brauche Ruhe.",
+            "why": "الخطأ في «ruhe»! الصواب «Ruhe» — راجع القاعدة (الهدوء)."
           }
         ]
       },
@@ -234,6 +283,111 @@
             "q": "تحدث عن الهواء! (جملتان!)",
             "a": "Die Luft ist wichtig. Wir verschmutzen die Luft nicht.",
             "why": "الهواء! (die Luft nicht verschmutzen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Ermutigung» («التشجيع») ثم تحدّث بها.",
+            "a": "Er gibt mir Ermutigung.",
+            "why": "استعمل «die Ermutigung» («التشجيع») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «warnen» («يحذّر») ثم تحدّث بها.",
+            "a": "Ich warne dich.",
+            "why": "استعمل «warnen» («يحذّر») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Ablehnung» («الرفض») ثم تحدّث بها.",
+            "a": "Er bekommt Ablehnung.",
+            "why": "استعمل «die Ablehnung» («الرفض») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "vergeben"
+        ],
+        "items": [
+          {
+            "audioId": "word-nachhaltigkeit",
+            "speakText": "die Nachhaltigkeit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الاستدامة",
+              "التأثير",
+              "يلوّث"
+            ],
+            "a": "الاستدامة",
+            "why": "الصوت يقول «die Nachhaltigkeit» — معناها «الاستدامة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-auswirkung",
+            "speakText": "die Auswirkung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Auswirkung",
+              "die Nachhaltigkeit",
+              "verschmutzen"
+            ],
+            "a": "die Auswirkung",
+            "why": "الكلمة المسموعة «die Auswirkung» تعني «التأثير». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-verschmutzen",
+            "speakText": "verschmutzen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يلوّث",
+              "الاستدامة",
+              "التأثير"
+            ],
+            "a": "يلوّث",
+            "why": "الصوت يقول «verschmutzen» — معناها «يلوّث». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-vergeben",
+            "speakText": "vergeben.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "vergeben",
+              "die Nachhaltigkeit",
+              "die Auswirkung"
+            ],
+            "a": "vergeben",
+            "why": "الكلمة المسموعة «vergeben» تعني «يسامح». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "anteilnahme"
+        ],
+        "items": [
+          {
+            "audioId": "word-nachhaltigkeit",
+            "speakText": "die Nachhaltigkeit.",
+            "a": "die Nachhaltigkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Nachhaltigkeit» تعني «الاستدامة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-auswirkung",
+            "speakText": "die Auswirkung.",
+            "a": "die Auswirkung",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Auswirkung» («التأثير»)."
+          },
+          {
+            "audioId": "word-verschmutzen",
+            "speakText": "verschmutzen.",
+            "a": "verschmutzen",
+            "why": "اكتب المسموع بدقة: verschmutzen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-anteilnahme",
+            "speakText": "die Anteilnahme.",
+            "a": "die Anteilnahme",
+            "why": "اكتب ما تسمعه حرفياً: «die Anteilnahme» تعني «المواساة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +418,14 @@
           {
             "q": "«نحن نلوّث الهواء.»؟",
             "a": "Wir verschmutzen die Luft."
+          },
+          {
+            "q": "«الاستدامة»؟",
+            "a": "die Nachhaltigkeit"
+          },
+          {
+            "q": "«التأثير»؟",
+            "a": "die Auswirkung"
           }
         ]
       },
@@ -284,6 +446,14 @@
           {
             "q": "verschmutzen",
             "a": "يلوّث"
+          },
+          {
+            "q": "«الاستدامة»؟",
+            "a": "die Nachhaltigkeit"
+          },
+          {
+            "q": "«التأثير»؟",
+            "a": "die Auswirkung"
           }
         ]
       },
@@ -304,6 +474,14 @@
           {
             "q": "«أنا أعيش الاستدامة!»؟",
             "a": "Ich lebe Nachhaltigkeit!"
+          },
+          {
+            "q": "«الاستدامة»؟",
+            "a": "die Nachhaltigkeit"
+          },
+          {
+            "q": "«التأثير»؟",
+            "a": "die Auswirkung"
           }
         ]
       }

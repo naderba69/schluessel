@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u2-s4"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ng-velar",
@@ -134,6 +136,23 @@
               }
             ],
             "why": "Angst vor der Flut haben (vor + Dativ!) · Trinkwasser schützen! · eine Entdeckung machen (eine! الأداة النكرة لا تُحذف!) · die Flut (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المورد",
+                "de": "die Ressource"
+              },
+              {
+                "ar": "متجدّد",
+                "de": "erneuerbar"
+              },
+              {
+                "ar": "يحرق",
+                "de": "verbrennen"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Ressource = «المورد» · erneuerbar = «متجدّد» · verbrennen = «يحرق»"
           }
         ]
       },
@@ -169,6 +188,21 @@
             "q": "Er hat Angst ___ der Flut. (من!)",
             "a": "vor",
             "why": "«الخوف من»: Angst haben vor + Dativ (vor der Flut!)!"
+          },
+          {
+            "q": "___ ist wichtig.",
+            "a": "Nachhaltigkeit",
+            "why": "الكلمة الناقصة «Nachhaltigkeit» تعني «الاستدامة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ auf die Menschen ist groß.",
+            "a": "Auswirkung",
+            "why": "الكلمة الناقصة «Auswirkung» تعني «التأثير» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir ___ die Luft.",
+            "a": "verschmutzen",
+            "why": "الكلمة الناقصة «verschmutzen» تعني «يلوّث» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +238,21 @@
             "q": "~~Wir haben Angst die Flut.~~",
             "a": "Wir haben Angst vor der Flut.",
             "why": "«الخوف من» يتبع vor + Dativ! (Wir haben Angst vor der Flut!)"
+          },
+          {
+            "q": "~~Die gerechtigkeit ist wichtig.~~",
+            "a": "Die Gerechtigkeit ist wichtig.",
+            "why": "الخطأ في «gerechtigkeit»! الصواب «Gerechtigkeit» — راجع القاعدة (العدل)."
+          },
+          {
+            "q": "~~Ich warne dich.~~ (ناقصة: warnen)",
+            "a": "Ich warne dich. warnen.",
+            "why": "الجملة تفتقد «warnen» (يحذّر) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~Wir lösen den konflikt.~~",
+            "a": "Wir lösen den Konflikt.",
+            "why": "الخطأ في «konflikt»! الصواب «Konflikt» — راجع القاعدة (النزاع)."
           }
         ]
       },
@@ -234,6 +283,111 @@
             "q": "تحدث عن الاكتشاف! (جملتان!)",
             "a": "Wir machen eine Entdeckung. Das ist wichtig.",
             "why": "الاكتشاف! (eine Entdeckung machen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «der Klimawandel» («التغيّر المناخي») ثم تحدّث بها.",
+            "a": "Der Klimawandel ist gefährlich.",
+            "why": "استعمل «der Klimawandel» («التغيّر المناخي») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «recyceln» («يعيد التدوير») ثم تحدّث بها.",
+            "a": "Wir recyceln die Ressourcen.",
+            "why": "استعمل «recyceln» («يعيد التدوير») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «schonen» («يحافظ على») ثم تحدّث بها.",
+            "a": "Wir schonen die Umwelt.",
+            "why": "استعمل «schonen» («يحافظ على») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "schonen"
+        ],
+        "items": [
+          {
+            "audioId": "word-flut",
+            "speakText": "die Flut.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الفيضان",
+              "ماء الشرب",
+              "الاكتشاف"
+            ],
+            "a": "الفيضان",
+            "why": "الصوت يقول «die Flut» — معناها «الفيضان». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-trinkwasser",
+            "speakText": "das Trinkwasser.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "das Trinkwasser",
+              "die Flut",
+              "die Entdeckung"
+            ],
+            "a": "das Trinkwasser",
+            "why": "الكلمة المسموعة «das Trinkwasser» تعني «ماء الشرب». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-entdeckung",
+            "speakText": "die Entdeckung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الاكتشاف",
+              "الفيضان",
+              "ماء الشرب"
+            ],
+            "a": "الاكتشاف",
+            "why": "الصوت يقول «die Entdeckung» — معناها «الاكتشاف». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-schonen",
+            "speakText": "schonen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "schonen",
+              "die Flut",
+              "das Trinkwasser"
+            ],
+            "a": "schonen",
+            "why": "الكلمة المسموعة «schonen» تعني «يحافظ على». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "recyceln"
+        ],
+        "items": [
+          {
+            "audioId": "word-flut",
+            "speakText": "die Flut.",
+            "a": "die Flut",
+            "why": "اكتب ما تسمعه حرفياً: «die Flut» تعني «الفيضان». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-trinkwasser",
+            "speakText": "das Trinkwasser.",
+            "a": "das Trinkwasser",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «das Trinkwasser» («ماء الشرب»)."
+          },
+          {
+            "audioId": "word-entdeckung",
+            "speakText": "die Entdeckung.",
+            "a": "die Entdeckung",
+            "why": "اكتب المسموع بدقة: die Entdeckung — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-recyceln",
+            "speakText": "recyceln.",
+            "a": "recyceln",
+            "why": "اكتب ما تسمعه حرفياً: «recyceln» تعني «يعيد التدوير». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +418,14 @@
           {
             "q": "«الفيضان خطِر.»؟",
             "a": "Die Flut ist gefährlich."
+          },
+          {
+            "q": "«الفيضان»؟",
+            "a": "die Flut"
+          },
+          {
+            "q": "«ماء الشرب مهمّ.»؟",
+            "a": "Das Trinkwasser ist wichtig."
           }
         ]
       },
@@ -284,6 +446,14 @@
           {
             "q": "die Flut",
             "a": "الفيضان"
+          },
+          {
+            "q": "«الفيضان»؟",
+            "a": "die Flut"
+          },
+          {
+            "q": "«ماء الشرب»؟",
+            "a": "das Trinkwasser"
           }
         ]
       },
@@ -304,6 +474,14 @@
           {
             "q": "«الفيضان خطِر.»؟",
             "a": "Die Flut ist gefährlich."
+          },
+          {
+            "q": "«الفيضان»؟",
+            "a": "die Flut"
+          },
+          {
+            "q": "«ماء الشرب»؟",
+            "a": "das Trinkwasser"
           }
         ]
       }

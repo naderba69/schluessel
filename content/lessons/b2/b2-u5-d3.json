@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u5-s3"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "z",
@@ -134,6 +136,23 @@
               }
             ],
             "why": "يموّل البيت! · die Finanzen prüfen (يفحص!) · die Zinsen bezahlen (يدفع!) · die Zinsen (جمع فقط!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "ينتج",
+                "de": "produzieren"
+              },
+              {
+                "ar": "الشحنة",
+                "de": "die Lieferung"
+              },
+              {
+                "ar": "مقتصد",
+                "de": "sparsam"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: produzieren = «ينتج» · die Lieferung = «الشحنة» · sparsam = «مقتصد»"
           }
         ]
       },
@@ -169,6 +188,21 @@
             "q": "Er ___ das Haus. (يموّل!)",
             "a": "finanziert",
             "why": "finanzieren يموّل (Präsens er/sie: finanziert!) — Er finanziert das Haus."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Wirtschaft",
+            "why": "الكلمة الناقصة «Wirtschaft» تعني «الاقتصاد» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ kauft.",
+            "a": "Verbraucher",
+            "why": "الكلمة الناقصة «Verbraucher» تعني «المستهلك» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist schlimm.",
+            "a": "Verschwendung",
+            "why": "الكلمة الناقصة «Verschwendung» تعني «التبذير» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +238,21 @@
             "q": "~~Die Zinsen ist hoch.~~",
             "a": "Die Zinsen sind hoch.",
             "why": "die Zinsen جمع فقط! (الفعل معها جمع: sind!)!"
+          },
+          {
+            "q": "~~Die aufklärung ist wichtig.~~",
+            "a": "Die Aufklärung ist wichtig.",
+            "why": "الخطأ في «aufklärung»! الصواب «Aufklärung» — راجع القاعدة (التوعية)."
+          },
+          {
+            "q": "~~Wir schreiben Sachlich.~~",
+            "a": "Wir schreiben sachlich.",
+            "why": "الخطأ في «Sachlich»! الصواب «sachlich» — راجع القاعدة (موضوعي)."
+          },
+          {
+            "q": "~~Wir bleiben Gerecht.~~",
+            "a": "Wir bleiben gerecht.",
+            "why": "الخطأ في «Gerecht»! الصواب «gerecht» — راجع القاعدة (عادل)."
           }
         ]
       },
@@ -234,6 +283,111 @@
             "q": "تحدّث عن الفوائد! (جملتان!)",
             "a": "Die Zinsen sind hoch. Wir bezahlen die Zinsen.",
             "why": "الفوائد! (die Zinsen bezahlen!) — hoch (مرتفعة!) من B1!"
+          },
+          {
+            "q": "كوّن جملة فيها «kommentieren» («يعلّق على») ثم تحدّث بها.",
+            "a": "Wir kommentieren die Meldung.",
+            "why": "استعمل «kommentieren» («يعلّق على») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «befragen» («يستطلع») ثم تحدّث بها.",
+            "a": "Wir befragen die Menschen.",
+            "why": "استعمل «befragen» («يستطلع») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Datenschutz» («حماية البيانات») ثم تحدّث بها.",
+            "a": "Der Datenschutz ist wichtig.",
+            "why": "استعمل «der Datenschutz» («حماية البيانات») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "sparsam"
+        ],
+        "items": [
+          {
+            "audioId": "word-finanzieren",
+            "speakText": "finanzieren.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يموّل",
+              "المالية",
+              "الفوائد"
+            ],
+            "a": "يموّل",
+            "why": "الصوت يقول «finanzieren» — معناها «يموّل». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-finanzen",
+            "speakText": "die Finanzen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Finanzen",
+              "finanzieren",
+              "die Zinsen"
+            ],
+            "a": "die Finanzen",
+            "why": "الكلمة المسموعة «die Finanzen» تعني «المالية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-zinsen",
+            "speakText": "die Zinsen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الفوائد",
+              "يموّل",
+              "المالية"
+            ],
+            "a": "الفوائد",
+            "why": "الصوت يقول «die Zinsen» — معناها «الفوائد». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-sparsam",
+            "speakText": "sparsam.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "sparsam",
+              "finanzieren",
+              "die Finanzen"
+            ],
+            "a": "sparsam",
+            "why": "الكلمة المسموعة «sparsam» تعني «مقتصد». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "lieferung"
+        ],
+        "items": [
+          {
+            "audioId": "word-finanzieren",
+            "speakText": "finanzieren.",
+            "a": "finanzieren",
+            "why": "اكتب ما تسمعه حرفياً: «finanzieren» تعني «يموّل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-finanzen",
+            "speakText": "die Finanzen.",
+            "a": "die Finanzen",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Finanzen» («المالية»)."
+          },
+          {
+            "audioId": "word-zinsen",
+            "speakText": "die Zinsen.",
+            "a": "die Zinsen",
+            "why": "اكتب المسموع بدقة: die Zinsen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-lieferung",
+            "speakText": "die Lieferung.",
+            "a": "die Lieferung",
+            "why": "اكتب ما تسمعه حرفياً: «die Lieferung» تعني «الشحنة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +418,14 @@
           {
             "q": "«نموّل البيت.»؟",
             "a": "Wir finanzieren das Haus."
+          },
+          {
+            "q": "«المصاري»؟",
+            "a": "die Finanzen"
+          },
+          {
+            "q": "«ندفع الفوائد.»؟",
+            "a": "Wir bezahlen die Zinsen."
           }
         ]
       },
@@ -284,6 +446,14 @@
           {
             "q": "finanzieren",
             "a": "يموّل"
+          },
+          {
+            "q": "«يموّل»؟",
+            "a": "finanzieren"
+          },
+          {
+            "q": "«المالية»؟",
+            "a": "die Finanzen"
           }
         ]
       },
@@ -304,6 +474,14 @@
           {
             "q": "«نموّل البيت.»؟",
             "a": "Wir finanzieren das Haus."
+          },
+          {
+            "q": "«يموّل»؟",
+            "a": "finanzieren"
+          },
+          {
+            "q": "«المالية»؟",
+            "a": "die Finanzen"
           }
         ]
       }

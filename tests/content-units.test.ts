@@ -1661,6 +1661,48 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     }
   });
 
+  it("الاختبارات الدورية: تغطية الجدول B1 (D560 — قصير 2..14 + شهرية 4/8/12) — تراكمية وبحدود الحجم", () => {
+    const kurz = ALL_PRUEFUNGEN.filter((t) => t.kind === "kurztest" && t.level === "B1");
+    const monat = ALL_PRUEFUNGEN.filter((t) => t.kind === "monatspruefung" && t.level === "B1");
+    expect(kurz.map((x) => x.week).sort((x, y) => x - y)).toEqual([2, 4, 6, 8, 10, 12, 14]);
+    expect(monat.map((x) => x.week).sort((x, y) => x - y)).toEqual([4, 8, 12]);
+    const sat = new Date(2026, 9, 17);
+    for (let w = 2; w <= 14; w += 2) expect(cyclicTestFor(ALL_PRUEFUNGEN, "B1", w, sat)?.id, `الأسبوع ${w}`).toBeTruthy();
+    for (const t of kurz) {
+      expect(t.items.length).toBeLessThanOrEqual(12);
+      expect(t.timeBudgetMin).toBe(15);
+    }
+    for (const t of monat) {
+      expect(t.items.length).toBeGreaterThanOrEqual(10);
+      expect(t.timeBudgetMin).toBe(45);
+    }
+    for (const t of [...kurz, ...monat]) {
+      expect(t.passingScore).toBe(0.75);
+      expect(Math.max(...t.coversUnits), t.id).toBe(t.week);
+    }
+  });
+
+  it("الاختبارات الدورية: تغطية الجدول B2 (D561 — قصير 2..14 + شهرية 4/8/12) — تراكمي حتى الوحدة 6 (B2 = 6 وحدات فقط!)", () => {
+    const kurz = ALL_PRUEFUNGEN.filter((t) => t.kind === "kurztest" && t.level === "B2");
+    const monat = ALL_PRUEFUNGEN.filter((t) => t.kind === "monatspruefung" && t.level === "B2");
+    expect(kurz.map((x) => x.week).sort((x, y) => x - y)).toEqual([2, 4, 6, 8, 10, 12, 14]);
+    expect(monat.map((x) => x.week).sort((x, y) => x - y)).toEqual([4, 8, 12]);
+    const sat = new Date(2026, 9, 17);
+    for (let w = 2; w <= 14; w += 2) expect(cyclicTestFor(ALL_PRUEFUNGEN, "B2", w, sat)?.id, `الأسبوع ${w}`).toBeTruthy();
+    for (const t of kurz) {
+      expect(t.items.length).toBeLessThanOrEqual(12);
+      expect(t.timeBudgetMin).toBe(15);
+    }
+    for (const t of monat) {
+      expect(t.items.length).toBeGreaterThanOrEqual(10);
+      expect(t.timeBudgetMin).toBe(45);
+    }
+    for (const t of [...kurz, ...monat]) {
+      expect(t.passingScore).toBe(0.75);
+      expect(Math.max(...t.coversUnits), t.id).toBe(Math.min(t.week, 6)); // D561: التراكمي يقف عند وحدات B2 الستّ
+    }
+  });
+
   it("الامتحان التجريبي: 4 مهارات كاملة + حدود الصدق", () => {
     expect(ALL_MODELLTESTS.length).toBeGreaterThanOrEqual(1);
     for (const t of ALL_MODELLTESTS) {
@@ -1715,7 +1757,7 @@ describe("A2 يبدأ (D101) — الترتيب بالمستوى + قواعد A2
 
   it("a2-u1-d1: Perfekt منهجي — 13 كلمة A2 جديدة (لا تكرار لـA1) + أصوات مطابقة", async () => {
     const l = a2.find((x) => x.id === "a2-u1-d1")!;
-    expect(l.ziel.ar).toContain("Perfekt");
+    expect(l.ziel.ar).toContain("الماضي"); // D565: معدن A2 صار عربياً في الحقول الوصفية (كان «Perfekt»)
     const words = await wordsForLesson(l);
     expect(words).toHaveLength(13);
     for (const w of words) {
@@ -2062,12 +2104,17 @@ describe("A2 يبدأ (D101) — الترتيب بالمستوى + قواعد A2
     expect(l.curriculumRef.goetheWordListOverlap).toEqual(l.praesentation.wordIds);
   });
 
-  it("A2: كل محطة تخلط بنى A1 سابقة (interleaving) + تنوع المحطات ≥3 أنواع + المصائد على خريطة التداخل", () => {
+  it("A2: كل محطة تخلط بنى سابقة (interleaving) + تنوع المحطات ≥3 أنواع + المصائد على خريطة التداخل", () => {
     expect(a2.length).toBeGreaterThan(0);
     for (const l of a2) {
+      // F121 (D565): الاستدعاء لما سبق تعلمه فقط — أي مستوى سابق (A1 في أوائل A2، ثم كلمات A2 نفسها في وحداتها اللاحقة)
+      const beforeIds = new Set(
+        ALL_LESSONS.filter((x) => x.level < l.level || (x.level === l.level && (x.unit < l.unit || (x.unit === l.unit && x.day < l.day))))
+          .flatMap((x) => x.praesentation.wordIds),
+      );
       for (const s of l.uebung.stations) {
         expect(s.interleavedWith.length).toBeGreaterThan(0);
-        for (const ref of s.interleavedWith) expect(a1Ids.has(ref), `مرجع خلط غير موجود: ${ref}`).toBe(true);
+        for (const ref of s.interleavedWith) expect(beforeIds.has(ref), `مرجع خلط غير موجود: ${ref}`).toBe(true);
       }
       expect(new Set(l.uebung.stations.map((s) => s.type)).size).toBeGreaterThanOrEqual(3);
       expect(l.zusammenfassung.warningCards).toHaveLength(3);

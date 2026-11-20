@@ -66,7 +66,9 @@
       "ars-dass-satz",
       "ars-termin-datum"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a2-u14-s6"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "v2-order",
@@ -85,7 +87,7 @@
             "why": "التمني: würde + gern + المصدر آخر!"
           },
           {
-            "q": "Er ___ gern Musiker werden. (التمني!)",
+            "q": "البادئة الملتصقة ___ gern Musiker werden. (التمني!)",
             "a": "würde",
             "why": "er würde (الصيغة واحدة: würde!)."
           },
@@ -105,7 +107,7 @@
             "why": "الطلب المهذب: ich möchte (وليس will!)."
           },
           {
-            "q": "Er ___ Musiker werden. (wollen — القوي!)",
+            "q": "البادئة الملتصقة ___ Musiker werden. (wollen — القوي!)",
             "a": "will",
             "why": "المتطلّب القوي: er will (وليس wollt!)."
           },
@@ -123,6 +125,26 @@
             "q": "Ich trinke ___ Kaffee. (مرتين!)",
             "a": "zweimal",
             "why": "zweimal = مرتين (كلمة واحدة: zwei+mal!)."
+          },
+          {
+            "q": "Meine ___ ist groß.",
+            "a": "Familie",
+            "why": "الكلمة الناقصة «Familie» تعني «العائلة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir wohnen in einem ___.",
+            "a": "Haus",
+            "why": "الكلمة الناقصة «Haus» تعني «البيت (المبنى المستقل)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist neu.",
+            "a": "Wohnung",
+            "why": "الكلمة الناقصة «Wohnung» تعني «شقة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Ich bin neu im ___.",
+            "a": "Kurs",
+            "why": "الكلمة الناقصة «Kurs» تعني «الدورة» — تذكر صيغتها في السياق."
           }
         ],
         "interleavedWith": [
@@ -165,6 +187,26 @@
             "q": "___ du gern Musik? (mögen — الشاذ!)",
             "a": "Magst",
             "why": "mögen ← magst (e→a!) — وليس möchten!"
+          },
+          {
+            "q": "Mein Vater ___ immer früh auf.",
+            "a": "steht",
+            "why": "الكلمة الناقصة «steht» تعني «ينهض من النوم» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir ___ am Sonntag zusammen.",
+            "a": "frühstücken",
+            "why": "الكلمة الناقصة «frühstücken» تعني «يتناول الفطور» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "«Fährst du heute Auto?» — اكتب الكلمة التي تعني «يذهب بمركبة · يركب»: ___",
+            "a": "fahren",
+            "why": "الكلمة «fahren» تعني «يذهب بمركبة · يركب» — اكتبها كما تُقال في الجملة."
+          },
+          {
+            "q": "Ich bin heute zu Hause ___.",
+            "a": "geblieben",
+            "why": "الكلمة الناقصة «geblieben» تعني «يبقى» — تذكر صيغتها في السياق."
           }
         ],
         "interleavedWith": [
@@ -207,6 +249,26 @@
             "q": "~~Der eins Tag ist schön.~~",
             "a": "Der erste Tag ist schön.",
             "why": "الترتيب: erste (وليس eins!)."
+          },
+          {
+            "q": "~~Mein Vater trägt eine brille.~~",
+            "a": "Mein Vater trägt eine Brille.",
+            "why": "الخطأ في «brille»! الصواب «Brille» — راجع القاعدة (النظارة)."
+          },
+          {
+            "q": "~~Das ist mein schlüssel.~~",
+            "a": "Das ist mein Schlüssel.",
+            "why": "الخطأ في «schlüssel»! الصواب «Schlüssel» — راجع القاعدة (المفتاح)."
+          },
+          {
+            "q": "~~Das ist eine frage.~~",
+            "a": "Das ist eine Frage.",
+            "why": "الخطأ في «frage»! الصواب «Frage» — راجع القاعدة (السؤال)."
+          },
+          {
+            "q": "~~danke! — Bitte!~~",
+            "a": "Danke! — Bitte!",
+            "why": "الخطأ في «danke»! الصواب «Danke» — راجع القاعدة (شكراً)."
           }
         ],
         "interleavedWith": [
@@ -229,6 +291,26 @@
             "q": "لخّص أسبوعك وشهادتك (جملتان: dass + in der Nacht!)",
             "a": "Ich weiß, dass die Woche gut war. Am Arbeitstag habe ich gelernt — und in der Nacht habe ich geschlafen!",
             "why": "dass + آخر! · am Arbeitstag! · in der Nacht!"
+          },
+          {
+            "q": "كوّن جملة فيها «der Montag» («الاثنين») ثم تحدّث بها.",
+            "a": "Am Montag habe ich Kurs.",
+            "why": "استعمل «der Montag» («الاثنين») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Kurs» («الدورة») ثم تحدّث بها.",
+            "a": "Ich bin neu im Kurs.",
+            "why": "استعمل «der Kurs» («الدورة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Schwester» («الأخت») ثم تحدّث بها.",
+            "a": "Das ist die Schwester.",
+            "why": "استعمل «die Schwester» («الأخت») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Bruder» («الأخ») ثم تحدّث بها.",
+            "a": "Das ist der Bruder.",
+            "why": "استعمل «der Bruder» («الأخ») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
           }
         ],
         "interleavedWith": [
@@ -238,6 +320,96 @@
           "bruder"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "wc"
+        ],
+        "items": [
+          {
+            "audioId": "word-arbeitstag",
+            "speakText": "der Arbeitstag.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يوم عمل",
+              "حصان",
+              "في الليل"
+            ],
+            "a": "يوم عمل",
+            "why": "الصوت يقول «der Arbeitstag» — معناها «يوم عمل». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-pferd",
+            "speakText": "das Pferd.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "das Pferd",
+              "der Arbeitstag",
+              "in der Nacht"
+            ],
+            "a": "das Pferd",
+            "why": "الكلمة المسموعة «das Pferd» تعني «حصان». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-in-der-nacht",
+            "speakText": "in der Nacht.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "في الليل",
+              "يوم عمل",
+              "حصان"
+            ],
+            "a": "في الليل",
+            "why": "الصوت يقول «in der Nacht» — معناها «في الليل». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-wc",
+            "speakText": "das WC.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "das WC",
+              "der Arbeitstag",
+              "das Pferd"
+            ],
+            "a": "das WC",
+            "why": "الكلمة المسموعة «das WC» تعني «دورة المياه». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "europaeer"
+        ],
+        "items": [
+          {
+            "audioId": "word-arbeitstag",
+            "speakText": "der Arbeitstag.",
+            "a": "der Arbeitstag",
+            "why": "اكتب ما تسمعه حرفياً: «der Arbeitstag» تعني «يوم عمل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-pferd",
+            "speakText": "das Pferd.",
+            "a": "das Pferd",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «das Pferd» («حصان»)."
+          },
+          {
+            "audioId": "word-in-der-nacht",
+            "speakText": "in der Nacht.",
+            "a": "in der Nacht",
+            "why": "اكتب المسموع بدقة: in der Nacht — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-europaeer",
+            "speakText": "der Europäer.",
+            "a": "der Europäer",
+            "why": "اكتب ما تسمعه حرفياً: «der Europäer» تعني «أوروبي». انتبه للحروف الكبيرة!"
+          }
+        ]
       }
     ],
     "communicativeTask": {
@@ -306,6 +478,14 @@
               "Ich weiß das das wahr ist."
             ],
             "why": "dass + الفعل آخر!"
+          },
+          {
+            "q": "«يوم عمل»؟",
+            "a": "der Arbeitstag"
+          },
+          {
+            "q": "«حصان»؟",
+            "a": "das Pferd"
           }
         ],
         "passingScore": 0.75
@@ -351,6 +531,14 @@
               "Ich trinke zweiter Kaffee."
             ],
             "why": "zweimal = مرتين (كلمة واحدة!)."
+          },
+          {
+            "q": "«يوم عمل»؟",
+            "a": "der Arbeitstag"
+          },
+          {
+            "q": "«حصان»؟",
+            "a": "das Pferd"
           }
         ],
         "passingScore": 0.75
@@ -396,6 +584,14 @@
               "Ich wünsche gern helfen."
             ],
             "why": "würde + gern + المصدر بلا zu!"
+          },
+          {
+            "q": "«يوم عمل»؟",
+            "a": "der Arbeitstag"
+          },
+          {
+            "q": "«حصان»؟",
+            "a": "das Pferd"
           }
         ],
         "passingScore": 0.75

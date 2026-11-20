@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u5-d3-die-zinsen",
+  "kind": "dialogue",
+  "level": "B2",
+  "title": {
+    "de": "Die Zinsen",
+    "ar": "الفوائد"
+  },
+  "usedIn": [
+    "b2-u5-d3"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b2u5d3-l1",
+      "speaker": "mueller",
+      "text": "Wir finanzieren das Haus und bezahlen die Zinsen!",
+      "direction": "درس مالي"
+    },
+    {
+      "id": "b2u5d3-l2",
+      "speaker": "yusuf",
+      "text": "Wie hoch sind die Zinsen?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u5d3-l3",
+      "speaker": "mueller",
+      "text": "Drei Prozent. Die Finanzen müssen stimmen.",
+      "direction": "إجابة"
+    },
+    {
+      "id": "b2u5d3-l4",
+      "speaker": "yusuf",
+      "text": "Das ist viel.",
+      "direction": "قلق"
+    },
+    {
+      "id": "b2u5d3-l5",
+      "speaker": "mueller",
+      "text": "Aber das Haus ist es wert.",
+      "direction": "مواساة"
+    },
+    {
+      "id": "b2u5d3-l6",
+      "speaker": "yusuf",
+      "text": "Und sparen hilft auch.",
+      "direction": "إضافة"
+    },
+    {
+      "id": "b2u5d3-l7",
+      "speaker": "mueller",
+      "text": "Genau. Gute Finanzen, ruhiges Leben.",
+      "direction": "خلاصة"
+    },
+    {
+      "id": "b2u5d3-l8",
+      "speaker": "yusuf",
+      "text": "Danke für den Rat.",
+      "direction": "إغلاق"
+    }
+  ]
+}

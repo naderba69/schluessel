@@ -69,7 +69,7 @@ const sameList = (a: readonly string[] | undefined, b: readonly string[]) =>
 /** قسم من أقسام الامتحان (مهارة واحدة) */
 export const ModelltestSection = z.object({
   skill: ExamSkill,
-  timeBudgetMin: z.number().int().min(5).max(60),
+  timeBudgetMin: z.number().int().min(5).max(90), // D559: B1 Lesen = 65 د رسمياً (Modellsatz) — كان السقف 60 يكسر الصيغة الرسمية
   instructions: z.object({ de: z.string().min(1), ar: z.string().min(1) }),
   parts: z.array(ModelltestPart).min(1),
 }).superRefine((s, ctx) => {

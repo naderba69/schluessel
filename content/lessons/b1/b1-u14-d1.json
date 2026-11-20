@@ -58,7 +58,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u14-s1"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "trennbar",
@@ -175,6 +177,23 @@
               }
             ],
             "why": "مراجعة الأفعال والأدوات! bestehen يُجتاز · schaffen ينجح · anmelden يتسجّل · das Wörterbuch"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يُرسّخ",
+                "de": "verfestigen"
+              },
+              {
+                "ar": "الانتقال",
+                "de": "der Übergang"
+              },
+              {
+                "ar": "يعرف (معلومة)",
+                "de": "wissen"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: verfestigen = «يُرسّخ» · der Übergang = «الانتقال» · wissen = «يعرف (معلومة)»"
           }
         ]
       },
@@ -186,9 +205,8 @@
           "الاستعداد للامتحان!"
         ],
         "interleavedWith": [
-          "urkunde",
-          "punktzahl",
-          "abschneiden"
+          "uebergang",
+          "verfestigen"
         ],
         "items": [
           {
@@ -215,6 +233,16 @@
             "q": "Die ___ zeigt das Ergebnis. (عدد النقاط!)",
             "a": "Punktzahl",
             "why": "die Punktzahl erreichen — المفردة الثابتة! (zeigt!)"
+          },
+          {
+            "q": "Der ___ ist klar.",
+            "a": "Übergang",
+            "why": "الكلمة الناقصة «Übergang» تعني «الانتقال» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Er ___ das Wissen.",
+            "a": "verfestigt",
+            "why": "الكلمة الناقصة «verfestigt» تعني «يُرسّخ» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -245,6 +273,21 @@
             "q": "~~Er hat gut geschnitten ab.~~",
             "a": "Er hat gut abgeschnitten.",
             "why": "abschneiden منفصل! التمام: hat abgeschnitten (لا geschnitten ab!)"
+          },
+          {
+            "q": "~~Die prüfung ist bald.~~",
+            "a": "Die Prüfung ist bald.",
+            "why": "الخطأ في «prüfung»! الصواب «Prüfung» — راجع القاعدة (الامتحان)."
+          },
+          {
+            "q": "~~Das ergebnis ist gut: nur eine Erkältung.~~",
+            "a": "Das Ergebnis ist gut: nur eine Erkältung.",
+            "why": "الخطأ في «ergebnis»! الصواب «Ergebnis» — راجع القاعدة (النتيجة)."
+          },
+          {
+            "q": "~~Die note ist gut.~~",
+            "a": "Die Note ist gut.",
+            "why": "الخطأ في «note»! الصواب «Note» — راجع القاعدة (علامة مدرسية)."
           }
         ]
       },
@@ -280,6 +323,101 @@
             "q": "اختم بالاستعداد! (جملتان!)",
             "a": "Die Vorbereitung ist wichtig. Die Ruhe ist klar.",
             "why": "التحضير والهدوء! (الاستعداد!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Konzentration» («التركيز») ثم تحدّث بها.",
+            "a": "Die Konzentration ist gut.",
+            "why": "استعمل «die Konzentration» («التركيز») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "uebergang"
+        ],
+        "items": [
+          {
+            "audioId": "word-urkunde",
+            "speakText": "die Urkunde.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الشهادة الرسمية",
+              "عدد النقاط",
+              "يُحرز نتيجة"
+            ],
+            "a": "الشهادة الرسمية",
+            "why": "الصوت يقول «die Urkunde» — معناها «الشهادة الرسمية». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-punktzahl",
+            "speakText": "die Punktzahl.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Punktzahl",
+              "die Urkunde",
+              "abschneiden"
+            ],
+            "a": "die Punktzahl",
+            "why": "الكلمة المسموعة «die Punktzahl» تعني «عدد النقاط». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-abschneiden",
+            "speakText": "abschneiden.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يُحرز نتيجة",
+              "الشهادة الرسمية",
+              "عدد النقاط"
+            ],
+            "a": "يُحرز نتيجة",
+            "why": "الصوت يقول «abschneiden» — معناها «يُحرز نتيجة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-uebergang",
+            "speakText": "der Übergang.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "der Übergang",
+              "die Urkunde",
+              "die Punktzahl"
+            ],
+            "a": "der Übergang",
+            "why": "الكلمة المسموعة «der Übergang» تعني «الانتقال». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "verfestigen"
+        ],
+        "items": [
+          {
+            "audioId": "word-urkunde",
+            "speakText": "die Urkunde.",
+            "a": "die Urkunde",
+            "why": "اكتب ما تسمعه حرفياً: «die Urkunde» تعني «الشهادة الرسمية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-punktzahl",
+            "speakText": "die Punktzahl.",
+            "a": "die Punktzahl",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Punktzahl» («عدد النقاط»)."
+          },
+          {
+            "audioId": "word-abschneiden",
+            "speakText": "abschneiden.",
+            "a": "abschneiden",
+            "why": "اكتب المسموع بدقة: abschneiden — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-verfestigen",
+            "speakText": "verfestigen.",
+            "a": "verfestigen",
+            "why": "اكتب ما تسمعه حرفياً: «verfestigen» تعني «يُرسّخ». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -310,6 +448,14 @@
           {
             "q": "«يحصل على الشهادة.»؟",
             "a": "Er bekommt die Urkunde."
+          },
+          {
+            "q": "«يُحرز نتيجة»؟",
+            "a": "abschneiden"
+          },
+          {
+            "q": "«الوثيقة»؟",
+            "a": "die Urkunde"
           }
         ]
       },
@@ -330,6 +476,14 @@
           {
             "q": "«يُجتاز الامتحان.»؟",
             "a": "Er besteht die Prüfung."
+          },
+          {
+            "q": "«الشهادة الرسمية»؟",
+            "a": "die Urkunde"
+          },
+          {
+            "q": "«عدد النقاط»؟",
+            "a": "die Punktzahl"
           }
         ]
       },
@@ -350,6 +504,14 @@
           {
             "q": "«يُحرز عدد النقاط.»؟ (المفردة الثابتة!)",
             "a": "Er erreicht die Punktzahl."
+          },
+          {
+            "q": "«الشهادة الرسمية»؟",
+            "a": "die Urkunde"
+          },
+          {
+            "q": "«عدد النقاط»؟",
+            "a": "die Punktzahl"
           }
         ]
       }

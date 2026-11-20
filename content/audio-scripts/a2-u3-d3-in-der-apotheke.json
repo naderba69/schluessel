@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u3-d3-in-der-apotheke",
+  "kind": "dialogue",
+  "level": "A2",
+  "title": {
+    "de": "In der Apotheke",
+    "ar": "في الصيدلية"
+  },
+  "usedIn": [
+    "a2-u3-d3"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a2u3d3-l1",
+      "speaker": "frau-schmidt",
+      "text": "Guten Tag! Was kann ich für Sie tun?",
+      "direction": "الصيدلية تستقبل الزبون"
+    },
+    {
+      "id": "a2u3d3-l2",
+      "speaker": "yusuf",
+      "text": "Mein Hals tut weh. Ist die Sprechstunde morgens?",
+      "direction": "يوسف يشكو من المرض"
+    },
+    {
+      "id": "a2u3d3-l3",
+      "speaker": "frau-schmidt",
+      "text": "Ja! Trinken Sie Tee mit Zitrone.",
+      "direction": "السيدة تعطي النصيحة"
+    },
+    {
+      "id": "a2u3d3-l4",
+      "speaker": "yusuf",
+      "text": "Und Süßigkeiten? Sind sie schädlich?",
+      "direction": "يوسف يسأل عن الحلويات"
+    },
+    {
+      "id": "a2u3d3-l5",
+      "speaker": "frau-schmidt",
+      "text": "Ja! Fett und Zucker sind nicht nützlich.",
+      "direction": "السيدة تشدد"
+    },
+    {
+      "id": "a2u3d3-l6",
+      "speaker": "yusuf",
+      "text": "Ich bin auch ein bisschen schwanger... Nein! Nur müde!",
+      "direction": "يوسف يخطئ ثم يضحك"
+    },
+    {
+      "id": "a2u3d3-l7",
+      "speaker": "frau-schmidt",
+      "text": "Tragen Sie sich hier ein, bitte!",
+      "direction": "السيدة تضحك وتعطيه الورقة"
+    },
+    {
+      "id": "a2u3d3-l8",
+      "speaker": "yusuf",
+      "text": "Danke! Sport ist auch nützlich, oder?",
+      "direction": "يوسف يشكرها"
+    }
+  ]
+}

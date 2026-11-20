@@ -65,7 +65,9 @@
       "ars-koennten-sie",
       "ars-dass-satz"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u12-s6"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "needs-ein"
@@ -181,6 +183,23 @@
               }
             ],
             "why": "الرحلة كاملة! Prüfung/Niveau (الثقافة!) · Tradition/international (الوحدة 6!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يُثبت",
+                "de": "nachweisen"
+              },
+              {
+                "ar": "يُقيّم بدرجة",
+                "de": "benoten"
+              },
+              {
+                "ar": "الاسترجاع",
+                "de": "der Rückblick"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: nachweisen = «يُثبت» · benoten = «يُقيّم بدرجة» · der Rückblick = «الاسترجاع»"
           }
         ]
       },
@@ -192,8 +211,6 @@
           "الاسترجاع والنظرة المستقبلية!"
         ],
         "interleavedWith": [
-          "rueckblick",
-          "ausblick",
           "pruefung"
         ],
         "items": [
@@ -221,6 +238,11 @@
             "q": "Die Reise war lang und der ___ ist klar. (النهاية والاستمرار!)",
             "a": "Ausblick",
             "why": "الرحلة تنتهي والنظرة تمضي! (der Ausblick!)"
+          },
+          {
+            "q": "Die ___ ist bald.",
+            "a": "Prüfung",
+            "why": "الكلمة الناقصة «Prüfung» تعني «الامتحان» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -251,6 +273,21 @@
             "q": "~~Der Ausblicke ist klar.~~",
             "a": "Der Ausblick ist klar.",
             "why": "المفرد لا الجمع! der Ausblick (die Ausblicke — الجمع!) — الجملة عن نظرة واحدة!"
+          },
+          {
+            "q": "~~Ich spreche Deutsch.~~ (ناقصة: sprechen)",
+            "a": "Ich spreche Deutsch. sprechen.",
+            "why": "الجملة تفتقد «sprechen» (يتحدّث) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~Ich schreibe meinen Namen.~~ (ناقصة: schreiben)",
+            "a": "Ich schreibe meinen Namen. schreiben.",
+            "why": "الجملة تفتقد «schreiben» (يكتب) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~Die kultur ist gut.~~",
+            "a": "Die Kultur ist gut.",
+            "why": "الخطأ في «kultur»! الصواب «Kultur» — راجع القاعدة (ثقافة)."
           }
         ]
       },
@@ -286,6 +323,86 @@
             "q": "اختم بالنظرة المستقبلية! (جملتان!)",
             "a": "Der Ausblick ist klar. Der Weg geht weiter!",
             "why": "النهاية بداية! (der Ausblick! den Ausblick geben!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Erfahrung» («تجربة») ثم تحدّث بها.",
+            "a": "Das war eine gute Erfahrung.",
+            "why": "استعمل «die Erfahrung» («تجربة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Ziel» («وجهة») ثم تحدّث بها.",
+            "a": "Mein Ziel ist Berlin.",
+            "why": "استعمل «das Ziel» («وجهة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "benoten"
+        ],
+        "items": [
+          {
+            "audioId": "word-rueckblick",
+            "speakText": "der Rückblick.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الاسترجاع",
+              "النظرة المستقبلية"
+            ],
+            "a": "الاسترجاع",
+            "why": "الصوت يقول «der Rückblick» — معناها «الاسترجاع». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ausblick",
+            "speakText": "der Ausblick.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Ausblick",
+              "der Rückblick"
+            ],
+            "a": "der Ausblick",
+            "why": "الكلمة المسموعة «der Ausblick» تعني «النظرة المستقبلية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-benoten",
+            "speakText": "benoten.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "يُقيّم بدرجة",
+              "الاسترجاع",
+              "النظرة المستقبلية"
+            ],
+            "a": "يُقيّم بدرجة",
+            "why": "الصوت يقول «benoten» — معناها «يُقيّم بدرجة». ركّز على الصوت لا على الشكل!"
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "nachweisen"
+        ],
+        "items": [
+          {
+            "audioId": "word-rueckblick",
+            "speakText": "der Rückblick.",
+            "a": "der Rückblick",
+            "why": "اكتب ما تسمعه حرفياً: «der Rückblick» تعني «الاسترجاع». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ausblick",
+            "speakText": "der Ausblick.",
+            "a": "der Ausblick",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Ausblick» («النظرة المستقبلية»)."
+          },
+          {
+            "audioId": "word-nachweisen",
+            "speakText": "nachweisen.",
+            "a": "nachweisen",
+            "why": "اكتب المسموع بدقة: nachweisen — ركّز على نهاية الكلمة!"
           }
         ]
       }
@@ -316,6 +433,14 @@
           {
             "q": "«الرحلة كانت طويلة.»؟",
             "a": "Die Reise war lang."
+          },
+          {
+            "q": "«النظرة إلى الماضي»؟",
+            "a": "der Rückblick"
+          },
+          {
+            "q": "«المستقبل الواعد»؟",
+            "a": "der Ausblick"
           }
         ]
       },
@@ -336,6 +461,14 @@
           {
             "q": "«الاعتراف»؟ (استرجاع!)",
             "a": "die Anerkennung"
+          },
+          {
+            "q": "«الاسترجاع»؟",
+            "a": "der Rückblick"
+          },
+          {
+            "q": "«النظرة المستقبلية»؟",
+            "a": "der Ausblick"
           }
         ]
       },
@@ -356,6 +489,14 @@
           {
             "q": "«يمنح نظرة مستقبلية.»؟ (المفردة الثابتة!)",
             "a": "Er gibt den Ausblick."
+          },
+          {
+            "q": "«الاسترجاع»؟",
+            "a": "der Rückblick"
+          },
+          {
+            "q": "«النظرة المستقبلية»؟",
+            "a": "der Ausblick"
           }
         ]
       }

@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u5-s5"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "sp-st-initial",
@@ -134,6 +136,23 @@
               }
             ],
             "why": "der Hersteller produziert (من d2!) · gebraucht kaufen! · die Rückgabe ist möglich! · die Rückgabe (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "صاحب العمل",
+                "de": "der Arbeitgeber"
+              },
+              {
+                "ar": "التوظيف",
+                "de": "die Anstellung"
+              },
+              {
+                "ar": "التقاعد",
+                "de": "der Ruhestand"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Arbeitgeber = «صاحب العمل» · die Anstellung = «التوظيف» · der Ruhestand = «التقاعد»"
           }
         ]
       },
@@ -169,6 +188,21 @@
             "q": "Der Hersteller ___ die Ware. (ينتج!)",
             "a": "produziert",
             "why": "produzieren ينتج (Präsens er/sie: produziert!) — Der Hersteller produziert die Ware."
+          },
+          {
+            "q": "Wir ___ das Haus.",
+            "a": "finanzieren",
+            "why": "الكلمة الناقصة «finanzieren» تعني «يموّل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir prüfen die ___.",
+            "a": "Finanzen",
+            "why": "الكلمة الناقصة «Finanzen» تعني «المالية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir bezahlen die ___.",
+            "a": "Zinsen",
+            "why": "الكلمة الناقصة «Zinsen» تعني «الفوائد» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +238,16 @@
             "q": "~~Die Rückgabe sind möglich.~~",
             "a": "Die Rückgabe ist möglich.",
             "why": "المفرد die Rückgabe مع ist (لا sind!)!"
+          },
+          {
+            "q": "~~Die lieferung kommt.~~",
+            "a": "Die Lieferung kommt.",
+            "why": "الخطأ في «lieferung»! الصواب «Lieferung» — راجع القاعدة (الشحنة)."
+          },
+          {
+            "q": "~~Wir leben Sparsam.~~",
+            "a": "Wir leben sparsam.",
+            "why": "الخطأ في «Sparsam»! الصواب «sparsam» — راجع القاعدة (مقتصد)."
           }
         ]
       },
@@ -234,6 +278,111 @@
             "q": "تحدّث عن الإرجاع! (جملتان!)",
             "a": "Die Rückgabe ist möglich. Das ist wichtig.",
             "why": "الإرجاع! (die Rückgabe ist möglich!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Wirtschaft» («الاقتصاد») ثم تحدّث بها.",
+            "a": "Die Wirtschaft ist wichtig.",
+            "why": "استعمل «die Wirtschaft» («الاقتصاد») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Verbraucher» («المستهلك») ثم تحدّث بها.",
+            "a": "Der Verbraucher kauft.",
+            "why": "استعمل «der Verbraucher» («المستهلك») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Verschwendung» («التبذير») ثم تحدّث بها.",
+            "a": "Die Verschwendung ist schlimm.",
+            "why": "استعمل «die Verschwendung» («التبذير») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "ruhestand"
+        ],
+        "items": [
+          {
+            "audioId": "word-hersteller",
+            "speakText": "der Hersteller.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المصنّع",
+              "مستعمل",
+              "الإرجاع"
+            ],
+            "a": "المصنّع",
+            "why": "الصوت يقول «der Hersteller» — معناها «المصنّع». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-gebraucht",
+            "speakText": "gebraucht.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "gebraucht",
+              "der Hersteller",
+              "die Rückgabe"
+            ],
+            "a": "gebraucht",
+            "why": "الكلمة المسموعة «gebraucht» تعني «مستعمل». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-rueckgabe",
+            "speakText": "die Rückgabe.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الإرجاع",
+              "المصنّع",
+              "مستعمل"
+            ],
+            "a": "الإرجاع",
+            "why": "الصوت يقول «die Rückgabe» — معناها «الإرجاع». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ruhestand",
+            "speakText": "der Ruhestand.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "der Ruhestand",
+              "der Hersteller",
+              "gebraucht"
+            ],
+            "a": "der Ruhestand",
+            "why": "الكلمة المسموعة «der Ruhestand» تعني «التقاعد». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "anstellung"
+        ],
+        "items": [
+          {
+            "audioId": "word-hersteller",
+            "speakText": "der Hersteller.",
+            "a": "der Hersteller",
+            "why": "اكتب ما تسمعه حرفياً: «der Hersteller» تعني «المصنّع». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gebraucht",
+            "speakText": "gebraucht.",
+            "a": "gebraucht",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «gebraucht» («مستعمل»)."
+          },
+          {
+            "audioId": "word-rueckgabe",
+            "speakText": "die Rückgabe.",
+            "a": "die Rückgabe",
+            "why": "اكتب المسموع بدقة: die Rückgabe — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-anstellung",
+            "speakText": "die Anstellung.",
+            "a": "die Anstellung",
+            "why": "اكتب ما تسمعه حرفياً: «die Anstellung» تعني «التوظيف». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +413,14 @@
           {
             "q": "«المصنّع ينتج.»؟",
             "a": "Der Hersteller produziert."
+          },
+          {
+            "q": "«مستعملاً»؟",
+            "a": "gebraucht"
+          },
+          {
+            "q": "«الإرجاع ممكن.»؟",
+            "a": "Die Rückgabe ist möglich."
           }
         ]
       },
@@ -284,6 +441,14 @@
           {
             "q": "der Hersteller",
             "a": "المصنّع"
+          },
+          {
+            "q": "«المصنّع»؟",
+            "a": "der Hersteller"
+          },
+          {
+            "q": "«مستعمل»؟",
+            "a": "gebraucht"
           }
         ]
       },
@@ -304,6 +469,14 @@
           {
             "q": "«الإرجاع ممكن.»؟",
             "a": "Die Rückgabe ist möglich."
+          },
+          {
+            "q": "«المصنّع»؟",
+            "a": "der Hersteller"
+          },
+          {
+            "q": "«مستعمل»؟",
+            "a": "gebraucht"
           }
         ]
       }

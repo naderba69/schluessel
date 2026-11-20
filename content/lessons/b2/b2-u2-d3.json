@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u2-s3"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "w-v"
@@ -133,6 +135,23 @@
               }
             ],
             "why": "die Ressourcen recyceln (يعيد تدوير الموارد!) · die Umwelt schonen (يحافظ على البيئة — Akkusativ: die!) · die Umwelt schützen (يحمي البيئة!) · der Klimawandel (der! المركّب يتبع آخره!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "متجدّد",
+                "de": "erneuerbar"
+              },
+              {
+                "ar": "يحرق",
+                "de": "verbrennen"
+              },
+              {
+                "ar": "التغيّر المناخي",
+                "de": "der Klimawandel"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: erneuerbar = «متجدّد» · verbrennen = «يحرق» · der Klimawandel = «التغيّر المناخي»"
           }
         ]
       },
@@ -168,6 +187,21 @@
             "q": "Der Klimawandel ist ___. (خطِر!)",
             "a": "gefährlich",
             "why": "gefährlich خطِر (الصفة!) — Der Klimawandel ist gefährlich."
+          },
+          {
+            "q": "___ ist wichtig.",
+            "a": "Nachhaltigkeit",
+            "why": "الكلمة الناقصة «Nachhaltigkeit» تعني «الاستدامة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ auf die Menschen ist groß.",
+            "a": "Auswirkung",
+            "why": "الكلمة الناقصة «Auswirkung» تعني «التأثير» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir ___ die Luft.",
+            "a": "verschmutzen",
+            "why": "الكلمة الناقصة «verschmutzen» تعني «يلوّث» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -203,6 +237,21 @@
             "q": "~~Wir haben die Ressourcen recycelt auf.~~",
             "a": "Wir haben die Ressourcen recycelt.",
             "why": "recyceln ليس فعلاً منفصلاً! (لا auf!)"
+          },
+          {
+            "q": "~~Die gerechtigkeit ist wichtig.~~",
+            "a": "Die Gerechtigkeit ist wichtig.",
+            "why": "الخطأ في «gerechtigkeit»! الصواب «Gerechtigkeit» — راجع القاعدة (العدل)."
+          },
+          {
+            "q": "~~Ich warne dich.~~ (ناقصة: warnen)",
+            "a": "Ich warne dich. warnen.",
+            "why": "الجملة تفتقد «warnen» (يحذّر) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~Wir lösen den konflikt.~~",
+            "a": "Wir lösen den Konflikt.",
+            "why": "الخطأ في «konflikt»! الصواب «Konflikt» — راجع القاعدة (النزاع)."
           }
         ]
       },
@@ -233,6 +282,111 @@
             "q": "تحدث عن المحافظة! (جملتان!)",
             "a": "Wir schonen die Umwelt. Die Umwelt ist wichtig.",
             "why": "المحافظة! (die Umwelt schonen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «der Mensch» («الإنسان») ثم تحدّث بها.",
+            "a": "In Berlin leben viele Menschen.",
+            "why": "استعمل «der Mensch» («الإنسان») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «freundlich» («ودود/لطيف») ثم تحدّث بها.",
+            "a": "Meine Tante ist freundlich.",
+            "why": "استعمل «freundlich» («ودود/لطيف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Ruhe» («الهدوء») ثم تحدّث بها.",
+            "a": "Ich brauche Ruhe.",
+            "why": "استعمل «die Ruhe» («الهدوء») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "verbrennen"
+        ],
+        "items": [
+          {
+            "audioId": "word-klimawandel",
+            "speakText": "der Klimawandel.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التغيّر المناخي",
+              "يعيد التدوير",
+              "يحافظ على"
+            ],
+            "a": "التغيّر المناخي",
+            "why": "الصوت يقول «der Klimawandel» — معناها «التغيّر المناخي». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-recyceln",
+            "speakText": "recyceln.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "recyceln",
+              "der Klimawandel",
+              "schonen"
+            ],
+            "a": "recyceln",
+            "why": "الكلمة المسموعة «recyceln» تعني «يعيد التدوير». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-schonen",
+            "speakText": "schonen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يحافظ على",
+              "التغيّر المناخي",
+              "يعيد التدوير"
+            ],
+            "a": "يحافظ على",
+            "why": "الصوت يقول «schonen» — معناها «يحافظ على». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-verbrennen",
+            "speakText": "verbrennen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "verbrennen",
+              "der Klimawandel",
+              "recyceln"
+            ],
+            "a": "verbrennen",
+            "why": "الكلمة المسموعة «verbrennen» تعني «يحرق». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "erneuerbar"
+        ],
+        "items": [
+          {
+            "audioId": "word-klimawandel",
+            "speakText": "der Klimawandel.",
+            "a": "der Klimawandel",
+            "why": "اكتب ما تسمعه حرفياً: «der Klimawandel» تعني «التغيّر المناخي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-recyceln",
+            "speakText": "recyceln.",
+            "a": "recyceln",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «recyceln» («يعيد التدوير»)."
+          },
+          {
+            "audioId": "word-schonen",
+            "speakText": "schonen.",
+            "a": "schonen",
+            "why": "اكتب المسموع بدقة: schonen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-erneuerbar",
+            "speakText": "erneuerbar.",
+            "a": "erneuerbar",
+            "why": "اكتب ما تسمعه حرفياً: «erneuerbar» تعني «متجدّد». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -263,6 +417,14 @@
           {
             "q": "«التغيّر المناخي خطِر.»؟",
             "a": "Der Klimawandel ist gefährlich."
+          },
+          {
+            "q": "«يعيد التدوير»؟",
+            "a": "recyceln"
+          },
+          {
+            "q": "«يحافظ على»؟",
+            "a": "schonen"
           }
         ]
       },
@@ -283,6 +445,14 @@
           {
             "q": "der Klimawandel",
             "a": "التغيّر المناخي"
+          },
+          {
+            "q": "«التغيّر المناخي»؟",
+            "a": "der Klimawandel"
+          },
+          {
+            "q": "«يعيد التدوير»؟",
+            "a": "recyceln"
           }
         ]
       },
@@ -303,6 +473,14 @@
           {
             "q": "«نحافظ على البيئة.»؟",
             "a": "Wir schonen die Umwelt."
+          },
+          {
+            "q": "«التغيّر المناخي»؟",
+            "a": "der Klimawandel"
+          },
+          {
+            "q": "«يعيد التدوير»؟",
+            "a": "recyceln"
           }
         ]
       }

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u7-d4-im-kaufhaus",
+  "kind": "dialogue",
+  "level": "A2",
+  "title": {
+    "de": "Im Kaufhaus",
+    "ar": "في المتجر الكبير"
+  },
+  "usedIn": [
+    "a2-u7-d4"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a2u7d4-l1",
+      "speaker": "frau-schmidt",
+      "text": "Guten Tag! Kann ich helfen?",
+      "direction": "الموظفة تستقبل العميل"
+    },
+    {
+      "id": "a2u7d4-l2",
+      "speaker": "yusuf",
+      "text": "Ja! Ich möchte einen Fotoapparat kaufen.",
+      "direction": "يوسف يطلب الكاميرا"
+    },
+    {
+      "id": "a2u7d4-l3",
+      "speaker": "frau-schmidt",
+      "text": "Im Erdgeschoss, neben den Fundsachen.",
+      "direction": "الموظفة تدلّه على المكان"
+    },
+    {
+      "id": "a2u7d4-l4",
+      "speaker": "yusuf",
+      "text": "Und kann ich mit Kredit bezahlen?",
+      "direction": "يوسف يسأل عن الدفع"
+    },
+    {
+      "id": "a2u7d4-l5",
+      "speaker": "frau-schmidt",
+      "text": "Natürlich! Oder mit dem Taschengeld.",
+      "direction": "الموظفة تمزح"
+    },
+    {
+      "id": "a2u7d4-l6",
+      "speaker": "yusuf",
+      "text": "Mein Taschengeld ist klein!",
+      "direction": "يوسف يضحك"
+    },
+    {
+      "id": "a2u7d4-l7",
+      "speaker": "frau-schmidt",
+      "text": "Kein Problem! Der Fotoapparat ist günstig.",
+      "direction": "الموظفة تطمئنه"
+    },
+    {
+      "id": "a2u7d4-l8",
+      "speaker": "yusuf",
+      "text": "Danke! Dann nehme ich ihn.",
+      "direction": "يوسف يشتري الكاميرا"
+    }
+  ]
+}

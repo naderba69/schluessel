@@ -6,7 +6,7 @@ import { z } from "zod";
 import { ArText, DeText, Level, SchemaVersioned, Slug } from "./common.js";
 import { CharacterId } from "./manifest.js";
 
-export const StorySentenceId = z.string().regex(/^story-a[12]-u\d{1,2}-s\d$/u, "story-a1-u6-s4");
+export const StorySentenceId = z.string().regex(/^story-(a1|a2|b1|b2)-u\d{1,2}-s\d$/u, "story-a1-u6-s4");
 
 export const StorySentence = z.object({
   id: StorySentenceId,

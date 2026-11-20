@@ -65,7 +65,9 @@
       "ars-koennten-sie",
       "ars-dass-satz"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u13-s6"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "needs-ein",
@@ -193,8 +195,6 @@
           "الترسيخ والانتقال!"
         ],
         "interleavedWith": [
-          "verfestigen",
-          "uebergang",
           "wissen"
         ],
         "items": [
@@ -252,6 +252,21 @@
             "q": "~~Er verfestigen das Wissen.~~",
             "a": "Er verfestigt das Wissen.",
             "why": "المضارع لا المصدر! er verfestigt (لا verfestigen!)"
+          },
+          {
+            "q": "~~Das merkmal ist wichtig.~~",
+            "a": "Das Merkmal ist wichtig.",
+            "why": "الخطأ في «merkmal»! الصواب «Merkmal» — راجع القاعدة (السمة المميزة)."
+          },
+          {
+            "q": "~~Der zusammenhang ist klar.~~",
+            "a": "Der Zusammenhang ist klar.",
+            "why": "الخطأ في «zusammenhang»! الصواب «Zusammenhang» — راجع القاعدة (الاتّساق)."
+          },
+          {
+            "q": "~~Die bedingung ist wichtig.~~",
+            "a": "Die Bedingung ist wichtig.",
+            "why": "الخطأ في «bedingung»! الصواب «Bedingung» — راجع القاعدة (الشرط)."
           }
         ]
       },
@@ -289,6 +304,76 @@
             "why": "ختام التوليف! (das Wissen verfestigen! den Übergang schaffen!)"
           }
         ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "format"
+        ],
+        "items": [
+          {
+            "audioId": "word-verfestigen",
+            "speakText": "verfestigen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يُرسّخ",
+              "الانتقال"
+            ],
+            "a": "يُرسّخ",
+            "why": "الصوت يقول «verfestigen» — معناها «يُرسّخ». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-uebergang",
+            "speakText": "der Übergang.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Übergang",
+              "verfestigen"
+            ],
+            "a": "der Übergang",
+            "why": "الكلمة المسموعة «der Übergang» تعني «الانتقال». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-format",
+            "speakText": "das Format.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "التنسيق",
+              "يُرسّخ",
+              "الانتقال"
+            ],
+            "a": "التنسيق",
+            "why": "الصوت يقول «das Format» — معناها «التنسيق». ركّز على الصوت لا على الشكل!"
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "vorlage"
+        ],
+        "items": [
+          {
+            "audioId": "word-verfestigen",
+            "speakText": "verfestigen.",
+            "a": "verfestigen",
+            "why": "اكتب ما تسمعه حرفياً: «verfestigen» تعني «يُرسّخ». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-uebergang",
+            "speakText": "der Übergang.",
+            "a": "der Übergang",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Übergang» («الانتقال»)."
+          },
+          {
+            "audioId": "word-vorlage",
+            "speakText": "die Vorlage.",
+            "a": "die Vorlage",
+            "why": "اكتب المسموع بدقة: die Vorlage — ركّز على نهاية الكلمة!"
+          }
+        ]
       }
     ]
   },
@@ -317,6 +402,14 @@
           {
             "q": "«يُتمّ الانتقال.»؟",
             "a": "Er schafft den Übergang."
+          },
+          {
+            "q": "«يُرسّخ»؟",
+            "a": "verfestigen"
+          },
+          {
+            "q": "«يُثبّت»؟",
+            "a": "verfestigen"
           }
         ]
       },
@@ -337,6 +430,14 @@
           {
             "q": "«الصياغة»؟ (استرجاع!)",
             "a": "die Formulierung"
+          },
+          {
+            "q": "«يُرسّخ»؟",
+            "a": "verfestigen"
+          },
+          {
+            "q": "«الانتقال»؟",
+            "a": "der Übergang"
           }
         ]
       },
@@ -357,6 +458,14 @@
           {
             "q": "«يُرسّخ المعرفة»؟ (المفردة الثابتة!)",
             "a": "das Wissen verfestigen"
+          },
+          {
+            "q": "«يُرسّخ»؟",
+            "a": "verfestigen"
+          },
+          {
+            "q": "«الانتقال»؟",
+            "a": "der Übergang"
           }
         ]
       }

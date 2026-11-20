@@ -61,7 +61,9 @@
     "grammarArsenalIds": [
       "ars-um-zu"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u4-s6"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "v2-order"
@@ -147,6 +149,23 @@
               }
             ],
             "why": "مراجعة الأسبوع: die Vorbereitung التحضير (d1!) · das Semester الفصل الدراسي (d2!) · der Vorteil الميزة (d3!) · geeignet مناسب (d4!) · konzentrieren يركّز (d5!) — كلها من أسبوع التكوين!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الندوة",
+                "de": "das Seminar"
+              },
+              {
+                "ar": "الشهادة (الجامعية)",
+                "de": "das Diplom"
+              },
+              {
+                "ar": "السيرة الذاتية",
+                "de": "der Lebenslauf"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: das Seminar = «الندوة» · das Diplom = «الشهادة (الجامعية)» · der Lebenslauf = «السيرة الذاتية»"
           }
         ]
       },
@@ -192,6 +211,11 @@
             "q": "Die ___ ist groß.",
             "a": "Herausforderung",
             "why": "die Herausforderung التحدي (die!) — اليوم! (و der Betrieb: المؤسسة!)"
+          },
+          {
+            "q": "Der ___ ist gut.",
+            "a": "Erfolg",
+            "why": "الكلمة الناقصة «Erfolg» تعني «النجاح» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -222,6 +246,21 @@
             "q": "~~Ich sorge um die Familie.~~",
             "a": "Ich sorge mich um die Familie.",
             "why": "feste Verben (d5): sich محفوظة! (مراجعة: die Wohnung الشقة!)"
+          },
+          {
+            "q": "~~vorsicht, bitte!~~",
+            "a": "Vorsicht, bitte!",
+            "why": "الخطأ في «vorsicht»! الصواب «Vorsicht» — راجع القاعدة (الحذر)."
+          },
+          {
+            "q": "~~Ich habe zeit.~~",
+            "a": "Ich habe Zeit.",
+            "why": "الخطأ في «zeit»! الصواب «Zeit» — راجع القاعدة (الوقت)."
+          },
+          {
+            "q": "~~Die wohnung ist neu.~~",
+            "a": "Die Wohnung ist neu.",
+            "why": "الخطأ في «wohnung»! الصواب «Wohnung» — راجع القاعدة (شقة)."
           }
         ]
       },
@@ -242,6 +281,91 @@
             "q": "احكِ قصة أسبوع التكوين (سجّل): 8 جمل — الخطاب! + الغرض! + الإضافة! + المقارنة! + الدافع! + الجامدة! + التحدي! + الختام!",
             "a": "Sehr geehrte Damen und Herren, ich lerne, um erfolgreich zu sein. Die Dauer des Studiums ist lang. Die Ausbildung im Betrieb ist besser als das Studium. Ich bin geeignet für die Arbeit. Ich sorge mich um die Familie. Die Herausforderung ist groß. Mit freundlichen Grüßen",
             "why": "توليف الأسبوع (B1): Sehr geehrte! + um erfolgreich zu sein (الغرض!) + Dauer des Studiums (الإضافة!) + besser als (المقارنة!) + geeignet für (الدافع!) + sorge mich um (الجامدة!) + Herausforderung/Betrieb! + Gruß الثابت — أسبوع كامل بلغته! (مراجعة: der Beginn البداية! freundlich ودود! danke شكراً!) (خريطة التداخل 10‑ي)"
+          },
+          {
+            "q": "كوّن جملة فيها «der Beginn» («البداية») ثم تحدّث بها.",
+            "a": "Der Beginn ist heute.",
+            "why": "استعمل «der Beginn» («البداية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «freundlich» («ودود/لطيف») ثم تحدّث بها.",
+            "a": "Meine Tante ist freundlich.",
+            "why": "استعمل «freundlich» («ودود/لطيف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
+            "a": "Danke! — Bitte!",
+            "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "vertrauen"
+        ],
+        "items": [
+          {
+            "audioId": "word-betrieb",
+            "speakText": "der Betrieb.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المؤسسة",
+              "التحدي"
+            ],
+            "a": "المؤسسة",
+            "why": "الصوت يقول «der Betrieb» — معناها «المؤسسة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-herausforderung",
+            "speakText": "die Herausforderung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Herausforderung",
+              "der Betrieb"
+            ],
+            "a": "die Herausforderung",
+            "why": "الكلمة المسموعة «die Herausforderung» تعني «التحدي». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-vertrauen",
+            "speakText": "das Vertrauen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "الثقة",
+              "المؤسسة",
+              "التحدي"
+            ],
+            "a": "الثقة",
+            "why": "الصوت يقول «das Vertrauen» — معناها «الثقة». ركّز على الصوت لا على الشكل!"
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "bedeutung"
+        ],
+        "items": [
+          {
+            "audioId": "word-betrieb",
+            "speakText": "der Betrieb.",
+            "a": "der Betrieb",
+            "why": "اكتب ما تسمعه حرفياً: «der Betrieb» تعني «المؤسسة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-herausforderung",
+            "speakText": "die Herausforderung.",
+            "a": "die Herausforderung",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Herausforderung» («التحدي»)."
+          },
+          {
+            "audioId": "word-bedeutung",
+            "speakText": "die Bedeutung.",
+            "a": "die Bedeutung",
+            "why": "اكتب المسموع بدقة: die Bedeutung — ركّز على نهاية الكلمة!"
           }
         ]
       }
@@ -272,6 +396,14 @@
           {
             "q": "«أتعلّم لأنجح.»؟ (الغرض!)",
             "a": "Ich lerne, um erfolgreich zu sein."
+          },
+          {
+            "q": "«الشركة»؟",
+            "a": "der Betrieb"
+          },
+          {
+            "q": "«التحدي كبير.»؟",
+            "a": "Die Herausforderung ist groß."
           }
         ],
         "passingScore": 0.75
@@ -293,6 +425,14 @@
           {
             "q": "«أنا مناسب للعمل.»؟ (الدافع!)",
             "a": "Ich bin geeignet für die Arbeit."
+          },
+          {
+            "q": "«المؤسسة»؟",
+            "a": "der Betrieb"
+          },
+          {
+            "q": "«التحدي»؟",
+            "a": "die Herausforderung"
           }
         ],
         "passingScore": 0.75
@@ -314,6 +454,14 @@
           {
             "q": "«التحضير»؟",
             "a": "die Vorbereitung"
+          },
+          {
+            "q": "«المؤسسة»؟",
+            "a": "der Betrieb"
+          },
+          {
+            "q": "«التحدي»؟",
+            "a": "die Herausforderung"
           }
         ],
         "passingScore": 0.75

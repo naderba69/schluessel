@@ -70,7 +70,9 @@
     "grammarArsenalIds": [
       "ars-bericht"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u10-s4"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "v2-order"
@@ -169,6 +171,23 @@
               }
             ],
             "why": "das Niveau المستوى (das! Niveaus!) · die Verteilung التوزيع (klar!) · die Spanne المدى (die!) · ergeben يُعطي (ergibt zwanzig!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الرسم (الإحصائي)",
+                "de": "die Grafik"
+              },
+              {
+                "ar": "المسار",
+                "de": "der Verlauf"
+              },
+              {
+                "ar": "القمة",
+                "de": "die Spitze"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Grafik = «الرسم (الإحصائي)» · der Verlauf = «المسار» · die Spitze = «القمة»"
           }
         ]
       },
@@ -180,9 +199,8 @@
           "التقرير الرقمي!"
         ],
         "interleavedWith": [
-          "auswerten",
-          "erheben",
-          "verteilen"
+          "ueberleitung",
+          "ausfuehren"
         ],
         "items": [
           {
@@ -214,6 +232,16 @@
             "q": "Die ___ ist deutlich. (التوقّع!)",
             "a": "Prognose",
             "why": "die Prognose التوقّع — eine Prognose stellen!"
+          },
+          {
+            "q": "Die ___ ist kurz.",
+            "a": "Überleitung",
+            "why": "الكلمة الناقصة «Überleitung» تعني «الانتقال (بين الأجزاء)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Er ___ das aus.",
+            "a": "führt",
+            "why": "الكلمة الناقصة «führt» تعني «يشرح (بالتفصيل)» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -225,9 +253,8 @@
           "الأداة! الماضي! الأداة!"
         ],
         "interleavedWith": [
-          "stichprobe",
-          "repraesentativ",
-          "anzahl"
+          "ueberleitung",
+          "ausfuehren"
         ],
         "items": [
           {
@@ -244,6 +271,16 @@
             "q": "~~der Spanne ist groß~~",
             "a": "die Spanne ist groß",
             "why": "die Spanne المدى (die! مؤنث — لا der!)"
+          },
+          {
+            "q": "~~Die überleitung ist kurz.~~",
+            "a": "Die Überleitung ist kurz.",
+            "why": "الخطأ في «überleitung»! الصواب «Überleitung» — راجع القاعدة (الانتقال (بين الأجزاء))."
+          },
+          {
+            "q": "~~Er Führt das aus.~~",
+            "a": "Er führt das aus.",
+            "why": "الخطأ في «Führt»! الصواب «führt» — راجع القاعدة (يشرح (بالتفصيل))."
           }
         ]
       },
@@ -255,9 +292,8 @@
           "Erhebung! Auswertung! Prognose!"
         ],
         "interleavedWith": [
-          "auswertung",
-          "prognose",
-          "wachstum"
+          "ueberleitung",
+          "ausfuehren"
         ],
         "items": [
           {
@@ -274,6 +310,106 @@
             "q": "اختم بالنتيجة والتوقّع! (3 جمل!)",
             "a": "Die Summe ergibt zwanzig. Das Wachstum ist stark. Die Prognose ist deutlich!",
             "why": "ergibt! Wachstum! Prognose! (الخاتمة!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Überleitung» («الانتقال (بين الأجزاء)») ثم تحدّث بها.",
+            "a": "Die Überleitung ist kurz.",
+            "why": "استعمل «die Überleitung» («الانتقال (بين الأجزاء)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «ausführen» («يشرح (بالتفصيل)») ثم تحدّث بها.",
+            "a": "Er führt das aus.",
+            "why": "استعمل «ausführen» («يشرح (بالتفصيل)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "ueberleitung"
+        ],
+        "items": [
+          {
+            "audioId": "word-anzahl",
+            "speakText": "die Anzahl.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العدد (الكمّي)",
+              "يُحلّل (البيانات)",
+              "التحليل (الإحصائي)"
+            ],
+            "a": "العدد (الكمّي)",
+            "why": "الصوت يقول «die Anzahl» — معناها «العدد (الكمّي)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-auswerten",
+            "speakText": "auswerten.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "auswerten",
+              "die Anzahl",
+              "die Auswertung"
+            ],
+            "a": "auswerten",
+            "why": "الكلمة المسموعة «auswerten» تعني «يُحلّل (البيانات)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-auswertung",
+            "speakText": "die Auswertung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التحليل (الإحصائي)",
+              "العدد (الكمّي)",
+              "يُحلّل (البيانات)"
+            ],
+            "a": "التحليل (الإحصائي)",
+            "why": "الصوت يقول «die Auswertung» — معناها «التحليل (الإحصائي)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ueberleitung",
+            "speakText": "die Überleitung.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Überleitung",
+              "die Anzahl",
+              "auswerten"
+            ],
+            "a": "die Überleitung",
+            "why": "الكلمة المسموعة «die Überleitung» تعني «الانتقال (بين الأجزاء)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "ausfuehren"
+        ],
+        "items": [
+          {
+            "audioId": "word-erheben",
+            "speakText": "erheben.",
+            "a": "erheben",
+            "why": "اكتب ما تسمعه حرفياً: «erheben» تعني «يجمع (البيانات)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-erhebung",
+            "speakText": "die Erhebung.",
+            "a": "die Erhebung",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Erhebung» («جمع (البيانات)»)."
+          },
+          {
+            "audioId": "word-stichprobe",
+            "speakText": "die Stichprobe.",
+            "a": "die Stichprobe",
+            "why": "اكتب المسموع بدقة: die Stichprobe — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-ausfuehren",
+            "speakText": "ausführen.",
+            "a": "ausführen",
+            "why": "اكتب ما تسمعه حرفياً: «ausführen» تعني «يشرح (بالتفصيل)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -304,6 +440,14 @@
           {
             "q": "«المستوى»؟",
             "a": "das Niveau"
+          },
+          {
+            "q": "«العدد (الكمّي)»؟",
+            "a": "die Anzahl"
+          },
+          {
+            "q": "«يُحلّل (البيانات)»؟",
+            "a": "auswerten"
           }
         ]
       },
@@ -324,6 +468,14 @@
           {
             "q": "«النمو قويّ.»؟",
             "a": "Das Wachstum ist stark."
+          },
+          {
+            "q": "«العدد (الكمّي)»؟",
+            "a": "die Anzahl"
+          },
+          {
+            "q": "«يُحلّل (البيانات)»؟",
+            "a": "auswerten"
           }
         ]
       },
@@ -344,6 +496,14 @@
           {
             "q": "«المستوى مستقرّ.»؟",
             "a": "Der Stand ist stabil."
+          },
+          {
+            "q": "«العدد (الكمّي)»؟",
+            "a": "die Anzahl"
+          },
+          {
+            "q": "«يُحلّل (البيانات)»؟",
+            "a": "auswerten"
           }
         ]
       }

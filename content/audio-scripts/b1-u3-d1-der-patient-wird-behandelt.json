@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u3-d1-der-patient-wird-behandelt",
+  "kind": "dialogue",
+  "level": "B1",
+  "title": {
+    "de": "Der Patient wird behandelt",
+    "ar": "المريض يُعالج"
+  },
+  "usedIn": [
+    "b1-u3-d1"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b1u3d1-l1",
+      "speaker": "mueller",
+      "text": "Der Patient wird behandelt: die Medizin wird verschrieben!",
+      "direction": "في العيادة"
+    },
+    {
+      "id": "b1u3d1-l2",
+      "speaker": "yusuf",
+      "text": "Ich bin krank. Was verschreiben Sie mir?",
+      "direction": "شكوى"
+    },
+    {
+      "id": "b1u3d1-l3",
+      "speaker": "mueller",
+      "text": "Erst untersuche ich Sie. Dann die Medizin.",
+      "direction": "منهجية طبية"
+    },
+    {
+      "id": "b1u3d1-l4",
+      "speaker": "yusuf",
+      "text": "Ich habe Fieber seit gestern.",
+      "direction": "شرح الحالة"
+    },
+    {
+      "id": "b1u3d1-l5",
+      "speaker": "mueller",
+      "text": "Und die Versicherung? Haben Sie die Karte?",
+      "direction": "إجراء"
+    },
+    {
+      "id": "b1u3d1-l6",
+      "speaker": "yusuf",
+      "text": "Ja, hier. Bitte behandeln Sie mich.",
+      "direction": "تسليم"
+    },
+    {
+      "id": "b1u3d1-l7",
+      "speaker": "mueller",
+      "text": "Gut. Ruhe und Medizin. Dann geht es besser.",
+      "direction": "وصفة"
+    },
+    {
+      "id": "b1u3d1-l8",
+      "speaker": "yusuf",
+      "text": "Danke, Herr Doktor.",
+      "direction": "امتنان"
+    }
+  ]
+}

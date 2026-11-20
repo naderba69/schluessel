@@ -1,1 +1,576 @@
-{"audioManifestRefs":["word-krankenkasse","word-rentner","word-sterben","word-stipendium"],"canDoDaily":["تروي خبر المجتمع: متقاعد! + مريض! + توفي! + منحة! — والماضي بـist (ist…gestorben!) والقوي i (stirbt!)","تميز الجموع (Rentner/-n/-en!) وتفهم mal (تقوية!)"],"curriculumRef":{"goetheWordListOverlap":["rentner","krankenkasse","sterben","stipendium"],"netzwerkChapter":"Netzwerk neu A2 — تباعد مُعلن: الموضوع من الدستور (الإعلام والأخبار) والفصل يُطابَق عند البناء (D368)"},"day":5,"einstieg":{"guidedRetrieval":["من d4: Der Autor schreibt ein Buch! + Der Comic ist lustig! + Die Künste sind modern! (يكتب! + مضحكة! + الفنون!)","واليوم: خبر المجتمع! Der Opa ist Rentner (الجد متقاعد!) + Sein Vater ist gestorben (توفي والده!) — بأربع كلمات جديدة!"],"pretestItems":[{"answer":"ist gestorben","choices":["ist gestorben","hat gestorben","ist sterben"],"prompt":{"ar":"«توفي» (الماضي!) — كيف تقول؟"},"revealNextSession":true},{"answer":"die Rentner","choices":["die Rentner","die Rentners","die Rentnern"],"prompt":{"ar":"«المتقاعدون» (الجمع!) — كيف تقول؟"},"revealNextSession":true}]},"gReferences":{"duden":["https://www.duden.de/rechtschreibung/sterben","https://www.duden.de/rechtschreibung/Krankenkasse","https://www.duden.de/rechtschreibung/Stipendium","https://www.duden.de/rechtschreibung/Rentner"],"goethe":["https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"],"wiktionary":[]},"id":"a2-u8-d5","imageManifestRefs":[],"kind":"content","level":"A2","praesentation":{"dualCodingRequired":true,"grammarArsenalIds":["ars-perfekt","ars-praeteritum-kurz"],"riskFlagsShown":["needs-ist","needs-ein"],"storySentenceIds":[],"wordIds":["rentner","krankenkasse","sterben","stipendium"]},"quiz":{"variants":[{"items":[{"a":"Der Opa ist gestorben!","q":"«توفي الجد!»؟"},{"a":"Die Krankenkasse hilft!","q":"«التأمين الصحي يساعد!»؟"},{"a":"Ich bekomme ein Stipendium!","q":"«سأحصل على منحة!»؟"},{"a":"Der Opa ist Rentner!","q":"«الجد متقاعد!»؟"}],"passingScore":0.75},{"items":[{"a":"Der Opa ist Rentner!","q":"«الجد متقاعد!»؟"},{"a":"Der Opa war krank!","q":"«الجد كان مريضاً!»؟"},{"a":"Sein Vater ist gestorben!","q":"«توفي والده!»؟"},{"a":"Der Student bekommt ein Stipendium!","q":"«الطالب حصل على منحة!»؟"}],"passingScore":0.75},{"items":[{"a":"Frag mal die Krankenkasse!","q":"«اسأل التأمين (mal-تقوية!)»؟"},{"a":"Das Stipendium war gut!","q":"«المنحة كانت جيدة!»؟"},{"a":"Die Rentner arbeiten nicht!","q":"«المتقاعدون لا يعملون!»؟"},{"a":"Die Stipendien sind gut!","q":"«المنح جيدة!»؟"}],"passingScore":0.75}]},"schemaVersion":"1.0.0","slider":{"max":100,"min":0,"questionAr":"كم نسبة ما تتوقع إنجازه اليوم؟","questionDe":"Wie viel Prozent wirst du schaffen?"},"uebung":{"communicativeTask":{"goal":{"ar":"تزور الجد","de":"Ich besuche den Opa!"},"situation":{"ar":"الجد مريض","de":"Der Opa ist krank."},"successCriteria":["يروي 8 جمل (ist…gestorben/war/mal!)","يستخدم الجديد (4 كلمات!)","يصرف القوي (stirbt!) ويجمع (Rentner/Stipendien!)"]},"stations":[{"explanationRequired":true,"hints":["القوي i مع er (stirbt!)","الجمع بلا i (sterben!)","الطبيعة بلطف (Wald/Blume/Baum!)"],"interleavedWith":["lesen","schreiben","helfen"],"items":[{"a":"stirbt","q":"Er ___! (sterben)","why":"er ← stirbt! — القوي i!"},{"a":"stirbt","q":"Der Wald ___! (sterben)","why":"الغابة! — stirbt (القوي i!)."},{"a":"stirbt","q":"Die Blume ___! (sterben)","why":"الزهرة! — stirbt (القوي i!)."},{"a":"sterben","q":"Die Blumen ___! (sterben ← sterben)","why":"الزهور! — sterben (الجمع بلا i!)."},{"a":"sterben","q":"Die Bäume ___! (sterben ← sterben)","why":"الأشجار! — sterben (الجمع بلا i!)."},{"a":"stirbt","q":"Der Baum ___! (sterben)","why":"الشجرة! — stirbt (القوي i!)."}],"type":"verb-bank"},{"explanationRequired":true,"hints":["الماضي بـist (ist…gestorben!) لا hat!","الجمع: بلا تغيير (Rentner!) و-n (Krankenkassen!) و-en (Stipendien!)","المحايد (ein Stipendium!)"],"interleavedWith":["gut","neu","schoen"],"items":[{"a":"gestorben","q":"Sein Vater ist ___! (sterben ← gestorben)","why":"توفي! — ist…gestorben (ist لا hat!)."},{"a":"Rentner","q":"Der Opa ist ___! (Rentner)","why":"متقاعد! — der Rentner (مذكر!)."},{"a":"Rentner","q":"Die ___ arbeiten nicht! (Rentner ← Rentner)","why":"المتقاعدون! — die Rentner (بلا تغيير!)."},{"a":"Krankenkasse","q":"Die ___ hilft! (Krankenkasse)","why":"التأمين! — die Krankenkasse (مؤنث!)."},{"a":"Krankenkassen","q":"Die ___ helfen! (Krankenkasse ← Krankenkassen)","why":"التأمينات! — die Krankenkassen (-n!)."},{"a":"Stipendium","q":"Der Student bekommt ein ___! (Stipendium)","why":"المنحة! — ein Stipendium (محايد!)."},{"a":"Stipendien","q":"Die ___ sind gut! (Stipendium ← Stipendien)","why":"المنح! — die Stipendien (-en!)."},{"a":"Opa","q":"Der ___ ist Rentner! (Opa)","why":"الجد! — der Opa (مذكر!)."}],"type":"gap-fill"},{"explanationRequired":true,"hints":["الخطأ كلمة واحدة — الباقي صحيح","ist لا hat (ist…gestorben!)","القوي i (stirbt!) والجمع (Rentner/Stipendien!)"],"interleavedWith":["gut","neu","schoen"],"items":[{"a":"Sein Vater ist gestorben!","q":"~~Sein Vater hat gestorben!~~","why":"ist…gestorben! — hat خطأ!"},{"a":"Er stirbt!","q":"~~Er sterbt!~~","why":"er ← stirbt! — sterbt خطأ!"},{"a":"Die Rentner arbeiten nicht!","q":"~~Die Rentners arbeiten nicht!~~","why":"الجمع (Rentner!) — Rentners خطأ!"},{"a":"Der Student bekommt ein Stipendium!","q":"~~Der Student bekommt eine Stipendium!~~","why":"محايد! (ein!) — eine خطأ!"},{"a":"Die Stipendien sind gut!","q":"~~Die Stipendiums sind gut!~~","why":"الجمع (Stipendien!) — Stipendiums خطأ!"},{"a":"Die Blume stirbt!","q":"~~Die Blume sterbt!~~","why":"stirbt! — sterbt خطأ!"}],"type":"error-hunt"},{"explanationRequired":true,"hints":["ابدأ بالجد (Opa!) وانهِ بالمنحة (Stipendium!)","8 جمل: 4 للجديد + ist…gestorben!"],"interleavedWith":["spielen","gut","gern"],"items":[{"a":"Der Opa ist Rentner. Er arbeitet nicht mehr. Der Opa war krank. Die Krankenkasse hilft. Sein Vater ist gestorben. Der Student bekommt ein Stipendium. Frag mal die Krankenkasse! Das Stipendium war gut.","q":"احكِ خبر المجتمع (سجّل): 8 جمل — متقاعد! + لا يعمل! + مريض! + تساعد! + توفي! + منحة! + اسأل! + جيدة!","why":"قارن خبرك: Rentner! + arbeitet! + krank! + hilft! + gestorben! + Stipendium! + Frag! + gut!"},{"a":"Er stirbt! Die Blume stirbt! Der Baum stirbt! Sein Vater ist gestorben!","q":"اصرّف بلطف (سجّل): 4 جمل — هو! + الزهرة! + الشجرة! + توفي!","why":"قارن تصريفك: stirbt! + stirbt! + stirbt! + ist…gestorben!"}],"type":"speaking"}]},"unit":8,"usedArsenalIds":["ars-perfekt","ars-praeteritum-kurz"],"warmup":{"cardIds":["autor","kunst","comic"]},"ziel":{"ar":"تروي خبر المجتمع: متقاعد! مريض! توفي! منحة! — والماضي بـist (ist…gestorben!) والقوي i (stirbt!) وmal (تقوية!)","de":"Der Opa ist Rentner — sein Vater ist gestorben!"},"zusammenfassung":{"srsBundleWordIds":["rentner","krankenkasse","sterben","stipendium"],"summary":{"ar":"خبر مجتمعي: الجد متقاعد. لا يعمل بعد. الجد كان مريضاً. التأمين يساعد. توفي والده. الطالب حصل على منحة. اسأل التأمين! المنحة كانت جيدة! النظام: الماضي بـist (ist…gestorben!) + القوي i (stirbt/stirbst!) + الجموع (Rentner/-n/-en!) + mal (تقوية!).","de":"Der Opa ist Rentner. Er arbeitet nicht mehr. Der Opa war krank. Die Krankenkasse hilft. Sein Vater ist gestorben. Der Student bekommt ein Stipendium. Frag mal die Krankenkasse! Das Stipendium war gut."},"warningCards":[{"commonError":{"ar":"hat بدل ist","de":"~~Sein Vater hat gestorben!~~"},"correct":{"ar":"توفي والده!","de":"Sein Vater ist gestorben!"},"exercise":{"a":"ist","q":"Sein Vater ___ gestorben! (ist!)"},"whyArabicSpeakerFails":"العربية بلا مساعدين فيُعمَّم hat — بينما أفعال التغيّر تأخذ ist (ist…gestorben! كist…geboren! خريطة التداخل 10‑ي)"},{"commonError":{"ar":"نسيان i-القوي","de":"~~Er sterbt!~~"},"correct":{"ar":"إنه يحتضر!","de":"Er stirbt!"},"exercise":{"a":"stirbt","q":"Er ___! (sterben ← stirbt)"},"whyArabicSpeakerFails":"القوي يُبدل e→i مع du/er (stirbst/stirbt!) — لا قياس على ich (sterbe! خريطة التداخل 10‑ي)"},{"commonError":{"ar":"جمع-s للمتقاعد","de":"~~Die Rentners arbeiten nicht!~~"},"correct":{"ar":"المتقاعدون لا يعملون!","de":"Die Rentner arbeiten nicht!"},"exercise":{"a":"Rentner","q":"Die ___ arbeiten nicht! (Rentner ← Rentner)"},"whyArabicSpeakerFails":"جمع Rentner بلا تغيير (die Rentner!) — لا s ولا n (خريطة التداخل 10‑ي)"}]}}
+{
+  "audioManifestRefs": [
+    "word-krankenkasse",
+    "word-rentner",
+    "word-sterben",
+    "word-stipendium"
+  ],
+  "canDoDaily": [
+    "تروي خبر المجتمع: متقاعد! + مريض! + توفي! + منحة! — والماضي بـist (ist…gestorben!) والقوي i (stirbt!)",
+    "تميز الجموع (Rentner/-n/-en!) وتفهم mal (تقوية!)"
+  ],
+  "curriculumRef": {
+    "goetheWordListOverlap": [
+      "rentner",
+      "krankenkasse",
+      "sterben",
+      "stipendium"
+    ],
+    "netzwerkChapter": "Netzwerk neu A2 — تباعد مُعلن: الموضوع من الدستور (الإعلام والأخبار) والفصل يُطابَق عند البناء (D368)"
+  },
+  "day": 5,
+  "einstieg": {
+    "guidedRetrieval": [
+      "من d4: Der Autor schreibt ein Buch! + Der Comic ist lustig! + Die Künste sind modern! (يكتب! + مضحكة! + الفنون!)",
+      "واليوم: خبر المجتمع! Der Opa ist Rentner (الجد متقاعد!) + Sein Vater ist gestorben (توفي والده!) — بأربع كلمات جديدة!"
+    ],
+    "pretestItems": [
+      {
+        "answer": "ist gestorben",
+        "choices": [
+          "ist gestorben",
+          "hat gestorben",
+          "ist sterben"
+        ],
+        "prompt": {
+          "ar": "«توفي» (الماضي!) — كيف تقول؟"
+        },
+        "revealNextSession": true
+      },
+      {
+        "answer": "die Rentner",
+        "choices": [
+          "die Rentner",
+          "die Rentners",
+          "die Rentnern"
+        ],
+        "prompt": {
+          "ar": "«المتقاعدون» (الجمع!) — كيف تقول؟"
+        },
+        "revealNextSession": true
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/sterben",
+      "https://www.duden.de/rechtschreibung/Krankenkasse",
+      "https://www.duden.de/rechtschreibung/Stipendium",
+      "https://www.duden.de/rechtschreibung/Rentner"
+    ],
+    "goethe": [
+      "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A2_Wortliste.pdf"
+    ],
+    "wiktionary": []
+  },
+  "id": "a2-u8-d5",
+  "imageManifestRefs": [],
+  "kind": "content",
+  "level": "A2",
+  "praesentation": {
+    "dualCodingRequired": true,
+    "grammarArsenalIds": [
+      "ars-perfekt",
+      "ars-praeteritum-kurz"
+    ],
+    "riskFlagsShown": [
+      "needs-ist",
+      "needs-ein"
+    ],
+    "storySentenceIds": [
+      "story-a2-u8-s5"
+    ],
+    "wordIds": [
+      "rentner",
+      "krankenkasse",
+      "sterben",
+      "stipendium"
+    ]
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "a": "Der Opa ist gestorben!",
+            "q": "«توفي الجد!»؟"
+          },
+          {
+            "a": "Die Krankenkasse hilft!",
+            "q": "«التأمين الصحي يساعد!»؟"
+          },
+          {
+            "a": "Ich bekomme ein Stipendium!",
+            "q": "«سأحصل على منحة!»؟"
+          },
+          {
+            "a": "Der Opa ist Rentner!",
+            "q": "«الجد متقاعد!»؟"
+          },
+          {
+            "q": "«متقاعد»؟",
+            "a": "der Rentner"
+          },
+          {
+            "q": "«التأمين الصحي (صندوق المرض!)»؟",
+            "a": "die Krankenkasse"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "Der Opa ist Rentner!",
+            "q": "«الجد متقاعد!»؟"
+          },
+          {
+            "a": "Der Opa war krank!",
+            "q": "«الجد كان مريضاً!»؟"
+          },
+          {
+            "a": "Sein Vater ist gestorben!",
+            "q": "«توفي والده!»؟"
+          },
+          {
+            "a": "Der Student bekommt ein Stipendium!",
+            "q": "«الطالب حصل على منحة!»؟"
+          },
+          {
+            "q": "«متقاعد»؟",
+            "a": "der Rentner"
+          },
+          {
+            "q": "«التأمين الصحي (صندوق المرض!)»؟",
+            "a": "die Krankenkasse"
+          }
+        ],
+        "passingScore": 0.75
+      },
+      {
+        "items": [
+          {
+            "a": "Frag mal die Krankenkasse!",
+            "q": "«اسأل التأمين (mal-تقوية!)»؟"
+          },
+          {
+            "a": "Das Stipendium war gut!",
+            "q": "«المنحة كانت جيدة!»؟"
+          },
+          {
+            "a": "Die Rentner arbeiten nicht!",
+            "q": "«المتقاعدون لا يعملون!»؟"
+          },
+          {
+            "a": "Die Stipendien sind gut!",
+            "q": "«المنح جيدة!»؟"
+          },
+          {
+            "q": "«متقاعد»؟",
+            "a": "der Rentner"
+          },
+          {
+            "q": "«التأمين الصحي (صندوق المرض!)»؟",
+            "a": "die Krankenkasse"
+          }
+        ],
+        "passingScore": 0.75
+      }
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "slider": {
+    "max": 100,
+    "min": 0,
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "questionDe": "Wie viel Prozent wirst du schaffen?"
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "ar": "تزور الجد",
+        "de": "Ich besuche den Opa!"
+      },
+      "situation": {
+        "ar": "الجد مريض",
+        "de": "Der Opa ist krank."
+      },
+      "successCriteria": [
+        "يروي 8 جمل (ist…gestorben/war/mal!)",
+        "يستخدم الجديد (4 كلمات!)",
+        "يصرف القوي (stirbt!) ويجمع (Rentner/Stipendien!)"
+      ]
+    },
+    "stations": [
+      {
+        "explanationRequired": true,
+        "hints": [
+          "القوي i مع البادئة الملتصقة (stirbt!)",
+          "الجمع بلا i (sterben!)",
+          "الطبيعة بلطف (Wald/Blume/Baum!)"
+        ],
+        "interleavedWith": [
+          "lesen",
+          "schreiben",
+          "helfen"
+        ],
+        "items": [
+          {
+            "a": "stirbt",
+            "q": "Er ___! (sterben)",
+            "why": "er ← stirbt! — القوي i!"
+          },
+          {
+            "a": "stirbt",
+            "q": "Der Wald ___! (sterben)",
+            "why": "الغابة! — stirbt (القوي i!)."
+          },
+          {
+            "a": "stirbt",
+            "q": "Die Blume ___! (sterben)",
+            "why": "الزهرة! — stirbt (القوي i!)."
+          },
+          {
+            "a": "sterben",
+            "q": "Die Blumen ___! (sterben ← sterben)",
+            "why": "الزهور! — sterben (الجمع بلا i!)."
+          },
+          {
+            "a": "sterben",
+            "q": "Die Bäume ___! (sterben ← sterben)",
+            "why": "الأشجار! — sterben (الجمع بلا i!)."
+          },
+          {
+            "a": "stirbt",
+            "q": "Der Baum ___! (sterben)",
+            "why": "الشجرة! — stirbt (القوي i!)."
+          },
+          {
+            "q": "«Ich lese auch gern!» — اكتب الكلمة التي تعني «يقرأ»: ___",
+            "a": "lesen",
+            "why": "الكلمة «lesen» تعني «يقرأ» — اكتبها كما تُقال في الجملة."
+          },
+          {
+            "q": "«Ich schreibe meinen Namen.» — اكتب الكلمة التي تعني «يكتب»: ___",
+            "a": "schreiben",
+            "why": "الكلمة «schreiben» تعني «يكتب» — اكتبها كما تُقال في الجملة."
+          },
+          {
+            "q": "Können Sie mir ___?",
+            "a": "helfen",
+            "why": "الكلمة الناقصة «helfen» تعني «يساعد» — تذكر صيغتها في السياق."
+          }
+        ],
+        "type": "verb-bank"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الماضي بـist (ist…gestorben!) لا hat!",
+          "الجمع: بلا تغيير (Rentner!) و-n (Krankenkassen!) و-en (Stipendien!)",
+          "المحايد (ein Stipendium!)"
+        ],
+        "interleavedWith": [
+          "gut",
+          "neu"
+        ],
+        "items": [
+          {
+            "a": "gestorben",
+            "q": "Sein Vater ist ___! (sterben ← gestorben)",
+            "why": "توفي! — ist…gestorben (ist لا hat!)."
+          },
+          {
+            "a": "Rentner",
+            "q": "Der Opa ist ___! (Rentner)",
+            "why": "متقاعد! — der Rentner (مذكر!)."
+          },
+          {
+            "a": "Rentner",
+            "q": "Die ___ arbeiten nicht! (Rentner ← Rentner)",
+            "why": "المتقاعدون! — die Rentner (بلا تغيير!)."
+          },
+          {
+            "a": "Krankenkasse",
+            "q": "Die ___ hilft! (Krankenkasse)",
+            "why": "التأمين! — die Krankenkasse (مؤنث!)."
+          },
+          {
+            "a": "Krankenkassen",
+            "q": "Die ___ helfen! (Krankenkasse ← Krankenkassen)",
+            "why": "التأمينات! — die Krankenkassen (-n!)."
+          },
+          {
+            "a": "Stipendium",
+            "q": "Der Student bekommt ein ___! (Stipendium)",
+            "why": "المنحة! — ein Stipendium (محايد!)."
+          },
+          {
+            "a": "Stipendien",
+            "q": "Die ___ sind gut! (Stipendium ← Stipendien)",
+            "why": "المنح! — die Stipendien (-en!)."
+          },
+          {
+            "a": "Opa",
+            "q": "Der ___ ist Rentner! (Opa)",
+            "why": "الجد! — der Opa (مذكر!)."
+          },
+          {
+            "q": "Ich bin ___.",
+            "a": "neu",
+            "why": "الكلمة الناقصة «neu» تعني «جديد» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das Foto ist sehr ___.",
+            "a": "schön",
+            "why": "الكلمة الناقصة «schön» تعني «جميل/حسن» — تذكر صيغتها في السياق."
+          }
+        ],
+        "type": "gap-fill"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "الخطأ كلمة واحدة — الباقي صحيح",
+          "ist لا hat (ist…gestorben!)",
+          "القوي i (stirbt!) والجمع (Rentner/Stipendien!)"
+        ],
+        "interleavedWith": [
+          "gut",
+          "neu"
+        ],
+        "items": [
+          {
+            "a": "Sein Vater ist gestorben!",
+            "q": "~~Sein Vater hat gestorben!~~",
+            "why": "ist…gestorben! — hat خطأ!"
+          },
+          {
+            "a": "Er stirbt!",
+            "q": "~~Er sterbt!~~",
+            "why": "er ← stirbt! — sterbt خطأ!"
+          },
+          {
+            "a": "Die Rentner arbeiten nicht!",
+            "q": "~~Die Rentners arbeiten nicht!~~",
+            "why": "الجمع (Rentner!) — Rentners خطأ!"
+          },
+          {
+            "a": "Der Student bekommt ein Stipendium!",
+            "q": "~~Der Student bekommt eine Stipendium!~~",
+            "why": "محايد! (ein!) — eine خطأ!"
+          },
+          {
+            "a": "Die Stipendien sind gut!",
+            "q": "~~Die Stipendiums sind gut!~~",
+            "why": "الجمع (Stipendien!) — Stipendiums خطأ!"
+          },
+          {
+            "a": "Die Blume stirbt!",
+            "q": "~~Die Blume sterbt!~~",
+            "why": "stirbt! — sterbt خطأ!"
+          },
+          {
+            "q": "~~Ich bin Neu.~~",
+            "a": "Ich bin neu.",
+            "why": "الخطأ في «Neu»! الصواب «neu» — راجع القاعدة (جديد)."
+          },
+          {
+            "q": "~~Das Foto ist sehr Schön.~~",
+            "a": "Das Foto ist sehr schön.",
+            "why": "الخطأ في «Schön»! الصواب «schön» — راجع القاعدة (جميل/حسن)."
+          }
+        ],
+        "type": "error-hunt"
+      },
+      {
+        "explanationRequired": true,
+        "hints": [
+          "ابدأ بالجد (Opa!) وانهِ بالمنحة (Stipendium!)",
+          "8 جمل: 4 للجديد + ist…gestorben!"
+        ],
+        "interleavedWith": [
+          "spielen",
+          "gut",
+          "gern"
+        ],
+        "items": [
+          {
+            "a": "Der Opa ist Rentner. Er arbeitet nicht mehr. Der Opa war krank. Die Krankenkasse hilft. Sein Vater ist gestorben. Der Student bekommt ein Stipendium. Frag mal die Krankenkasse! Das Stipendium war gut.",
+            "q": "احكِ خبر المجتمع (سجّل): 8 جمل — متقاعد! + لا يعمل! + مريض! + تساعد! + توفي! + منحة! + اسأل! + جيدة!",
+            "why": "قارن خبرك: Rentner! + arbeitet! + krank! + hilft! + gestorben! + Stipendium! + Frag! + gut!"
+          },
+          {
+            "a": "Er stirbt! Die Blume stirbt! Der Baum stirbt! Sein Vater ist gestorben!",
+            "q": "اصرّف بلطف (سجّل): 4 جمل — هو! + الزهرة! + الشجرة! + توفي!",
+            "why": "قارن تصريفك: stirbt! + stirbt! + stirbt! + ist…gestorben!"
+          },
+          {
+            "q": "كوّن جملة فيها «spielen» («يلعب») ثم تحدّث بها.",
+            "a": "Die Zwillinge spielen im Garten.",
+            "why": "استعمل «spielen» («يلعب») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «gern» («بسرور / بمحبة») ثم تحدّث بها.",
+            "a": "Ich lese gern.",
+            "why": "استعمل «gern» («بسرور / بمحبة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ],
+        "type": "speaking"
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "schoen"
+        ],
+        "items": [
+          {
+            "audioId": "word-rentner",
+            "speakText": "der Rentner.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "متقاعد",
+              "التأمين الصحي (صندوق المرض!)",
+              "يتوفى (يموت!)"
+            ],
+            "a": "متقاعد",
+            "why": "الصوت يقول «der Rentner» — معناها «متقاعد». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-krankenkasse",
+            "speakText": "die Krankenkasse.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Krankenkasse",
+              "der Rentner",
+              "sterben"
+            ],
+            "a": "die Krankenkasse",
+            "why": "الكلمة المسموعة «die Krankenkasse» تعني «التأمين الصحي (صندوق المرض!)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-sterben",
+            "speakText": "sterben.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يتوفى (يموت!)",
+              "متقاعد",
+              "التأمين الصحي (صندوق المرض!)"
+            ],
+            "a": "يتوفى (يموت!)",
+            "why": "الصوت يقول «sterben» — معناها «يتوفى (يموت!)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-schoen",
+            "speakText": "schön.",
+            "q": "استمع: الكلمة المسترجَعة من درس سابق — ما هي؟",
+            "choices": [
+              "schön",
+              "der Rentner",
+              "die Krankenkasse"
+            ],
+            "a": "schön",
+            "why": "الكلمة المسموعة «schön» تعني «جميل/حسن». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "comic"
+        ],
+        "items": [
+          {
+            "audioId": "word-stipendium",
+            "speakText": "das Stipendium.",
+            "a": "das Stipendium",
+            "why": "اكتب ما تسمعه حرفياً: «das Stipendium» تعني «منحة دراسية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-comic",
+            "speakText": "der Comic.",
+            "a": "der Comic",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Comic» («قصص مصورة»)."
+          }
+        ]
+      }
+    ]
+  },
+  "unit": 8,
+  "usedArsenalIds": [
+    "ars-perfekt",
+    "ars-praeteritum-kurz"
+  ],
+  "warmup": {
+    "cardIds": [
+      "autor",
+      "kunst",
+      "comic"
+    ]
+  },
+  "ziel": {
+    "ar": "تروي خبر المجتمع: متقاعد! مريض! توفي! منحة! — والماضي بـist (ist…gestorben!) والقوي i (stirbt!) وmal (تقوية!)",
+    "de": "Der Opa ist Rentner — sein Vater ist gestorben!"
+  },
+  "zusammenfassung": {
+    "srsBundleWordIds": [
+      "rentner",
+      "krankenkasse",
+      "sterben",
+      "stipendium"
+    ],
+    "summary": {
+      "ar": "خبر مجتمعي: الجد متقاعد. لا يعمل بعد. الجد كان مريضاً. التأمين يساعد. توفي والده. الطالب حصل على منحة. اسأل التأمين! المنحة كانت جيدة! النظام: الماضي بـist (ist…gestorben!) + القوي i (stirbt/stirbst!) + الجموع (Rentner/-n/-en!) + mal (تقوية!).",
+      "de": "Der Opa ist Rentner. Er arbeitet nicht mehr. Der Opa war krank. Die Krankenkasse hilft. Sein Vater ist gestorben. Der Student bekommt ein Stipendium. Frag mal die Krankenkasse! Das Stipendium war gut."
+    },
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "hat بدل ist",
+          "de": "~~Sein Vater hat gestorben!~~"
+        },
+        "correct": {
+          "ar": "توفي والده!",
+          "de": "Sein Vater ist gestorben!"
+        },
+        "exercise": {
+          "a": "ist",
+          "q": "Sein Vater ___ gestorben! (ist!)"
+        },
+        "whyArabicSpeakerFails": "العربية بلا مساعدين فيُعمَّم hat — بينما أفعال التغيّر تأخذ ist (ist…gestorben! كist…geboren! خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "نسيان i-القوي",
+          "de": "~~Er sterbt!~~"
+        },
+        "correct": {
+          "ar": "إنه يحتضر!",
+          "de": "Er stirbt!"
+        },
+        "exercise": {
+          "a": "stirbt",
+          "q": "Er ___! (sterben ← stirbt)"
+        },
+        "whyArabicSpeakerFails": "القوي يُبدل e→i مع du/البادئة الملتصقة (stirbst/stirbt!) — لا قياس على ich (sterbe! خريطة التداخل 10‑ي)"
+      },
+      {
+        "commonError": {
+          "ar": "جمع-s للمتقاعد",
+          "de": "~~Die Rentners arbeiten nicht!~~"
+        },
+        "correct": {
+          "ar": "المتقاعدون لا يعملون!",
+          "de": "Die Rentner arbeiten nicht!"
+        },
+        "exercise": {
+          "a": "Rentner",
+          "q": "Die ___ arbeiten nicht! (Rentner ← Rentner)"
+        },
+        "whyArabicSpeakerFails": "جمع Rentner بلا تغيير (die Rentner!) — لا s ولا n (خريطة التداخل 10‑ي)"
+      }
+    ]
+  }
+}

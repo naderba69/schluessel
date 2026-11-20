@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u4-s4"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "vowel-long-short"
@@ -133,6 +135,23 @@
               }
             ],
             "why": "für die Meinung argumentieren (für + النصب!) · die Antwort folgern! · die Behauptung belegen! · die Behauptung (die! مُدرَّسة!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يتشكّك في",
+                "de": "hinterfragen"
+              },
+              {
+                "ar": "غير واثق",
+                "de": "misstrauisch"
+              },
+              {
+                "ar": "الرقابة",
+                "de": "die Zensur"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: hinterfragen = «يتشكّك في» · misstrauisch = «غير واثق» · die Zensur = «الرقابة»"
           }
         ]
       },
@@ -168,6 +187,21 @@
             "q": "Sie ___ heute gut. (تجادل!)",
             "a": "argumentiert",
             "why": "Präsens sie: argumentiert (-ieren بلا ge-!) — Sie argumentiert heute gut."
+          },
+          {
+            "q": "Das ___ ist wichtig.",
+            "a": "Ereignis",
+            "why": "الكلمة الناقصة «Ereignis» تعني «الحدث» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir nutzen das ___.",
+            "a": "Medium",
+            "why": "الكلمة الناقصة «Medium» تعني «الوسيلة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der Sender ___ das Ereignis.",
+            "a": "überträgt",
+            "why": "الكلمة الناقصة «überträgt» تعني «يبثّ» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -203,6 +237,21 @@
             "q": "~~Wir folgern auf die Antwort.~~",
             "a": "Wir folgern die Antwort.",
             "why": "folgern يستنتج مباشرة (بالنصب بلا حرف!)!"
+          },
+          {
+            "q": "~~Die redaktion arbeitet.~~",
+            "a": "Die Redaktion arbeitet.",
+            "why": "الخطأ في «redaktion»! الصواب «Redaktion» — راجع القاعدة (التحرير)."
+          },
+          {
+            "q": "~~Der sender berichtet.~~",
+            "a": "Der Sender berichtet.",
+            "why": "الخطأ في «sender»! الصواب «Sender» — راجع القاعدة (القناة)."
+          },
+          {
+            "q": "~~Die werbung kommt.~~",
+            "a": "Die Werbung kommt.",
+            "why": "الخطأ في «werbung»! الصواب «Werbung» — راجع القاعدة (الدعاية)."
           }
         ]
       },
@@ -233,6 +282,111 @@
             "q": "تحدّث عن الإثبات! (جملتان!)",
             "a": "Wir belegen die Behauptung. Die Behauptung ist falsch.",
             "why": "الإثبات! (die Behauptung belegen!) — falsch (خاطئة!) من الوحدة 2!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Wissenschaft» («العلم») ثم تحدّث بها.",
+            "a": "Die Wissenschaft ist wichtig.",
+            "why": "استعمل «die Wissenschaft» («العلم») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Gedächtnis» («الذاكرة») ثم تحدّث بها.",
+            "a": "Wir nutzen das Gedächtnis.",
+            "why": "استعمل «das Gedächtnis» («الذاكرة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Gehirn» («الدماغ») ثم تحدّث بها.",
+            "a": "Das Gehirn arbeitet.",
+            "why": "استعمل «das Gehirn» («الدماغ») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "zensur"
+        ],
+        "items": [
+          {
+            "audioId": "word-argumentieren",
+            "speakText": "argumentieren.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يجادل",
+              "يستنتج",
+              "يثبت"
+            ],
+            "a": "يجادل",
+            "why": "الصوت يقول «argumentieren» — معناها «يجادل». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-folgern",
+            "speakText": "folgern.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "folgern",
+              "argumentieren",
+              "belegen"
+            ],
+            "a": "folgern",
+            "why": "الكلمة المسموعة «folgern» تعني «يستنتج». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-belegen",
+            "speakText": "belegen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يثبت",
+              "يجادل",
+              "يستنتج"
+            ],
+            "a": "يثبت",
+            "why": "الصوت يقول «belegen» — معناها «يثبت». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-zensur",
+            "speakText": "die Zensur.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Zensur",
+              "argumentieren",
+              "folgern"
+            ],
+            "a": "die Zensur",
+            "why": "الكلمة المسموعة «die Zensur» تعني «الرقابة». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "misstrauisch"
+        ],
+        "items": [
+          {
+            "audioId": "word-argumentieren",
+            "speakText": "argumentieren.",
+            "a": "argumentieren",
+            "why": "اكتب ما تسمعه حرفياً: «argumentieren» تعني «يجادل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-folgern",
+            "speakText": "folgern.",
+            "a": "folgern",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «folgern» («يستنتج»)."
+          },
+          {
+            "audioId": "word-belegen",
+            "speakText": "belegen.",
+            "a": "belegen",
+            "why": "اكتب المسموع بدقة: belegen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-misstrauisch",
+            "speakText": "misstrauisch.",
+            "a": "misstrauisch",
+            "why": "اكتب ما تسمعه حرفياً: «misstrauisch» تعني «غير واثق». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -263,6 +417,14 @@
           {
             "q": "«نجادل من أجل الرأي.»؟",
             "a": "Wir argumentieren für die Meinung."
+          },
+          {
+            "q": "«يحاجّ»؟",
+            "a": "argumentieren"
+          },
+          {
+            "q": "«نستنتج الجواب.»؟",
+            "a": "Wir folgern die Antwort."
           }
         ]
       },
@@ -283,6 +445,14 @@
           {
             "q": "argumentieren",
             "a": "يجادل"
+          },
+          {
+            "q": "«يجادل»؟",
+            "a": "argumentieren"
+          },
+          {
+            "q": "«يستنتج»؟",
+            "a": "folgern"
           }
         ]
       },
@@ -303,6 +473,14 @@
           {
             "q": "«نجادل من أجل الرأي.»؟",
             "a": "Wir argumentieren für die Meinung."
+          },
+          {
+            "q": "«يجادل»؟",
+            "a": "argumentieren"
+          },
+          {
+            "q": "«يستنتج»؟",
+            "a": "folgern"
           }
         ]
       }

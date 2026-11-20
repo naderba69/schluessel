@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u4-s1"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ng-velar",
@@ -134,6 +136,23 @@
               }
             ],
             "why": "die Redaktion arbeitet! · der Sender berichtet (تنقل الأخبار!) · die Werbung sehen! · der Sender (der!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "العلم",
+                "de": "die Wissenschaft"
+              },
+              {
+                "ar": "الذاكرة",
+                "de": "das Gedächtnis"
+              },
+              {
+                "ar": "الدماغ",
+                "de": "das Gehirn"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Wissenschaft = «العلم» · das Gedächtnis = «الذاكرة» · das Gehirn = «الدماغ»"
           }
         ]
       },
@@ -169,6 +188,21 @@
             "q": "Die Redaktion ___. (تعمل!)",
             "a": "arbeitet",
             "why": "arbeiten يعمل (Präsens er/sie: arbeitet!) — Die Redaktion arbeitet."
+          },
+          {
+            "q": "Wir nutzen die ___.",
+            "a": "Kenntnisse",
+            "why": "الكلمة الناقصة «Kenntnisse» تعني «الدراية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir brauchen ___.",
+            "a": "Fachwissen",
+            "why": "الكلمة الناقصة «Fachwissen» تعني «المعرفة التخصصية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die Technik ___ die Arbeit.",
+            "a": "wandelt",
+            "why": "الكلمة الناقصة «wandelt» تعني «يحوّل» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +238,21 @@
             "q": "~~Die Redaktion arbeiten.~~",
             "a": "Die Redaktion arbeitet.",
             "why": "المفرد مع الفعل المفرد: Die Redaktion arbeitet (لا arbeiten!)!"
+          },
+          {
+            "q": "~~Wir Programmieren den Roboter.~~",
+            "a": "Wir programmieren den Roboter.",
+            "why": "الخطأ في «Programmieren»! الصواب «programmieren» — راجع القاعدة (يبرمج)."
+          },
+          {
+            "q": "~~Die automatisierung kommt.~~",
+            "a": "Die Automatisierung kommt.",
+            "why": "الخطأ في «automatisierung»! الصواب «Automatisierung» — راجع القاعدة (الأتمتة)."
+          },
+          {
+            "q": "~~Wir entwickeln die technologie.~~",
+            "a": "Wir entwickeln die Technologie.",
+            "why": "الخطأ في «technologie»! الصواب «Technologie» — راجع القاعدة (التكنولوجيا)."
           }
         ]
       },
@@ -234,6 +283,111 @@
             "q": "تحدّث عن الدعاية! (جملتان!)",
             "a": "Die Werbung kommt. Die Werbung ist überall.",
             "why": "الدعاية! (die Werbung kommt!) — überall (في كل مكان!) من الوحدة 2!"
+          },
+          {
+            "q": "كوّن جملة فيها «der Roboter» («الآلي») ثم تحدّث بها.",
+            "a": "Der Roboter arbeitet.",
+            "why": "استعمل «der Roboter» («الآلي») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Algorithmus» («الخوارزمية») ثم تحدّث بها.",
+            "a": "Wir verstehen den Algorithmus.",
+            "why": "استعمل «der Algorithmus» («الخوارزمية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Vernetzung» («الشبكة») ثم تحدّث بها.",
+            "a": "Die Vernetzung kommt.",
+            "why": "استعمل «die Vernetzung» («الشبكة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "gehirn"
+        ],
+        "items": [
+          {
+            "audioId": "word-redaktion",
+            "speakText": "die Redaktion.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التحرير",
+              "القناة",
+              "الدعاية"
+            ],
+            "a": "التحرير",
+            "why": "الصوت يقول «die Redaktion» — معناها «التحرير». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-sender",
+            "speakText": "der Sender.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Sender",
+              "die Redaktion",
+              "die Werbung"
+            ],
+            "a": "der Sender",
+            "why": "الكلمة المسموعة «der Sender» تعني «القناة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-werbung",
+            "speakText": "die Werbung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الدعاية",
+              "التحرير",
+              "القناة"
+            ],
+            "a": "الدعاية",
+            "why": "الصوت يقول «die Werbung» — معناها «الدعاية». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-gehirn",
+            "speakText": "das Gehirn.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "das Gehirn",
+              "die Redaktion",
+              "der Sender"
+            ],
+            "a": "das Gehirn",
+            "why": "الكلمة المسموعة «das Gehirn» تعني «الدماغ». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "gedaechtnis"
+        ],
+        "items": [
+          {
+            "audioId": "word-redaktion",
+            "speakText": "die Redaktion.",
+            "a": "die Redaktion",
+            "why": "اكتب ما تسمعه حرفياً: «die Redaktion» تعني «التحرير». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-sender",
+            "speakText": "der Sender.",
+            "a": "der Sender",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Sender» («القناة»)."
+          },
+          {
+            "audioId": "word-werbung",
+            "speakText": "die Werbung.",
+            "a": "die Werbung",
+            "why": "اكتب المسموع بدقة: die Werbung — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-gedaechtnis",
+            "speakText": "das Gedächtnis.",
+            "a": "das Gedächtnis",
+            "why": "اكتب ما تسمعه حرفياً: «das Gedächtnis» تعني «الذاكرة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +418,14 @@
           {
             "q": "«القناة تنقل الأخبار.»؟",
             "a": "Der Sender berichtet."
+          },
+          {
+            "q": "«هيئة التحرير»؟",
+            "a": "die Redaktion"
+          },
+          {
+            "q": "«المحطة»؟",
+            "a": "der Sender"
           }
         ]
       },
@@ -284,6 +446,14 @@
           {
             "q": "die Redaktion",
             "a": "التحرير"
+          },
+          {
+            "q": "«التحرير»؟",
+            "a": "die Redaktion"
+          },
+          {
+            "q": "«القناة»؟",
+            "a": "der Sender"
           }
         ]
       },
@@ -304,6 +474,14 @@
           {
             "q": "«التحرير يعمل.»؟",
             "a": "Die Redaktion arbeitet."
+          },
+          {
+            "q": "«التحرير»؟",
+            "a": "die Redaktion"
+          },
+          {
+            "q": "«القناة»؟",
+            "a": "der Sender"
           }
         ]
       }

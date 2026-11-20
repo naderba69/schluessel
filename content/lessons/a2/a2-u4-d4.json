@@ -95,7 +95,9 @@
       "needs-ein",
       "plural-irregular"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a2-u4-s4"
+    ],
     "wordIds": [
       "dafuer",
       "dagegen",
@@ -131,6 +133,14 @@
           {
             "a": "fantastisch",
             "q": "Das Konzert ist ___. (fantastisch)"
+          },
+          {
+            "q": "«مؤيد/موافق (أنا مع)»؟",
+            "a": "dafür"
+          },
+          {
+            "q": "«معارض (أنا ضد)»؟",
+            "a": "dagegen"
           }
         ],
         "passingScore": 0.75
@@ -152,6 +162,14 @@
           {
             "a": "keine",
             "q": "Ich habe ___ Ahnung. (kein)"
+          },
+          {
+            "q": "«مؤيد/موافق (أنا مع)»؟",
+            "a": "dafür"
+          },
+          {
+            "q": "«معارض (أنا ضد)»؟",
+            "a": "dagegen"
           }
         ],
         "passingScore": 0.75
@@ -173,6 +191,14 @@
           {
             "a": "echt",
             "q": "Das ist ___ gut. (echt)"
+          },
+          {
+            "q": "«مؤيد/موافق (أنا مع)»؟",
+            "a": "dafür"
+          },
+          {
+            "q": "«معارض (أنا ضد)»؟",
+            "a": "dagegen"
           }
         ],
         "passingScore": 0.75
@@ -217,7 +243,7 @@
         "items": [
           {
             "a": "besteht",
-            "q": "هو يُصرّ على ذلك: Er ___ darauf. (bestehen)",
+            "q": "هو يُصرّ على ذلك: البادئة الملتصقة ___ darauf. (bestehen)",
             "why": "Er besteht darauf! bestehen + darauf (يُصرّ على ذلك) — الفعل مع da!"
           },
           {
@@ -273,7 +299,7 @@
           },
           {
             "a": "berühmt",
-            "q": "النادي مشهور: Der Club ist ___. Er ist sehr groß. (berühmt)",
+            "q": "النادي مشهور: Der Club ist ___. البادئة الملتصقة ist sehr groß. (berühmt)",
             "why": "Der Club ist berühmt! (النادي مشهور!) — er = der Club."
           }
         ],
@@ -287,7 +313,8 @@
           "لا es بعد الحرف للشيء — da أولاً!"
         ],
         "interleavedWith": [
-          "auch"
+          "schade",
+          "vorn"
         ],
         "items": [
           {
@@ -309,6 +336,21 @@
             "a": "Die Hauptstadt ist berühmt.",
             "q": "Die Hauptstadt ist berühmt gut.",
             "why": "صفتان متتاليتان بلا und خطأ — berühmt وحدها تكفي!"
+          },
+          {
+            "q": "~~Ich komme … aus Tunesien.~~",
+            "a": "Ich komme auch aus Tunesien.",
+            "why": "كلمة ناقصة! الصواب يشمل «auch» (أيضاً)."
+          },
+          {
+            "q": "~~Das ist Schade.~~",
+            "a": "Das ist schade.",
+            "why": "الخطأ في «Schade»! الصواب «schade» — راجع القاعدة (للأسف/يا خسارة)."
+          },
+          {
+            "q": "~~Wir sitzen Vorn.~~",
+            "a": "Wir sitzen vorn.",
+            "why": "الخطأ في «Vorn»! الصواب «vorn» — راجع القاعدة (في الأمام)."
           }
         ],
         "type": "error-hunt"
@@ -330,6 +372,96 @@
           }
         ],
         "type": "speaking"
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "auch"
+        ],
+        "items": [
+          {
+            "audioId": "word-dafuer",
+            "speakText": "dafür.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "مؤيد/موافق (أنا مع)",
+              "معارض (أنا ضد)",
+              "مشارك/حاضر"
+            ],
+            "a": "مؤيد/موافق (أنا مع)",
+            "why": "الصوت يقول «dafür» — معناها «مؤيد/موافق (أنا مع)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-dagegen",
+            "speakText": "dagegen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "dagegen",
+              "dafür",
+              "dabei"
+            ],
+            "a": "dagegen",
+            "why": "الكلمة المسموعة «dagegen» تعني «معارض (أنا ضد)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-dabei",
+            "speakText": "dabei.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "مشارك/حاضر",
+              "مؤيد/موافق (أنا مع)",
+              "معارض (أنا ضد)"
+            ],
+            "a": "مشارك/حاضر",
+            "why": "الصوت يقول «dabei» — معناها «مشارك/حاضر». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-auch",
+            "speakText": "auch.",
+            "q": "استمع: الكلمة المسترجَعة من درس سابق — ما هي؟",
+            "choices": [
+              "auch",
+              "dafür",
+              "dagegen"
+            ],
+            "a": "auch",
+            "why": "الكلمة المسموعة «auch» تعني «أيضاً». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "schade"
+        ],
+        "items": [
+          {
+            "audioId": "word-bestehen",
+            "speakText": "bestehen.",
+            "a": "bestehen",
+            "why": "اكتب ما تسمعه حرفياً: «bestehen» تعني «يُصرّ (على)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-besonders",
+            "speakText": "besonders.",
+            "a": "besonders",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «besonders» («جداً/بشكل خاص»)."
+          },
+          {
+            "audioId": "word-echt",
+            "speakText": "echt.",
+            "a": "echt",
+            "why": "اكتب المسموع بدقة: echt — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-schade",
+            "speakText": "schade.",
+            "a": "schade",
+            "why": "اكتب ما تسمعه حرفياً: «schade» تعني «للأسف/يا خسارة». انتبه للحروف الكبيرة!"
+          }
+        ]
       }
     ]
   },

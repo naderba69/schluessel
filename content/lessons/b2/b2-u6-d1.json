@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u6-s1"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ng-velar",
@@ -130,6 +132,23 @@
               }
             ],
             "why": "die Diagnose stellen (التثبيت!) · die Vorsorge machen (الوقاية!) · die Behandlung ist wichtig!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الفقر",
+                "de": "die Armut"
+              },
+              {
+                "ar": "الغنى",
+                "de": "der Reichtum"
+              },
+              {
+                "ar": "التبرّع",
+                "de": "die Spende"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Armut = «الفقر» · der Reichtum = «الغنى» · die Spende = «التبرّع»"
           }
         ]
       },
@@ -165,6 +184,21 @@
             "q": "Die Behandlung ist ___. (مهمة!)",
             "a": "wichtig",
             "why": "wichtig مهم — Die Behandlung ist wichtig."
+          },
+          {
+            "q": "Der ___ produziert.",
+            "a": "Hersteller",
+            "why": "الكلمة الناقصة «Hersteller» تعني «المصنّع» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir kaufen ___.",
+            "a": "gebraucht",
+            "why": "الكلمة الناقصة «gebraucht» تعني «مستعمل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist möglich.",
+            "a": "Rückgabe",
+            "why": "الكلمة الناقصة «Rückgabe» تعني «الإرجاع» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -200,6 +234,21 @@
             "q": "~~Die Behandlungen ist wichtig.~~",
             "a": "Die Behandlung ist wichtig.",
             "why": "المفرد die Behandlung مع ist (الجمع die Behandlungen مع sind!)!"
+          },
+          {
+            "q": "~~Der arbeitgeber bezahlt.~~",
+            "a": "Der Arbeitgeber bezahlt.",
+            "why": "الخطأ في «arbeitgeber»! الصواب «Arbeitgeber» — راجع القاعدة (صاحب العمل)."
+          },
+          {
+            "q": "~~Wir finden die anstellung.~~",
+            "a": "Wir finden die Anstellung.",
+            "why": "الخطأ في «anstellung»! الصواب «Anstellung» — راجع القاعدة (التوظيف)."
+          },
+          {
+            "q": "~~Er geht in den ruhestand.~~",
+            "a": "Er geht in den Ruhestand.",
+            "why": "الخطأ في «ruhestand»! الصواب «Ruhestand» — راجع القاعدة (التقاعد)."
           }
         ]
       },
@@ -230,6 +279,111 @@
             "q": "تحدّث عن العلاج! (جملتان!)",
             "a": "Die Behandlung ist wichtig. Die Behandlung hilft.",
             "why": "العلاج! (die Behandlung ist wichtig!)"
+          },
+          {
+            "q": "كوّن جملة فيها «finanzieren» («يموّل») ثم تحدّث بها.",
+            "a": "Wir finanzieren das Haus.",
+            "why": "استعمل «finanzieren» («يموّل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Finanzen» («المالية») ثم تحدّث بها.",
+            "a": "Wir prüfen die Finanzen.",
+            "why": "استعمل «die Finanzen» («المالية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Zinsen» («الفوائد») ثم تحدّث بها.",
+            "a": "Wir bezahlen die Zinsen.",
+            "why": "استعمل «die Zinsen» («الفوائد») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "spende"
+        ],
+        "items": [
+          {
+            "audioId": "word-behandlung",
+            "speakText": "die Behandlung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العلاج",
+              "الوقاية",
+              "التشخيص"
+            ],
+            "a": "العلاج",
+            "why": "الصوت يقول «die Behandlung» — معناها «العلاج». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-vorsorge",
+            "speakText": "die Vorsorge.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Vorsorge",
+              "die Behandlung",
+              "die Diagnose"
+            ],
+            "a": "die Vorsorge",
+            "why": "الكلمة المسموعة «die Vorsorge» تعني «الوقاية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-diagnose",
+            "speakText": "die Diagnose.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التشخيص",
+              "العلاج",
+              "الوقاية"
+            ],
+            "a": "التشخيص",
+            "why": "الصوت يقول «die Diagnose» — معناها «التشخيص». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-spende",
+            "speakText": "die Spende.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Spende",
+              "die Behandlung",
+              "die Vorsorge"
+            ],
+            "a": "die Spende",
+            "why": "الكلمة المسموعة «die Spende» تعني «التبرّع». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "reichtum"
+        ],
+        "items": [
+          {
+            "audioId": "word-behandlung",
+            "speakText": "die Behandlung.",
+            "a": "die Behandlung",
+            "why": "اكتب ما تسمعه حرفياً: «die Behandlung» تعني «العلاج». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-vorsorge",
+            "speakText": "die Vorsorge.",
+            "a": "die Vorsorge",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Vorsorge» («الوقاية»)."
+          },
+          {
+            "audioId": "word-diagnose",
+            "speakText": "die Diagnose.",
+            "a": "die Diagnose",
+            "why": "اكتب المسموع بدقة: die Diagnose — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-reichtum",
+            "speakText": "der Reichtum.",
+            "a": "der Reichtum",
+            "why": "اكتب ما تسمعه حرفياً: «der Reichtum» تعني «الغنى». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -260,6 +414,14 @@
           {
             "q": "«العلاج مهم.»؟",
             "a": "Die Behandlung ist wichtig."
+          },
+          {
+            "q": "«الوقاية مهمة.»؟",
+            "a": "Die Vorsorge ist wichtig."
+          },
+          {
+            "q": "«التشخيص واضح.»؟",
+            "a": "Die Diagnose ist klar."
           }
         ]
       },
@@ -280,6 +442,14 @@
           {
             "q": "die Behandlung",
             "a": "العلاج"
+          },
+          {
+            "q": "«العلاج»؟",
+            "a": "die Behandlung"
+          },
+          {
+            "q": "«الوقاية»؟",
+            "a": "die Vorsorge"
           }
         ]
       },
@@ -300,6 +470,14 @@
           {
             "q": "«العلاج يساعد.»؟",
             "a": "Die Behandlung hilft."
+          },
+          {
+            "q": "«العلاج»؟",
+            "a": "die Behandlung"
+          },
+          {
+            "q": "«الوقاية»؟",
+            "a": "die Vorsorge"
           }
         ]
       }

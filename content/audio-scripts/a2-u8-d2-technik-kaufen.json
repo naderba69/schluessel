@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u8-d2-technik-kaufen",
+  "kind": "dialogue",
+  "level": "A2",
+  "title": {
+    "de": "Technik kaufen",
+    "ar": "شراء التقنية"
+  },
+  "usedIn": [
+    "a2-u8-d2"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a2u8d2-l1",
+      "speaker": "thomas",
+      "text": "Ich brauche einen neuen Laptop!",
+      "direction": "توماس يعلن حاجته"
+    },
+    {
+      "id": "a2u8d2-l2",
+      "speaker": "yusuf",
+      "text": "Und ein Mobiltelefon auch?",
+      "direction": "يوسف يقترح إضافة"
+    },
+    {
+      "id": "a2u8d2-l3",
+      "speaker": "thomas",
+      "text": "Nein! Ich habe schon ein Tablet.",
+      "direction": "توماس يرفض العرض"
+    },
+    {
+      "id": "a2u8d2-l4",
+      "speaker": "yusuf",
+      "text": "Und der Apparat für die Homepage?",
+      "direction": "يوسف يسأل عن الجهاز"
+    },
+    {
+      "id": "a2u8d2-l5",
+      "speaker": "thomas",
+      "text": "Der ist neu! Aber der Link ist wichtig.",
+      "direction": "توماس يشرح التقنية"
+    },
+    {
+      "id": "a2u8d2-l6",
+      "speaker": "yusuf",
+      "text": "Ich verstehe. Und der Preis?",
+      "direction": "يوسف يسأل عن التكلفة"
+    },
+    {
+      "id": "a2u8d2-l7",
+      "speaker": "thomas",
+      "text": "Nicht billig! Aber die Qualität stimmt.",
+      "direction": "توماس يبرر الشراء"
+    },
+    {
+      "id": "a2u8d2-l8",
+      "speaker": "yusuf",
+      "text": "Dann kauf ihn!",
+      "direction": "يوسف يشجعه"
+    }
+  ]
+}

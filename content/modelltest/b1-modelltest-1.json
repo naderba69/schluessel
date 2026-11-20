@@ -1,0 +1,886 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "b1-modelltest-1",
+ "level": "B1",
+ "title": {
+  "de": "Goethe-Zertifikat B1: Modelltest 1 — Übung",
+  "ar": "امتحان B1 التجريبي 1 — بصيغة Goethe-Zertifikat B1 الرسمية (تدريب)"
+ },
+ "passingScore": 0.6,
+ "sections": [
+  {
+   "skill": "hoeren",
+   "timeBudgetMin": 40,
+   "instructions": {
+    "de": "Der Test Hören hat drei Teile. Lesen Sie zuerst die Aufgabe, dann hören Sie den Text. Jeder Text wird zweimal gespielt.",
+    "ar": "اختبار الاستماع ثلاثة أقسام. اقرأ المهمة أولاً ثم استمع. كل نص يُشغَّل مرتين."
+   },
+   "parts": [
+    {
+     "id": "hoeren-teil1",
+     "prompt": {
+      "de": "Teil 1: Sie hören fünf kurze Gespräche. Was ist richtig? Kreuzen Sie a, b oder c an. Sie hören jeden Text zweimal.",
+      "ar": "القسم 1: تسمع خمسة حوارات قصيرة. ما الصحيح؟ ضع علامة على a أو b أو c. تسمع كل نصاً مرتين."
+     },
+     "taskType": "mc3",
+     "playCount": 2,
+     "audioScriptRef": "b1-mt1-hoeren-teil1",
+     "items": [
+      {
+       "q": "Wann ist der Termin bei Weber?",
+       "a": "am Donnerstag um zehn Uhr",
+       "choices": [
+        "am Donnerstag um zehn Uhr",
+        "am Dienstag um elf Uhr",
+        "am Freitag um neun Uhr"
+       ],
+       "audioRefs": [
+        "b1m1-h1-d1-l3",
+        "b1m1-h1-d1-l4"
+       ],
+       "evidence": "Am Donnerstag um zehn Uhr bei Weber."
+      },
+      {
+       "q": "Was kostet die Jacke?",
+       "a": "neunundzwanzig Euro",
+       "choices": [
+        "neunzehn Euro",
+        "neunundzwanzig Euro",
+        "vierundzwanzig Euro"
+       ],
+       "audioRefs": [
+        "b1m1-h1-d2-l2"
+       ],
+       "evidence": "Die Jacke kostet neunundzwanzig Euro."
+      },
+      {
+       "q": "Wohin fahren Thomas und Ayse am Wochenende?",
+       "a": "nach Wien",
+       "choices": [
+        "nach Hamburg",
+        "nach Berlin",
+        "nach Wien"
+       ],
+       "audioRefs": [
+        "b1m1-h1-d3-l2",
+        "b1m1-h1-d3-l3"
+       ],
+       "evidence": "Wir fahren nach Wien!"
+      },
+      {
+       "q": "Wie viele Zimmer hat die Wohnung?",
+       "a": "drei Zimmer",
+       "choices": [
+        "vier Zimmer",
+        "zwei Zimmer",
+        "drei Zimmer"
+       ],
+       "audioRefs": [
+        "b1m1-h1-d4-l2"
+       ],
+       "evidence": "Die Wohnung hat drei Zimmer und eine große Küche."
+      },
+      {
+       "q": "Wann beginnt der Kurs?",
+       "a": "am Montag um achtzehn Uhr",
+       "choices": [
+        "am Montag um achtzehn Uhr",
+        "am Montag um acht Uhr",
+        "am Dienstag um achtzehn Uhr"
+       ],
+       "audioRefs": [
+        "b1m1-h1-d5-l2"
+       ],
+       "evidence": "Der Kurs beginnt am Montag um achtzehn Uhr."
+      }
+     ]
+    },
+    {
+     "id": "hoeren-teil2",
+     "prompt": {
+      "de": "Teil 2: Sie hören fünf Gespräche. Ist die Aussage richtig oder falsch? Kreuzen Sie an. Sie hören jeden Text zweimal.",
+      "ar": "القسم 2: تسمع خمسة حوارات. هل العبارة صحيحة أم خاطئة؟ ضع علامة. تسمع كل نصاً مرتين."
+     },
+     "taskType": "richtig-falsch",
+     "playCount": 2,
+     "audioScriptRef": "b1-mt1-hoeren-teil2",
+     "items": [
+      {
+       "q": "Yusuf arbeitet am Wochenende.",
+       "a": "Richtig",
+       "choices": [
+        "Richtig",
+        "Falsch"
+       ],
+       "audioRefs": [
+        "b1m1-h2-d1-l2"
+       ],
+       "evidence": "Am Samstag muss ich arbeiten."
+      },
+      {
+       "q": "Morgen ist das Wetter sonnig.",
+       "a": "Falsch",
+       "choices": [
+        "Richtig",
+        "Falsch"
+       ],
+       "audioRefs": [
+        "b1m1-h2-d2-l2"
+       ],
+       "evidence": "Morgen regnet es stark."
+      },
+      {
+       "q": "Ayse hat nächste Woche die B1-Prüfung.",
+       "a": "Richtig",
+       "choices": [
+        "Richtig",
+        "Falsch"
+       ],
+       "audioRefs": [
+        "b1m1-h2-d3-l1"
+       ],
+       "evidence": "Nächste Woche habe ich die B1-Prüfung."
+      },
+      {
+       "q": "Der Zug fährt um acht Uhr.",
+       "a": "Falsch",
+       "choices": [
+        "Richtig",
+        "Falsch"
+       ],
+       "audioRefs": [
+        "b1m1-h2-d4-l2"
+       ],
+       "evidence": "Er kommt um Viertel nach acht."
+      },
+      {
+       "q": "Lena kocht für zehn Personen.",
+       "a": "Falsch",
+       "choices": [
+        "Richtig",
+        "Falsch"
+       ],
+       "audioRefs": [
+        "b1m1-h2-d5-l2"
+       ],
+       "evidence": "Ich koche für acht Personen."
+      }
+     ]
+    },
+    {
+     "id": "hoeren-teil3",
+     "prompt": {
+      "de": "Teil 3: Sie hören fünf Telefonate. Wo ist die Person gerade? Kreuzen Sie an. Sie hören jeden Text zweimal.",
+      "ar": "القسم 3: تسمع خمسة مكالمات. أين الشخص الآن؟ ضع علامة. تسمع كل نصاً مرتين."
+     },
+     "taskType": "zuordnung",
+     "playCount": 2,
+     "audioScriptRef": "b1-mt1-hoeren-teil3",
+     "items": [
+      {
+       "q": "Wo ist Frau Schmidt gerade?",
+       "a": "im Krankenhaus",
+       "choices": [
+        "im Krankenhaus",
+        "im Büro",
+        "im Supermarkt",
+        "zu Hause",
+        "am Flughafen"
+       ],
+       "audioRefs": [
+        "b1m1-h3-d1-l1"
+       ],
+       "evidence": "Ich bin gerade im Krankenhaus."
+      },
+      {
+       "q": "Wo ist Thomas gerade?",
+       "a": "im Büro",
+       "choices": [
+        "im Krankenhaus",
+        "im Büro",
+        "im Supermarkt",
+        "zu Hause",
+        "am Flughafen"
+       ],
+       "audioRefs": [
+        "b1m1-h3-d2-l1"
+       ],
+       "evidence": "Ich bin noch im Büro."
+      },
+      {
+       "q": "Wo ist Ayse gerade?",
+       "a": "im Supermarkt",
+       "choices": [
+        "im Krankenhaus",
+        "im Büro",
+        "im Supermarkt",
+        "zu Hause",
+        "am Flughafen"
+       ],
+       "audioRefs": [
+        "b1m1-h3-d3-l1"
+       ],
+       "evidence": "Ich stehe im Supermarkt."
+      },
+      {
+       "q": "Wo ist Lena gerade?",
+       "a": "zu Hause",
+       "choices": [
+        "im Krankenhaus",
+        "im Büro",
+        "im Supermarkt",
+        "zu Hause",
+        "am Flughafen"
+       ],
+       "audioRefs": [
+        "b1m1-h3-d4-l1"
+       ],
+       "evidence": "Ich bin zu Hause und koche gerade."
+      },
+      {
+       "q": "Wo ist Herr Müller gerade?",
+       "a": "am Flughafen",
+       "choices": [
+        "im Krankenhaus",
+        "im Büro",
+        "im Supermarkt",
+        "zu Hause",
+        "am Flughafen"
+       ],
+       "audioRefs": [
+        "b1m1-h3-d5-l1"
+       ],
+       "evidence": "Ich bin am Flughafen."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "lesen",
+   "timeBudgetMin": 65,
+   "instructions": {
+    "de": "Der Test Lesen hat fünf Teile. Lesen Sie die Texte und die Aufgaben. Sie haben 65 Minuten.",
+    "ar": "اختبار القراءة خمسة أقسام. اقرأ النصوص والمهام. لديك 65 دقيقة."
+   },
+   "parts": [
+    {
+     "id": "lesen-teil1",
+     "prompt": {
+      "de": "Teil 1: Fünf Personen suchen etwas. Welcher Text passt zu jeder Person? Kreuzen Sie an.",
+      "ar": "القسم 1: خمسة أشخاص يبحثون عن شيء. أي نص يناسب كل شخص؟ ضع علامة."
+     },
+     "taskType": "zuordnung",
+     "texts": [
+      {
+       "id": "text-wohnung",
+       "kind": "anzeige",
+       "title": "Wohnung gesucht",
+       "de": "Familie Berg sucht eine Wohnung mit drei Zimmern und Balkon in Hamburg. Nicht unter 70 Quadratmeter. Bitte an Frau Berg schreiben."
+      },
+      {
+       "id": "text-hund",
+       "kind": "anzeige",
+       "title": "Junger Hund",
+       "de": "Junger Hund sucht eine neue Familie. Er ist zwei Jahre alt, liebt lange Wege und Kinder. Rufen Sie Thomas an: 0176 55 22 11."
+      },
+      {
+       "id": "text-kurs",
+       "kind": "aushang",
+       "title": "Kurs für Deutsch",
+       "de": "Kurs für Deutsch B1 in der Schule am Abend: Montag und Donnerstag, 18:00–20:00 Uhr. Der Kurs kostet 120 Euro. Er beginnt am 5. Oktober. Anmeldung im Büro oder im Internet."
+      },
+      {
+       "id": "text-job",
+       "kind": "anzeige",
+       "title": "Aushilfe gesucht",
+       "de": "Aushilfe gesucht: Wir suchen eine Aushilfe für das Café am Bahnhof. Arbeit: Samstag und Sonntag, 8:00–14:00 Uhr. Erfahrung ist nicht nötig. Schreiben Sie an Café Krämer."
+      },
+      {
+       "id": "text-flohmarkt",
+       "kind": "aushang",
+       "title": "Flohmarkt am Samstag",
+       "de": "Flohmarkt am Samstag auf dem Markt von 10:00 bis 16:00 Uhr. Verkaufen Sie alte Sachen! Ein Tisch kostet 10 Euro. Kinder und Hunde sind willkommen."
+      }
+     ],
+     "items": [
+      {
+       "q": "Anna hat zwei Kinder und sucht eine Wohnung mit Balkon. Welcher Text passt zu ihr?",
+       "a": "Text 1: Wohnung",
+       "choices": [
+        "Text 1: Wohnung",
+        "Text 2: Hund",
+        "Text 3: Kurs",
+        "Text 4: Job",
+        "Text 5: Flohmarkt"
+       ],
+       "textRefs": [
+        "text-wohnung"
+       ],
+       "evidence": "sucht eine Wohnung mit drei Zimmern und Balkon"
+      },
+      {
+       "q": "Marek möchte den Hund zu sich nehmen. Welcher Text passt zu ihm?",
+       "a": "Text 2: Hund",
+       "choices": [
+        "Text 1: Wohnung",
+        "Text 2: Hund",
+        "Text 3: Kurs",
+        "Text 4: Job",
+        "Text 5: Flohmarkt"
+       ],
+       "textRefs": [
+        "text-hund"
+       ],
+       "evidence": "Junger Hund sucht eine neue Familie"
+      },
+      {
+       "q": "Sara möchte besseres Deutsch lernen. Welcher Text passt zu ihr?",
+       "a": "Text 3: Kurs",
+       "choices": [
+        "Text 1: Wohnung",
+        "Text 2: Hund",
+        "Text 3: Kurs",
+        "Text 4: Job",
+        "Text 5: Flohmarkt"
+       ],
+       "textRefs": [
+        "text-kurs"
+       ],
+       "evidence": "Kurs für Deutsch B1 in der Schule am Abend"
+      },
+      {
+       "q": "Jonas braucht Geld am Ende der Woche. Welcher Text passt zu ihm?",
+       "a": "Text 4: Job",
+       "choices": [
+        "Text 1: Wohnung",
+        "Text 2: Hund",
+        "Text 3: Kurs",
+        "Text 4: Job",
+        "Text 5: Flohmarkt"
+       ],
+       "textRefs": [
+        "text-job"
+       ],
+       "evidence": "Wir suchen eine Aushilfe für das Café am Bahnhof"
+      },
+      {
+       "q": "Elena möchte alte Sachen verkaufen. Welcher Text passt zu ihr?",
+       "a": "Text 5: Flohmarkt",
+       "choices": [
+        "Text 1: Wohnung",
+        "Text 2: Hund",
+        "Text 3: Kurs",
+        "Text 4: Job",
+        "Text 5: Flohmarkt"
+       ],
+       "textRefs": [
+        "text-flohmarkt"
+       ],
+       "evidence": "Verkaufen Sie alte Sachen!"
+      }
+     ]
+    },
+    {
+     "id": "lesen-teil2",
+     "prompt": {
+      "de": "Teil 2: Lesen Sie die Nachricht. Was ist richtig? Kreuzen Sie a, b oder c an.",
+      "ar": "القسم 2: اقرأ الرسالة. ما الصحيح؟ ضع علامة على a أو b أو c."
+     },
+     "taskType": "mc3",
+     "texts": [
+      {
+       "id": "text-nachricht",
+       "kind": "nachricht",
+       "title": "Nachricht von Ayse",
+       "de": "Liebe Anna, der neue Kurs im Wasser beginnt am 12. März und dauert sechs Wochen. Jeden Dienstag von 17:00 bis 18:30 Uhr im Bad Mitte. Der Kurs kostet 60 Euro, aber für Studenten nur 40 Euro. Bring bitte zwei Handtücher mit. Viele Grüße, Ayse"
+      }
+     ],
+     "items": [
+      {
+       "q": "Wann beginnt der Kurs im Wasser?",
+       "a": "am 12. März",
+       "choices": [
+        "am 12. März",
+        "am 12. Mai",
+        "am 20. März"
+       ],
+       "textRefs": [
+        "text-nachricht"
+       ],
+       "evidence": "der neue Kurs im Wasser beginnt am 12. März"
+      },
+      {
+       "q": "Wie lange dauert der Kurs?",
+       "a": "sechs Wochen",
+       "choices": [
+        "acht Wochen",
+        "sechs Wochen",
+        "vier Wochen"
+       ],
+       "textRefs": [
+        "text-nachricht"
+       ],
+       "evidence": "dauert sechs Wochen"
+      },
+      {
+       "q": "Wie viel kostet der Kurs für Studenten?",
+       "a": "40 Euro",
+       "choices": [
+        "20 Euro",
+        "60 Euro",
+        "40 Euro"
+       ],
+       "textRefs": [
+        "text-nachricht"
+       ],
+       "evidence": "für Studenten nur 40 Euro"
+      },
+      {
+       "q": "Wann ist der Kurs?",
+       "a": "Dienstag von 17:00 bis 18:30 Uhr",
+       "choices": [
+        "Donnerstag von 17:00 bis 18:30 Uhr",
+        "Dienstag von 16:00 bis 17:30 Uhr",
+        "Dienstag von 17:00 bis 18:30 Uhr"
+       ],
+       "textRefs": [
+        "text-nachricht"
+       ],
+       "evidence": "Jeden Dienstag von 17:00 bis 18:30 Uhr im Bad Mitte"
+      },
+      {
+       "q": "Was soll Anna mitbringen?",
+       "a": "zwei Handtücher",
+       "choices": [
+        "zwei Handtücher",
+        "ein Buch",
+        "eine Jacke"
+       ],
+       "textRefs": [
+        "text-nachricht"
+       ],
+       "evidence": "Bring bitte zwei Handtücher mit."
+      }
+     ]
+    },
+    {
+     "id": "lesen-teil3",
+     "prompt": {
+      "de": "Teil 3: Lesen Sie den Text. Sind die Aussagen richtig oder falsch? Kreuzen Sie an.",
+      "ar": "القسم 3: اقرأ النص. هل العبارات صحيحة أم خاطئة؟ ضع علامة."
+     },
+     "taskType": "richtig-falsch",
+     "texts": [
+      {
+       "id": "text-bericht",
+       "kind": "webseite",
+       "title": "Gesund leben",
+       "de": "Wer gesund leben will, braucht gutes Essen und viel Wasser. Obst und Gemüse sind wichtig. Sport ist auch gut: drei Mal pro Woche eine Stunde. Der Schlaf ist wichtig — acht Stunden pro Nacht. Kaffee ist okay, aber Wasser ist besser."
+      }
+     ],
+     "items": [
+      {
+       "q": "Obst und Gemüse sind wichtig.",
+       "a": "Richtig",
+       "choices": [
+        "Richtig",
+        "Falsch"
+       ],
+       "textRefs": [
+        "text-bericht"
+       ],
+       "evidence": "Obst und Gemüse sind wichtig"
+      },
+      {
+       "q": "Sport ist nicht gut.",
+       "a": "Falsch",
+       "choices": [
+        "Richtig",
+        "Falsch"
+       ],
+       "textRefs": [
+        "text-bericht"
+       ],
+       "evidence": "Sport ist auch gut"
+      },
+      {
+       "q": "Der Schlaf ist nicht wichtig.",
+       "a": "Falsch",
+       "choices": [
+        "Richtig",
+        "Falsch"
+       ],
+       "textRefs": [
+        "text-bericht"
+       ],
+       "evidence": "Der Schlaf ist wichtig"
+      },
+      {
+       "q": "Man braucht acht Stunden Schlaf pro Nacht.",
+       "a": "Richtig",
+       "choices": [
+        "Richtig",
+        "Falsch"
+       ],
+       "textRefs": [
+        "text-bericht"
+       ],
+       "evidence": "acht Stunden pro Nacht"
+      },
+      {
+       "q": "Wasser ist besser als Kaffee.",
+       "a": "Richtig",
+       "choices": [
+        "Richtig",
+        "Falsch"
+       ],
+       "textRefs": [
+        "text-bericht"
+       ],
+       "evidence": "aber Wasser ist besser"
+      }
+     ]
+    },
+    {
+     "id": "lesen-teil4",
+     "prompt": {
+      "de": "Teil 4: Lesen Sie den Text. Was ist richtig? Kreuzen Sie a, b oder c an.",
+      "ar": "القسم 4: اقرأ النص. ما الصحيح؟ ضع علامة على a أو b أو c."
+     },
+     "taskType": "mc3",
+     "texts": [
+      {
+       "id": "text-fach",
+       "kind": "webseite",
+       "title": "Der Arzt in Deutschland",
+       "de": "Wenn Sie krank sind, gehen Sie zuerst zum Arzt. Für einen Termin rufen Sie morgens an — oft gibt es dann noch Termine am selben Tag. Ohne Ihre Karte kann der Arzt nicht helfen. In Notfällen rufen Sie die 112 an oder gehen Sie ins Krankenhaus. Für das Gespräch ist Deutsch wichtig."
+      }
+     ],
+     "items": [
+      {
+       "q": "Wohin gehen Sie zuerst, wenn Sie krank sind?",
+       "a": "zum Arzt",
+       "choices": [
+        "zum Arzt",
+        "ins Krankenhaus",
+        "nach Hause"
+       ],
+       "textRefs": [
+        "text-fach"
+       ],
+       "evidence": "gehen Sie zuerst zum Arzt"
+      },
+      {
+       "q": "Wann sollen Sie für einen Termin anrufen?",
+       "a": "morgens",
+       "choices": [
+        "abends",
+        "morgens",
+        "am Sonntag"
+       ],
+       "textRefs": [
+        "text-fach"
+       ],
+       "evidence": "Für einen Termin rufen Sie morgens an"
+      },
+      {
+       "q": "Was brauchen Sie für die Hilfe des Arztes?",
+       "a": "Ihre Karte",
+       "choices": [
+        "Ihr Buch",
+        "Ihr Geld",
+        "Ihre Karte"
+       ],
+       "textRefs": [
+        "text-fach"
+       ],
+       "evidence": "Ohne Ihre Karte kann der Arzt nicht helfen"
+      },
+      {
+       "q": "Was tun Sie im Notfall?",
+       "a": "die 112 anrufen",
+       "choices": [
+        "zu Hause schlafen",
+        "die 110 anrufen",
+        "die 112 anrufen"
+       ],
+       "textRefs": [
+        "text-fach"
+       ],
+       "evidence": "In Notfällen rufen Sie die 112 an"
+      },
+      {
+       "q": "Was ist für das Gespräch wichtig?",
+       "a": "Deutsch",
+       "choices": [
+        "Deutsch",
+        "Englisch",
+        "Arabisch"
+       ],
+       "textRefs": [
+        "text-fach"
+       ],
+       "evidence": "Für das Gespräch ist Deutsch wichtig"
+      }
+     ]
+    },
+    {
+     "id": "lesen-teil5",
+     "prompt": {
+      "de": "Teil 5: Lesen Sie die fünf Texte. Was ist richtig? Kreuzen Sie a, b oder c an.",
+      "ar": "القسم 5: اقرأ النصوص الخمسة. ما الصحيح؟ ضع علامة على a أو b أو c."
+     },
+     "taskType": "mc3",
+     "texts": [
+      {
+       "id": "gebrauch-1",
+       "kind": "schild",
+       "title": "Bad Mitte",
+       "de": "Bad Mitte: Geöffnet Montag bis Freitag 7:00–21:00 Uhr, Samstag und Sonntag 8:00–18:00 Uhr. Eintritt: 5 Euro, Kinder unter 12 Jahren frei. Hunde sind nicht erlaubt."
+      },
+      {
+       "id": "gebrauch-2",
+       "kind": "aushang",
+       "title": "Praxis Weber",
+       "de": "Praxis Weber: Am 24. und 25. Dezember bleibt die Praxis geschlossen. In Notfällen gehen Sie ins Krankenhaus. Rezepte können Sie auch im Internet bestellen."
+      },
+      {
+       "id": "gebrauch-3",
+       "kind": "anzeige",
+       "title": "Schreibtisch zu verkaufen",
+       "de": "Schreibtisch zu verkaufen: 40 Euro statt 90 Euro. Sehr guter Zustand. Kommen Sie zu mir nach Hause und nehmen Sie den Tisch mit. Bitte abends anrufen."
+      },
+      {
+       "id": "gebrauch-4",
+       "kind": "webseite",
+       "title": "Kino am Abend",
+       "de": "Kino am Abend: Filme für die ganze Familie. Jeden Abend um 19:00 Uhr. Ein Ticket kostet 8 Euro, für Kinder 5 Euro. Das Kino ist groß und schön. Essen und Trinken sind erlaubt."
+      },
+      {
+       "id": "gebrauch-5",
+       "kind": "schild",
+       "title": "Achtung: Zug und Bus",
+       "de": "Achtung: Der Zug nach Hamburg fährt heute nicht. Bitte nehmen Sie den Bus. Der Bus fährt jeden Tag um 8:00 Uhr vom Bahnhof."
+      }
+     ],
+     "items": [
+      {
+       "q": "Wann ist das Bad am Sonntag geöffnet?",
+       "a": "8:00–18:00 Uhr",
+       "choices": [
+        "8:00–18:00 Uhr",
+        "7:00–21:00 Uhr",
+        "8:00–21:00 Uhr"
+       ],
+       "textRefs": [
+        "gebrauch-1"
+       ],
+       "evidence": "Samstag und Sonntag 8:00–18:00 Uhr"
+      },
+      {
+       "q": "Was passiert am 24. Dezember?",
+       "a": "Die Praxis bleibt geschlossen",
+       "choices": [
+        "Die Praxis hat geöffnet",
+        "Die Praxis bleibt geschlossen",
+        "Der Arzt kommt nach Hause"
+       ],
+       "textRefs": [
+        "gebrauch-2"
+       ],
+       "evidence": "Am 24. und 25. Dezember bleibt die Praxis geschlossen"
+      },
+      {
+       "q": "Wie viel kostet der Schreibtisch?",
+       "a": "40 Euro",
+       "choices": [
+        "12 Euro",
+        "90 Euro",
+        "40 Euro"
+       ],
+       "textRefs": [
+        "gebrauch-3"
+       ],
+       "evidence": "40 Euro statt 90 Euro"
+      },
+      {
+       "q": "Wie viel kostet ein Ticket für Kinder?",
+       "a": "5 Euro",
+       "choices": [
+        "10 Euro",
+        "8 Euro",
+        "5 Euro"
+       ],
+       "textRefs": [
+        "gebrauch-4"
+       ],
+       "evidence": "für Kinder 5 Euro"
+      },
+      {
+       "q": "Was sollen die Menschen im Zug tun?",
+       "a": "den Bus nehmen",
+       "choices": [
+        "den Bus nehmen",
+        "zu Hause bleiben",
+        "den Zug nehmen"
+       ],
+       "textRefs": [
+        "gebrauch-5"
+       ],
+       "evidence": "Bitte nehmen Sie den Bus."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "schreiben",
+   "timeBudgetMin": 60,
+   "instructions": {
+    "de": "Der Test Schreiben hat zwei Teile. Schreiben Sie zuerst eine E-Mail, dann einen Forenbeitrag. Sie haben 60 Minuten.",
+    "ar": "اختبار الكتابة قسمان. اكتب أولاً رسالة ثم مشاركة منتدى. لديك 60 دقيقة."
+   },
+   "parts": [
+    {
+     "id": "schreiben-teil1",
+     "prompt": {
+      "de": "Teil 1: Schreiben Sie eine persönliche E-Mail an Ihren deutschen Freund Markus. Er möchte wissen, wie es Ihnen geht und was Sie am letzten Wochenende gemacht haben. Schreiben Sie auch, was Sie nächstes Wochenende vorhaben. (40 Wörter oder mehr)",
+      "ar": "القسم 1: اكتب رسالة شخصية إلى صديقك الألماني ماركوس يسألك عن أخبارك وما فعلته نهاية الأسبوع الماضي وما تخطط له نهاية الأسبوع القادمة. (40 كلمة أو أكثر)"
+     },
+     "taskType": "freies-schreiben",
+     "items": [
+      {
+       "q": "Persönliche E-Mail an Markus (40 Wörter oder mehr)",
+       "a": "Lieber Markus, danke für deine E-Mail! Mir geht es gut. Am letzten Wochenende war ich mit meiner Familie im Park. Wir haben zusammen Fußball gespielt. Das Wetter war schön. Nächstes Wochenende möchte ich meinen Kurs machen und am Sonntag meine Großmutter besuchen. Und du? Schreib mir bald! Viele Grüße, Yusuf"
+      }
+     ]
+    },
+    {
+     "id": "schreiben-teil2",
+     "prompt": {
+      "de": "Teil 2: Lesen Sie diesen Beitrag: „Ich möchte mit dem Auto in die Stadt fahren. Ist das in Ihrer Stadt einfach?“ Schreiben Sie einen Beitrag (40 Wörter oder mehr) zu diesen drei Punkten: 1. Was ist mit dem Auto in der Stadt? 2. Was ist mit Bus und Bahn? 3. Was sagen Sie Ihrem Freund?",
+      "ar": "القسم 2: اقرأ المقال: «أريد الذهاب إلى المدينة بالسيارة — هل هذا سهل في مدينتك؟» اكتب مقالاً (40 كلمة أو أكثر) عن: السيارة في المدينة · الحافلة والقطار · نصيحتك لصديقك."
+     },
+     "taskType": "freies-schreiben",
+     "texts": [
+      {
+       "id": "forum-beitrag",
+       "kind": "webseite",
+       "title": "Beitrag: Auto in der Stadt",
+       "de": "Ich möchte mit dem Auto in die Stadt fahren. Ist das in Ihrer Stadt einfach? Ich wohne auf dem Land und brauche Ihre Hilfe. Danke! Thomas"
+      }
+     ],
+     "items": [
+      {
+       "q": "Beitrag: Auto in der Stadt (40 Wörter oder mehr · 3 Punkte)",
+       "a": "Hallo Thomas, in meiner Stadt ist das Fahren mit dem Auto nicht einfach. Am Tag gibt es viele Autos. Aber der Bus ist gut: Er fährt jede zehn Minuten und das Ticket kostet nur 2,50 Euro. Ich sage dir: Nimm die Bahn! Sie ist schneller und billiger. Viele Grüße, Lena",
+       "textRefs": [
+        "forum-beitrag"
+       ],
+       "evidence": "Ist das in Ihrer Stadt einfach?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "sprechen",
+   "timeBudgetMin": 15,
+   "instructions": {
+    "de": "Der Test Sprechen hat drei Teile und findet mit einem Partner statt. Sprechen Sie klar und deutlich.",
+    "ar": "اختبار التحدث ثلاثة أقسام ويُجرى مع زميل. تحدّث بوضوح."
+   },
+   "parts": [
+    {
+     "id": "sprechen-teil1",
+     "prompt": {
+      "de": "Teil 1: Präsentieren Sie ein Thema 3 Minuten lang: Beschreiben Sie die Situation und erzählen Sie eine kleine Geschichte.",
+      "ar": "القسم 1: اعرض أحد المواضيع 3 دقائق: صف الموقف واحكِ قصة قصيرة."
+     },
+     "taskType": "freies-sprechen",
+     "items": [
+      {
+       "q": "Beschreiben Sie: Ein Fest mit der Familie. Wer ist da? Was machen die Menschen?",
+       "a": "Zuerst: Wer ist da? Kinder, Eltern und Großeltern. Dann: Wir essen zusammen und hören Musik. Am Ende: Wir tanzen und sind glücklich."
+      },
+      {
+       "q": "Beschreiben Sie: Ein Tag am Strand. Wie ist das Wetter? Was sehen Sie?",
+       "a": "Das Wetter ist warm und die Sonne scheint. Ich sehe Kinder, Wasser und Boote. Viele Menschen lesen Bücher oder spielen Ball. Am Abend fahren wir nach Hause."
+      },
+      {
+       "q": "Beschreiben Sie: Meine Arbeit oder meine Schule. Wie sieht es dort aus?",
+       "a": "Meine Schule ist groß. Dort gibt es viele Räume und einen großen Tisch. Am Tag arbeite ich mit meinen Freunden. Ich bin gern dort."
+      }
+     ]
+    },
+    {
+     "id": "sprechen-teil2",
+     "prompt": {
+      "de": "Teil 2: Planen Sie mit Ihrem Partner etwas. Einigen Sie sich am Ende!",
+      "ar": "القسم 2: خطّط مع زميلك لشيء ما. اتفقا في النهاية!"
+     },
+     "taskType": "freies-sprechen",
+     "items": [
+      {
+       "q": "Planen Sie: Eine Reise am Wochenende. Wohin? Wann? Wie fahren Sie?",
+       "a": "Vorschlag: Wir fahren am Samstag an die See. Mit dem Zug um acht Uhr. Das Ticket kostet 20 Euro. Einigung: Samstag, Zug, an die See."
+      },
+      {
+       "q": "Planen Sie: Ein Geschenk für einen Freund. Was? Wo kaufen? Wie viel Geld?",
+       "a": "Vorschlag: Ein Buch aus dem Geschäft. Es kostet 15 Euro. Einigung: Wir kaufen das Buch am Freitag."
+      },
+      {
+       "q": "Planen Sie: Ein Essen mit Freunden. Wann? Wo? Was essen die Gäste?",
+       "a": "Vorschlag: Samstag Abend bei mir zu Hause. Wir essen Reis, Hähnchen und Salat. Einigung: Samstag, bei mir, gutes Essen."
+      }
+     ]
+    },
+    {
+     "id": "sprechen-teil3",
+     "prompt": {
+      "de": "Teil 3: Wählen Sie gemeinsam eine Option. Begründen Sie Ihre Meinung und einigen Sie sich!",
+      "ar": "القسم 3: اختر مع زميلك خياراً واحداً. ابرر رأيكما واتفقا!"
+     },
+     "taskType": "freies-sprechen",
+     "items": [
+      {
+       "q": "Wählen Sie: Das beste Geschenk für einen Gast. Ein Buch? Ein Kleid? Ein Essen?",
+       "a": "Meinung: Ein Buch ist gut, aber ein Essen ist besser. Warum? Man ist zusammen. Einigung: Wir laden den Gast zum Essen ein."
+      },
+      {
+       "q": "Wählen Sie: Wie reisen Sie am besten? Mit dem Zug? Mit dem Auto? Mit dem Flugzeug?",
+       "a": "Meinung: Der Zug ist am besten. Warum? Man kann lesen und schlafen. Einigung: Wir fahren mit dem Zug."
+      },
+      {
+       "q": "Wählen Sie: Das beste Hobby für einen schweren Job. Sport? Musik? Kochen?",
+       "a": "Meinung: Sport ist am besten. Warum? Der Körper wird stark und der Kopf ist frei. Einigung: Sport zweimal pro Woche."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "properNouns": [
+  "Anna",
+  "Ayse",
+  "Berg",
+  "Berlin",
+  "Elena",
+  "Hamburg",
+  "Jonas",
+  "Krämer",
+  "Lena",
+  "Marek",
+  "Markus",
+  "Mitte",
+  "Müller",
+  "Sara",
+  "Schmidt",
+  "Thomas",
+  "Weber",
+  "Wien",
+  "Yusuf"
+ ],
+ "sourceNote": "D559: البنية = صيغة «Goethe-Zertifikat B1: Modellsatz Erwachsene» الرسمية (المدد · الأجزاء · الأنماط · مرتا السماع) — والمحتوى تدريبي مُؤلَّف أصلي بالكامل داخل مفردات A1–B1 المُدرَّسة وقانون الجبهة 13 (D108: لا نسخ). needs-web-verify: إعادة تحقق العدود من PDF عند توفر الشبكة."
+}

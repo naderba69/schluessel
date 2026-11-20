@@ -70,7 +70,9 @@
     "grammarArsenalIds": [
       "ars-verben-praep"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u7-s2"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "v2-order"
@@ -165,6 +167,23 @@
               }
             ],
             "why": "giftig سام (مثل fertig!) · verbrauchen يستهلك (hat verbraucht!) · entwickeln يطوّر (hat entwickelt!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "البيئة",
+                "de": "die Umwelt"
+              },
+              {
+                "ar": "المناخ",
+                "de": "das Klima"
+              },
+              {
+                "ar": "المرج",
+                "de": "die Wiese"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Umwelt = «البيئة» · das Klima = «المناخ» · die Wiese = «المرج»"
           }
         ]
       },
@@ -200,6 +219,21 @@
             "q": "Ich sorge mich ___ die Katze. (um! sich sorgen um + نصب! لا für!)",
             "a": "um",
             "why": "sich sorgen um + نصب (um die Katze!) — وsorgen für مع الشيء! (الزوجان معاً!)"
+          },
+          {
+            "q": "Wir gehen in den ___.",
+            "a": "Wald",
+            "why": "الكلمة الناقصة «Wald» تعني «غابة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Dort sind ___.",
+            "a": "Wolken",
+            "why": "الكلمة الناقصة «Wolken» تعني «سحابة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ sind für meine Mutter.",
+            "a": "Blumen",
+            "why": "الكلمة الناقصة «Blumen» تعني «زهرة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -230,6 +264,11 @@
             "q": "~~Ich denke für die Natur.~~",
             "a": "Ich denke an die Natur.",
             "why": "denken an + Akk! لا für! (التفكير = an دائماً!)"
+          },
+          {
+            "q": "~~Es regnet heute.~~ (ناقصة: der Regen)",
+            "a": "Es regnet heute. der Regen.",
+            "why": "الجملة تفتقد «der Regen» (المطر) — أكملها بالكلمة الصحيحة."
           }
         ]
       },
@@ -255,6 +294,106 @@
             "q": "قل بالألمانية: «نحن ننتظر الطقس.» (warten auf + نصب!)",
             "a": "Wir warten auf das Wetter.",
             "why": "warten auf + Akk! الحرف الثابت: auf! (لا für ولا mit!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Arbeit» («العمل») ثم تحدّث بها.",
+            "a": "Sie liebt ihre Arbeit.",
+            "why": "استعمل «die Arbeit» («العمل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Sommer» («الصيف») ثم تحدّث بها.",
+            "a": "Im Sommer ist es heiß.",
+            "why": "استعمل «der Sommer» («الصيف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "trennen"
+        ],
+        "items": [
+          {
+            "audioId": "word-duerre",
+            "speakText": "die Dürre.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الجفاف",
+              "حماية البيئة",
+              "الضجيج"
+            ],
+            "a": "الجفاف",
+            "why": "الصوت يقول «die Dürre» — معناها «الجفاف». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-umweltschutz",
+            "speakText": "der Umweltschutz.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Umweltschutz",
+              "die Dürre",
+              "der Lärm"
+            ],
+            "a": "der Umweltschutz",
+            "why": "الكلمة المسموعة «der Umweltschutz» تعني «حماية البيئة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-laerm",
+            "speakText": "der Lärm.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الضجيج",
+              "الجفاف",
+              "حماية البيئة"
+            ],
+            "a": "الضجيج",
+            "why": "الصوت يقول «der Lärm» — معناها «الضجيج». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-trennen",
+            "speakText": "trennen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "trennen",
+              "die Dürre",
+              "der Umweltschutz"
+            ],
+            "a": "trennen",
+            "why": "الكلمة المسموعة «trennen» تعني «يفصل». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "nachdem"
+        ],
+        "items": [
+          {
+            "audioId": "word-plastik",
+            "speakText": "das Plastik.",
+            "a": "das Plastik",
+            "why": "اكتب ما تسمعه حرفياً: «das Plastik» تعني «البلاستيك». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-kunststoff",
+            "speakText": "der Kunststoff.",
+            "a": "der Kunststoff",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Kunststoff» («المادة الاصطناعية»)."
+          },
+          {
+            "audioId": "word-dose",
+            "speakText": "die Dose.",
+            "a": "die Dose",
+            "why": "اكتب المسموع بدقة: die Dose — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-nachdem",
+            "speakText": "nachdem.",
+            "a": "nachdem",
+            "why": "اكتب ما تسمعه حرفياً: «nachdem» تعني «بعد أن». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -285,6 +424,14 @@
           {
             "q": "«يستهلك»؟",
             "a": "verbrauchen"
+          },
+          {
+            "q": "«حماية البيئة»؟",
+            "a": "der Umweltschutz"
+          },
+          {
+            "q": "«البلاستيك»؟",
+            "a": "das Plastik"
           }
         ],
         "passingScore": 0.75
@@ -306,6 +453,14 @@
           {
             "q": "«يطوّر»؟",
             "a": "entwickeln"
+          },
+          {
+            "q": "«الجفاف»؟",
+            "a": "die Dürre"
+          },
+          {
+            "q": "«الضجيج»؟",
+            "a": "der Lärm"
           }
         ],
         "passingScore": 0.75
@@ -327,6 +482,14 @@
           {
             "q": "«البحث العلمي»؟",
             "a": "die Forschung"
+          },
+          {
+            "q": "«الجفاف»؟",
+            "a": "die Dürre"
+          },
+          {
+            "q": "«حماية البيئة»؟",
+            "a": "der Umweltschutz"
           }
         ],
         "passingScore": 0.75

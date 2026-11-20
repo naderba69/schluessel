@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u1-s4"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ng-velar",
@@ -134,6 +136,23 @@
               }
             ],
             "why": "Ermutigung geben! · vor Gefahr warnen (vor + Dativ!) · Ablehnung bekommen! · die Ermutigungen جمع -en"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التفاني",
+                "de": "der Einsatz"
+              },
+              {
+                "ar": "اللباقة",
+                "de": "die Höflichkeit"
+              },
+              {
+                "ar": "يتوسّط",
+                "de": "vermitteln"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Einsatz = «التفاني» · die Höflichkeit = «اللباقة» · vermitteln = «يتوسّط»"
           }
         ]
       },
@@ -169,6 +188,21 @@
             "q": "Er gibt mir ___. (تشجيعاً!)",
             "a": "Ermutigung",
             "why": "التشجيع: Ermutigung geben! يمنح التشجيع — Er gibt mir Ermutigung."
+          },
+          {
+            "q": "Das ___ ist wichtig.",
+            "a": "Vorbild",
+            "why": "الكلمة الناقصة «Vorbild» تعني «القدوة (النموذج المحتذى)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Toleranz",
+            "why": "الكلمة الناقصة «Toleranz» تعني «التسامح» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist gut.",
+            "a": "Begegnung",
+            "why": "الكلمة الناقصة «Begegnung» تعني «اللقاء (المقابلة)» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +238,21 @@
             "q": "~~Er gibt ich Ermutigung.~~",
             "a": "Er gibt mir Ermutigung.",
             "why": "geben يأخذ Dativ: mir (لا ich!) — Er gibt mir Ermutigung."
+          },
+          {
+            "q": "~~In Berlin leben viele menschen.~~",
+            "a": "In Berlin leben viele Menschen.",
+            "why": "الخطأ في «menschen»! الصواب «Menschen» — راجع القاعدة (الإنسان)."
+          },
+          {
+            "q": "~~Meine Tante ist Freundlich.~~",
+            "a": "Meine Tante ist freundlich.",
+            "why": "الخطأ في «Freundlich»! الصواب «freundlich» — راجع القاعدة (ودود/لطيف)."
+          },
+          {
+            "q": "~~Ich brauche ruhe.~~",
+            "a": "Ich brauche Ruhe.",
+            "why": "الخطأ في «ruhe»! الصواب «Ruhe» — راجع القاعدة (الهدوء)."
           }
         ]
       },
@@ -234,6 +283,111 @@
             "q": "تحدث عن الرفض! (جملتان!)",
             "a": "Die Ablehnung ist groß. Ich verstehe die Ablehnung.",
             "why": "الرفض! (Ablehnung verstehen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Integration» («الاندماج») ثم تحدّث بها.",
+            "a": "Integration braucht Zeit.",
+            "why": "استعمل «die Integration» («الاندماج») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Gleichheit» («المساواة») ثم تحدّث بها.",
+            "a": "Die Gleichheit ist wichtig.",
+            "why": "استعمل «die Gleichheit» («المساواة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «beistehen» («يساند») ثم تحدّث بها.",
+            "a": "Wir stehen den Freunden bei.",
+            "why": "استعمل «beistehen» («يساند») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "beistehen"
+        ],
+        "items": [
+          {
+            "audioId": "word-ermutigung",
+            "speakText": "die Ermutigung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التشجيع",
+              "يحذّر",
+              "الرفض"
+            ],
+            "a": "التشجيع",
+            "why": "الصوت يقول «die Ermutigung» — معناها «التشجيع». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-warnen",
+            "speakText": "warnen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "warnen",
+              "die Ermutigung",
+              "die Ablehnung"
+            ],
+            "a": "warnen",
+            "why": "الكلمة المسموعة «warnen» تعني «يحذّر». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-ablehnung",
+            "speakText": "die Ablehnung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الرفض",
+              "التشجيع",
+              "يحذّر"
+            ],
+            "a": "الرفض",
+            "why": "الصوت يقول «die Ablehnung» — معناها «الرفض». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-beistehen",
+            "speakText": "beistehen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "beistehen",
+              "die Ermutigung",
+              "warnen"
+            ],
+            "a": "beistehen",
+            "why": "الكلمة المسموعة «beistehen» تعني «يساند». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "gleichheit"
+        ],
+        "items": [
+          {
+            "audioId": "word-ermutigung",
+            "speakText": "die Ermutigung.",
+            "a": "die Ermutigung",
+            "why": "اكتب ما تسمعه حرفياً: «die Ermutigung» تعني «التشجيع». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-warnen",
+            "speakText": "warnen.",
+            "a": "warnen",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «warnen» («يحذّر»)."
+          },
+          {
+            "audioId": "word-ablehnung",
+            "speakText": "die Ablehnung.",
+            "a": "die Ablehnung",
+            "why": "اكتب المسموع بدقة: die Ablehnung — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-gleichheit",
+            "speakText": "die Gleichheit.",
+            "a": "die Gleichheit",
+            "why": "اكتب ما تسمعه حرفياً: «die Gleichheit» تعني «المساواة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +418,14 @@
           {
             "q": "«هو يمنحني تشجيعاً.»؟",
             "a": "Er gibt mir Ermutigung."
+          },
+          {
+            "q": "«التشجيع»؟",
+            "a": "die Ermutigung"
+          },
+          {
+            "q": "«يحذّر»؟",
+            "a": "warnen"
           }
         ]
       },
@@ -284,6 +446,14 @@
           {
             "q": "warnen",
             "a": "يحذّر"
+          },
+          {
+            "q": "«التشجيع»؟",
+            "a": "die Ermutigung"
+          },
+          {
+            "q": "«يحذّر»؟",
+            "a": "warnen"
           }
         ]
       },
@@ -304,6 +474,14 @@
           {
             "q": "«أنا أفهم الرفض!»؟",
             "a": "Ich verstehe die Ablehnung!"
+          },
+          {
+            "q": "«التشجيع»؟",
+            "a": "die Ermutigung"
+          },
+          {
+            "q": "«يحذّر»؟",
+            "a": "warnen"
           }
         ]
       }

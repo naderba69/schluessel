@@ -58,7 +58,9 @@
     "grammarArsenalIds": [
       "ars-quantitaet"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u10-s6"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "v2-order"
@@ -157,6 +159,23 @@
               }
             ],
             "why": "der Vortrag العرض (halten! مراجعة d3!) · die Folie الشريحة (die!) · die Auswertung التحليل (مراجعة d4!) · die Prognose التوقّع (stellen!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "النصف",
+                "de": "die Hälfte"
+              },
+              {
+                "ar": "العدد (الكمّي)",
+                "de": "die Anzahl"
+              },
+              {
+                "ar": "الحصيلة",
+                "de": "die Bilanz"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Hälfte = «النصف» · die Anzahl = «العدد (الكمّي)» · die Bilanz = «الحصيلة»"
           }
         ]
       },
@@ -168,9 +187,8 @@
           "الحصيلة والخلاصة!"
         ],
         "interleavedWith": [
-          "bilanz",
-          "fazit",
-          "genauigkeit"
+          "rate",
+          "million"
         ],
         "items": [
           {
@@ -202,6 +220,16 @@
             "q": "Die ___ ist wichtig. (الدقّة!)",
             "a": "Genauigkeit",
             "why": "die Genauigkeit الدقّة (die!) — die Genauigkeit ist wichtig."
+          },
+          {
+            "q": "Die ___ ist hoch.",
+            "a": "Rate",
+            "why": "الكلمة الناقصة «Rate» تعني «المعدل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Eine ___ ist viel.",
+            "a": "Million",
+            "why": "الكلمة الناقصة «Million» تعني «المليون» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -232,6 +260,21 @@
             "q": "~~die Fazit ist klar~~",
             "a": "das Fazit ist klar",
             "why": "das Fazit الخلاصة (das! محايد — لا die!)"
+          },
+          {
+            "q": "~~Zwanzig prozent sind genug.~~",
+            "a": "Zwanzig Prozent sind genug.",
+            "why": "الخطأ في «prozent»! الصواب «Prozent» — راجع القاعدة (بالمئة)."
+          },
+          {
+            "q": "~~Ein drittel ist genug.~~",
+            "a": "Ein Drittel ist genug.",
+            "why": "الخطأ في «drittel»! الصواب «Drittel» — راجع القاعدة (الثلث)."
+          },
+          {
+            "q": "~~Eine handvoll ist klein.~~",
+            "a": "Eine Handvoll ist klein.",
+            "why": "الخطأ في «handvoll»! الصواب «Handvoll» — راجع القاعدة (حفنة)."
           }
         ]
       },
@@ -262,6 +305,106 @@
             "q": "اختم بالحصيلة والخلاصة! (3 جمل!)",
             "a": "Die Bilanz ist klar: Die Rate ist hoch. Das Fazit ist klar. Die Genauigkeit ist wichtig!",
             "why": "Bilanz ziehen! Fazit! Genauigkeit! (خاتمة الوحدة!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Prognose» («التوقّع (المستقبلي)») ثم تحدّث بها.",
+            "a": "Die Prognose ist deutlich.",
+            "why": "استعمل «die Prognose» («التوقّع (المستقبلي)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Stichprobe» («العيّنة (الإحصائية)») ثم تحدّث بها.",
+            "a": "Die Stichprobe ist klein.",
+            "why": "استعمل «die Stichprobe» («العيّنة (الإحصائية)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "rate"
+        ],
+        "items": [
+          {
+            "audioId": "word-bilanz",
+            "speakText": "die Bilanz.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الحصيلة",
+              "الخلاصة",
+              "الدقّة"
+            ],
+            "a": "الحصيلة",
+            "why": "الصوت يقول «die Bilanz» — معناها «الحصيلة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-fazit",
+            "speakText": "das Fazit.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "das Fazit",
+              "die Bilanz",
+              "die Genauigkeit"
+            ],
+            "a": "das Fazit",
+            "why": "الكلمة المسموعة «das Fazit» تعني «الخلاصة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-genauigkeit",
+            "speakText": "die Genauigkeit.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الدقّة",
+              "الحصيلة",
+              "الخلاصة"
+            ],
+            "a": "الدقّة",
+            "why": "الصوت يقول «die Genauigkeit» — معناها «الدقّة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-rate",
+            "speakText": "die Rate.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Rate",
+              "die Bilanz",
+              "das Fazit"
+            ],
+            "a": "die Rate",
+            "why": "الكلمة المسموعة «die Rate» تعني «المعدل». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "million"
+        ],
+        "items": [
+          {
+            "audioId": "word-bilanz",
+            "speakText": "die Bilanz.",
+            "a": "die Bilanz",
+            "why": "اكتب ما تسمعه حرفياً: «die Bilanz» تعني «الحصيلة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-fazit",
+            "speakText": "das Fazit.",
+            "a": "das Fazit",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «das Fazit» («الخلاصة»)."
+          },
+          {
+            "audioId": "word-genauigkeit",
+            "speakText": "die Genauigkeit.",
+            "a": "die Genauigkeit",
+            "why": "اكتب المسموع بدقة: die Genauigkeit — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-million",
+            "speakText": "die Million.",
+            "a": "die Million",
+            "why": "اكتب ما تسمعه حرفياً: «die Million» تعني «المليون». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -292,6 +435,14 @@
           {
             "q": "«الدقّة»؟",
             "a": "die Genauigkeit"
+          },
+          {
+            "q": "«الحصيلة»؟",
+            "a": "die Bilanz"
+          },
+          {
+            "q": "«الميزان»؟",
+            "a": "die Bilanz"
           }
         ]
       },
@@ -312,6 +463,14 @@
           {
             "q": "«التوقّع»؟ (مراجعة!)",
             "a": "die Prognose"
+          },
+          {
+            "q": "«الحصيلة»؟",
+            "a": "die Bilanz"
+          },
+          {
+            "q": "«الخلاصة»؟",
+            "a": "das Fazit"
           }
         ]
       },
@@ -332,6 +491,14 @@
           {
             "q": "«المعدل عالٍ.»؟ (مراجعة!)",
             "a": "Die Rate ist hoch."
+          },
+          {
+            "q": "«الحصيلة»؟",
+            "a": "die Bilanz"
+          },
+          {
+            "q": "«الخلاصة»؟",
+            "a": "das Fazit"
           }
         ]
       }

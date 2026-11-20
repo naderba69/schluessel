@@ -59,7 +59,9 @@
       "ars-vortragstext",
       "ars-konnektoren"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u12-s4"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "trennbar",
@@ -172,6 +174,23 @@
               }
             ],
             "why": "الإملاء! richtig صحيح · falsch خطأ · das Komma الفاصلة (das! die Kommas!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "ببطولة",
+                "de": "fließend"
+              },
+              {
+                "ar": "النطق",
+                "de": "die Aussprache"
+              },
+              {
+                "ar": "عفوياً",
+                "de": "spontan"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: fließend = «ببطولة» · die Aussprache = «النطق» · spontan = «عفوياً»"
           }
         ]
       },
@@ -183,9 +202,8 @@
           "محاكاة الكتابة!"
         ],
         "interleavedWith": [
-          "rechtschreibung",
-          "stil",
-          "ueberarbeiten"
+          "spontan",
+          "aussprache"
         ],
         "items": [
           {
@@ -212,6 +230,16 @@
             "q": "Er ___ den Stil. (يُحسّن!)",
             "a": "verbessert",
             "why": "verbessern يُحسّن (hat verbessert!) — er verbessert den Stil. (den Stil verbessern!)"
+          },
+          {
+            "q": "Er antwortet ___.",
+            "a": "spontan",
+            "why": "الكلمة الناقصة «spontan» تعني «عفوياً» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist klar.",
+            "a": "Aussprache",
+            "why": "الكلمة الناقصة «Aussprache» تعني «النطق» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -242,6 +270,21 @@
             "q": "~~Die Rechtschreibung ist richtigen.~~",
             "a": "Die Rechtschreibung ist richtig.",
             "why": "الصفة بعد ist بلا تصريف! richtig (لا richtigen!)"
+          },
+          {
+            "q": "~~Der entwurf ist kurz.~~",
+            "a": "Der Entwurf ist kurz.",
+            "why": "الخطأ في «entwurf»! الصواب «Entwurf» — راجع القاعدة (المسودة)."
+          },
+          {
+            "q": "~~Die einleitung ist kurz.~~",
+            "a": "Die Einleitung ist kurz.",
+            "why": "الخطأ في «einleitung»! الصواب «Einleitung» — راجع القاعدة (المقدمة (في الكتابة!))."
+          },
+          {
+            "q": "~~Um zehn Uhr ist schluss.~~",
+            "a": "Um zehn Uhr ist Schluss.",
+            "why": "الخطأ في «schluss»! الصواب «Schluss» — راجع القاعدة (النهاية)."
           }
         ]
       },
@@ -272,6 +315,111 @@
             "q": "اختم بالمراجعة! (جملتان!)",
             "a": "Er arbeitet den Text über. Die Rechtschreibung ist richtig.",
             "why": "المراجعة ثم الصحة! (den Text überarbeiten!)"
+          },
+          {
+            "q": "كوّن جملة فيها «schreiben» («يكتب») ثم تحدّث بها.",
+            "a": "Ich schreibe meinen Namen.",
+            "why": "استعمل «schreiben» («يكتب») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «korrigieren» («يصحّح») ثم تحدّث بها.",
+            "a": "Könnten Sie das bitte korrigieren?",
+            "why": "استعمل «korrigieren» («يصحّح») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Komma» («الفاصلة (الرقمية)») ثم تحدّث بها.",
+            "a": "Das Komma ist wichtig.",
+            "why": "استعمل «das Komma» («الفاصلة (الرقمية)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "spontan"
+        ],
+        "items": [
+          {
+            "audioId": "word-rechtschreibung",
+            "speakText": "die Rechtschreibung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الإملاء",
+              "الأسلوب",
+              "يعيد العمل في"
+            ],
+            "a": "الإملاء",
+            "why": "الصوت يقول «die Rechtschreibung» — معناها «الإملاء». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-stil",
+            "speakText": "der Stil.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Stil",
+              "die Rechtschreibung",
+              "überarbeiten"
+            ],
+            "a": "der Stil",
+            "why": "الكلمة المسموعة «der Stil» تعني «الأسلوب». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-ueberarbeiten",
+            "speakText": "überarbeiten.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يعيد العمل في",
+              "الإملاء",
+              "الأسلوب"
+            ],
+            "a": "يعيد العمل في",
+            "why": "الصوت يقول «überarbeiten» — معناها «يعيد العمل في». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-spontan",
+            "speakText": "spontan.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "spontan",
+              "die Rechtschreibung",
+              "der Stil"
+            ],
+            "a": "spontan",
+            "why": "الكلمة المسموعة «spontan» تعني «عفوياً». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "aussprache"
+        ],
+        "items": [
+          {
+            "audioId": "word-rechtschreibung",
+            "speakText": "die Rechtschreibung.",
+            "a": "die Rechtschreibung",
+            "why": "اكتب ما تسمعه حرفياً: «die Rechtschreibung» تعني «الإملاء». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-stil",
+            "speakText": "der Stil.",
+            "a": "der Stil",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «der Stil» («الأسلوب»)."
+          },
+          {
+            "audioId": "word-ueberarbeiten",
+            "speakText": "überarbeiten.",
+            "a": "überarbeiten",
+            "why": "اكتب المسموع بدقة: überarbeiten — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-aussprache",
+            "speakText": "die Aussprache.",
+            "a": "die Aussprache",
+            "why": "اكتب ما تسمعه حرفياً: «die Aussprache» تعني «النطق». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -302,6 +450,14 @@
           {
             "q": "«المسودة»؟ (مراجعة!)",
             "a": "der Entwurf"
+          },
+          {
+            "q": "«يعيد العمل في»؟",
+            "a": "überarbeiten"
+          },
+          {
+            "q": "«الكتابة الصحيحة»؟",
+            "a": "die Rechtschreibung"
           }
         ]
       },
@@ -322,6 +478,14 @@
           {
             "q": "«يُصحّح»؟ (مراجعة!)",
             "a": "korrigieren"
+          },
+          {
+            "q": "«الإملاء»؟",
+            "a": "die Rechtschreibung"
+          },
+          {
+            "q": "«الأسلوب»؟",
+            "a": "der Stil"
           }
         ]
       },
@@ -342,6 +506,14 @@
           {
             "q": "«يُحسّن الأسلوب.»؟",
             "a": "Er verbessert den Stil."
+          },
+          {
+            "q": "«الإملاء»؟",
+            "a": "die Rechtschreibung"
+          },
+          {
+            "q": "«الأسلوب»؟",
+            "a": "der Stil"
           }
         ]
       }

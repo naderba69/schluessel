@@ -74,7 +74,9 @@
     "grammarArsenalIds": [
       "ars-bewerbung"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u8-s2"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "v2-order"
@@ -173,6 +175,23 @@
               }
             ],
             "why": "erhalten يستلم (erhält! hat erhalten!) · erwarten يترقّب (hat erwartet!) · erstellen ينشئ (hat erstellt!) · annehmen يقبل (منفصل: nimmt … an!) — (مراجعة: der Chef! der Bewerber!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "طلب (توظيف)",
+                "de": "die Bewerbung"
+              },
+              {
+                "ar": "السيرة الذاتية",
+                "de": "der Lebenslauf"
+              },
+              {
+                "ar": "شهادة (مدرسية)",
+                "de": "das Zeugnis"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Bewerbung = «طلب (توظيف)» · der Lebenslauf = «السيرة الذاتية» · das Zeugnis = «شهادة (مدرسية)»"
           }
         ]
       },
@@ -218,6 +237,21 @@
             "q": "___ Sie den Lebenslauf! (erstellen! الأمر المهذّب!)",
             "a": "Erstellen",
             "why": "الأمر المهذّب: Erstellen Sie …! (الفعل أولاً!)"
+          },
+          {
+            "q": "Der ___ ist groß, die Stühle sind klein.",
+            "a": "Tisch",
+            "why": "الكلمة الناقصة «Tisch» تعني «طاولة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Hier sind zwei ___.",
+            "a": "Stühle",
+            "why": "الكلمة الناقصة «Stühle» تعني «كرسي» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Ich kaufe eine ___.",
+            "a": "Lampe",
+            "why": "الكلمة الناقصة «Lampe» تعني «مصباح» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -248,6 +282,21 @@
             "q": "~~Sehr geehrte Dame und Herr!~~",
             "a": "Sehr geehrte Damen und Herren!",
             "why": "التحية بالجمع: Damen und Herren! (الثنائي لا يُستعمل!)"
+          },
+          {
+            "q": "~~Ich esse brot mit Käse.~~",
+            "a": "Ich esse Brot mit Käse.",
+            "why": "الخطأ في «brot»! الصواب «Brot» — راجع القاعدة (الخبز)."
+          },
+          {
+            "q": "~~Kaffee mit milch, bitte.~~",
+            "a": "Kaffee mit Milch, bitte.",
+            "why": "الخطأ في «milch»! الصواب «Milch» — راجع القاعدة (الحليب)."
+          },
+          {
+            "q": "~~Ein wasser, bitte!~~",
+            "a": "Ein Wasser, bitte!",
+            "why": "الخطأ في «wasser»! الصواب «Wasser» — راجع القاعدة (الماء)."
           }
         ]
       },
@@ -278,6 +327,111 @@
             "q": "قل بالألمانية: «مع تحياتي المخلصة!»",
             "a": "Mit freundlichen Grüßen",
             "why": "«Mit freundlichen Grüßen» — التحية النهائية بالجمع! (بلا علامة بعد!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Frau» («المرأة / الزوجة (حسب السياق)») ثم تحدّث بها.",
+            "a": "Die Frau ist hier.",
+            "why": "استعمل «die Frau» («المرأة / الزوجة (حسب السياق)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Mann» («الرجل / الزوج (حسب السياق)») ثم تحدّث بها.",
+            "a": "Der Mann ist hier.",
+            "why": "استعمل «der Mann» («الرجل / الزوج (حسب السياق)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Kind» («الطفل») ثم تحدّث بها.",
+            "a": "Das ist das Kind.",
+            "why": "استعمل «das Kind» («الطفل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "lehrstelle"
+        ],
+        "items": [
+          {
+            "audioId": "word-nachfrage",
+            "speakText": "die Nachfrage.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الاستفسار",
+              "يستلم",
+              "يترقّب"
+            ],
+            "a": "الاستفسار",
+            "why": "الصوت يقول «die Nachfrage» — معناها «الاستفسار». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-erhalten",
+            "speakText": "erhalten.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "erhalten",
+              "die Nachfrage",
+              "erwarten"
+            ],
+            "a": "erhalten",
+            "why": "الكلمة المسموعة «erhalten» تعني «يستلم». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-erwarten",
+            "speakText": "erwarten.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يترقّب",
+              "الاستفسار",
+              "يستلم"
+            ],
+            "a": "يترقّب",
+            "why": "الصوت يقول «erwarten» — معناها «يترقّب». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-lehrstelle",
+            "speakText": "die Lehrstelle.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Lehrstelle",
+              "die Nachfrage",
+              "erhalten"
+            ],
+            "a": "die Lehrstelle",
+            "why": "الكلمة المسموعة «die Lehrstelle» تعني «مكان التلمذة». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "kopie"
+        ],
+        "items": [
+          {
+            "audioId": "word-erstellen",
+            "speakText": "erstellen.",
+            "a": "erstellen",
+            "why": "اكتب ما تسمعه حرفياً: «erstellen» تعني «ينشئ». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-erfuellen",
+            "speakText": "erfüllen.",
+            "a": "erfüllen",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «erfüllen» («يوفّي»)."
+          },
+          {
+            "audioId": "word-muendlich",
+            "speakText": "mündlich.",
+            "a": "mündlich",
+            "why": "اكتب المسموع بدقة: mündlich — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-kopie",
+            "speakText": "die Kopie.",
+            "a": "die Kopie",
+            "why": "اكتب ما تسمعه حرفياً: «die Kopie» تعني «النسخة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -308,6 +462,14 @@
           {
             "q": "«المتدرّب»؟",
             "a": "der Praktikant"
+          },
+          {
+            "q": "«يستلم»؟",
+            "a": "erhalten"
+          },
+          {
+            "q": "«يترقّب»؟",
+            "a": "erwarten"
           }
         ],
         "passingScore": 0.75
@@ -329,6 +491,14 @@
           {
             "q": "«الاختبار شفهي.»؟",
             "a": "Der Test ist mündlich."
+          },
+          {
+            "q": "«الاستفسار»؟",
+            "a": "die Nachfrage"
+          },
+          {
+            "q": "«يستلم»؟",
+            "a": "erhalten"
           }
         ],
         "passingScore": 0.75
@@ -350,6 +520,14 @@
           {
             "q": "«الرئيس يقبل المتقدّم.»؟",
             "a": "Der Chef nimmt den Bewerber an."
+          },
+          {
+            "q": "«الاستفسار»؟",
+            "a": "die Nachfrage"
+          },
+          {
+            "q": "«يستلم»؟",
+            "a": "erhalten"
           }
         ],
         "passingScore": 0.75

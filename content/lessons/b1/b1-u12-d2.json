@@ -59,7 +59,9 @@
       "ars-tekamolo-voll",
       "ars-obwohl"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u12-s2"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "trennbar",
@@ -168,6 +170,23 @@
               }
             ],
             "why": "مراجعة d1! die Konzentration التركيز · die Pause الاستراحة · die Ruhe الراحة (كلها مُدرَّسة!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المفردات",
+                "de": "der Wortschatz"
+              },
+              {
+                "ar": "الشهادة",
+                "de": "das Zertifikat"
+              },
+              {
+                "ar": "جدول الوقت",
+                "de": "der Zeitplan"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Wortschatz = «المفردات» · das Zertifikat = «الشهادة» · der Zeitplan = «جدول الوقت»"
           }
         ]
       },
@@ -179,9 +198,8 @@
           "إدارة الوقت!"
         ],
         "interleavedWith": [
-          "zeitplan",
-          "einteilen",
-          "disziplin"
+          "konzentration",
+          "zertifikat"
         ],
         "items": [
           {
@@ -208,6 +226,16 @@
             "q": "Er macht den Plan, ___ ist die Zeit kurz. (مع ذلك!)",
             "a": "trotzdem",
             "why": "trotzdem مع ذلك (المرتبة الثانية! مراجعة الوحدة الأولى!)"
+          },
+          {
+            "q": "Die ___ ist gut.",
+            "a": "Konzentration",
+            "why": "الكلمة الناقصة «Konzentration» تعني «التركيز» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist wichtig.",
+            "a": "Zertifikat",
+            "why": "الكلمة الناقصة «Zertifikat» تعني «الشهادة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -238,6 +266,21 @@
             "q": "~~Trotzdem er macht den Plan.~~",
             "a": "Trotzdem macht er den Plan.",
             "why": "trotzdem في الصدر ← الفعل ثانياً لا الضمير! (خريطة التداخل 10‑ي!)"
+          },
+          {
+            "q": "~~Der Bus kommt Pünktlich an.~~",
+            "a": "Der Bus kommt pünktlich an.",
+            "why": "الخطأ في «Pünktlich»! الصواب «pünktlich» — راجع القاعدة (بالموعد)."
+          },
+          {
+            "q": "~~Ich komme Rechtzeitig zur Arbeit.~~",
+            "a": "Ich komme rechtzeitig zur Arbeit.",
+            "why": "الخطأ في «Rechtzeitig»! الصواب «rechtzeitig» — راجع القاعدة (في الوقت المحدد)."
+          },
+          {
+            "q": "~~Die reihenfolge ist klar.~~",
+            "a": "Die Reihenfolge ist klar.",
+            "why": "الخطأ في «reihenfolge»! الصواب «Reihenfolge» — راجع القاعدة (الترتيب)."
           }
         ]
       },
@@ -268,6 +311,111 @@
             "q": "اختم بالرغم! (جملتان!)",
             "a": "Die Zeit ist kurz. Trotzdem macht er den Plan.",
             "why": "trotzdem في الصدر ← الفعل ثانياً! (المرتبة الثانية!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Uhr» («الساعة (آلة/توقيت)») ثم تحدّث بها.",
+            "a": "Wie viel Uhr ist es?",
+            "why": "استعمل «die Uhr» («الساعة (آلة/توقيت)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Minute» («الدقيقة») ثم تحدّث بها.",
+            "a": "Fünf Minuten, bitte!",
+            "why": "استعمل «die Minute» («الدقيقة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Pause» («استراحة») ثم تحدّث بها.",
+            "a": "Die Pause ist kurz: zehn Minuten.",
+            "why": "استعمل «die Pause» («استراحة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "konzentration"
+        ],
+        "items": [
+          {
+            "audioId": "word-zeitplan",
+            "speakText": "der Zeitplan.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "جدول الوقت",
+              "يقسّم",
+              "الانضباط"
+            ],
+            "a": "جدول الوقت",
+            "why": "الصوت يقول «der Zeitplan» — معناها «جدول الوقت». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-einteilen",
+            "speakText": "einteilen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "einteilen",
+              "der Zeitplan",
+              "die Disziplin"
+            ],
+            "a": "einteilen",
+            "why": "الكلمة المسموعة «einteilen» تعني «يقسّم». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-disziplin",
+            "speakText": "die Disziplin.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الانضباط",
+              "جدول الوقت",
+              "يقسّم"
+            ],
+            "a": "الانضباط",
+            "why": "الصوت يقول «die Disziplin» — معناها «الانضباط». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-konzentration",
+            "speakText": "die Konzentration.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Konzentration",
+              "der Zeitplan",
+              "einteilen"
+            ],
+            "a": "die Konzentration",
+            "why": "الكلمة المسموعة «die Konzentration» تعني «التركيز». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "zertifikat"
+        ],
+        "items": [
+          {
+            "audioId": "word-zeitplan",
+            "speakText": "der Zeitplan.",
+            "a": "der Zeitplan",
+            "why": "اكتب ما تسمعه حرفياً: «der Zeitplan» تعني «جدول الوقت». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-einteilen",
+            "speakText": "einteilen.",
+            "a": "einteilen",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «einteilen» («يقسّم»)."
+          },
+          {
+            "audioId": "word-disziplin",
+            "speakText": "die Disziplin.",
+            "a": "die Disziplin",
+            "why": "اكتب المسموع بدقة: die Disziplin — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-zertifikat",
+            "speakText": "das Zertifikat.",
+            "a": "das Zertifikat",
+            "why": "اكتب ما تسمعه حرفياً: «das Zertifikat» تعني «الشهادة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -298,6 +446,14 @@
           {
             "q": "«بالموعد»؟",
             "a": "pünktlich"
+          },
+          {
+            "q": "«يقسّم»؟",
+            "a": "einteilen"
+          },
+          {
+            "q": "«البرنامج الزمني»؟",
+            "a": "der Zeitplan"
           }
         ]
       },
@@ -318,6 +474,14 @@
           {
             "q": "«الساعة»؟ (مراجعة!)",
             "a": "die Uhr"
+          },
+          {
+            "q": "«جدول الوقت»؟",
+            "a": "der Zeitplan"
+          },
+          {
+            "q": "«يقسّم»؟",
+            "a": "einteilen"
           }
         ]
       },
@@ -338,6 +502,14 @@
           {
             "q": "«التركيز»؟ (مراجعة!)",
             "a": "die Konzentration"
+          },
+          {
+            "q": "«جدول الوقت»؟",
+            "a": "der Zeitplan"
+          },
+          {
+            "q": "«يقسّم»؟",
+            "a": "einteilen"
           }
         ]
       }

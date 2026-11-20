@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u1-d2-langsam-entlang-der-fahrbahn",
+  "kind": "dialogue",
+  "level": "B1",
+  "title": {
+    "de": "Langsam entlang der Fahrbahn",
+    "ar": "ببطء على جانب الطريق"
+  },
+  "usedIn": [
+    "b1-u1-d2"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b1u1d2-l1",
+      "speaker": "thomas",
+      "text": "Heute fahre ich wegen der Gefahr langsam entlang der Fahrbahn zurück.",
+      "direction": "حذر في القيادة"
+    },
+    {
+      "id": "b1u1d2-l2",
+      "speaker": "mueller",
+      "text": "Es regnet stark. Gibt es eine andere Straße?",
+      "direction": "قلق"
+    },
+    {
+      "id": "b1u1d2-l3",
+      "speaker": "thomas",
+      "text": "Ja, aber sie ist länger.",
+      "direction": "تفكير"
+    },
+    {
+      "id": "b1u1d2-l4",
+      "speaker": "mueller",
+      "text": "Fahr mit dem Rad langsam. Das ist sicher!",
+      "direction": "نصيحة"
+    },
+    {
+      "id": "b1u1d2-l5",
+      "speaker": "thomas",
+      "text": "Du hast recht. Der Radfahrer vor mir fährt auch langsam.",
+      "direction": "موافقة"
+    },
+    {
+      "id": "b1u1d2-l6",
+      "speaker": "mueller",
+      "text": "Die U-Bahn wäre sicherer.",
+      "direction": "اقتراح بديل"
+    },
+    {
+      "id": "b1u1d2-l7",
+      "speaker": "thomas",
+      "text": "Morgen nehme ich die U-Bahn.",
+      "direction": "قرار"
+    },
+    {
+      "id": "b1u1d2-l8",
+      "speaker": "mueller",
+      "text": "Gut so! Komm gesund an.",
+      "direction": "اطمئنان"
+    }
+  ]
+}

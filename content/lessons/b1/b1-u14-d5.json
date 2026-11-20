@@ -58,7 +58,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u14-s5"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "z",
@@ -141,9 +143,8 @@
           "الكلام في الامتحان!"
         ],
         "interleavedWith": [
-          "akzent",
-          "intonation",
-          "selbstvertrauen"
+          "satzzeichen",
+          "schreibweise"
         ],
         "items": [
           {
@@ -165,6 +166,16 @@
             "q": "Er hat einen ___. (اللكنة!)",
             "a": "Akzent",
             "why": "der Akzent اللكنة (der!) — Er hat einen Akzent."
+          },
+          {
+            "q": "Das ___ ist wichtig.",
+            "a": "Satzzeichen",
+            "why": "الكلمة الناقصة «Satzzeichen» تعني «علامة الترقيم» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Schreibweise",
+            "why": "الكلمة الناقصة «Schreibweise» تعني «طريقة الكتابة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -176,9 +187,8 @@
           "الأداة! الأداة! الجمع!"
         ],
         "interleavedWith": [
-          "akzent",
-          "intonation",
-          "selbstvertrauen"
+          "satzzeichen",
+          "schreibweise"
         ],
         "items": [
           {
@@ -200,6 +210,16 @@
             "q": "~~Das Intonation ist wichtig.~~",
             "a": "Die Intonation ist wichtig.",
             "why": "die Intonation النبرة (die! لا das!)"
+          },
+          {
+            "q": "~~Das satzzeichen ist wichtig.~~",
+            "a": "Das Satzzeichen ist wichtig.",
+            "why": "الخطأ في «satzzeichen»! الصواب «Satzzeichen» — راجع القاعدة (علامة الترقيم)."
+          },
+          {
+            "q": "~~Die schreibweise ist wichtig.~~",
+            "a": "Die Schreibweise ist wichtig.",
+            "why": "الخطأ في «schreibweise»! الصواب «Schreibweise» — راجع القاعدة (طريقة الكتابة)."
           }
         ]
       },
@@ -225,6 +245,111 @@
             "q": "تكلّم عن النبرة والثقة! (جملتان!)",
             "a": "Die Intonation ist wichtig. Er zeigt das Selbstvertrauen.",
             "why": "النبرة ثم الثقة! (die Intonation hören! das Selbstvertrauen zeigen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «sprechen» («يتحدّث») ثم تحدّث بها.",
+            "a": "Ich spreche Deutsch.",
+            "why": "استعمل «sprechen» («يتحدّث») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Prüfung» («الامتحان») ثم تحدّث بها.",
+            "a": "Die Prüfung ist bald.",
+            "why": "استعمل «die Prüfung» («الامتحان») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Ruhe» («الهدوء») ثم تحدّث بها.",
+            "a": "Ich brauche Ruhe.",
+            "why": "استعمل «die Ruhe» («الهدوء») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "satzzeichen"
+        ],
+        "items": [
+          {
+            "audioId": "word-akzent",
+            "speakText": "der Akzent.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "اللكنة",
+              "النبرة (التنغيم)",
+              "الثقة بالنفس"
+            ],
+            "a": "اللكنة",
+            "why": "الصوت يقول «der Akzent» — معناها «اللكنة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-intonation",
+            "speakText": "die Intonation.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Intonation",
+              "der Akzent",
+              "das Selbstvertrauen"
+            ],
+            "a": "die Intonation",
+            "why": "الكلمة المسموعة «die Intonation» تعني «النبرة (التنغيم)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-selbstvertrauen",
+            "speakText": "das Selbstvertrauen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الثقة بالنفس",
+              "اللكنة",
+              "النبرة (التنغيم)"
+            ],
+            "a": "الثقة بالنفس",
+            "why": "الصوت يقول «das Selbstvertrauen» — معناها «الثقة بالنفس». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-satzzeichen",
+            "speakText": "das Satzzeichen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "das Satzzeichen",
+              "der Akzent",
+              "die Intonation"
+            ],
+            "a": "das Satzzeichen",
+            "why": "الكلمة المسموعة «das Satzzeichen» تعني «علامة الترقيم». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "schreibweise"
+        ],
+        "items": [
+          {
+            "audioId": "word-akzent",
+            "speakText": "der Akzent.",
+            "a": "der Akzent",
+            "why": "اكتب ما تسمعه حرفياً: «der Akzent» تعني «اللكنة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-intonation",
+            "speakText": "die Intonation.",
+            "a": "die Intonation",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Intonation» («النبرة (التنغيم)»)."
+          },
+          {
+            "audioId": "word-selbstvertrauen",
+            "speakText": "das Selbstvertrauen.",
+            "a": "das Selbstvertrauen",
+            "why": "اكتب المسموع بدقة: das Selbstvertrauen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-schreibweise",
+            "speakText": "die Schreibweise.",
+            "a": "die Schreibweise",
+            "why": "اكتب ما تسمعه حرفياً: «die Schreibweise» تعني «طريقة الكتابة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -255,6 +380,14 @@
           {
             "q": "«يظهر الثقة بالنفس.»؟",
             "a": "Er zeigt das Selbstvertrauen."
+          },
+          {
+            "q": "«اللكنة»؟",
+            "a": "der Akzent"
+          },
+          {
+            "q": "«النبرة مهمة.»؟",
+            "a": "Die Intonation ist wichtig."
           }
         ]
       },
@@ -275,6 +408,14 @@
           {
             "q": "«يسمع النبرة.»؟",
             "a": "Er hört die Intonation."
+          },
+          {
+            "q": "«اللكنة»؟",
+            "a": "der Akzent"
+          },
+          {
+            "q": "«النبرة (التنغيم)»؟",
+            "a": "die Intonation"
           }
         ]
       },
@@ -295,6 +436,14 @@
           {
             "q": "«يملك لهجة.»؟",
             "a": "Er hat einen Akzent."
+          },
+          {
+            "q": "«اللكنة»؟",
+            "a": "der Akzent"
+          },
+          {
+            "q": "«النبرة (التنغيم)»؟",
+            "a": "die Intonation"
           }
         ]
       }

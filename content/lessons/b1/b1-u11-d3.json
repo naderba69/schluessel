@@ -70,7 +70,9 @@
     "grammarArsenalIds": [
       "ars-praesentation"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u11-s3"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "trennbar",
@@ -187,6 +189,23 @@
               }
             ],
             "why": "nebenbei بالإضافة (ظرف!) · bereits بالفعل (ظرف!) · häufig كثيراً (ظرف! ig-ending!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الاستراتيجية",
+                "de": "die Strategie"
+              },
+              {
+                "ar": "الرواية",
+                "de": "der Roman"
+              },
+              {
+                "ar": "الفصل (في الكتاب)",
+                "de": "das Kapitel"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Strategie = «الاستراتيجية» · der Roman = «الرواية» · das Kapitel = «الفصل (في الكتاب)»"
           }
         ]
       },
@@ -198,9 +217,8 @@
           "العرض التقديمي!"
         ],
         "interleavedWith": [
-          "hauptteil",
-          "karteikarte",
-          "aufmerksamkeit"
+          "beruehrend",
+          "unterhaltsam"
         ],
         "items": [
           {
@@ -227,6 +245,16 @@
             "q": "Das Kapitel ist ___ fertig. (بالفعل!)",
             "a": "bereits",
             "why": "bereits بالفعل (ظرف!) — das Kapitel ist bereits fertig."
+          },
+          {
+            "q": "Die Geschichte ist ___.",
+            "a": "berührend",
+            "why": "الكلمة الناقصة «berührend» تعني «مؤثّر» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das Buch ist ___.",
+            "a": "unterhaltsam",
+            "why": "الكلمة الناقصة «unterhaltsam» تعني «ممتع» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -238,9 +266,8 @@
           "الانفصال! الضعيف! المرتبة الثانية!"
         ],
         "interleavedWith": [
-          "vorfuehren",
-          "erwaehnen",
-          "sozial"
+          "beruehrend",
+          "unterhaltsam"
         ],
         "items": [
           {
@@ -257,6 +284,16 @@
             "q": "~~Hauptsächlich er liest Romane.~~",
             "a": "Hauptsächlich liest er Romane.",
             "why": "الظرف في الصدر ← الفعل ثانياً لا الضمير! Hauptsächlich LIEST er! (خريطة التداخل 10‑ي!)"
+          },
+          {
+            "q": "~~Die Geschichte ist Berührend.~~",
+            "a": "Die Geschichte ist berührend.",
+            "why": "الخطأ في «Berührend»! الصواب «berührend» — راجع القاعدة (مؤثّر)."
+          },
+          {
+            "q": "~~Das Buch ist Unterhaltsam.~~",
+            "a": "Das Buch ist unterhaltsam.",
+            "why": "الخطأ في «Unterhaltsam»! الصواب «unterhaltsam» — راجع القاعدة (ممتع)."
           }
         ]
       },
@@ -268,9 +305,8 @@
           "Einleitung! Hauptteil! Schluss!"
         ],
         "interleavedWith": [
-          "leidenschaft",
-          "motivation",
-          "gestalten"
+          "beruehrend",
+          "unterhaltsam"
         ],
         "items": [
           {
@@ -287,6 +323,106 @@
             "q": "اختم بالشكر! (جملتان!)",
             "a": "Zum Schluss danke ich Ihnen für die Aufmerksamkeit. Das war meine Präsentation.",
             "why": "الخاتمة والشكر! (Schluss! + Aufmerksamkeit!)"
+          },
+          {
+            "q": "كوّن جملة فيها «berührend» («مؤثّر») ثم تحدّث بها.",
+            "a": "Die Geschichte ist berührend.",
+            "why": "استعمل «berührend» («مؤثّر») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «unterhaltsam» («ممتع») ثم تحدّث بها.",
+            "a": "Das Buch ist unterhaltsam.",
+            "why": "استعمل «unterhaltsam» («ممتع») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "beruehrend"
+        ],
+        "items": [
+          {
+            "audioId": "word-hauptteil",
+            "speakText": "der Hauptteil.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الجزء الرئيسي",
+              "بطاقة الملاحظات",
+              "يُعرض"
+            ],
+            "a": "الجزء الرئيسي",
+            "why": "الصوت يقول «der Hauptteil» — معناها «الجزء الرئيسي». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-karteikarte",
+            "speakText": "die Karteikarte.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Karteikarte",
+              "der Hauptteil",
+              "vorführen"
+            ],
+            "a": "die Karteikarte",
+            "why": "الكلمة المسموعة «die Karteikarte» تعني «بطاقة الملاحظات». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-vorfuehren",
+            "speakText": "vorführen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يُعرض",
+              "الجزء الرئيسي",
+              "بطاقة الملاحظات"
+            ],
+            "a": "يُعرض",
+            "why": "الصوت يقول «vorführen» — معناها «يُعرض». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-beruehrend",
+            "speakText": "berührend.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "berührend",
+              "der Hauptteil",
+              "die Karteikarte"
+            ],
+            "a": "berührend",
+            "why": "الكلمة المسموعة «berührend» تعني «مؤثّر». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "unterhaltsam"
+        ],
+        "items": [
+          {
+            "audioId": "word-leidenschaft",
+            "speakText": "die Leidenschaft.",
+            "a": "die Leidenschaft",
+            "why": "اكتب ما تسمعه حرفياً: «die Leidenschaft» تعني «الشغف». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-motivation",
+            "speakText": "die Motivation.",
+            "a": "die Motivation",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Motivation» («الدافع»)."
+          },
+          {
+            "audioId": "word-sozial",
+            "speakText": "sozial.",
+            "a": "sozial",
+            "why": "اكتب المسموع بدقة: sozial — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-unterhaltsam",
+            "speakText": "unterhaltsam.",
+            "a": "unterhaltsam",
+            "why": "اكتب ما تسمعه حرفياً: «unterhaltsam» تعني «ممتع». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -317,6 +453,14 @@
           {
             "q": "«الدافع»؟",
             "a": "die Motivation"
+          },
+          {
+            "q": "«يُعرض»؟",
+            "a": "vorführen"
+          },
+          {
+            "q": "«اجتماعي»؟",
+            "a": "sozial"
           }
         ]
       },
@@ -337,6 +481,14 @@
           {
             "q": "«يُصمّم»؟",
             "a": "gestalten"
+          },
+          {
+            "q": "«الجزء الرئيسي»؟",
+            "a": "der Hauptteil"
+          },
+          {
+            "q": "«بطاقة الملاحظات»؟",
+            "a": "die Karteikarte"
           }
         ]
       },
@@ -357,6 +509,14 @@
           {
             "q": "«الإنسان المحيط بنا»؟",
             "a": "der Mitmensch"
+          },
+          {
+            "q": "«الجزء الرئيسي»؟",
+            "a": "der Hauptteil"
+          },
+          {
+            "q": "«بطاقة الملاحظات»؟",
+            "a": "die Karteikarte"
           }
         ]
       }

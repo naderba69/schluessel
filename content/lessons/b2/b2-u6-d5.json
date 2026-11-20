@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u6-s5"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ng-velar",
@@ -131,6 +133,23 @@
               }
             ],
             "why": "die Genesung brauchen (الحاجة!) · die Belastung ist schlimm! · das Nahrungsmittel ist wichtig!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "النظافة الصحية",
+                "de": "die Hygiene"
+              },
+              {
+                "ar": "العدوى",
+                "de": "die Ansteckung"
+              },
+              {
+                "ar": "الجهاز المناعي",
+                "de": "das Immunsystem"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Hygiene = «النظافة الصحية» · die Ansteckung = «العدوى» · das Immunsystem = «الجهاز المناعي»"
           }
         ]
       },
@@ -166,6 +185,21 @@
             "q": "Die Genesung ist ___. (جيّدة!)",
             "a": "gut",
             "why": "gut جيّد — Die Genesung ist gut."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Operation",
+            "why": "الكلمة الناقصة «Operation» تعني «العملية الجراحية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist gut.",
+            "a": "Heilung",
+            "why": "الكلمة الناقصة «Heilung» تعني «الشفاء» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist klar.",
+            "a": "Symptom",
+            "why": "الكلمة الناقصة «Symptom» تعني «العَرَض (المرض!)» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -201,6 +235,21 @@
             "q": "~~Die Belastungen ist schlimm.~~",
             "a": "Die Belastung ist schlimm.",
             "why": "المفرد die Belastung مع ist (الجمع die Belastungen مع sind!)!"
+          },
+          {
+            "q": "~~Die ernährung ist wichtig.~~",
+            "a": "Die Ernährung ist wichtig.",
+            "why": "الخطأ في «ernährung»! الصواب «Ernährung» — راجع القاعدة (التغذية)."
+          },
+          {
+            "q": "~~Die entspannung ist gut.~~",
+            "a": "Die Entspannung ist gut.",
+            "why": "الخطأ في «entspannung»! الصواب «Entspannung» — راجع القاعدة (الاسترخاء)."
+          },
+          {
+            "q": "~~Die pflege ist wichtig.~~",
+            "a": "Die Pflege ist wichtig.",
+            "why": "الخطأ في «pflege»! الصواب «Pflege» — راجع القاعدة (الرعاية)."
           }
         ]
       },
@@ -231,6 +280,111 @@
             "q": "تحدّث عن الغذاء! (جملتان!)",
             "a": "Das Nahrungsmittel ist wichtig. Wir essen gute Nahrungsmittel.",
             "why": "الغذاء! (das Nahrungsmittel ist wichtig!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Behandlung» («العلاج») ثم تحدّث بها.",
+            "a": "Die Behandlung ist wichtig.",
+            "why": "استعمل «die Behandlung» («العلاج») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Vorsorge» («الوقاية») ثم تحدّث بها.",
+            "a": "Die Vorsorge ist wichtig.",
+            "why": "استعمل «die Vorsorge» («الوقاية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Diagnose» («التشخيص») ثم تحدّث بها.",
+            "a": "Die Diagnose ist klar.",
+            "why": "استعمل «die Diagnose» («التشخيص») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "immunsystem"
+        ],
+        "items": [
+          {
+            "audioId": "word-belastung",
+            "speakText": "die Belastung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الإجهاد (العبء!)",
+              "التعافي",
+              "الغذاء (المادة الغذائية!)"
+            ],
+            "a": "الإجهاد (العبء!)",
+            "why": "الصوت يقول «die Belastung» — معناها «الإجهاد (العبء!)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-genesung",
+            "speakText": "die Genesung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Genesung",
+              "die Belastung",
+              "das Nahrungsmittel"
+            ],
+            "a": "die Genesung",
+            "why": "الكلمة المسموعة «die Genesung» تعني «التعافي». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-nahrungsmittel",
+            "speakText": "das Nahrungsmittel.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الغذاء (المادة الغذائية!)",
+              "الإجهاد (العبء!)",
+              "التعافي"
+            ],
+            "a": "الغذاء (المادة الغذائية!)",
+            "why": "الصوت يقول «das Nahrungsmittel» — معناها «الغذاء (المادة الغذائية!)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-immunsystem",
+            "speakText": "das Immunsystem.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "das Immunsystem",
+              "die Belastung",
+              "die Genesung"
+            ],
+            "a": "das Immunsystem",
+            "why": "الكلمة المسموعة «das Immunsystem» تعني «الجهاز المناعي». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "ansteckung"
+        ],
+        "items": [
+          {
+            "audioId": "word-belastung",
+            "speakText": "die Belastung.",
+            "a": "die Belastung",
+            "why": "اكتب ما تسمعه حرفياً: «die Belastung» تعني «الإجهاد (العبء!)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-genesung",
+            "speakText": "die Genesung.",
+            "a": "die Genesung",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Genesung» («التعافي»)."
+          },
+          {
+            "audioId": "word-nahrungsmittel",
+            "speakText": "das Nahrungsmittel.",
+            "a": "das Nahrungsmittel",
+            "why": "اكتب المسموع بدقة: das Nahrungsmittel — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-ansteckung",
+            "speakText": "die Ansteckung.",
+            "a": "die Ansteckung",
+            "why": "اكتب ما تسمعه حرفياً: «die Ansteckung» تعني «العدوى». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -261,6 +415,14 @@
           {
             "q": "«الإجهاد سيّئ.»؟",
             "a": "Die Belastung ist schlimm."
+          },
+          {
+            "q": "«الإجهاد (العبء!)»؟",
+            "a": "die Belastung"
+          },
+          {
+            "q": "«التعافي جيّد.»؟",
+            "a": "Die Genesung ist gut."
           }
         ]
       },
@@ -281,6 +443,14 @@
           {
             "q": "das Nahrungsmittel",
             "a": "الغذاء (المادة الغذائية!)"
+          },
+          {
+            "q": "«الإجهاد (العبء!)»؟",
+            "a": "die Belastung"
+          },
+          {
+            "q": "«التعافي»؟",
+            "a": "die Genesung"
           }
         ]
       },
@@ -301,6 +471,14 @@
           {
             "q": "«الإجهاد سيّئ.»؟",
             "a": "Die Belastung ist schlimm."
+          },
+          {
+            "q": "«الإجهاد (العبء!)»؟",
+            "a": "die Belastung"
+          },
+          {
+            "q": "«التعافي»؟",
+            "a": "die Genesung"
           }
         ]
       }

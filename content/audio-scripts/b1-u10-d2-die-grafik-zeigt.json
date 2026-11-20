@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u10-d2-die-grafik-zeigt",
+  "kind": "dialogue",
+  "level": "B1",
+  "title": {
+    "de": "Die Grafik zeigt",
+    "ar": "الرسم البياني يوضح"
+  },
+  "usedIn": [
+    "b1-u10-d2"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b1u10d2-l1",
+      "speaker": "mueller",
+      "text": "Die Grafik zeigt den Verlauf — mit Spitze und Tiefpunkt!",
+      "direction": "قراءة رسم"
+    },
+    {
+      "id": "b1u10d2-l2",
+      "speaker": "yusuf",
+      "text": "Wo ist die Spitze?",
+      "direction": "متابعة"
+    },
+    {
+      "id": "b1u10d2-l3",
+      "speaker": "mueller",
+      "text": "Im Juli. Der Tiefpunkt ist im Januar.",
+      "direction": "إجابة"
+    },
+    {
+      "id": "b1u10d2-l4",
+      "speaker": "yusuf",
+      "text": "Und die Tabelle daneben?",
+      "direction": "انتقال"
+    },
+    {
+      "id": "b1u10d2-l5",
+      "speaker": "mueller",
+      "text": "Sie zeigt die Zahlen genau. Das Diagramm ist nur kurz.",
+      "direction": "توضيح"
+    },
+    {
+      "id": "b1u10d2-l6",
+      "speaker": "yusuf",
+      "text": "Also: Grafik für den Anfang, Tabelle für die Zahlen?",
+      "direction": "تلخيص"
+    },
+    {
+      "id": "b1u10d2-l7",
+      "speaker": "mueller",
+      "text": "Genau! Sehr gut beobachtet.",
+      "direction": "تعزيز"
+    },
+    {
+      "id": "b1u10d2-l8",
+      "speaker": "yusuf",
+      "text": "Danke. Jetzt verstehe ich die Präsentation besser.",
+      "direction": "إغلاق"
+    }
+  ]
+}

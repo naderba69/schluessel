@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u4-s5"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "double-consonant",
@@ -134,6 +136,23 @@
               }
             ],
             "why": "die Meldung kommentieren! · die Menschen befragen (الناسَ مباشرة!) · der Datenschutz ist wichtig! · der Datenschutz (der!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يجادل",
+                "de": "argumentieren"
+              },
+              {
+                "ar": "يستنتج",
+                "de": "folgern"
+              },
+              {
+                "ar": "يثبت",
+                "de": "belegen"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: argumentieren = «يجادل» · folgern = «يستنتج» · belegen = «يثبت»"
           }
         ]
       },
@@ -169,6 +188,21 @@
             "q": "Wir kommentieren die ___. (الخبر!)",
             "a": "Meldung",
             "why": "die Meldung الخبر (die! مُدرَّسة!) — Wir kommentieren die Meldung."
+          },
+          {
+            "q": "Wir ___ die Meldung.",
+            "a": "hinterfragen",
+            "why": "الكلمة الناقصة «hinterfragen» تعني «يتشكّك في» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Ich bin ___.",
+            "a": "misstrauisch",
+            "why": "الكلمة الناقصة «misstrauisch» تعني «غير واثق» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist schlimm.",
+            "a": "Zensur",
+            "why": "الكلمة الناقصة «Zensur» تعني «الرقابة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +238,21 @@
             "q": "~~Wir befragen über die Menschen.~~",
             "a": "Wir befragen die Menschen.",
             "why": "befragen يستطلع مباشرة (بالنصب بلا حرف!)!"
+          },
+          {
+            "q": "~~Das ereignis ist wichtig.~~",
+            "a": "Das Ereignis ist wichtig.",
+            "why": "الخطأ في «ereignis»! الصواب «Ereignis» — راجع القاعدة (الحدث)."
+          },
+          {
+            "q": "~~Wir nutzen das medium.~~",
+            "a": "Wir nutzen das Medium.",
+            "why": "الخطأ في «medium»! الصواب «Medium» — راجع القاعدة (الوسيلة)."
+          },
+          {
+            "q": "~~Der Sender Überträgt das Ereignis.~~",
+            "a": "Der Sender überträgt das Ereignis.",
+            "why": "الخطأ في «Überträgt»! الصواب «überträgt» — راجع القاعدة (يبثّ)."
           }
         ]
       },
@@ -234,6 +283,111 @@
             "q": "تحدّث عن الخصوصية! (جملتان!)",
             "a": "Der Datenschutz ist wichtig. Wir schützen die Daten.",
             "why": "الخصوصية! (die Daten schützen!) — schützen من الوحدة 1!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Redaktion» («التحرير») ثم تحدّث بها.",
+            "a": "Die Redaktion arbeitet.",
+            "why": "استعمل «die Redaktion» («التحرير») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Sender» («القناة») ثم تحدّث بها.",
+            "a": "Der Sender berichtet.",
+            "why": "استعمل «der Sender» («القناة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Werbung» («الدعاية») ثم تحدّث بها.",
+            "a": "Die Werbung kommt.",
+            "why": "استعمل «die Werbung» («الدعاية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "belegen"
+        ],
+        "items": [
+          {
+            "audioId": "word-kommentieren",
+            "speakText": "kommentieren.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يعلّق على",
+              "يستطلع",
+              "حماية البيانات"
+            ],
+            "a": "يعلّق على",
+            "why": "الصوت يقول «kommentieren» — معناها «يعلّق على». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-befragen",
+            "speakText": "befragen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "befragen",
+              "kommentieren",
+              "der Datenschutz"
+            ],
+            "a": "befragen",
+            "why": "الكلمة المسموعة «befragen» تعني «يستطلع». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-datenschutz",
+            "speakText": "der Datenschutz.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "حماية البيانات",
+              "يعلّق على",
+              "يستطلع"
+            ],
+            "a": "حماية البيانات",
+            "why": "الصوت يقول «der Datenschutz» — معناها «حماية البيانات». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-belegen",
+            "speakText": "belegen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "belegen",
+              "kommentieren",
+              "befragen"
+            ],
+            "a": "belegen",
+            "why": "الكلمة المسموعة «belegen» تعني «يثبت». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "folgern"
+        ],
+        "items": [
+          {
+            "audioId": "word-kommentieren",
+            "speakText": "kommentieren.",
+            "a": "kommentieren",
+            "why": "اكتب ما تسمعه حرفياً: «kommentieren» تعني «يعلّق على». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-befragen",
+            "speakText": "befragen.",
+            "a": "befragen",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «befragen» («يستطلع»)."
+          },
+          {
+            "audioId": "word-datenschutz",
+            "speakText": "der Datenschutz.",
+            "a": "der Datenschutz",
+            "why": "اكتب المسموع بدقة: der Datenschutz — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-folgern",
+            "speakText": "folgern.",
+            "a": "folgern",
+            "why": "اكتب ما تسمعه حرفياً: «folgern» تعني «يستنتج». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +418,14 @@
           {
             "q": "«نعلّق على الخبر.»؟",
             "a": "Wir kommentieren die Meldung."
+          },
+          {
+            "q": "«يسأل الناس»؟",
+            "a": "befragen"
+          },
+          {
+            "q": "«حماية البيانات مهمّة.»؟",
+            "a": "Der Datenschutz ist wichtig."
           }
         ]
       },
@@ -284,6 +446,14 @@
           {
             "q": "kommentieren",
             "a": "يعلّق على"
+          },
+          {
+            "q": "«يعلّق على»؟",
+            "a": "kommentieren"
+          },
+          {
+            "q": "«يستطلع»؟",
+            "a": "befragen"
           }
         ]
       },
@@ -304,6 +474,14 @@
           {
             "q": "«نعلّق على الخبر.»؟",
             "a": "Wir kommentieren die Meldung."
+          },
+          {
+            "q": "«يعلّق على»؟",
+            "a": "kommentieren"
+          },
+          {
+            "q": "«يستطلع»؟",
+            "a": "befragen"
           }
         ]
       }

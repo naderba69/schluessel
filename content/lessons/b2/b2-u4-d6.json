@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u4-s6"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ng-velar",
@@ -134,6 +136,23 @@
               }
             ],
             "why": "die Aufklärung bringen! · sachlich schreiben! · gerecht bleiben (يبقى!) · die Aufklärung (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يعلّق على",
+                "de": "kommentieren"
+              },
+              {
+                "ar": "يستطلع",
+                "de": "befragen"
+              },
+              {
+                "ar": "حماية البيانات",
+                "de": "der Datenschutz"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: kommentieren = «يعلّق على» · befragen = «يستطلع» · der Datenschutz = «حماية البيانات»"
           }
         ]
       },
@@ -169,6 +188,21 @@
             "q": "Wir ___ sachlich. (نكتب!)",
             "a": "schreiben",
             "why": "schreiben يكتب (Präsens wir: schreiben!) — Wir schreiben sachlich."
+          },
+          {
+            "q": "Wir ___ für die Meinung.",
+            "a": "argumentieren",
+            "why": "الكلمة الناقصة «argumentieren» تعني «يجادل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir ___ die Antwort.",
+            "a": "folgern",
+            "why": "الكلمة الناقصة «folgern» تعني «يستنتج» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir ___ die Behauptung.",
+            "a": "belegen",
+            "why": "الكلمة الناقصة «belegen» تعني «يثبت» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +238,21 @@
             "q": "~~Die Aufklärung sind wichtig.~~",
             "a": "Die Aufklärung ist wichtig.",
             "why": "المفرد die Aufklärung مع ist (لا sind!)!"
+          },
+          {
+            "q": "~~Wir Hinterfragen die Meldung.~~",
+            "a": "Wir hinterfragen die Meldung.",
+            "why": "الخطأ في «Hinterfragen»! الصواب «hinterfragen» — راجع القاعدة (يتشكّك في)."
+          },
+          {
+            "q": "~~Ich bin Misstrauisch.~~",
+            "a": "Ich bin misstrauisch.",
+            "why": "الخطأ في «Misstrauisch»! الصواب «misstrauisch» — راجع القاعدة (غير واثق)."
+          },
+          {
+            "q": "~~Die zensur ist schlimm.~~",
+            "a": "Die Zensur ist schlimm.",
+            "why": "الخطأ في «zensur»! الصواب «Zensur» — راجع القاعدة (الرقابة)."
           }
         ]
       },
@@ -234,6 +283,111 @@
             "q": "تحدّث عن العدالة! (جملتان!)",
             "a": "Wir bleiben gerecht. Das ist gut.",
             "why": "العدالة! (gerecht bleiben!)"
+          },
+          {
+            "q": "كوّن جملة فيها «das Ereignis» («الحدث») ثم تحدّث بها.",
+            "a": "Das Ereignis ist wichtig.",
+            "why": "استعمل «das Ereignis» («الحدث») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Medium» («الوسيلة») ثم تحدّث بها.",
+            "a": "Wir nutzen das Medium.",
+            "why": "استعمل «das Medium» («الوسيلة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «übertragen» («يبثّ») ثم تحدّث بها.",
+            "a": "Der Sender überträgt das Ereignis.",
+            "why": "استعمل «übertragen» («يبثّ») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "datenschutz"
+        ],
+        "items": [
+          {
+            "audioId": "word-aufklaerung",
+            "speakText": "die Aufklärung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التوعية",
+              "موضوعي",
+              "عادل"
+            ],
+            "a": "التوعية",
+            "why": "الصوت يقول «die Aufklärung» — معناها «التوعية». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-sachlich",
+            "speakText": "sachlich.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "sachlich",
+              "die Aufklärung",
+              "gerecht"
+            ],
+            "a": "sachlich",
+            "why": "الكلمة المسموعة «sachlich» تعني «موضوعي». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-gerecht",
+            "speakText": "gerecht.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "عادل",
+              "التوعية",
+              "موضوعي"
+            ],
+            "a": "عادل",
+            "why": "الصوت يقول «gerecht» — معناها «عادل». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-datenschutz",
+            "speakText": "der Datenschutz.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "der Datenschutz",
+              "die Aufklärung",
+              "sachlich"
+            ],
+            "a": "der Datenschutz",
+            "why": "الكلمة المسموعة «der Datenschutz» تعني «حماية البيانات». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "befragen"
+        ],
+        "items": [
+          {
+            "audioId": "word-aufklaerung",
+            "speakText": "die Aufklärung.",
+            "a": "die Aufklärung",
+            "why": "اكتب ما تسمعه حرفياً: «die Aufklärung» تعني «التوعية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-sachlich",
+            "speakText": "sachlich.",
+            "a": "sachlich",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «sachlich» («موضوعي»)."
+          },
+          {
+            "audioId": "word-gerecht",
+            "speakText": "gerecht.",
+            "a": "gerecht",
+            "why": "اكتب المسموع بدقة: gerecht — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-befragen",
+            "speakText": "befragen.",
+            "a": "befragen",
+            "why": "اكتب ما تسمعه حرفياً: «befragen» تعني «يستطلع». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +418,14 @@
           {
             "q": "«نكتب بموضوعية.»؟",
             "a": "Wir schreiben sachlich."
+          },
+          {
+            "q": "«التنوير»؟",
+            "a": "die Aufklärung"
+          },
+          {
+            "q": "«بموضوعية»؟",
+            "a": "sachlich"
           }
         ]
       },
@@ -284,6 +446,14 @@
           {
             "q": "sachlich",
             "a": "موضوعي"
+          },
+          {
+            "q": "«التوعية»؟",
+            "a": "die Aufklärung"
+          },
+          {
+            "q": "«موضوعي»؟",
+            "a": "sachlich"
           }
         ]
       },
@@ -304,6 +474,14 @@
           {
             "q": "«نكتب بموضوعية.»؟",
             "a": "Wir schreiben sachlich."
+          },
+          {
+            "q": "«التوعية»؟",
+            "a": "die Aufklärung"
+          },
+          {
+            "q": "«موضوعي»؟",
+            "a": "sachlich"
           }
         ]
       }

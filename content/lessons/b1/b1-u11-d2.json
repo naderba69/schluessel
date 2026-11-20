@@ -70,7 +70,9 @@
     "grammarArsenalIds": [
       "ars-lektuere"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u11-s2"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "trennbar",
@@ -170,6 +172,23 @@
               }
             ],
             "why": "der Genuss المتعة (die Genüsse!) · neugierig فضولي (للأشخاص!) · begeistern يُلهِم (ihn!) · ausleihen يستعير (leiht … aus! منفصل وقويّ!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الاستراتيجية",
+                "de": "die Strategie"
+              },
+              {
+                "ar": "السياق",
+                "de": "der Kontext"
+              },
+              {
+                "ar": "الفقرة (في النص)",
+                "de": "der Absatz"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Strategie = «الاستراتيجية» · der Kontext = «السياق» · der Absatz = «الفقرة (في النص)»"
           }
         ]
       },
@@ -181,9 +200,8 @@
           "القراءة الممتدة!"
         ],
         "interleavedWith": [
-          "roman",
-          "kapitel",
-          "handlung"
+          "gemeinschaft",
+          "ehrenamtlich"
         ],
         "items": [
           {
@@ -215,6 +233,16 @@
             "q": "Die Geschichte ist ___. (مؤثّرة!)",
             "a": "berührend",
             "why": "berührend مؤثّرة — die Geschichte ist berührend. (الصفة!)"
+          },
+          {
+            "q": "Die ___ ist stark.",
+            "a": "Gemeinschaft",
+            "why": "الكلمة الناقصة «Gemeinschaft» تعني «المجتمع المحلي» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die Arbeit ist ___.",
+            "a": "ehrenamtlich",
+            "why": "الكلمة الناقصة «ehrenamtlich» تعني «تطوّعي (بلا أجر)» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -226,9 +254,8 @@
           "الانفصال! القوة! الأداة!"
         ],
         "interleavedWith": [
-          "spannung",
-          "atmosphaere",
-          "genuss"
+          "gemeinschaft",
+          "ehrenamtlich"
         ],
         "items": [
           {
@@ -245,6 +272,16 @@
             "q": "~~der Handlung ist klar~~",
             "a": "die Handlung ist klar",
             "why": "die Handlung الحبكة (die! مؤنث — لا der!)"
+          },
+          {
+            "q": "~~Die gemeinschaft ist stark.~~",
+            "a": "Die Gemeinschaft ist stark.",
+            "why": "الخطأ في «gemeinschaft»! الصواب «Gemeinschaft» — راجع القاعدة (المجتمع المحلي)."
+          },
+          {
+            "q": "~~Die Arbeit ist Ehrenamtlich.~~",
+            "a": "Die Arbeit ist ehrenamtlich.",
+            "why": "الخطأ في «Ehrenamtlich»! الصواب «ehrenamtlich» — راجع القاعدة (تطوّعي (بلا أجر))."
           }
         ]
       },
@@ -256,9 +293,8 @@
           "Roman! Handlung! Genuss!"
         ],
         "interleavedWith": [
-          "erfinden",
-          "neugierig",
-          "begeistern"
+          "gemeinschaft",
+          "ehrenamtlich"
         ],
         "items": [
           {
@@ -275,6 +311,106 @@
             "q": "اختم بالأثر والتوصية! (3 جمل!)",
             "a": "Das Buch begeistert ihn. Er leiht das Buch aus. Die Geschichte ist berührend!",
             "why": "begeistern! ausleihen! berührend! (الخاتمة!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Gemeinschaft» («المجتمع المحلي») ثم تحدّث بها.",
+            "a": "Die Gemeinschaft ist stark.",
+            "why": "استعمل «die Gemeinschaft» («المجتمع المحلي») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «ehrenamtlich» («تطوّعي (بلا أجر)») ثم تحدّث بها.",
+            "a": "Die Arbeit ist ehrenamtlich.",
+            "why": "استعمل «ehrenamtlich» («تطوّعي (بلا أجر)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "gemeinschaft"
+        ],
+        "items": [
+          {
+            "audioId": "word-begeisterung",
+            "speakText": "die Begeisterung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الحماس",
+              "الرواية",
+              "الحكاية (الشعبية)"
+            ],
+            "a": "الحماس",
+            "why": "الصوت يقول «die Begeisterung» — معناها «الحماس». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-roman",
+            "speakText": "der Roman.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Roman",
+              "die Begeisterung",
+              "das Märchen"
+            ],
+            "a": "der Roman",
+            "why": "الكلمة المسموعة «der Roman» تعني «الرواية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-maerchen",
+            "speakText": "das Märchen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الحكاية (الشعبية)",
+              "الحماس",
+              "الرواية"
+            ],
+            "a": "الحكاية (الشعبية)",
+            "why": "الصوت يقول «das Märchen» — معناها «الحكاية (الشعبية)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-gemeinschaft",
+            "speakText": "die Gemeinschaft.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Gemeinschaft",
+              "die Begeisterung",
+              "der Roman"
+            ],
+            "a": "die Gemeinschaft",
+            "why": "الكلمة المسموعة «die Gemeinschaft» تعني «المجتمع المحلي». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "ehrenamtlich"
+        ],
+        "items": [
+          {
+            "audioId": "word-kapitel",
+            "speakText": "das Kapitel.",
+            "a": "das Kapitel",
+            "why": "اكتب ما تسمعه حرفياً: «das Kapitel» تعني «الفصل (في الكتاب)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-handlung",
+            "speakText": "die Handlung.",
+            "a": "die Handlung",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Handlung» («الحبكة (القصصية)»)."
+          },
+          {
+            "audioId": "word-spannung",
+            "speakText": "die Spannung.",
+            "a": "die Spannung",
+            "why": "اكتب المسموع بدقة: die Spannung — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-ehrenamtlich",
+            "speakText": "ehrenamtlich.",
+            "a": "ehrenamtlich",
+            "why": "اكتب ما تسمعه حرفياً: «ehrenamtlich» تعني «تطوّعي (بلا أجر)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -305,6 +441,14 @@
           {
             "q": "«الحكاية (الشعبية)»؟",
             "a": "das Märchen"
+          },
+          {
+            "q": "«الحماس»؟",
+            "a": "die Begeisterung"
+          },
+          {
+            "q": "«الرواية»؟",
+            "a": "der Roman"
           }
         ]
       },
@@ -325,6 +469,14 @@
           {
             "q": "«الكتاب يُلهِمه.»؟",
             "a": "Das Buch begeistert ihn."
+          },
+          {
+            "q": "«الحماس»؟",
+            "a": "die Begeisterung"
+          },
+          {
+            "q": "«الرواية»؟",
+            "a": "der Roman"
           }
         ]
       },
@@ -345,6 +497,14 @@
           {
             "q": "«القصة مؤثّرة.»؟",
             "a": "Die Geschichte ist berührend."
+          },
+          {
+            "q": "«الحماس»؟",
+            "a": "die Begeisterung"
+          },
+          {
+            "q": "«الرواية»؟",
+            "a": "der Roman"
           }
         ]
       }

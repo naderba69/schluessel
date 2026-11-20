@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u3-d6-gesunde-woche",
+  "kind": "dialogue",
+  "level": "A2",
+  "title": {
+    "de": "Deine gesunde Woche",
+    "ar": "أسبوعك الصحي"
+  },
+  "usedIn": [
+    "a2-u3-d6"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a2u3d6-l1",
+      "speaker": "thomas",
+      "text": "Zeig mir deine gesunde Woche!",
+      "direction": "توماس يطلب الورقة"
+    },
+    {
+      "id": "a2u3d6-l2",
+      "speaker": "yusuf",
+      "text": "Hier: Montag Sport, Dienstag Gemüse, Mittwoch Ruhe.",
+      "direction": "يوسف يعرض الجدول"
+    },
+    {
+      "id": "a2u3d6-l3",
+      "speaker": "thomas",
+      "text": "Und Donnerstag?",
+      "direction": "توماس يسأل"
+    },
+    {
+      "id": "a2u3d6-l4",
+      "speaker": "yusuf",
+      "text": "Donnerstag jogge ich. Freitag koche ich zu Hause.",
+      "direction": "يوسف يستمر"
+    },
+    {
+      "id": "a2u3d6-l5",
+      "speaker": "thomas",
+      "text": "Und das Wochenende?",
+      "direction": "توماس يسأل عن الراحة"
+    },
+    {
+      "id": "a2u3d6-l6",
+      "speaker": "yusuf",
+      "text": "Samstag: Spazieren. Sonntag: Ausruhen!",
+      "direction": "يوسف يختم الجدول"
+    },
+    {
+      "id": "a2u3d6-l7",
+      "speaker": "thomas",
+      "text": "Einig? Dann machen wir es zusammen!",
+      "direction": "توماس يتحمس"
+    },
+    {
+      "id": "a2u3d6-l8",
+      "speaker": "yusuf",
+      "text": "Einverstanden! Aber ohne Süßigkeiten.",
+      "direction": "يوسف يضحك"
+    }
+  ]
+}

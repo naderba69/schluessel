@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b1-u2-d5-ich-ziehe-in-die-wohnung",
+  "kind": "dialogue",
+  "level": "B1",
+  "title": {
+    "de": "Ich ziehe in die Wohnung",
+    "ar": "أنتقل إلى الشقة"
+  },
+  "usedIn": [
+    "b1-u2-d5"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b1u2d5-l1",
+      "speaker": "yusuf",
+      "text": "Ich ziehe in die Wohnung: Das Angebot gilt!",
+      "direction": "أخبار الانتقال"
+    },
+    {
+      "id": "b1u2d5-l2",
+      "speaker": "lena",
+      "text": "Wann ist der Beginn?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b1u2d5-l3",
+      "speaker": "yusuf",
+      "text": "Am ersten Dezember. Ich muss den Vertrag lesen!",
+      "direction": "مزاح بالتلاعب بالكلمة"
+    },
+    {
+      "id": "b1u2d5-l4",
+      "speaker": "lena",
+      "text": "Lies genau! Und brich nichts beim Umzug.",
+      "direction": "نصيحة + مزاح"
+    },
+    {
+      "id": "b1u2d5-l5",
+      "speaker": "yusuf",
+      "text": "Natürlich. Ich ziehe mit zwei Freunden.",
+      "direction": "توضيح"
+    },
+    {
+      "id": "b1u2d5-l6",
+      "speaker": "lena",
+      "text": "Super! Die Wohnung ist groß genug.",
+      "direction": "تأكيد"
+    },
+    {
+      "id": "b1u2d5-l7",
+      "speaker": "yusuf",
+      "text": "Ja. Und die Lage ist gut.",
+      "direction": "رضا"
+    },
+    {
+      "id": "b1u2d5-l8",
+      "speaker": "lena",
+      "text": "Viel Glück in der neuen Wohnung!",
+      "direction": "تهنئة"
+    }
+  ]
+}

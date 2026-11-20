@@ -6,7 +6,7 @@
   "day": 2,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst deinen ganzen Tag erzählen — mit der haben/sein-Entscheidung: weggeworfen ↔ weggegangen.",
+    "de": "Du kannst deinen Tag erzählen — mit haben und sein: weggeworfen ↔ weggegangen.",
     "ar": "تروي يومك كاملاً بقرار haben/sein: الزوج المحوري weggeworfen (رميتُ شيئاً) ↔ weggegangen (غادرتُ)"
   },
   "canDoDaily": [
@@ -71,7 +71,9 @@
     "grammarArsenalIds": [
       "ars-perfekt"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a2-u1-s2"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "trennbar",
@@ -109,6 +111,16 @@
             "q": "verschieben → Ich ___ den Termin verschoben.",
             "a": "habe",
             "why": "أجّلتُ الموعد (مفعول) = haben — وver- بلا ge + تصريف قوي (ie←o)."
+          },
+          {
+            "q": "Wann ___ der Bus an?",
+            "a": "kommt",
+            "why": "الكلمة الناقصة «kommt» تعني «يصل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Ich habe den Zug ___.",
+            "a": "verpasst",
+            "why": "الكلمة الناقصة «verpasst» تعني «يفوّت» — تذكر صيغتها في السياق."
           }
         ],
         "interleavedWith": [
@@ -177,7 +189,7 @@
             "why": "الظرف في الصدارة يدفع الفعل للخانة الثانية (V2)"
           },
           {
-            "q": "Ich bin schon um acht gewegegangen.",
+            "q": "~~Ich bin schon um acht geweggegangen.~~",
             "a": "Ich bin schon um acht weggegangen.",
             "why": "المنفصل: weg-ge-gangen (ge في المنتصف)"
           },
@@ -185,6 +197,11 @@
             "q": "Es hat spät geworden.",
             "a": "Es ist spät geworden.",
             "why": "التحوّل تغيّر حال = sein (قارن: passiert)"
+          },
+          {
+            "q": "~~Ich bin heute zu Hause Geblieben.~~",
+            "a": "Ich bin heute zu Hause geblieben.",
+            "why": "الخطأ في «Geblieben»! الصواب «geblieben» — راجع القاعدة (يبقى)."
           }
         ],
         "interleavedWith": [
@@ -209,11 +226,101 @@
           "heute"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "beginnen"
+        ],
+        "items": [
+          {
+            "audioId": "word-liefern",
+            "speakText": "liefern.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يوصّل",
+              "يصبح",
+              "يغادر"
+            ],
+            "a": "يوصّل",
+            "why": "الصوت يقول «liefern» — معناها «يوصّل». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-werden",
+            "speakText": "werden.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "werden",
+              "liefern",
+              "weggehen"
+            ],
+            "a": "werden",
+            "why": "الكلمة المسموعة «werden» تعني «يصبح». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-weggehen",
+            "speakText": "weggehen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يغادر",
+              "يوصّل",
+              "يصبح"
+            ],
+            "a": "يغادر",
+            "why": "الصوت يقول «weggehen» — معناها «يغادر». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-beginnen",
+            "speakText": "beginnen.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "beginnen",
+              "liefern",
+              "werden"
+            ],
+            "a": "beginnen",
+            "why": "الكلمة المسموعة «beginnen» تعني «يبدأ». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "ausmachen"
+        ],
+        "items": [
+          {
+            "audioId": "word-erreichen",
+            "speakText": "erreichen.",
+            "a": "erreichen",
+            "why": "اكتب ما تسمعه حرفياً: «erreichen» تعني «يلحق بـ». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-vorbereiten",
+            "speakText": "vorbereiten.",
+            "a": "vorbereiten",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «vorbereiten» («يجهّز»)."
+          },
+          {
+            "audioId": "word-verschieben",
+            "speakText": "verschieben.",
+            "a": "verschieben",
+            "why": "اكتب المسموع بدقة: verschieben — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-ausmachen",
+            "speakText": "ausmachen.",
+            "a": "ausmachen",
+            "why": "اكتب ما تسمعه حرفياً: «ausmachen» تعني «يُطفئ (الضوء)». انتبه للحروف الكبيرة!"
+          }
+        ]
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Den ganzen Tag erzählen",
+        "de": "Den Tag erzählen",
         "ar": "سرد اليوم كاملاً"
       },
       "situation": {
@@ -252,6 +359,14 @@
           {
             "q": "«نهاية الدوام» — الأداة والجمع؟",
             "a": "der Feierabend → die Feierabende"
+          },
+          {
+            "q": "«يوصّل»؟",
+            "a": "liefern"
+          },
+          {
+            "q": "«يصبح»؟",
+            "a": "werden"
           }
         ],
         "passingScore": 0.75
@@ -273,6 +388,14 @@
           {
             "q": "«تجربة» — الأداة والجمع؟",
             "a": "die Erfahrung → die Erfahrungen"
+          },
+          {
+            "q": "«يوصّل»؟",
+            "a": "liefern"
+          },
+          {
+            "q": "«يصبح»؟",
+            "a": "werden"
           }
         ],
         "passingScore": 0.75
@@ -294,6 +417,14 @@
           {
             "q": "«كسول» — الصفة؟",
             "a": "faul"
+          },
+          {
+            "q": "«يوصّل»؟",
+            "a": "liefern"
+          },
+          {
+            "q": "«يصبح»؟",
+            "a": "werden"
           }
         ],
         "passingScore": 0.75
@@ -302,7 +433,7 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Mein Tag: Ich bin um acht weggegangen. Ich habe den Bus noch erreicht — sonst ist der Tag ruhig geblieben. Ich habe das Essen vorbereitet und das Paket geliefert. Es ist spät geworden. Um sechs habe ich Feierabend gemacht. Das System: weggeworfen (haben) ↔ weggegangen (sein).",
+      "de": "Mein Tag: Ich bin um acht weggegangen. Ich habe den Bus noch erreicht — sonst ist der Tag ruhig geblieben. Ich habe das Essen vorbereitet und das Paket geliefert. Es ist spät geworden. Um sechs habe ich Feierabend gemacht. So: weggeworfen (haben) ↔ weggegangen (sein).",
       "ar": "يومي: غادرتُ في الثامنة. لحقتُ بالحافلة — وبخلاف ذلك بقي اليوم هادئاً. جهّزتُ الطعام وأوصلتُ الطرد. تأخر الوقت. في السادسة أنهيتُ دوامي. النظام: weggeworfen (haben) ↔ weggegangen (sein)."
     },
     "warningCards": [
@@ -338,16 +469,16 @@
       },
       {
         "commonError": {
-          "de": "~~Ich bin gewegegangen.~~ · ~~Ich habe den Termin geverschoben.~~",
-          "ar": "المنفصل (weg/an/aus): ge في المنتصف (weg-ge-gangen) — والملتصق (ver-/be-): بلا ge أبداً (verschoben كـvergessen في d1)"
+          "de": "~~Ich bin geweggegangen.~~ · ~~Ich habe den Termin geverschoben.~~",
+          "ar": "المنفصل (weg/an/aus): البادئة في المنتصف (مثل angemacht) — والملتصق (البادئة الملتصقة-/البادئة الملتصقة-): بلا البادئة أبداً (verschoben كـvergessen في d1)"
         },
-        "whyArabicSpeakerFails": "قالب ge المحفوظ يُعمَّم في أول الكلمة دائماً (ge+فعل) كأنه سابقة ثابتة — بينما موضعها يحكمه نوع البادئة: منفصلة (وسط) أم ملتصقة (صفر) (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "قالب البادئة المحفوظ يُعمَّم في أول الكلمة دائماً (البادئة+فعل) كأنه سابقة ثابتة — بينما موضعها يحكمه نوع البادئة: منفصلة (وسط) أم ملتصقة (صفر) (خريطة التداخل 10‑ي)",
         "correct": {
           "de": "Ich bin weggegangen. · Ich habe den Termin verschoben.",
           "ar": "غادرتُ. · أجّلتُ الموعد."
         },
         "exercise": {
-          "q": "ضع ge في موضعها: weg___gegangen · ver___schoben",
+          "q": "ضع البادئة في موضعها: المنفصل في المنتصف · الملتصق في الأول",
           "a": "weggegangen (وسط) · verschoben (صفر)"
         }
       }

@@ -48,7 +48,7 @@
       }
     ],
     "guidedRetrieval": [
-      "من u9: المستقبل: werden مصرّفة ثانياً + المصدر آخر الجملة (Wir werden fahren! Er wird schnell sein!) + الرحلة والبلدان (der Europäer! europäisch! nach Luxemburg!) + kein/nicht + المواعيد (am Montag! Wie spät؟!).",
+      "من u9: المستقبل: werden مصرّفة ثانياً + المصدر آخر الجملة (Wir werden fahren! البادئة الملتصقة wird schnell sein!) + الرحلة والبلدان (der Europäer! europäisch! nach Luxemburg!) + kein/nicht + المواعيد (am Montag! Wie spät؟!).",
       "من u10: اسم-n يأخذ ‑(e)n مع den/dem/des (der Kunde → den Kunden!) + المضاف (wegen des Wetters! außerhalb der Stadt!) + الصفات (ledig/verheiratet!) + الاتصال (Rufen Sie an! Das WC!)."
     ]
   },
@@ -65,7 +65,9 @@
       "ars-genitiv-s",
       "ars-termin-datum"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a2-u14-s5"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "needs-ein",
@@ -122,6 +124,26 @@
             "q": "Heute ist der zweite ___. (الشهر!)",
             "a": "April",
             "why": "التاريخ: der zweite April (الترتيب + الشهر!)."
+          },
+          {
+            "q": "Meine ___ ist groß.",
+            "a": "Familie",
+            "why": "الكلمة الناقصة «Familie» تعني «العائلة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir wohnen in einem ___.",
+            "a": "Haus",
+            "why": "الكلمة الناقصة «Haus» تعني «البيت (المبنى المستقل)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist neu.",
+            "a": "Wohnung",
+            "why": "الكلمة الناقصة «Wohnung» تعني «شقة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Ich bin neu im ___.",
+            "a": "Kurs",
+            "why": "الكلمة الناقصة «Kurs» تعني «الدورة» — تذكر صيغتها في السياق."
           }
         ],
         "interleavedWith": [
@@ -164,6 +186,21 @@
             "q": "Ich ___ nicht kommen. (werden — نفي!)",
             "a": "werde",
             "why": "نفي المستقبل: werde … nicht kommen (nicht قبل المصدر!)."
+          },
+          {
+            "q": "Mein Vater ___ immer früh auf.",
+            "a": "steht",
+            "why": "الكلمة الناقصة «steht» تعني «ينهض من النوم» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir ___ am Sonntag zusammen.",
+            "a": "frühstücken",
+            "why": "الكلمة الناقصة «frühstücken» تعني «يتناول الفطور» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Ich bin heute zu Hause ___.",
+            "a": "geblieben",
+            "why": "الكلمة الناقصة «geblieben» تعني «يبقى» — تذكر صيغتها في السياق."
           }
         ],
         "interleavedWith": [
@@ -206,6 +243,26 @@
             "q": "~~Am Montag ich habe Zeit.~~",
             "a": "Am Montag habe ich Zeit.",
             "why": "V2: المصرَّف ثانياً حتى بعد الظرف (am Montag!)."
+          },
+          {
+            "q": "~~Mein Vater trägt eine brille.~~",
+            "a": "Mein Vater trägt eine Brille.",
+            "why": "الخطأ في «brille»! الصواب «Brille» — راجع القاعدة (النظارة)."
+          },
+          {
+            "q": "~~Das ist mein schlüssel.~~",
+            "a": "Das ist mein Schlüssel.",
+            "why": "الخطأ في «schlüssel»! الصواب «Schlüssel» — راجع القاعدة (المفتاح)."
+          },
+          {
+            "q": "~~Das ist eine frage.~~",
+            "a": "Das ist eine Frage.",
+            "why": "الخطأ في «frage»! الصواب «Frage» — راجع القاعدة (السؤال)."
+          },
+          {
+            "q": "~~danke! — Bitte!~~",
+            "a": "Danke! — Bitte!",
+            "why": "الخطأ في «danke»! الصواب «Danke» — راجع القاعدة (شكراً)."
           }
         ],
         "interleavedWith": [
@@ -228,6 +285,26 @@
             "q": "احجز موعدك واسأل عن المكان (جملتان: am + اسم-n!)",
             "a": "Am Dienstag habe ich Zeit. Der Kunde fragt den Polizisten: Wo ist das WC?",
             "why": "am + اليوم! · den Polizisten (‑n!) · das WC!"
+          },
+          {
+            "q": "كوّن جملة فيها «der Montag» («الاثنين») ثم تحدّث بها.",
+            "a": "Am Montag habe ich Kurs.",
+            "why": "استعمل «der Montag» («الاثنين») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Kurs» («الدورة») ثم تحدّث بها.",
+            "a": "Ich bin neu im Kurs.",
+            "why": "استعمل «der Kurs» («الدورة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Schwester» («الأخت») ثم تحدّث بها.",
+            "a": "Das ist die Schwester.",
+            "why": "استعمل «die Schwester» («الأخت») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Bruder» («الأخ») ثم تحدّث بها.",
+            "a": "Das ist der Bruder.",
+            "why": "استعمل «der Bruder» («الأخ») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
           }
         ],
         "interleavedWith": [
@@ -237,6 +314,76 @@
           "bruder"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "blog"
+        ],
+        "items": [
+          {
+            "audioId": "word-europaeer",
+            "speakText": "der Europäer.",
+            "q": "استمع: أي كلمة سمعت؟",
+            "choices": [
+              "der Europäer",
+              "das WC"
+            ],
+            "a": "der Europäer",
+            "why": "الكلمة المسموعة «der Europäer» تعني «أوروبي». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-wc",
+            "speakText": "das WC.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "das WC",
+              "der Europäer"
+            ],
+            "a": "das WC",
+            "why": "الكلمة المسموعة «das WC» تعني «دورة المياه». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-blog",
+            "speakText": "der Blog.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "مدونة",
+              "أوروبي",
+              "دورة المياه"
+            ],
+            "a": "مدونة",
+            "why": "الصوت يقول «der Blog» — معناها «مدونة». ركّز على الصوت لا على الشكل!"
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "eigen"
+        ],
+        "items": [
+          {
+            "audioId": "word-europaeer",
+            "speakText": "der Europäer.",
+            "a": "der Europäer",
+            "why": "اكتب ما تسمعه حرفياً: «der Europäer» تعني «أوروبي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-wc",
+            "speakText": "das WC.",
+            "a": "das WC",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «das WC» («دورة المياه»)."
+          },
+          {
+            "audioId": "word-eigen",
+            "speakText": "eigen.",
+            "a": "eigen",
+            "why": "اكتب المسموع بدقة: eigen — ركّز على نهاية الكلمة!"
+          }
+        ]
       }
     ],
     "communicativeTask": {
@@ -305,6 +452,14 @@
               "keines Fleisch"
             ],
             "why": "نفي الاسم: kein!"
+          },
+          {
+            "q": "«أوروبي»؟",
+            "a": "der Europäer"
+          },
+          {
+            "q": "«دورة المياه»؟",
+            "a": "das WC"
           }
         ],
         "passingScore": 0.75
@@ -350,6 +505,14 @@
               "Ich werde kaufen das Brot."
             ],
             "why": "werde + المفعول + المصدر آخر!"
+          },
+          {
+            "q": "«أوروبي»؟",
+            "a": "der Europäer"
+          },
+          {
+            "q": "«دورة المياه»؟",
+            "a": "das WC"
           }
         ],
         "passingScore": 0.75
@@ -395,6 +558,14 @@
               "Wo das ist WC?"
             ],
             "why": "das WC (محايد!) + V2!"
+          },
+          {
+            "q": "«أوروبي»؟",
+            "a": "der Europäer"
+          },
+          {
+            "q": "«دورة المياه»؟",
+            "a": "das WC"
           }
         ],
         "passingScore": 0.75
@@ -459,10 +630,10 @@
         },
         "exercise": {
           "q": "أكمل: Der Kunde fragt den Polizist___, und wegen des Wetter___.",
-          "a": "en / s",
+          "a": "‑en / s",
           "choices": [
-            "en / s",
-            "s / en",
+            "‑en / s",
+            "s / ‑en",
             "n / n"
           ]
         }

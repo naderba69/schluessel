@@ -140,7 +140,8 @@ export const Lesson = SchemaVersioned.extend({
   }),
   /** 5. Übung — محطات + خلط + مهمة تواصلية ختامية */
   uebung: z.object({
-    stations: z.array(UebungStation).min(3).max(4),
+    // D564: السقف 4→6 — D114 يفرض استماعاً وإملاء في كل درس، ودروس B1–A2 فيها أربعة أنواع نصية أصلاً
+    stations: z.array(UebungStation).min(3).max(6),
     communicativeTask: CommunicativeTask,
   }),
   /** 6. Slider — توقّع الدرجة + معايرة فورية (§14) */

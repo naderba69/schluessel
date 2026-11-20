@@ -58,7 +58,9 @@
       "ars-adjektiv-gemischt",
       "ars-tekamolo-voll"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u13-s1"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "untrennbar",
@@ -171,6 +173,23 @@
               }
             ],
             "why": "مراجعة أدوات التكثيف! verstehen يفهم · wiederholen يكرر · merken يلاحظ · vermeiden يتجنّب"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الاسترجاع",
+                "de": "der Rückblick"
+              },
+              {
+                "ar": "النظرة المستقبلية",
+                "de": "der Ausblick"
+              },
+              {
+                "ar": "مهم",
+                "de": "wichtig"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: der Rückblick = «الاسترجاع» · der Ausblick = «النظرة المستقبلية» · wichtig = «مهم»"
           }
         ]
       },
@@ -182,9 +201,8 @@
           "ميزان الأدوات والتصريف!"
         ],
         "interleavedWith": [
-          "merkmal",
-          "erkennen",
-          "auswendig"
+          "ausblick",
+          "rueckblick"
         ],
         "items": [
           {
@@ -211,6 +229,16 @@
             "q": "Er ___ die Regel. (يكرر! مراجعة!)",
             "a": "wiederholt",
             "why": "wiederholen يكرر (hat wiederholt!) — er wiederholt die Regel. (التكثيف!)"
+          },
+          {
+            "q": "Der ___ ist klar.",
+            "a": "Ausblick",
+            "why": "الكلمة الناقصة «Ausblick» تعني «النظرة المستقبلية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist gut.",
+            "a": "Rückblick",
+            "why": "الكلمة الناقصة «Rückblick» تعني «الاسترجاع» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -241,6 +269,21 @@
             "q": "~~Er kennt den Fehler er.~~",
             "a": "Er erkennt den Fehler.",
             "why": "er- بادئة غير منفصلة! erkennen يبقى متصلاً: erkennt (لا kennt … er!)"
+          },
+          {
+            "q": "~~Das ist die regel.~~",
+            "a": "Das ist die Regel.",
+            "why": "الخطأ في «regel»! الصواب «Regel» — راجع القاعدة (قاعدة)."
+          },
+          {
+            "q": "~~Das ist nur ein beispiel.~~",
+            "a": "Das ist nur ein Beispiel.",
+            "why": "الخطأ في «beispiel»! الصواب «Beispiel» — راجع القاعدة (مثال)."
+          },
+          {
+            "q": "~~Deine Antwort ist Richtig.~~",
+            "a": "Deine Antwort ist richtig.",
+            "why": "الخطأ في «Richtig»! الصواب «richtig» — راجع القاعدة (صحيح)."
           }
         ]
       },
@@ -276,6 +319,106 @@
             "q": "اختم بالتكثيف! (جملتان!)",
             "a": "Er wiederholt die Regel. Er vermeidet den Fehler.",
             "why": "التكرار ثم التجنّب! (التكثيف!)"
+          },
+          {
+            "q": "كوّن جملة فيها «trennen» («يفصل») ثم تحدّث بها.",
+            "a": "Wir trennen den Abfall.",
+            "why": "استعمل «trennen» («يفصل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «sich merken» («يحفظ في ذهنه») ثم تحدّث بها.",
+            "a": "Ich habe es mir gemerkt.",
+            "why": "استعمل «sich merken» («يحفظ في ذهنه») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "ausblick"
+        ],
+        "items": [
+          {
+            "audioId": "word-merkmal",
+            "speakText": "das Merkmal.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "السمة المميزة",
+              "يتعرّف على",
+              "عن ظهر قلب"
+            ],
+            "a": "السمة المميزة",
+            "why": "الصوت يقول «das Merkmal» — معناها «السمة المميزة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-erkennen",
+            "speakText": "erkennen.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "erkennen",
+              "das Merkmal",
+              "auswendig"
+            ],
+            "a": "erkennen",
+            "why": "الكلمة المسموعة «erkennen» تعني «يتعرّف على». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-auswendig",
+            "speakText": "auswendig.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "عن ظهر قلب",
+              "السمة المميزة",
+              "يتعرّف على"
+            ],
+            "a": "عن ظهر قلب",
+            "why": "الصوت يقول «auswendig» — معناها «عن ظهر قلب». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ausblick",
+            "speakText": "der Ausblick.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "der Ausblick",
+              "das Merkmal",
+              "erkennen"
+            ],
+            "a": "der Ausblick",
+            "why": "الكلمة المسموعة «der Ausblick» تعني «النظرة المستقبلية». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "rueckblick"
+        ],
+        "items": [
+          {
+            "audioId": "word-merkmal",
+            "speakText": "das Merkmal.",
+            "a": "das Merkmal",
+            "why": "اكتب ما تسمعه حرفياً: «das Merkmal» تعني «السمة المميزة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-erkennen",
+            "speakText": "erkennen.",
+            "a": "erkennen",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «erkennen» («يتعرّف على»)."
+          },
+          {
+            "audioId": "word-auswendig",
+            "speakText": "auswendig.",
+            "a": "auswendig",
+            "why": "اكتب المسموع بدقة: auswendig — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-rueckblick",
+            "speakText": "der Rückblick.",
+            "a": "der Rückblick",
+            "why": "اكتب ما تسمعه حرفياً: «der Rückblick» تعني «الاسترجاع». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -306,6 +449,14 @@
           {
             "q": "«السمات»؟ (الجمع!)",
             "a": "die Merkmale"
+          },
+          {
+            "q": "«يتعرّف على»؟",
+            "a": "erkennen"
+          },
+          {
+            "q": "«العلامة المميزة»؟",
+            "a": "das Merkmal"
           }
         ]
       },
@@ -326,6 +477,14 @@
           {
             "q": "«يكرر القاعدة.»؟",
             "a": "Er wiederholt die Regel."
+          },
+          {
+            "q": "«السمة المميزة»؟",
+            "a": "das Merkmal"
+          },
+          {
+            "q": "«يتعرّف على»؟",
+            "a": "erkennen"
           }
         ]
       },
@@ -346,6 +505,14 @@
           {
             "q": "«يتعلّم عن ظهر قلب.»؟ (المفردة الثابتة!)",
             "a": "Er lernt auswendig."
+          },
+          {
+            "q": "«السمة المميزة»؟",
+            "a": "das Merkmal"
+          },
+          {
+            "q": "«يتعرّف على»؟",
+            "a": "erkennen"
           }
         ]
       }

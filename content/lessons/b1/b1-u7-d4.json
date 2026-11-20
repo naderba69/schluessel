@@ -70,7 +70,9 @@
     "grammarArsenalIds": [
       "ars-verb-zu"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u7-s4"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "v2-order"
@@ -165,6 +167,23 @@
               }
             ],
             "why": "verwenden يستخدم (hat verwendet!) · ordentlich مرتّب (مثل fertig!) · fördern يشجّع (hat gefördert!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "البيئة",
+                "de": "die Umwelt"
+              },
+              {
+                "ar": "المناخ",
+                "de": "das Klima"
+              },
+              {
+                "ar": "المرج",
+                "de": "die Wiese"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Umwelt = «البيئة» · das Klima = «المناخ» · die Wiese = «المرج»"
           }
         ]
       },
@@ -200,6 +219,21 @@
             "q": "Ich versuche, Plastik ___ verwenden. (zu! versuchen + zu + مصدر!)",
             "a": "zu",
             "why": "versuchen + zu + المصدر (Plastik zu verwenden!) — الفعل الثاني بعد zu!"
+          },
+          {
+            "q": "Wir gehen in den ___.",
+            "a": "Wald",
+            "why": "الكلمة الناقصة «Wald» تعني «غابة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Dort sind ___.",
+            "a": "Wolken",
+            "why": "الكلمة الناقصة «Wolken» تعني «سحابة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ sind für meine Mutter.",
+            "a": "Blumen",
+            "why": "الكلمة الناقصة «Blumen» تعني «زهرة» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -230,6 +264,21 @@
             "q": "~~Ich versuche zu die Umwelt schützen.~~",
             "a": "Ich versuche, die Umwelt zu schützen.",
             "why": "zu قبل المصدر مباشرة (zu schützen!) لا قبل الاسم!"
+          },
+          {
+            "q": "~~Die natur ist ruhig.~~",
+            "a": "Die Natur ist ruhig.",
+            "why": "الخطأ في «natur»! الصواب «Natur» — راجع القاعدة (طبيعة)."
+          },
+          {
+            "q": "~~Es regnet heute.~~ (ناقصة: der Regen)",
+            "a": "Es regnet heute. der Regen.",
+            "why": "الجملة تفتقد «der Regen» (المطر) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~Wie ist das wetter heute?~~",
+            "a": "Wie ist das Wetter heute?",
+            "why": "الخطأ في «wetter»! الصواب «Wetter» — راجع القاعدة (الطقس)."
           }
         ]
       },
@@ -255,6 +304,111 @@
             "q": "قل بالألمانية: «نتوقّف عن استخدام البلاستيك.» (aufhören + zu + مصدر!)",
             "a": "Wir hören auf, Plastik zu verwenden.",
             "why": "aufhören منفصل: hören … auf + zu verwenden! (zu مع المصدر!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Katze» («القطة») ثم تحدّث بها.",
+            "a": "Das ist meine Katze.",
+            "why": "استعمل «die Katze» («القطة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Arbeit» («العمل») ثم تحدّث بها.",
+            "a": "Sie liebt ihre Arbeit.",
+            "why": "استعمل «die Arbeit» («العمل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Sommer» («الصيف») ثم تحدّث بها.",
+            "a": "Im Sommer ist es heiß.",
+            "why": "استعمل «der Sommer» («الصيف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "bevor"
+        ],
+        "items": [
+          {
+            "audioId": "word-verwenden",
+            "speakText": "verwenden.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يستخدم",
+              "المعدن",
+              "ثمين"
+            ],
+            "a": "يستخدم",
+            "why": "الصوت يقول «verwenden» — معناها «يستخدم». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-metall",
+            "speakText": "das Metall.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "das Metall",
+              "verwenden",
+              "wertvoll"
+            ],
+            "a": "das Metall",
+            "why": "الكلمة المسموعة «das Metall» تعني «المعدن». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-wertvoll",
+            "speakText": "wertvoll.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "ثمين",
+              "يستخدم",
+              "المعدن"
+            ],
+            "a": "ثمين",
+            "why": "الصوت يقول «wertvoll» — معناها «ثمين». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-bevor",
+            "speakText": "bevor.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "bevor",
+              "verwenden",
+              "das Metall"
+            ],
+            "a": "bevor",
+            "why": "الكلمة المسموعة «bevor» تعني «قبل أن». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "ozon"
+        ],
+        "items": [
+          {
+            "audioId": "word-wertlos",
+            "speakText": "wertlos.",
+            "a": "wertlos",
+            "why": "اكتب ما تسمعه حرفياً: «wertlos» تعني «بلا قيمة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ordentlich",
+            "speakText": "ordentlich.",
+            "a": "ordentlich",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «ordentlich» («مرتّب»)."
+          },
+          {
+            "audioId": "word-foerdern",
+            "speakText": "fördern.",
+            "a": "fördern",
+            "why": "اكتب المسموع بدقة: fördern — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-ozon",
+            "speakText": "das Ozon.",
+            "a": "das Ozon",
+            "why": "اكتب ما تسمعه حرفياً: «das Ozon» تعني «الأوزون». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -285,6 +439,14 @@
           {
             "q": "«مرتّب»؟",
             "a": "ordentlich"
+          },
+          {
+            "q": "«يستخدم»؟",
+            "a": "verwenden"
+          },
+          {
+            "q": "«ثمين»؟",
+            "a": "wertvoll"
           }
         ],
         "passingScore": 0.75
@@ -306,6 +468,14 @@
           {
             "q": "«يشجّع»؟",
             "a": "fördern"
+          },
+          {
+            "q": "«يستخدم»؟",
+            "a": "verwenden"
+          },
+          {
+            "q": "«المعدن»؟",
+            "a": "das Metall"
           }
         ],
         "passingScore": 0.75
@@ -327,6 +497,14 @@
           {
             "q": "«التأثير»؟",
             "a": "der Einfluss"
+          },
+          {
+            "q": "«يستخدم»؟",
+            "a": "verwenden"
+          },
+          {
+            "q": "«المعدن»؟",
+            "a": "das Metall"
           }
         ],
         "passingScore": 0.75

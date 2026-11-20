@@ -80,10 +80,13 @@ describe("D310 — شاشة اليوم: جلسة واحدة بارزة والث�
     expect(inside("more-today", "shadow-banner")).toBe(true);
   });
 
-  it("يوم نظيف بلا ثانوي: لا «المزيد» أصلاً (لا ضجيج فارغ)", async () => {
+  it("يوم نظيف: ثانوي واحد حقيقي فقط (ظل حوار اليوم) — لا ضجيج فارغ (D566: لكل درس حوار)", async () => {
     await renderSeeded(WED, { completed: ["a1-u1-d1"], dues: 0 });
     expect(q("start-session")).not.toBeNull();
-    expect(q("more-today")).toBeNull();
+    // D566: لكل درس حوار — فالظل عرضٌ حقيقي لا ضجيج فارغ؛ والمزيد يظهر به وحده
+    expect(q("more-today")).not.toBeNull();
+    expect(inside("more-today", "start-shadow")).toBe(true);
+    expect(inside("more-today", "shadow-banner")).toBe(true);
   });
 
   it("الخميس: القراءة الحرة داخل «المزيد»", async () => {

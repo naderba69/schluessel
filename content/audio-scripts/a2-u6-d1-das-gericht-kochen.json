@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u6-d1-das-gericht-kochen",
+  "kind": "dialogue",
+  "level": "A2",
+  "title": {
+    "de": "Das Gericht kochen",
+    "ar": "طبخ الطبق"
+  },
+  "usedIn": [
+    "a2-u6-d1"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a2u6d1-l1",
+      "speaker": "yusuf",
+      "text": "Heute koche ich das Gericht!",
+      "direction": "يوسف يعلن عن الطبخ"
+    },
+    {
+      "id": "a2u6d1-l2",
+      "speaker": "lena",
+      "text": "Mit Rind oder Schwein?",
+      "direction": "لينا تسأل عن اللحم"
+    },
+    {
+      "id": "a2u6d1-l3",
+      "speaker": "yusuf",
+      "text": "Mit Bohnen! Iss die Bohnen, sie sind gut.",
+      "direction": "يوسف يمدح الطبق"
+    },
+    {
+      "id": "a2u6d1-l4",
+      "speaker": "lena",
+      "text": "Und ein Hamburger auch?",
+      "direction": "لينا تقترح إضافة"
+    },
+    {
+      "id": "a2u6d1-l5",
+      "speaker": "yusuf",
+      "text": "Nein! Nur das Gericht und Mineralwasser.",
+      "direction": "يوسف يرفض بلطف"
+    },
+    {
+      "id": "a2u6d1-l6",
+      "speaker": "lena",
+      "text": "Gut. Ich decke den Tisch.",
+      "direction": "لينا تساعد"
+    },
+    {
+      "id": "a2u6d1-l7",
+      "speaker": "yusuf",
+      "text": "Danke! Der Tisch ist schon voll.",
+      "direction": "يوسف يشكرها"
+    },
+    {
+      "id": "a2u6d1-l8",
+      "speaker": "lena",
+      "text": "Das Essen wird gut!",
+      "direction": "لينا تتوقع بنجاح"
+    }
+  ]
+}

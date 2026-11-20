@@ -6,12 +6,12 @@
   "day": 1,
   "kind": "content",
   "ziel": {
-    "de": "Du kannst deinen gestrigen Morgen erzählen — mit dem Perfekt-System: gelacht · gefallen · angemacht · vergessen · passiert.",
-    "ar": "تروي صباح أمس بنظام الماضي (Perfekt) كاملاً: خمسة قوالب لاسم المفعول + اختيار haben أو sein"
+    "de": "Du kannst deinen Morgen von gestern erzählen — mit haben und sein: gelacht · gefallen · angemacht · vergessen · passiert.",
+    "ar": "تروي صباح أمس بنظام الماضي (الماضي التام) كاملاً: خمسة قوالب لاسم المفعول + اختيار haben أو sein"
   },
   "canDoDaily": [
-    "يروي صباح أمس في 6 جمل بالماضي (Perfekt) مرتبة زمنياً ويختار haben/sein صحيحاً",
-    "يميّز التصريف بلا ge (vergessen · beeilt · passiert) من التصريف بـge (gelacht · gefallen · angemacht)"
+    "يروي صباح أمس في 6 جمل بالماضي (الماضي التام) مرتبة زمنياً ويختار haben/sein صحيحاً",
+    "يميّز التصريف بلا البادئة (vergessen · beeilt · passiert) من التصريف البادئة (gelacht · gefallen · angemacht)"
   ],
   "warmup": {
     "cardIds": [
@@ -28,7 +28,7 @@
         },
         "choices": [
           "Ich habe meinen Schlüssel vergessen.",
-          "Ich habe meinen Schlüssel gevergessen.",
+          "Ich habe vergessen meinen Schlüssel.",
           "Ich bin meinen Schlüssel vergessen."
         ],
         "answer": "Ich habe meinen Schlüssel vergessen.",
@@ -48,7 +48,7 @@
     ],
     "guidedRetrieval": [
       "من A1: aufstehen → ich bin aufgestanden (sein: انتقال من النوم إلى الوقوف)",
-      "من A1: frühstücken → ich habe gefrühstückt (ge-…-t) · fotografieren → ich habe fotografiert (لا ge)"
+      "من A1: frühstücken → ich habe gefrühstückt (البادئة-…-t) · fotografieren → ich habe fotografiert (لا البادئة)"
     ]
   },
   "praesentation": {
@@ -70,7 +70,9 @@
     "grammarArsenalIds": [
       "ars-perfekt"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-a2-u1-s1"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "trennbar",
@@ -108,6 +110,21 @@
             "q": "passieren → Was ist ___? (القالب 5)",
             "a": "passiert",
             "why": "القالب 5: -ieren بلا ge — وpassieren دائماً مع sein!"
+          },
+          {
+            "q": "Wir ___ am Sonntag zusammen.",
+            "a": "frühstücken",
+            "why": "الكلمة الناقصة «frühstücken» تعني «يتناول الفطور» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Mein Vater ___ immer früh auf.",
+            "a": "steht",
+            "why": "الكلمة الناقصة «steht» تعني «ينهض من النوم» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Ich habe viele Fotos ___.",
+            "a": "fotografiert",
+            "why": "الكلمة الناقصة «fotografiert» تعني «يُصوّر (بالكاميرا)» — تذكر صيغتها في السياق."
           }
         ],
         "interleavedWith": [
@@ -116,8 +133,8 @@
           "fotografieren"
         ],
         "hints": [
-          "بادئة منفصلة (an/aus/auf)؟ ge في المنتصف: angemacht",
-          "بادئة ملتصقة (be-/ver-/er-) أو -ieren؟ لا ge أبداً"
+          "بادئة منفصلة (an/aus/auf)؟ البادئة في المنتصف: angemacht",
+          "بادئة ملتصقة (بادئات ملتصقة) أو -ieren؟ لا البادئة أبداً"
         ],
         "explanationRequired": true
       },
@@ -148,6 +165,21 @@
             "q": "Ich ___ mich sehr beeilt.",
             "a": "habe",
             "why": "الانعكاسي (sich) دائماً مع haben."
+          },
+          {
+            "q": "«Mein Vater steht immer früh auf.» — اكتب الكلمة التي تعني «ينهض من النوم»: ___",
+            "a": "aufstehen",
+            "why": "الكلمة «aufstehen» تعني «ينهض من النوم» — اكتبها كما تُقال في الجملة."
+          },
+          {
+            "q": "Ich bin heute zu Hause ___.",
+            "a": "geblieben",
+            "why": "الكلمة الناقصة «geblieben» تعني «يبقى» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "«Fährst du heute Auto?» — اكتب الكلمة التي تعني «يذهب بمركبة · يركب»: ___",
+            "a": "fahren",
+            "why": "الكلمة «fahren» تعني «يذهب بمركبة · يركب» — اكتبها كما تُقال في الجملة."
           }
         ],
         "interleavedWith": [
@@ -165,12 +197,12 @@
         "type": "error-hunt",
         "items": [
           {
-            "q": "Ich habe meine Brille geverloren.",
+            "q": "~~Ich habe meine Brille geverloren.~~",
             "a": "Ich habe meine Brille verloren.",
             "why": "ver- ملتصقة: بلا ge — verloren لا geverloren!"
           },
           {
-            "q": "Das Spiel hat schon gebeginnt.",
+            "q": "~~Das Spiel hat schon gebegonnen.~~",
             "a": "Das Spiel hat schon begonnen.",
             "why": "be- بلا ge + تصريف قوي"
           },
@@ -183,6 +215,11 @@
             "q": "Gestern ich bin spät ausgegangen.",
             "a": "Gestern bin ich spät ausgegangen.",
             "why": "الفعل المساعد في الخانة الثانية (V2)"
+          },
+          {
+            "q": "~~Der Zug hat Verspätung, Deswegen bin ich spät.~~",
+            "a": "Der Zug hat Verspätung, deswegen bin ich spät.",
+            "why": "الخطأ في «Deswegen»! الصواب «deswegen» — راجع القاعدة (لذلك)."
           }
         ],
         "interleavedWith": [
@@ -199,6 +236,11 @@
             "q": "احكِ صباح أمس في 3 جمل (سجّل صوتك): الاستيقاظ ← الضوء ← مشكلة صغيرة",
             "a": "Gestern bin ich um sieben aufgestanden. Ich habe das Licht angemacht und mich beeilt. Dann habe ich meinen Schlüssel vergessen!",
             "why": "قارن تسجيلك بالنموذج: aufgestanden (منفصل!) + angemacht + beeilt (انعكاسي!) — والمساعد الصحيح لكل فعل."
+          },
+          {
+            "q": "كوّن جملة فيها «zuerst» («أولاً») ثم تحدّث بها.",
+            "a": "Zuerst geradeaus, danach links.",
+            "why": "استعمل «zuerst» («أولاً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
           }
         ],
         "interleavedWith": [
@@ -207,11 +249,101 @@
           "zuerst"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "verspaetung"
+        ],
+        "items": [
+          {
+            "audioId": "word-ausgehen",
+            "speakText": "ausgehen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يخرج (للسهر أو النزهة)",
+              "يُضيّع",
+              "يُطفئ (الضوء)"
+            ],
+            "a": "يخرج (للسهر أو النزهة)",
+            "why": "الصوت يقول «ausgehen» — معناها «يخرج (للسهر أو النزهة)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-verlieren",
+            "speakText": "verlieren.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "verlieren",
+              "ausgehen",
+              "ausmachen"
+            ],
+            "a": "verlieren",
+            "why": "الكلمة المسموعة «verlieren» تعني «يُضيّع». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-ausmachen",
+            "speakText": "ausmachen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "يُطفئ (الضوء)",
+              "يخرج (للسهر أو النزهة)",
+              "يُضيّع"
+            ],
+            "a": "يُطفئ (الضوء)",
+            "why": "الصوت يقول «ausmachen» — معناها «يُطفئ (الضوء)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-verspaetung",
+            "speakText": "die Verspätung.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Verspätung",
+              "ausgehen",
+              "verlieren"
+            ],
+            "a": "die Verspätung",
+            "why": "الكلمة المسموعة «die Verspätung» تعني «تأخير». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "kopfschmerz"
+        ],
+        "items": [
+          {
+            "audioId": "word-beginnen",
+            "speakText": "beginnen.",
+            "a": "beginnen",
+            "why": "اكتب ما تسمعه حرفياً: «beginnen» تعني «يبدأ». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-licht",
+            "speakText": "das Licht.",
+            "a": "das Licht",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «das Licht» («ضوء»)."
+          },
+          {
+            "audioId": "word-vergessen",
+            "speakText": "vergessen.",
+            "a": "vergessen",
+            "why": "اكتب المسموع بدقة: vergessen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-kopfschmerz",
+            "speakText": "der Kopfschmerz.",
+            "a": "der Kopfschmerz",
+            "why": "اكتب ما تسمعه حرفياً: «der Kopfschmerz» تعني «صداع». انتبه للحروف الكبيرة!"
+          }
+        ]
       }
     ],
     "communicativeTask": {
       "goal": {
-        "de": "Den gestrigen Morgen erzählen",
+        "de": "Den Morgen von gestern erzählen",
         "ar": "سرد صباح الأمس"
       },
       "situation": {
@@ -220,7 +352,7 @@
       },
       "successCriteria": [
         "6 جمل بالماضي على الأقل بترتيب زمني (zuerst · dann · danach · zuletzt)",
-        "3 قوالب مختلفة على الأقل: بـge (gelacht/gefallen) + بادئة منفصلة (angemacht) + بلا ge (vergessen/passiert)",
+        "3 قوالب مختلفة على الأقل: البادئة (gelacht/gefallen) + بادئة منفصلة (angemacht) + بلا البادئة (vergessen/passiert)",
         "haben/sein صحيح في كل جملة — خصوصاً ist passiert · ist gefallen · ist ausgegangen"
       ]
     }
@@ -250,6 +382,14 @@
           {
             "q": "«ضوء» — الأداة والجمع؟",
             "a": "das Licht → die Lichter"
+          },
+          {
+            "q": "«يخرج (للسهر أو النزهة)»؟",
+            "a": "ausgehen"
+          },
+          {
+            "q": "«يُضيّع»؟",
+            "a": "verlieren"
           }
         ],
         "passingScore": 0.75
@@ -271,6 +411,14 @@
           {
             "q": "«وصلتُ للتوّ»؟",
             "a": "Ich bin gerade angekommen."
+          },
+          {
+            "q": "«يخرج (للسهر أو النزهة)»؟",
+            "a": "ausgehen"
+          },
+          {
+            "q": "«يُضيّع»؟",
+            "a": "verlieren"
           }
         ],
         "passingScore": 0.75
@@ -292,6 +440,14 @@
           {
             "q": "«خرجنا للسهر يوم السبت»؟",
             "a": "Am Samstag sind wir ausgegangen."
+          },
+          {
+            "q": "«يخرج (للسهر أو النزهة)»؟",
+            "a": "ausgehen"
+          },
+          {
+            "q": "«يُضيّع»؟",
+            "a": "verlieren"
           }
         ],
         "passingScore": 0.75
@@ -300,22 +456,22 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Gestern Morgen bin ich um sieben aufgestanden und habe das Licht angemacht. Dann ist etwas passiert: Mein Handy ist auf den Boden gefallen! Ich habe gelacht und mich beeilt. Ich habe das Licht ausgemacht — und meinen Schlüssel vergessen. Das System: gelacht · gefallen · angemacht · vergessen · passiert.",
+      "de": "Gestern Morgen bin ich um sieben aufgestanden und habe das Licht angemacht. Dann ist es passiert: Mein Handy ist auf den Boden gefallen! Ich habe gelacht und mich beeilt. Ich habe das Licht ausgemacht — und meinen Schlüssel vergessen. So war es: gelacht · gefallen · angemacht · vergessen · passiert.",
       "ar": "صباح أمس نهضتُ في السابعة وأشعلتُ الضوء. ثم حدث شيء: سقط هاتفي على الأرض! ضحكتُ واستعجلتُ. أطفأتُ الضوء — ونسيتُ مفتاحي. النظام خمسة قوالب: gelacht · gefallen · angemacht · vergessen · passiert."
     },
     "warningCards": [
       {
         "commonError": {
-          "de": "~~Ich habe gevergessen~~ · ~~Ich habe geverloren~~ · ~~Es hat gebeginnt~~ · ~~Was ist gepassiert?~~",
-          "ar": "لا **ge** مع البادئات الملتصقة (be- · ver- · er-) ولا مع **-ieren**: vergessen · verloren · begonnen · beeilt · passiert"
+          "de": "~~Ich habe gevergessen~~ · ~~Ich habe geverloren~~ · ~~Es hat gebegonnen~~ · ~~Was ist gepassiert?~~",
+          "ar": "لا **البادئة** مع البادئات الملتصقة (البادئة الملتصقة- · البادئة الملتصقة- · البادئة الملتصقة-) ولا مع **-ieren**: vergessen · verloren · begonnen · beeilt · passiert"
         },
-        "whyArabicSpeakerFails": "تعميم قاعدة ge المحفوظة من A1 على كل فعل: الماضي العربي وزن واحد ثابت (فَعَلَ) لكل الأفعال، فيتوقع المتعلم قالباً واحداً — بينما الألمانية تُسقط ge حين يبدأ الفعل ببادئة ملتصقة غير منبورة أو ينتهي بـ-ieren (خريطة التداخل 10‑ي)",
+        "whyArabicSpeakerFails": "تعميم قاعدة البادئة المحفوظة من A1 على كل فعل: الماضي العربي وزن واحد ثابت (فَعَلَ) لكل الأفعال، فيتوقع المتعلم قالباً واحداً — بينما الألمانية تُسقط البادئة حين يبدأ الفعل ببادئة ملتصقة غير منبورة أو ينتهي بـ-ieren (خريطة التداخل 10‑ي)",
         "correct": {
           "de": "Ich habe vergessen. · Ich habe verloren. · Es hat begonnen. · Was ist passiert?",
           "ar": "نسيتُ. · أضعتُ. · بدأ. · ماذا حدث؟"
         },
         "exercise": {
-          "q": "بـge أم بلا ge؟ verstehen → hat ___ · bezahlen → hat ___ · lachen → hat ___",
+          "q": "البادئة أم بلا البادئة؟ verstehen → hat ___ · bezahlen → hat ___ · lachen → hat ___",
           "a": "verstanden · bezahlt · gelacht"
         }
       },

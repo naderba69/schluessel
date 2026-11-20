@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u6-s4"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ie-short",
@@ -131,6 +133,23 @@
               }
             ],
             "why": "das Immunsystem haben (الملكية!) · die Hygiene ist wichtig! · die Ansteckung ist schlimm!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "العملية الجراحية",
+                "de": "die Operation"
+              },
+              {
+                "ar": "الشفاء",
+                "de": "die Heilung"
+              },
+              {
+                "ar": "العَرَض (المرض!)",
+                "de": "das Symptom"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Operation = «العملية الجراحية» · die Heilung = «الشفاء» · das Symptom = «العَرَض (المرض!)»"
           }
         ]
       },
@@ -166,6 +185,21 @@
             "q": "Das Immunsystem ist ___. (قويّ!)",
             "a": "stark",
             "why": "stark قويّ — Das Immunsystem ist stark."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Ernährung",
+            "why": "الكلمة الناقصة «Ernährung» تعني «التغذية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist gut.",
+            "a": "Entspannung",
+            "why": "الكلمة الناقصة «Entspannung» تعني «الاسترخاء» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Pflege",
+            "why": "الكلمة الناقصة «Pflege» تعني «الرعاية» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -201,6 +235,21 @@
             "q": "~~Die Hygiene sind wichtig.~~",
             "a": "Die Hygiene ist wichtig.",
             "why": "المفرد die Hygiene مع ist (لا sind!)!"
+          },
+          {
+            "q": "~~Die behandlung ist wichtig.~~",
+            "a": "Die Behandlung ist wichtig.",
+            "why": "الخطأ في «behandlung»! الصواب «Behandlung» — راجع القاعدة (العلاج)."
+          },
+          {
+            "q": "~~Die vorsorge ist wichtig.~~",
+            "a": "Die Vorsorge ist wichtig.",
+            "why": "الخطأ في «vorsorge»! الصواب «Vorsorge» — راجع القاعدة (الوقاية)."
+          },
+          {
+            "q": "~~Die diagnose ist klar.~~",
+            "a": "Die Diagnose ist klar.",
+            "why": "الخطأ في «diagnose»! الصواب «Diagnose» — راجع القاعدة (التشخيص)."
           }
         ]
       },
@@ -231,6 +280,111 @@
             "q": "تحدّث عن المناعة! (جملتان!)",
             "a": "Das Immunsystem ist stark. Wir haben ein gutes Immunsystem.",
             "why": "المناعة! (das Immunsystem haben!)"
+          },
+          {
+            "q": "كوّن جملة فيها «die Armut» («الفقر») ثم تحدّث بها.",
+            "a": "Die Armut ist schlimm.",
+            "why": "استعمل «die Armut» («الفقر») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Reichtum» («الغنى») ثم تحدّث بها.",
+            "a": "Der Reichtum ist groß.",
+            "why": "استعمل «der Reichtum» («الغنى») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Spende» («التبرّع») ثم تحدّث بها.",
+            "a": "Wir geben die Spende.",
+            "why": "استعمل «die Spende» («التبرّع») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "symptom"
+        ],
+        "items": [
+          {
+            "audioId": "word-hygiene",
+            "speakText": "die Hygiene.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "النظافة الصحية",
+              "العدوى",
+              "الجهاز المناعي"
+            ],
+            "a": "النظافة الصحية",
+            "why": "الصوت يقول «die Hygiene» — معناها «النظافة الصحية». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ansteckung",
+            "speakText": "die Ansteckung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Ansteckung",
+              "die Hygiene",
+              "das Immunsystem"
+            ],
+            "a": "die Ansteckung",
+            "why": "الكلمة المسموعة «die Ansteckung» تعني «العدوى». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-immunsystem",
+            "speakText": "das Immunsystem.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الجهاز المناعي",
+              "النظافة الصحية",
+              "العدوى"
+            ],
+            "a": "الجهاز المناعي",
+            "why": "الصوت يقول «das Immunsystem» — معناها «الجهاز المناعي». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-symptom",
+            "speakText": "das Symptom.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "das Symptom",
+              "die Hygiene",
+              "die Ansteckung"
+            ],
+            "a": "das Symptom",
+            "why": "الكلمة المسموعة «das Symptom» تعني «العَرَض (المرض!)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "heilung"
+        ],
+        "items": [
+          {
+            "audioId": "word-hygiene",
+            "speakText": "die Hygiene.",
+            "a": "die Hygiene",
+            "why": "اكتب ما تسمعه حرفياً: «die Hygiene» تعني «النظافة الصحية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ansteckung",
+            "speakText": "die Ansteckung.",
+            "a": "die Ansteckung",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Ansteckung» («العدوى»)."
+          },
+          {
+            "audioId": "word-immunsystem",
+            "speakText": "das Immunsystem.",
+            "a": "das Immunsystem",
+            "why": "اكتب المسموع بدقة: das Immunsystem — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-heilung",
+            "speakText": "die Heilung.",
+            "a": "die Heilung",
+            "why": "اكتب ما تسمعه حرفياً: «die Heilung» تعني «الشفاء». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -261,6 +415,14 @@
           {
             "q": "«النظافة الصحية مهمة.»؟",
             "a": "Die Hygiene ist wichtig."
+          },
+          {
+            "q": "«العدوى سيّئة.»؟",
+            "a": "Die Ansteckung ist schlimm."
+          },
+          {
+            "q": "«الجهاز المناعي قويّ.»؟",
+            "a": "Das Immunsystem ist stark."
           }
         ]
       },
@@ -281,6 +443,14 @@
           {
             "q": "die Hygiene",
             "a": "النظافة الصحية"
+          },
+          {
+            "q": "«النظافة الصحية»؟",
+            "a": "die Hygiene"
+          },
+          {
+            "q": "«العدوى»؟",
+            "a": "die Ansteckung"
           }
         ]
       },
@@ -301,6 +471,14 @@
           {
             "q": "«العدوى سيّئة.»؟",
             "a": "Die Ansteckung ist schlimm."
+          },
+          {
+            "q": "«النظافة الصحية»؟",
+            "a": "die Hygiene"
+          },
+          {
+            "q": "«العدوى»؟",
+            "a": "die Ansteckung"
           }
         ]
       }

@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u6-s2"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "ng-velar",
@@ -131,6 +133,23 @@
               }
             ],
             "why": "die Entspannung brauchen (الحاجة!) · die Pflege bekommen (الحصول!) · die Ernährung ist wichtig!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "العلاج",
+                "de": "die Behandlung"
+              },
+              {
+                "ar": "الوقاية",
+                "de": "die Vorsorge"
+              },
+              {
+                "ar": "التشخيص",
+                "de": "die Diagnose"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Behandlung = «العلاج» · die Vorsorge = «الوقاية» · die Diagnose = «التشخيص»"
           }
         ]
       },
@@ -166,6 +185,21 @@
             "q": "Die Entspannung ist ___. (جيّدة!)",
             "a": "gut",
             "why": "gut جيّد — Die Entspannung ist gut."
+          },
+          {
+            "q": "Die ___ ist schlimm.",
+            "a": "Armut",
+            "why": "الكلمة الناقصة «Armut» تعني «الفقر» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist groß.",
+            "a": "Reichtum",
+            "why": "الكلمة الناقصة «Reichtum» تعني «الغنى» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir geben die ___.",
+            "a": "Spende",
+            "why": "الكلمة الناقصة «Spende» تعني «التبرّع» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -201,6 +235,21 @@
             "q": "~~Die Entspannung sind gut.~~",
             "a": "Die Entspannung ist gut.",
             "why": "المفرد die Entspannung مع ist (لا sind!)!"
+          },
+          {
+            "q": "~~Der hersteller produziert.~~",
+            "a": "Der Hersteller produziert.",
+            "why": "الخطأ في «hersteller»! الصواب «Hersteller» — راجع القاعدة (المصنّع)."
+          },
+          {
+            "q": "~~Wir kaufen Gebraucht.~~",
+            "a": "Wir kaufen gebraucht.",
+            "why": "الخطأ في «Gebraucht»! الصواب «gebraucht» — راجع القاعدة (مستعمل)."
+          },
+          {
+            "q": "~~Die rückgabe ist möglich.~~",
+            "a": "Die Rückgabe ist möglich.",
+            "why": "الخطأ في «rückgabe»! الصواب «Rückgabe» — راجع القاعدة (الإرجاع)."
           }
         ]
       },
@@ -231,6 +280,111 @@
             "q": "تحدّث عن الرعاية! (جملتان!)",
             "a": "Die Pflege ist wichtig. Wir bekommen die Pflege.",
             "why": "الرعاية! (die Pflege bekommen!)"
+          },
+          {
+            "q": "كوّن جملة فيها «der Arbeitgeber» («صاحب العمل») ثم تحدّث بها.",
+            "a": "Der Arbeitgeber bezahlt.",
+            "why": "استعمل «der Arbeitgeber» («صاحب العمل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Anstellung» («التوظيف») ثم تحدّث بها.",
+            "a": "Wir finden die Anstellung.",
+            "why": "استعمل «die Anstellung» («التوظيف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Ruhestand» («التقاعد») ثم تحدّث بها.",
+            "a": "Er geht in den Ruhestand.",
+            "why": "استعمل «der Ruhestand» («التقاعد») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "diagnose"
+        ],
+        "items": [
+          {
+            "audioId": "word-ernaehrung",
+            "speakText": "die Ernährung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التغذية",
+              "الاسترخاء",
+              "الرعاية"
+            ],
+            "a": "التغذية",
+            "why": "الصوت يقول «die Ernährung» — معناها «التغذية». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-entspannung",
+            "speakText": "die Entspannung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "die Entspannung",
+              "die Ernährung",
+              "die Pflege"
+            ],
+            "a": "die Entspannung",
+            "why": "الكلمة المسموعة «die Entspannung» تعني «الاسترخاء». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-pflege",
+            "speakText": "die Pflege.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الرعاية",
+              "التغذية",
+              "الاسترخاء"
+            ],
+            "a": "الرعاية",
+            "why": "الصوت يقول «die Pflege» — معناها «الرعاية». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-diagnose",
+            "speakText": "die Diagnose.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "die Diagnose",
+              "die Ernährung",
+              "die Entspannung"
+            ],
+            "a": "die Diagnose",
+            "why": "الكلمة المسموعة «die Diagnose» تعني «التشخيص». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "vorsorge"
+        ],
+        "items": [
+          {
+            "audioId": "word-ernaehrung",
+            "speakText": "die Ernährung.",
+            "a": "die Ernährung",
+            "why": "اكتب ما تسمعه حرفياً: «die Ernährung» تعني «التغذية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-entspannung",
+            "speakText": "die Entspannung.",
+            "a": "die Entspannung",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «die Entspannung» («الاسترخاء»)."
+          },
+          {
+            "audioId": "word-pflege",
+            "speakText": "die Pflege.",
+            "a": "die Pflege",
+            "why": "اكتب المسموع بدقة: die Pflege — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-vorsorge",
+            "speakText": "die Vorsorge.",
+            "a": "die Vorsorge",
+            "why": "اكتب ما تسمعه حرفياً: «die Vorsorge» تعني «الوقاية». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -261,6 +415,14 @@
           {
             "q": "«التغذية مهمة.»؟",
             "a": "Die Ernährung ist wichtig."
+          },
+          {
+            "q": "«الاسترخاء جيّد.»؟",
+            "a": "Die Entspannung ist gut."
+          },
+          {
+            "q": "«الرعاية مهمة.»؟",
+            "a": "Die Pflege ist wichtig."
           }
         ]
       },
@@ -281,6 +443,14 @@
           {
             "q": "die Ernährung",
             "a": "التغذية"
+          },
+          {
+            "q": "«التغذية»؟",
+            "a": "die Ernährung"
+          },
+          {
+            "q": "«الاسترخاء»؟",
+            "a": "die Entspannung"
           }
         ]
       },
@@ -301,6 +471,14 @@
           {
             "q": "«التغذية جيّدة.»؟",
             "a": "Die Ernährung ist gut."
+          },
+          {
+            "q": "«التغذية»؟",
+            "a": "die Ernährung"
+          },
+          {
+            "q": "«الاسترخاء»؟",
+            "a": "die Entspannung"
           }
         ]
       }

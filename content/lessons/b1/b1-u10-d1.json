@@ -71,7 +71,9 @@
     "grammarArsenalIds": [
       "ars-prozent"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b1-u10-s1"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "v2-order"
@@ -170,6 +172,23 @@
               }
             ],
             "why": "die Hälfte النصف (die! Hälften!) · die Zunahme الزيادة (Zunahmen!) · die Abnahme النقصان (Abnahmen!) · schwanken يتذبذب (hat geschwankt!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التصالح",
+                "de": "die Versöhnung"
+              },
+              {
+                "ar": "يتصالح",
+                "de": "sich versöhnen"
+              },
+              {
+                "ar": "السلام",
+                "de": "der Frieden"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Versöhnung = «التصالح» · sich versöhnen = «يتصالح» · der Frieden = «السلام»"
           }
         ]
       },
@@ -181,9 +200,8 @@
           "النسب والأرقام!"
         ],
         "interleavedWith": [
-          "prozent",
-          "anteil",
-          "tendenz"
+          "frieden",
+          "versoehnen"
         ],
         "items": [
           {
@@ -215,6 +233,16 @@
             "q": "Die Zahl ist ___. (مستقرّ!)",
             "a": "stabil",
             "why": "stabil مستقرّ — Die Zahl ist stabil. (صفة!)"
+          },
+          {
+            "q": "Der ___ kommt.",
+            "a": "Frieden",
+            "why": "الكلمة الناقصة «Frieden» تعني «السلام» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir ___ uns.",
+            "a": "versöhnen",
+            "why": "الكلمة الناقصة «versöhnen» تعني «يتصالح» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -226,9 +254,8 @@
           "الجمع! الأداة! ist/hat!"
         ],
         "interleavedWith": [
-          "statistik",
-          "durchschnitt",
-          "kurve"
+          "frieden",
+          "versoehnen"
         ],
         "items": [
           {
@@ -245,6 +272,16 @@
             "q": "~~Die Zahl hat gesunken.~~",
             "a": "Die Zahl ist gesunken.",
             "why": "sinken بالماضي ist (الحركة!) — ist gesunken! (خريطة التداخل 10‑ي!)"
+          },
+          {
+            "q": "~~Der frieden kommt.~~",
+            "a": "Der Frieden kommt.",
+            "why": "الخطأ في «frieden»! الصواب «Frieden» — راجع القاعدة (السلام)."
+          },
+          {
+            "q": "~~Wir Versöhnen uns.~~",
+            "a": "Wir versöhnen uns.",
+            "why": "الخطأ في «Versöhnen»! الصواب «versöhnen» — راجع القاعدة (يتصالح)."
           }
         ]
       },
@@ -256,9 +293,8 @@
           "Komma! Tendenz!"
         ],
         "interleavedWith": [
-          "sinken",
-          "betragen",
-          "stabil"
+          "frieden",
+          "versoehnen"
         ],
         "items": [
           {
@@ -275,6 +311,106 @@
             "q": "لخّص الإحصاء! (3 جمل!)",
             "a": "Der Durchschnitt ist hoch. Die Tendenz ist klar. Die Zahl ist stabil!",
             "why": "Durchschnitt! Tendenz! stabil! (الخاتمة!)"
+          },
+          {
+            "q": "كوّن جملة فيها «der Frieden» («السلام») ثم تحدّث بها.",
+            "a": "Der Frieden kommt.",
+            "why": "استعمل «der Frieden» («السلام») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «sich versöhnen» («يتصالح») ثم تحدّث بها.",
+            "a": "Wir versöhnen uns.",
+            "why": "استعمل «sich versöhnen» («يتصالح») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "frieden"
+        ],
+        "items": [
+          {
+            "audioId": "word-prozent",
+            "speakText": "das Prozent.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "بالمئة",
+              "الحصة",
+              "الإحصاء"
+            ],
+            "a": "بالمئة",
+            "why": "الصوت يقول «das Prozent» — معناها «بالمئة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-anteil",
+            "speakText": "der Anteil.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "der Anteil",
+              "das Prozent",
+              "die Statistik"
+            ],
+            "a": "der Anteil",
+            "why": "الكلمة المسموعة «der Anteil» تعني «الحصة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-statistik",
+            "speakText": "die Statistik.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الإحصاء",
+              "بالمئة",
+              "الحصة"
+            ],
+            "a": "الإحصاء",
+            "why": "الصوت يقول «die Statistik» — معناها «الإحصاء». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-frieden",
+            "speakText": "der Frieden.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "der Frieden",
+              "das Prozent",
+              "der Anteil"
+            ],
+            "a": "der Frieden",
+            "why": "الكلمة المسموعة «der Frieden» تعني «السلام». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "versoehnen"
+        ],
+        "items": [
+          {
+            "audioId": "word-durchschnitt",
+            "speakText": "der Durchschnitt.",
+            "a": "der Durchschnitt",
+            "why": "اكتب ما تسمعه حرفياً: «der Durchschnitt» تعني «المتوسط». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-sinken",
+            "speakText": "sinken.",
+            "a": "sinken",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «sinken» («ينخفض»)."
+          },
+          {
+            "audioId": "word-anstieg",
+            "speakText": "der Anstieg.",
+            "a": "der Anstieg",
+            "why": "اكتب المسموع بدقة: der Anstieg — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-versoehnen",
+            "speakText": "sich versöhnen.",
+            "a": "sich versöhnen",
+            "why": "اكتب ما تسمعه حرفياً: «sich versöhnen» تعني «يتصالح». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -305,6 +441,14 @@
           {
             "q": "«المتوسط»؟",
             "a": "der Durchschnitt"
+          },
+          {
+            "q": "«بالمئة»؟",
+            "a": "das Prozent"
+          },
+          {
+            "q": "«الإحصاء»؟",
+            "a": "die Statistik"
           }
         ]
       },
@@ -325,6 +469,14 @@
           {
             "q": "«الاتجاه واضح.»؟",
             "a": "Die Tendenz ist klar."
+          },
+          {
+            "q": "«بالمئة»؟",
+            "a": "das Prozent"
+          },
+          {
+            "q": "«الحصة»؟",
+            "a": "der Anteil"
           }
         ]
       },
@@ -345,6 +497,14 @@
           {
             "q": "«المنحنى»؟",
             "a": "die Kurve"
+          },
+          {
+            "q": "«بالمئة»؟",
+            "a": "das Prozent"
+          },
+          {
+            "q": "«الحصة»؟",
+            "a": "der Anteil"
           }
         ]
       }

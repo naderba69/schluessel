@@ -59,7 +59,9 @@
       "ars-praesentation",
       "ars-fragerunde"
     ],
-    "storySentenceIds": [],
+    "storySentenceIds": [
+      "story-b2-u3-s6"
+    ],
     "dualCodingRequired": true,
     "riskFlagsShown": [
       "umlaut-a",
@@ -134,6 +136,23 @@
               }
             ],
             "why": "die Wissenschaft verstehen! · das Gedächtnis nutzen! · das Gehirn arbeitet (يعمل!) · das Gedächtnis (das!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الدراية",
+                "de": "die Kenntnis"
+              },
+              {
+                "ar": "المعرفة التخصصية",
+                "de": "das Fachwissen"
+              },
+              {
+                "ar": "يحوّل",
+                "de": "wandeln"
+              }
+            ],
+            "why": "صِل كل كلمة بمعناها الصحيح: die Kenntnis = «الدراية» · das Fachwissen = «المعرفة التخصصية» · wandeln = «يحوّل»"
           }
         ]
       },
@@ -169,6 +188,21 @@
             "q": "Wir ___ das Gedächtnis. (نستخدم!)",
             "a": "nutzen",
             "why": "nutzen يستخدم (Präsens wir: nutzen!) — Wir nutzen das Gedächtnis."
+          },
+          {
+            "q": "Wir ___ den Roboter.",
+            "a": "programmieren",
+            "why": "الكلمة الناقصة «programmieren» تعني «يبرمج» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ kommt.",
+            "a": "Automatisierung",
+            "why": "الكلمة الناقصة «Automatisierung» تعني «الأتمتة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir entwickeln die ___.",
+            "a": "Technologie",
+            "why": "الكلمة الناقصة «Technologie» تعني «التكنولوجيا» — تذكر صيغتها في السياق."
           }
         ]
       },
@@ -204,6 +238,21 @@
             "q": "~~Wir nutzen das Gedächtnis auf.~~",
             "a": "Wir nutzen das Gedächtnis.",
             "why": "nutzen ليس فعلاً منفصلاً! (لا auf!)!"
+          },
+          {
+            "q": "~~Der roboter arbeitet.~~",
+            "a": "Der Roboter arbeitet.",
+            "why": "الخطأ في «roboter»! الصواب «Roboter» — راجع القاعدة (الآلي)."
+          },
+          {
+            "q": "~~Wir verstehen den algorithmus.~~",
+            "a": "Wir verstehen den Algorithmus.",
+            "why": "الخطأ في «algorithmus»! الصواب «Algorithmus» — راجع القاعدة (الخوارزمية)."
+          },
+          {
+            "q": "~~Die vernetzung kommt.~~",
+            "a": "Die Vernetzung kommt.",
+            "why": "الخطأ في «vernetzung»! الصواب «Vernetzung» — راجع القاعدة (الشبكة)."
           }
         ]
       },
@@ -234,6 +283,111 @@
             "q": "تحدّث عن الدماغ! (جملتان!)",
             "a": "Das Gehirn arbeitet. Das ist wichtig.",
             "why": "الدماغ! (das Gehirn arbeitet!)"
+          },
+          {
+            "q": "كوّن جملة فيها «das Experiment» («التجربة») ثم تحدّث بها.",
+            "a": "Wir machen das Experiment.",
+            "why": "استعمل «das Experiment» («التجربة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Innovation» («الابتكار») ثم تحدّث بها.",
+            "a": "Die Innovation ist wichtig.",
+            "why": "استعمل «die Innovation» («الابتكار») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Erkenntnis» («المعرفة») ثم تحدّث بها.",
+            "a": "Wir haben eine Erkenntnis.",
+            "why": "استعمل «die Erkenntnis» («المعرفة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "wandeln"
+        ],
+        "items": [
+          {
+            "audioId": "word-wissenschaft",
+            "speakText": "die Wissenschaft.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العلم",
+              "الذاكرة",
+              "الدماغ"
+            ],
+            "a": "العلم",
+            "why": "الصوت يقول «die Wissenschaft» — معناها «العلم». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-gedaechtnis",
+            "speakText": "das Gedächtnis.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "das Gedächtnis",
+              "die Wissenschaft",
+              "das Gehirn"
+            ],
+            "a": "das Gedächtnis",
+            "why": "الكلمة المسموعة «das Gedächtnis» تعني «الذاكرة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-gehirn",
+            "speakText": "das Gehirn.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الدماغ",
+              "العلم",
+              "الذاكرة"
+            ],
+            "a": "الدماغ",
+            "why": "الصوت يقول «das Gehirn» — معناها «الدماغ». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-wandeln",
+            "speakText": "wandeln.",
+            "q": "استمع: كلمة من درس سابق — استرجعها!",
+            "choices": [
+              "wandeln",
+              "die Wissenschaft",
+              "das Gedächtnis"
+            ],
+            "a": "wandeln",
+            "why": "الكلمة المسموعة «wandeln» تعني «يحوّل». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "fachwissen"
+        ],
+        "items": [
+          {
+            "audioId": "word-wissenschaft",
+            "speakText": "die Wissenschaft.",
+            "a": "die Wissenschaft",
+            "why": "اكتب ما تسمعه حرفياً: «die Wissenschaft» تعني «العلم». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gedaechtnis",
+            "speakText": "das Gedächtnis.",
+            "a": "das Gedächtnis",
+            "why": "الإملاء: ما تسمعه هو ما تكتب. الكلمة «das Gedächtnis» («الذاكرة»)."
+          },
+          {
+            "audioId": "word-gehirn",
+            "speakText": "das Gehirn.",
+            "a": "das Gehirn",
+            "why": "اكتب المسموع بدقة: das Gehirn — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-fachwissen",
+            "speakText": "das Fachwissen.",
+            "a": "das Fachwissen",
+            "why": "اكتب ما تسمعه حرفياً: «das Fachwissen» تعني «المعرفة التخصصية». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -264,6 +418,14 @@
           {
             "q": "«العلم مهمّ.»؟",
             "a": "Die Wissenschaft ist wichtig."
+          },
+          {
+            "q": "«العِلم»؟",
+            "a": "die Wissenschaft"
+          },
+          {
+            "q": "«نستخدم الذاكرة.»؟",
+            "a": "Wir nutzen das Gedächtnis."
           }
         ]
       },
@@ -284,6 +446,14 @@
           {
             "q": "die Wissenschaft",
             "a": "العلم"
+          },
+          {
+            "q": "«العلم»؟",
+            "a": "die Wissenschaft"
+          },
+          {
+            "q": "«الذاكرة»؟",
+            "a": "das Gedächtnis"
           }
         ]
       },
@@ -304,6 +474,14 @@
           {
             "q": "«الدماغ يعمل.»؟",
             "a": "Das Gehirn arbeitet."
+          },
+          {
+            "q": "«العلم»؟",
+            "a": "die Wissenschaft"
+          },
+          {
+            "q": "«الذاكرة»؟",
+            "a": "das Gedächtnis"
           }
         ]
       }

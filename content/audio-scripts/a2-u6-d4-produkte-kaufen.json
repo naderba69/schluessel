@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "a2-u6-d4-produkte-kaufen",
+  "kind": "dialogue",
+  "level": "A2",
+  "title": {
+    "de": "Produkte kaufen",
+    "ar": "شراء المنتجات"
+  },
+  "usedIn": [
+    "a2-u6-d4"
+  ],
+  "lengthScale": 1.32,
+  "lines": [
+    {
+      "id": "a2u6d4-l1",
+      "speaker": "yusuf",
+      "text": "Hier: Aktuelle Preise und Ermäßigung!",
+      "direction": "يوسف يرى العروض"
+    },
+    {
+      "id": "a2u6d4-l2",
+      "speaker": "lena",
+      "text": "Super! Kauf die Produkte jetzt.",
+      "direction": "لينا تشجعه"
+    },
+    {
+      "id": "a2u6d4-l3",
+      "speaker": "yusuf",
+      "text": "Meine Geldbörse ist leider leer.",
+      "direction": "يوسف يشعر بالحرج"
+    },
+    {
+      "id": "a2u6d4-l4",
+      "speaker": "lena",
+      "text": "Kein Problem! Am Schluss gehen wir zur Reinigung.",
+      "direction": "لينا تخطط ليومهما"
+    },
+    {
+      "id": "a2u6d4-l5",
+      "speaker": "yusuf",
+      "text": "Gut. Aber zuerst: Brot und Milch.",
+      "direction": "يوسف يرتب المشتريات"
+    },
+    {
+      "id": "a2u6d4-l6",
+      "speaker": "lena",
+      "text": "Und der Ermäßigung-Tag ist morgen!",
+      "direction": "لينا تتذكر العرض"
+    },
+    {
+      "id": "a2u6d4-l7",
+      "speaker": "yusuf",
+      "text": "Dann warten wir bis morgen.",
+      "direction": "يوسف يتخذ القرار"
+    },
+    {
+      "id": "a2u6d4-l8",
+      "speaker": "lena",
+      "text": "Gut! So sparen wir Geld.",
+      "direction": "لينا توافق"
+    }
+  ]
+}
