@@ -64,6 +64,9 @@ import { MapView } from "./components/MapView.js";
 import { ExamSprechenRun } from "./components/ExamSprechenRun.js";
 import { SystemLab } from "./components/SystemLab.js";
 import { BottomNav } from "./components/BottomNav.js";
+// D570 (N-155): مطابقة الواجهة للدستور الإنتاجي — القانون 18 (كيف تتعلم) + §16 (مؤشر الاتصال)
+import { LearnHereCard } from "./components/LearnHereCard.js";
+import { ConnectionIndicator } from "./components/ConnectionIndicator.js";
 import { SettingsView } from "./components/SettingsView.js";
 import type { MainTab } from "./components/main-tabs.js";
 
@@ -1281,6 +1284,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
         />
       ) : (
         <>
+      <LearnHereCard />
       <p data-testid="week-dots">
         <span dir="ltr">{week.dots.map((d) => (d ? "●" : "○")).join("")}</span> أسبوعك ({week.studied}/7)
       </p>
@@ -1534,6 +1538,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       )}
         </>
       )}
+      <ConnectionIndicator />
       {!session && !micro && !labsMode && <BottomNav tab={tab} onTab={setTab} />}
     </main>
   );

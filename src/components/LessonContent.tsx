@@ -10,6 +10,7 @@ import { CHARACTER_NAME_AR } from "../lib/story.js";
 import { answerNeedsSpecialChar, cardsForEvent, loadUnit0Deck } from "../lib/unit0.js";
 import { KeyboardCard } from "./FirstRun.js";
 import { ShadowingRun } from "./ShadowingRun.js";
+import { SuspectButton } from "./SuspectButton.js"; // D570 (القانون 27): شكّي → طابور G1
 import type { LearnCardData, RecallCardData, PracticeData, CloseData } from "../lib/lesson-runner.js";
 import { RecallCardView, LearnCardView, CloseView } from "./LessonSession.js";
 import type { RecallRating } from "../lib/review-engine.js";
@@ -279,9 +280,10 @@ export function RuleDiscoveryView({ rule, onDone }: { rule: GrammarRule; onDone?
 }
 
 /** التصحيح التفسيري بعد المحاولة: الحكم + الصحيح + «لماذا» (لا يُرسم أبداً قبل المحاولة — F121) */
-function FeedbackView({ verdict, onNext }: { verdict: Verdict; onNext: () => void }) {
+function FeedbackView({ verdict, onNext, suspect }: { verdict: Verdict; onNext: () => void; suspect?: { source: string; text?: string } }) {
   return (
     <div data-testid="practice-feedback" data-status={verdict.status}>
+      {suspect && <SuspectButton source={suspect.source} text={suspect.text} />}
       <p>
         <StruckText text={verdict.noteAr} />
       </p>
@@ -547,7 +549,13 @@ export function PracticeStation({
             }
           }}
         />
-        {state.verdict && <FeedbackView verdict={state.verdict} onNext={next} />}
+        {state.verdict && (
+          <FeedbackView
+            verdict={state.verdict}
+            onNext={next}
+            suspect={{ source: `${lessonId ?? "practice"}/practice-s${state.station}-i${state.item}`, text: typed.prompt }}
+          />
+        )}
       </section>
     );
   }
