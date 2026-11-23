@@ -117,7 +117,7 @@ describe("D187 — البوابة الواحدة وفرق المحتوى وال�
     }
     const r = JSON.parse(out) as { ok: boolean; quick: boolean; results: { id: string; ok: boolean; soft: boolean; summary: string }[]; report: string };
     expect(r.quick).toBe(true);
-    expect(r.results.map((x) => x.id)).toEqual(["tsc", "validate", "docs", "notes", "audit", "lexicon", "links", "speech"]); // lexicon من D197 · links من D234
+    expect(r.results.map((x) => x.id)).toEqual(["tsc", "validate", "docs", "notes", "audit", "lexicon", "links", "speech", "rotation"]); // lexicon من D197 · links من D234 · rotation من D575
     expect(r.results.filter((x) => !x.ok && !x.soft)).toEqual([]); // D214: الناعم (speech) يُبلَّغ ولا يوقف — كمنطق البوابة نفسها
     expect(r.report.split("\n")).toHaveLength(3);
     expect(r.report).toContain("1. **ما نُفّذ:** اختبار");
