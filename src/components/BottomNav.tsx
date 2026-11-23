@@ -5,6 +5,7 @@ import type { MainTab } from "./main-tabs.js";
 const TABS: { id: MainTab; label: string }[] = [
   { id: "today", label: "🏠 اليوم" },
   { id: "map", label: "🗺️ الخريطة" },
+  { id: "atlas", label: "🚇 الأطلس" },
   { id: "coach", label: "🎯 المدرب" },
   { id: "golden", label: "💛 الدفتر" },
   { id: "settings", label: "⚙️ الإعدادات" },

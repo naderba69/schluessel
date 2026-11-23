@@ -68,6 +68,7 @@ import { BottomNav } from "./components/BottomNav.js";
 import { LearnHereCard } from "./components/LearnHereCard.js";
 import { WordOfWeekCard } from "./components/WordOfWeekCard.js";
 import { VoiceMirrorCard } from "./components/VoiceMirrorCard.js";
+import { GrammarAtlas } from "./components/GrammarAtlas.js";
 import { ConnectionIndicator } from "./components/ConnectionIndicator.js";
 import { SettingsView } from "./components/SettingsView.js";
 import type { MainTab } from "./components/main-tabs.js";
@@ -1248,6 +1249,8 @@ export function App({ store: injected }: { store?: LearnerStore }) {
             </>
           )}
         </>
+      ) : tab === "atlas" ? (
+        <GrammarAtlas currentIndex={currentId ? Math.max(0, LESSON_ORDER.indexOf(currentId)) : 0} />
       ) : tab === "coach" ? (
         <CoachBlock
           errors={state.errors}
