@@ -12,6 +12,7 @@
 2. **r/WriteStreakGerman (2025)**: «Es ist allgemein bekannt, dass das Goethe Institut eine offizielle Wortliste zu jedem Niveau von A1 bis B1 bietet. Es gibt jedoch keine solche Liste ab dem Niveau B2.»
 3. **ما يُتداول باسم «Goethe B2 Wortliste» ليس رسمياً**: صفحة إعلانات («I am not robot!» + كلمات عشوائية) تكرّر نص مقدّمة **قائمة B1** نفسها («2400 lexikalische Einheiten … Niveaustufe B1»)، ومواقع SEO تدّعي أرقاماً متناقضة (300–400 مقابل 2000–3000 مقابل 3000–4000 كلمة) — ولا يُصدَّق منها شيء.
 4. **موقع goethe.de نفسه محجوب من بيئة البناء** — والتحقّق المباشر من صفحته الرسمية يبقى ضمن التوصية 6 (تحقق الروابط) عند توفر الشبكة المفتوحة.
+   - **تحديث (D572 — 2026-11-21):** نُفّذ التحقق المباشر — صفحة goethe.de الرسمية لامتحان B2 **بلا قسم قائمة كلمات** بينما صفحتا A2 وB1 تحملان «Wortliste» صراحة، والتفاصيل الكاملة في `docs/reports/d572-live-link-check-ar.md`.
 
 ## القرار (D110 يحمينا أصلاً)
 
