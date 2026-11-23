@@ -2,7 +2,7 @@
 import { describe, it, expect } from "vitest";
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { OfficialWordlist, Word, type WordlistEntry } from "../content/schemas/index.js";
@@ -233,6 +233,15 @@ describe("D110 — الحارس الدائم على المحتوى الحقيق�
   it("كل goetheList في المحتوى = الدليل بالضبط (لا وسم بلا دليل ولا دليل بلا وسم)", () => {
     const bad = words.filter((w) => !sameLevels(w.goetheList, deriveGoetheList(w, IXS))).map((w) => w.id);
     expect(bad).toEqual([]);
+  });
+
+  it("D569: لا وسم B2 قط — ولا قائمة Goethe B2 في المستودع (المصدر الرسمي لا ينشرها)", () => {
+    // التوصية 4 من المراجعة الشاملة أُغلقت بالدليل (2026-11-20): Goethe-Institut ينشر قوائم
+    // A1 (Fit1/SD1) وA2 وB1 وحدها — لا قائمة B2 (إجماع مصادر مستقلة: r/German 2022/2025 ·
+    // r/WriteStreakGerman 2025) والمواقع المدّعية صفحات SEO بنص B1 مُلصَق. D110: الوسم دليل
+    // لا رأي — وبلا قائمة رسمية لا يظهر وسم B2 أبداً، ولا ملف goethe-b2.json (حماية من التقليد).
+    expect(words.filter((w) => w.goetheList.includes("B2")).map((w) => w.id)).toEqual([]);
+    expect(readdirSync(join(__dirname, "..", "content", "wordlists")).filter((f) => f.includes("b2"))).toEqual([]);
   });
 
   it("N-026 (D219): جزء القطعة المغلق (أداة·حرف·ضمير) لا يحجب الدليل — بشرط جزء مُدرَج واحد: ein-bisschen وwas-fuer-ein صارتا A1+A2 · وachso بلا دليل (لا دليل من فراغ)", () => {

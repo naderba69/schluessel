@@ -1608,6 +1608,11 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     // D438: كل وحدة ببطاقة واحدة — مستوىً مستوى (A1 كاملة + b1-u3 الأولى!)
     const a1 = ALL_LANDESKUNDE.filter((c) => c.level === "A1").map((c) => c.unit).sort((a, b) => a - b);
     expect(a1).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
+    // D568 (التوصية 3): كل وحدة من A2/B1/B2 ببطاقة ثقافة — التغطية كاملة لكل مستوى
+    for (const [lvl, n] of [["A2", 14], ["B1", 14], ["B2", 6]] as const) {
+      const us = ALL_LANDESKUNDE.filter((c) => c.level === lvl).map((c) => c.unit).sort((a, b) => a - b);
+      expect(us, `${lvl}: تغطية الوحدات`).toEqual(Array.from({ length: n }, (_, i) => i + 1));
+    }
     for (const lvl of new Set(ALL_LANDESKUNDE.map((c) => c.level))) {
       const us = ALL_LANDESKUNDE.filter((c) => c.level === lvl).map((c) => c.unit);
       expect(new Set(us).size, `${lvl}: وحدات مكررة`).toBe(us.length);
@@ -2219,12 +2224,12 @@ describe("N-023 (D223) — نصوص القراءة الـ15 كلها تحت حا
 });
 
 // N-023 (D224): بطاقات الثقافة الـ12 تحت نفس الحارس — الأفق آخر درس في وحدة البطاقة · المسرد بصيغة المفرد ما لم يرد الجمع (das Geschäft, die Geschäfte) · العربية تُستثنى في germanOnly
-describe("N-023 (D224) — بطاقات الثقافة الـ15 تحت حارس الجبهة (تُغلق N-023)", () => {
+describe("N-023 (D224) — بطاقات الثقافة الـ49 تحت حارس الجبهة (تُغلق N-023)", () => {
   const INTERJECTIONS = new Set(["ah"]);
-  const lastOfUnit = (u: number) => ALL_LESSONS.filter((l) => l.level === "A1" && l.unit === u).sort((a, b) => a.day - b.day).at(-1)!;
+  const lastOfUnit = (u: number, level: string) => ALL_LESSONS.filter((l) => l.level === level && l.unit === u).sort((a, b) => a.day - b.day).at(-1)!;
   const auditLK = (id: string) => {
     const d = CultureCard.parse(JSON.parse(readFileSync(join(__dirname, "..", "content/landeskunde", `${id}.json`), "utf8")));
-    const taught = taughtUpTo(lastOfUnit(d.unit), ALL_LESSONS, ALL_WORDS);
+    const taught = taughtUpTo(lastOfUnit(d.unit, d.level), ALL_LESSONS, ALL_WORDS);
     const stems = new Set([...knownStems(taught), ...d.glossary.flatMap((g) => [...knownStems([{ de: g.de, wordClass: "noun" } as never])])]);
     const allow = new Set([...(d.properNouns ?? []).flatMap((n) => contentTokens(n)), ...INTERJECTIONS]);
     const texts = [d.title.de, ...d.facts.map((f) => f.de)];
@@ -2235,7 +2240,7 @@ describe("N-023 (D224) — بطاقات الثقافة الـ15 تحت حارس 
     const unusedPropers = (d.properNouns ?? []).filter((n) => !contentTokens(n).every((t) => seen.has(t)));
     return { bad, dead, unusedPropers };
   };
-  for (const id of ["a1-landeskunde-u1", "a1-landeskunde-u2", "a1-landeskunde-u3", "a1-landeskunde-u4", "a1-landeskunde-u5", "a1-landeskunde-u6", "a1-landeskunde-u7", "a1-landeskunde-u8", "a1-landeskunde-u9", "a1-landeskunde-u10", "a1-landeskunde-u11", "a1-landeskunde-u12", "a1-landeskunde-u13", "a1-landeskunde-u14", "a1-landeskunde-u15"]) {
+  for (const id of ALL_LANDESKUNDE.map((c) => c.id).sort()) {
     it(`${id} نظيف: صفر مخالفات · صفر مسرد ميت · كل علم مستعمل`, () => {
       expect(auditLK(id)).toEqual({ bad: [], dead: [], unusedPropers: [] });
     });

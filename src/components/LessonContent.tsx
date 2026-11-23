@@ -9,6 +9,8 @@ import type { AudioScript, Unit0Card } from "../../content/schemas/index.js";
 import { CHARACTER_NAME_AR } from "../lib/story.js";
 import { answerNeedsSpecialChar, cardsForEvent, loadUnit0Deck } from "../lib/unit0.js";
 import { KeyboardCard } from "./FirstRun.js";
+import { ShadowingRun } from "./ShadowingRun.js";
+import { SuspectButton } from "./SuspectButton.js"; // D570 (القانون 27): شكّي → طابور G1
 import type { LearnCardData, RecallCardData, PracticeData, CloseData } from "../lib/lesson-runner.js";
 import { RecallCardView, LearnCardView, CloseView } from "./LessonSession.js";
 import type { RecallRating } from "../lib/review-engine.js";
@@ -278,9 +280,10 @@ export function RuleDiscoveryView({ rule, onDone }: { rule: GrammarRule; onDone?
 }
 
 /** التصحيح التفسيري بعد المحاولة: الحكم + الصحيح + «لماذا» (لا يُرسم أبداً قبل المحاولة — F121) */
-function FeedbackView({ verdict, onNext }: { verdict: Verdict; onNext: () => void }) {
+function FeedbackView({ verdict, onNext, suspect }: { verdict: Verdict; onNext: () => void; suspect?: { source: string; text?: string } }) {
   return (
     <div data-testid="practice-feedback" data-status={verdict.status}>
+      {suspect && <SuspectButton source={suspect.source} text={suspect.text} />}
       <p>
         <StruckText text={verdict.noteAr} />
       </p>
@@ -546,7 +549,13 @@ export function PracticeStation({
             }
           }}
         />
-        {state.verdict && <FeedbackView verdict={state.verdict} onNext={next} />}
+        {state.verdict && (
+          <FeedbackView
+            verdict={state.verdict}
+            onNext={next}
+            suspect={{ source: `${lessonId ?? "practice"}/practice-s${state.station}-i${state.item}`, text: typed.prompt }}
+          />
+        )}
       </section>
     );
   }
@@ -582,6 +591,9 @@ export function PracticeStation({
  * N-010 (D231): الحوار الكامل قبل بنود الاستماع — المتعلم يرى المشهد كله أولاً ثم يجيب؛ كل سطر بزر صوته المسجل.
  */
 export function DialogueView({ script }: { script: AudioScript }) {
+  // D567 (N-370): تمرين الترديد من أصوات الحوارات داخل الحصة — سطراً سطراً بصوت الشخصيات
+  const [shadowing, setShadowing] = useState(false);
+  const [shadowDone, setShadowDone] = useState(false);
   return (
     <div data-testid="station-dialogue">
       <h4>الحوار كاملاً 🎭 — اقرأ واستمع أولاً، ثم أجب عن الأسئلة</h4>
@@ -594,6 +606,15 @@ export function DialogueView({ script }: { script: AudioScript }) {
           </li>
         ))}
       </ol>
+      {shadowDone ? (
+        <p data-testid="station-shadow-done">أتممت ترديد الحوار ✓ — تمرّنت بصوتك</p>
+      ) : shadowing ? (
+        <ShadowingRun script={script} onFinish={() => { setShadowing(false); setShadowDone(true); }} />
+      ) : (
+        <button data-testid="station-shadow-start" onClick={() => setShadowing(true)}>
+          🎙️ تمرين الترديد — كرّر الأسطر بصوتك
+        </button>
+      )}
     </div>
   );
 }

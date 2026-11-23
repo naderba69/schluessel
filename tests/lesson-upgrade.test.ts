@@ -641,14 +641,14 @@ describe("D115 — أدوات القياس", () => {
     expect([...real.zusammenfassung.srsBundleWordIds].sort()).toEqual([...real.praesentation.wordIds].sort());
     expect(real.praesentation.grammarArsenalIds).toEqual(["ars-sein"]);
   });
-  it("a1-u1-d2 مُرقّى (D119): صفر نقص — 16 بنداً · 4 أنواع · Quiz 6 · 16 كلمة مُسترجعة · قاعدة ars-laender-sprachen", () => {
+  it("a1-u1-d2 مُرقّى (D119): صفر نقص — 19 بنداً (D567: +3 استماع حواري) · 4 أنواع · Quiz 6 · 16 كلمة مُسترجعة · قاعدة ars-laender-sprachen", () => {
     const l = realLessons.find((x) => x.id === "a1-u1-d2")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u1-d2")!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage }).toEqual({ rule: [], practice: [], quiz: [], coverage: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([16, 4, 6, 16]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([19, 4, 6, 16]);
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-laender-sprachen"]);
-    expect(e.properNouns).toEqual(["Lena"]);
+    expect(e.properNouns).toEqual(["Lena", "Berlin"]); // D567: Berlin اسم علم مُعلن (حوار «Ich wohne in Berlin»)
   });
   it("a1-u1-d3 مُرقّى (D120): صفر نقص — 19 بنداً · 4 أنواع (منها إملاء الحروف) · Quiz 6 · 16 كلمة · قاعدة الألفباء", () => {
     const l = realLessons.find((x) => x.id === "a1-u1-d3")!;
@@ -659,12 +659,12 @@ describe("D115 — أدوات القياس", () => {
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-alphabet-spelling"]);
     expect(e.properNouns).toEqual(["Yusuf", "Haddad", "Lena", "Müller"]);
   });
-  it("a1-u1-d4 مُرقّى (D121): صفر نقص — 20 بنداً · 4 أنواع (استماع وإملاء أعداد) · Quiz 6 · 15 كلمة · قاعدة الأعداد", () => {
+  it("a1-u1-d4 مُرقّى (D121): صفر نقص — 23 بنداً (D567: +3 استماع حواري) · 4 أنواع (استماع وإملاء أعداد) · Quiz 6 · 15 كلمة · قاعدة الأعداد", () => {
     const l = realLessons.find((x) => x.id === "a1-u1-d4")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u1-d4")!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage }).toEqual({ rule: [], practice: [], quiz: [], coverage: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([20, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([23, 4, 6, 15]);
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-zahlen-1-20"]);
     expect(e.properNouns).toEqual(["Yusuf", "Haddad", "Lena"]); // N-021 (D225): Gartenstraße سقطت مع مثال strasse القديم
     // الاستدعاء من دروس سابقة (كان zahl/alt/telefon — كلمات اليوم نفسه)
@@ -5478,10 +5478,10 @@ describe("N-010 (D231) — الحوار الكامل معروض في التدر�
   const d3codes = (e = d3entry(), sc = scripts) =>
     checkUpgrade(planWith([e]), { ...ctxWith(d3), scripts: sc }).filter((i) => i.code !== "e-upgrade-complete").map((i) => i.code);
 
-  it("الربط 1:1 — محطة الاستماع تجد حوارها بسطرٍ تستعمله بنودها (ومحطة الكلمات وحدها بلا حوار)", () => {
+  it("الربط 1:1 — محطة الاستماع تجد حوارها بسطرٍ تستعمله بنودها (D567: كل الدروس مربوطة)", () => {
     expect(dialogueScriptsFor(d3, scripts).map((sc) => sc.id)).toEqual(["a1-u1-d3-anmeldung"]);
     const d1 = realLessons.find((l) => l.id === "a1-u1-d1")!;
-    expect(dialogueScriptsFor(d1, scripts)).toEqual([]);
+    expect(dialogueScriptsFor(d1, scripts).map((sc) => sc.id)).toEqual(["a1-u1-d1-hallo-ich-heisse-yusuf"]);
     // ثابت على المقرر كله: لا محطة استماع تلمس حوارين (والأول المطابق هو المعروض)
     for (const l of realLessons) {
       const got = dialogueScriptsFor(l, scripts);
