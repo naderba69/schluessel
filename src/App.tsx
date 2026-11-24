@@ -1260,6 +1260,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           words={firstBundle?.direct ?? []}
           studiedToday={(todayEntry?.durationMinutes ?? 0) > 0}
           shadowLessonId={shadowLesson ?? null}
+          lessonIndex={currentId ? Math.max(0, LESSON_ORDER.indexOf(currentId)) : 0}
           onStartShadow={() => {
             setTab("today");
             startShadow();

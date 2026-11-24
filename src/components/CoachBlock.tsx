@@ -33,6 +33,8 @@ import { alphabetLetters, dialoguePairs, numberLines, timeLines } from "./Skills
 import { VideoCorner } from "./VideoCorner.js";
 import { PlayButton } from "./LessonSession.js";
 
+import { Fluency432 } from "./Fluency432.js";
+
 export function CoachBlock({
   errors,
   dueCount,
@@ -41,6 +43,7 @@ export function CoachBlock({
   words = [],
   studiedToday = false,
   shadowLessonId = null,
+  lessonIndex = 0,
   onStartShadow,
 }: {
   errors: readonly ErrorEntry[];
@@ -50,6 +53,7 @@ export function CoachBlock({
   studiedToday?: boolean;
   /** D306: حوار الظل اليوم (null = لا ظل) + بدئه — تبويب المدرب يدل على الشادوينغ */
   shadowLessonId?: string | null;
+  lessonIndex?: number;
   onStartShadow?: () => void;
   /** N-151 (D251): نوافذ المتعلم من طقس البداية/الإعدادات — الافتراضي الثلاث */
   windows?: readonly CoachWindow[];
@@ -236,6 +240,7 @@ export function CoachBlock({
           </button>
         </div>
       )}
+      <Fluency432 currentIndex={lessonIndex} />
       {evening && !rest && (
         <div data-testid="day-closing">
           <p data-testid="coach-evening-report">
