@@ -125,6 +125,7 @@ export function LearnStation({
         {rules.length > 0 && <small> — ثم قاعدة اليوم 🧩</small>}
       </p>
       <LearnCardView
+        gender={card.gender}
         promptDe={card.promptDe}
         promptAr={card.promptAr}
         attempted={attempted}
@@ -475,7 +476,7 @@ export function PracticeStation({
         </ul>
         {redemittel.length > 0 && (
           <aside data-testid="redemittel">
-            <h4>عبارات تساعدك (Redemittel) — مما تعلّمته حتى الآن فقط</h4>
+            <h4>عبارات تساعدك (<span dir="ltr">Redemittel</span>) — مما تعلّمته حتى الآن فقط</h4>
             <ul>
               {redemittel.map((p) => (
                 <li key={p.de} data-first-lesson={p.firstLesson}>

@@ -45,7 +45,7 @@ export function VoiceMirrorCard({ currentIndex, now = new Date() }: { currentInd
   return (
     <section data-testid="voice-mirror" aria-label="المرآة الصوتية">
       <h3>المرآة الصوتية 🪞 — الخميس</h3>
-      <p data-testid="vm-hint">استمع إلى كل سطر ثم كرّره بصوت عالٍ — لاحظ النبرة (Satzmelodie) وحاكِها.</p>
+      <p data-testid="vm-hint">استمع إلى كل سطر ثم كرّره بصوت عالٍ — لاحظ النبرة (<span dir="ltr">Satzmelodie</span>) وحاكِها.</p>
       {lines.map((line) => {
         const done = repeats[line.id] ?? 0;
         return (

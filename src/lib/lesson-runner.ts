@@ -55,6 +55,8 @@ export type LearnCardData = {
   /** D104: «الصوت يُشغَّل لحظة ظهور الكلمة» (§3 Präsentation) — مسار الكلمة + نصها المنطوق */
   audioId?: string;
   speakText: string;
+  /** §15-هـ (D581): الترميز المزدوج للجنس (لون + شكل) يرافق عرض الكلمة */
+  gender?: Word["gender"];
 };
 
 export type PracticeData = {
@@ -192,6 +194,7 @@ export function planLessonStations(lesson: Lesson, words: Word[], grammarRules: 
       explanation: explainWord(w, known),
       audioId: isSentence ? undefined : `word-${w.id}`,
       speakText: promptDe,
+      gender: w.gender,
     };
   });
 

@@ -10,8 +10,8 @@ import { GenderBadge } from "./GenderBadge.js";
 export function WelcomeScreen({ onNext }: { onNext: () => void }) {
   return (
     <section data-screen="welcome">
-      <h1>مرحباً بك في «مفتاح — Schlüssel» 🔑</h1>
-      <p style={{ opacity: 0.8 }}>اللغة مفتاحك — Die Sprache ist dein Schlüssel</p>
+      <h1>مرحباً بك في «مفتاح — <span dir="ltr">Schlüssel</span>» 🔑</h1>
+      <p style={{ opacity: 0.8 }}>اللغة مفتاحك — <span dir="ltr">Die Sprache ist dein Schlüssel</span></p>
       <p data-testid="mueller-welcome">
         مرحباً! أنا <strong>مولر</strong>، معلمك هنا. لا نحتاج اختبار تحديد مستوى — أنت تبدأ من الصفر الحقيقي، ونحن نبني معك كل شيء.
         اليوم جلسة قصيرة عمداً: 4 بطاقات فقط ثم أول درس. غداً نسترجع — هذا كل السر.

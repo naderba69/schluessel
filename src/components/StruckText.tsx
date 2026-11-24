@@ -15,10 +15,12 @@ export function BorrowedProvider({ words, children }: { words: readonly Borrowed
   return <GlossContext.Provider value={map}>{children}</GlossContext.Provider>;
 }
 
+const ARABIC_RE = /[\u0600-\u06FF]/;
+
 export function StruckText({ text }: { text: string }) {
   const gloss = useContext(GlossContext);
-  return (
-    <>
+  // قانون 29: نص بلا حروف عربية = نص ألماني يُفرض عليه الاتجاه ltr صراحة
+  const inner = (<>
       {splitStruck(text, gloss).map((p, i) =>
         p.struck ? (
           <del key={i} data-testid="struck">
@@ -34,6 +36,7 @@ export function StruckText({ text }: { text: string }) {
       )}
     </>
   );
+  return ARABIC_RE.test(text) ? inner : <span dir="ltr">{inner}</span>;
 }
 
 /** صندوق «كلمات مستعارة» قبل التدريب (D188): المتعلم يعرف مسبقاً ما لم يُدرَّس بعد ولماذا هو هنا */
