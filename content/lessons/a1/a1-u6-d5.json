@@ -504,6 +504,71 @@
           "klein"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Tisch — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Tisch (طاولة)."
+          },
+          {
+            "q": "Schrank — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Schrank (خزانة)."
+          },
+          {
+            "q": "Einrichtung — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "‑ung ← die دائماً: die Einrichtung — مثل die Zeitung · die Rechnung. المعنى: تأثيث."
+          },
+          {
+            "q": "Gerät — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Gerät (جهاز)."
+          },
+          {
+            "q": "خمّن الجمع: der Tisch",
+            "choices": [
+              "die Tische",
+              "die Schränke",
+              "die Einrichtungen"
+            ],
+            "a": "die Tische",
+            "gender": "der",
+            "why": "جمع der Tisch هو die Tische. der + e → جمع -e"
+          }
+        ],
+        "interleavedWith": [
+          "tisch",
+          "schrank"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

@@ -412,6 +412,35 @@
           "super"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Euro — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Euro (اليورو)."
+          },
+          {
+            "q": "Preis — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Preis (السعر (والجائزة!))."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

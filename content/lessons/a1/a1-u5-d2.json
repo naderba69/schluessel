@@ -447,6 +447,60 @@
           "danke"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Oma — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Oma (الجدة)."
+          },
+          {
+            "q": "Kaffee — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Kaffee (القهوة)."
+          },
+          {
+            "q": "Wasser — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "النهاية (‑er) لا تحسم هنا — احفظ الأداة مع الكلمة: das Wasser (الماء)."
+          },
+          {
+            "q": "Milch — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Milch (الحليب)."
+          }
+        ],
+        "interleavedWith": [
+          "oma",
+          "kaffee"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

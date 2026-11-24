@@ -348,6 +348,60 @@
           "rabatt"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Jacke — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Jacke (سترة)."
+          },
+          {
+            "q": "Schuh — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Schuh (حذاء)."
+          },
+          {
+            "q": "Kunde — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Kunde (زبون)."
+          },
+          {
+            "q": "خمّن الجمع: die Jacke",
+            "choices": [
+              "die Jacken",
+              "die Schuhe",
+              "die Kunden"
+            ],
+            "a": "die Jacken",
+            "gender": "die",
+            "why": "جمع die Jacke هو die Jacken. ‑n: die Jacke ← die Jacken"
+          }
+        ],
+        "interleavedWith": [
+          "jacke",
+          "schuh"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

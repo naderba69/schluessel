@@ -512,6 +512,71 @@
           "tag"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Freundin — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "‑in ← die (المؤنث): die Freundin. المعنى: الصديقة."
+          },
+          {
+            "q": "Bruder — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "‑er قد تدل على der (للأشخاص والفعّالات غالباً): der Bruder — والقاعدة النهائية: احفظ الأداة مع الكلمة. المعنى: الأخ."
+          },
+          {
+            "q": "Fußball — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Fußball (كرة القدم)."
+          },
+          {
+            "q": "Kino — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Kino (سينما)."
+          },
+          {
+            "q": "خمّن الجمع: die Freundin",
+            "choices": [
+              "Freundinnen",
+              "die Brüder",
+              "die Fußbälle"
+            ],
+            "a": "Freundinnen",
+            "gender": "die",
+            "why": "جمع die Freundin هو Freundinnen. احفظ جمعه معه: Freundinnen."
+          }
+        ],
+        "interleavedWith": [
+          "freundin",
+          "bruder"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

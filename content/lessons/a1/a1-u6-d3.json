@@ -489,6 +489,71 @@
           "zimmer"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Tisch — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Tisch (طاولة)."
+          },
+          {
+            "q": "Lampe — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Lampe (مصباح)."
+          },
+          {
+            "q": "Fenster — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "النهاية (‑er) لا تحسم هنا — احفظ الأداة مع الكلمة: das Fenster (نافذة)."
+          },
+          {
+            "q": "Tür — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Tür (باب)."
+          },
+          {
+            "q": "خمّن الجمع: der Tisch",
+            "choices": [
+              "die Tische",
+              "die Lampen",
+              "die Fenster"
+            ],
+            "a": "die Tische",
+            "gender": "der",
+            "why": "جمع der Tisch هو die Tische. der + e → جمع -e"
+          }
+        ],
+        "interleavedWith": [
+          "tisch",
+          "lampe"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

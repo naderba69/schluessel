@@ -425,6 +425,60 @@
           "lustig"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Essen — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Essen (الطعام)."
+          },
+          {
+            "q": "Mutter — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "النهاية (‑er) لا تحسم هنا — احفظ الأداة مع الكلمة: die Mutter (الأم)."
+          },
+          {
+            "q": "Zwilling — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "‑ling ← der: der Zwilling. المعنى: التوأم."
+          },
+          {
+            "q": "Beruf — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Beruf (المهنة)."
+          }
+        ],
+        "interleavedWith": [
+          "das-essen",
+          "mutter"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

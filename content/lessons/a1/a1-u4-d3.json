@@ -430,6 +430,60 @@
           "onkel"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Bruder — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "‑er قد تدل على der (للأشخاص والفعّالات غالباً): der Bruder — والقاعدة النهائية: احفظ الأداة مع الكلمة. المعنى: الأخ."
+          },
+          {
+            "q": "Schwester — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "النهاية (‑er) لا تحسم هنا — احفظ الأداة مع الكلمة: die Schwester (الأخت)."
+          },
+          {
+            "q": "Haar — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Haar (الشعر (الشعرة))."
+          },
+          {
+            "q": "Gesicht — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Gesicht (الوجه)."
+          }
+        ],
+        "interleavedWith": [
+          "bruder",
+          "schwester"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

@@ -373,6 +373,35 @@
           "sprechen"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Gespräch — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Gespräch (الحديث/المحادثة)."
+          },
+          {
+            "q": "Hobby — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Hobby (الهواية)."
+          }
+        ],
+        "interleavedWith": [],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

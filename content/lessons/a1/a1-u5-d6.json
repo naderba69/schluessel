@@ -332,6 +332,38 @@
           "mittagessen"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Fisch — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Fisch (السمك)."
+          },
+          {
+            "q": "Hunger — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "‑er قد تدل على der (للأشخاص والفعّالات غالباً): der Hunger — والقاعدة النهائية: احفظ الأداة مع الكلمة. المعنى: الجوع."
+          }
+        ],
+        "interleavedWith": [
+          "fisch",
+          "hunger"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

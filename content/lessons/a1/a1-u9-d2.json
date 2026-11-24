@@ -571,6 +571,71 @@
           "dort"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Bahnhof — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Bahnhof (محطة القطار)."
+          },
+          {
+            "q": "Flughafen — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Flughafen (مطار)."
+          },
+          {
+            "q": "Haltestelle — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Haltestelle (محطة الحافلة)."
+          },
+          {
+            "q": "Hauptbahnhof — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Hauptbahnhof (المحطة المركزية)."
+          },
+          {
+            "q": "خمّن الجمع: der Bahnhof",
+            "choices": [
+              "die Bahnhöfe",
+              "die Flughäfen",
+              "die Haltestellen"
+            ],
+            "a": "die Bahnhöfe",
+            "gender": "der",
+            "why": "جمع der Bahnhof هو die Bahnhöfe. ö + ‑e: der Bahnhof ← die Bahnhöfe (كـder Hof ← die Höfe)"
+          }
+        ],
+        "interleavedWith": [
+          "bahnhof",
+          "flughafen"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

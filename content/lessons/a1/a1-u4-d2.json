@@ -417,6 +417,60 @@
           "achtzig"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Bruder — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "‑er قد تدل على der (للأشخاص والفعّالات غالباً): der Bruder — والقاعدة النهائية: احفظ الأداة مع الكلمة. المعنى: الأخ."
+          },
+          {
+            "q": "Mutter — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "النهاية (‑er) لا تحسم هنا — احفظ الأداة مع الكلمة: die Mutter (الأم)."
+          },
+          {
+            "q": "Familie — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Familie (العائلة)."
+          },
+          {
+            "q": "Tante — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Tante (العمة/الخالة)."
+          }
+        ],
+        "interleavedWith": [
+          "bruder",
+          "mutter"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

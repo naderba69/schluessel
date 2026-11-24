@@ -525,14 +525,14 @@ describe("D115 — أدوات القياس", () => {
     const legacyRule = { ...w("sein"), de: "sein ملكيته" };
     expect(wordAppears(legacyRule, toks("Das ist sein Hund."))).toBe(false);
   });
-  it("a1-u8-d4 مُرقّى (D159): صفر نقص — 52 بنداً · 4 أنواع · Quiz 6 · 12 كلمة · ars-dativ-fix · كل 20 سطراً وستة مقاطع كلمات مستخدمة", () => {
+  it("a1-u8-d4 مُرقّى (D159): صفر نقص — 57 بنداً · 5 أنواع · Quiz 6 · 12 كلمة · ars-dativ-fix · كل 20 سطراً وستة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u8-d4")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u8-d4")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([52, 4, 6, 12]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([57, 5, 6, 12]);
     const earlier = new Set(realLessons.filter((x) => x.unit <= 7 || ["a1-u8-d1", "a1-u8-d2", "a1-u8-d3"].includes(x.id)).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     // القاعدة المخططة نفسها (ars-dativ-fix: «الداتيف الثابت mit/nach/aus/zu» في خطة v6.1) — تشاركها ستة دروس لاحقة فـusedInLessons يضمّها كلها (§10‑ح)
@@ -729,12 +729,12 @@ describe("D115 — أدوات القياس", () => {
     expect([...audioIds].sort((a, b) => Number(a.slice(3)) - Number(b.slice(3)))).toEqual(Array.from({ length: 11 }, (_, i) => `ha-${i + 1}`));
     expect(audioIds.every((id) => tracks.has(id))).toBe(true);
   });
-  it("a1-u2-d3 مُرقّى (D127): صفر نقص — 25 بنداً · 4 أنواع (استماع وإملاء من حوار جديد) · Quiz 6 · 16 كلمة · شفرة الجنس", () => {
+  it("a1-u2-d3 مُرقّى (D127): صفر نقص — 27 بنداً · 5 أنواع (استماع وإملاء من حوار جديد) · Quiz 6 · 16 كلمة · شفرة الجنس", () => {
     const l = realLessons.find((x) => x.id === "a1-u2-d3")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u2-d3")!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage }).toEqual({ rule: [], practice: [], quiz: [], coverage: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([25, 4, 6, 16]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([27, 5, 6, 16]);
     // القاعدة المخططة نفسها (ars-genuscode) كُتب ملفها أخيراً — وقاعدتها تكتب اللواحق بشرطة (‑ung · ‑chen) فيمرّرها الحارس (D127)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-genuscode"]);
     expect(loadGrammarRules(CONTENT).get("ars-genuscode")?.payload.ruleDe).toMatch(/‑ung .*‑chen/);
@@ -750,13 +750,13 @@ describe("D115 — أدوات القياس", () => {
     const dictated = l.uebung.stations.filter((s) => s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.a)));
     expect(dictated.join("\n")).not.toMatch(/das Zeitung|die Mädchen|die Schmetterling/);
   });
-  it("a1-u2-d4 مُرقّى (D128): صفر نقص — 29 بنداً · 4 أنواع (استماع وإملاء من حوار جديد) · Quiz 6 · 14 كلمة · طول الحركة", () => {
+  it("a1-u2-d4 مُرقّى (D128): صفر نقص — 31 بنداً · 5 أنواع (استماع وإملاء من حوار جديد) · Quiz 6 · 14 كلمة · طول الحركة", () => {
     const l = realLessons.find((x) => x.id === "a1-u2-d4")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u2-d4")!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([29, 4, 6, 14]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([31, 5, 6, 14]);
     // القاعدة المخططة نفسها (ars-vokalquantitaet) كُتب ملفها أخيراً — وقاعدتها تسمّي الحروف (ss · ff · oo · ie) فيمرّرها الحارس (D128)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-vokalquantitaet"]);
     expect(loadGrammarRules(CONTENT).get("ars-vokalquantitaet")?.payload.ruleDe).toMatch(/lang → ß .*kurz → ss .*oo · h · ie/);
@@ -779,13 +779,13 @@ describe("D115 — أدوات القياس", () => {
     // ما خرج من الأصل: «ai الطويل» في heiß · «au (diphthong)» في groß · leesen · Suppe · heisst
     expect(JSON.stringify(l)).not.toMatch(/ai الطويل|diphthong|leesen|Suppe|heisst/);
   });
-  it("a1-u2-d5 مُرقّى (D130): صفر نقص — 31 بنداً · 4 أنواع (استماع وإملاء من حوار جديد) · Quiz 6 · 15 كلمة · الفعل ثانياً مع الظروف", () => {
+  it("a1-u2-d5 مُرقّى (D130): صفر نقص — 33 بنداً · 5 أنواع (استماع وإملاء من حوار جديد) · Quiz 6 · 15 كلمة · الفعل ثانياً مع الظروف", () => {
     const l = realLessons.find((x) => x.id === "a1-u2-d5")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u2-d5")!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([31, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([33, 5, 6, 15]);
     // القاعدة المخططة نفسها (ars-kennenlernen) كُتب ملفها أخيراً: حرية الظرف مقابل V2 — auch · gern · also بعد الفعل،
     // وNatürlich · Also أولاً ⇒ الفعل ثم الفاعل (توسيع Hier wohne ich من u2-d1) · وvorstellen/kennenlernen قطعتان لا قاعدة الوحدة 7
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-kennenlernen"]);
@@ -810,13 +810,13 @@ describe("D115 — أدوات القياس", () => {
     // ما خرج من الأصل: kennenzulernen (صيغة zu) · Tee (الوحدة 5) · helfe (الوحدة 9) · höre (الوحدة 3)
     expect(JSON.stringify(l)).not.toMatch(/kennenzulernen|Tee\b|helfe|höre/);
   });
-  it("a1-u3-d1 مُرقّى (D131): صفر نقص — 35 بنداً · 4 أنواع (حوار جديد + أعداد مسموعة) · Quiz 6 · 14 كلمة · العشرات والمركّب", () => {
+  it("a1-u3-d1 مُرقّى (D131): صفر نقص — 38 بنداً · 5 أنواع (حوار جديد + أعداد مسموعة) · Quiz 6 · 14 كلمة · العشرات والمركّب", () => {
     const l = realLessons.find((x) => x.id === "a1-u3-d1")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u3-d1")!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([35, 4, 6, 14]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([38, 5, 6, 14]);
     // القاعدة المخططة نفسها (ars-zahlen-100) كُتب ملفها أخيراً: العشرات واستثناءاتها الثلاثة + المركّب الآحاد ثم und ثم العشرات
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-zahlen-100"]);
     const rule = loadGrammarRules(CONTENT).get("ars-zahlen-100")!;
@@ -843,13 +843,13 @@ describe("D115 — أدوات القياس", () => {
     const shown = [l.uebung.stations.map((s) => s.items), l.quiz, l.zusammenfassung.summary, l.zusammenfassung.warningCards, l.einstieg];
     expect(JSON.stringify(shown)).not.toMatch(/twenty|zwanzigeins|dreissig|Euro|Minuten|Zweimal/);
   });
-  it("a1-u3-d2 مُرقّى (D132): صفر نقص — 35 بنداً · 4 أنواع (حوار جديد + أعداد وأسعار مسموعة) · Quiz 6 · 15 كلمة · المئات والأسعار", () => {
+  it("a1-u3-d2 مُرقّى (D132): صفر نقص — 37 بنداً · 5 أنواع (حوار جديد + أعداد وأسعار مسموعة) · Quiz 6 · 15 كلمة · المئات والأسعار", () => {
     const l = realLessons.find((x) => x.id === "a1-u3-d2")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u3-d2")!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([35, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([37, 5, 6, 15]);
     // القاعدة المخططة نفسها (ars-preis-1000) كُتب ملفها أخيراً: المئات أولاً ثم الباقي · kosten بلا حرف جر · nur قبل العدد
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-preis-1000"]);
     const rule = loadGrammarRules(CONTENT).get("ars-preis-1000")!;
@@ -874,13 +874,13 @@ describe("D115 — أدوات القياس", () => {
     const shown = [l.uebung.stations.map((s) => s.items), l.quiz, l.zusammenfassung.summary, l.zusammenfassung.warningCards, l.einstieg];
     expect(JSON.stringify(shown)).not.toMatch(/bezahlen für|bezahle für|das Euro|Wie Geld|Brot/);
   });
-  it("a1-u3-d3 مُرقّى (D133): صفر نقص — 35 بنداً · 4 أنواع (حوار جديد + أوقات مسموعة) · Quiz 6 · 15 كلمة · الساعة", () => {
+  it("a1-u3-d3 مُرقّى (D133): صفر نقص — 38 بنداً · 5 أنواع (حوار جديد + أوقات مسموعة) · Quiz 6 · 15 كلمة · الساعة", () => {
     const l = realLessons.find((x) => x.id === "a1-u3-d3")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u3-d3")!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([35, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([38, 5, 6, 15]);
     // القاعدة المخططة نفسها (ars-uhrzeit) كُتب ملفها أخيراً: halb للساعة التالية · Viertel nach/vor كالعربية · Uhr/Stunde · um للموعد
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-uhrzeit"]);
     const rule = loadGrammarRules(CONTENT).get("ars-uhrzeit")!;
@@ -904,13 +904,13 @@ describe("D115 — أدوات القياس", () => {
     const dictated = l.uebung.stations.filter((s) => s.type === "dictation").flatMap((s) => s.items.map((i) => String(i.a)));
     expect(dictated.join("\n")).not.toMatch(/ş/);
   });
-  it("a1-u3-d4 مُرقّى (D134): صفر نقص — 34 بنداً · 4 أنواع (حوار جديد + مواعيد مسموعة) · Quiz 6 · 16 كلمة · um/am/im", () => {
+  it("a1-u3-d4 مُرقّى (D134): صفر نقص — 37 بنداً · 5 أنواع (حوار جديد + مواعيد مسموعة) · Quiz 6 · 16 كلمة · um/am/im", () => {
     const l = realLessons.find((x) => x.id === "a1-u3-d4")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u3-d4")!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([34, 4, 6, 16]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([37, 5, 6, 16]);
     // القاعدة المخططة نفسها (ars-um-am-im) كُتب ملفها أخيراً: um/am/im · اليوم قبل الساعة · es الشكلي · sich treffen
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-um-am-im"]);
     const rule = loadGrammarRules(CONTENT).get("ars-um-am-im")!;
@@ -937,13 +937,13 @@ describe("D115 — أدوات القياس", () => {
     const lis = l.uebung.stations.find((s) => s.type === "listening")!.items as { audioId: string; choices: string[]; a: string }[];
     expect(lis.find((i) => i.audioId === "tr-2")).toMatchObject({ a: "الأحد 2:30", choices: expect.arrayContaining(["الأحد 3:30"]) });
   });
-  it("a1-u3-d5 مُرقّى (D135): صفر نقص — 35 بنداً · 4 أنواع (حوار وأرقام/أوقات مسموعة) · Quiz 6 · 15 كلمة · طلب الإعادة", () => {
+  it("a1-u3-d5 مُرقّى (D135): صفر نقص — 39 بنداً · 5 أنواع (حوار وأرقام/أوقات مسموعة) · Quiz 6 · 15 كلمة · طلب الإعادة", () => {
     const l = realLessons.find((x) => x.id === "a1-u3-d5")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u3-d5")!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([35, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([39, 5, 6, 15]);
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-hoeren-zahlen"]);
     expect(e.properNouns).toEqual(["Yusuf", "Ayşe"]);
     expect(l.warmup.cardIds).toEqual(["uhr", "zwanzig", "telefonnummer"]);
@@ -966,13 +966,13 @@ describe("D115 — أدوات القياس", () => {
     // N-053: NetworkLab يعرض Kollokation الكلمة؛ لا نسرّب bekommen غير المدروسة في درسها الأول.
     expect(words.find((w) => w.id === "anruf")!.kollocation).toEqual({ de: "Der Anruf kommt.", ar: "تأتي المكالمة.", verb: "kommen" });
   });
-  it("a1-u4-d1 مُرقّى (D136): صفر نقص — 39 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · كل 20 سطراً و3 أصوات كلمات مستخدمة", () => {
+  it("a1-u4-d1 مُرقّى (D136): صفر نقص — 41 بنداً · 5 أنواع · Quiz 6 · 15 كلمة · كل 20 سطراً و3 أصوات كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u4-d1")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u4-d1")!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([39, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([41, 5, 6, 15]);
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-familie"]);
     expect(l.ziel.de).toBe("Wer sind das? — Das sind die Großeltern.");
     expect(e.properNouns).toEqual([]); // الحوار تمرين في أسرة مرسومة خيالية، لا يثبت قرابة شخصية ليوسف أو Ayşe.
@@ -1004,13 +1004,13 @@ describe("D115 — أدوات القياس", () => {
     const meta = [l.ziel.de, l.uebung.communicativeTask.goal.de, l.uebung.communicativeTask.situation.de, l.zusammenfassung.summary.de];
     expect(meta.flatMap((text) => frontViolations([text], taught, new Set(e.properNouns)))).toEqual([]);
   });
-  it("a1-u4-d2 مُرقّى (D137): صفر نقص — 35 بنداً · 4 أنواع · Quiz 6 · 13 كلمة · ars-possessiv · كل 17 سطراً و3 أصوات كلمات مستخدمة", () => {
+  it("a1-u4-d2 مُرقّى (D137): صفر نقص — 39 بنداً · 5 أنواع · Quiz 6 · 13 كلمة · ars-possessiv · كل 17 سطراً و3 أصوات كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u4-d2")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u4-d2")!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([35, 4, 6, 13]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([39, 5, 6, 13]);
     // القاعدة المخططة نفسها (ars-possessiv) كُتب ملفها أخيراً: الجذع من المالك · ‑e من أداة المملوك (die والجمع) · Das gehört mir
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-possessiv"]);
     const rule = loadGrammarRules(CONTENT).get("ars-possessiv")!;
@@ -1056,13 +1056,13 @@ describe("D115 — أدوات القياس", () => {
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
     expect(frontViolations([l.uebung.communicativeTask.situation.de], taught, new Set())).toEqual(["lena", "yusuf"]); // بلا الإعلان تُمسك
   });
-  it("a1-u4-d3 مُرقّى (D138): صفر نقص — 38 بنداً · 4 أنواع · Quiz 6 · 14 كلمة · ars-akkusativ-1 · كل 18 سطراً و3 أصوات كلمات مستخدمة", () => {
+  it("a1-u4-d3 مُرقّى (D138): صفر نقص — 42 بنداً · 5 أنواع · Quiz 6 · 14 كلمة · ars-akkusativ-1 · كل 18 سطراً و3 أصوات كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u4-d3")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u4-d3")!;
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules: loadGrammarRules(CONTENT) });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([38, 4, 6, 14]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([42, 5, 6, 14]);
     // القاعدة المخططة نفسها (ars-akkusativ-1) كُتب ملفها أخيراً: المذكر وحده بـ‑n (den · einen · meinen) · بعد ist لا مفعول · Wer/Wen
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-akkusativ-1"]);
     const rule = loadGrammarRules(CONTENT).get("ars-akkusativ-1")!;
@@ -1112,14 +1112,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u4-d4 مُرقّى (D139): صفر نقص — 40 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-akkusativ-2 · كل 20 سطراً وصوتا كلمتين مستخدمة", () => {
+  it("a1-u4-d4 مُرقّى (D139): صفر نقص — 44 بنداً · 5 أنواع · Quiz 6 · 15 كلمة · ars-akkusativ-2 · كل 20 سطراً وصوتا كلمتين مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u4-d4")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u4-d4")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([40, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([44, 5, 6, 15]);
     // القاعدة المخططة نفسها (ars-akkusativ-2): الجواب بضمير (المذكر وحده ← ihn) · Wen?/Was? أولاً · stehen/sitzen بلا مفعول
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-akkusativ-2"]);
     const rule = rules.get("ars-akkusativ-2")!;
@@ -1179,14 +1179,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u4-d5 مُرقّى (D140): صفر نقص — 37 بنداً · 4 أنواع · Quiz 6 · 14 كلمة · ars-familie-mix · كل 17 سطراً وصوتا كلمتين مستخدمة", () => {
+  it("a1-u4-d5 مُرقّى (D140): صفر نقص — 41 بنداً · 5 أنواع · Quiz 6 · 14 كلمة · ars-familie-mix · كل 17 سطراً وصوتا كلمتين مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u4-d5")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u4-d5")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([37, 4, 6, 14]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([41, 5, 6, 14]);
     // القاعدة المخططة نفسها (ars-familie-mix): الجذع من المالك (sein · ihr) والنهاية من المملوك ودوره (Ø · ‑e · ‑en)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-familie-mix"]);
     const rule = rules.get("ars-familie-mix")!;
@@ -1253,14 +1253,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u9-d1 مُرقّى (D161): صفر نقص — 55 بنداً · 4 أنواع · Quiz 6 · 18 كلمة · ars-stadt-ort · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
+  it("a1-u9-d1 مُرقّى (D161): صفر نقص — 60 بنداً · 5 أنواع · Quiz 6 · 18 كلمة · ars-stadt-ort · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u9-d1")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u9-d1")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([55, 4, 6, 18]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([60, 5, 6, 18]);
     // hier/dort مكررتان من u2-d1 بإعادة بناء مقصودة (D68) — وما عداهما جديد
     const earlier = new Set(realLessons.filter((x) => x.unit <= 8).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual(["hier", "dort"]);
@@ -1346,14 +1346,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u9-d2 مُرقّى (D162): صفر نقص — 52 بنداً · 4 أنواع · Quiz 6 · 17 كلمة · ars-weg-verkehr · كل 20 سطراً وأربعة مقاطع كلمات مستخدمة", () => {
+  it("a1-u9-d2 مُرقّى (D162): صفر نقص — 57 بنداً · 5 أنواع · Quiz 6 · 17 كلمة · ars-weg-verkehr · كل 20 سطراً وأربعة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u9-d2")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u9-d2")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([52, 4, 6, 17]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([57, 5, 6, 17]);
     // الكلمات السبع عشرة كلها جديدة (لا تكرار من الوحدات 1–8 ولا من u9-d1)
     const earlier = new Set(realLessons.filter((x) => x.unit <= 8 || (x.unit === 9 && x.day === 1)).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
@@ -3081,14 +3081,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u9-d5 مُرقّى (D165): صفر نقص — 58 بنداً · 4 أنواع · Quiz 6 · 11 كلمة · ars-satzklammer + ars-tekamolo (جديدتان) · نواة andere/weiter/halten/die Polizei/die Stelle · كل 20 سطراً وتسعة مقاطع كلمات مستخدمة", () => {
+  it("a1-u9-d5 مُرقّى (D165): صفر نقص — 63 بنداً · 5 أنواع · Quiz 6 · 11 كلمة · ars-satzklammer + ars-tekamolo (جديدتان) · نواة andere/weiter/halten/die Polizei/die Stelle · كل 20 سطراً وتسعة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u9-d5")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u9-d5")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([58, 4, 6, 11]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([63, 5, 6, 11]);
     // الكلمات الإحدى عشرة كلها جديدة (لا تكرار من الوحدات 1–8 ولا من u9-d1..d4) — والنواة الخمس (D113) في آخر القائمة
     const earlier = new Set(realLessons.filter((x) => x.unit <= 8 || (x.unit === 9 && x.day <= 4)).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
@@ -3187,14 +3187,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u9-d4 مُرقّى (D164): صفر نقص — 57 بنداً · 4 أنواع · Quiz 6 · 14 كلمة · ars-wechselpraep (جديدة) + ars-imperativ-sie · نواة auf sein/zu sein · كل 20 سطراً وثمانية مقاطع كلمات مستخدمة", () => {
+  it("a1-u9-d4 مُرقّى (D164): صفر نقص — 62 بنداً · 5 أنواع · Quiz 6 · 14 كلمة · ars-wechselpraep (جديدة) + ars-imperativ-sie · نواة auf sein/zu sein · كل 20 سطراً وثمانية مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u9-d4")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u9-d4")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([57, 4, 6, 14]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([62, 5, 6, 14]);
     // الكلمات الأربع عشرة كلها جديدة (لا تكرار من الوحدات 1–8 ولا من u9-d1..d3) — والنواة (D113) في آخر القائمة
     const earlier = new Set(realLessons.filter((x) => x.unit <= 8 || (x.unit === 9 && x.day <= 3)).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
@@ -3280,14 +3280,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u9-d3 مُرقّى (D163): صفر نقص — 53 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-imperativ-sie (جديدة) + ars-weg-verkehr · نواة bitten/erklären/die Hilfe · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
+  it("a1-u9-d3 مُرقّى (D163): صفر نقص — 58 بنداً · 5 أنواع · Quiz 6 · 15 كلمة · ars-imperativ-sie (جديدة) + ars-weg-verkehr · نواة bitten/erklären/die Hilfe · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u9-d3")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u9-d3")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([53, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([58, 5, 6, 15]);
     // الكلمات الست عشرة كلها جديدة (لا تكرار من الوحدات 1–8 ولا من u9-d1..d2) — والنواة الثلاث (D113) في آخر القائمة
     const earlier = new Set(realLessons.filter((x) => x.unit <= 8 || (x.unit === 9 && x.day <= 2)).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
@@ -3383,14 +3383,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u8-d5 مُرقّى (D160): صفر نقص — 56 بنداً · 4 أنواع · Quiz 6 · 18 كلمة (D421: +stimmt المُسجَّلة من الحوار!) · ars-von-seit-bei · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
+  it("a1-u8-d5 مُرقّى (D160): صفر نقص — 61 بنداً · 5 أنواع · Quiz 6 · 18 كلمة (D421: +stimmt المُسجَّلة من الحوار!) · ars-von-seit-bei · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u8-d5")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u8-d5")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([56, 4, 6, 18]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([61, 5, 6, 18]);
     const earlier = new Set(realLessons.filter((x) => x.unit <= 7 || ["a1-u8-d1", "a1-u8-d2", "a1-u8-d3", "a1-u8-d4"].includes(x.id)).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     // القاعدة المخططة نفسها (ars-von-seit-bei: «von/seit/bei + مهمة: في المتجر» في خطة v6.1) — تشاركها u8-d6 (توليف) فـusedInLessons يضمّهما (§10‑ح)
@@ -3475,14 +3475,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u5-d1 مُرقّى (D141): صفر نقص — 38 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-essen · كل 18 سطراً وصوتا كلمتين مستخدمة", () => {
+  it("a1-u5-d1 مُرقّى (D141): صفر نقص — 41 بنداً · 5 أنواع · Quiz 6 · 15 كلمة · ars-essen · كل 18 سطراً وصوتا كلمتين مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u5-d1")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u5-d1")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([38, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([41, 5, 6, 15]);
     // القاعدة المخططة نفسها (ars-essen): ما لا يُعدّ بلا أداة · الواحد المعدود ein/einen · الجمع بلا أداة · المحدد der/die/das
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-essen"]);
     const rule = rules.get("ars-essen")!;
@@ -3558,14 +3558,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u5-d2 مُرقّى (D142): صفر نقص — 40 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-trinken · كل 20 سطراً وصوتا كلمتين مستخدمة", () => {
+  it("a1-u5-d2 مُرقّى (D142): صفر نقص — 44 بنداً · 5 أنواع · Quiz 6 · 15 كلمة · ars-trinken · كل 20 سطراً وصوتا كلمتين مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u5-d2")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u5-d2")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([40, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([44, 5, 6, 15]);
     // القاعدة المخططة نفسها (ars-trinken — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط): المطلوب مفعول به · الوعاء ثم المشروب بلا von
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-trinken"]);
     const rule = rules.get("ars-trinken")!;
@@ -3643,14 +3643,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u5-d3 مُرقّى (D143): صفر نقص — 40 بنداً · 4 أنواع · Quiz 6 · 13 كلمة · ars-moechte-wollen · كل 20 سطراً وصوتا كلمتين مستخدمة", () => {
+  it("a1-u5-d3 مُرقّى (D143): صفر نقص — 44 بنداً · 5 أنواع · Quiz 6 · 13 كلمة · ars-moechte-wollen · كل 20 سطراً وصوتا كلمتين مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u5-d3")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u5-d3")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([40, 4, 6, 13]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([44, 5, 6, 13]);
     // القاعدة المخططة نفسها (ars-moechte-wollen — أشار إليها grammarArsenalIds في d3 وd5 وd6 ولم يُكتب لها ملف قط) فتُفهرس في الثلاثة
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-moechte-wollen"]);
     const rule = rules.get("ars-moechte-wollen")!;
@@ -3727,14 +3727,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u5-d4 مُرقّى (D144): صفر نقص — 40 بنداً · 4 أنواع · Quiz 6 · 14 كلمة · ars-kein-nicht · كل 20 سطراً وصوتا كلمتين مستخدمة", () => {
+  it("a1-u5-d4 مُرقّى (D144): صفر نقص — 44 بنداً · 5 أنواع · Quiz 6 · 14 كلمة · ars-kein-nicht · كل 20 سطراً وصوتا كلمتين مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u5-d4")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u5-d4")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([40, 4, 6, 14]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([44, 5, 6, 14]);
     // القاعدة المخططة نفسها (ars-kein-nicht — أشار إليها grammarArsenalIds في d4 وd5 وd6 ولم يُكتب لها ملف قط) فتُفهرس في الثلاثة
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-kein-nicht"]);
     const rule = rules.get("ars-kein-nicht")!;
@@ -3800,14 +3800,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u5-d5 مُرقّى (D145): صفر نقص — 40 بنداً · 4 أنواع · Quiz 6 · 17 كلمة · قاعدة يومه الخاصة ars-kein-nicht-2 · كل 20 سطراً وصوتا كلمتين مستخدمة", () => {
+  it("a1-u5-d5 مُرقّى (D145): صفر نقص — 44 بنداً · 5 أنواع · Quiz 6 · 17 كلمة · قاعدة يومه الخاصة ars-kein-nicht-2 · كل 20 سطراً وصوتا كلمتين مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u5-d5")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u5-d5")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([40, 4, 6, 17]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([44, 5, 6, 17]);
     // كان يشير إلى قاعدتي d3/d4 وحدهما (الحارس راضٍ بلا قاعدة يوم ذات اكتشاف) — صار بقاعدته الخاصة: التمييز بالنظر إلى ما قبل الاسم
     // (وفاءٌ بحدّ D144 «nicht مع المعرّف والملكية … في الدرس القادم») وخرج d5 من فهرس القاعدتين
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-kein-nicht-2"]);
@@ -3868,14 +3868,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u6-d1 مُرقّى (D146): صفر نقص — 41 بنداً · 4 أنواع · Quiz 6 · 13 كلمة · ars-plural-umlaut · كل 20 سطراً وثلاثة مقاطع كلمات مستخدمة", () => {
+  it("a1-u6-d1 مُرقّى (D146): صفر نقص — 46 بنداً · 5 أنواع · Quiz 6 · 13 كلمة · ars-plural-umlaut · كل 20 سطراً وثلاثة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u6-d1")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u6-d1")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([41, 4, 6, 13]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([46, 5, 6, 13]);
     // القاعدة المخططة نفسها (ars-plural-umlaut — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط): الجمع يُحفظ مع الكلمة وله خمسة أنماط
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-plural-umlaut"]);
     const rule = rules.get("ars-plural-umlaut")!;
@@ -3944,14 +3944,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u6-d2 مُرقّى (D147): صفر نقص — 40 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-komposita-genus · كل 20 سطراً ومقطعا كلمتين مستخدمة", () => {
+  it("a1-u6-d2 مُرقّى (D147): صفر نقص — 45 بنداً · 5 أنواع · Quiz 6 · 15 كلمة · ars-komposita-genus · كل 20 سطراً ومقطعا كلمتين مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u6-d2")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u6-d2")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([40, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([45, 5, 6, 15]);
     // القاعدة المخططة نفسها (ars-komposita-genus — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط): آخر جزء هو الأصل
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-komposita-genus"]);
     const rule = rules.get("ars-komposita-genus")!;
@@ -4040,14 +4040,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u6-d3 مُرقّى (D148): صفر نقص — 42 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-es-gibt · كل 20 سطراً وأربعة مقاطع كلمات مستخدمة", () => {
+  it("a1-u6-d3 مُرقّى (D148): صفر نقص — 47 بنداً · 5 أنواع · Quiz 6 · 15 كلمة · ars-es-gibt · كل 20 سطراً وأربعة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u6-d3")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u6-d3")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([42, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([47, 5, 6, 15]);
     // القاعدة المخططة نفسها (ars-es-gibt — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط) · وتوليف u6-d6 يشير إليها أيضاً (سابقة ars-kein-nicht)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-es-gibt"]);
     const rule = rules.get("ars-es-gibt")!;
@@ -4127,14 +4127,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u6-d4 مُرقّى (D149): صفر نقص — 44 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-wo-wohin · كل 20 سطراً وستة مقاطع كلمات مستخدمة", () => {
+  it("a1-u6-d4 مُرقّى (D149): صفر نقص — 49 بنداً · 5 أنواع · Quiz 6 · 15 كلمة · ars-wo-wohin · كل 20 سطراً وستة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u6-d4")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u6-d4")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([44, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([49, 5, 6, 15]);
     // القاعدة المخططة نفسها (ars-wo-wohin — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط) · وتوليف u6-d6 يشير إليها أيضاً (سابقة ars-es-gibt)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-wo-wohin"]);
     const rule = rules.get("ars-wo-wohin")!;
@@ -4221,14 +4221,14 @@ describe("D115 — أدوات القياس", () => {
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
     for (const [word, t] of [["wohin", "ww-2"], ["okay", "ww-3"], ["Tunesien", "ww-11"]] as const) expect(lex.entries.find((x) => x.word === word)!.regeneratedTracks).toContain(t);
   });
-  it("a1-u6-d5 مُرقّى (D150): صفر نقص — 43 بنداً · 4 أنواع · Quiz 6 · 18 كلمة · ars-da-komposita · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
+  it("a1-u6-d5 مُرقّى (D150): صفر نقص — 48 بنداً · 5 أنواع · Quiz 6 · 18 كلمة · ars-da-komposita · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u6-d5")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u6-d5")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([43, 4, 6, 18]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([48, 5, 6, 18]);
     // القاعدة المخططة نفسها (ars-da-komposita — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط) · وتوليف u6-d6 يشير إليها أيضاً (سابقة ars-wo-wohin)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-da-komposita"]);
     const rule = rules.get("ars-da-komposita")!;
@@ -4320,14 +4320,14 @@ describe("D115 — أدوات القياس", () => {
     expect(lex.entries.find((x) => x.word === "Handtuch")).toMatchObject({ forms: [{ espeak: "hˈanttˌʊx", ipa: "hˈanttˌuːx" }], regeneratedTracks: ["word-handtuch"] });
     expect(lex.entries.find((x) => x.word === "dazwischen")!.forms).toEqual([{ espeak: "dˈatsvɪʃən", ipa: "dɑːtsvˈɪʃən" }]);
   });
-  it("a1-u7-d1 مُرقّى (D151): صفر نقص — 43 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-tagesablauf · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
+  it("a1-u7-d1 مُرقّى (D151): صفر نقص — 48 بنداً · 5 أنواع · Quiz 6 · 15 كلمة · ars-tagesablauf · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u7-d1")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u7-d1")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([43, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([48, 5, 6, 15]);
     // القاعدة المخططة نفسها (ars-tagesablauf — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط) · وتوليف u7-d6 لا يشير إليها (ars-trennbare وأخواتها)
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-tagesablauf"]);
     const rule = rules.get("ars-tagesablauf")!;
@@ -4413,14 +4413,14 @@ describe("D115 — أدوات القياس", () => {
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
     expect(lex.entries.find((x) => x.word === "Kurs")!.regeneratedTracks).toContain("mo-17");
   });
-  it("a1-u7-d2 مُرقّى (D152): صفر نقص — 46 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-gern-lieber · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
+  it("a1-u7-d2 مُرقّى (D152): صفر نقص — 51 بنداً · 5 أنواع · Quiz 6 · 15 كلمة · ars-gern-lieber · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u7-d2")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u7-d2")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([46, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([51, 5, 6, 15]);
     // القاعدة المخططة نفسها (ars-gern-lieber — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط) · وتوليف u7-d6 لا يشير إليها
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-gern-lieber"]);
     const rule = rules.get("ars-gern-lieber")!;
@@ -4513,14 +4513,14 @@ describe("D115 — أدوات القياس", () => {
     expect(entryOf("Hobbys").forms).toEqual([{ espeak: "hˈɔbyːs", ipa: "hˈɔbiːs" }]);
     expect(entryOf("Hobbys").regeneratedTracks).toEqual(["fz-1", "fz-20"]);
   });
-  it("a1-u7-d3 مُرقّى (D153): صفر نقص — 47 بنداً · 4 أنواع · Quiz 6 · 15 كلمة · ars-praesens-regelm · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
+  it("a1-u7-d3 مُرقّى (D153): صفر نقص — 51 بنداً · 5 أنواع · Quiz 6 · 15 كلمة · ars-praesens-regelm · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u7-d3")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u7-d3")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([47, 4, 6, 15]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([51, 5, 6, 15]);
     // القاعدة المخططة نفسها (ars-praesens-regelm — أشار إليها grammarArsenalIds ولم يُكتب لها ملف قط) · وتوليف u7-d6 يشير إليها أيضاً فهي في usedInLessons
     expect(l.praesentation.grammarArsenalIds).toEqual(["ars-praesens-regelm"]);
     const rule = rules.get("ars-praesens-regelm")!;
@@ -4616,14 +4616,14 @@ describe("D115 — أدوات القياس", () => {
     expect(entryOf("ruft").forms).toEqual([{ espeak: "rˈʊft", ipa: "rˈuːft" }]);
     expect(entryOf("ruft").regeneratedTracks).toEqual(expect.arrayContaining(["pr-15"])); // D154: + zg-9
   });
-  it("a1-u7-d4 مُرقّى (D154): صفر نقص — 48 بنداً · 4 أنواع · Quiz 6 · 14 كلمة · ars-praesens-unregelm · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
+  it("a1-u7-d4 مُرقّى (D154): صفر نقص — 53 بنداً · 5 أنواع · Quiz 6 · 14 كلمة · ars-praesens-unregelm · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u7-d4")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u7-d4")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([48, 4, 6, 14]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([53, 5, 6, 14]);
     // sprechen خرجت من «الجديد»: مُدرَّسة منذ a1-u1-d2 (N-018 — كـstrasse في D128 وkurz في D140) · ولا كلمة من درس سابق تُعرض جديدة
     expect(l.praesentation.wordIds).not.toContain("sprechen");
     const earlier = new Set(realLessons.filter((x) => x.unit <= 6 || ["a1-u7-d1", "a1-u7-d2", "a1-u7-d3"].includes(x.id)).flatMap((x) => x.praesentation.wordIds));
@@ -4723,14 +4723,14 @@ describe("D115 — أدوات القياس", () => {
     expect(entryOf("schläft").forms).toEqual([{ espeak: "ʃlˈɛft", ipa: "ʃlˈɛːft" }]);
     expect(entryOf("schläft").regeneratedTracks).toEqual(["zg-3", "fs-7"]); // D204: «Es schläft viel.»
   });
-  it("a1-u7-d5 مُرقّى (D155): صفر نقص — 49 بنداً · 4 أنواع · Quiz 6 · 17 كلمة · ars-trennbare · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
+  it("a1-u7-d5 مُرقّى (D155): صفر نقص — 54 بنداً · 5 أنواع · Quiz 6 · 17 كلمة · ars-trennbare · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u7-d5")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u7-d5")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([49, 4, 6, 17]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([54, 5, 6, 17]);
     const earlier = new Set(realLessons.filter((x) => x.unit <= 6 || ["a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4"].includes(x.id)).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     // القاعدة المخططة نفسها (ars-trennbare — «Trennbare (الإدخال)» في الخطة اليومية) · وتوليف u7-d6 يشير إليها فهي في usedInLessons
@@ -4816,14 +4816,14 @@ describe("D115 — أدوات القياس", () => {
     const lex = JSON.parse(readFileSync(join(CONTENT, "..", "tools/pronunciation-lexicon.json"), "utf8")) as { entries: { word: string; regeneratedTracks: string[] }[] };
     expect(lex.entries.find((x) => x.word === "Tunesien")!.regeneratedTracks).toEqual(expect.arrayContaining(["hh-16", "hh-19"]));
   });
-  it("a1-u8-d1 مُرقّى (D156): صفر نقص — 48 بنداً · 4 أنواع · Quiz 6 · 14 كلمة · ars-kleidung-genus · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
+  it("a1-u8-d1 مُرقّى (D156): صفر نقص — 53 بنداً · 5 أنواع · Quiz 6 · 14 كلمة · ars-kleidung-genus · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u8-d1")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u8-d1")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([48, 4, 6, 14]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([53, 5, 6, 14]);
     const earlier = new Set(realLessons.filter((x) => x.unit <= 7).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     // القاعدة المخططة نفسها (ars-kleidung-genus) — وتوليف u8-d6 لا يشير إليها (يشير إلى ars-dativ-fix وأخواتها) فـusedInLessons [u8-d1] وحده
@@ -4909,14 +4909,14 @@ describe("D115 — أدوات القياس", () => {
     expect(lex.entries.find((x) => x.word === "Tunesien")!.regeneratedTracks).toContain("kl-4");
     expect(lex.entries.find((x) => x.word === "Pullover")!.regeneratedTracks).toContain("kl-6");
   });
-  it("a1-u8-d2 مُرقّى (D157): صفر نقص — 48 بنداً · 4 أنواع · Quiz 6 · 14 كلمة · ars-preise · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
+  it("a1-u8-d2 مُرقّى (D157): صفر نقص — 53 بنداً · 5 أنواع · Quiz 6 · 14 كلمة · ars-preise · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u8-d2")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u8-d2")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([48, 4, 6, 14]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([53, 5, 6, 14]);
     const earlier = new Set(realLessons.filter((x) => x.unit <= 7 || x.id === "a1-u8-d1").flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     // القاعدة المخططة نفسها (ars-preise) — لا تكرار لقاعدة الأسعار حتى الألف (ars-preis-1000 · u3-d2): هذه عن السؤال والحكم والسنتات
@@ -5006,14 +5006,14 @@ describe("D115 — أدوات القياس", () => {
     const names = new Set(e.properNouns.flatMap((n) => contentTokens(n)));
     expect(meta.flatMap((text) => frontViolations([text], taught, names))).toEqual([]);
   });
-  it("a1-u8-d3 مُرقّى (D158): صفر نقص — 50 بنداً · 4 أنواع · Quiz 6 · 13 كلمة · ars-koennen-muessen · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
+  it("a1-u8-d3 مُرقّى (D158): صفر نقص — 55 بنداً · 5 أنواع · Quiz 6 · 13 كلمة · ars-koennen-muessen · كل 20 سطراً وخمسة مقاطع كلمات مستخدمة", () => {
     const l = realLessons.find((x) => x.id === "a1-u8-d3")!;
     const e = loadUpgradePlans(CONTENT)[0]!.lessons.find((x) => x.lessonId === "a1-u8-d3")!;
     const rules = loadGrammarRules(CONTENT);
     const r = inspectLesson(l, e, { lessons: realLessons, words, tracks, rules });
     expect({ rule: r.rule, practice: r.practice, quiz: r.quiz, coverage: r.coverage, misspellings: r.misspellings })
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], misspellings: [] });
-    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([50, 4, 6, 13]);
+    expect([r.practiceItems, r.practiceTypes.length, r.quizMin, l.praesentation.wordIds.length]).toEqual([55, 5, 6, 13]);
     const earlier = new Set(realLessons.filter((x) => x.unit <= 7 || ["a1-u8-d1", "a1-u8-d2"].includes(x.id)).flatMap((x) => x.praesentation.wordIds));
     expect(l.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
     // القاعدة المخططة نفسها (ars-koennen-muessen) — تشاركها u8-d6 (توليف) فـusedInLessons يضمّهما (§10‑ح)
@@ -5181,10 +5181,13 @@ describe("D194 — مرور التوليف الثاني (N-004 · قرار ال�
       .toEqual({ rule: [], practice: [], quiz: [], coverage: [], meta: [], misspellings: [] });
     expect([e.rule, e.practice, e.quiz]).toEqual(["done", "done", "done"]);
     expect(l.kind).toBe("integration");
-    // توليف: لا كلمة جديدة إلا الجسيمان القديمان · 4 أنواع منها error-hunt (أول استعمال له — مصائد الأسبوع تُصطاد لا تُقرأ) · Quiz 3×6 بعتبة 75%
+    // توليف: لا كلمة جديدة إلا الجسيمان القديمان · 5 أنواع منها error-hunt (أول استعمال له — مصائد الأسبوع تُصطاد لا تُقرأ) ومدرّب الجنس (D582) · Quiz 3×6 بعتبة 75%
     expect(l.praesentation.wordIds).toHaveLength(words_n); // u8-d6: 2 + سبعة ألوان (D190 · قرار المالك D182 N-107)
     expect(l.praesentation.grammarArsenalIds).toHaveLength(rules_n);
-    expect(r.practiceTypes.sort()).toEqual(["dictation", "error-hunt", "gap-fill", "listening"]);
+    // الأنواع الأساسية الأربعة دائماً + مدرّب الجنس (D582) حيث توجد محطته — بلا إضعاف: القائمة تُطابق تماماً
+    const expectedTypes = ["dictation", "error-hunt", "gap-fill", "listening"];
+    if (l.uebung.stations.some((s) => s.type === "gender-drill")) expectedTypes.push("gender-drill");
+    expect(r.practiceTypes.sort()).toEqual(expectedTypes.sort());
     expect(r.practiceItems).toBeGreaterThanOrEqual(28);
     expect(r.quizMin).toBe(6);
     for (const v of l.quiz.variants) expect(v.passingScore).toBe(0.75);

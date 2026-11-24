@@ -333,6 +333,60 @@
           "schluessel"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Stuhl — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Stuhl (كرسي)."
+          },
+          {
+            "q": "Fernseher — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "‑er قد تدل على der (للأشخاص والفعّالات غالباً): der Fernseher — والقاعدة النهائية: احفظ الأداة مع الكلمة. المعنى: تلفاز."
+          },
+          {
+            "q": "Zimmer — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "النهاية (‑er) لا تحسم هنا — احفظ الأداة مع الكلمة: das Zimmer (غرفة)."
+          },
+          {
+            "q": "خمّن الجمع: der Stuhl",
+            "choices": [
+              "die Stühle",
+              "die Fernseher",
+              "die Zimmer"
+            ],
+            "a": "die Stühle",
+            "gender": "der",
+            "why": "جمع der Stuhl هو die Stühle. umlaut + e: Stühle (مثل Gäste — العائلة الثالثة)"
+          }
+        ],
+        "interleavedWith": [
+          "stuhl",
+          "fernseher"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

@@ -608,6 +608,71 @@
           "morgen"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Stadt — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Stadt (المدينة)."
+          },
+          {
+            "q": "Bahnhof — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Bahnhof (محطة القطار)."
+          },
+          {
+            "q": "Kirche — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Kirche (كنيسة)."
+          },
+          {
+            "q": "Krankenhaus — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Krankenhaus (مستشفى)."
+          },
+          {
+            "q": "خمّن الجمع: die Stadt",
+            "choices": [
+              "die Städte",
+              "die Bahnhöfe",
+              "die Kirchen"
+            ],
+            "a": "die Städte",
+            "gender": "die",
+            "why": "جمع die Stadt هو die Städte. ä + e (كسر الجذر ثم e)"
+          }
+        ],
+        "interleavedWith": [
+          "stadt",
+          "bahnhof"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

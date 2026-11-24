@@ -540,6 +540,71 @@
           "putzen"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Vater — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "‑er قد تدل على der (للأشخاص والفعّالات غالباً): der Vater — والقاعدة النهائية: احفظ الأداة مع الكلمة. المعنى: الأب."
+          },
+          {
+            "q": "Auto — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Auto (السيارة)."
+          },
+          {
+            "q": "Fahrkarte — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Fahrkarte (تذكرة)."
+          },
+          {
+            "q": "Bahnhof — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Bahnhof (محطة القطار)."
+          },
+          {
+            "q": "خمّن الجمع: der Vater",
+            "choices": [
+              "die Väter",
+              "die Autos",
+              "die Fahrkarten"
+            ],
+            "a": "die Väter",
+            "gender": "der",
+            "why": "جمع der Vater هو die Väter. ä بلا نهاية: der Vater ← die Väter (‑er في الآخر)"
+          }
+        ],
+        "interleavedWith": [
+          "vater",
+          "auto"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

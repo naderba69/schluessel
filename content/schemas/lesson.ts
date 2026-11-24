@@ -207,7 +207,14 @@ const sameMultiset = (a: readonly string[], b: readonly string[]) =>
 
 /** اختيار: الإجابة من الخيارات · بلا تكرار (choice · gender-drill · case-drill) */
 export const ChoiceItem = z
-  .object({ q: ItemText, choices: z.array(ItemText).min(2).max(5), a: ItemText, why: WhyAr })
+  .object({
+    q: ItemText,
+    choices: z.array(ItemText).min(2).max(5),
+    a: ItemText,
+    why: WhyAr,
+    /** §15-هـ (D582): الترميز المزدوج — الشارة ترافق عنصر مدرّب الجنس */
+    gender: z.enum(["der", "die", "das", "none"]).optional(),
+  })
   .strict()
   .refine((i) => i.choices.includes(i.a), { message: "الإجابة ليست بين الخيارات" })
   .refine((i) => distinct(i.choices), { message: "خيارات مكررة" });

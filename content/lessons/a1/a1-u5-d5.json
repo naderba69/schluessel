@@ -454,6 +454,60 @@
           "morgen"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Tee — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Tee (الشاي)."
+          },
+          {
+            "q": "Teller — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "‑er قد تدل على der (للأشخاص والفعّالات غالباً): der Teller — والقاعدة النهائية: احفظ الأداة مع الكلمة. المعنى: طبق."
+          },
+          {
+            "q": "Durst — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Durst (عطش)."
+          },
+          {
+            "q": "Salz — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Salz (ملح)."
+          }
+        ],
+        "interleavedWith": [
+          "tee",
+          "teller"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

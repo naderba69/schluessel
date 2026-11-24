@@ -455,6 +455,71 @@
           "toll"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Schule — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Schule (المدرسة)."
+          },
+          {
+            "q": "Telefonnummer — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "النهاية (‑er) لا تحسم هنا — احفظ الأداة مع الكلمة: die Telefonnummer (رقم الهاتف)."
+          },
+          {
+            "q": "Zimmer — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "النهاية (‑er) لا تحسم هنا — احفظ الأداة مع الكلمة: das Zimmer (غرفة)."
+          },
+          {
+            "q": "Schlafzimmer — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "النهاية (‑er) لا تحسم هنا — احفظ الأداة مع الكلمة: das Schlafzimmer (غرفة النوم)."
+          },
+          {
+            "q": "خمّن الجمع: die Schule",
+            "choices": [
+              "die Schulen",
+              "Telefonnummern",
+              "die Zimmer"
+            ],
+            "a": "die Schulen",
+            "gender": "die",
+            "why": "جمع die Schule هو die Schulen. u للحرف الطويل"
+          }
+        ],
+        "interleavedWith": [
+          "schule",
+          "telefonnummer"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

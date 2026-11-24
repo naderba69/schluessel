@@ -962,3 +962,91 @@ span[dir="ltr"] {
   border-color: var(--primary);
   color: var(--on-primary);
 }
+
+/* ═══════ 18 · الترقية الاحترافية (D582 · N-155 — مطابقة الدستور الإنتاجي) ═══════ */
+/* طبقات جودة فوق نظام D244: سلّم خطوط تدفّقي · هوية عناوين · أزرار فعل رئيسية · تباين ليلي للجنس · تفاصيل وصول */
+
+/* أ) سلّم العناوين التدفّقي — يتّسع مع الشاشة ولا ينقلب على الهاتف */
+h1 { font-size: clamp(1.45rem, 1.25rem + 1vw, 1.85rem); font-weight: 800; letter-spacing: -0.01em; }
+h2 {
+  font-size: clamp(1.12rem, 1.02rem + 0.5vw, 1.32rem);
+  font-weight: 800;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, var(--primary), var(--accent)) 1;
+}
+h3 { font-size: clamp(1.02rem, 0.97rem + 0.25vw, 1.13rem); font-weight: 750; }
+h4 { font-weight: 750; }
+
+/* ب) علامة الهوية: معيّن متدرّج قبل كل عنوان قسم (لون + شكل — روح §15-هـ) */
+h2::before {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-inline-end: 0.5em;
+  border-radius: 2px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  transform: rotate(45deg);
+  vertical-align: 0.12em;
+}
+
+/* ج) أزرار الفعل الرئيسية: مصمتة متدرجة — المسار الأساسي يُرى من بعيد */
+[data-testid="attempt-btn"],
+[data-testid="learn-reveal-btn"],
+[data-testid="practice-check"],
+[data-testid="practice-next"],
+[data-testid="shadow-entry-start"],
+[data-testid="anatomy-close"],
+[data-testid^="f432-start"] {
+  background: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--accent) 80%, black));
+  color: var(--on-primary);
+  border-color: transparent;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+[data-theme="dark"] [data-testid="attempt-btn"],
+[data-theme="dark"] [data-testid="learn-reveal-btn"],
+[data-theme="dark"] [data-testid="practice-check"],
+[data-theme="dark"] [data-testid="practice-next"],
+[data-theme="dark"] [data-testid="shadow-entry-start"],
+[data-theme="dark"] [data-testid="anatomy-close"],
+[data-theme="dark"] [data-testid^="f432-start"] {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 80%, black), var(--primary));
+  color: var(--accent-text);
+}
+[data-testid="attempt-btn"]:hover:not(:disabled),
+[data-testid="learn-reveal-btn"]:hover:not(:disabled),
+[data-testid="practice-check"]:hover:not(:disabled),
+[data-testid="practice-next"]:hover:not(:disabled),
+[data-testid="shadow-entry-start"]:hover:not(:disabled),
+[data-testid^="f432-start"]:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+/* د) الحقول: ملمس أنعم وحلقة تركيز مضيئة (WCAG) */
+input, textarea, select {
+  padding: 0.62rem 0.9rem;
+  border-radius: 10px;
+  background: var(--surface);
+}
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+input::placeholder, textarea::placeholder { color: var(--muted); opacity: 0.75; }
+
+/* هـ) شريط تمرير أنيق */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 8px; border: 2px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+/* ز) الشريط السفلي: انتقالات سلسة ومؤشر نشط أوضح */
+[data-testid="bottom-nav"] button { transition: color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease; }
+[data-testid="bottom-nav"] button[data-active="yes"] {
+  background: linear-gradient(180deg, transparent 55%, color-mix(in srgb, var(--accent) 7%, transparent));
+}
+
+/* ح) ظلّان إضافيان للعمق */
+:root { --shadow-sm: 0 1px 2px color-mix(in srgb, var(--ink) 7%, transparent); --shadow-hover: 0 6px 20px color-mix(in srgb, var(--ink) 12%, transparent); }
+[data-theme="dark"] { --shadow-sm: 0 1px 2px color-mix(in srgb, var(--ink) 35%, transparent); --shadow-hover: 0 6px 20px color-mix(in srgb, var(--ink) 45%, transparent); }

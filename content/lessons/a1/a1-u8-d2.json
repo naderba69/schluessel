@@ -549,6 +549,71 @@
           "machen"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Schuh — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Schuh (حذاء)."
+          },
+          {
+            "q": "Hut — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Hut (قبعة)."
+          },
+          {
+            "q": "Cent — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Cent (سنت)."
+          },
+          {
+            "q": "Rabatt — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Rabatt (خصم)."
+          },
+          {
+            "q": "خمّن الجمع: der Schuh",
+            "choices": [
+              "die Schuhe",
+              "die Hüte",
+              "die Cent"
+            ],
+            "a": "die Schuhe",
+            "gender": "der",
+            "why": "جمع der Schuh هو die Schuhe. ‑e: der Schuh ← die Schuhe (وللزوج يُقال الجمع: meine Schuhe)"
+          }
+        ],
+        "interleavedWith": [
+          "schuh",
+          "hut"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

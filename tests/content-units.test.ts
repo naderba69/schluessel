@@ -1099,7 +1099,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const gapFilled = u.uebung.stations.find((s) => s.type === "gap-fill")!.items.map((i) => String(i.q).replace("___", String(i.a)).split("(")[0]!.trim());
     const built = u.uebung.stations.find((s) => s.type === "build-sentence")!.items.map((i) => String(i.a));
     expect([...gapFilled, ...built].filter((x) => /\b(ist|sind) (sehr )?(\p{L}+ und )?\p{L}+e\.$/u.test(x))).toEqual([]);
-    expect(german).toHaveLength(14); // الاختبار القبلي 2 + ست جمل Quiz × 2
+    expect(german).toHaveLength(24); // + محطة مدرّب الجنس 10 (D582) · الاختبار القبلي 2 + ست جمل Quiz × 2
     // الاستدعاء من دروس سابقة (ثلاثة مركّبات: der Familienname · die Telefonnummer · die Speisekarte) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || l.id === "a1-u6-d1").flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
@@ -1148,7 +1148,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
     const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
     expect(german.filter((c) => /\b(ein|kein) (Tisch|Computer|Schreibtisch|Fernseher|Kühlschrank|Balkon|Boden|Raum)\b|^Gibt (ein|kein)|^Es gibt .*\?$|\bgeben\b|\b(an|aus)\.$/u.test(c))).toEqual([]);
-    expect(german).toHaveLength(18); // الاختبار القبلي 2 + ثماني جمل Quiz × 2
+    expect(german).toHaveLength(28); // + محطة مدرّب الجنس 10 (D582) · الاختبار القبلي 2 + ثماني جمل Quiz × 2
     // الاستدعاء من دروس سابقة (أمثلتها مفعولٌ به بعد haben: einen Schrank · keinen Balkon · einen Keller) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
@@ -1200,7 +1200,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
     const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
     expect(german.filter((c) => /\blege (die Tasse|das Glas)|\bstelle (den Teppich|das Bild)|hängt über (den Tisch|das (Bett|Sofa|Fenster)|die (Wand|Tür|Lampe|Ecke))|^Wo (stellst|legst|hängst)|\bhänge .* (an|auf) (der|dem) /u.test(c))).toEqual([]);
-    expect(german).toHaveLength(20); // الاختبار القبلي 2 + ست جمل Quiz × 2 + ثلاثة بنود أفعال Quiz × 2
+    expect(german).toHaveLength(30); // + محطة مدرّب الجنس 10 (D582) · الاختبار القبلي 2 + ست جمل Quiz × 2 + ثلاثة بنود أفعال Quiz × 2
     // الاستدعاء من دروس سابقة (Wo wohnst du? · Ich sitze neben Oma. · Links steht mein Vater.) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
@@ -1241,7 +1241,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
     const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
     expect(german.filter((c) => /\b(auf|in|unter|über|neben|hinter) (dem|der)\b|den Nachbar\b|\bdrauf\b|\bdrin\b| und (ein|eine) |\bdarin\.$/iu.test(c))).toEqual([]); // بلا حالة أحرف: «Auf dem steht …» أول الجملة (نجت طفرةٌ بالحرف الكبير في D150)
-    expect(german).toHaveLength(20); // التخمين 2 + جمل Quiz (da · Möbel · الوضع) 6 × 2 + بنود المطابقة 3 × 2
+    expect(german).toHaveLength(30); // + محطة مدرّب الجنس 10 (D582) · التخمين 2 + جمل Quiz (da · Möbel · الوضع) 6 × 2 + بنود المطابقة 3 × 2
     // الاستدعاء من الدرسين الماضيين (daneben · auf · Badezimmer) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 5 || ["a1-u6-d1", "a1-u6-d2", "a1-u6-d3", "a1-u6-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
@@ -1284,7 +1284,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
     expect(german.filter((c) => /\b(duscht|badet|dusche|bade)\b.*\b(Morgen|Abend|Sonntag)\b/iu.test(c) && !/Am Sonntag (Lena badet|badest Lena)/u.test(c))).toEqual([]);
     expect(german.filter((c) => /\bwacht\b.*\bauf\b|weckt\b.*\bauf\.|\bziehe\b(?!.*\bmich\b)/iu.test(c))).toEqual([]);
-    expect(german).toHaveLength(18); // التخمين 2 + المشتِّتات الألمانية في Quiz: 8 بنود × 2
+    expect(german).toHaveLength(28); // + محطة مدرّب الجنس 10 (D582) · التخمين 2 + المشتِّتات الألمانية في Quiz: 8 بنود × 2
     // الاستدعاء من دروس سابقة (Uhr · der Morgen · der Abend — الساعة وأوقات اليوم) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 6).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
@@ -1325,7 +1325,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
     const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
     expect(german.filter((c) => /\bgerne\b|\bbin\b.*\blangweilig\b|\bspaziere\b|den Fußball|Spass/iu.test(c))).toEqual([]);
-    expect(german).toHaveLength(20); // التخمين 2 + المشتِّتات الألمانية في Quiz: 9 بنود × 2
+    expect(german).toHaveLength(30); // + محطة مدرّب الجنس 10 (D582) · التخمين 2 + المشتِّتات الألمانية في Quiz: 9 بنود × 2
     // الاستدعاء من دروس سابقة (gern · das Hobby · lesen — u2-d5) — كانت spielen من كلمات اليوم نفسه · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || l.id === "a1-u7-d1").flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
@@ -1367,7 +1367,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
     const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
     expect(german.filter((c) => /wartst|arbeitst|putzest|schließest|benutzest|\b(er|sie|es|Lena|Yusuf|Vater|Mutter|Schwester|Bruder) (mache|suche|putze|öffne|schließe|brauche|rufe|besuche|benutze|telefoniere|schicke|warte|arbeite)\b|\bmach\b|\bwartet? (dich|den|ihn|Lena|ihren)\b|\bfür (dich|mich|Lena)\b|\bauf (dir|mir)\b|(macht|wartet|telefoniert) Sie/iu.test(c))).toEqual([]);
-    expect(german).toHaveLength(20); // التخمين 2 + المشتِّتات الألمانية في Quiz: 9 بنود × 2
+    expect(german).toHaveLength(28); // + محطة مدرّب الجنس 8 (D582) · التخمين 2 + المشتِّتات الألمانية في Quiz: 9 بنود × 2
     // الاستدعاء من دروس سابقة (arbeiten: e قبل t · heißen: du heißt · wohnen) — كانت machen من كلمات اليوم نفسه · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1", "a1-u7-d2"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
@@ -1406,7 +1406,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
     const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
     expect(german.filter((c) => /\b(fahrt|fahrst|lauft|laufst|wascht|waschst)\b|\b(fahre|fährt|fährst) (den|die|das|einen)\b|\bist (Brot|Kuchen|Fisch|Obst)\b|\b(wäscht|wäschst|fährst|nimmst|nimmt|gibt|gibst) ihr\b/iu.test(c))).toEqual([]);
-    expect(german).toHaveLength(20); // التخمين 2 + المشتِّتات الألمانية في Quiz: 9 بنود × 2
+    expect(german).toHaveLength(30); // + محطة مدرّب الجنس 10 (D582) · التخمين 2 + المشتِّتات الألمانية في Quiz: 9 بنود × 2
     // الاستدعاء من دروس سابقة (essen · lesen · schlafen — isst · liest · schläft) — كانت fahren وZug من كلمات اليوم نفسه · وsprechen (u1-d2) خرجت من «الجديد» (N-018)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1", "a1-u7-d2", "a1-u7-d3"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
@@ -1445,7 +1445,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
     const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
     expect(german.filter((c) => /\bstehe um \p{L}+\.$|\b\p{L}+(e|st|t) (auf|an|ein|ab|fern) (um|am|im|jeden)\b|\bFernseher\b|\bwascht\b|\bkaufe ein (Brot|Buch|\p{Lu})/u.test(c))).toEqual([]);
-    expect(german).toHaveLength(20); // التخمين 2 + المشتِّتات الألمانية في Quiz: 9 بنود × 2
+    expect(german).toHaveLength(30); // + محطة مدرّب الجنس 10 (D582) · التخمين 2 + المشتِّتات الألمانية في Quiz: 9 بنود × 2
     // الاستدعاء من دروس سابقة (aufwachen · anfangen — قطعتان منفصلتان من u7-d1 · kochen) · ولا كلمة من درس سابق تُعرض «جديدة» (N-018)
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 6 || ["a1-u7-d1", "a1-u7-d2", "a1-u7-d3", "a1-u7-d4"].includes(l.id)).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);
@@ -1523,7 +1523,7 @@ describe("مصائد الوحدة 1 — انعكاسات عربية معلَّل
     const pre = u.einstieg.pretestItems.flatMap((p) => (p.choices ? [{ choices: [...p.choices], a: p.answer }] : []));
     const german = [...choiceItems, ...pre].flatMap((i) => i.choices.filter((c) => c !== i.a && !/[\u0600-\u06FF]/.test(c)));
     expect(german.filter((c) => /\bMein Schuh\b|\b(Jacke|Kleid|Hemd|Rock|Hut|Farbe) gefalle\b|\b(trägt|nehme|kaufe|möchte) (ein|kein) (Mantel|Rock|Hut|Pullover)\b|\btragt\b/u.test(c))).toEqual([]);
-    expect(german).toHaveLength(20); // التخمين 2 + المشتِّتات الألمانية في Quiz: 9 بنود × 2
+    expect(german).toHaveLength(30); // + محطة مدرّب الجنس 10 (D582) · التخمين 2 + المشتِّتات الألمانية في Quiz: 9 بنود × 2
     // الاستدعاء من دروس سابقة (die Tasche · tragen · kaufen) — كانت Schuh من كلمات اليوم نفسه
     const earlier = new Set(ALL_LESSONS.filter((l) => l.unit <= 7).flatMap((l) => l.praesentation.wordIds));
     expect(u.praesentation.wordIds.filter((id) => earlier.has(id))).toEqual([]);

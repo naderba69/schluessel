@@ -530,6 +530,71 @@
           "gross"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Abend — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Abend (المساء)."
+          },
+          {
+            "q": "Schwester — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "النهاية (‑er) لا تحسم هنا — احفظ الأداة مع الكلمة: die Schwester (الأخت)."
+          },
+          {
+            "q": "Hose — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Hose (بنطال)."
+          },
+          {
+            "q": "Hemd — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Hemd (قميص)."
+          },
+          {
+            "q": "خمّن الجمع: der Abend",
+            "choices": [
+              "die Abende",
+              "die Schwestern",
+              "die Hosen"
+            ],
+            "a": "die Abende",
+            "gender": "der",
+            "why": "جمع der Abend هو die Abende. احفظ جمعه معه: die Abende."
+          }
+        ],
+        "interleavedWith": [
+          "abend",
+          "schwester"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {
