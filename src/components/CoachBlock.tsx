@@ -34,6 +34,7 @@ import { VideoCorner } from "./VideoCorner.js";
 import { PlayButton } from "./LessonSession.js";
 
 import { Fluency432 } from "./Fluency432.js";
+import { TrainingTools } from "./TrainingTools.js";
 
 export function CoachBlock({
   errors,
@@ -241,6 +242,7 @@ export function CoachBlock({
         </div>
       )}
       <Fluency432 currentIndex={lessonIndex} />
+      <TrainingTools words={words} lessonIndex={lessonIndex} />
       {evening && !rest && (
         <div data-testid="day-closing">
           <p data-testid="coach-evening-report">
