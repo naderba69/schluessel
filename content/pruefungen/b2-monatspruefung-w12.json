@@ -1,67 +1,115 @@
 {
- "schemaVersion": "1.0.0",
- "id": "b2-monatspruefung-w12",
- "level": "B2",
- "kind": "monatspruefung",
- "week": 12,
- "coversUnits": [
-  1,
-  2,
-  3,
-  4,
-  5,
-  6
- ],
- "timeBudgetMin": 45,
- "passingScore": 0.75,
- "items": [
-  {
-   "q": "«اللباقة؟»؟",
-   "a": "die Höflichkeit"
-  },
-  {
-   "q": "«الرفض؟»؟",
-   "a": "die Ablehnung"
-  },
-  {
-   "q": "«ماء الشرب؟»؟",
-   "a": "das Trinkwasser"
-  },
-  {
-   "q": "«الدراية؟»؟",
-   "a": "die Kenntnis"
-  },
-  {
-   "q": "«يعلّق على؟»؟",
-   "a": "kommentieren (er kommentiert)"
-  },
-  {
-   "q": "«الإرجاع (البضاعة)؟»؟",
-   "a": "die Rückgabe"
-  },
-  {
-   "q": "«التقاعد؟»؟",
-   "a": "der Ruhestand"
-  },
-  {
-   "q": "«الرعاية؟»؟",
-   "a": "die Pflege"
-  },
-  {
-   "q": "«الشحنة؟»؟",
-   "a": "die Lieferung"
-  },
-  {
-   "q": "«أنا أتبرّع بالمال؟»؟",
-   "a": "Ich spende Geld."
-  },
-  {
-   "q": "«القناة تبثّ المباراة؟»؟",
-   "a": "Der Sender überträgt das Spiel."
-  },
-  {
-   "q": "«يحرق؟»؟",
-   "a": "verbrennen (er verbrennt)"
-  }
- ]
+  "schemaVersion": "1.0.0",
+  "id": "b2-monatspruefung-w12",
+  "level": "B2",
+  "kind": "monatspruefung",
+  "week": 12,
+  "coversUnits": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "timeBudgetMin": 45,
+  "passingScore": 0.75,
+  "items": [
+    {
+      "q": "«اللباقة؟»؟",
+      "a": "die Höflichkeit"
+    },
+    {
+      "q": "«الرفض؟»؟",
+      "a": "die Ablehnung"
+    },
+    {
+      "q": "«ماء الشرب؟»؟",
+      "a": "das Trinkwasser"
+    },
+    {
+      "q": "«الدراية؟»؟",
+      "a": "die Kenntnis"
+    },
+    {
+      "q": "«يعلّق على؟»؟",
+      "a": "kommentieren (er kommentiert)"
+    },
+    {
+      "q": "«الإرجاع (البضاعة)؟»؟",
+      "a": "die Rückgabe"
+    },
+    {
+      "q": "«التقاعد؟»؟",
+      "a": "der Ruhestand"
+    },
+    {
+      "q": "«الرعاية؟»؟",
+      "a": "die Pflege"
+    },
+    {
+      "q": "«الشحنة؟»؟",
+      "a": "die Lieferung"
+    },
+    {
+      "q": "«أنا أتبرّع بالمال؟»؟",
+      "a": "Ich spende Geld."
+    },
+    {
+      "q": "«القناة تبثّ المباراة؟»؟",
+      "a": "Der Sender überträgt das Spiel."
+    },
+    {
+      "q": "«يحرق؟»؟",
+      "a": "verbrennen (er verbrennt)"
+    },
+    {
+      "q": "««الراديو يمكن أن يبقى مضاءً طوال الوقت»؟»",
+      "a": "Das Radio kann die ganze Zeit an sein."
+    },
+    {
+      "q": "««يجب أن تكون قد ذهبت منذ أمد»؟»",
+      "a": "Sie muss schon lange weg sein."
+    },
+    {
+      "q": "««بالتأكيد أفهمك»؟»",
+      "a": "Selbstverständlich verstehe ich dich."
+    },
+    {
+      "q": "««أنا لا أريد أن يبقى الضوء طوال الليل مضاءً»؟»",
+      "a": "Ich will nicht, dass das Licht die ganze Nacht an sein muss."
+    },
+    {
+      "q": "««هو كثيراً ما يتأخر»؟»",
+      "a": "Er kommt häufig zu spät."
+    },
+    {
+      "q": "««المحاضرة تنتهي قريباً»؟»",
+      "a": "Der Kurs muss bald aus sein."
+    },
+    {
+      "q": "««بحلول التاسعة ستكون المحاضرة قد انتهت»؟»",
+      "a": "Bis neun Uhr wird der Kurs schon aus sein."
+    },
+    {
+      "q": "««اللعبة على وشك الانتهاء»؟»",
+      "a": "Das Spiel wird gleich aus sein."
+    },
+    {
+      "q": "««المفاتيح لا يمكن أن تكون قد اختفت فحسب»؟»",
+      "a": "Die Schlüssel können nicht einfach weg sein."
+    },
+    {
+      "q": "««على الأطفال ألا يبقوا مستيقظين بعد الآن»؟»",
+      "a": "Die Kinder sollen nicht mehr auf sein."
+    },
+    {
+      "q": "««إذا أضاء الضوء نبدأ»؟»",
+      "a": "Wenn das Licht an sein wird, beginnen wir."
+    },
+    {
+      "q": "««التدفئة لا ينبغي أن تبقى مضاءة طوال الليل»؟»",
+      "a": "Die Heizung soll nicht die ganze Nacht an sein."
+    }
+  ]
 }

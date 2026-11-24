@@ -30,8 +30,8 @@ describe("D575 — عدّاد التدوير ≥7 (§7): الأداة تُنفَ
     const r = run();
     for (const w of r.worst) expect(w.count).toBeLessThan(r.threshold);
     for (let i = 1; i < r.worst.length; i++) expect(r.worst[i]!.count).toBeGreaterThanOrEqual(r.worst[i - 1]!.count);
-    // الحالة الحالية المعلنة صراحة: 13 كلمة ناقصة (5 منها صيغ sein المفصول لا تُعدّ في النصوص)
-    expect(r.deficient).toBeLessThanOrEqual(20);
-    expect(r.deficient).toBeGreaterThan(0); // لا ادّعاء اكتمال زائف — القائمة قائمة والحقن قادم
+    // D580: الحقن اكتمل (2538/2538 ≥7) — والعدّاد حازم منذ D580، فأي نقص مستقبلي يُسقط البوابة
+    expect(r.deficient).toBe(0);
+    expect(r.ok).toBe(r.words);
   });
 });
