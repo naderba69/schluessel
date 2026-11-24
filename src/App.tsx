@@ -66,8 +66,10 @@ import { SystemLab } from "./components/SystemLab.js";
 import { BottomNav } from "./components/BottomNav.js";
 // D570 (N-155): مطابقة الواجهة للدستور الإنتاجي — القانون 18 (كيف تتعلم) + §16 (مؤشر الاتصال)
 import { LearnHereCard } from "./components/LearnHereCard.js";
+import { TandemCard } from "./components/TandemCard.js";
 import { WordOfWeekCard } from "./components/WordOfWeekCard.js";
 import { VoiceMirrorCard } from "./components/VoiceMirrorCard.js";
+import { GrammarAtlas } from "./components/GrammarAtlas.js";
 import { ConnectionIndicator } from "./components/ConnectionIndicator.js";
 import { SettingsView } from "./components/SettingsView.js";
 import type { MainTab } from "./components/main-tabs.js";
@@ -1248,6 +1250,8 @@ export function App({ store: injected }: { store?: LearnerStore }) {
             </>
           )}
         </>
+      ) : tab === "atlas" ? (
+        <GrammarAtlas currentIndex={currentId ? Math.max(0, LESSON_ORDER.indexOf(currentId)) : 0} />
       ) : tab === "coach" ? (
         <CoachBlock
           errors={state.errors}
@@ -1257,6 +1261,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
           words={firstBundle?.direct ?? []}
           studiedToday={(todayEntry?.durationMinutes ?? 0) > 0}
           shadowLessonId={shadowLesson ?? null}
+          lessonIndex={currentId ? Math.max(0, LESSON_ORDER.indexOf(currentId)) : 0}
           onStartShadow={() => {
             setTab("today");
             startShadow();
@@ -1289,6 +1294,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       <LearnHereCard />
       <WordOfWeekCard currentIndex={currentId ? Math.max(0, LESSON_ORDER.indexOf(currentId)) : 0} />
       <VoiceMirrorCard currentIndex={currentId ? Math.max(0, LESSON_ORDER.indexOf(currentId)) : 0} />
+      <TandemCard currentIndex={currentId ? Math.max(0, LESSON_ORDER.indexOf(currentId)) : 0} />
       <p data-testid="week-dots">
         <span dir="ltr">{week.dots.map((d) => (d ? "●" : "○")).join("")}</span> أسبوعك ({week.studied}/7)
       </p>
