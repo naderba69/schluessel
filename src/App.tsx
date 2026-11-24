@@ -66,6 +66,7 @@ import { SystemLab } from "./components/SystemLab.js";
 import { BottomNav } from "./components/BottomNav.js";
 // D570 (N-155): مطابقة الواجهة للدستور الإنتاجي — القانون 18 (كيف تتعلم) + §16 (مؤشر الاتصال)
 import { LearnHereCard } from "./components/LearnHereCard.js";
+import { TandemCard } from "./components/TandemCard.js";
 import { WordOfWeekCard } from "./components/WordOfWeekCard.js";
 import { VoiceMirrorCard } from "./components/VoiceMirrorCard.js";
 import { GrammarAtlas } from "./components/GrammarAtlas.js";
@@ -1293,6 +1294,7 @@ export function App({ store: injected }: { store?: LearnerStore }) {
       <LearnHereCard />
       <WordOfWeekCard currentIndex={currentId ? Math.max(0, LESSON_ORDER.indexOf(currentId)) : 0} />
       <VoiceMirrorCard currentIndex={currentId ? Math.max(0, LESSON_ORDER.indexOf(currentId)) : 0} />
+      <TandemCard currentIndex={currentId ? Math.max(0, LESSON_ORDER.indexOf(currentId)) : 0} />
       <p data-testid="week-dots">
         <span dir="ltr">{week.dots.map((d) => (d ? "●" : "○")).join("")}</span> أسبوعك ({week.studied}/7)
       </p>
