@@ -11,7 +11,7 @@ export type AudioRef = { audioId: string; speakText: string };
 
 /** بند مُنمَّط جاهز للعرض — شكل واحد لكل طريقة تفاعل */
 export type TypedItem =
-  | { kind: "choice"; prompt: string; choices: string[]; answer: string; why: string; audio?: AudioRef; text?: string }
+  | { kind: "choice"; prompt: string; choices: string[]; answer: string; why: string; audio?: AudioRef; text?: string; gender?: string }
   | { kind: "input"; mode: "gap" | "correct" | "dictation" | "short"; prompt: string; answer: string; accept: string[]; why: string; audio?: AudioRef; text?: string }
   | { kind: "order"; prompt?: string; tokens: string[]; answer: string; accept: string[]; why: string }
   | { kind: "production"; prompt: string; model: string; why: string }
@@ -30,7 +30,7 @@ export function toTypedItem(type: StationType, raw: unknown): TypedItem | null {
     case "gender-drill":
     case "case-drill": {
       const r = ChoiceItem.safeParse(raw);
-      return r.success ? { kind: "choice", prompt: r.data.q, choices: r.data.choices, answer: r.data.a, why: r.data.why } : null;
+      return r.success ? { kind: "choice", prompt: r.data.q, choices: r.data.choices, answer: r.data.a, why: r.data.why, gender: r.data.gender } : null;
     }
     case "listening":
     case "mini-pronunciation": {

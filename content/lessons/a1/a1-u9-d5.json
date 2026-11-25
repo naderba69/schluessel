@@ -624,6 +624,71 @@
           "morgen"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Morgen — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Morgen (الصباح / غداً (حسب الكبير!))."
+          },
+          {
+            "q": "Bus — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Bus (حافلة)."
+          },
+          {
+            "q": "Stau — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Stau (الازدحام المروري)."
+          },
+          {
+            "q": "Grund — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Grund (السبب)."
+          },
+          {
+            "q": "خمّن الجمع: der Morgen",
+            "choices": [
+              "die Morgen",
+              "die Busse",
+              "die Staus"
+            ],
+            "a": "die Morgen",
+            "gender": "der",
+            "why": "جمع der Morgen هو die Morgen. احفظ جمعه معه: die Morgen."
+          }
+        ],
+        "interleavedWith": [
+          "morgen",
+          "bus"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

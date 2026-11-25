@@ -572,6 +572,71 @@
           "gehen"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Hose — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Hose (بنطال)."
+          },
+          {
+            "q": "Verkäufer — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "‑er قد تدل على der (للأشخاص والفعّالات غالباً): der Verkäufer — والقاعدة النهائية: احفظ الأداة مع الكلمة. المعنى: بائع."
+          },
+          {
+            "q": "Stück — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Stück (قطعة)."
+          },
+          {
+            "q": "Korb — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Korb (سلة)."
+          },
+          {
+            "q": "خمّن الجمع: die Hose",
+            "choices": [
+              "die Hosen",
+              "die Verkäufer",
+              "die Stücke"
+            ],
+            "a": "die Hosen",
+            "gender": "die",
+            "why": "جمع die Hose هو die Hosen. ‑n: die Hose ← die Hosen"
+          }
+        ],
+        "interleavedWith": [
+          "hose",
+          "verkaeufer"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

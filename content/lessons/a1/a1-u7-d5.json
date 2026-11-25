@@ -539,6 +539,71 @@
           "tunesien"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Vater — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "‑er قد تدل على der (للأشخاص والفعّالات غالباً): der Vater — والقاعدة النهائية: احفظ الأداة مع الكلمة. المعنى: الأب."
+          },
+          {
+            "q": "Oma — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Oma (الجدة)."
+          },
+          {
+            "q": "Haushalt — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Haushalt (أعمال البيت)."
+          },
+          {
+            "q": "Wäsche — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Wäsche (غسيل)."
+          },
+          {
+            "q": "خمّن الجمع: der Vater",
+            "choices": [
+              "die Väter",
+              "die Omas",
+              "die Haushalte"
+            ],
+            "a": "die Väter",
+            "gender": "der",
+            "why": "جمع der Vater هو die Väter. ä بلا نهاية: der Vater ← die Väter (‑er في الآخر)"
+          }
+        ],
+        "interleavedWith": [
+          "vater",
+          "oma"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

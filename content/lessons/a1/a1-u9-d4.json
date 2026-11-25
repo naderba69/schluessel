@@ -622,6 +622,71 @@
           "morgen"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Kirche — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Kirche (كنيسة)."
+          },
+          {
+            "q": "Haus — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Haus (البيت (المبنى المستقل))."
+          },
+          {
+            "q": "Brücke — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Brücke (جسر)."
+          },
+          {
+            "q": "Tunnel — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Tunnel (نفق)."
+          },
+          {
+            "q": "خمّن الجمع: die Kirche",
+            "choices": [
+              "die Kirchen",
+              "die Häuser",
+              "die Brücken"
+            ],
+            "a": "die Kirchen",
+            "gender": "die",
+            "why": "جمع die Kirche هو die Kirchen. احفظ جمعه معه: die Kirchen."
+          }
+        ],
+        "interleavedWith": [
+          "kirche",
+          "haus"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

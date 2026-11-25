@@ -502,6 +502,71 @@
           "morgen"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Handy — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Handy (الهاتف المحمول)."
+          },
+          {
+            "q": "Abend — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Abend (المساء)."
+          },
+          {
+            "q": "Pause — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Pause (استراحة)."
+          },
+          {
+            "q": "Wecker — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "‑er قد تدل على der (للأشخاص والفعّالات غالباً): der Wecker — والقاعدة النهائية: احفظ الأداة مع الكلمة. المعنى: ساعة يقظة."
+          },
+          {
+            "q": "خمّن الجمع: das Handy",
+            "choices": [
+              "Handys",
+              "die Abende",
+              "die Pausen"
+            ],
+            "a": "Handys",
+            "gender": "das",
+            "why": "جمع das Handy هو Handys. احفظ جمعه معه: Handys."
+          }
+        ],
+        "interleavedWith": [
+          "handy",
+          "abend"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

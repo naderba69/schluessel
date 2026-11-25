@@ -2,6 +2,8 @@
 // قفل الاتجاه من E01 (لا ارتجاع — قانون 3) · محاولة قبل كشف (F121) · §2.5 (أظهر الإجابة ثم قيّم)
 // E05: التسجيل «لأذنك أنت» (D16) · E07: تصحيح لطيف (F077) · E08: تقرير مسائي + معاينة الغد (D23)
 import { useState } from "react";
+import type { Word } from "../../content/schemas/index.js";
+import { GenderBadge } from "./GenderBadge.js";
 import { lessonImages } from "../lesson-packs.js";
 import { imageUrlForFile } from "../lib/image-assets.js";
 import type { Station } from "../lib/lesson-engine.js";
@@ -141,6 +143,7 @@ export function LearnCardView({
   onReveal,
   audioId,
   speakText,
+  gender,
 }: {
   promptDe: string;
   promptAr: string;
@@ -151,10 +154,12 @@ export function LearnCardView({
   onReveal: () => void;
   audioId?: string;
   speakText?: string;
+  gender?: Word["gender"];
 }) {
   return (
     <article data-testid="learn-card" data-revealed={revealed ? "yes" : "no"}>
       <p dir="ltr">
+        {gender && gender !== "none" && <GenderBadge gender={gender} word={promptDe} />}{" "}
         {promptDe} <PlayButton audioId={audioId} speakText={speakText ?? promptDe} />
       </p>
       <p>{promptAr}</p>
@@ -185,7 +190,7 @@ export function AudioControlsView({ clipLabel }: { clipLabel: string }) {
           {s}×
         </button>
       ))}
-      <button data-testid="record-btn">⏺ سجّل صوتك (Shadowing)</button>
+      <button data-testid="record-btn">⏺ سجّل صوتك (<span dir="ltr">Shadowing</span>)</button>
       <p data-testid="recording-disclaimer">{RECORDING_DISCLAIMER_AR}</p>
     </section>
   );

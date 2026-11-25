@@ -14,14 +14,34 @@ CONTENT = ROOT / "content"
 THRESHOLD = 7
 SUFFIXES = ("", "e", "en", "er", "es", "em", "n", "s", "te", "ten", "t", "st", "test")
 ARABIC = re.compile(r"[\u0600-\u06FF]")
+TOKEN = re.compile(r"[a-zäöüß]+(?:[-'][a-zäöüß]+)*")
+STRIP_EDGE = " .,;:!?\u201e\u201c\u00bb\u00ab\"'"
+
+
+def tokens_of(text: str) -> list[str]:
+    """جرمات هجينة: t-shirt يبقى جرماً واحداً + جزآه t/shirt — لا تُفقد أي مطابقة سابقة."""
+    toks = TOKEN.findall(fold(text))
+    extra: list[str] = []
+    for tk in toks:
+        if "-" in tk or "'" in tk:
+            extra.extend(p for p in re.split(r"[-']", tk) if p)
+    return toks + extra
+
+
+FOLD_MAP = str.maketrans({
+    "ä": "a", "ö": "o", "ü": "u", "ß": "ss",
+    "é": "e", "è": "e", "ê": "e", "ë": "e",
+    "á": "a", "à": "a", "â": "a", "í": "i", "ì": "i", "î": "i",
+    "ó": "o", "ò": "o", "ô": "o", "ú": "u", "ù": "u", "û": "u", "ç": "c",
+})
 
 
 def fold(s: str) -> str:
-    return s.lower().replace("ä", "a").replace("ö", "o").replace("ü", "u").replace("ß", "ss")
+    return s.lower().translate(FOLD_MAP)
 
 
 def lemma_forms(de: str) -> list[str]:
-    de = re.sub(r"\([^)]*\)", "", de.lower()).strip().strip(".").strip()
+    de = re.sub(r"\([^)]*\)", "", de.lower()).strip().strip(STRIP_EDGE).strip()
     out: list[str] = []
     for part in [p.strip() for p in de.split("/") if p.strip()]:
         out.append(part)
@@ -31,8 +51,14 @@ def lemma_forms(de: str) -> list[str]:
     return out
 
 
-def word_forms(w: dict) -> set[str]:
+def word_forms(w: dict) -> tuple[set[str], set[str]]:
     out: set[str] = set()
+    prefixes: set[str] = set()
+    de_raw = w["de"].strip()
+    if de_raw.endswith("-"):
+        for de in lemma_forms(de_raw.rstrip("-")):
+            if de:
+                prefixes.add(fold(de))
     for de in lemma_forms(w["de"]):
         out.add(fold(de))
     if w.get("plural"):
@@ -48,7 +74,7 @@ def word_forms(w: dict) -> set[str]:
     kc = (w.get("kollocation") or {}).get("de")
     if kc:
         out.add(fold(kc))
-    return {x for x in out if x}
+    return {x for x in out if x}, prefixes
 
 
 def scan_texts() -> list[str]:
@@ -86,15 +112,18 @@ def scan_texts() -> list[str]:
 def main() -> int:
     words = [json.loads(p.read_text(encoding="utf-8")) for p in sorted((CONTENT / "words").glob("*.json"))]
     texts = scan_texts()
-    freq = Counter(tok for t in texts for tok in re.findall(r"[a-zäöüß]+", fold(t)))
+    freq = Counter(tok for t in texts for tok in tokens_of(t))
 
-    # خرائط الإسناد: صيغة تامة → كلمات · جذر → كلمات (بتقليم لاحق مسموح)
+    # خرائط الإسناد: صيغة تامة → كلمات · جذر → كلمات (بتقليم لاحق مسموح) · سوابق مقيّدة (Lieblings-)
     exact: dict[str, set[int]] = defaultdict(set)
     stems: dict[str, list[tuple[str, int]]] = defaultdict(list)
+    prefixes: dict[str, list[int]] = defaultdict(list)
     all_forms: list[set[str]] = []
     for i, w in enumerate(words):
-        fs = word_forms(w)
+        fs, pfs = word_forms(w)
         all_forms.append(fs)
+        for pf in pfs:
+            prefixes[pf].append(i)
         for form in fs:
             exact[form].add(i)
             stem = re.sub(r"(?:en|n|e)$", "", form) if len(form) > 4 else form
@@ -106,14 +135,15 @@ def main() -> int:
     for i in range(len(words)):
         for form in all_forms[i]:
             if " " in form:
-                pt = tuple(form.split())
-                phrases[pt[0]].append((pt, i))
+                pt = tuple(TOKEN.findall(form))
+                if len(pt) >= 2:
+                    phrases[pt[0]].append((pt, i))
     for text in texts:
-        toks = re.findall(r"[a-zäöüß]+", fold(text))
+        toks = TOKEN.findall(fold(text))
         for pos, tok in enumerate(toks):
             for pt, i in phrases.get(tok, ()):
                 if tuple(toks[pos:pos + len(pt)]) == pt:
-                    counts[i] += 1
+                    counts[i] += 1  # كل وقوع مواجهة (اتساق مع عدّ المفردات)
     for tok, n in freq.items():
         hit: set[int] = set()
         hit |= exact.get(tok, set())
@@ -124,6 +154,10 @@ def main() -> int:
                 continue
             for stem, i in stems.get(prefix[:3], ()):
                 if prefix == stem or (prefix.startswith(stem) and prefix[len(stem):] in SUFFIXES):
+                    hit.add(i)
+        for pf, ids in prefixes.items():
+            if tok.startswith(pf):
+                for i in ids:
                     hit.add(i)
         for i in hit:
             counts[i] += n

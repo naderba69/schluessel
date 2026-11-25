@@ -414,6 +414,48 @@
           "schule"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Uhr — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Uhr (الساعة (آلة/توقيت))."
+          },
+          {
+            "q": "Januar — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Januar (يناير)."
+          },
+          {
+            "q": "Februar — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Februar (فبراير)."
+          }
+        ],
+        "interleavedWith": [
+          "uhr"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

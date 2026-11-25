@@ -7,7 +7,8 @@
 //   npm run gate -- --did "…"    السطر الأول من التقرير (وإلا يُؤخذ عنوان آخر قرار مهيكل من DECISIONS.md)
 //   npm run gate -- --json       يطبع JSON فقط
 //
-// الحارس الناعم: speech-rate فوق 200 كلمة/دقيقة يُبلَّغ ولا يُسقط البوابة (قانون 11 — الحكم للأذن قبل الإطلاق).
+// الحارس الناعم الوحيد: speech-rate فوق 200 كلمة/دقيقة يُبلَّغ ولا يُسقط البوابة (قانون 11 — الحكم للأذن قبل الإطلاق).
+// عدّاد التدوير حازم منذ D580: أي كلمة تحت 7 مواجهات تُسقط البوابة (§7 — «وإن نقصت كلمة حُقنت في تمرين/نص لاحق»).
 import { spawnSync } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -48,8 +49,8 @@ const STEPS: Step[] = [
   { id: "lexicon", label: "lexicon-sync --check", cmd: "python3", argv: ["tools/dev/lexicon-sync.py", "--check"], parse: (o) => { const m = /ناقص (\d+) · زائد (\d+) · مدخلات (\d+)/u.exec(o); return { ok: /متزامن —/.test(o) && !/غير متزامن/.test(o), summary: m ? `ناقص ${m[1]} · زائد ${m[2]} · مدخلات ${m[3]}` : o.trim().slice(0, 80), numbers: m ? { missing: +m[1]!, extra: +m[2]!, entries: +m[3]! } : {} }; } },
   { id: "links", label: "duden-links", cmd: "python3", argv: ["tools/dev/check-duden-links.py"], parse: (o) => { const m = /سليم (\d+) · مكسور (\d+) · غير مؤكد (\d+) \(المجموع (\d+)\)/u.exec(o); const skip = /تُخطّي[^\n]*?(\d+) رابطاً/u.exec(o); const why = /الضبط: ([^)\n]+)/u.exec(o)?.[1] ?? (/تجربة توصيل/.test(o) ? "تجربة توصيل" : "؟"); const ok = (!!m && +m[2]! === 0) || !!skip; return { ok, summary: m ? `سليم ${m[1]} · مكسور ${m[2]} · غير مؤكد ${m[3]} (${m[4]})` : skip ? `تُخطّي (${skip[1]} · ${why.trim().slice(0, 40)})` : o.trim().slice(0, 80), numbers: m ? { ok: +m[1]!, broken: +m[2]!, unknown: +m[3]!, total: +m[4]! } : skip ? { deferred: +skip[1]! } : {} }; } },
   { id: "speech", label: "speech-rate (ناعم)", cmd: "python3", argv: ["tools/dev/speech-rate.py", "--json"], soft: true, parse: (o) => { const j = JSON.parse(o) as { measured: number; flagged: unknown[]; threshold: number }; return { ok: j.flagged.length === 0, summary: `${j.flagged.length} فوق ${j.threshold} من ${j.measured}`, numbers: { flagged: j.flagged.length, measured: j.measured } }; } },
-  // D575 (§7 + §17 G1): عدّاد التدوير الإجباري — ≥7 مواجهات لكل كلمة. ناعم حتى اكتمال حقن الـ13 الناقصة.
-  { id: "rotation", label: "rotation-audit (ناعم)", cmd: "python3", argv: ["tools/dev/rotation-audit.py", "--json"], soft: true, parse: (o) => { const j = JSON.parse(o) as { ok: number; words: number; deficient: number; threshold: number }; return { ok: j.deficient === 0, summary: `ناقص ${j.deficient} من ${j.words} تحت ${j.threshold}`, numbers: { ok: j.ok, deficient: j.deficient, words: j.words } }; } },
+  // D575/D580 (§7 + §17 G1): عدّاد التدوير الإجباري — ≥7 مواجهات لكل كلمة. حازم منذ D580 (اكتمل الحقن: 2538/2538).
+  { id: "rotation", label: "rotation-audit", cmd: "python3", argv: ["tools/dev/rotation-audit.py", "--json"], soft: false, parse: (o) => { const j = JSON.parse(o) as { ok: number; words: number; deficient: number; threshold: number }; return { ok: j.deficient === 0, summary: `ناقص ${j.deficient} من ${j.words} تحت ${j.threshold}`, numbers: { ok: j.ok, deficient: j.deficient, words: j.words } }; } },
 ];
 
 function run(step: Step): Result {

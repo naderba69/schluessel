@@ -599,6 +599,71 @@
           "tunesien"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Bus — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Bus (حافلة)."
+          },
+          {
+            "q": "Koffer — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "‑er قد تدل على der (للأشخاص والفعّالات غالباً): der Koffer — والقاعدة النهائية: احفظ الأداة مع الكلمة. المعنى: حقيبة سفر."
+          },
+          {
+            "q": "Taxi — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Taxi (سيارة أجرة)."
+          },
+          {
+            "q": "Flug — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Flug (رحلة جوية)."
+          },
+          {
+            "q": "خمّن الجمع: der Bus",
+            "choices": [
+              "die Busse",
+              "die Koffer",
+              "die Taxis"
+            ],
+            "a": "die Busse",
+            "gender": "der",
+            "why": "جمع der Bus هو die Busse. ‑se: der Bus ← die Busse (s تتضاعف قبل ‑e)"
+          }
+        ],
+        "interleavedWith": [
+          "bus",
+          "koffer"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

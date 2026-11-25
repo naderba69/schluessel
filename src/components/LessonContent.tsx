@@ -5,6 +5,7 @@ import { audioPlayer } from "../lib/audio-player.js";
 import { FUNCTION_LABELS_AR, type Phrase } from "../lib/phrase-bank.js";
 import { PlayButton } from "./LessonSession.js";
 import { BorrowedWordsBox, StruckText } from "./StruckText.js";
+import { GenderBadge } from "./GenderBadge.js";
 import type { AudioScript, Unit0Card } from "../../content/schemas/index.js";
 import { CHARACTER_NAME_AR } from "../lib/story.js";
 import { answerNeedsSpecialChar, cardsForEvent, loadUnit0Deck } from "../lib/unit0.js";
@@ -125,6 +126,7 @@ export function LearnStation({
         {rules.length > 0 && <small> — ثم قاعدة اليوم 🧩</small>}
       </p>
       <LearnCardView
+        gender={card.gender}
         promptDe={card.promptDe}
         promptAr={card.promptAr}
         attempted={attempted}
@@ -280,11 +282,12 @@ export function RuleDiscoveryView({ rule, onDone }: { rule: GrammarRule; onDone?
 }
 
 /** التصحيح التفسيري بعد المحاولة: الحكم + الصحيح + «لماذا» (لا يُرسم أبداً قبل المحاولة — F121) */
-function FeedbackView({ verdict, onNext, suspect }: { verdict: Verdict; onNext: () => void; suspect?: { source: string; text?: string } }) {
+function FeedbackView({ verdict, onNext, suspect, gender }: { verdict: Verdict; onNext: () => void; suspect?: { source: string; text?: string }; gender?: string }) {
   return (
     <div data-testid="practice-feedback" data-status={verdict.status}>
       {suspect && <SuspectButton source={suspect.source} text={suspect.text} />}
       <p>
+        {gender && gender !== "none" && <GenderBadge gender={gender as "der" | "die" | "das"} />}{" "}
         <StruckText text={verdict.noteAr} />
       </p>
       {verdict.status !== "correct" && (
@@ -475,7 +478,7 @@ export function PracticeStation({
         </ul>
         {redemittel.length > 0 && (
           <aside data-testid="redemittel">
-            <h4>عبارات تساعدك (Redemittel) — مما تعلّمته حتى الآن فقط</h4>
+            <h4>عبارات تساعدك (<span dir="ltr">Redemittel</span>) — مما تعلّمته حتى الآن فقط</h4>
             <ul>
               {redemittel.map((p) => (
                 <li key={p.de} data-first-lesson={p.firstLesson}>
@@ -553,6 +556,7 @@ export function PracticeStation({
           <FeedbackView
             verdict={state.verdict}
             onNext={next}
+            gender={typed.kind === "choice" ? typed.gender : undefined}
             suspect={{ source: `${lessonId ?? "practice"}/practice-s${state.station}-i${state.item}`, text: typed.prompt }}
           />
         )}

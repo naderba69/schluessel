@@ -426,6 +426,60 @@
           "jetzt"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Nummer — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "النهاية (‑er) لا تحسم هنا — احفظ الأداة مع الكلمة: die Nummer (الرقم)."
+          },
+          {
+            "q": "Antwort — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Antwort (الجواب)."
+          },
+          {
+            "q": "Stimme — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Stimme (الصوت (البشري))."
+          },
+          {
+            "q": "Ohr — der, die oder das?",
+            "choices": [
+              "das",
+              "der",
+              "die"
+            ],
+            "a": "das",
+            "gender": "das",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: das Ohr (الأذن)."
+          }
+        ],
+        "interleavedWith": [
+          "nummer",
+          "antwort"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

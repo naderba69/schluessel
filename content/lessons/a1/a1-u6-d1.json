@@ -458,6 +458,71 @@
           "kaufen"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Oma — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Oma (الجدة)."
+          },
+          {
+            "q": "Schule — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Schule (المدرسة)."
+          },
+          {
+            "q": "Tisch — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Tisch (طاولة)."
+          },
+          {
+            "q": "Stuhl — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Stuhl (كرسي)."
+          },
+          {
+            "q": "خمّن الجمع: die Oma",
+            "choices": [
+              "die Omas",
+              "die Schulen",
+              "die Tische"
+            ],
+            "a": "die Omas",
+            "gender": "die",
+            "why": "جمع die Oma هو die Omas. ‑a ← ‑s: die Oma ← die Omas (كلمات الكلام اليومي المنتهية بحركة: das Handy ← die Handys)"
+          }
+        ],
+        "interleavedWith": [
+          "oma",
+          "schule"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

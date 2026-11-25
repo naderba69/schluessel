@@ -557,6 +557,71 @@
           "fliegen"
         ],
         "explanationRequired": true
+      },
+      {
+        "type": "gender-drill",
+        "items": [
+          {
+            "q": "Post — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Post (بريد)."
+          },
+          {
+            "q": "Linie — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: die Linie (خط (مواصلات))."
+          },
+          {
+            "q": "Entschuldigung — der, die oder das?",
+            "choices": [
+              "die",
+              "der",
+              "das"
+            ],
+            "a": "die",
+            "gender": "die",
+            "why": "‑ung ← die دائماً: die Entschuldigung — مثل die Zeitung · die Rechnung. المعنى: عفواً."
+          },
+          {
+            "q": "Stadtplan — der, die oder das?",
+            "choices": [
+              "der",
+              "die",
+              "das"
+            ],
+            "a": "der",
+            "gender": "der",
+            "why": "لا نهاية دالّة هنا — احفظ الأداة مع الكلمة: der Stadtplan (خريطة المدينة)."
+          },
+          {
+            "q": "خمّن الجمع: die Post",
+            "choices": [
+              "die Post",
+              "die Linien",
+              "die Entschuldigungen"
+            ],
+            "a": "die Post",
+            "gender": "die",
+            "why": "جمع die Post هو die Post. بلا جمع (اسم جماعي)"
+          }
+        ],
+        "interleavedWith": [
+          "post",
+          "linie"
+        ],
+        "explanationRequired": true
       }
     ],
     "communicativeTask": {

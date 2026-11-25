@@ -51,7 +51,7 @@ export function ListeningLab() {
           </button>
           {chosen === p.id && (
             <p data-testid={`answer-${p.id}`} dir="rtl">
-              {p.deA} = {p.arA} · {p.deB} = {p.arB} — {p.hintAr}
+              <span dir="ltr">{p.deA}</span> = {p.arA} · <span dir="ltr">{p.deB}</span> = {p.arB} — {p.hintAr}
             </p>
           )}
         </div>
