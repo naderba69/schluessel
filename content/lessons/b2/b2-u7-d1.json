@@ -1,0 +1,600 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u7-d1",
+  "level": "B2",
+  "unit": 7,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Psyche ist wichtig, das Bewusstsein ist klar und der Trost hilft!",
+    "ar": "الوحدة 7 (النفس والصحة!) الوحدة 7 (النفس والصحة!): اليوم الأول: النفس والوعي والمواساة!"
+  },
+  "canDoDaily": [
+    "يتحدّث عن النفس والوعي! (die Psyche! das Bewusstsein!)",
+    "يصف المواساة! (der Trost hilft!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "behandlung",
+      "vorsorge",
+      "diagnose"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«النفس مهمّة.»؟"
+        },
+        "choices": [
+          "Die Psyche ist wichtig.",
+          "Der Psyche ist wichtig.",
+          "Das Psyche ist wichtig."
+        ],
+        "answer": "Die Psyche ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«المواساة تساعد.»؟"
+        },
+        "choices": [
+          "Der Trost hilft.",
+          "Das Trost hilft.",
+          "Die Trost hilft."
+        ],
+        "answer": "Der Trost hilft.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "psyche",
+      "bewusstsein",
+      "trost"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u7-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ch-ich-laut",
+      "double-consonant",
+      "sp-st-initial",
+      "w-v"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Psyche, Bewusstsein, Trost: Wir kümmern uns um die Psyche!",
+        "ar": "اليوم الأول من الوحدة 7! (النفس! الوعي! المواساة!)"
+      },
+      "situation": {
+        "de": "Psyche, Bewusstsein, Trost — zusammen lernen.",
+        "ar": "نفس! وعي! مواساة! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Psyche (die! -e!) وdas Bewusstsein أجنسي (das! -nis!) وder Trost (der! بلا جمع!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Trost finden! die Psyche zeigen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge",
+          "diagnose"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Psyche",
+                "ar": "النفس (الحالة النفسية)"
+              },
+              {
+                "de": "das Bewusstsein",
+                "ar": "الوعي (الإدراك)"
+              },
+              {
+                "de": "der Trost",
+                "ar": "المواساة (سلوى العزاء)"
+              }
+            ],
+            "why": "die Psyche النفس (الحالة النفسية) (die! -e مؤنثة!) · das Bewusstsein الوعي (الإدراك) (das! das!) · der Trost المواساة (سلوى العزاء) (der! der!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Behandlung",
+                "ar": "العلاج"
+              },
+              {
+                "de": "die Vorsorge",
+                "ar": "الوقاية"
+              },
+              {
+                "de": "die Diagnose",
+                "ar": "التشخيص"
+              }
+            ],
+            "why": "استدعاء سابق: die Behandlung العلاج · die Vorsorge الوقاية · die Diagnose التشخيص"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Psyche",
+                "ar": "النفس (الحالة النفسية)"
+              },
+              {
+                "de": "die Behandlung",
+                "ar": "العلاج"
+              },
+              {
+                "de": "das Bewusstsein",
+                "ar": "الوعي (الإدراك)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge",
+          "diagnose"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (النفس (الحالة النفسية)!)",
+            "a": "Psyche",
+            "why": "die Psyche النفس (الحالة النفسية) (die! -e مؤنثة!) — Die Psyche ist wichtig."
+          },
+          {
+            "q": "das ___ ist wichtig. (الوعي (الإدراك)!)",
+            "a": "Bewusstsein",
+            "why": "das Bewusstsein الوعي (الإدراك) (das! das!) — Das Bewusstsein ist klar."
+          },
+          {
+            "q": "der ___ ist wichtig. (المواساة (سلوى العزاء)!)",
+            "a": "Trost",
+            "why": "der Trost المواساة (سلوى العزاء) (der! der!) — Der Trost hilft."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Behandlung",
+            "why": "الكلمة الناقصة «Behandlung» تعني «العلاج» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Vorsorge",
+            "why": "الكلمة الناقصة «Vorsorge» تعني «الوقاية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist klar.",
+            "a": "Diagnose",
+            "why": "الكلمة الناقصة «Diagnose» تعني «التشخيص» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge",
+          "diagnose"
+        ],
+        "items": [
+          {
+            "q": "~~die Psyche!~~",
+            "a": "Die Psyche ist wichtig.",
+            "why": "العربية: «النفس» مذكّر! والألمانية: die Psyche (die! -e مؤنثة!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Bewusstsein!~~",
+            "a": "Das Bewusstsein ist klar.",
+            "why": "الألمانية: das Bewusstsein (das! -nis محايد!) — والجمع: بلا جمع. (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Trost!~~",
+            "a": "Der Trost hilft.",
+            "why": "العربية: «المواساة» مؤنث! والألمانية: der Trost (der!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die behandlung ist wichtig.~~",
+            "a": "Die Behandlung ist wichtig.",
+            "why": "الخطأ في «behandlung»! الصواب «Behandlung» — راجع القاعدة (العلاج)."
+          },
+          {
+            "q": "~~Die vorsorge ist wichtig.~~",
+            "a": "Die Vorsorge ist wichtig.",
+            "why": "الخطأ في «vorsorge»! الصواب «Vorsorge» — راجع القاعدة (الوقاية)."
+          },
+          {
+            "q": "~~Die diagnose ist klar.~~",
+            "a": "Die Diagnose ist klar.",
+            "why": "الخطأ في «diagnose»! الصواب «Diagnose» — راجع القاعدة (التشخيص)."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge",
+          "diagnose"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالنفس (الحالة النفسية)! (جملتان!)",
+            "a": "Die Psyche ist wichtig. Das Bewusstsein ist klar.",
+            "why": "النفس (الحالة النفسية) أولًا!"
+          },
+          {
+            "q": "تحدّث عن الوعي (الإدراك)! (جملتان!)",
+            "a": "Das Bewusstsein ist klar. Das ist gut.",
+            "why": "الوعي (الإدراك)!"
+          },
+          {
+            "q": "تحدّث عن المواساة (سلوى العزاء)! (جملتان!)",
+            "a": "Der Trost hilft. der Trost hilft.",
+            "why": "المواساة (سلوى العزاء)!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Behandlung» («العلاج») ثم تحدّث بها.",
+            "a": "Die Behandlung ist wichtig.",
+            "why": "استعمل «die Behandlung» («العلاج») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Vorsorge» («الوقاية») ثم تحدّث بها.",
+            "a": "Die Vorsorge ist wichtig.",
+            "why": "استعمل «die Vorsorge» («الوقاية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Diagnose» («التشخيص») ثم تحدّث بها.",
+            "a": "Die Diagnose ist klar.",
+            "why": "استعمل «die Diagnose» («التشخيص») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge",
+          "diagnose"
+        ],
+        "items": [
+          {
+            "audioId": "word-psyche",
+            "speakText": "die Psyche.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "النفس (الحالة النفسية)",
+              "الوعي (الإدراك)",
+              "المواساة (سلوى العزاء)"
+            ],
+            "a": "النفس (الحالة النفسية)",
+            "why": "الصوت يقول «die Psyche» — معناها «النفس (الحالة النفسية)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-bewusstsein",
+            "speakText": "das Bewusstsein.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الوعي (الإدراك)",
+              "المواساة (سلوى العزاء)",
+              "النفس (الحالة النفسية)"
+            ],
+            "a": "الوعي (الإدراك)",
+            "why": "الصوت يقول «das Bewusstsein» — معناها «الوعي (الإدراك)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-trost",
+            "speakText": "der Trost.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المواساة (سلوى العزاء)",
+              "النفس (الحالة النفسية)",
+              "الوعي (الإدراك)"
+            ],
+            "a": "المواساة (سلوى العزاء)",
+            "why": "الصوت يقول «der Trost» — معناها «المواساة (سلوى العزاء)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-behandlung",
+            "speakText": "die Behandlung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "العلاج",
+              "الوقاية",
+              "النفس (الحالة النفسية)"
+            ],
+            "a": "العلاج",
+            "why": "الكلمة المسموعة «die Behandlung» تعني «العلاج». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-vorsorge",
+            "speakText": "die Vorsorge.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الوقاية",
+              "التشخيص",
+              "الوعي (الإدراك)"
+            ],
+            "a": "الوقاية",
+            "why": "الكلمة المسموعة «die Vorsorge» تعني «الوقاية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-diagnose",
+            "speakText": "die Diagnose.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التشخيص",
+              "العلاج",
+              "المواساة (سلوى العزاء)"
+            ],
+            "a": "التشخيص",
+            "why": "الكلمة المسموعة «die Diagnose» تعني «التشخيص». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-behandlung",
+            "speakText": "die Behandlung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "العلاج",
+              "الوقاية",
+              "النفس (الحالة النفسية)"
+            ],
+            "a": "العلاج",
+            "why": "الكلمة المسموعة «die Behandlung» تعني «العلاج». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge"
+        ],
+        "items": [
+          {
+            "audioId": "word-psyche",
+            "speakText": "die Psyche.",
+            "a": "die Psyche",
+            "why": "اكتب ما تسمعه حرفياً: «die Psyche» تعني «النفس (الحالة النفسية)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-bewusstsein",
+            "speakText": "das Bewusstsein.",
+            "a": "das Bewusstsein",
+            "why": "اكتب ما تسمعه حرفياً: «das Bewusstsein» تعني «الوعي (الإدراك)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-behandlung",
+            "speakText": "die Behandlung.",
+            "a": "die Behandlung",
+            "why": "اكتب ما تسمعه حرفياً: «die Behandlung» تعني «العلاج». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-vorsorge",
+            "speakText": "die Vorsorge.",
+            "a": "die Vorsorge",
+            "why": "اكتب ما تسمعه حرفياً: «die Vorsorge» تعني «الوقاية». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«النفس (الحالة النفسية)»؟",
+            "a": "die Psyche"
+          },
+          {
+            "q": "«الوعي (الإدراك)»؟",
+            "a": "das Bewusstsein"
+          },
+          {
+            "q": "«المواساة (سلوى العزاء)»؟",
+            "a": "der Trost"
+          },
+          {
+            "q": "«النفس مهمّة.»؟",
+            "a": "Die Psyche ist wichtig."
+          },
+          {
+            "q": "«الوعي واضح.»؟",
+            "a": "Das Bewusstsein ist klar."
+          },
+          {
+            "q": "«المواساة تساعد.»؟",
+            "a": "Der Trost hilft."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Psyche",
+            "a": "النفس (الحالة النفسية)"
+          },
+          {
+            "q": "das Bewusstsein",
+            "a": "الوعي (الإدراك)"
+          },
+          {
+            "q": "der Trost",
+            "a": "المواساة (سلوى العزاء)"
+          },
+          {
+            "q": "«المواساة تساعد.»؟",
+            "a": "Der Trost hilft."
+          },
+          {
+            "q": "«الوعي واضح.»؟",
+            "a": "Das Bewusstsein ist klar."
+          },
+          {
+            "q": "«النفس مهمّة.»؟",
+            "a": "Die Psyche ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«المواساة (سلوى العزاء)»؟",
+            "a": "der Trost"
+          },
+          {
+            "q": "«الوعي (الإدراك)»؟",
+            "a": "das Bewusstsein"
+          },
+          {
+            "q": "«النفس (الحالة النفسية)»؟",
+            "a": "die Psyche"
+          },
+          {
+            "q": "die Psyche",
+            "a": "النفس (الحالة النفسية)"
+          },
+          {
+            "q": "das Bewusstsein",
+            "a": "الوعي (الإدراك)"
+          },
+          {
+            "q": "der Trost",
+            "a": "المواساة (سلوى العزاء)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Psyche ist wichtig. Das Bewusstsein ist klar. Der Trost hilft. Die Woche der Psyche ist gut.",
+      "ar": "الوحدة 7 (النفس والصحة!) الوحدة 7 (النفس والصحة!): اليوم الأول: النفس والوعي والمواساة! نتعلّم اليوم: النفس (الحالة النفسية) والوعي (الإدراك) والمواساة (سلوى العزاء)!"
+    },
+    "srsBundleWordIds": [
+      "psyche",
+      "bewusstsein",
+      "trost"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Psyche!",
+          "de": "~~der Psyche ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Psyche!",
+          "de": "Die Psyche ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Psyche ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «النفس» مذكّر! والألمانية: die Psyche (die! -e مؤنثة!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Bewusstsein!",
+          "de": "~~die Bewusstsein ist klar.~~"
+        },
+        "correct": {
+          "ar": "das Bewusstsein!",
+          "de": "Das Bewusstsein ist klar."
+        },
+        "exercise": {
+          "q": "___ Bewusstsein ist klar.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "الألمانية: das Bewusstsein (das! -nis محايد!) — والجمع: بلا جمع. (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Trost!",
+          "de": "~~die Trost hilft.~~"
+        },
+        "correct": {
+          "ar": "der Trost!",
+          "de": "Der Trost hilft."
+        },
+        "exercise": {
+          "q": "___ Trost hilft.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «المواساة» مؤنث! والألمانية: der Trost (der!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Psyche",
+      "https://www.duden.de/rechtschreibung/Bewusstsein",
+      "https://www.duden.de/rechtschreibung/Trost"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-psyche",
+    "word-bewusstsein",
+    "word-trost"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 7 (النفس والصحة!) النفس",
+    "goetheWordListOverlap": [
+      "psyche",
+      "bewusstsein",
+      "trost"
+    ]
+  }
+}

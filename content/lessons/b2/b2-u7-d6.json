@@ -1,0 +1,594 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u7-d6",
+  "level": "B2",
+  "unit": 7,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Achtsamkeit ist wichtig, achtsam sein ist gut und der Selbstwert hilft!",
+    "ar": "الوحدة 7 (النفس والصحة!) اليوم الأخير من الوحدة 7! الانتباه الواعي وتقدير الذات!"
+  },
+  "canDoDaily": [
+    "يصف الانتباه الواعي! (die Achtsamkeit! achtsam sein!)",
+    "يتحدث عن تقدير الذات! (der Selbstwert!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "aktivitaet",
+      "erschoepfung",
+      "gesundheitswesen"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الانتباه الواعي مهم.»؟"
+        },
+        "choices": [
+          "Die Achtsamkeit ist wichtig.",
+          "Der Achtsamkeit ist wichtig.",
+          "Das Achtsamkeit ist wichtig."
+        ],
+        "answer": "Die Achtsamkeit ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«تقدير الذات مهم.»؟"
+        },
+        "choices": [
+          "Der Selbstwert ist wichtig.",
+          "Das Selbstwert ist wichtig.",
+          "Die Selbstwert ist wichtig."
+        ],
+        "answer": "Der Selbstwert ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "achtsamkeit",
+      "achtsam",
+      "selbstwert"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u7-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "auslaut-b",
+      "ch-ach-laut",
+      "w-v"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Achtsamkeit, achtsam sein, Selbstwert: Die Woche der Psyche!",
+        "ar": "اليوم الأخير! (الانتباه الواعي! تقدير الذات!)"
+      },
+      "situation": {
+        "de": "Achtsamkeit und Selbstwert — zusammen die Woche schließen.",
+        "ar": "انتباه واعٍ وتقدير ذات! — نُغلق الأسبوع معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Achtsamkeit (-keit مؤنثة دائماً!) وachtsam (صفة!) وder Selbstwert (der! بلا جمع!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: achtsam sein! der Selbstwert haben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "aktivitaet",
+          "erschoepfung",
+          "gesundheitswesen"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Achtsamkeit",
+                "ar": "الانتباه الواعي (اليقظة)"
+              },
+              {
+                "de": "achtsam",
+                "ar": "منتبه (واعٍ مُنتبه)"
+              },
+              {
+                "de": "der Selbstwert",
+                "ar": "تقدير الذات (قيمة الذات)"
+              }
+            ],
+            "why": "die Achtsamkeit الانتباه الواعي (اليقظة) (die! -keit مؤنثة!) · achtsam منتبه (واعٍ مُنتبه) (—! —!) · der Selbstwert تقدير الذات (قيمة الذات) (der! der!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Aktivität",
+                "ar": "النشاط"
+              },
+              {
+                "de": "die Erschöpfung",
+                "ar": "الإرهاق (الإنهاك!)"
+              },
+              {
+                "de": "das Gesundheitswesen",
+                "ar": "نظام الصحّة"
+              }
+            ],
+            "why": "استدعاء سابق: die Aktivität النشاط · die Erschöpfung الإرهاق (الإنهاك!) · das Gesundheitswesen نظام الصحّة"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Achtsamkeit",
+                "ar": "الانتباه الواعي (اليقظة)"
+              },
+              {
+                "de": "die Aktivität",
+                "ar": "النشاط"
+              },
+              {
+                "de": "achtsam",
+                "ar": "منتبه (واعٍ مُنتبه)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "aktivitaet",
+          "erschoepfung",
+          "gesundheitswesen"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (الانتباه الواعي (اليقظة)!)",
+            "a": "Achtsamkeit",
+            "why": "die Achtsamkeit الانتباه الواعي (اليقظة) (die! -keit مؤنثة!) — Die Achtsamkeit ist wichtig."
+          },
+          {
+            "q": "der ___ ist wichtig. (تقدير الذات (قيمة الذات)!)",
+            "a": "Selbstwert",
+            "why": "der Selbstwert تقدير الذات (قيمة الذات) (der! der!) — Der Selbstwert ist wichtig."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Aktivität",
+            "why": "الكلمة الناقصة «Aktivität» تعني «النشاط» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist schlimm.",
+            "a": "Erschöpfung",
+            "why": "الكلمة الناقصة «Erschöpfung» تعني «الإرهاق (الإنهاك!)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist wichtig.",
+            "a": "Gesundheitswesen",
+            "why": "الكلمة الناقصة «Gesundheitswesen» تعني «نظام الصحّة» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "aktivitaet",
+          "erschoepfung",
+          "gesundheitswesen"
+        ],
+        "items": [
+          {
+            "q": "~~das Achtsamkeit!~~",
+            "a": "Die Achtsamkeit ist wichtig.",
+            "why": "-keit مؤنثة دائماً! die Achtsamkeit (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~achtsamkeit statt achtsam!~~",
+            "a": "Wir sind achtsam.",
+            "why": "achtsam صفة (منتبه) وachtsamkeit اسم (الانتباه)! لا تخلطهما! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Selbstwert!~~",
+            "a": "Der Selbstwert ist wichtig.",
+            "why": "العربية: «تقدير الذات» محايد! والألمانية: der Selbstwert (der!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die aktivität ist wichtig.~~",
+            "a": "Die Aktivität ist wichtig.",
+            "why": "الخطأ في «aktivität»! الصواب «Aktivität» — راجع القاعدة (النشاط)."
+          },
+          {
+            "q": "~~Die erschöpfung ist schlimm.~~",
+            "a": "Die Erschöpfung ist schlimm.",
+            "why": "الخطأ في «erschöpfung»! الصواب «Erschöpfung» — راجع القاعدة (الإرهاق (الإنهاك!))."
+          },
+          {
+            "q": "~~Das gesundheitswesen ist wichtig.~~",
+            "a": "Das Gesundheitswesen ist wichtig.",
+            "why": "الخطأ في «gesundheitswesen»! الصواب «Gesundheitswesen» — راجع القاعدة (نظام الصحّة)."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "aktivitaet",
+          "erschoepfung",
+          "gesundheitswesen"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالانتباه الواعي (اليقظة)! (جملتان!)",
+            "a": "Die Achtsamkeit ist wichtig. Wir sind achtsam.",
+            "why": "الانتباه الواعي (اليقظة) أولًا!"
+          },
+          {
+            "q": "تحدّث عن منتبه (واعٍ مُنتبه)! (جملتان!)",
+            "a": "Wir sind achtsam. Das ist gut.",
+            "why": "منتبه (واعٍ مُنتبه)!"
+          },
+          {
+            "q": "تحدّث عن تقدير الذات (قيمة الذات)! (جملتان!)",
+            "a": "Der Selbstwert ist wichtig. der Selbstwert hilft.",
+            "why": "تقدير الذات (قيمة الذات)!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Aktivität» («النشاط») ثم تحدّث بها.",
+            "a": "Die Aktivität ist wichtig.",
+            "why": "استعمل «die Aktivität» («النشاط») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Erschöpfung» («الإرهاق (الإنهاك!)») ثم تحدّث بها.",
+            "a": "Die Erschöpfung ist schlimm.",
+            "why": "استعمل «die Erschöpfung» («الإرهاق (الإنهاك!)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Gesundheitswesen» («نظام الصحّة») ثم تحدّث بها.",
+            "a": "Das Gesundheitswesen ist wichtig.",
+            "why": "استعمل «das Gesundheitswesen» («نظام الصحّة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "aktivitaet",
+          "erschoepfung",
+          "gesundheitswesen"
+        ],
+        "items": [
+          {
+            "audioId": "word-achtsamkeit",
+            "speakText": "die Achtsamkeit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الانتباه الواعي (اليقظة)",
+              "منتبه (واعٍ مُنتبه)",
+              "تقدير الذات (قيمة الذات)"
+            ],
+            "a": "الانتباه الواعي (اليقظة)",
+            "why": "الصوت يقول «die Achtsamkeit» — معناها «الانتباه الواعي (اليقظة)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-achtsam",
+            "speakText": "achtsam.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "منتبه (واعٍ مُنتبه)",
+              "تقدير الذات (قيمة الذات)",
+              "الانتباه الواعي (اليقظة)"
+            ],
+            "a": "منتبه (واعٍ مُنتبه)",
+            "why": "الصوت يقول «achtsam» — معناها «منتبه (واعٍ مُنتبه)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-selbstwert",
+            "speakText": "der Selbstwert.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "تقدير الذات (قيمة الذات)",
+              "الانتباه الواعي (اليقظة)",
+              "منتبه (واعٍ مُنتبه)"
+            ],
+            "a": "تقدير الذات (قيمة الذات)",
+            "why": "الصوت يقول «der Selbstwert» — معناها «تقدير الذات (قيمة الذات)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-aktivitaet",
+            "speakText": "die Aktivität.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "النشاط",
+              "الإرهاق (الإنهاك!)",
+              "الانتباه الواعي (اليقظة)"
+            ],
+            "a": "النشاط",
+            "why": "الكلمة المسموعة «die Aktivität» تعني «النشاط». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-erschoepfung",
+            "speakText": "die Erschöpfung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الإرهاق (الإنهاك!)",
+              "نظام الصحّة",
+              "منتبه (واعٍ مُنتبه)"
+            ],
+            "a": "الإرهاق (الإنهاك!)",
+            "why": "الكلمة المسموعة «die Erschöpfung» تعني «الإرهاق (الإنهاك!)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-gesundheitswesen",
+            "speakText": "das Gesundheitswesen.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "نظام الصحّة",
+              "النشاط",
+              "تقدير الذات (قيمة الذات)"
+            ],
+            "a": "نظام الصحّة",
+            "why": "الكلمة المسموعة «das Gesundheitswesen» تعني «نظام الصحّة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-aktivitaet",
+            "speakText": "die Aktivität.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "النشاط",
+              "الإرهاق (الإنهاك!)",
+              "الانتباه الواعي (اليقظة)"
+            ],
+            "a": "النشاط",
+            "why": "الكلمة المسموعة «die Aktivität» تعني «النشاط». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "aktivitaet",
+          "erschoepfung"
+        ],
+        "items": [
+          {
+            "audioId": "word-achtsamkeit",
+            "speakText": "die Achtsamkeit.",
+            "a": "die Achtsamkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Achtsamkeit» تعني «الانتباه الواعي (اليقظة)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-achtsam",
+            "speakText": "achtsam.",
+            "a": "achtsam",
+            "why": "اكتب ما تسمعه حرفياً: «achtsam» تعني «منتبه (واعٍ مُنتبه)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-aktivitaet",
+            "speakText": "die Aktivität.",
+            "a": "die Aktivität",
+            "why": "اكتب ما تسمعه حرفياً: «die Aktivität» تعني «النشاط». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-erschoepfung",
+            "speakText": "die Erschöpfung.",
+            "a": "die Erschöpfung",
+            "why": "اكتب ما تسمعه حرفياً: «die Erschöpfung» تعني «الإرهاق (الإنهاك!)». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الانتباه الواعي (اليقظة)»؟",
+            "a": "die Achtsamkeit"
+          },
+          {
+            "q": "«منتبه (واعٍ مُنتبه)»؟",
+            "a": "achtsam"
+          },
+          {
+            "q": "«تقدير الذات (قيمة الذات)»؟",
+            "a": "der Selbstwert"
+          },
+          {
+            "q": "«الانتباه الواعي مهم.»؟",
+            "a": "Die Achtsamkeit ist wichtig."
+          },
+          {
+            "q": "«نحن منتبهون.»؟",
+            "a": "Wir sind achtsam."
+          },
+          {
+            "q": "«تقدير الذات مهم.»؟",
+            "a": "Der Selbstwert ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Achtsamkeit",
+            "a": "الانتباه الواعي (اليقظة)"
+          },
+          {
+            "q": "achtsam",
+            "a": "منتبه (واعٍ مُنتبه)"
+          },
+          {
+            "q": "der Selbstwert",
+            "a": "تقدير الذات (قيمة الذات)"
+          },
+          {
+            "q": "«تقدير الذات مهم.»؟",
+            "a": "Der Selbstwert ist wichtig."
+          },
+          {
+            "q": "«نحن منتبهون.»؟",
+            "a": "Wir sind achtsam."
+          },
+          {
+            "q": "«الانتباه الواعي مهم.»؟",
+            "a": "Die Achtsamkeit ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«تقدير الذات (قيمة الذات)»؟",
+            "a": "der Selbstwert"
+          },
+          {
+            "q": "«منتبه (واعٍ مُنتبه)»؟",
+            "a": "achtsam"
+          },
+          {
+            "q": "«الانتباه الواعي (اليقظة)»؟",
+            "a": "die Achtsamkeit"
+          },
+          {
+            "q": "die Achtsamkeit",
+            "a": "الانتباه الواعي (اليقظة)"
+          },
+          {
+            "q": "achtsam",
+            "a": "منتبه (واعٍ مُنتبه)"
+          },
+          {
+            "q": "der Selbstwert",
+            "a": "تقدير الذات (قيمة الذات)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Achtsamkeit ist wichtig. Wir sind achtsam. Der Selbstwert ist wichtig. Die Woche der Psyche ist gut.",
+      "ar": "الوحدة 7 (النفس والصحة!) اليوم الأخير من الوحدة 7! الانتباه الواعي وتقدير الذات! نتعلّم اليوم: الانتباه الواعي (اليقظة) ومنتبه (واعٍ مُنتبه) وتقدير الذات (قيمة الذات)!"
+    },
+    "srsBundleWordIds": [
+      "achtsamkeit",
+      "achtsam",
+      "selbstwert"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "das Achtsamkeit!",
+          "de": "~~das Achtsamkeit ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Achtsamkeit!",
+          "de": "Die Achtsamkeit ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Achtsamkeit ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "-keit مؤنثة دائماً! die Achtsamkeit (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "achtsamkeit statt achtsam!",
+          "de": "~~Wir sind achtsamkeit.~~"
+        },
+        "correct": {
+          "ar": "achtsam!",
+          "de": "Wir sind achtsam."
+        },
+        "exercise": {
+          "q": "Wir sind ___.",
+          "a": "achtsam"
+        },
+        "whyArabicSpeakerFails": "achtsam صفة (منتبه) وachtsamkeit اسم (الانتباه)! لا تخلطهما! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Selbstwert!",
+          "de": "~~die Selbstwert ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "der Selbstwert!",
+          "de": "Der Selbstwert ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Selbstwert ist wichtig.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «تقدير الذات» محايد! والألمانية: der Selbstwert (der!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Achtsamkeit",
+      "https://www.duden.de/rechtschreibung/achtsam",
+      "https://www.duden.de/rechtschreibung/Selbstwert"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-achtsamkeit",
+    "word-achtsam",
+    "word-selbstwert"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 7 (النفس والصحة!) الانتباه الواعي وتقدير الذات",
+    "goetheWordListOverlap": [
+      "achtsamkeit",
+      "achtsam",
+      "selbstwert"
+    ]
+  }
+}

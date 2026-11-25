@@ -1,0 +1,600 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u7-d5",
+  "level": "B2",
+  "unit": 7,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Balance ist wichtig, die Ruhepause ist gut und der Wille ist stark!",
+    "ar": "الوحدة 7 (النفس والصحة!) اليوم الخامس: التوازن والاستراحة والإرادة!"
+  },
+  "canDoDaily": [
+    "يصف التوازن والراحة! (die Balance! die Ruhepause!)",
+    "يتحدث عن الإرادة! (der Wille ist stark!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "belastung",
+      "genesung",
+      "nahrungsmittel"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التوازن مهم.»؟"
+        },
+        "choices": [
+          "Die Balance ist wichtig.",
+          "Der Balance ist wichtig.",
+          "Das Balance ist wichtig."
+        ],
+        "answer": "Die Balance ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الإرادة قويّة.»؟"
+        },
+        "choices": [
+          "Der Wille ist stark.",
+          "Das Wille ist stark.",
+          "Die Wille ist stark."
+        ],
+        "answer": "Der Wille ist stark.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "balance",
+      "ruhepause",
+      "wille"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u7-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "double-consonant",
+      "ng-velar",
+      "vowel-long-short",
+      "w-v"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Balance, Ruhepause, Wille: Wir finden die Mitte!",
+        "ar": "اليوم الخامس! (التوازن! الاستراحة! الإرادة!)"
+      },
+      "situation": {
+        "de": "Balance, Ruhepause, Wille — zusammen lernen.",
+        "ar": "توازن! استراحة! إرادة! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Balance (die! -e!) وdie Ruhepause (die! die Ruhepausen!) وder Wille (der! die Willen!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Balance halten! den Willen haben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "belastung",
+          "genesung",
+          "nahrungsmittel"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Balance",
+                "ar": "التوازن"
+              },
+              {
+                "de": "die Ruhepause",
+                "ar": "الراحة (استراحة قصيرة)"
+              },
+              {
+                "de": "der Wille",
+                "ar": "الإرادة (عزيمة الإرادة)"
+              }
+            ],
+            "why": "die Balance التوازن (die! -e مؤنثة!) · die Ruhepause الراحة (استراحة قصيرة) (die! -e مؤنثة!) · der Wille الإرادة (عزيمة الإرادة) (der! der!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Belastung",
+                "ar": "الإجهاد (العبء!)"
+              },
+              {
+                "de": "die Genesung",
+                "ar": "التعافي"
+              },
+              {
+                "de": "das Nahrungsmittel",
+                "ar": "الغذاء (المادة الغذائية!)"
+              }
+            ],
+            "why": "استدعاء سابق: die Belastung الإجهاد (العبء!) · die Genesung التعافي · das Nahrungsmittel الغذاء (المادة الغذائية!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Balance",
+                "ar": "التوازن"
+              },
+              {
+                "de": "die Belastung",
+                "ar": "الإجهاد (العبء!)"
+              },
+              {
+                "de": "die Ruhepause",
+                "ar": "الراحة (استراحة قصيرة)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "belastung",
+          "genesung",
+          "nahrungsmittel"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (التوازن!)",
+            "a": "Balance",
+            "why": "die Balance التوازن (die! -e مؤنثة!) — Die Balance ist wichtig."
+          },
+          {
+            "q": "die ___ ist wichtig. (الراحة (استراحة قصيرة)!)",
+            "a": "Ruhepause",
+            "why": "die Ruhepause الراحة (استراحة قصيرة) (die! -e مؤنثة!) — Die Ruhepause ist gut."
+          },
+          {
+            "q": "der ___ ist wichtig. (الإرادة (عزيمة الإرادة)!)",
+            "a": "Wille",
+            "why": "der Wille الإرادة (عزيمة الإرادة) (der! der!) — Der Wille ist stark."
+          },
+          {
+            "q": "Die ___ ist schlimm.",
+            "a": "Belastung",
+            "why": "الكلمة الناقصة «Belastung» تعني «الإجهاد (العبء!)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist gut.",
+            "a": "Genesung",
+            "why": "الكلمة الناقصة «Genesung» تعني «التعافي» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist wichtig.",
+            "a": "Nahrungsmittel",
+            "why": "الكلمة الناقصة «Nahrungsmittel» تعني «الغذاء (المادة الغذائية!)» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "belastung",
+          "genesung",
+          "nahrungsmittel"
+        ],
+        "items": [
+          {
+            "q": "~~der Balance!~~",
+            "a": "Die Balance ist wichtig.",
+            "why": "العربية: «التوازن» مذكّر! والألمانية: die Balance (die!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Ruhepause!~~",
+            "a": "Die Ruhepause ist gut.",
+            "why": "الألمانية: die Ruhepause (die! -e مؤنثة!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Wille!~~",
+            "a": "Der Wille ist stark.",
+            "why": "العربية: «الإرادة» مؤنث! والألمانية: der Wille (der!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die belastung ist schlimm.~~",
+            "a": "Die Belastung ist schlimm.",
+            "why": "الخطأ في «belastung»! الصواب «Belastung» — راجع القاعدة (الإجهاد (العبء!))."
+          },
+          {
+            "q": "~~Die genesung ist gut.~~",
+            "a": "Die Genesung ist gut.",
+            "why": "الخطأ في «genesung»! الصواب «Genesung» — راجع القاعدة (التعافي)."
+          },
+          {
+            "q": "~~Das nahrungsmittel ist wichtig.~~",
+            "a": "Das Nahrungsmittel ist wichtig.",
+            "why": "الخطأ في «nahrungsmittel»! الصواب «Nahrungsmittel» — راجع القاعدة (الغذاء (المادة الغذائية!))."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "belastung",
+          "genesung",
+          "nahrungsmittel"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالتوازن! (جملتان!)",
+            "a": "Die Balance ist wichtig. Die Ruhepause ist gut.",
+            "why": "التوازن أولًا!"
+          },
+          {
+            "q": "تحدّث عن الراحة (استراحة قصيرة)! (جملتان!)",
+            "a": "Die Ruhepause ist gut. Das ist gut.",
+            "why": "الراحة (استراحة قصيرة)!"
+          },
+          {
+            "q": "تحدّث عن الإرادة (عزيمة الإرادة)! (جملتان!)",
+            "a": "Der Wille ist stark. der Wille hilft.",
+            "why": "الإرادة (عزيمة الإرادة)!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Belastung» («الإجهاد (العبء!)») ثم تحدّث بها.",
+            "a": "Die Belastung ist schlimm.",
+            "why": "استعمل «die Belastung» («الإجهاد (العبء!)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Genesung» («التعافي») ثم تحدّث بها.",
+            "a": "Die Genesung ist gut.",
+            "why": "استعمل «die Genesung» («التعافي») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Nahrungsmittel» («الغذاء (المادة الغذائية!)») ثم تحدّث بها.",
+            "a": "Das Nahrungsmittel ist wichtig.",
+            "why": "استعمل «das Nahrungsmittel» («الغذاء (المادة الغذائية!)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "belastung",
+          "genesung",
+          "nahrungsmittel"
+        ],
+        "items": [
+          {
+            "audioId": "word-balance",
+            "speakText": "die Balance.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التوازن",
+              "الراحة (استراحة قصيرة)",
+              "الإرادة (عزيمة الإرادة)"
+            ],
+            "a": "التوازن",
+            "why": "الصوت يقول «die Balance» — معناها «التوازن». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ruhepause",
+            "speakText": "die Ruhepause.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الراحة (استراحة قصيرة)",
+              "الإرادة (عزيمة الإرادة)",
+              "التوازن"
+            ],
+            "a": "الراحة (استراحة قصيرة)",
+            "why": "الصوت يقول «die Ruhepause» — معناها «الراحة (استراحة قصيرة)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-wille",
+            "speakText": "der Wille.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الإرادة (عزيمة الإرادة)",
+              "التوازن",
+              "الراحة (استراحة قصيرة)"
+            ],
+            "a": "الإرادة (عزيمة الإرادة)",
+            "why": "الصوت يقول «der Wille» — معناها «الإرادة (عزيمة الإرادة)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-belastung",
+            "speakText": "die Belastung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الإجهاد (العبء!)",
+              "التعافي",
+              "التوازن"
+            ],
+            "a": "الإجهاد (العبء!)",
+            "why": "الكلمة المسموعة «die Belastung» تعني «الإجهاد (العبء!)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-genesung",
+            "speakText": "die Genesung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "التعافي",
+              "الغذاء (المادة الغذائية!)",
+              "الراحة (استراحة قصيرة)"
+            ],
+            "a": "التعافي",
+            "why": "الكلمة المسموعة «die Genesung» تعني «التعافي». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-nahrungsmittel",
+            "speakText": "das Nahrungsmittel.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الغذاء (المادة الغذائية!)",
+              "الإجهاد (العبء!)",
+              "الإرادة (عزيمة الإرادة)"
+            ],
+            "a": "الغذاء (المادة الغذائية!)",
+            "why": "الكلمة المسموعة «das Nahrungsmittel» تعني «الغذاء (المادة الغذائية!)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-belastung",
+            "speakText": "die Belastung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الإجهاد (العبء!)",
+              "التعافي",
+              "التوازن"
+            ],
+            "a": "الإجهاد (العبء!)",
+            "why": "الكلمة المسموعة «die Belastung» تعني «الإجهاد (العبء!)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "belastung",
+          "genesung"
+        ],
+        "items": [
+          {
+            "audioId": "word-balance",
+            "speakText": "die Balance.",
+            "a": "die Balance",
+            "why": "اكتب ما تسمعه حرفياً: «die Balance» تعني «التوازن». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ruhepause",
+            "speakText": "die Ruhepause.",
+            "a": "die Ruhepause",
+            "why": "اكتب ما تسمعه حرفياً: «die Ruhepause» تعني «الراحة (استراحة قصيرة)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-belastung",
+            "speakText": "die Belastung.",
+            "a": "die Belastung",
+            "why": "اكتب ما تسمعه حرفياً: «die Belastung» تعني «الإجهاد (العبء!)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-genesung",
+            "speakText": "die Genesung.",
+            "a": "die Genesung",
+            "why": "اكتب ما تسمعه حرفياً: «die Genesung» تعني «التعافي». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التوازن»؟",
+            "a": "die Balance"
+          },
+          {
+            "q": "«الراحة (استراحة قصيرة)»؟",
+            "a": "die Ruhepause"
+          },
+          {
+            "q": "«الإرادة (عزيمة الإرادة)»؟",
+            "a": "der Wille"
+          },
+          {
+            "q": "«التوازن مهم.»؟",
+            "a": "Die Balance ist wichtig."
+          },
+          {
+            "q": "«الاستراحة جيّدة.»؟",
+            "a": "Die Ruhepause ist gut."
+          },
+          {
+            "q": "«الإرادة قويّة.»؟",
+            "a": "Der Wille ist stark."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Balance",
+            "a": "التوازن"
+          },
+          {
+            "q": "die Ruhepause",
+            "a": "الراحة (استراحة قصيرة)"
+          },
+          {
+            "q": "der Wille",
+            "a": "الإرادة (عزيمة الإرادة)"
+          },
+          {
+            "q": "«الإرادة قويّة.»؟",
+            "a": "Der Wille ist stark."
+          },
+          {
+            "q": "«الاستراحة جيّدة.»؟",
+            "a": "Die Ruhepause ist gut."
+          },
+          {
+            "q": "«التوازن مهم.»؟",
+            "a": "Die Balance ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الإرادة (عزيمة الإرادة)»؟",
+            "a": "der Wille"
+          },
+          {
+            "q": "«الراحة (استراحة قصيرة)»؟",
+            "a": "die Ruhepause"
+          },
+          {
+            "q": "«التوازن»؟",
+            "a": "die Balance"
+          },
+          {
+            "q": "die Balance",
+            "a": "التوازن"
+          },
+          {
+            "q": "die Ruhepause",
+            "a": "الراحة (استراحة قصيرة)"
+          },
+          {
+            "q": "der Wille",
+            "a": "الإرادة (عزيمة الإرادة)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Balance ist wichtig. Die Ruhepause ist gut. Der Wille ist stark. Die Woche der Psyche ist gut.",
+      "ar": "الوحدة 7 (النفس والصحة!) اليوم الخامس: التوازن والاستراحة والإرادة! نتعلّم اليوم: التوازن والراحة (استراحة قصيرة) والإرادة (عزيمة الإرادة)!"
+    },
+    "srsBundleWordIds": [
+      "balance",
+      "ruhepause",
+      "wille"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Balance!",
+          "de": "~~der Balance ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Balance!",
+          "de": "Die Balance ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Balance ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التوازن» مذكّر! والألمانية: die Balance (die!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Ruhepause!",
+          "de": "~~das Ruhepause ist gut.~~"
+        },
+        "correct": {
+          "ar": "die Ruhepause!",
+          "de": "Die Ruhepause ist gut."
+        },
+        "exercise": {
+          "q": "___ Ruhepause ist gut.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Ruhepause (die! -e مؤنثة!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Wille!",
+          "de": "~~die Wille ist stark.~~"
+        },
+        "correct": {
+          "ar": "der Wille!",
+          "de": "Der Wille ist stark."
+        },
+        "exercise": {
+          "q": "___ Wille ist stark.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الإرادة» مؤنث! والألمانية: der Wille (der!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Balance",
+      "https://www.duden.de/rechtschreibung/Ruhepause",
+      "https://www.duden.de/rechtschreibung/Wille"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-balance",
+    "word-ruhepause",
+    "word-wille"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 7 (النفس والصحة!) التوازن والإرادة",
+    "goetheWordListOverlap": [
+      "balance",
+      "ruhepause",
+      "wille"
+    ]
+  }
+}

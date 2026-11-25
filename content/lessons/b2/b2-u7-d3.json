@@ -1,0 +1,602 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u7-d3",
+  "level": "B2",
+  "unit": 7,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Bewältigung geht, die Ausdauer ist stark und die Resilienz hilft!",
+    "ar": "الوحدة 7 (النفس والصحة!) اليوم الثالث: المواجهة والمثابرة والصلابة النفسية!"
+  },
+  "canDoDaily": [
+    "يصف المواجهة والمثابرة! (die Bewältigung! die Ausdauer!)",
+    "يتحدث عن الصلابة النفسية! (die Resilienz!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "operation",
+      "heilung",
+      "symptom"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«المواجهة ممكنة.»؟"
+        },
+        "choices": [
+          "Die Bewältigung geht.",
+          "Der Bewältigung geht.",
+          "Das Bewältigung geht."
+        ],
+        "answer": "Die Bewältigung geht.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«المثابرة قويّة.»؟"
+        },
+        "choices": [
+          "Die Ausdauer ist stark.",
+          "Der Ausdauer ist stark.",
+          "Das Ausdauer ist stark."
+        ],
+        "answer": "Die Ausdauer ist stark.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "bewaeltigung",
+      "ausdauer",
+      "resilienz"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u7-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "r-uvular",
+      "umlaut-a",
+      "vowel-long-short",
+      "w-v",
+      "z"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Bewältigung, Ausdauer, Resilienz: Wir bleiben stark!",
+        "ar": "اليوم الثالث! (المواجهة! المثابرة! الصلابة النفسية!)"
+      },
+      "situation": {
+        "de": "Bewältigung, Ausdauer, Resilienz — zusammen stark sein.",
+        "ar": "مواجهة! مثابرة! صلابة! — نبقى أقوياء معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Bewältigung (-ung مؤنثة!) وdie Ausdauer/die Resilienz بلا جمع!",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Ausdauer haben! die Resilienz zeigen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "operation",
+          "heilung",
+          "symptom"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Bewältigung",
+                "ar": "المواجهة (التغلّب على الصعوبات)"
+              },
+              {
+                "de": "die Ausdauer",
+                "ar": "المثابرة (القدرة على التحمّل)"
+              },
+              {
+                "de": "die Resilienz",
+                "ar": "الصلابة النفسية (القدرة على التعافي)"
+              }
+            ],
+            "why": "die Bewältigung المواجهة (التغلّب على الصعوبات) (die! -ung مؤنثة!) · die Ausdauer المثابرة (القدرة على التحمّل) (die! die!) · die Resilienz الصلابة النفسية (القدرة على التعافي) (die! die!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Operation",
+                "ar": "العملية الجراحية"
+              },
+              {
+                "de": "die Heilung",
+                "ar": "الشفاء"
+              },
+              {
+                "de": "das Symptom",
+                "ar": "العَرَض (المرض!)"
+              }
+            ],
+            "why": "استدعاء سابق: die Operation العملية الجراحية · die Heilung الشفاء · das Symptom العَرَض (المرض!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Bewältigung",
+                "ar": "المواجهة (التغلّب على الصعوبات)"
+              },
+              {
+                "de": "die Operation",
+                "ar": "العملية الجراحية"
+              },
+              {
+                "de": "die Ausdauer",
+                "ar": "المثابرة (القدرة على التحمّل)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "operation",
+          "heilung",
+          "symptom"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (المواجهة (التغلّب على الصعوبات)!)",
+            "a": "Bewältigung",
+            "why": "die Bewältigung المواجهة (التغلّب على الصعوبات) (die! -ung مؤنثة!) — Die Bewältigung geht."
+          },
+          {
+            "q": "die ___ ist wichtig. (المثابرة (القدرة على التحمّل)!)",
+            "a": "Ausdauer",
+            "why": "die Ausdauer المثابرة (القدرة على التحمّل) (die! die!) — Die Ausdauer ist stark."
+          },
+          {
+            "q": "die ___ ist wichtig. (الصلابة النفسية (القدرة على التعافي)!)",
+            "a": "Resilienz",
+            "why": "die Resilienz الصلابة النفسية (القدرة على التعافي) (die! die!) — Die Resilienz hilft."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Operation",
+            "why": "الكلمة الناقصة «Operation» تعني «العملية الجراحية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist gut.",
+            "a": "Heilung",
+            "why": "الكلمة الناقصة «Heilung» تعني «الشفاء» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist klar.",
+            "a": "Symptom",
+            "why": "الكلمة الناقصة «Symptom» تعني «العَرَض (المرض!)» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "operation",
+          "heilung",
+          "symptom"
+        ],
+        "items": [
+          {
+            "q": "~~der Bewältigung!~~",
+            "a": "Die Bewältigung geht.",
+            "why": "-ung مؤنثة دائماً! die Bewältigung (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Ausdauer!~~",
+            "a": "Die Ausdauer ist stark.",
+            "why": "العربية: «المثابرة» محايد بالمعنى! والألمانية: die Ausdauer (die!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Resilienz جمعها Resilienzen!~~",
+            "a": "Die Resilienz ist stark.",
+            "why": "die Resilienz تُستعمل عادةً بلا جمع — لا تجمعها! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die operation ist wichtig.~~",
+            "a": "Die Operation ist wichtig.",
+            "why": "الخطأ في «operation»! الصواب «Operation» — راجع القاعدة (العملية الجراحية)."
+          },
+          {
+            "q": "~~Die heilung ist gut.~~",
+            "a": "Die Heilung ist gut.",
+            "why": "الخطأ في «heilung»! الصواب «Heilung» — راجع القاعدة (الشفاء)."
+          },
+          {
+            "q": "~~Das symptom ist klar.~~",
+            "a": "Das Symptom ist klar.",
+            "why": "الخطأ في «symptom»! الصواب «Symptom» — راجع القاعدة (العَرَض (المرض!))."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "operation",
+          "heilung",
+          "symptom"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالمواجهة (التغلّب على الصعوبات)! (جملتان!)",
+            "a": "Die Bewältigung geht. Die Ausdauer ist stark.",
+            "why": "المواجهة (التغلّب على الصعوبات) أولًا!"
+          },
+          {
+            "q": "تحدّث عن المثابرة (القدرة على التحمّل)! (جملتان!)",
+            "a": "Die Ausdauer ist stark. Das ist gut.",
+            "why": "المثابرة (القدرة على التحمّل)!"
+          },
+          {
+            "q": "تحدّث عن الصلابة النفسية (القدرة على التعافي)! (جملتان!)",
+            "a": "Die Resilienz hilft. die Resilienz hilft.",
+            "why": "الصلابة النفسية (القدرة على التعافي)!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Operation» («العملية الجراحية») ثم تحدّث بها.",
+            "a": "Die Operation ist wichtig.",
+            "why": "استعمل «die Operation» («العملية الجراحية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Heilung» («الشفاء») ثم تحدّث بها.",
+            "a": "Die Heilung ist gut.",
+            "why": "استعمل «die Heilung» («الشفاء») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Symptom» («العَرَض (المرض!)») ثم تحدّث بها.",
+            "a": "Das Symptom ist klar.",
+            "why": "استعمل «das Symptom» («العَرَض (المرض!)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "operation",
+          "heilung",
+          "symptom"
+        ],
+        "items": [
+          {
+            "audioId": "word-bewaeltigung",
+            "speakText": "die Bewältigung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المواجهة (التغلّب على الصعوبات)",
+              "المثابرة (القدرة على التحمّل)",
+              "الصلابة النفسية (القدرة على التعافي)"
+            ],
+            "a": "المواجهة (التغلّب على الصعوبات)",
+            "why": "الصوت يقول «die Bewältigung» — معناها «المواجهة (التغلّب على الصعوبات)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ausdauer",
+            "speakText": "die Ausdauer.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المثابرة (القدرة على التحمّل)",
+              "الصلابة النفسية (القدرة على التعافي)",
+              "المواجهة (التغلّب على الصعوبات)"
+            ],
+            "a": "المثابرة (القدرة على التحمّل)",
+            "why": "الصوت يقول «die Ausdauer» — معناها «المثابرة (القدرة على التحمّل)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-resilienz",
+            "speakText": "die Resilienz.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الصلابة النفسية (القدرة على التعافي)",
+              "المواجهة (التغلّب على الصعوبات)",
+              "المثابرة (القدرة على التحمّل)"
+            ],
+            "a": "الصلابة النفسية (القدرة على التعافي)",
+            "why": "الصوت يقول «die Resilienz» — معناها «الصلابة النفسية (القدرة على التعافي)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-operation",
+            "speakText": "die Operation.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "العملية الجراحية",
+              "الشفاء",
+              "المواجهة (التغلّب على الصعوبات)"
+            ],
+            "a": "العملية الجراحية",
+            "why": "الكلمة المسموعة «die Operation» تعني «العملية الجراحية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-heilung",
+            "speakText": "die Heilung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الشفاء",
+              "العَرَض (المرض!)",
+              "المثابرة (القدرة على التحمّل)"
+            ],
+            "a": "الشفاء",
+            "why": "الكلمة المسموعة «die Heilung» تعني «الشفاء». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-symptom",
+            "speakText": "das Symptom.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "العَرَض (المرض!)",
+              "العملية الجراحية",
+              "الصلابة النفسية (القدرة على التعافي)"
+            ],
+            "a": "العَرَض (المرض!)",
+            "why": "الكلمة المسموعة «das Symptom» تعني «العَرَض (المرض!)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-operation",
+            "speakText": "die Operation.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "العملية الجراحية",
+              "الشفاء",
+              "المواجهة (التغلّب على الصعوبات)"
+            ],
+            "a": "العملية الجراحية",
+            "why": "الكلمة المسموعة «die Operation» تعني «العملية الجراحية». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "operation",
+          "heilung"
+        ],
+        "items": [
+          {
+            "audioId": "word-bewaeltigung",
+            "speakText": "die Bewältigung.",
+            "a": "die Bewältigung",
+            "why": "اكتب ما تسمعه حرفياً: «die Bewältigung» تعني «المواجهة (التغلّب على الصعوبات)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ausdauer",
+            "speakText": "die Ausdauer.",
+            "a": "die Ausdauer",
+            "why": "اكتب ما تسمعه حرفياً: «die Ausdauer» تعني «المثابرة (القدرة على التحمّل)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-operation",
+            "speakText": "die Operation.",
+            "a": "die Operation",
+            "why": "اكتب ما تسمعه حرفياً: «die Operation» تعني «العملية الجراحية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-heilung",
+            "speakText": "die Heilung.",
+            "a": "die Heilung",
+            "why": "اكتب ما تسمعه حرفياً: «die Heilung» تعني «الشفاء». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«المواجهة (التغلّب على الصعوبات)»؟",
+            "a": "die Bewältigung"
+          },
+          {
+            "q": "«المثابرة (القدرة على التحمّل)»؟",
+            "a": "die Ausdauer"
+          },
+          {
+            "q": "«الصلابة النفسية (القدرة على التعافي)»؟",
+            "a": "die Resilienz"
+          },
+          {
+            "q": "«المواجهة ممكنة.»؟",
+            "a": "Die Bewältigung geht."
+          },
+          {
+            "q": "«المثابرة قويّة.»؟",
+            "a": "Die Ausdauer ist stark."
+          },
+          {
+            "q": "«الصلابة النفسية تساعد.»؟",
+            "a": "Die Resilienz hilft."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Bewältigung",
+            "a": "المواجهة (التغلّب على الصعوبات)"
+          },
+          {
+            "q": "die Ausdauer",
+            "a": "المثابرة (القدرة على التحمّل)"
+          },
+          {
+            "q": "die Resilienz",
+            "a": "الصلابة النفسية (القدرة على التعافي)"
+          },
+          {
+            "q": "«الصلابة النفسية تساعد.»؟",
+            "a": "Die Resilienz hilft."
+          },
+          {
+            "q": "«المثابرة قويّة.»؟",
+            "a": "Die Ausdauer ist stark."
+          },
+          {
+            "q": "«المواجهة ممكنة.»؟",
+            "a": "Die Bewältigung geht."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الصلابة النفسية (القدرة على التعافي)»؟",
+            "a": "die Resilienz"
+          },
+          {
+            "q": "«المثابرة (القدرة على التحمّل)»؟",
+            "a": "die Ausdauer"
+          },
+          {
+            "q": "«المواجهة (التغلّب على الصعوبات)»؟",
+            "a": "die Bewältigung"
+          },
+          {
+            "q": "die Bewältigung",
+            "a": "المواجهة (التغلّب على الصعوبات)"
+          },
+          {
+            "q": "die Ausdauer",
+            "a": "المثابرة (القدرة على التحمّل)"
+          },
+          {
+            "q": "die Resilienz",
+            "a": "الصلابة النفسية (القدرة على التعافي)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Bewältigung geht. Die Ausdauer ist stark. Die Resilienz hilft. Die Woche der Psyche ist gut.",
+      "ar": "الوحدة 7 (النفس والصحة!) اليوم الثالث: المواجهة والمثابرة والصلابة النفسية! نتعلّم اليوم: المواجهة (التغلّب على الصعوبات) والمثابرة (القدرة على التحمّل) والصلابة النفسية (القدرة على التعافي)!"
+    },
+    "srsBundleWordIds": [
+      "bewaeltigung",
+      "ausdauer",
+      "resilienz"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Bewältigung!",
+          "de": "~~der Bewältigung geht.~~"
+        },
+        "correct": {
+          "ar": "die Bewältigung!",
+          "de": "Die Bewältigung geht."
+        },
+        "exercise": {
+          "q": "___ Bewältigung geht.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "-ung مؤنثة دائماً! die Bewältigung (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Ausdauer!",
+          "de": "~~das Ausdauer ist stark.~~"
+        },
+        "correct": {
+          "ar": "die Ausdauer!",
+          "de": "Die Ausdauer ist stark."
+        },
+        "exercise": {
+          "q": "___ Ausdauer ist stark.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «المثابرة» محايد بالمعنى! والألمانية: die Ausdauer (die!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Resilienz جمعها Resilienzen!",
+          "de": "~~die Resilienzen sind stark.~~"
+        },
+        "correct": {
+          "ar": "die Resilienz بلا جمع!",
+          "de": "Die Resilienz ist stark."
+        },
+        "exercise": {
+          "q": "Die ___ ist stark.",
+          "a": "Resilienz"
+        },
+        "whyArabicSpeakerFails": "die Resilienz تُستعمل عادةً بلا جمع — لا تجمعها! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Bewaeltigung",
+      "https://www.duden.de/rechtschreibung/Ausdauer",
+      "https://www.duden.de/rechtschreibung/Resilienz"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-bewaeltigung",
+    "word-ausdauer",
+    "word-resilienz"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 7 (النفس والصحة!) المواجهة والمثابرة",
+    "goetheWordListOverlap": [
+      "bewaeltigung",
+      "ausdauer",
+      "resilienz"
+    ]
+  }
+}

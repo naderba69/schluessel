@@ -76,7 +76,7 @@ def main() -> int:
 
     flagged = [r for r in rows.values() if r["wpm"] > 200.0 and r["words"] >= 3]
     # D559/N-364: +b1m1-h3-d1-l2 · +b1m1-h3-d2-l1 · D562/N-367: +b2m1-h3-d5-l1 · D566: +21 سطر حوار جديد (سرعة نطق ناعمة D214: تُبلَّغ ولا تُعاد)
-    assert {f["id"] for f in flagged} == {"fc-11", "word-in-der-nacht", "b1m1-h3-d1-l2", "b1m1-h3-d2-l1", "b2m1-h3-d5-l1", "b1u14d6-l1", "b2u6d5-l2", "b1u11d1-l6", "b1u12d3-l7", "a2u4d6-l1", "b1u3d2-l6", "b1u10d3-l5", "b1u2d4-l5", "a2u4d6-l2", "b1u2d2-l1", "b1u1d1-l4", "a2u8d1-l2", "b1u3d4-l3", "b1u4d2-l6", "b1u14d1-l6", "b1u4d5-l1", "a2u1d6-l4", "b1u12d2-l2", "b1u5d4-l4", "a2u6d5-l8", "b2u1d6-l6"}, "المعلَّم تغيّر — راجع N-122/N-263/N-364/N-367/D566"
+    assert {f["id"] for f in flagged} == {"fc-11", "word-in-der-nacht", "b1m1-h3-d1-l2", "b1m1-h3-d2-l1", "b2m1-h3-d5-l1", "b1u14d6-l1", "b2u6d5-l2", "b1u11d1-l6", "b1u12d3-l7", "a2u4d6-l1", "b1u3d2-l6", "b1u10d3-l5", "b1u2d4-l5", "a2u4d6-l2", "b1u2d2-l1", "b1u1d1-l4", "a2u8d1-l2", "b1u3d4-l3", "b1u4d2-l6", "b1u14d1-l6", "b1u4d5-l1", "a2u1d6-l4", "b1u12d2-l2", "b1u5d4-l4", "a2u6d5-l8", "b2u1d6-l6", "b2u7d2-l2"}, "المعلَّم تغيّر — راجع N-122/N-263/N-364/N-367/D566/D585"
     NREF = {"fc-11": ("N-122", "هل يُفهم من أول استماع؟ إن بدا سريعاً يُعاد بصياغة أطول لا بضبط السرعة."),
             "word-in-der-nacht": ("N-263", "هل يُفهم من أول استماع؟ القطعة تُقال سريعة طبيعياً — «أعد» تعني قرار مالك."),
             "b1m1-h3-d1-l2": ("N-364", "هل يُفهم من أول استماع؟ «Das tut mir leid.» تُقال سريعة طبيعياً — لا ضبط ولا إعادة (D214)."),
@@ -85,7 +85,7 @@ def main() -> int:
     for _n in ["b1u14d6-l1", "b2u6d5-l2", "b1u11d1-l6", "b1u12d3-l7", "a2u4d6-l1", "b1u3d2-l6",
                "b1u10d3-l5", "b1u2d4-l5", "a2u4d6-l2", "b1u2d2-l1", "b1u1d1-l4", "a2u8d1-l2",
                "b1u3d4-l3", "b1u4d2-l6", "b1u14d1-l6", "b1u4d5-l1", "a2u1d6-l4", "b1u12d2-l2",
-               "b1u5d4-l4", "a2u6d5-l8", "b2u1d6-l6"]:
+               "b1u5d4-l4", "a2u6d5-l8", "b2u1d6-l6", "b2u7d2-l2"]:
         NREF.setdefault(_n, ("D566", "هل يُفهم من أول استماع؟ سطر حوار D566 سريع (ناعم D214) — إن لزم يُعاد بصياغة أطول لا بضبط السرعة."))
     for f in sorted(flagged, key=lambda r: r["id"]):
         nref, q = NREF[f["id"]]
@@ -101,7 +101,7 @@ def main() -> int:
                        "q": "هل السرعة طبيعية والنطق واضح؟", "text": r["textDe"], "wpm": r["wpm"],
                        "lesson": (r["lessonRefs"] or ["—"])[0]})
 
-    assert len(sample) == 54, f"العينة = {len(sample)} لا 54"  # D566: +21 سطر حوار // D562: +b2m1-h3-d5-l1 (N-367) // D559: +b1m1-h3-d1-l2 · +b1m1-h3-d2-l1 (N-364) // D408: +word-in-der-nacht // D319: +Erlaubnis // D318: +Projekt // D316: +Zeugnis
+    assert len(sample) == 55, f"العينة = {len(sample)} لا 55"  # D585: +b2u7d2-l2 (ناعم D214!) // D566: +21 سطر حوار // D562: +b2m1-h3-d5-l1 (N-367) // D559: +b1m1-h3-d1-l2 · +b1m1-h3-d2-l1 (N-364) // D408: +word-in-der-nacht // D319: +Erlaubnis // D318: +Projekt // D316: +Zeugnis
     for i, s in enumerate(sample, 1):
         print(f"{i:>2}. {s['id']:<18} «{s['text']}» — {s['why']}")
 

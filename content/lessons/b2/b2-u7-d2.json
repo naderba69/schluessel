@@ -1,0 +1,600 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u7-d2",
+  "level": "B2",
+  "unit": 7,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Druck ist groß, die Anspannung ist schlimm und die Überlastung ist ein Problem!",
+    "ar": "الوحدة 7 (النفس والصحة!) اليوم الثاني: الضغط والتوتر والحمل الزائد!"
+  },
+  "canDoDaily": [
+    "يصف الضغط والتوتر! (der Druck! die Anspannung!)",
+    "يتحذّر من الحمل الزائد! (die Überlastung!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "ernaehrung",
+      "entspannung",
+      "pflege"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الضغط كبير.»؟"
+        },
+        "choices": [
+          "Der Druck ist groß.",
+          "Das Druck ist groß.",
+          "Die Druck ist groß."
+        ],
+        "answer": "Der Druck ist groß.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«التوتر سيّئ.»؟"
+        },
+        "choices": [
+          "Die Anspannung ist schlimm.",
+          "Der Anspannung ist schlimm.",
+          "Das Anspannung ist schlimm."
+        ],
+        "answer": "Die Anspannung ist schlimm.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "druck",
+      "anspannung",
+      "ueberlastung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u7-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "double-consonant",
+      "ng-velar",
+      "sp-st-initial",
+      "umlaut-u"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Druck, Anspannung, Überlastung: Wir reden über den Stress!",
+        "ar": "اليوم الثاني! (الضغط! التوتر! الحمل الزائد!)"
+      },
+      "situation": {
+        "de": "Druck, Anspannung, Überlastung — zusammen reden.",
+        "ar": "ضغط! توتر! حمل زائد! — نتحدّث معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "der Druck (der! جمعه die Drücke!) وdie Anspannung/die Überlastung (-ung مؤنثة دائماً!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Druck haben! die Anspannung haben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ernaehrung",
+          "entspannung",
+          "pflege"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "der Druck",
+                "ar": "الضغط"
+              },
+              {
+                "de": "die Anspannung",
+                "ar": "التوتر (الشدّ العصبي)"
+              },
+              {
+                "de": "die Überlastung",
+                "ar": "الحمل الزائد (الإفراط في العمل)"
+              }
+            ],
+            "why": "der Druck الضغط (der! der!) · die Anspannung التوتر (الشدّ العصبي) (die! -ung مؤنثة!) · die Überlastung الحمل الزائد (الإفراط في العمل) (die! -ung مؤنثة!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Ernährung",
+                "ar": "التغذية"
+              },
+              {
+                "de": "die Entspannung",
+                "ar": "الاسترخاء"
+              },
+              {
+                "de": "die Pflege",
+                "ar": "الرعاية"
+              }
+            ],
+            "why": "استدعاء سابق: die Ernährung التغذية · die Entspannung الاسترخاء · die Pflege الرعاية"
+          },
+          {
+            "pairs": [
+              {
+                "de": "der Druck",
+                "ar": "الضغط"
+              },
+              {
+                "de": "die Ernährung",
+                "ar": "التغذية"
+              },
+              {
+                "de": "die Anspannung",
+                "ar": "التوتر (الشدّ العصبي)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ernaehrung",
+          "entspannung",
+          "pflege"
+        ],
+        "items": [
+          {
+            "q": "der ___ ist wichtig. (الضغط!)",
+            "a": "Druck",
+            "why": "der Druck الضغط (der! der!) — Der Druck ist groß."
+          },
+          {
+            "q": "die ___ ist wichtig. (التوتر (الشدّ العصبي)!)",
+            "a": "Anspannung",
+            "why": "die Anspannung التوتر (الشدّ العصبي) (die! -ung مؤنثة!) — Die Anspannung ist schlimm."
+          },
+          {
+            "q": "die ___ ist wichtig. (الحمل الزائد (الإفراط في العمل)!)",
+            "a": "Überlastung",
+            "why": "die Überlastung الحمل الزائد (الإفراط في العمل) (die! -ung مؤنثة!) — Die Überlastung ist ein Problem."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Ernährung",
+            "why": "الكلمة الناقصة «Ernährung» تعني «التغذية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist gut.",
+            "a": "Entspannung",
+            "why": "الكلمة الناقصة «Entspannung» تعني «الاسترخاء» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Pflege",
+            "why": "الكلمة الناقصة «Pflege» تعني «الرعاية» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ernaehrung",
+          "entspannung",
+          "pflege"
+        ],
+        "items": [
+          {
+            "q": "~~die Druck!~~",
+            "a": "Der Druck ist groß.",
+            "why": "العربية: «الضغط» مؤنث! والألمانية: der Druck (der!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Anspannung!~~",
+            "a": "Die Anspannung ist schlimm.",
+            "why": "الألمانية: die Anspannung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Überlastung!~~",
+            "a": "Die Überlastung ist ein Problem.",
+            "why": "-ung مؤنثة دائماً! die Überlastung (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die ernährung ist wichtig.~~",
+            "a": "Die Ernährung ist wichtig.",
+            "why": "الخطأ في «ernährung»! الصواب «Ernährung» — راجع القاعدة (التغذية)."
+          },
+          {
+            "q": "~~Die entspannung ist gut.~~",
+            "a": "Die Entspannung ist gut.",
+            "why": "الخطأ في «entspannung»! الصواب «Entspannung» — راجع القاعدة (الاسترخاء)."
+          },
+          {
+            "q": "~~Die pflege ist wichtig.~~",
+            "a": "Die Pflege ist wichtig.",
+            "why": "الخطأ في «pflege»! الصواب «Pflege» — راجع القاعدة (الرعاية)."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "ernaehrung",
+          "entspannung",
+          "pflege"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالضغط! (جملتان!)",
+            "a": "Der Druck ist groß. Die Anspannung ist schlimm.",
+            "why": "الضغط أولًا!"
+          },
+          {
+            "q": "تحدّث عن التوتر (الشدّ العصبي)! (جملتان!)",
+            "a": "Die Anspannung ist schlimm. Das ist gut.",
+            "why": "التوتر (الشدّ العصبي)!"
+          },
+          {
+            "q": "تحدّث عن الحمل الزائد (الإفراط في العمل)! (جملتان!)",
+            "a": "Die Überlastung ist ein Problem. die Überlastung hilft.",
+            "why": "الحمل الزائد (الإفراط في العمل)!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Ernährung» («التغذية») ثم تحدّث بها.",
+            "a": "Die Ernährung ist wichtig.",
+            "why": "استعمل «die Ernährung» («التغذية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Entspannung» («الاسترخاء») ثم تحدّث بها.",
+            "a": "Die Entspannung ist gut.",
+            "why": "استعمل «die Entspannung» («الاسترخاء») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Pflege» («الرعاية») ثم تحدّث بها.",
+            "a": "Die Pflege ist wichtig.",
+            "why": "استعمل «die Pflege» («الرعاية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "ernaehrung",
+          "entspannung",
+          "pflege"
+        ],
+        "items": [
+          {
+            "audioId": "word-druck",
+            "speakText": "der Druck.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الضغط",
+              "التوتر (الشدّ العصبي)",
+              "الحمل الزائد (الإفراط في العمل)"
+            ],
+            "a": "الضغط",
+            "why": "الصوت يقول «der Druck» — معناها «الضغط». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-anspannung",
+            "speakText": "die Anspannung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التوتر (الشدّ العصبي)",
+              "الحمل الزائد (الإفراط في العمل)",
+              "الضغط"
+            ],
+            "a": "التوتر (الشدّ العصبي)",
+            "why": "الصوت يقول «die Anspannung» — معناها «التوتر (الشدّ العصبي)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ueberlastung",
+            "speakText": "die Überlastung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الحمل الزائد (الإفراط في العمل)",
+              "الضغط",
+              "التوتر (الشدّ العصبي)"
+            ],
+            "a": "الحمل الزائد (الإفراط في العمل)",
+            "why": "الصوت يقول «die Überlastung» — معناها «الحمل الزائد (الإفراط في العمل)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ernaehrung",
+            "speakText": "die Ernährung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التغذية",
+              "الاسترخاء",
+              "الضغط"
+            ],
+            "a": "التغذية",
+            "why": "الكلمة المسموعة «die Ernährung» تعني «التغذية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-entspannung",
+            "speakText": "die Entspannung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الاسترخاء",
+              "الرعاية",
+              "التوتر (الشدّ العصبي)"
+            ],
+            "a": "الاسترخاء",
+            "why": "الكلمة المسموعة «die Entspannung» تعني «الاسترخاء». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-pflege",
+            "speakText": "die Pflege.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الرعاية",
+              "التغذية",
+              "الحمل الزائد (الإفراط في العمل)"
+            ],
+            "a": "الرعاية",
+            "why": "الكلمة المسموعة «die Pflege» تعني «الرعاية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-ernaehrung",
+            "speakText": "die Ernährung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "التغذية",
+              "الاسترخاء",
+              "الضغط"
+            ],
+            "a": "التغذية",
+            "why": "الكلمة المسموعة «die Ernährung» تعني «التغذية». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "ernaehrung",
+          "entspannung"
+        ],
+        "items": [
+          {
+            "audioId": "word-druck",
+            "speakText": "der Druck.",
+            "a": "der Druck",
+            "why": "اكتب ما تسمعه حرفياً: «der Druck» تعني «الضغط». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-anspannung",
+            "speakText": "die Anspannung.",
+            "a": "die Anspannung",
+            "why": "اكتب ما تسمعه حرفياً: «die Anspannung» تعني «التوتر (الشدّ العصبي)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ernaehrung",
+            "speakText": "die Ernährung.",
+            "a": "die Ernährung",
+            "why": "اكتب ما تسمعه حرفياً: «die Ernährung» تعني «التغذية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-entspannung",
+            "speakText": "die Entspannung.",
+            "a": "die Entspannung",
+            "why": "اكتب ما تسمعه حرفياً: «die Entspannung» تعني «الاسترخاء». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الضغط»؟",
+            "a": "der Druck"
+          },
+          {
+            "q": "«التوتر (الشدّ العصبي)»؟",
+            "a": "die Anspannung"
+          },
+          {
+            "q": "«الحمل الزائد (الإفراط في العمل)»؟",
+            "a": "die Überlastung"
+          },
+          {
+            "q": "«الضغط كبير.»؟",
+            "a": "Der Druck ist groß."
+          },
+          {
+            "q": "«التوتر سيّئ.»؟",
+            "a": "Die Anspannung ist schlimm."
+          },
+          {
+            "q": "«الحمل الزائد مشكلة.»؟",
+            "a": "Die Überlastung ist ein Problem."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "der Druck",
+            "a": "الضغط"
+          },
+          {
+            "q": "die Anspannung",
+            "a": "التوتر (الشدّ العصبي)"
+          },
+          {
+            "q": "die Überlastung",
+            "a": "الحمل الزائد (الإفراط في العمل)"
+          },
+          {
+            "q": "«الحمل الزائد مشكلة.»؟",
+            "a": "Die Überlastung ist ein Problem."
+          },
+          {
+            "q": "«التوتر سيّئ.»؟",
+            "a": "Die Anspannung ist schlimm."
+          },
+          {
+            "q": "«الضغط كبير.»؟",
+            "a": "Der Druck ist groß."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الحمل الزائد (الإفراط في العمل)»؟",
+            "a": "die Überlastung"
+          },
+          {
+            "q": "«التوتر (الشدّ العصبي)»؟",
+            "a": "die Anspannung"
+          },
+          {
+            "q": "«الضغط»؟",
+            "a": "der Druck"
+          },
+          {
+            "q": "der Druck",
+            "a": "الضغط"
+          },
+          {
+            "q": "die Anspannung",
+            "a": "التوتر (الشدّ العصبي)"
+          },
+          {
+            "q": "die Überlastung",
+            "a": "الحمل الزائد (الإفراط في العمل)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Druck ist groß. Die Anspannung ist schlimm. Die Überlastung ist ein Problem. Die Woche der Psyche ist gut.",
+      "ar": "الوحدة 7 (النفس والصحة!) اليوم الثاني: الضغط والتوتر والحمل الزائد! نتعلّم اليوم: الضغط والتوتر (الشدّ العصبي) والحمل الزائد (الإفراط في العمل)!"
+    },
+    "srsBundleWordIds": [
+      "druck",
+      "anspannung",
+      "ueberlastung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Druck!",
+          "de": "~~die Druck ist groß.~~"
+        },
+        "correct": {
+          "ar": "der Druck!",
+          "de": "Der Druck ist groß."
+        },
+        "exercise": {
+          "q": "___ Druck ist groß.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الضغط» مؤنث! والألمانية: der Druck (der!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Anspannung!",
+          "de": "~~das Anspannung ist schlimm.~~"
+        },
+        "correct": {
+          "ar": "die Anspannung!",
+          "de": "Die Anspannung ist schlimm."
+        },
+        "exercise": {
+          "q": "___ Anspannung ist schlimm.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Anspannung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Überlastung!",
+          "de": "~~der Überlastung ist ein Problem.~~"
+        },
+        "correct": {
+          "ar": "die Überlastung!",
+          "de": "Die Überlastung ist ein Problem."
+        },
+        "exercise": {
+          "q": "___ Überlastung ist ein Problem.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "-ung مؤنثة دائماً! die Überlastung (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Druck",
+      "https://www.duden.de/rechtschreibung/Anspannung",
+      "https://www.duden.de/rechtschreibung/Überlastung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-druck",
+    "word-anspannung",
+    "word-ueberlastung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 7 (النفس والصحة!) الضغط والتوتر",
+    "goetheWordListOverlap": [
+      "druck",
+      "anspannung",
+      "ueberlastung"
+    ]
+  }
+}

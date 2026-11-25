@@ -6770,18 +6770,6 @@
   ],
   "reviewed": [
     {
-      "word": "aktivität",
-      "verdict": "artifact",
-      "espeak": "aktˈiːviːtˈɛːt",
-      "note": "إسبِيك يضع نبرتين في كلمات -tät! المرجع aktiviˈtɛːt (النبر على tät وحدها!) هو الصحيح (D557)."
-    },
-    {
-      "word": "algorithmus",
-      "verdict": "artifact",
-      "espeak": "ˈalɡoːrˌɪtmʊs",
-      "note": "espeak يضع النبرة على المقطع الأول؛ الصحيح على الثالث [alɡoˈʁɪtmʊs] كما في Duden والمرجع — خطأ في مولّد espeak للاستعارات."
-    },
-    {
       "word": "Apartment",
       "verdict": "variant",
       "espeak": "ˌɑpaɾtmˈɛnt",
@@ -6798,6 +6786,138 @@
       "verdict": "artifact",
       "espeak": "bˌɪblɪʲoːtˈeːk",
       "note": "النبر الرئيسي على thek في الصيغتين (espeak ˈ = المرجع ˈ)؛ ˌ الثانوية على bli تقطيعٌ زائد من espeak — فرق في العدّ لا في النبر المسموع (D338)."
+    },
+    {
+      "word": "Comics",
+      "verdict": "artifact",
+      "espeak": "kˈoːmiːks",
+      "note": "استعارة إنجليزية: المرجع ˈkɔmɪks بحركة قصيرة أولى ونبر عليها؛ espeak يطيل o وينقل النبر للمقطع الثاني. النطق المستعار شائع بالصورتين — المسار الحالي يقول صيغة espeak ويُقبل (D251: لا صوت جديد)."
+    },
+    {
+      "word": "Computern",
+      "verdict": "artifact",
+      "espeak": "kˈɔmpuːtɜn",
+      "note": "استعارة: المرجع kɔmˈpjuːtɐn (نبر على pu ممدودة y); espeak يقرأها مركّبة ألمانية Computer+n بنبر أولي وصيغة مختلفة. فرق جوهري في النبر — يُسجَّل للتصحيح في حملة نطق لاحقة؛ الصوت الحالي يبقى (D251)."
+    },
+    {
+      "word": "Fahrst",
+      "verdict": "no-reference",
+      "espeak": "fˈɑːɾst",
+      "note": "صيغة فعل (fahren) لا يوردها المرجع (المرجع يورد المصادر) — فُحصت يدوياً: النبر أولي وa كما في fahren، والتنوين st صحيح. مقبولة."
+    },
+    {
+      "word": "Fünfundachtzig",
+      "verdict": "artifact",
+      "espeak": "fˈʏnfʊndˌaxtsɪç",
+      "note": "المرجع يكسر الربط بين المركّعين بهمزة وينقل النبر لأكhtzig كاملاً [ˌfʏnfʔʊntˈʔaxt͡sɪk]؛ espeak يبقي النبر الثانوي على und ويخفف الهمز. الأرقام المركّبة تُقال بتوسط — فرق تنوين لا يغيّر الفهم؛ تُقبل كما سُمعت."
+    },
+    {
+      "word": "Haddad",
+      "verdict": "no-reference",
+      "espeak": "hˈadɑːt",
+      "note": "اسم علم عربي لا يورده المرجع — فُحص يدوياً: [hˈadɑːt] قراءة ألمانية مقبولة لاسم أجنبي (d الأخيرة تُهمس t بقاعدة الألمانية)."
+    },
+    {
+      "word": "Hallo",
+      "verdict": "variant",
+      "espeak": "hˈaloː",
+      "note": "صيغتان مستعملتان: [ˈhalo] التحية الدارجة و[haˈloː]؛ espeak يعطي الأولى (الصيغة الثانية من المعرفة اللغوية لا من المرجع الذي يورد إحداهما)."
+    },
+    {
+      "word": "Hotels",
+      "verdict": "artifact",
+      "espeak": "hˈoːtəls",
+      "note": "استعارة: المرجع hoˈtɛls بنبر على tel؛ espeak يقرأها بصيغة ألمانية أولية طويلة. الصيغتان مسموعتان في الكلام — تُقبل صيغة espeak الحالية."
+    },
+    {
+      "word": "Mails",
+      "verdict": "artifact",
+      "espeak": "mˈeɪlz",
+      "note": "استعارة جمع: المرجع meːls (إسكات z الجمع)؛ espeak يجهر z بآخرها. الإسكات هو الأفصح؛ الصوت الحالي يُقبل ويُسجَّل للتصحيح لاحقاً (D251)."
+    },
+    {
+      "word": "Nabil",
+      "verdict": "no-reference",
+      "espeak": "nabˈiːl",
+      "note": "اسم علم عربي (نبيل — صديق يوسف في حوار a1-u1-d5) لا يورده المرجع — فُحص يدوياً: [nabˈiːl] بنبر المقطع الثاني وi طويلة = النطق العربي [naˈbiːl]. اختير الاسم لأن espeak ينطقه صحيحاً، أما Karim فيُنبر خطأً على مقطعه الأول [kˈɑriːm]."
+    },
+    {
+      "word": "Nachrichten",
+      "verdict": "artifact",
+      "espeak": "nˈaxrɪçtən",
+      "note": "المرجع ˈnaːxˌʁɪçtn̩ يطيل a الأولى ويضمّن المقطع الأخير؛ espeak يقصر a ويفصل n. جوهر الكلمة مفهوم — تُقبل كما هي في المسارات."
+    },
+    {
+      "word": "Notizen",
+      "verdict": "artifact",
+      "espeak": "nˈoːtiːtsən",
+      "note": "المرجع noˈtiːt͡sn̩ (نبر على ti مع سكت t͡s)؛ espeak يبقي النبر أولياً ويفصل المقطع الأخير. فرق نبر لاستعارة -notiz؛ تُقبل."
+    },
+    {
+      "word": "Sechsundachtzig",
+      "verdict": "artifact",
+      "espeak": "zˈɛksˌʊndˌaxtsɪç",
+      "note": "مثل Fünfundachtzig: المرجع ينقل النبر لأكhtzig ويهمز الوصل؛ espeak يتوسط. الأرقام المركّبة — تُقبل كما سُمعت."
+    },
+    {
+      "word": "Shirts",
+      "verdict": "no-reference",
+      "espeak": "ʃˈɜːts",
+      "note": "استعارة لا يوردها المرجع — فُحصت يدوياً: ʃ وɜː وt͡s كلها مقبولة في الاستعمال الألماني. مقبولة."
+    },
+    {
+      "word": "Situation",
+      "verdict": "artifact",
+      "espeak": "zˌiːtuːatsjˈoːn",
+      "note": "النبر على on في الصيغتين (Duden [zituaˈtsi̯oːn]!)؛ espeak يقطّع tua-tsj مقاطع [tuː.a] والمرجع نصف حركة [t͡si̯] + نبر ثانوي ˌ لا يغيّر الإدراك — فرق في العدّ لا في موضع النبر (كSpezialist!)."
+    },
+    {
+      "word": "Spezialist",
+      "verdict": "artifact",
+      "espeak": "ʃpˌeːtsiːalˈɪst",
+      "note": "النبر على list في الصيغتين؛ espeak يقطّع zia مقطعين [tsiː.a] والمرجع نصف حركة [t͡si̯a] — فرق في العدّ لا في موضع النبر."
+    },
+    {
+      "word": "Spezialisten",
+      "verdict": "artifact",
+      "espeak": "ʃpˌeːtsiːalˈɪstən",
+      "note": "كـSpezialist (مراجَع): النبر على list في الصيغتين؛ espeak يقطّع zia مقطعين [tsiː.a] والمرجع نصف حركة [t͡si̯a] — فرق في العدّ لا في موضع النبر (D175)."
+    },
+    {
+      "word": "Tunesier",
+      "verdict": "artifact",
+      "espeak": "tˌuːneːzˈiːɾ",
+      "note": "المرجع tuˈneːzi̯ɐ (نبر على ne)؛ espeak يضع النبر الثانوي أولياً والأول على zi. فرق نبر في كلمة مألوفة لنا (بلد يوسف!) — تُسجَّل للتصحيح في حملة نطق؛ الصوت الحالي يبقى."
+    },
+    {
+      "word": "Unterschiede",
+      "verdict": "artifact",
+      "espeak": "ˌʊntɜʃˈiːdə",
+      "note": "المرجع ˈʊntɐˌʃiːdə ينطق er مضمّناً [ɐ] ويطيل ie؛ espeak يقصر وينقل النبر. تُقبل كما هي."
+    },
+    {
+      "word": "Yusuf",
+      "verdict": "no-reference",
+      "espeak": "jˈuːzuːf",
+      "note": "اسم علم لا يورده المرجع — فُحص يدوياً: النبر والحركة الأولى الطويلة صحيحان وs بين حركتين تُجهر [z] كما يقرؤها الألمان؛ طول الحركة الثانية غير المنبورة فرقٌ طفيف."
+    },
+    {
+      "word": "aktivität",
+      "verdict": "artifact",
+      "espeak": "aktˈiːviːtˈɛːt",
+      "note": "إسبِيك يضع نبرتين في كلمات -tät! المرجع aktiviˈtɛːt (النبر على tät وحدها!) هو الصحيح (D557)."
+    },
+    {
+      "word": "algorithmus",
+      "verdict": "artifact",
+      "espeak": "ˈalɡoːrˌɪtmʊs",
+      "note": "espeak يضع النبرة على المقطع الأول؛ الصحيح على الثالث [alɡoˈʁɪtmʊs] كما في Duden والمرجع — خطأ في مولّد espeak للاستعارات."
+    },
+    {
+      "word": "atmen",
+      "verdict": "artifact",
+      "espeak": "ˈatmən",
+      "note": "إسبِيك يقصر الألف: espeak ˈatmən والصحيح ˈaːtmən (a طويلة كما في Duden: [ˈaːtmn̩]) — مرجع ويكشنري هو الصواب (D585 · N-375)."
     },
     {
       "word": "ca",
@@ -6866,16 +6986,10 @@
       "note": "النبر على ü في الصيغتين؛ المرجع يكتب n̩ مقطعية [ɡeːɡn̩ˈʔyːbɐ] فيختلف عدّ النوى قبل النبر لا النطق."
     },
     {
-      "word": "Haddad",
-      "verdict": "no-reference",
-      "espeak": "hˈadɑːt",
-      "note": "اسم علم عربي لا يورده المرجع — فُحص يدوياً: [hˈadɑːt] قراءة ألمانية مقبولة لاسم أجنبي (d الأخيرة تُهمس t بقاعدة الألمانية)."
-    },
-    {
-      "word": "Hallo",
-      "verdict": "variant",
-      "espeak": "hˈaloː",
-      "note": "صيغتان مستعملتان: [ˈhalo] التحية الدارجة و[haˈloː]؛ espeak يعطي الأولى (الصيغة الثانية من المعرفة اللغوية لا من المرجع الذي يورد إحداهما)."
+      "word": "geklärt",
+      "verdict": "artifact",
+      "espeak": "ɡəklˈɛɾt",
+      "note": "المرجع ɡəˈklɛːɐ̯t يظهر er المطوّلة [ɛːɐ̯]؛ espeak يقرأها مفردة بحركة قصيرة r. صيغة التصحيح المقيسة توافق المرجع — يُسجَّل للتصحيح؛ الصوت الحالي يبقى (D251)."
     },
     {
       "word": "hersteller",
@@ -6890,22 +7004,28 @@
       "note": "عدد مركّب غائب عن المرجع (D132) — فُحص بأجزائه: hundert /ˈhʊndɐt/ + einundzwanzig /ˈaɪ̯nʊntˌt͡svant͡sɪç/؛ espeak يقرأ الجزأين كمرجعيهما (ʊ القصيرة في hundert) والنبر الأول على hun ونبر ثانوي على ein وzwan."
     },
     {
+      "word": "höchsten",
+      "verdict": "artifact",
+      "espeak": "hˈœkstən",
+      "note": "خطأان في espeak: يقرأ ch كـx (خ) بدل ich-Laut ç، ويقصر الحركة. المرجع ˈhøːçstn̩ هو الصحيح (مثل höchste). تُسجَّل للتصحيح في حملة نطق — الصوت الحالي يبقى (D251) والكلمة مفهومة من السياق."
+    },
+    {
       "word": "immunsystem",
       "verdict": "artifact",
       "espeak": "ˈɪmʊnzʏstˌeːm",
       "note": "إسبِيك يقصّر muːn إلى ʊ ويضع النبرة على المقطع الأول — المرجع ɪˈmuːnzʏsˌteːm صحيح (Immún بحركة طويلة والنبر على mun!) (D555)."
     },
     {
+      "word": "klügsten",
+      "verdict": "artifact",
+      "espeak": "klˈyːɡstən",
+      "note": "المرجع ˈklyːkstn̩ يهمس الـg الساكنة آخر المقطع (k بدل g)؛ espeak يجهرها. الإسكات هو الأفصح — يُسجَّل للتصحيح؛ الصوت الحالي يبقى."
+    },
+    {
       "word": "misstrauisch",
       "verdict": "artifact",
       "espeak": "mɪsʃtrˈaʊɪʃ",
       "note": "espeak يكسر عنقود str إلى ʃtr ويزيح النبرة — المرجع ˈmɪstʁaʊ̯ɪʃ صحيح (D540)"
-    },
-    {
-      "word": "Nabil",
-      "verdict": "no-reference",
-      "espeak": "nabˈiːl",
-      "note": "اسم علم عربي (نبيل — صديق يوسف في حوار a1-u1-d5) لا يورده المرجع — فُحص يدوياً: [nabˈiːl] بنبر المقطع الثاني وi طويلة = النطق العربي [naˈbiːl]. اختير الاسم لأن espeak ينطقه صحيحاً، أما Karim فيُنبر خطأً على مقطعه الأول [kˈɑriːm]."
     },
     {
       "word": "nachhaltigkeit",
@@ -6920,10 +7040,22 @@
       "note": "عدد مركّب (D157): المرجع نفسه غير متسق في موضع النبر الأول بين الأعداد المركّبة — achtunddreißig وachtundvierzig وdreiundfünfzig بنبرٍ أول على الآحاد /ˈaxtʔʊntˌdʁaɪ̯sɪç/، وachtundachtzig وachtundneunzig على العشرات، وdreiunddreißig بالصيغتين معاً. espeak ينبر الآحاد أولاً ثم العشرات ثانوياً كما في einundzwanzig /ˈaɪ̯nʊntˌt͡svant͡sɪç/ وكما في كل أعداد المحتوى المركّبة (D131 · D132) — والنبر في العدد المركّب يتنقّل بالمقابلة في الكلام الحي، فالصيغتان مسموعتان."
     },
     {
+      "word": "nächstes",
+      "verdict": "artifact",
+      "espeak": "nˈɛçstəs",
+      "note": "مثل Nächstes بالحرف الكبير: المرجع يطيل الحركة؛ espeak يقصرها. يُسجَّل للتصحيح؛ الصوت الحالي يبقى (D251)."
+    },
+    {
       "word": "prüfungsteil",
       "verdict": "no-reference",
       "espeak": "prˈyːfʊŋstˌaɪl",
       "note": "لا يوجد مدخل في المرجع الألماني (مركّب — المقتطف لا يورده)؛ نطق espeak مقبول مبدئياً حتى يأتي مرجع — يُراجع بالأذن البشرية (D214)."
+    },
+    {
+      "word": "psyche",
+      "verdict": "artifact",
+      "espeak": "pzˈʏçə",
+      "note": "إسبِيك يقرأ y قصيرة ويقدّم النبر: espeak pzˈʏçə والصحيح ˈpsyːçə (y طويلة والنبر على المقطع الأول) — مرجع ويكشنري هو الصواب (D585 · N-375)."
     },
     {
       "word": "punktzahl",
@@ -6938,6 +7070,18 @@
       "note": "المرجع ينطقها بالنبرة الإنجليزية (ˌʁiˈsaɪ̯kl̩n) والنطق الألماني المتعارف [ʁeˈtsyːln̩] وكلاهما مستعمل في الكلام — الدرس يعتمد النطق الألماني (Duden)."
     },
     {
+      "word": "recycelst",
+      "verdict": "artifact",
+      "espeak": "rˈeːsyːkəlst",
+      "note": "استعارة: المرجع ˌʁiˈsaɪ̯kl̩st بصيغة أصلية؛ espeak يقرأها مركّبة ألمانية بطول ونبر مختلفين. الصيغة المستعرة شائعة — تُقبل كما سُمعت."
+    },
+    {
+      "word": "resilienz",
+      "verdict": "artifact",
+      "espeak": "rˌeːziːlɪʲˈɛnts",
+      "note": "إسبِيك يضع النبرة على المقطع الأخير في كلمات -ienz؛ الصحيح النبر على «li»: ʁeziˈli̯ɛnt͡s كما في المرجع (نفس صنف أخطاء -tät في aktivität) (D585 · N-375)."
+    },
+    {
       "word": "roboter",
       "verdict": "variant",
       "espeak": "rˈoːboːtɜ",
@@ -6950,28 +7094,40 @@
       "note": "espeak ينطق st بلا ʃ (scht) في المقطع الثاني — المرجع ˈʁuːəˌʃtant صحيح (Stand بـscht!) (D548)"
     },
     {
+      "word": "schont",
+      "verdict": "artifact",
+      "espeak": "ʃˈɔnt",
+      "note": "المرجع ʃoːnt يطيل الحركة (schonen)؛ espeak يقرأها قصيرة. يُسجَّل للتصحيح؛ الصوت الحالي يبقى."
+    },
+    {
       "word": "schreibweise",
       "verdict": "artifact",
       "espeak": "ʃrˈaɪbvaɪzə",
       "note": "ال b في آخر مقطع Schreib تُهمَس إلى p (تفريع المقطع!) — المرجع أدق (ˈʃʁaɪ̯pˌvaɪ̯zə) و espeak يُبقيها مجهورة. القبول: نطق المرجع (D189 · D214)."
     },
     {
-      "word": "Situation",
-      "verdict": "artifact",
-      "espeak": "zˌiːtuːatsjˈoːn",
-      "note": "النبر على on في الصيغتين (Duden [zituaˈtsi̯oːn]!)؛ espeak يقطّع tua-tsj مقاطع [tuː.a] والمرجع نصف حركة [t͡si̯] + نبر ثانوي ˌ لا يغيّر الإدراك — فرق في العدّ لا في موضع النبر (كSpezialist!)."
+      "word": "selbstwert",
+      "verdict": "no-reference",
+      "espeak": "zˈɛlpstveːɾt",
+      "note": "مركّب aus Selbst + Wert لا يورده المرجع — فُحص يدوياً: النبر على المقطع الأول «Selbst» صحيح وw تُقرأ [v]؛ نطق espeak المركّب مقبول (D585 · N-375)."
     },
     {
-      "word": "Spezialist",
+      "word": "spart",
       "verdict": "artifact",
-      "espeak": "ʃpˌeːtsiːalˈɪst",
-      "note": "النبر على list في الصيغتين؛ espeak يقطّع zia مقطعين [tsiː.a] والمرجع نصف حركة [t͡si̯a] — فرق في العدّ لا في موضع النبر."
+      "espeak": "ʃpˈaɾt",
+      "note": "المرجع ʃpaːɐ̯t (sparen بحركة طويلة)؛ espeak يقرأ القصيرة. فرق طول حركة — يُسجَّل للتصحيح؛ الصوت الحالي يبقى."
     },
     {
-      "word": "Spezialisten",
+      "word": "stört",
       "verdict": "artifact",
-      "espeak": "ʃpˌeːtsiːalˈɪstən",
-      "note": "كـSpezialist (مراجَع): النبر على list في الصيغتين؛ espeak يقطّع zia مقطعين [tsiː.a] والمرجع نصف حركة [t͡si̯a] — فرق في العدّ لا في موضع النبر (D175)."
+      "espeak": "ʃtˈœɾt",
+      "note": "المرجع ʃtøːɐ̯t يظهر er المطوّلة؛ espeak يقصرها. مثل geklärt — يُسجَّل للتصحيح؛ الصوت الحالي يبقى."
+    },
+    {
+      "word": "surfe",
+      "verdict": "artifact",
+      "espeak": "zˈʊɐfə",
+      "note": "المرجع ˈsœːɐ̯fə (surfen بحركة œː)؛ espeak يقرأ u قصيرة مع تشكيل مختلف. صيغة فعل مفردة — يُسجَّل للتصحيح؛ الصوت الحالي يبقى."
     },
     {
       "word": "vernetzung",
@@ -6998,144 +7154,6 @@
       "note": "صيغتان مستعملتان: [ˈfoːɐ̯heːɐ̯] و[foːɐ̯ˈheːɐ̯]؛ espeak يعطي الثانية (الصيغة الثانية من المعرفة اللغوية لا من المرجع الذي يورد إحداهما)."
     },
     {
-      "word": "Yusuf",
-      "verdict": "no-reference",
-      "espeak": "jˈuːzuːf",
-      "note": "اسم علم لا يورده المرجع — فُحص يدوياً: النبر والحركة الأولى الطويلة صحيحان وs بين حركتين تُجهر [z] كما يقرؤها الألمان؛ طول الحركة الثانية غير المنبورة فرقٌ طفيف."
-    },
-    {
-      "word": "Ärztin",
-      "verdict": "variant",
-      "espeak": "ˈɛɾtstɪn",
-      "note": "صيغتان مستعملتان: [ˈɛːɐ̯tstɪn] و[ˈɛʁtstɪn] (كما Arzt [aːɐ̯tst]/[aʁtst])؛ espeak يعطي القصيرة (الصيغة الثانية من المعرفة اللغوية لا من المرجع الذي يورد إحداهما)."
-    },
-    {
-      "word": "Comics",
-      "verdict": "artifact",
-      "espeak": "kˈoːmiːks",
-      "note": "استعارة إنجليزية: المرجع ˈkɔmɪks بحركة قصيرة أولى ونبر عليها؛ espeak يطيل o وينقل النبر للمقطع الثاني. النطق المستعار شائع بالصورتين — المسار الحالي يقول صيغة espeak ويُقبل (D251: لا صوت جديد)."
-    },
-    {
-      "word": "Computern",
-      "verdict": "artifact",
-      "espeak": "kˈɔmpuːtɜn",
-      "note": "استعارة: المرجع kɔmˈpjuːtɐn (نبر على pu ممدودة y); espeak يقرأها مركّبة ألمانية Computer+n بنبر أولي وصيغة مختلفة. فرق جوهري في النبر — يُسجَّل للتصحيح في حملة نطق لاحقة؛ الصوت الحالي يبقى (D251)."
-    },
-    {
-      "word": "Fahrst",
-      "verdict": "no-reference",
-      "espeak": "fˈɑːɾst",
-      "note": "صيغة فعل (fahren) لا يوردها المرجع (المرجع يورد المصادر) — فُحصت يدوياً: النبر أولي وa كما في fahren، والتنوين st صحيح. مقبولة."
-    },
-    {
-      "word": "Fünfundachtzig",
-      "verdict": "artifact",
-      "espeak": "fˈʏnfʊndˌaxtsɪç",
-      "note": "المرجع يكسر الربط بين المركّعين بهمزة وينقل النبر لأكhtzig كاملاً [ˌfʏnfʔʊntˈʔaxt͡sɪk]؛ espeak يبقي النبر الثانوي على und ويخفف الهمز. الأرقام المركّبة تُقال بتوسط — فرق تنوين لا يغيّر الفهم؛ تُقبل كما سُمعت."
-    },
-    {
-      "word": "Hotels",
-      "verdict": "artifact",
-      "espeak": "hˈoːtəls",
-      "note": "استعارة: المرجع hoˈtɛls بنبر على tel؛ espeak يقرأها بصيغة ألمانية أولية طويلة. الصيغتان مسموعتان في الكلام — تُقبل صيغة espeak الحالية."
-    },
-    {
-      "word": "Mails",
-      "verdict": "artifact",
-      "espeak": "mˈeɪlz",
-      "note": "استعارة جمع: المرجع meːls (إسكات z الجمع)؛ espeak يجهر z بآخرها. الإسكات هو الأفصح؛ الصوت الحالي يُقبل ويُسجَّل للتصحيح لاحقاً (D251)."
-    },
-    {
-      "word": "Nachrichten",
-      "verdict": "artifact",
-      "espeak": "nˈaxrɪçtən",
-      "note": "المرجع ˈnaːxˌʁɪçtn̩ يطيل a الأولى ويضمّن المقطع الأخير؛ espeak يقصر a ويفصل n. جوهر الكلمة مفهوم — تُقبل كما هي في المسارات."
-    },
-    {
-      "word": "Notizen",
-      "verdict": "artifact",
-      "espeak": "nˈoːtiːtsən",
-      "note": "المرجع noˈtiːt͡sn̩ (نبر على ti مع سكت t͡s)؛ espeak يبقي النبر أولياً ويفصل المقطع الأخير. فرق نبر لاستعارة -notiz؛ تُقبل."
-    },
-    {
-      "word": "Sechsundachtzig",
-      "verdict": "artifact",
-      "espeak": "zˈɛksˌʊndˌaxtsɪç",
-      "note": "مثل Fünfundachtzig: المرجع ينقل النبر لأكhtzig ويهمز الوصل؛ espeak يتوسط. الأرقام المركّبة — تُقبل كما سُمعت."
-    },
-    {
-      "word": "Shirts",
-      "verdict": "no-reference",
-      "espeak": "ʃˈɜːts",
-      "note": "استعارة لا يوردها المرجع — فُحصت يدوياً: ʃ وɜː وt͡s كلها مقبولة في الاستعمال الألماني. مقبولة."
-    },
-    {
-      "word": "Tunesier",
-      "verdict": "artifact",
-      "espeak": "tˌuːneːzˈiːɾ",
-      "note": "المرجع tuˈneːzi̯ɐ (نبر على ne)؛ espeak يضع النبر الثانوي أولياً والأول على zi. فرق نبر في كلمة مألوفة لنا (بلد يوسف!) — تُسجَّل للتصحيح في حملة نطق؛ الصوت الحالي يبقى."
-    },
-    {
-      "word": "Unterschiede",
-      "verdict": "artifact",
-      "espeak": "ˌʊntɜʃˈiːdə",
-      "note": "المرجع ˈʊntɐˌʃiːdə ينطق er مضمّناً [ɐ] ويطيل ie؛ espeak يقصر وينقل النبر. تُقبل كما هي."
-    },
-    {
-      "word": "geklärt",
-      "verdict": "artifact",
-      "espeak": "ɡəklˈɛɾt",
-      "note": "المرجع ɡəˈklɛːɐ̯t يظهر er المطوّلة [ɛːɐ̯]؛ espeak يقرأها مفردة بحركة قصيرة r. صيغة التصحيح المقيسة توافق المرجع — يُسجَّل للتصحيح؛ الصوت الحالي يبقى (D251)."
-    },
-    {
-      "word": "höchsten",
-      "verdict": "artifact",
-      "espeak": "hˈœkstən",
-      "note": "خطأان في espeak: يقرأ ch كـx (خ) بدل ich-Laut ç، ويقصر الحركة. المرجع ˈhøːçstn̩ هو الصحيح (مثل höchste). تُسجَّل للتصحيح في حملة نطق — الصوت الحالي يبقى (D251) والكلمة مفهومة من السياق."
-    },
-    {
-      "word": "klügsten",
-      "verdict": "artifact",
-      "espeak": "klˈyːɡstən",
-      "note": "المرجع ˈklyːkstn̩ يهمس الـg الساكنة آخر المقطع (k بدل g)؛ espeak يجهرها. الإسكات هو الأفصح — يُسجَّل للتصحيح؛ الصوت الحالي يبقى."
-    },
-    {
-      "word": "nächstes",
-      "verdict": "artifact",
-      "espeak": "nˈɛçstəs",
-      "note": "مثل Nächstes بالحرف الكبير: المرجع يطيل الحركة؛ espeak يقصرها. يُسجَّل للتصحيح؛ الصوت الحالي يبقى (D251)."
-    },
-    {
-      "word": "recycelst",
-      "verdict": "artifact",
-      "espeak": "rˈeːsyːkəlst",
-      "note": "استعارة: المرجع ˌʁiˈsaɪ̯kl̩st بصيغة أصلية؛ espeak يقرأها مركّبة ألمانية بطول ونبر مختلفين. الصيغة المستعرة شائعة — تُقبل كما سُمعت."
-    },
-    {
-      "word": "schont",
-      "verdict": "artifact",
-      "espeak": "ʃˈɔnt",
-      "note": "المرجع ʃoːnt يطيل الحركة (schonen)؛ espeak يقرأها قصيرة. يُسجَّل للتصحيح؛ الصوت الحالي يبقى."
-    },
-    {
-      "word": "spart",
-      "verdict": "artifact",
-      "espeak": "ʃpˈaɾt",
-      "note": "المرجع ʃpaːɐ̯t (sparen بحركة طويلة)؛ espeak يقرأ القصيرة. فرق طول حركة — يُسجَّل للتصحيح؛ الصوت الحالي يبقى."
-    },
-    {
-      "word": "stört",
-      "verdict": "artifact",
-      "espeak": "ʃtˈœɾt",
-      "note": "المرجع ʃtøːɐ̯t يظهر er المطوّلة؛ espeak يقصرها. مثل geklärt — يُسجَّل للتصحيح؛ الصوت الحالي يبقى."
-    },
-    {
-      "word": "surfe",
-      "verdict": "artifact",
-      "espeak": "zˈʊɐfə",
-      "note": "المرجع ˈsœːɐ̯fə (surfen بحركة œː)؛ espeak يقرأ u قصيرة مع تشكيل مختلف. صيغة فعل مفردة — يُسجَّل للتصحيح؛ الصوت الحالي يبقى."
-    },
-    {
       "word": "werde",
       "verdict": "artifact",
       "espeak": "vˌɛɾdə",
@@ -7146,6 +7164,12 @@
       "verdict": "artifact",
       "espeak": "vˈɛɾt",
       "note": "المرجع veːɐ̯t (مثل werde)؛ espeak يقصر الحركة. يُسجَّل للتصحيح؛ الصوت الحالي يبقى."
+    },
+    {
+      "word": "Ärztin",
+      "verdict": "variant",
+      "espeak": "ˈɛɾtstɪn",
+      "note": "صيغتان مستعملتان: [ˈɛːɐ̯tstɪn] و[ˈɛʁtstɪn] (كما Arzt [aːɐ̯tst]/[aʁtst])؛ espeak يعطي القصيرة (الصيغة الثانية من المعرفة اللغوية لا من المرجع الذي يورد إحداهما)."
     }
   ]
 }

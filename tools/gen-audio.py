@@ -2788,6 +2788,25 @@ def build_all() -> None:
     ("word-gesundheitswesen", "das Gesundheitswesen.", "gesundheitswesen", ["b2-u6-d6"]),
     ("word-zugang", "der Zugang.", "zugang", ["b1-u14-d2"]),
     ("word-sitzplatz", "der Sitzplatz.", "sitzplatz", ["b1-u14-d2"]),
+    # ═══ b2-u7 — النفس والصحة (D585 · §3-ج) ═══
+    ("word-psyche", "die Psyche.", "psyche", ["b2-u7-d1"]),
+    ("word-bewusstsein", "das Bewusstsein.", "bewusstsein", ["b2-u7-d1"]),
+    ("word-trost", "der Trost.", "trost", ["b2-u7-d1"]),
+    ("word-druck", "der Druck.", "druck", ["b2-u7-d2"]),
+    ("word-anspannung", "die Anspannung.", "anspannung", ["b2-u7-d2"]),
+    ("word-ueberlastung", "die Überlastung.", "ueberlastung", ["b2-u7-d2"]),
+    ("word-bewaeltigung", "die Bewältigung.", "bewaeltigung", ["b2-u7-d3"]),
+    ("word-ausdauer", "die Ausdauer.", "ausdauer", ["b2-u7-d3"]),
+    ("word-resilienz", "die Resilienz.", "resilienz", ["b2-u7-d3"]),
+    ("word-nerv", "der Nerv.", "nerv", ["b2-u7-d4"]),
+    ("word-reiz", "der Reiz.", "reiz", ["b2-u7-d4"]),
+    ("word-empathie", "die Empathie.", "empathie", ["b2-u7-d4"]),
+    ("word-balance", "die Balance.", "balance", ["b2-u7-d5"]),
+    ("word-ruhepause", "die Ruhepause.", "ruhepause", ["b2-u7-d5"]),
+    ("word-wille", "der Wille.", "wille", ["b2-u7-d5"]),
+    ("word-achtsamkeit", "die Achtsamkeit.", "achtsamkeit", ["b2-u7-d6"]),
+    ("word-achtsam", "achtsam.", "achtsam", ["b2-u7-d6"]),
+    ("word-selbstwert", "der Selbstwert.", "selbstwert", ["b2-u7-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

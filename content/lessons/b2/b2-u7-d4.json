@@ -1,0 +1,599 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u7-d4",
+  "level": "B2",
+  "unit": 7,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Nerven sind wichtig, der Reiz ist groß und die Empathie hilft!",
+    "ar": "الوحدة 7 (النفس والصحة!) اليوم الرابع: الأعصاب والمحفّزات والتعاطف!"
+  },
+  "canDoDaily": [
+    "يتحدث عن الأعصاب والمحفّزات! (die Nerven! der Reiz!)",
+    "يصف التعاطف! (die Empathie!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hygiene",
+      "ansteckung",
+      "immunsystem"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الأعصاب مهمّة.»؟"
+        },
+        "choices": [
+          "Die Nerven sind wichtig.",
+          "Das Nerven sind wichtig.",
+          "Die Nerven sind wichtig."
+        ],
+        "answer": "Die Nerven sind wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«التعاطف يساعد.»؟"
+        },
+        "choices": [
+          "Die Empathie hilft.",
+          "Der Empathie hilft.",
+          "Das Empathie hilft."
+        ],
+        "answer": "Die Empathie hilft.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "nerv",
+      "reiz",
+      "empathie"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u7-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "v-f",
+      "vowel-long-short",
+      "z"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Nerv, Reiz, Empathie: Wir verstehen uns selbst!",
+        "ar": "اليوم الرابع! (الأعصاب! المحفّزات! التعاطف!)"
+      },
+      "situation": {
+        "de": "Nerv, Reiz, Empathie — zusammen verstehen.",
+        "ar": "عصب! محفّز! تعاطف! — نفهم بعضنا معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "der Nerv (der! جمعه die Nerven!) وder Reiz (der! die Reize!) وdie Empathie (die! بلا جمع!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Nerven haben! die Empathie zeigen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hygiene",
+          "ansteckung",
+          "immunsystem"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "der Nerv",
+                "ar": "العصب (الأعصاب)"
+              },
+              {
+                "de": "der Reiz",
+                "ar": "المحفّز (المنبّه)"
+              },
+              {
+                "de": "die Empathie",
+                "ar": "التعاطف (التقمّص الوجداني)"
+              }
+            ],
+            "why": "der Nerv العصب (الأعصاب) (der! der!) · der Reiz المحفّز (المنبّه) (der! der!) · die Empathie التعاطف (التقمّص الوجداني) (die! -e مؤنثة!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Hygiene",
+                "ar": "النظافة الصحية"
+              },
+              {
+                "de": "die Ansteckung",
+                "ar": "العدوى"
+              },
+              {
+                "de": "das Immunsystem",
+                "ar": "الجهاز المناعي"
+              }
+            ],
+            "why": "استدعاء سابق: die Hygiene النظافة الصحية · die Ansteckung العدوى · das Immunsystem الجهاز المناعي"
+          },
+          {
+            "pairs": [
+              {
+                "de": "der Nerv",
+                "ar": "العصب (الأعصاب)"
+              },
+              {
+                "de": "die Hygiene",
+                "ar": "النظافة الصحية"
+              },
+              {
+                "de": "der Reiz",
+                "ar": "المحفّز (المنبّه)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hygiene",
+          "ansteckung",
+          "immunsystem"
+        ],
+        "items": [
+          {
+            "q": "der ___ ist wichtig. (العصب (الأعصاب)!)",
+            "a": "Nerv",
+            "why": "der Nerv العصب (الأعصاب) (der! der!) — Die Nerven sind wichtig."
+          },
+          {
+            "q": "der ___ ist wichtig. (المحفّز (المنبّه)!)",
+            "a": "Reiz",
+            "why": "der Reiz المحفّز (المنبّه) (der! der!) — Der Reiz ist groß."
+          },
+          {
+            "q": "die ___ ist wichtig. (التعاطف (التقمّص الوجداني)!)",
+            "a": "Empathie",
+            "why": "die Empathie التعاطف (التقمّص الوجداني) (die! -e مؤنثة!) — Die Empathie hilft."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Hygiene",
+            "why": "الكلمة الناقصة «Hygiene» تعني «النظافة الصحية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist schlimm.",
+            "a": "Ansteckung",
+            "why": "الكلمة الناقصة «Ansteckung» تعني «العدوى» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist stark.",
+            "a": "Immunsystem",
+            "why": "الكلمة الناقصة «Immunsystem» تعني «الجهاز المناعي» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hygiene",
+          "ansteckung",
+          "immunsystem"
+        ],
+        "items": [
+          {
+            "q": "~~die Nerv!~~",
+            "a": "Der Nerv ist wichtig.",
+            "why": "العربية: «العصب» مؤنث! والألمانية: der Nerv (der!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Reiz!~~",
+            "a": "Der Reiz ist groß.",
+            "why": "الألمانية: der Reiz (der!) — والجمع: die Reize (لا umlaut!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Empathie جمعها Empathien!~~",
+            "a": "Die Empathie ist wichtig.",
+            "why": "die Empathie تُستعمل عادةً بلا جمع — المفرد مع ist. (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die hygiene ist wichtig.~~",
+            "a": "Die Hygiene ist wichtig.",
+            "why": "الخطأ في «hygiene»! الصواب «Hygiene» — راجع القاعدة (النظافة الصحية)."
+          },
+          {
+            "q": "~~Die ansteckung ist schlimm.~~",
+            "a": "Die Ansteckung ist schlimm.",
+            "why": "الخطأ في «ansteckung»! الصواب «Ansteckung» — راجع القاعدة (العدوى)."
+          },
+          {
+            "q": "~~Das immunsystem ist stark.~~",
+            "a": "Das Immunsystem ist stark.",
+            "why": "الخطأ في «immunsystem»! الصواب «Immunsystem» — راجع القاعدة (الجهاز المناعي)."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hygiene",
+          "ansteckung",
+          "immunsystem"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالعصب (الأعصاب)! (جملتان!)",
+            "a": "Die Nerven sind wichtig. Der Reiz ist groß.",
+            "why": "العصب (الأعصاب) أولًا!"
+          },
+          {
+            "q": "تحدّث عن المحفّز (المنبّه)! (جملتان!)",
+            "a": "Der Reiz ist groß. Das ist gut.",
+            "why": "المحفّز (المنبّه)!"
+          },
+          {
+            "q": "تحدّث عن التعاطف (التقمّص الوجداني)! (جملتان!)",
+            "a": "Die Empathie hilft. die Empathie hilft.",
+            "why": "التعاطف (التقمّص الوجداني)!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Hygiene» («النظافة الصحية») ثم تحدّث بها.",
+            "a": "Die Hygiene ist wichtig.",
+            "why": "استعمل «die Hygiene» («النظافة الصحية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Ansteckung» («العدوى») ثم تحدّث بها.",
+            "a": "Die Ansteckung ist schlimm.",
+            "why": "استعمل «die Ansteckung» («العدوى») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Immunsystem» («الجهاز المناعي») ثم تحدّث بها.",
+            "a": "Das Immunsystem ist stark.",
+            "why": "استعمل «das Immunsystem» («الجهاز المناعي») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "hygiene",
+          "ansteckung",
+          "immunsystem"
+        ],
+        "items": [
+          {
+            "audioId": "word-nerv",
+            "speakText": "der Nerv.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العصب (الأعصاب)",
+              "المحفّز (المنبّه)",
+              "التعاطف (التقمّص الوجداني)"
+            ],
+            "a": "العصب (الأعصاب)",
+            "why": "الصوت يقول «der Nerv» — معناها «العصب (الأعصاب)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-reiz",
+            "speakText": "der Reiz.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المحفّز (المنبّه)",
+              "التعاطف (التقمّص الوجداني)",
+              "العصب (الأعصاب)"
+            ],
+            "a": "المحفّز (المنبّه)",
+            "why": "الصوت يقول «der Reiz» — معناها «المحفّز (المنبّه)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-empathie",
+            "speakText": "die Empathie.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التعاطف (التقمّص الوجداني)",
+              "العصب (الأعصاب)",
+              "المحفّز (المنبّه)"
+            ],
+            "a": "التعاطف (التقمّص الوجداني)",
+            "why": "الصوت يقول «die Empathie» — معناها «التعاطف (التقمّص الوجداني)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-hygiene",
+            "speakText": "die Hygiene.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "النظافة الصحية",
+              "العدوى",
+              "العصب (الأعصاب)"
+            ],
+            "a": "النظافة الصحية",
+            "why": "الكلمة المسموعة «die Hygiene» تعني «النظافة الصحية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-ansteckung",
+            "speakText": "die Ansteckung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "العدوى",
+              "الجهاز المناعي",
+              "المحفّز (المنبّه)"
+            ],
+            "a": "العدوى",
+            "why": "الكلمة المسموعة «die Ansteckung» تعني «العدوى». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-immunsystem",
+            "speakText": "das Immunsystem.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الجهاز المناعي",
+              "النظافة الصحية",
+              "التعاطف (التقمّص الوجداني)"
+            ],
+            "a": "الجهاز المناعي",
+            "why": "الكلمة المسموعة «das Immunsystem» تعني «الجهاز المناعي». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-hygiene",
+            "speakText": "die Hygiene.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "النظافة الصحية",
+              "العدوى",
+              "العصب (الأعصاب)"
+            ],
+            "a": "النظافة الصحية",
+            "why": "الكلمة المسموعة «die Hygiene» تعني «النظافة الصحية». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "hygiene",
+          "ansteckung"
+        ],
+        "items": [
+          {
+            "audioId": "word-nerv",
+            "speakText": "der Nerv.",
+            "a": "der Nerv",
+            "why": "اكتب ما تسمعه حرفياً: «der Nerv» تعني «العصب (الأعصاب)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-reiz",
+            "speakText": "der Reiz.",
+            "a": "der Reiz",
+            "why": "اكتب ما تسمعه حرفياً: «der Reiz» تعني «المحفّز (المنبّه)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-hygiene",
+            "speakText": "die Hygiene.",
+            "a": "die Hygiene",
+            "why": "اكتب ما تسمعه حرفياً: «die Hygiene» تعني «النظافة الصحية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ansteckung",
+            "speakText": "die Ansteckung.",
+            "a": "die Ansteckung",
+            "why": "اكتب ما تسمعه حرفياً: «die Ansteckung» تعني «العدوى». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«العصب (الأعصاب)»؟",
+            "a": "der Nerv"
+          },
+          {
+            "q": "«المحفّز (المنبّه)»؟",
+            "a": "der Reiz"
+          },
+          {
+            "q": "«التعاطف (التقمّص الوجداني)»؟",
+            "a": "die Empathie"
+          },
+          {
+            "q": "«الأعصاب مهمّة.»؟",
+            "a": "Die Nerven sind wichtig."
+          },
+          {
+            "q": "«المحفّز كبير.»؟",
+            "a": "Der Reiz ist groß."
+          },
+          {
+            "q": "«التعاطف يساعد.»؟",
+            "a": "Die Empathie hilft."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "der Nerv",
+            "a": "العصب (الأعصاب)"
+          },
+          {
+            "q": "der Reiz",
+            "a": "المحفّز (المنبّه)"
+          },
+          {
+            "q": "die Empathie",
+            "a": "التعاطف (التقمّص الوجداني)"
+          },
+          {
+            "q": "«التعاطف يساعد.»؟",
+            "a": "Die Empathie hilft."
+          },
+          {
+            "q": "«المحفّز كبير.»؟",
+            "a": "Der Reiz ist groß."
+          },
+          {
+            "q": "«الأعصاب مهمّة.»؟",
+            "a": "Die Nerven sind wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«التعاطف (التقمّص الوجداني)»؟",
+            "a": "die Empathie"
+          },
+          {
+            "q": "«المحفّز (المنبّه)»؟",
+            "a": "der Reiz"
+          },
+          {
+            "q": "«العصب (الأعصاب)»؟",
+            "a": "der Nerv"
+          },
+          {
+            "q": "der Nerv",
+            "a": "العصب (الأعصاب)"
+          },
+          {
+            "q": "der Reiz",
+            "a": "المحفّز (المنبّه)"
+          },
+          {
+            "q": "die Empathie",
+            "a": "التعاطف (التقمّص الوجداني)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Nerven sind wichtig. Der Reiz ist groß. Die Empathie hilft. Die Woche der Psyche ist gut.",
+      "ar": "الوحدة 7 (النفس والصحة!) اليوم الرابع: الأعصاب والمحفّزات والتعاطف! نتعلّم اليوم: العصب (الأعصاب) والمحفّز (المنبّه) والتعاطف (التقمّص الوجداني)!"
+    },
+    "srsBundleWordIds": [
+      "nerv",
+      "reiz",
+      "empathie"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Nerv!",
+          "de": "~~die Nerv ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "der Nerv!",
+          "de": "Der Nerv ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Nerv ist wichtig.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «العصب» مؤنث! والألمانية: der Nerv (der!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Reiz!",
+          "de": "~~das Reiz ist groß.~~"
+        },
+        "correct": {
+          "ar": "der Reiz!",
+          "de": "Der Reiz ist groß."
+        },
+        "exercise": {
+          "q": "___ Reiz ist groß.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "الألمانية: der Reiz (der!) — والجمع: die Reize (لا umlaut!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Empathie جمعها Empathien!",
+          "de": "~~die Empathien sind wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Empathie بلا جمع!",
+          "de": "Die Empathie ist wichtig."
+        },
+        "exercise": {
+          "q": "Die ___ ist wichtig.",
+          "a": "Empathie"
+        },
+        "whyArabicSpeakerFails": "die Empathie تُستعمل عادةً بلا جمع — المفرد مع ist. (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Nerv",
+      "https://www.duden.de/rechtschreibung/Reiz",
+      "https://www.duden.de/rechtschreibung/Empathie"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-nerv",
+    "word-reiz",
+    "word-empathie"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 7 (النفس والصحة!) العصب والتعاطف",
+    "goetheWordListOverlap": [
+      "nerv",
+      "reiz",
+      "empathie"
+    ]
+  }
+}
