@@ -59,7 +59,10 @@
       "experte",
       "erhoehung",
       "faellig",
-      "broschuere"
+      "broschuere",
+      "infektion",
+      "temperatur",
+      "langeweile"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -78,7 +81,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Die Anerkennung ist wichtig und das Niveau B1 ist da! Das Ergebnis ist ausgezeichnet — und das ist befriedigend. Das benötigt Zeit. Der Experte ist da. Die Erhöhung kommt, und das ist fällig. Die Broschüre ist neu.",
+        "de": "Die Anerkennung ist wichtig und das Niveau B1 ist da! Das Ergebnis ist ausgezeichnet — und das ist befriedigend. Das benötigt Zeit. Der Experte ist da. Die Erhöhung kommt, und das ist fällig. Die Broschüre ist neu. Die Infektion ist schlimm. Die Temperatur ist hoch, und ich habe Langeweile.",
         "ar": "يحكي عن رحلة B1: ثقافة + شهادة + تقييم!"
       },
       "situation": {
@@ -86,7 +89,7 @@
         "ar": "امتحان! شهادة! اعتراف! — المستوى B1! (الثقافة!)"
       },
       "successCriteria": [
-        "كلمات اليوم العشر كلها في الحكي!",
+        "كلمات اليوم الجديدة كلها في الحكي!",
         "الانفصال: الفعل المُركَّب ينفصل والجزء الأخير يهرب آخر الجملة! والفعل ذو البادئة غير المنفصلة يُصرَّف بلا زيادة التمام!",
         "المفردات الثابتة: die Anerkennung bekommen! das Zertifikat nachweisen! die Prüfung benoten!",
         "الثقافة: معهد جوته وأوسد! (بطاقة الثقافة!)"
@@ -240,6 +243,23 @@
               }
             ],
             "why": "der Experte الخبير · die Erhöhung الزيادة · الرفع · fällig مستحقّ (الأداء) · die Broschüre الكتيب (الدعاوي) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "العدوى",
+                "de": "die Infektion"
+              },
+              {
+                "ar": "درجة الحرارة",
+                "de": "die Temperatur"
+              },
+              {
+                "ar": "الملل",
+                "de": "die Langeweile"
+              }
+            ],
+            "why": "die Infektion العدوى · die Temperatur درجة الحرارة · die Langeweile الملل (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -324,6 +344,21 @@
             "q": "Die ___ ist neu. (الكتيب!)",
             "a": "Broschüre",
             "why": "die Broschüre الكتيب (الدعاوي) (die! مؤنثة (die!) وجمعها die Broschüren.) — Die Broschüre ist neu."
+          },
+          {
+            "q": "Die ___ ist schlimm. (العدوى!)",
+            "a": "Infektion",
+            "why": "die Infektion العدوى (die! مؤنثة (die!) وجمعها die Infektionen.) — Die Infektion ist schlimm."
+          },
+          {
+            "q": "Die ___ ist hoch. (درجة الحرارة!)",
+            "a": "Temperatur",
+            "why": "die Temperatur درجة الحرارة (die! مؤنثة (die!) وجمعها die Temperaturen.) — Die Temperatur ist hoch."
+          },
+          {
+            "q": "Ich habe ___. (أشعر بالملل!)",
+            "a": "Langeweile",
+            "why": "die Langeweile الملل (die! تُستعمل عادةً بلا جمع: die Langeweile.) — Ich habe Langeweile."
           }
         ]
       },
@@ -394,6 +429,21 @@
             "q": "~~der Broschüre ist neu~~",
             "a": "die Broschüre ist neu",
             "why": "الألمانية: die Broschüre (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Infektion ist schlimm~~",
+            "a": "die Infektion ist schlimm",
+            "why": "الألمانية: die Infektion (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Temperatur ist hoch~~",
+            "a": "die Temperatur ist hoch",
+            "why": "الألمانية: die Temperatur (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~ich habe der Langeweile~~",
+            "a": "Ich habe Langeweile.",
+            "why": "haben + نصب بلا أداة: Langeweile (لا der Langeweile!) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -439,6 +489,11 @@
             "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Experte · die Erhöhung · fällig · die Broschüre)",
             "a": "Der Experte ist da. Die Erhöhung kommt, und das ist fällig. Die Broschüre ist neu.",
             "why": "المراجعة بالكلام! كلمات اليوم العشر كلها في الجُمل."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Infektion · die Temperatur · die Langeweile)",
+            "a": "Die Infektion ist schlimm. Die Temperatur ist hoch, und ich habe Langeweile.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -616,6 +671,42 @@
             ],
             "a": "الكتيب (الدعاوي)",
             "why": "الصوت يقول «die Broschüre» — معناها «الكتيب (الدعاوي)». ركّز!"
+          },
+          {
+            "audioId": "word-infektion",
+            "speakText": "die Infektion.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العدوى",
+              "درجة الحرارة",
+              "الملل"
+            ],
+            "a": "العدوى",
+            "why": "الصوت يقول «die Infektion» — معناها «العدوى». ركّز!"
+          },
+          {
+            "audioId": "word-temperatur",
+            "speakText": "die Temperatur.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "درجة الحرارة",
+              "الملل",
+              "العدوى"
+            ],
+            "a": "درجة الحرارة",
+            "why": "الصوت يقول «die Temperatur» — معناها «درجة الحرارة». ركّز!"
+          },
+          {
+            "audioId": "word-langeweile",
+            "speakText": "die Langeweile.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الملل",
+              "العدوى",
+              "درجة الحرارة"
+            ],
+            "a": "الملل",
+            "why": "الصوت يقول «die Langeweile» — معناها «الملل». ركّز!"
           }
         ]
       },
@@ -691,6 +782,24 @@
             "speakText": "die Broschüre.",
             "a": "die Broschüre",
             "why": "اكتب ما تسمعه حرفياً: «die Broschüre» تعني «الكتيب (الدعاوي)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-infektion",
+            "speakText": "die Infektion.",
+            "a": "die Infektion",
+            "why": "اكتب ما تسمعه حرفياً: «die Infektion» تعني «العدوى». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-temperatur",
+            "speakText": "die Temperatur.",
+            "a": "die Temperatur",
+            "why": "اكتب ما تسمعه حرفياً: «die Temperatur» تعني «درجة الحرارة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-langeweile",
+            "speakText": "die Langeweile.",
+            "a": "die Langeweile",
+            "why": "اكتب ما تسمعه حرفياً: «die Langeweile» تعني «الملل». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -764,6 +873,21 @@
             "q": "Die ___ ist neu. (الكتيب!)",
             "a": "Broschüre",
             "why": "die Broschüre الكتيب (الدعاوي) (die! مؤنثة (die!) وجمعها die Broschüren.) — Die Broschüre ist neu."
+          },
+          {
+            "q": "Die ___ ist schlimm. (العدوى!)",
+            "a": "Infektion",
+            "why": "die Infektion العدوى (die! مؤنثة (die!) وجمعها die Infektionen.) — Die Infektion ist schlimm."
+          },
+          {
+            "q": "Die ___ ist hoch. (درجة الحرارة!)",
+            "a": "Temperatur",
+            "why": "die Temperatur درجة الحرارة (die! مؤنثة (die!) وجمعها die Temperaturen.) — Die Temperatur ist hoch."
+          },
+          {
+            "q": "Ich habe ___. (أشعر بالملل!)",
+            "a": "Langeweile",
+            "why": "die Langeweile الملل (die! تُستعمل عادةً بلا جمع: die Langeweile.) — Ich habe Langeweile."
           }
         ]
       },
@@ -827,6 +951,21 @@
             "q": "Die ___ ist neu. (الكتيب!)",
             "a": "Broschüre",
             "why": "die Broschüre الكتيب (الدعاوي) (die! مؤنثة (die!) وجمعها die Broschüren.) — Die Broschüre ist neu."
+          },
+          {
+            "q": "Die ___ ist schlimm. (العدوى!)",
+            "a": "Infektion",
+            "why": "die Infektion العدوى (die! مؤنثة (die!) وجمعها die Infektionen.) — Die Infektion ist schlimm."
+          },
+          {
+            "q": "Die ___ ist hoch. (درجة الحرارة!)",
+            "a": "Temperatur",
+            "why": "die Temperatur درجة الحرارة (die! مؤنثة (die!) وجمعها die Temperaturen.) — Die Temperatur ist hoch."
+          },
+          {
+            "q": "Ich habe ___. (أشعر بالملل!)",
+            "a": "Langeweile",
+            "why": "die Langeweile الملل (die! تُستعمل عادةً بلا جمع: die Langeweile.) — Ich habe Langeweile."
           }
         ]
       },
@@ -890,6 +1029,21 @@
             "q": "Die ___ ist neu. (الكتيب!)",
             "a": "Broschüre",
             "why": "die Broschüre الكتيب (الدعاوي) (die! مؤنثة (die!) وجمعها die Broschüren.) — Die Broschüre ist neu."
+          },
+          {
+            "q": "Die ___ ist schlimm. (العدوى!)",
+            "a": "Infektion",
+            "why": "die Infektion العدوى (die! مؤنثة (die!) وجمعها die Infektionen.) — Die Infektion ist schlimm."
+          },
+          {
+            "q": "Die ___ ist hoch. (درجة الحرارة!)",
+            "a": "Temperatur",
+            "why": "die Temperatur درجة الحرارة (die! مؤنثة (die!) وجمعها die Temperaturen.) — Die Temperatur ist hoch."
+          },
+          {
+            "q": "Ich habe ___. (أشعر بالملل!)",
+            "a": "Langeweile",
+            "why": "die Langeweile الملل (die! تُستعمل عادةً بلا جمع: die Langeweile.) — Ich habe Langeweile."
           }
         ]
       }
@@ -897,8 +1051,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Die Anerkennung ist wichtig und die Prüfung ist offiziell. Er weist das Zertifikat nach und der Lehrer benotet die Prüfung. Das Niveau B1 ist da und die Note ist gut. Die Kultur ist bekannt und die Tradition ist international. Die Erfahrung ist wichtig und die Prüfung hat eine Note. Die Anerkennung bekommt man mit dem Zertifikat! Das Ergebnis ist ausgezeichnet. Das ist befriedigend. Das benötigt Zeit. Der Experte ist da. Die Erhöhung kommt. Das ist fällig. Die Broschüre ist neu.",
-      "ar": "الاعتراف مهم والامتحان رسمي. هو يُثبت الشهادة والمعلّم يُقيّم الامتحان بدرجة. المستوى B1 حاضر والدرجة جيدة. الثقافة معروفة والتقليد دولي. الخبرة مهمة والامتحان له درجة. الاعتراف يُنال بالشهادة! النتيجة ممتازة. هذا مُرضٍ. هذا يحتاج وقتاً. الخبير حاضر. الزيادة تأتي. هذا مستحق. الكتيب جديد."
+      "de": "Die Anerkennung ist wichtig und die Prüfung ist offiziell. Er weist das Zertifikat nach und der Lehrer benotet die Prüfung. Das Niveau B1 ist da und die Note ist gut. Die Kultur ist bekannt und die Tradition ist international. Die Erfahrung ist wichtig und die Prüfung hat eine Note. Die Anerkennung bekommt man mit dem Zertifikat! Das Ergebnis ist ausgezeichnet. Das ist befriedigend. Das benötigt Zeit. Der Experte ist da. Die Erhöhung kommt. Das ist fällig. Die Broschüre ist neu. Die Infektion ist schlimm. Die Temperatur ist hoch. Ich habe Langeweile.",
+      "ar": "الاعتراف مهم والامتحان رسمي. هو يُثبت الشهادة والمعلّم يُقيّم الامتحان بدرجة. المستوى B1 حاضر والدرجة جيدة. الثقافة معروفة والتقليد دولي. الخبرة مهمة والامتحان له درجة. الاعتراف يُنال بالشهادة! النتيجة ممتازة. هذا مُرضٍ. هذا يحتاج وقتاً. الخبير حاضر. الزيادة تأتي. هذا مستحق. الكتيب جديد. العدوى سيئة. درجة الحرارة مرتفعة. أشعر بالملل."
     },
     "srsBundleWordIds": [
       "anerkennung",
@@ -910,7 +1064,10 @@
       "experte",
       "erhoehung",
       "faellig",
-      "broschuere"
+      "broschuere",
+      "infektion",
+      "temperatur",
+      "langeweile"
     ],
     "warningCards": [
       {
@@ -981,7 +1138,10 @@
     "word-experte",
     "word-erhoehung",
     "word-faellig",
-    "word-broschuere"
+    "word-broschuere",
+    "word-infektion",
+    "word-temperatur",
+    "word-langeweile"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -996,7 +1156,10 @@
       "experte",
       "erhoehung",
       "faellig",
-      "broschuere"
+      "broschuere",
+      "infektion",
+      "temperatur",
+      "langeweile"
     ]
   }
 }

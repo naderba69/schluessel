@@ -59,7 +59,11 @@
       "gewohnheit",
       "eile",
       "dauernd",
-      "entspannend"
+      "entspannend",
+      "arbeitsstelle",
+      "anwalt",
+      "verwaltung",
+      "kantine"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -78,7 +82,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Zeitplan ist wichtig und die Disziplin ist gut! Anfangs war der Tag anstrengend. Aber jeder Augenblick ist wichtig. Die Gewohnheit ist gut, aber die Eile ist nicht gut. Der Abend ist dauernd entspannend.",
+        "de": "Der Zeitplan ist wichtig und die Disziplin ist gut! Anfangs war der Tag anstrengend. Aber jeder Augenblick ist wichtig. Die Gewohnheit ist gut, aber die Eile ist nicht gut. Der Abend ist dauernd entspannend. Die Arbeitsstelle ist gut. Der Anwalt hilft, und die Verwaltung hilft auch. Die Kantine ist offen.",
         "ar": "يقسّم وقت امتحانه (٥٠٪!) في جدول ويتحدث عنه!"
       },
       "situation": {
@@ -86,7 +90,7 @@
         "ar": "ثلاث مهام! جدول واحد! خمسون بالمئة! (إدارة الوقت!)"
       },
       "successCriteria": [
-        "كلمات اليوم العشر كلها في الجدول!",
+        "كلمات اليوم الجديدة كلها في الجدول!",
         "الانفصال: teilt … ein! (الجزء ein آخر!)",
         "مراجعة القواعد: trotzdem/obwohl والمرتبة الثانية!",
         "المواعيد: pünktlich! rechtzeitig! (كلمات مُدرَّسة!)"
@@ -232,6 +236,27 @@
               }
             ],
             "why": "die Gewohnheit العادة · die Eile العجلة · dauernd دائماً · مستمرّ · entspannend مُريح · مُرخٍ (خريطة التداخل 10-ي!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "مكان العمل · الوظيفة",
+                "de": "die Arbeitsstelle"
+              },
+              {
+                "ar": "المحامي",
+                "de": "der Anwalt"
+              },
+              {
+                "ar": "الإدارة · السلطة الإدارية",
+                "de": "die Verwaltung"
+              },
+              {
+                "ar": "المطعم (في العمل أو المدرسة)",
+                "de": "die Kantine"
+              }
+            ],
+            "why": "die Arbeitsstelle مكان العمل · الوظيفة · der Anwalt المحامي · die Verwaltung الإدارة · السلطة الإدارية · die Kantine المطعم (في العمل أو المدرسة) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -316,6 +341,26 @@
             "q": "Der Abend ist ___. (مريح!)",
             "a": "entspannend",
             "why": "entspannend مُريح · مُرخٍ — Der Abend ist entspannend."
+          },
+          {
+            "q": "Die ___ ist gut. (مكان العمل!)",
+            "a": "Arbeitsstelle",
+            "why": "die Arbeitsstelle مكان العمل · الوظيفة (die! مؤنثة (die!) وجمعها die Arbeitsstellen.) — Die Arbeitsstelle ist gut."
+          },
+          {
+            "q": "Der ___ hilft. (المحامي!)",
+            "a": "Anwalt",
+            "why": "der Anwalt المحامي (der! مذكّر (der!) وجمعه die Anwälte (تقلب a→ä!).) — Der Anwalt hilft."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الإدارة!)",
+            "a": "Verwaltung",
+            "why": "die Verwaltung الإدارة · السلطة الإدارية (die! مؤنثة (die!) وجمعها die Verwaltungen.) — Die Verwaltung ist wichtig."
+          },
+          {
+            "q": "Die ___ ist offen. (المطعم!)",
+            "a": "Kantine",
+            "why": "die Kantine المطعم (في العمل أو المدرسة) (die! مؤنثة (die!) وجمعها die Kantinen.) — Die Kantine ist offen."
           }
         ]
       },
@@ -396,6 +441,26 @@
             "q": "~~Der Abend ist entspannende.~~",
             "a": "Der Abend ist entspannend.",
             "why": "entspannend صفة بعد ist بلا لاحقة! (لا entspannende!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Arbeitsstelle ist gut~~",
+            "a": "die Arbeitsstelle ist gut",
+            "why": "الألمانية: die Arbeitsstelle (die! مركّبة مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Anwalt hilft~~",
+            "a": "der Anwalt hilft",
+            "why": "الألمانية: der Anwalt (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Verwaltung ist wichtig~~",
+            "a": "die Verwaltung ist wichtig",
+            "why": "الألمانية: die Verwaltung (die! -ung مؤنثة!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Kantine ist offen~~",
+            "a": "die Kantine ist offen",
+            "why": "الألمانية: die Kantine (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -451,6 +516,11 @@
             "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Gewohnheit · die Eile · dauernd · entspannend)",
             "a": "Die Gewohnheit ist gut, aber die Eile ist nicht gut. Der Abend ist dauernd entspannend.",
             "why": "المراجعة بالكلام! كلمات اليوم العشر كلها في الجُمل."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Arbeitsstelle · der Anwalt · die Verwaltung · die Kantine)",
+            "a": "Die Arbeitsstelle ist gut. Der Anwalt hilft, und die Verwaltung hilft auch. Die Kantine ist offen.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -628,6 +698,54 @@
             ],
             "a": "مُريح · مُرخٍ",
             "why": "الصوت يقول «entspannend» — معناها «مُريح · مُرخٍ». ركّز!"
+          },
+          {
+            "audioId": "word-arbeitsstelle",
+            "speakText": "die Arbeitsstelle.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "مكان العمل · الوظيفة",
+              "المحامي",
+              "الإدارة · السلطة الإدارية"
+            ],
+            "a": "مكان العمل · الوظيفة",
+            "why": "الصوت يقول «die Arbeitsstelle» — معناها «مكان العمل · الوظيفة». ركّز!"
+          },
+          {
+            "audioId": "word-anwalt",
+            "speakText": "der Anwalt.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المحامي",
+              "الإدارة · السلطة الإدارية",
+              "المطعم (في العمل أو المدرسة)"
+            ],
+            "a": "المحامي",
+            "why": "الصوت يقول «der Anwalt» — معناها «المحامي». ركّز!"
+          },
+          {
+            "audioId": "word-verwaltung",
+            "speakText": "die Verwaltung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الإدارة · السلطة الإدارية",
+              "المطعم (في العمل أو المدرسة)",
+              "مكان العمل · الوظيفة"
+            ],
+            "a": "الإدارة · السلطة الإدارية",
+            "why": "الصوت يقول «die Verwaltung» — معناها «الإدارة · السلطة الإدارية». ركّز!"
+          },
+          {
+            "audioId": "word-kantine",
+            "speakText": "die Kantine.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المطعم (في العمل أو المدرسة)",
+              "مكان العمل · الوظيفة",
+              "المحامي"
+            ],
+            "a": "المطعم (في العمل أو المدرسة)",
+            "why": "الصوت يقول «die Kantine» — معناها «المطعم (في العمل أو المدرسة)». ركّز!"
           }
         ]
       },
@@ -703,6 +821,30 @@
             "speakText": "entspannend.",
             "a": "entspannend",
             "why": "اكتب ما تسمعه حرفياً: «entspannend» تعني «مُريح · مُرخٍ». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-arbeitsstelle",
+            "speakText": "die Arbeitsstelle.",
+            "a": "die Arbeitsstelle",
+            "why": "اكتب ما تسمعه حرفياً: «die Arbeitsstelle» تعني «مكان العمل · الوظيفة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-anwalt",
+            "speakText": "der Anwalt.",
+            "a": "der Anwalt",
+            "why": "اكتب ما تسمعه حرفياً: «der Anwalt» تعني «المحامي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-verwaltung",
+            "speakText": "die Verwaltung.",
+            "a": "die Verwaltung",
+            "why": "اكتب ما تسمعه حرفياً: «die Verwaltung» تعني «الإدارة · السلطة الإدارية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-kantine",
+            "speakText": "die Kantine.",
+            "a": "die Kantine",
+            "why": "اكتب ما تسمعه حرفياً: «die Kantine» تعني «المطعم (في العمل أو المدرسة)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -776,6 +918,26 @@
             "q": "Der Abend ist ___. (مريح!)",
             "a": "entspannend",
             "why": "entspannend مُريح · مُرخٍ — Der Abend ist entspannend."
+          },
+          {
+            "q": "Die ___ ist gut. (مكان العمل!)",
+            "a": "Arbeitsstelle",
+            "why": "die Arbeitsstelle مكان العمل · الوظيفة (die! مؤنثة (die!) وجمعها die Arbeitsstellen.) — Die Arbeitsstelle ist gut."
+          },
+          {
+            "q": "Der ___ hilft. (المحامي!)",
+            "a": "Anwalt",
+            "why": "der Anwalt المحامي (der! مذكّر (der!) وجمعه die Anwälte (تقلب a→ä!).) — Der Anwalt hilft."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الإدارة!)",
+            "a": "Verwaltung",
+            "why": "die Verwaltung الإدارة · السلطة الإدارية (die! مؤنثة (die!) وجمعها die Verwaltungen.) — Die Verwaltung ist wichtig."
+          },
+          {
+            "q": "Die ___ ist offen. (المطعم!)",
+            "a": "Kantine",
+            "why": "die Kantine المطعم (في العمل أو المدرسة) (die! مؤنثة (die!) وجمعها die Kantinen.) — Die Kantine ist offen."
           }
         ]
       },
@@ -839,6 +1001,26 @@
             "q": "Der Abend ist ___. (مريح!)",
             "a": "entspannend",
             "why": "entspannend مُريح · مُرخٍ — Der Abend ist entspannend."
+          },
+          {
+            "q": "Die ___ ist gut. (مكان العمل!)",
+            "a": "Arbeitsstelle",
+            "why": "die Arbeitsstelle مكان العمل · الوظيفة (die! مؤنثة (die!) وجمعها die Arbeitsstellen.) — Die Arbeitsstelle ist gut."
+          },
+          {
+            "q": "Der ___ hilft. (المحامي!)",
+            "a": "Anwalt",
+            "why": "der Anwalt المحامي (der! مذكّر (der!) وجمعه die Anwälte (تقلب a→ä!).) — Der Anwalt hilft."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الإدارة!)",
+            "a": "Verwaltung",
+            "why": "die Verwaltung الإدارة · السلطة الإدارية (die! مؤنثة (die!) وجمعها die Verwaltungen.) — Die Verwaltung ist wichtig."
+          },
+          {
+            "q": "Die ___ ist offen. (المطعم!)",
+            "a": "Kantine",
+            "why": "die Kantine المطعم (في العمل أو المدرسة) (die! مؤنثة (die!) وجمعها die Kantinen.) — Die Kantine ist offen."
           }
         ]
       },
@@ -902,6 +1084,26 @@
             "q": "Der Abend ist ___. (مريح!)",
             "a": "entspannend",
             "why": "entspannend مُريح · مُرخٍ — Der Abend ist entspannend."
+          },
+          {
+            "q": "Die ___ ist gut. (مكان العمل!)",
+            "a": "Arbeitsstelle",
+            "why": "die Arbeitsstelle مكان العمل · الوظيفة (die! مؤنثة (die!) وجمعها die Arbeitsstellen.) — Die Arbeitsstelle ist gut."
+          },
+          {
+            "q": "Der ___ hilft. (المحامي!)",
+            "a": "Anwalt",
+            "why": "der Anwalt المحامي (der! مذكّر (der!) وجمعه die Anwälte (تقلب a→ä!).) — Der Anwalt hilft."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الإدارة!)",
+            "a": "Verwaltung",
+            "why": "die Verwaltung الإدارة · السلطة الإدارية (die! مؤنثة (die!) وجمعها die Verwaltungen.) — Die Verwaltung ist wichtig."
+          },
+          {
+            "q": "Die ___ ist offen. (المطعم!)",
+            "a": "Kantine",
+            "why": "die Kantine المطعم (في العمل أو المدرسة) (die! مؤنثة (die!) وجمعها die Kantinen.) — Die Kantine ist offen."
           }
         ]
       }
@@ -909,8 +1111,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Zeitplan ist wichtig und die Disziplin ist gut. Er teilt die Zeit ein. Er kommt pünktlich und rechtzeitig. Die Reihenfolge ist klar. Die Uhr zeigt die Zeit und die Minute ist kurz. Die Stunde ist lang und die Woche ist schnell. Die Konzentration ist gut und die Pause ist wichtig. Die Ruhe ist da. Trotzdem ist die Zeit kurz! Der Tag ist anstrengend. Der Augenblick ist wichtig. Anfangs war es schwer. Die Gewohnheit ist gut. Die Eile ist nicht gut. Das Wetter ist dauernd schlecht. Der Abend ist entspannend.",
-      "ar": "جدول الوقت مهم والانضباط جيد. هو يقسّم الوقت. يأتي بالموعد وفي الوقت المناسب. الترتيب واضح. الساعة تُظهر الوقت والدقيقة قصيرة. الساعة (الزمن) طويلة والأسبوع سريع. التركيز جيد والاستراحة مهمة. الراحة موجودة. ومع ذلك الوقت قصير! اليوم مرهق. اللحظة مهمة. في البداية كان الأمر صعباً. العادة جيدة. العجلة ليست جيدة. الطقس سيئ دائماً. المساء مريح."
+      "de": "Der Zeitplan ist wichtig und die Disziplin ist gut. Er teilt die Zeit ein. Er kommt pünktlich und rechtzeitig. Die Reihenfolge ist klar. Die Uhr zeigt die Zeit und die Minute ist kurz. Die Stunde ist lang und die Woche ist schnell. Die Konzentration ist gut und die Pause ist wichtig. Die Ruhe ist da. Trotzdem ist die Zeit kurz! Der Tag ist anstrengend. Der Augenblick ist wichtig. Anfangs war es schwer. Die Gewohnheit ist gut. Die Eile ist nicht gut. Das Wetter ist dauernd schlecht. Der Abend ist entspannend. Die Arbeitsstelle ist gut. Der Anwalt hilft. Die Verwaltung ist wichtig. Die Kantine ist offen.",
+      "ar": "جدول الوقت مهم والانضباط جيد. هو يقسّم الوقت. يأتي بالموعد وفي الوقت المناسب. الترتيب واضح. الساعة تُظهر الوقت والدقيقة قصيرة. الساعة (الزمن) طويلة والأسبوع سريع. التركيز جيد والاستراحة مهمة. الراحة موجودة. ومع ذلك الوقت قصير! اليوم مرهق. اللحظة مهمة. في البداية كان الأمر صعباً. العادة جيدة. العجلة ليست جيدة. الطقس سيئ دائماً. المساء مريح. مكان العمل جيد. المحامي يساعد. الإدارة مهمة. المطعم مفتوح."
     },
     "srsBundleWordIds": [
       "zeitplan",
@@ -922,7 +1124,11 @@
       "gewohnheit",
       "eile",
       "dauernd",
-      "entspannend"
+      "entspannend",
+      "arbeitsstelle",
+      "anwalt",
+      "verwaltung",
+      "kantine"
     ],
     "warningCards": [
       {
@@ -993,7 +1199,11 @@
     "word-gewohnheit",
     "word-eile",
     "word-dauernd",
-    "word-entspannend"
+    "word-entspannend",
+    "word-arbeitsstelle",
+    "word-anwalt",
+    "word-verwaltung",
+    "word-kantine"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -1008,7 +1218,11 @@
       "gewohnheit",
       "eile",
       "dauernd",
-      "entspannend"
+      "entspannend",
+      "arbeitsstelle",
+      "anwalt",
+      "verwaltung",
+      "kantine"
     ]
   }
 }

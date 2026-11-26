@@ -59,7 +59,10 @@
       "form",
       "fortsetzung",
       "doppelt",
-      "einfuehrung"
+      "einfuehrung",
+      "wetterbericht",
+      "reportage",
+      "recherche"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -78,7 +81,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Die Rechtschreibung ist richtig und der Stil ist klar! Die Abbildung ist klein. Ich drucke den Text aus und analysiere ihn. Die Form ist wichtig. Die Einführung ist kurz, und die Fortsetzung kommt. Das ist doppelt.",
+        "de": "Die Rechtschreibung ist richtig und der Stil ist klar! Die Abbildung ist klein. Ich drucke den Text aus und analysiere ihn. Die Form ist wichtig. Die Einführung ist kurz, und die Fortsetzung kommt. Das ist doppelt. Der Wetterbericht kommt um acht. Die Reportage ist spannend, und die Recherche braucht Zeit.",
         "ar": "يجري محاكاة كتابة (نص ٨ جُمل!): مقدمة + جسم + خاتمة!"
       },
       "situation": {
@@ -86,7 +89,7 @@
         "ar": "موضوع واحد! ثماني جُمل! مسودة واحدة! (محاكاة الكتابة!)"
       },
       "successCriteria": [
-        "كلمات اليوم العشر كلها في النص!",
+        "كلمات اليوم الجديدة كلها في النص!",
         "الانفصال: arbeitet … über! (الجزء über آخر!)",
         "مراجعة بنية النص: Einleitung ← Hauptteil ← Schluss!",
         "المفردات الثابتة: die Rechtschreibung üben! den Stil verbessern! den Text überarbeiten!"
@@ -236,6 +239,23 @@
               }
             ],
             "why": "die Form الشكل · الاستمارة · die Fortsetzung التتمة · التكملة · doppelt مزدوج · مرّتين · die Einführung المقدمة (التعريفية) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "نشرة الطقس",
+                "de": "der Wetterbericht"
+              },
+              {
+                "ar": "التقرير (الصحفي)",
+                "de": "die Reportage"
+              },
+              {
+                "ar": "البحث والتحقيق",
+                "de": "die Recherche"
+              }
+            ],
+            "why": "der Wetterbericht نشرة الطقس · die Reportage التقرير (الصحفي) · die Recherche البحث والتحقيق (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -320,6 +340,21 @@
             "q": "Die ___ ist kurz. (المقدمة!)",
             "a": "Einführung",
             "why": "die Einführung المقدمة (التعريفية) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Einführung ist kurz."
+          },
+          {
+            "q": "Der ___ kommt um acht. (نشرة الطقس!)",
+            "a": "Wetterbericht",
+            "why": "der Wetterbericht نشرة الطقس (der! مركّب (Wetter+Bericht) مذكّر (der!) وجمعه die Wetterberichte.) — Der Wetterbericht kommt um acht."
+          },
+          {
+            "q": "Die ___ ist spannend. (التقرير!)",
+            "a": "Reportage",
+            "why": "die Reportage التقرير (الصحفي) (die! مؤنثة (die!) وجمعها die Reportagen.) — Die Reportage ist spannend."
+          },
+          {
+            "q": "Die ___ braucht Zeit. (البحث!)",
+            "a": "Recherche",
+            "why": "die Recherche البحث والتحقيق (die! مؤنثة (die!) وجمعها die Recherchen.) — Die Recherche braucht Zeit."
           }
         ]
       },
@@ -400,6 +435,21 @@
             "q": "~~das Einführung ist kurz~~",
             "a": "die Einführung ist kurz",
             "why": "الألمانية: die Einführung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Wetterbericht kommt um acht~~",
+            "a": "der Wetterbericht kommt um acht",
+            "why": "الألمانية: der Wetterbericht (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Reportage ist spannend~~",
+            "a": "die Reportage ist spannend",
+            "why": "الألمانية: die Reportage (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Recherche braucht Zeit~~",
+            "a": "die Recherche braucht Zeit",
+            "why": "الألمانية: die Recherche (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -455,6 +505,11 @@
             "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Form · die Fortsetzung · doppelt · die Einführung)",
             "a": "Die Form ist wichtig. Die Einführung ist kurz, und die Fortsetzung kommt. Das ist doppelt.",
             "why": "المراجعة بالكلام! كلمات اليوم العشر كلها في الجُمل."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Wetterbericht · die Reportage · die Recherche)",
+            "a": "Der Wetterbericht kommt um acht. Die Reportage ist spannend, und die Recherche braucht Zeit.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -632,6 +687,42 @@
             ],
             "a": "المقدمة (التعريفية)",
             "why": "الصوت يقول «die Einführung» — معناها «المقدمة (التعريفية)». ركّز!"
+          },
+          {
+            "audioId": "word-wetterbericht",
+            "speakText": "der Wetterbericht.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "نشرة الطقس",
+              "التقرير (الصحفي)",
+              "البحث والتحقيق"
+            ],
+            "a": "نشرة الطقس",
+            "why": "الصوت يقول «der Wetterbericht» — معناها «نشرة الطقس». ركّز!"
+          },
+          {
+            "audioId": "word-reportage",
+            "speakText": "die Reportage.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التقرير (الصحفي)",
+              "البحث والتحقيق",
+              "نشرة الطقس"
+            ],
+            "a": "التقرير (الصحفي)",
+            "why": "الصوت يقول «die Reportage» — معناها «التقرير (الصحفي)». ركّز!"
+          },
+          {
+            "audioId": "word-recherche",
+            "speakText": "die Recherche.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "البحث والتحقيق",
+              "نشرة الطقس",
+              "التقرير (الصحفي)"
+            ],
+            "a": "البحث والتحقيق",
+            "why": "الصوت يقول «die Recherche» — معناها «البحث والتحقيق». ركّز!"
           }
         ]
       },
@@ -707,6 +798,24 @@
             "speakText": "die Einführung.",
             "a": "die Einführung",
             "why": "اكتب ما تسمعه حرفياً: «die Einführung» تعني «المقدمة (التعريفية)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-wetterbericht",
+            "speakText": "der Wetterbericht.",
+            "a": "der Wetterbericht",
+            "why": "اكتب ما تسمعه حرفياً: «der Wetterbericht» تعني «نشرة الطقس». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-reportage",
+            "speakText": "die Reportage.",
+            "a": "die Reportage",
+            "why": "اكتب ما تسمعه حرفياً: «die Reportage» تعني «التقرير (الصحفي)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-recherche",
+            "speakText": "die Recherche.",
+            "a": "die Recherche",
+            "why": "اكتب ما تسمعه حرفياً: «die Recherche» تعني «البحث والتحقيق». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -780,6 +889,21 @@
             "q": "Die ___ ist kurz. (المقدمة!)",
             "a": "Einführung",
             "why": "die Einführung المقدمة (التعريفية) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Einführung ist kurz."
+          },
+          {
+            "q": "Der ___ kommt um acht. (نشرة الطقس!)",
+            "a": "Wetterbericht",
+            "why": "der Wetterbericht نشرة الطقس (der! مركّب (Wetter+Bericht) مذكّر (der!) وجمعه die Wetterberichte.) — Der Wetterbericht kommt um acht."
+          },
+          {
+            "q": "Die ___ ist spannend. (التقرير!)",
+            "a": "Reportage",
+            "why": "die Reportage التقرير (الصحفي) (die! مؤنثة (die!) وجمعها die Reportagen.) — Die Reportage ist spannend."
+          },
+          {
+            "q": "Die ___ braucht Zeit. (البحث!)",
+            "a": "Recherche",
+            "why": "die Recherche البحث والتحقيق (die! مؤنثة (die!) وجمعها die Recherchen.) — Die Recherche braucht Zeit."
           }
         ]
       },
@@ -843,6 +967,21 @@
             "q": "Die ___ ist kurz. (المقدمة!)",
             "a": "Einführung",
             "why": "die Einführung المقدمة (التعريفية) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Einführung ist kurz."
+          },
+          {
+            "q": "Der ___ kommt um acht. (نشرة الطقس!)",
+            "a": "Wetterbericht",
+            "why": "der Wetterbericht نشرة الطقس (der! مركّب (Wetter+Bericht) مذكّر (der!) وجمعه die Wetterberichte.) — Der Wetterbericht kommt um acht."
+          },
+          {
+            "q": "Die ___ ist spannend. (التقرير!)",
+            "a": "Reportage",
+            "why": "die Reportage التقرير (الصحفي) (die! مؤنثة (die!) وجمعها die Reportagen.) — Die Reportage ist spannend."
+          },
+          {
+            "q": "Die ___ braucht Zeit. (البحث!)",
+            "a": "Recherche",
+            "why": "die Recherche البحث والتحقيق (die! مؤنثة (die!) وجمعها die Recherchen.) — Die Recherche braucht Zeit."
           }
         ]
       },
@@ -906,6 +1045,21 @@
             "q": "Die ___ ist kurz. (المقدمة!)",
             "a": "Einführung",
             "why": "die Einführung المقدمة (التعريفية) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Einführung ist kurz."
+          },
+          {
+            "q": "Der ___ kommt um acht. (نشرة الطقس!)",
+            "a": "Wetterbericht",
+            "why": "der Wetterbericht نشرة الطقس (der! مركّب (Wetter+Bericht) مذكّر (der!) وجمعه die Wetterberichte.) — Der Wetterbericht kommt um acht."
+          },
+          {
+            "q": "Die ___ ist spannend. (التقرير!)",
+            "a": "Reportage",
+            "why": "die Reportage التقرير (الصحفي) (die! مؤنثة (die!) وجمعها die Reportagen.) — Die Reportage ist spannend."
+          },
+          {
+            "q": "Die ___ braucht Zeit. (البحث!)",
+            "a": "Recherche",
+            "why": "die Recherche البحث والتحقيق (die! مؤنثة (die!) وجمعها die Recherchen.) — Die Recherche braucht Zeit."
           }
         ]
       }
@@ -913,8 +1067,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Die Rechtschreibung ist wichtig und der Stil ist klar. Er arbeitet den Text über. Der Entwurf ist kurz und die Einleitung ist klar. Der Hauptteil ist gut und der Schluss ist kurz. Er formuliert den Satz und korrigiert den Fehler. Er verbessert den Stil und schreibt einfach. Richtig ist richtig und falsch ist falsch. Das Komma ist wichtig! Ich drucke den Text aus. Die Abbildung ist klein. Wir analysieren den Text. Die Form ist wichtig. Die Fortsetzung kommt. Das ist doppelt. Die Einführung ist kurz.",
-      "ar": "الإملاء مهم والأسلوب واضح. هو يراجع النص. المسودة قصيرة والمقدمة واضحة. الجزء الرئيسي جيد والخاتمة قصيرة. يصيغ الجملة ويصحّح الخطأ. يحسّن الأسلوب ويكتب ببساطة. الصحيح صحيح والخطأ خطأ. الفاصلة مهمة! أطبع النصّ. الصورة صغيرة. نحن نحلّل النصّ. الشكل مهم. التتمة تأتي. هذا مزدوج. المقدمة قصيرة."
+      "de": "Die Rechtschreibung ist wichtig und der Stil ist klar. Er arbeitet den Text über. Der Entwurf ist kurz und die Einleitung ist klar. Der Hauptteil ist gut und der Schluss ist kurz. Er formuliert den Satz und korrigiert den Fehler. Er verbessert den Stil und schreibt einfach. Richtig ist richtig und falsch ist falsch. Das Komma ist wichtig! Ich drucke den Text aus. Die Abbildung ist klein. Wir analysieren den Text. Die Form ist wichtig. Die Fortsetzung kommt. Das ist doppelt. Die Einführung ist kurz. Der Wetterbericht kommt um acht. Die Reportage ist spannend. Die Recherche braucht Zeit.",
+      "ar": "الإملاء مهم والأسلوب واضح. هو يراجع النص. المسودة قصيرة والمقدمة واضحة. الجزء الرئيسي جيد والخاتمة قصيرة. يصيغ الجملة ويصحّح الخطأ. يحسّن الأسلوب ويكتب ببساطة. الصحيح صحيح والخطأ خطأ. الفاصلة مهمة! أطبع النصّ. الصورة صغيرة. نحن نحلّل النصّ. الشكل مهم. التتمة تأتي. هذا مزدوج. المقدمة قصيرة. نشرة الطقس تأتي في الثامنة. التقرير مشوّق. البحث يحتاج وقتاً."
     },
     "srsBundleWordIds": [
       "rechtschreibung",
@@ -926,7 +1080,10 @@
       "form",
       "fortsetzung",
       "doppelt",
-      "einfuehrung"
+      "einfuehrung",
+      "wetterbericht",
+      "reportage",
+      "recherche"
     ],
     "warningCards": [
       {
@@ -997,7 +1154,10 @@
     "word-form",
     "word-fortsetzung",
     "word-doppelt",
-    "word-einfuehrung"
+    "word-einfuehrung",
+    "word-wetterbericht",
+    "word-reportage",
+    "word-recherche"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -1012,7 +1172,10 @@
       "form",
       "fortsetzung",
       "doppelt",
-      "einfuehrung"
+      "einfuehrung",
+      "wetterbericht",
+      "reportage",
+      "recherche"
     ]
   }
 }

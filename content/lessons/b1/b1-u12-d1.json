@@ -59,7 +59,11 @@
       "gedanke",
       "erziehung",
       "kursleiter",
-      "lerner"
+      "lerner",
+      "buerger",
+      "bevoelkerung",
+      "migration",
+      "migrant"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -77,7 +81,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Wortschatz ist groß und die Konzentration ist gut! Die Aufforderung ist klar, und ich akzeptiere sie. Abschreiben ist nicht erlaubt. Der Gedanke ist klar. Die Erziehung ist wichtig. Der Kursleiter hilft — und der Lerner liest.",
+        "de": "Der Wortschatz ist groß und die Konzentration ist gut! Die Aufforderung ist klar, und ich akzeptiere sie. Abschreiben ist nicht erlaubt. Der Gedanke ist klar. Die Erziehung ist wichtig. Der Kursleiter hilft — und der Lerner liest. Die Bürger wohnen hier. Die Bevölkerung ist groß, und die Migration ist wichtig. Der Migrant lernt Deutsch.",
         "ar": "يُراجع ١٥ كلمة متراكمة من كل الوحدات في جُمل!"
       },
       "situation": {
@@ -85,7 +89,7 @@
         "ar": "إحدى عشرة وحدة! مفردات واحدة! هدف واحد! (المراجعة الأولى!)"
       },
       "successCriteria": [
-        "كلمات اليوم العشر كلها في المراجعة!",
+        "كلمات اليوم الجديدة كلها في المراجعة!",
         "١٥ كلمة متراكمة من وحدات سابقة في جُمل!",
         "الروابط من الوحدة الأولى: deshalb! trotzdem! (المرتبة الثانية!)",
         "المفردات الثابتة: den Wortschatz wiederholen! das Zertifikat bekommen!"
@@ -235,6 +239,27 @@
               }
             ],
             "why": "der Gedanke الفكرة · die Erziehung التربية · der Kursleiter قائد الدورة (المدرّب) · der Lerner المتعلّم (خريطة التداخل 10-ي!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المواطن",
+                "de": "der Bürger"
+              },
+              {
+                "ar": "السكان",
+                "de": "die Bevölkerung"
+              },
+              {
+                "ar": "الهجرة",
+                "de": "die Migration"
+              },
+              {
+                "ar": "المهاجر",
+                "de": "der Migrant"
+              }
+            ],
+            "why": "der Bürger المواطن · die Bevölkerung السكان · die Migration الهجرة · der Migrant المهاجر (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -319,6 +344,26 @@
             "q": "Der ___ liest. (المتعلّم!)",
             "a": "Lerner",
             "why": "der Lerner المتعلّم (der! مذكّر (der!) وجمعه die Lerner (بلا تغيير!).) — Der Lerner liest."
+          },
+          {
+            "q": "Der ___ wohnt hier. (المواطن!)",
+            "a": "Bürger",
+            "why": "der Bürger المواطن (der! مذكّر (der!) وجمعه die Bürger (بلا تغيير!).) — Der Bürger wohnt hier."
+          },
+          {
+            "q": "Die ___ ist groß. (السكان!)",
+            "a": "Bevölkerung",
+            "why": "die Bevölkerung السكان (die! تُستعمل عادةً بلا جمع: die Bevölkerung.) — Die Bevölkerung ist groß."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الهجرة!)",
+            "a": "Migration",
+            "why": "die Migration الهجرة (die! مؤنثة (die!) وجمعها die Migrationen.) — Die Migration ist wichtig."
+          },
+          {
+            "q": "Der ___ lernt Deutsch. (المهاجر!)",
+            "a": "Migrant",
+            "why": "der Migrant المهاجر (der! اسم n-Deklination! (der Migrant! نظير der Student!) وجمعه die Migranten.) — Der Migrant lernt Deutsch."
           }
         ]
       },
@@ -399,6 +444,26 @@
             "q": "~~die Lerner liest~~",
             "a": "der Lerner liest",
             "why": "الألمانية: der Lerner (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Bürger wohnt hier~~",
+            "a": "der Bürger wohnt hier",
+            "why": "الألمانية: der Bürger (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Bevölkerung ist groß~~",
+            "a": "die Bevölkerung ist groß",
+            "why": "الألمانية: die Bevölkerung (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Migration ist wichtig~~",
+            "a": "die Migration ist wichtig",
+            "why": "الألمانية: die Migration (die!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Migrant lernt Deutsch~~",
+            "a": "der Migrant lernt Deutsch",
+            "why": "الألمانية: der Migrant (der! n-Deklination!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -454,6 +519,11 @@
             "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Gedanke · die Erziehung · der Kursleiter · der Lerner)",
             "a": "Der Gedanke ist klar. Die Erziehung ist wichtig. Der Kursleiter hilft — und der Lerner liest.",
             "why": "المراجعة بالكلام! كلمات اليوم العشر كلها في الجُمل."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Bürger · die Bevölkerung · die Migration · der Migrant)",
+            "a": "Die Bürger wohnen hier. Die Bevölkerung ist groß, und die Migration ist wichtig. Der Migrant lernt Deutsch.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -631,6 +701,54 @@
             ],
             "a": "المتعلّم",
             "why": "الصوت يقول «der Lerner» — معناها «المتعلّم». ركّز!"
+          },
+          {
+            "audioId": "word-buerger",
+            "speakText": "der Bürger.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المواطن",
+              "السكان",
+              "الهجرة"
+            ],
+            "a": "المواطن",
+            "why": "الصوت يقول «der Bürger» — معناها «المواطن». ركّز!"
+          },
+          {
+            "audioId": "word-bevoelkerung",
+            "speakText": "die Bevölkerung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "السكان",
+              "الهجرة",
+              "المهاجر"
+            ],
+            "a": "السكان",
+            "why": "الصوت يقول «die Bevölkerung» — معناها «السكان». ركّز!"
+          },
+          {
+            "audioId": "word-migration",
+            "speakText": "die Migration.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الهجرة",
+              "المهاجر",
+              "المواطن"
+            ],
+            "a": "الهجرة",
+            "why": "الصوت يقول «die Migration» — معناها «الهجرة». ركّز!"
+          },
+          {
+            "audioId": "word-migrant",
+            "speakText": "der Migrant.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المهاجر",
+              "المواطن",
+              "السكان"
+            ],
+            "a": "المهاجر",
+            "why": "الصوت يقول «der Migrant» — معناها «المهاجر». ركّز!"
           }
         ]
       },
@@ -706,6 +824,30 @@
             "speakText": "der Lerner.",
             "a": "der Lerner",
             "why": "اكتب ما تسمعه حرفياً: «der Lerner» تعني «المتعلّم». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-buerger",
+            "speakText": "der Bürger.",
+            "a": "der Bürger",
+            "why": "اكتب ما تسمعه حرفياً: «der Bürger» تعني «المواطن». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-bevoelkerung",
+            "speakText": "die Bevölkerung.",
+            "a": "die Bevölkerung",
+            "why": "اكتب ما تسمعه حرفياً: «die Bevölkerung» تعني «السكان». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-migration",
+            "speakText": "die Migration.",
+            "a": "die Migration",
+            "why": "اكتب ما تسمعه حرفياً: «die Migration» تعني «الهجرة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-migrant",
+            "speakText": "der Migrant.",
+            "a": "der Migrant",
+            "why": "اكتب ما تسمعه حرفياً: «der Migrant» تعني «المهاجر». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -779,6 +921,26 @@
             "q": "Der ___ liest. (المتعلّم!)",
             "a": "Lerner",
             "why": "der Lerner المتعلّم (der! مذكّر (der!) وجمعه die Lerner (بلا تغيير!).) — Der Lerner liest."
+          },
+          {
+            "q": "Der ___ wohnt hier. (المواطن!)",
+            "a": "Bürger",
+            "why": "der Bürger المواطن (der! مذكّر (der!) وجمعه die Bürger (بلا تغيير!).) — Der Bürger wohnt hier."
+          },
+          {
+            "q": "Die ___ ist groß. (السكان!)",
+            "a": "Bevölkerung",
+            "why": "die Bevölkerung السكان (die! تُستعمل عادةً بلا جمع: die Bevölkerung.) — Die Bevölkerung ist groß."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الهجرة!)",
+            "a": "Migration",
+            "why": "die Migration الهجرة (die! مؤنثة (die!) وجمعها die Migrationen.) — Die Migration ist wichtig."
+          },
+          {
+            "q": "Der ___ lernt Deutsch. (المهاجر!)",
+            "a": "Migrant",
+            "why": "der Migrant المهاجر (der! اسم n-Deklination! (der Migrant! نظير der Student!) وجمعه die Migranten.) — Der Migrant lernt Deutsch."
           }
         ]
       },
@@ -842,6 +1004,26 @@
             "q": "Der ___ liest. (المتعلّم!)",
             "a": "Lerner",
             "why": "der Lerner المتعلّم (der! مذكّر (der!) وجمعه die Lerner (بلا تغيير!).) — Der Lerner liest."
+          },
+          {
+            "q": "Der ___ wohnt hier. (المواطن!)",
+            "a": "Bürger",
+            "why": "der Bürger المواطن (der! مذكّر (der!) وجمعه die Bürger (بلا تغيير!).) — Der Bürger wohnt hier."
+          },
+          {
+            "q": "Die ___ ist groß. (السكان!)",
+            "a": "Bevölkerung",
+            "why": "die Bevölkerung السكان (die! تُستعمل عادةً بلا جمع: die Bevölkerung.) — Die Bevölkerung ist groß."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الهجرة!)",
+            "a": "Migration",
+            "why": "die Migration الهجرة (die! مؤنثة (die!) وجمعها die Migrationen.) — Die Migration ist wichtig."
+          },
+          {
+            "q": "Der ___ lernt Deutsch. (المهاجر!)",
+            "a": "Migrant",
+            "why": "der Migrant المهاجر (der! اسم n-Deklination! (der Migrant! نظير der Student!) وجمعه die Migranten.) — Der Migrant lernt Deutsch."
           }
         ]
       },
@@ -905,6 +1087,26 @@
             "q": "Der ___ liest. (المتعلّم!)",
             "a": "Lerner",
             "why": "der Lerner المتعلّم (der! مذكّر (der!) وجمعه die Lerner (بلا تغيير!).) — Der Lerner liest."
+          },
+          {
+            "q": "Der ___ wohnt hier. (المواطن!)",
+            "a": "Bürger",
+            "why": "der Bürger المواطن (der! مذكّر (der!) وجمعه die Bürger (بلا تغيير!).) — Der Bürger wohnt hier."
+          },
+          {
+            "q": "Die ___ ist groß. (السكان!)",
+            "a": "Bevölkerung",
+            "why": "die Bevölkerung السكان (die! تُستعمل عادةً بلا جمع: die Bevölkerung.) — Die Bevölkerung ist groß."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الهجرة!)",
+            "a": "Migration",
+            "why": "die Migration الهجرة (die! مؤنثة (die!) وجمعها die Migrationen.) — Die Migration ist wichtig."
+          },
+          {
+            "q": "Der ___ lernt Deutsch. (المهاجر!)",
+            "a": "Migrant",
+            "why": "der Migrant المهاجر (der! اسم n-Deklination! (der Migrant! نظير der Student!) وجمعه die Migranten.) — Der Migrant lernt Deutsch."
           }
         ]
       }
@@ -912,8 +1114,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Wortschatz ist groß und das Zertifikat ist wichtig. Die Konzentration ist gut. Der Weg ist lang und die Arbeit ist wichtig. Die Schule ist gut und die Zeit ist kurz. Die Gesundheit ist wichtig und die Wohnung ist schön. Die Reise ist lang und das Geld ist wichtig. Die Sicherheit ist da und das Ergebnis ist gut. Das Niveau ist hoch. Deshalb übt er jeden Tag! Abschreiben ist nicht erlaubt. Die Aufforderung ist klar. Das akzeptieren wir. Der Gedanke ist klar. Die Erziehung ist wichtig. Der Kursleiter hilft. Der Lerner liest.",
-      "ar": "المفردات كبيرة والشهادة مهمة. التركيز جيد. الطريق طويل والعمل مهم. المدرسة جيدة والوقت قصير. الصحة مهمة والسكن جميل. السفر طويل والمال مهم. الأمان موجود والنتيجة جيدة. المستوى عالٍ. لذلك يتدرب كل يوم! النسخ (الغشّ) غير مسموح. الدعوة واضحة. نحن نقبل ذلك. الفكرة واضحة. التربية مهمة. قائد الدورة يساعد. المتعلّم يقرأ."
+      "de": "Der Wortschatz ist groß und das Zertifikat ist wichtig. Die Konzentration ist gut. Der Weg ist lang und die Arbeit ist wichtig. Die Schule ist gut und die Zeit ist kurz. Die Gesundheit ist wichtig und die Wohnung ist schön. Die Reise ist lang und das Geld ist wichtig. Die Sicherheit ist da und das Ergebnis ist gut. Das Niveau ist hoch. Deshalb übt er jeden Tag! Abschreiben ist nicht erlaubt. Die Aufforderung ist klar. Das akzeptieren wir. Der Gedanke ist klar. Die Erziehung ist wichtig. Der Kursleiter hilft. Der Lerner liest. Der Bürger wohnt hier. Die Bevölkerung ist groß. Die Migration ist wichtig. Der Migrant lernt Deutsch.",
+      "ar": "المفردات كبيرة والشهادة مهمة. التركيز جيد. الطريق طويل والعمل مهم. المدرسة جيدة والوقت قصير. الصحة مهمة والسكن جميل. السفر طويل والمال مهم. الأمان موجود والنتيجة جيدة. المستوى عالٍ. لذلك يتدرب كل يوم! النسخ (الغشّ) غير مسموح. الدعوة واضحة. نحن نقبل ذلك. الفكرة واضحة. التربية مهمة. قائد الدورة يساعد. المتعلّم يقرأ. المواطن يسكن هنا. السكان كثيرون. الهجرة مهمة. المهاجر يتعلّم الألمانية."
     },
     "srsBundleWordIds": [
       "wortschatz",
@@ -925,7 +1127,11 @@
       "gedanke",
       "erziehung",
       "kursleiter",
-      "lerner"
+      "lerner",
+      "buerger",
+      "bevoelkerung",
+      "migration",
+      "migrant"
     ],
     "warningCards": [
       {
@@ -996,7 +1202,11 @@
     "word-gedanke",
     "word-erziehung",
     "word-kursleiter",
-    "word-lerner"
+    "word-lerner",
+    "word-buerger",
+    "word-bevoelkerung",
+    "word-migration",
+    "word-migrant"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -1011,7 +1221,11 @@
       "gedanke",
       "erziehung",
       "kursleiter",
-      "lerner"
+      "lerner",
+      "buerger",
+      "bevoelkerung",
+      "migration",
+      "migrant"
     ]
   }
 }

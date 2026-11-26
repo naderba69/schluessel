@@ -59,7 +59,11 @@
       "rede",
       "dialekt",
       "duzen",
-      "botschaft"
+      "botschaft",
+      "kommunikation",
+      "konferenz",
+      "reaktion",
+      "referat"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -78,7 +82,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Er spricht fließend und die Aussprache ist klar! Ich begrüße Sie und wir besprechen den Text. Das beruhigt mich. Die Botschaft ist klar. Die Rede ist lang, und der Dialekt ist schwer. Wir duzen ihn.",
+        "de": "Er spricht fließend und die Aussprache ist klar! Ich begrüße Sie und wir besprechen den Text. Das beruhigt mich. Die Botschaft ist klar. Die Rede ist lang, und der Dialekt ist schwer. Wir duzen ihn. Die Kommunikation ist wichtig. Die Konferenz ist heute, und die Reaktion ist positiv. Das Referat ist fertig.",
         "ar": "يجري محاكاة كلام (٣ دقائق!): وصف + رأي + خاتمة!"
       },
       "situation": {
@@ -86,7 +90,7 @@
         "ar": "ثلاث دقائق! موضوع واحد! كلام حرّ! (محاكاة الكلام!)"
       },
       "successCriteria": [
-        "كلمات اليوم العشر كلها في المحاكاة!",
+        "كلمات اليوم الجديدة كلها في المحاكاة!",
         "المرتبة الثانية: Spontan ANTWORTET er!",
         "مراجعة قواعد العرض والأسئلة! (Einleitung! Frage! Antwort!)",
         "المفردات الثابتة: fließend sprechen! die Aussprache üben! spontan antworten!"
@@ -232,6 +236,27 @@
               }
             ],
             "why": "die Rede الكلام · الخطاب · der Dialekt اللهجة · duzen يخاطب بـ«du» (بلا احترام رسمي) · die Botschaft الرسالة (الجوهرية) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التواصل",
+                "de": "die Kommunikation"
+              },
+              {
+                "ar": "المؤتمّر · الاجتماع الكبير",
+                "de": "die Konferenz"
+              },
+              {
+                "ar": "الاستجابة · الردّ الفوري",
+                "de": "die Reaktion"
+              },
+              {
+                "ar": "العرض (المحاضرة القصيرة)",
+                "de": "das Referat"
+              }
+            ],
+            "why": "die Kommunikation التواصل · die Konferenz المؤتمّر · الاجتماع الكبير · die Reaktion الاستجابة · الردّ الفوري · das Referat العرض (المحاضرة القصيرة) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -316,6 +341,26 @@
             "q": "Die ___ ist klar. (الرسالة!)",
             "a": "Botschaft",
             "why": "die Botschaft الرسالة (الجوهرية) (die! مؤنثة (die!) وجمعها die Botschaften.) — Die Botschaft ist klar."
+          },
+          {
+            "q": "Die ___ ist wichtig. (التواصل!)",
+            "a": "Kommunikation",
+            "why": "die Kommunikation التواصل (die! مؤنثة (die!) وجمعها die Kommunikationen.) — Die Kommunikation ist wichtig."
+          },
+          {
+            "q": "Die ___ ist heute. (المؤتمّر!)",
+            "a": "Konferenz",
+            "why": "die Konferenz المؤتمّر · الاجتماع الكبير (die! مؤنثة (die!) وجمعها die Konferenzen.) — Die Konferenz ist heute."
+          },
+          {
+            "q": "Die ___ ist positiv. (الاستجابة!)",
+            "a": "Reaktion",
+            "why": "die Reaktion الاستجابة · الردّ الفوري (die! مؤنثة (die!) وجمعها die Reaktionen.) — Die Reaktion ist positiv."
+          },
+          {
+            "q": "Das ___ ist fertig. (العرض!)",
+            "a": "Referat",
+            "why": "das Referat العرض (المحاضرة القصيرة) (das! محايد (das!) وجمعه die Referate.) — Das Referat ist fertig."
           }
         ]
       },
@@ -386,6 +431,26 @@
             "q": "~~das Botschaft ist klar~~",
             "a": "die Botschaft ist klar",
             "why": "الألمانية: die Botschaft (die!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Kommunikation ist wichtig~~",
+            "a": "die Kommunikation ist wichtig",
+            "why": "الألمانية: die Kommunikation (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Konferenz ist heute~~",
+            "a": "die Konferenz ist heute",
+            "why": "الألمانية: die Konferenz (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Reaktion ist positiv~~",
+            "a": "die Reaktion ist positiv",
+            "why": "الألمانية: die Reaktion (die!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Referat ist fertig~~",
+            "a": "das Referat ist fertig",
+            "why": "الألمانية: das Referat (das!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -436,6 +501,11 @@
             "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Rede · der Dialekt · duzen · die Botschaft)",
             "a": "Die Botschaft ist klar. Die Rede ist lang, und der Dialekt ist schwer. Wir duzen ihn.",
             "why": "المراجعة بالكلام! كلمات اليوم العشر كلها في الجُمل."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Kommunikation · die Konferenz · die Reaktion · das Referat)",
+            "a": "Die Kommunikation ist wichtig. Die Konferenz ist heute, und die Reaktion ist positiv. Das Referat ist fertig.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -613,6 +683,54 @@
             ],
             "a": "الرسالة (الجوهرية)",
             "why": "الصوت يقول «die Botschaft» — معناها «الرسالة (الجوهرية)». ركّز!"
+          },
+          {
+            "audioId": "word-kommunikation",
+            "speakText": "die Kommunikation.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التواصل",
+              "المؤتمّر · الاجتماع الكبير",
+              "الاستجابة · الردّ الفوري"
+            ],
+            "a": "التواصل",
+            "why": "الصوت يقول «die Kommunikation» — معناها «التواصل». ركّز!"
+          },
+          {
+            "audioId": "word-konferenz",
+            "speakText": "die Konferenz.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المؤتمّر · الاجتماع الكبير",
+              "الاستجابة · الردّ الفوري",
+              "العرض (المحاضرة القصيرة)"
+            ],
+            "a": "المؤتمّر · الاجتماع الكبير",
+            "why": "الصوت يقول «die Konferenz» — معناها «المؤتمّر · الاجتماع الكبير». ركّز!"
+          },
+          {
+            "audioId": "word-reaktion",
+            "speakText": "die Reaktion.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الاستجابة · الردّ الفوري",
+              "العرض (المحاضرة القصيرة)",
+              "التواصل"
+            ],
+            "a": "الاستجابة · الردّ الفوري",
+            "why": "الصوت يقول «die Reaktion» — معناها «الاستجابة · الردّ الفوري». ركّز!"
+          },
+          {
+            "audioId": "word-referat",
+            "speakText": "das Referat.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العرض (المحاضرة القصيرة)",
+              "التواصل",
+              "المؤتمّر · الاجتماع الكبير"
+            ],
+            "a": "العرض (المحاضرة القصيرة)",
+            "why": "الصوت يقول «das Referat» — معناها «العرض (المحاضرة القصيرة)». ركّز!"
           }
         ]
       },
@@ -688,6 +806,30 @@
             "speakText": "die Botschaft.",
             "a": "die Botschaft",
             "why": "اكتب ما تسمعه حرفياً: «die Botschaft» تعني «الرسالة (الجوهرية)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-kommunikation",
+            "speakText": "die Kommunikation.",
+            "a": "die Kommunikation",
+            "why": "اكتب ما تسمعه حرفياً: «die Kommunikation» تعني «التواصل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-konferenz",
+            "speakText": "die Konferenz.",
+            "a": "die Konferenz",
+            "why": "اكتب ما تسمعه حرفياً: «die Konferenz» تعني «المؤتمّر · الاجتماع الكبير». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-reaktion",
+            "speakText": "die Reaktion.",
+            "a": "die Reaktion",
+            "why": "اكتب ما تسمعه حرفياً: «die Reaktion» تعني «الاستجابة · الردّ الفوري». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-referat",
+            "speakText": "das Referat.",
+            "a": "das Referat",
+            "why": "اكتب ما تسمعه حرفياً: «das Referat» تعني «العرض (المحاضرة القصيرة)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -761,6 +903,26 @@
             "q": "Die ___ ist klar. (الرسالة!)",
             "a": "Botschaft",
             "why": "die Botschaft الرسالة (الجوهرية) (die! مؤنثة (die!) وجمعها die Botschaften.) — Die Botschaft ist klar."
+          },
+          {
+            "q": "Die ___ ist wichtig. (التواصل!)",
+            "a": "Kommunikation",
+            "why": "die Kommunikation التواصل (die! مؤنثة (die!) وجمعها die Kommunikationen.) — Die Kommunikation ist wichtig."
+          },
+          {
+            "q": "Die ___ ist heute. (المؤتمّر!)",
+            "a": "Konferenz",
+            "why": "die Konferenz المؤتمّر · الاجتماع الكبير (die! مؤنثة (die!) وجمعها die Konferenzen.) — Die Konferenz ist heute."
+          },
+          {
+            "q": "Die ___ ist positiv. (الاستجابة!)",
+            "a": "Reaktion",
+            "why": "die Reaktion الاستجابة · الردّ الفوري (die! مؤنثة (die!) وجمعها die Reaktionen.) — Die Reaktion ist positiv."
+          },
+          {
+            "q": "Das ___ ist fertig. (العرض!)",
+            "a": "Referat",
+            "why": "das Referat العرض (المحاضرة القصيرة) (das! محايد (das!) وجمعه die Referate.) — Das Referat ist fertig."
           }
         ]
       },
@@ -824,6 +986,26 @@
             "q": "Die ___ ist klar. (الرسالة!)",
             "a": "Botschaft",
             "why": "die Botschaft الرسالة (الجوهرية) (die! مؤنثة (die!) وجمعها die Botschaften.) — Die Botschaft ist klar."
+          },
+          {
+            "q": "Die ___ ist wichtig. (التواصل!)",
+            "a": "Kommunikation",
+            "why": "die Kommunikation التواصل (die! مؤنثة (die!) وجمعها die Kommunikationen.) — Die Kommunikation ist wichtig."
+          },
+          {
+            "q": "Die ___ ist heute. (المؤتمّر!)",
+            "a": "Konferenz",
+            "why": "die Konferenz المؤتمّر · الاجتماع الكبير (die! مؤنثة (die!) وجمعها die Konferenzen.) — Die Konferenz ist heute."
+          },
+          {
+            "q": "Die ___ ist positiv. (الاستجابة!)",
+            "a": "Reaktion",
+            "why": "die Reaktion الاستجابة · الردّ الفوري (die! مؤنثة (die!) وجمعها die Reaktionen.) — Die Reaktion ist positiv."
+          },
+          {
+            "q": "Das ___ ist fertig. (العرض!)",
+            "a": "Referat",
+            "why": "das Referat العرض (المحاضرة القصيرة) (das! محايد (das!) وجمعه die Referate.) — Das Referat ist fertig."
           }
         ]
       },
@@ -887,6 +1069,26 @@
             "q": "Die ___ ist klar. (الرسالة!)",
             "a": "Botschaft",
             "why": "die Botschaft الرسالة (الجوهرية) (die! مؤنثة (die!) وجمعها die Botschaften.) — Die Botschaft ist klar."
+          },
+          {
+            "q": "Die ___ ist wichtig. (التواصل!)",
+            "a": "Kommunikation",
+            "why": "die Kommunikation التواصل (die! مؤنثة (die!) وجمعها die Kommunikationen.) — Die Kommunikation ist wichtig."
+          },
+          {
+            "q": "Die ___ ist heute. (المؤتمّر!)",
+            "a": "Konferenz",
+            "why": "die Konferenz المؤتمّر · الاجتماع الكبير (die! مؤنثة (die!) وجمعها die Konferenzen.) — Die Konferenz ist heute."
+          },
+          {
+            "q": "Die ___ ist positiv. (الاستجابة!)",
+            "a": "Reaktion",
+            "why": "die Reaktion الاستجابة · الردّ الفوري (die! مؤنثة (die!) وجمعها die Reaktionen.) — Die Reaktion ist positiv."
+          },
+          {
+            "q": "Das ___ ist fertig. (العرض!)",
+            "a": "Referat",
+            "why": "das Referat العرض (المحاضرة القصيرة) (das! محايد (das!) وجمعه die Referate.) — Das Referat ist fertig."
           }
         ]
       }
@@ -894,8 +1096,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Er spricht fließend und die Aussprache ist klar. Er antwortet spontan. Er spricht gut und erzählt gern. Er beschreibt die Situation und der Ausdruck ist deutlich. Die Betonung ist wichtig. Das Publikum hört zu und die Sicherheit ist da. Die Ruhe ist gut. Spontan antwortet er und die Antwort ist verständlich! Wir besprechen den Text. Das beruhigt mich. Ich begrüße Sie. Die Rede ist lang. Der Dialekt ist schwer. Wir duzen ihn. Die Botschaft ist klar.",
-      "ar": "هو يتحدث ببطولة والنطق واضح. يجيب عفوياً. يتحدث جيداً ويسرد بسرور. يصف الموقف والأداء واضح. التأكيد مهم. المستمعون يصغون والأمان موجود. الراحة جيدة. عفوياً يجيب والإجابة مفهومة! نحن نناقش النصّ. هذا يهدّئني. أُحيّي سيادتكم (أهلاً!). الخطاب طويل. اللهجة صعبة. نخاطبه بـ«du». الرسالة واضحة."
+      "de": "Er spricht fließend und die Aussprache ist klar. Er antwortet spontan. Er spricht gut und erzählt gern. Er beschreibt die Situation und der Ausdruck ist deutlich. Die Betonung ist wichtig. Das Publikum hört zu und die Sicherheit ist da. Die Ruhe ist gut. Spontan antwortet er und die Antwort ist verständlich! Wir besprechen den Text. Das beruhigt mich. Ich begrüße Sie. Die Rede ist lang. Der Dialekt ist schwer. Wir duzen ihn. Die Botschaft ist klar. Die Kommunikation ist wichtig. Die Konferenz ist heute. Die Reaktion ist positiv. Das Referat ist fertig.",
+      "ar": "هو يتحدث ببطولة والنطق واضح. يجيب عفوياً. يتحدث جيداً ويسرد بسرور. يصف الموقف والأداء واضح. التأكيد مهم. المستمعون يصغون والأمان موجود. الراحة جيدة. عفوياً يجيب والإجابة مفهومة! نحن نناقش النصّ. هذا يهدّئني. أُحيّي سيادتكم (أهلاً!). الخطاب طويل. اللهجة صعبة. نخاطبه بـ«du». الرسالة واضحة. التواصل مهم. المؤتمّر اليوم. الاستجابة إيجابية. العرض جاهز."
     },
     "srsBundleWordIds": [
       "fliessend",
@@ -907,7 +1109,11 @@
       "rede",
       "dialekt",
       "duzen",
-      "botschaft"
+      "botschaft",
+      "kommunikation",
+      "konferenz",
+      "reaktion",
+      "referat"
     ],
     "warningCards": [
       {
@@ -978,7 +1184,11 @@
     "word-rede",
     "word-dialekt",
     "word-duzen",
-    "word-botschaft"
+    "word-botschaft",
+    "word-kommunikation",
+    "word-konferenz",
+    "word-reaktion",
+    "word-referat"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -993,7 +1203,11 @@
       "rede",
       "dialekt",
       "duzen",
-      "botschaft"
+      "botschaft",
+      "kommunikation",
+      "konferenz",
+      "reaktion",
+      "referat"
     ]
   }
 }

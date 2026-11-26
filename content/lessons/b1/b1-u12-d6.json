@@ -58,7 +58,10 @@
       "feststellen",
       "entstehen",
       "eroeffnung",
-      "ewig"
+      "ewig",
+      "ueberraschung",
+      "zufall",
+      "veraendern"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Rückblick ist gut und der Ausblick ist klar! Ich behalte die Wörter und wir beschließen den Kurs. Das ist alltäglich. Ich stelle das fest: Da entsteht ein Plan! Die Eröffnung ist morgen — und das ist nicht ewig.",
+        "de": "Der Rückblick ist gut und der Ausblick ist klar! Ich behalte die Wörter und wir beschließen den Kurs. Das ist alltäglich. Ich stelle das fest: Da entsteht ein Plan! Die Eröffnung ist morgen — und das ist nicht ewig. Die Überraschung ist schön. Das ist ein Zufall — und die Stadt verändert sich.",
         "ar": "يُلخّص رحلة B1 كاملة: الاسترجاع ثم النظرة المستقبلية!"
       },
       "situation": {
@@ -245,6 +248,23 @@
               }
             ],
             "why": "feststellen يلاحظ · يُثبت · entstehen ينشأ · يظهر · die Eröffnung الافتتاح · ewig أبدي · طويل جداً (خريطة التداخل 10-ي!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المفاجأة",
+                "de": "die Überraschung"
+              },
+              {
+                "ar": "الصدفة",
+                "de": "der Zufall"
+              },
+              {
+                "ar": "يتغيّر · يُغيّر",
+                "de": "verändern"
+              }
+            ],
+            "why": "die Überraschung المفاجأة · der Zufall الصدفة · verändern يتغيّر · يُغيّر (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -323,6 +343,21 @@
             "q": "Das ist ___. (أبدي!)",
             "a": "ewig",
             "why": "ewig أبدي · طويل جداً — Das ist ewig."
+          },
+          {
+            "q": "Die ___ ist schön. (المفاجأة!)",
+            "a": "Überraschung",
+            "why": "die Überraschung المفاجأة (die! مؤنثة (die!) وجمعها die Überraschungen.) — Die Überraschung ist schön."
+          },
+          {
+            "q": "Das ist ein ___. (صدفة!)",
+            "a": "Zufall",
+            "why": "der Zufall الصدفة (der! مذكّر (der!) وجمعه die Zufälle (تقلب a→ä!).) — Das ist ein Zufall."
+          },
+          {
+            "q": "Die Stadt ___ sich. (تتغيّر!)",
+            "a": "verändert",
+            "why": "verändern يتغيّر · يُغيّر — Die Stadt verändert sich."
           }
         ]
       },
@@ -403,6 +438,21 @@
             "q": "~~Das ist ewige.~~",
             "a": "Das ist ewig.",
             "why": "ewig صفة بعد ist بلا لاحقة! (لا ewige!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Überraschung ist schön~~",
+            "a": "die Überraschung ist schön",
+            "why": "الألمانية: die Überraschung (die! -ung مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Das ist eine Zufall.~~",
+            "a": "Das ist ein Zufall.",
+            "why": "der Zufall = مذكّر: ein Zufall (لا eine!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die Stadt verändere sich.~~",
+            "a": "Die Stadt verändert sich.",
+            "why": "الفعل مُصرَّف مع sich: verändert (لا verändere!) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -458,6 +508,11 @@
             "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: feststellen · entstehen · die Eröffnung · ewig)",
             "a": "Ich stelle das fest: Da entsteht ein Plan! Die Eröffnung ist morgen — und das ist nicht ewig.",
             "why": "المراجعة بالكلام! كلمات اليوم العشر كلها في الجُمل."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Überraschung · der Zufall · verändern)",
+            "a": "Die Überraschung ist schön. Das ist ein Zufall — und die Stadt verändert sich.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -621,6 +676,42 @@
             ],
             "a": "أبدي · طويل جداً",
             "why": "الصوت يقول «ewig» — معناها «أبدي · طويل جداً». ركّز!"
+          },
+          {
+            "audioId": "word-ueberraschung",
+            "speakText": "die Überraschung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المفاجأة",
+              "الصدفة",
+              "يتغيّر · يُغيّر"
+            ],
+            "a": "المفاجأة",
+            "why": "الصوت يقول «die Überraschung» — معناها «المفاجأة». ركّز!"
+          },
+          {
+            "audioId": "word-zufall",
+            "speakText": "der Zufall.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الصدفة",
+              "يتغيّر · يُغيّر",
+              "المفاجأة"
+            ],
+            "a": "الصدفة",
+            "why": "الصوت يقول «der Zufall» — معناها «الصدفة». ركّز!"
+          },
+          {
+            "audioId": "word-veraendern",
+            "speakText": "verändern.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يتغيّر · يُغيّر",
+              "المفاجأة",
+              "الصدفة"
+            ],
+            "a": "يتغيّر · يُغيّر",
+            "why": "الصوت يقول «verändern» — معناها «يتغيّر · يُغيّر». ركّز!"
           }
         ]
       },
@@ -690,6 +781,24 @@
             "speakText": "ewig.",
             "a": "ewig",
             "why": "اكتب ما تسمعه حرفياً: «ewig» تعني «أبدي · طويل جداً». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ueberraschung",
+            "speakText": "die Überraschung.",
+            "a": "die Überraschung",
+            "why": "اكتب ما تسمعه حرفياً: «die Überraschung» تعني «المفاجأة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-zufall",
+            "speakText": "der Zufall.",
+            "a": "der Zufall",
+            "why": "اكتب ما تسمعه حرفياً: «der Zufall» تعني «الصدفة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-veraendern",
+            "speakText": "verändern.",
+            "a": "verändern",
+            "why": "اكتب ما تسمعه حرفياً: «verändern» تعني «يتغيّر · يُغيّر». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -763,6 +872,21 @@
             "q": "Das ist ___. (أبدي!)",
             "a": "ewig",
             "why": "ewig أبدي · طويل جداً — Das ist ewig."
+          },
+          {
+            "q": "Die ___ ist schön. (المفاجأة!)",
+            "a": "Überraschung",
+            "why": "die Überraschung المفاجأة (die! مؤنثة (die!) وجمعها die Überraschungen.) — Die Überraschung ist schön."
+          },
+          {
+            "q": "Das ist ein ___. (صدفة!)",
+            "a": "Zufall",
+            "why": "der Zufall الصدفة (der! مذكّر (der!) وجمعه die Zufälle (تقلب a→ä!).) — Das ist ein Zufall."
+          },
+          {
+            "q": "Die Stadt ___ sich. (تتغيّر!)",
+            "a": "verändert",
+            "why": "verändern يتغيّر · يُغيّر — Die Stadt verändert sich."
           }
         ]
       },
@@ -826,6 +950,21 @@
             "q": "Das ist ___. (أبدي!)",
             "a": "ewig",
             "why": "ewig أبدي · طويل جداً — Das ist ewig."
+          },
+          {
+            "q": "Die ___ ist schön. (المفاجأة!)",
+            "a": "Überraschung",
+            "why": "die Überraschung المفاجأة (die! مؤنثة (die!) وجمعها die Überraschungen.) — Die Überraschung ist schön."
+          },
+          {
+            "q": "Das ist ein ___. (صدفة!)",
+            "a": "Zufall",
+            "why": "der Zufall الصدفة (der! مذكّر (der!) وجمعه die Zufälle (تقلب a→ä!).) — Das ist ein Zufall."
+          },
+          {
+            "q": "Die Stadt ___ sich. (تتغيّر!)",
+            "a": "verändert",
+            "why": "verändern يتغيّر · يُغيّر — Die Stadt verändert sich."
           }
         ]
       },
@@ -889,6 +1028,21 @@
             "q": "Das ist ___. (أبدي!)",
             "a": "ewig",
             "why": "ewig أبدي · طويل جداً — Das ist ewig."
+          },
+          {
+            "q": "Die ___ ist schön. (المفاجأة!)",
+            "a": "Überraschung",
+            "why": "die Überraschung المفاجأة (die! مؤنثة (die!) وجمعها die Überraschungen.) — Die Überraschung ist schön."
+          },
+          {
+            "q": "Das ist ein ___. (صدفة!)",
+            "a": "Zufall",
+            "why": "der Zufall الصدفة (der! مذكّر (der!) وجمعه die Zufälle (تقلب a→ä!).) — Das ist ein Zufall."
+          },
+          {
+            "q": "Die Stadt ___ sich. (تتغيّر!)",
+            "a": "verändert",
+            "why": "verändern يتغيّر · يُغيّر — Die Stadt verändert sich."
           }
         ]
       }
@@ -896,8 +1050,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Rückblick ist gut und die Reise war lang. Sprechen und Schreiben sind wichtig: die Rechtschreibung ist richtig und der Stil ist klar. Die Prüfung ist offiziell und die Anerkennung ist da. Die Kultur ist bekannt und die Erfahrung ist gut. Der Ausblick ist klar und der Weg geht weiter. Das Niveau B1 ist erreicht! Wir beschließen den Kurs. Ich behalte die Wörter. Das ist alltäglich. Ich stelle das fest. Da entsteht ein Plan. Die Eröffnung ist morgen. Das ist ewig.",
-      "ar": "الاسترجاع جيد والرحلة كانت طويلة. التحدث والكتابة مهمان: الإملاء صحيح والأسلوب واضح. الامتحان رسمي والاعتراف حاضر. الثقافة معروفة والخبرة جيدة. النظرة المستقبلية واضحة والطريق يمضي. المستوى B1 مُنال! نختم الدورة (نقرّر ختامها). أحتفظ بالكلمات. هذا مألوف (يومي). ألاحظ ذلك. هنا ينشأ خطة. الافتتاح غداً. هذا أبدي (طويل جداً)."
+      "de": "Der Rückblick ist gut und die Reise war lang. Sprechen und Schreiben sind wichtig: die Rechtschreibung ist richtig und der Stil ist klar. Die Prüfung ist offiziell und die Anerkennung ist da. Die Kultur ist bekannt und die Erfahrung ist gut. Der Ausblick ist klar und der Weg geht weiter. Das Niveau B1 ist erreicht! Wir beschließen den Kurs. Ich behalte die Wörter. Das ist alltäglich. Ich stelle das fest. Da entsteht ein Plan. Die Eröffnung ist morgen. Das ist ewig. Die Überraschung ist schön. Das ist ein Zufall. Die Stadt verändert sich.",
+      "ar": "الاسترجاع جيد والرحلة كانت طويلة. التحدث والكتابة مهمان: الإملاء صحيح والأسلوب واضح. الامتحان رسمي والاعتراف حاضر. الثقافة معروفة والخبرة جيدة. النظرة المستقبلية واضحة والطريق يمضي. المستوى B1 مُنال! نختم الدورة (نقرّر ختامها). أحتفظ بالكلمات. هذا مألوف (يومي). ألاحظ ذلك. هنا ينشأ خطة. الافتتاح غداً. هذا أبدي (طويل جداً). المفاجأة جميلة. هذه صدفة. المدينة تتغيّر."
     },
     "srsBundleWordIds": [
       "rueckblick",
@@ -908,7 +1062,10 @@
       "feststellen",
       "entstehen",
       "eroeffnung",
-      "ewig"
+      "ewig",
+      "ueberraschung",
+      "zufall",
+      "veraendern"
     ],
     "warningCards": [
       {
@@ -984,7 +1141,10 @@
     "word-feststellen",
     "word-entstehen",
     "word-eroeffnung",
-    "word-ewig"
+    "word-ewig",
+    "word-ueberraschung",
+    "word-zufall",
+    "word-veraendern"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -998,7 +1158,10 @@
       "feststellen",
       "entstehen",
       "eroeffnung",
-      "ewig"
+      "ewig",
+      "ueberraschung",
+      "zufall",
+      "veraendern"
     ]
   }
 }
