@@ -54,7 +54,11 @@
       "ausblick",
       "beschliessen",
       "behalten",
-      "alltaeglich"
+      "alltaeglich",
+      "feststellen",
+      "entstehen",
+      "eroeffnung",
+      "ewig"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -79,7 +83,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Rückblick ist gut und der Ausblick ist klar! Ich behalte die Wörter und wir beschließen den Kurs. Das ist alltäglich.",
+        "de": "Der Rückblick ist gut und der Ausblick ist klar! Ich behalte die Wörter und wir beschließen den Kurs. Das ist alltäglich. Ich stelle das fest: Da entsteht ein Plan! Die Eröffnung ist morgen — und das ist nicht ewig.",
         "ar": "يُلخّص رحلة B1 كاملة: الاسترجاع ثم النظرة المستقبلية!"
       },
       "situation": {
@@ -220,6 +224,27 @@
               }
             ],
             "why": "beschließen يقرّر · يختم · behalten يحتفظ بـ · يُبقي · alltäglich يومي · مألوف (خريطة التداخل 10-ي!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يلاحظ · يُثبت",
+                "de": "feststellen"
+              },
+              {
+                "ar": "ينشأ · يظهر",
+                "de": "entstehen"
+              },
+              {
+                "ar": "الافتتاح",
+                "de": "die Eröffnung"
+              },
+              {
+                "ar": "أبدي · طويل جداً",
+                "de": "ewig"
+              }
+            ],
+            "why": "feststellen يلاحظ · يُثبت · entstehen ينشأ · يظهر · die Eröffnung الافتتاح · ewig أبدي · طويل جداً (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -278,6 +303,26 @@
             "q": "Das ist ___. (مألوف!)",
             "a": "alltäglich",
             "why": "alltäglich يومي · مألوف — Das ist alltäglich."
+          },
+          {
+            "q": "Ich stelle das ___. (ألاحظ!)",
+            "a": "fest",
+            "why": "feststellen يلاحظ · يُثبت — Ich stelle das fest."
+          },
+          {
+            "q": "Da ___ ein Plan. (ينشأ!)",
+            "a": "entsteht",
+            "why": "entstehen ينشأ · يظهر — Da entsteht ein Plan."
+          },
+          {
+            "q": "Die ___ ist morgen. (الافتتاح!)",
+            "a": "Eröffnung",
+            "why": "die Eröffnung الافتتاح (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Eröffnung ist morgen."
+          },
+          {
+            "q": "Das ist ___. (أبدي!)",
+            "a": "ewig",
+            "why": "ewig أبدي · طويل جداً — Das ist ewig."
           }
         ]
       },
@@ -338,6 +383,26 @@
             "q": "~~Das ist alltägliche.~~",
             "a": "Das ist alltäglich.",
             "why": "alltäglich صفة بعد ist تبقى بلا لاحقة! (لا alltägliche!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Ich feststelle das.~~",
+            "a": "Ich stelle das fest.",
+            "why": "feststellen فعل منفصل: الفعل في نهاية الجملة! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Da entsteht ein Plan ab.~~",
+            "a": "Da entsteht ein Plan.",
+            "why": "entstehen فعل غير منفصل ولا يحتاج أداة! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Eröffnung ist morgen~~",
+            "a": "die Eröffnung ist morgen",
+            "why": "الألمانية: die Eröffnung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Das ist ewige.~~",
+            "a": "Das ist ewig.",
+            "why": "ewig صفة بعد ist بلا لاحقة! (لا ewige!) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -388,6 +453,11 @@
             "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم: beschließen · behalten · alltäglich)",
             "a": "Ich behalte die Wörter und wir beschließen den Kurs. Das ist alltäglich.",
             "why": "المراجعة بالكلام! كلمات اليوم الست كلها في الجُمل."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: feststellen · entstehen · die Eröffnung · ewig)",
+            "a": "Ich stelle das fest: Da entsteht ein Plan! Die Eröffnung ist morgen — und das ist nicht ewig.",
+            "why": "المراجعة بالكلام! كلمات اليوم العشر كلها في الجُمل."
           }
         ]
       },
@@ -503,6 +573,54 @@
             ],
             "a": "يومي · مألوف",
             "why": "الصوت يقول «alltäglich» — معناها «يومي · مألوف». ركّز!"
+          },
+          {
+            "audioId": "word-feststellen",
+            "speakText": "feststellen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يلاحظ · يُثبت",
+              "ينشأ · يظهر",
+              "الافتتاح"
+            ],
+            "a": "يلاحظ · يُثبت",
+            "why": "الصوت يقول «feststellen» — معناها «يلاحظ · يُثبت». ركّز!"
+          },
+          {
+            "audioId": "word-entstehen",
+            "speakText": "entstehen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "ينشأ · يظهر",
+              "الافتتاح",
+              "أبدي · طويل جداً"
+            ],
+            "a": "ينشأ · يظهر",
+            "why": "الصوت يقول «entstehen» — معناها «ينشأ · يظهر». ركّز!"
+          },
+          {
+            "audioId": "word-eroeffnung",
+            "speakText": "die Eröffnung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الافتتاح",
+              "أبدي · طويل جداً",
+              "يلاحظ · يُثبت"
+            ],
+            "a": "الافتتاح",
+            "why": "الصوت يقول «die Eröffnung» — معناها «الافتتاح». ركّز!"
+          },
+          {
+            "audioId": "word-ewig",
+            "speakText": "ewig.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "أبدي · طويل جداً",
+              "يلاحظ · يُثبت",
+              "ينشأ · يظهر"
+            ],
+            "a": "أبدي · طويل جداً",
+            "why": "الصوت يقول «ewig» — معناها «أبدي · طويل جداً». ركّز!"
           }
         ]
       },
@@ -548,6 +666,30 @@
             "speakText": "alltäglich.",
             "a": "alltäglich",
             "why": "اكتب ما تسمعه حرفياً: «alltäglich» تعني «يومي · مألوف». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-feststellen",
+            "speakText": "feststellen.",
+            "a": "feststellen",
+            "why": "اكتب ما تسمعه حرفياً: «feststellen» تعني «يلاحظ · يُثبت». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-entstehen",
+            "speakText": "entstehen.",
+            "a": "entstehen",
+            "why": "اكتب ما تسمعه حرفياً: «entstehen» تعني «ينشأ · يظهر». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-eroeffnung",
+            "speakText": "die Eröffnung.",
+            "a": "die Eröffnung",
+            "why": "اكتب ما تسمعه حرفياً: «die Eröffnung» تعني «الافتتاح». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ewig",
+            "speakText": "ewig.",
+            "a": "ewig",
+            "why": "اكتب ما تسمعه حرفياً: «ewig» تعني «أبدي · طويل جداً». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -601,6 +743,26 @@
             "q": "Das ist ___. (مألوف!)",
             "a": "alltäglich",
             "why": "alltäglich يومي · مألوف — Das ist alltäglich."
+          },
+          {
+            "q": "Ich stelle das ___. (ألاحظ!)",
+            "a": "fest",
+            "why": "feststellen يلاحظ · يُثبت — Ich stelle das fest."
+          },
+          {
+            "q": "Da ___ ein Plan. (ينشأ!)",
+            "a": "entsteht",
+            "why": "entstehen ينشأ · يظهر — Da entsteht ein Plan."
+          },
+          {
+            "q": "Die ___ ist morgen. (الافتتاح!)",
+            "a": "Eröffnung",
+            "why": "die Eröffnung الافتتاح (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Eröffnung ist morgen."
+          },
+          {
+            "q": "Das ist ___. (أبدي!)",
+            "a": "ewig",
+            "why": "ewig أبدي · طويل جداً — Das ist ewig."
           }
         ]
       },
@@ -644,6 +806,26 @@
             "q": "Das ist ___. (مألوف!)",
             "a": "alltäglich",
             "why": "alltäglich يومي · مألوف — Das ist alltäglich."
+          },
+          {
+            "q": "Ich stelle das ___. (ألاحظ!)",
+            "a": "fest",
+            "why": "feststellen يلاحظ · يُثبت — Ich stelle das fest."
+          },
+          {
+            "q": "Da ___ ein Plan. (ينشأ!)",
+            "a": "entsteht",
+            "why": "entstehen ينشأ · يظهر — Da entsteht ein Plan."
+          },
+          {
+            "q": "Die ___ ist morgen. (الافتتاح!)",
+            "a": "Eröffnung",
+            "why": "die Eröffnung الافتتاح (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Eröffnung ist morgen."
+          },
+          {
+            "q": "Das ist ___. (أبدي!)",
+            "a": "ewig",
+            "why": "ewig أبدي · طويل جداً — Das ist ewig."
           }
         ]
       },
@@ -687,6 +869,26 @@
             "q": "Das ist ___. (مألوف!)",
             "a": "alltäglich",
             "why": "alltäglich يومي · مألوف — Das ist alltäglich."
+          },
+          {
+            "q": "Ich stelle das ___. (ألاحظ!)",
+            "a": "fest",
+            "why": "feststellen يلاحظ · يُثبت — Ich stelle das fest."
+          },
+          {
+            "q": "Da ___ ein Plan. (ينشأ!)",
+            "a": "entsteht",
+            "why": "entstehen ينشأ · يظهر — Da entsteht ein Plan."
+          },
+          {
+            "q": "Die ___ ist morgen. (الافتتاح!)",
+            "a": "Eröffnung",
+            "why": "die Eröffnung الافتتاح (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Eröffnung ist morgen."
+          },
+          {
+            "q": "Das ist ___. (أبدي!)",
+            "a": "ewig",
+            "why": "ewig أبدي · طويل جداً — Das ist ewig."
           }
         ]
       }
@@ -694,15 +896,19 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Rückblick ist gut und die Reise war lang. Sprechen und Schreiben sind wichtig: die Rechtschreibung ist richtig und der Stil ist klar. Die Prüfung ist offiziell und die Anerkennung ist da. Die Kultur ist bekannt und die Erfahrung ist gut. Der Ausblick ist klar und der Weg geht weiter. Das Niveau B1 ist erreicht! Wir beschließen den Kurs. Ich behalte die Wörter. Das ist alltäglich.",
-      "ar": "الاسترجاع جيد والرحلة كانت طويلة. التحدث والكتابة مهمان: الإملاء صحيح والأسلوب واضح. الامتحان رسمي والاعتراف حاضر. الثقافة معروفة والخبرة جيدة. النظرة المستقبلية واضحة والطريق يمضي. المستوى B1 مُنال! نختم الدورة (نقرّر ختامها). أحتفظ بالكلمات. هذا مألوف (يومي)."
+      "de": "Der Rückblick ist gut und die Reise war lang. Sprechen und Schreiben sind wichtig: die Rechtschreibung ist richtig und der Stil ist klar. Die Prüfung ist offiziell und die Anerkennung ist da. Die Kultur ist bekannt und die Erfahrung ist gut. Der Ausblick ist klar und der Weg geht weiter. Das Niveau B1 ist erreicht! Wir beschließen den Kurs. Ich behalte die Wörter. Das ist alltäglich. Ich stelle das fest. Da entsteht ein Plan. Die Eröffnung ist morgen. Das ist ewig.",
+      "ar": "الاسترجاع جيد والرحلة كانت طويلة. التحدث والكتابة مهمان: الإملاء صحيح والأسلوب واضح. الامتحان رسمي والاعتراف حاضر. الثقافة معروفة والخبرة جيدة. النظرة المستقبلية واضحة والطريق يمضي. المستوى B1 مُنال! نختم الدورة (نقرّر ختامها). أحتفظ بالكلمات. هذا مألوف (يومي). ألاحظ ذلك. هنا ينشأ خطة. الافتتاح غداً. هذا أبدي (طويل جداً)."
     },
     "srsBundleWordIds": [
       "rueckblick",
       "ausblick",
       "beschliessen",
       "behalten",
-      "alltaeglich"
+      "alltaeglich",
+      "feststellen",
+      "entstehen",
+      "eroeffnung",
+      "ewig"
     ],
     "warningCards": [
       {
@@ -774,7 +980,11 @@
     "word-ausblick",
     "word-beschliessen",
     "word-behalten",
-    "word-alltaeglich"
+    "word-alltaeglich",
+    "word-feststellen",
+    "word-entstehen",
+    "word-eroeffnung",
+    "word-ewig"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -784,7 +994,11 @@
       "ausblick",
       "beschliessen",
       "behalten",
-      "alltaeglich"
+      "alltaeglich",
+      "feststellen",
+      "entstehen",
+      "eroeffnung",
+      "ewig"
     ]
   }
 }

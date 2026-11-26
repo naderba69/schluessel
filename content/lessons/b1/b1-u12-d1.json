@@ -55,7 +55,11 @@
       "konzentration",
       "abschreiben",
       "aufforderung",
-      "akzeptieren"
+      "akzeptieren",
+      "gedanke",
+      "erziehung",
+      "kursleiter",
+      "lerner"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -73,7 +77,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Wortschatz ist groß und die Konzentration ist gut! Die Aufforderung ist klar, und ich akzeptiere sie. Abschreiben ist nicht erlaubt.",
+        "de": "Der Wortschatz ist groß und die Konzentration ist gut! Die Aufforderung ist klar, und ich akzeptiere sie. Abschreiben ist nicht erlaubt. Der Gedanke ist klar. Die Erziehung ist wichtig. Der Kursleiter hilft — und der Lerner liest.",
         "ar": "يُراجع ١٥ كلمة متراكمة من كل الوحدات في جُمل!"
       },
       "situation": {
@@ -81,7 +85,7 @@
         "ar": "إحدى عشرة وحدة! مفردات واحدة! هدف واحد! (المراجعة الأولى!)"
       },
       "successCriteria": [
-        "كلمات اليوم الست كلها في المراجعة!",
+        "كلمات اليوم العشر كلها في المراجعة!",
         "١٥ كلمة متراكمة من وحدات سابقة في جُمل!",
         "الروابط من الوحدة الأولى: deshalb! trotzdem! (المرتبة الثانية!)",
         "المفردات الثابتة: den Wortschatz wiederholen! das Zertifikat bekommen!"
@@ -210,6 +214,27 @@
               }
             ],
             "why": "abschreiben ينسخ (من النصّ) · die Aufforderung الدعوة (إلى عمل ما) · akzeptieren يقبل (بشيء) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الفكرة",
+                "de": "der Gedanke"
+              },
+              {
+                "ar": "التربية",
+                "de": "die Erziehung"
+              },
+              {
+                "ar": "قائد الدورة (المدرّب)",
+                "de": "der Kursleiter"
+              },
+              {
+                "ar": "المتعلّم",
+                "de": "der Lerner"
+              }
+            ],
+            "why": "der Gedanke الفكرة · die Erziehung التربية · der Kursleiter قائد الدورة (المدرّب) · der Lerner المتعلّم (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -274,6 +299,26 @@
             "q": "Das ___ wir. (نقبل!)",
             "a": "akzeptieren",
             "why": "akzeptieren يقبل (بشيء) — Das akzeptieren wir."
+          },
+          {
+            "q": "Der ___ ist klar. (الفكرة!)",
+            "a": "Gedanke",
+            "why": "der Gedanke الفكرة (der! اسم -e مذكّر n-Deklination! (der Gedanke!) وجمعه die Gedanken.) — Der Gedanke ist klar."
+          },
+          {
+            "q": "Die ___ ist wichtig. (التربية!)",
+            "a": "Erziehung",
+            "why": "die Erziehung التربية (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Erziehung ist wichtig."
+          },
+          {
+            "q": "Der ___ hilft. (قائد الدورة!)",
+            "a": "Kursleiter",
+            "why": "der Kursleiter قائد الدورة (المدرّب) (der! مركّب (Kurs+Leiter) مذكّر (der!) وجمعه die Kursleiter.) — Der Kursleiter hilft."
+          },
+          {
+            "q": "Der ___ liest. (المتعلّم!)",
+            "a": "Lerner",
+            "why": "der Lerner المتعلّم (der! مذكّر (der!) وجمعه die Lerner (بلا تغيير!).) — Der Lerner liest."
           }
         ]
       },
@@ -334,6 +379,26 @@
             "q": "~~Das akzeptieren ich.~~",
             "a": "Das akzeptieren wir.",
             "why": "akzeptieren يوافق الفاعل: wir akzeptieren — لا «akzeptieren ich»! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Gedanke ist klar~~",
+            "a": "der Gedanke ist klar",
+            "why": "الألمانية: der Gedanke (der! n-Deklination!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Erziehung ist wichtig~~",
+            "a": "die Erziehung ist wichtig",
+            "why": "الألمانية: die Erziehung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Kursleiter hilft~~",
+            "a": "der Kursleiter hilft",
+            "why": "الألمانية: der Kursleiter (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Lerner liest~~",
+            "a": "der Lerner liest",
+            "why": "الألمانية: der Lerner (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -384,6 +449,11 @@
             "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم: abschreiben · die Aufforderung · akzeptieren)",
             "a": "Die Aufforderung ist klar, und ich akzeptiere sie. Abschreiben ist nicht erlaubt.",
             "why": "المراجعة بالكلام! كلمات اليوم الست كلها في الجُمل."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Gedanke · die Erziehung · der Kursleiter · der Lerner)",
+            "a": "Der Gedanke ist klar. Die Erziehung ist wichtig. Der Kursleiter hilft — und der Lerner liest.",
+            "why": "المراجعة بالكلام! كلمات اليوم العشر كلها في الجُمل."
           }
         ]
       },
@@ -513,6 +583,54 @@
             ],
             "a": "يقبل (بشيء)",
             "why": "الصوت يقول «akzeptieren» — معناها «يقبل (بشيء)». ركّز!"
+          },
+          {
+            "audioId": "word-gedanke",
+            "speakText": "der Gedanke.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الفكرة",
+              "التربية",
+              "قائد الدورة (المدرّب)"
+            ],
+            "a": "الفكرة",
+            "why": "الصوت يقول «der Gedanke» — معناها «الفكرة». ركّز!"
+          },
+          {
+            "audioId": "word-erziehung",
+            "speakText": "die Erziehung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التربية",
+              "قائد الدورة (المدرّب)",
+              "المتعلّم"
+            ],
+            "a": "التربية",
+            "why": "الصوت يقول «die Erziehung» — معناها «التربية». ركّز!"
+          },
+          {
+            "audioId": "word-kursleiter",
+            "speakText": "der Kursleiter.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "قائد الدورة (المدرّب)",
+              "المتعلّم",
+              "الفكرة"
+            ],
+            "a": "قائد الدورة (المدرّب)",
+            "why": "الصوت يقول «der Kursleiter» — معناها «قائد الدورة (المدرّب)». ركّز!"
+          },
+          {
+            "audioId": "word-lerner",
+            "speakText": "der Lerner.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المتعلّم",
+              "الفكرة",
+              "التربية"
+            ],
+            "a": "المتعلّم",
+            "why": "الصوت يقول «der Lerner» — معناها «المتعلّم». ركّز!"
           }
         ]
       },
@@ -564,6 +682,30 @@
             "speakText": "akzeptieren.",
             "a": "akzeptieren",
             "why": "اكتب ما تسمعه حرفياً: «akzeptieren» تعني «يقبل (بشيء)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gedanke",
+            "speakText": "der Gedanke.",
+            "a": "der Gedanke",
+            "why": "اكتب ما تسمعه حرفياً: «der Gedanke» تعني «الفكرة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-erziehung",
+            "speakText": "die Erziehung.",
+            "a": "die Erziehung",
+            "why": "اكتب ما تسمعه حرفياً: «die Erziehung» تعني «التربية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-kursleiter",
+            "speakText": "der Kursleiter.",
+            "a": "der Kursleiter",
+            "why": "اكتب ما تسمعه حرفياً: «der Kursleiter» تعني «قائد الدورة (المدرّب)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-lerner",
+            "speakText": "der Lerner.",
+            "a": "der Lerner",
+            "why": "اكتب ما تسمعه حرفياً: «der Lerner» تعني «المتعلّم». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -617,6 +759,26 @@
             "q": "Das ___ wir. (نقبل!)",
             "a": "akzeptieren",
             "why": "akzeptieren يقبل (بشيء) — Das akzeptieren wir."
+          },
+          {
+            "q": "Der ___ ist klar. (الفكرة!)",
+            "a": "Gedanke",
+            "why": "der Gedanke الفكرة (der! اسم -e مذكّر n-Deklination! (der Gedanke!) وجمعه die Gedanken.) — Der Gedanke ist klar."
+          },
+          {
+            "q": "Die ___ ist wichtig. (التربية!)",
+            "a": "Erziehung",
+            "why": "die Erziehung التربية (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Erziehung ist wichtig."
+          },
+          {
+            "q": "Der ___ hilft. (قائد الدورة!)",
+            "a": "Kursleiter",
+            "why": "der Kursleiter قائد الدورة (المدرّب) (der! مركّب (Kurs+Leiter) مذكّر (der!) وجمعه die Kursleiter.) — Der Kursleiter hilft."
+          },
+          {
+            "q": "Der ___ liest. (المتعلّم!)",
+            "a": "Lerner",
+            "why": "der Lerner المتعلّم (der! مذكّر (der!) وجمعه die Lerner (بلا تغيير!).) — Der Lerner liest."
           }
         ]
       },
@@ -660,6 +822,26 @@
             "q": "Das ___ wir. (نقبل!)",
             "a": "akzeptieren",
             "why": "akzeptieren يقبل (بشيء) — Das akzeptieren wir."
+          },
+          {
+            "q": "Der ___ ist klar. (الفكرة!)",
+            "a": "Gedanke",
+            "why": "der Gedanke الفكرة (der! اسم -e مذكّر n-Deklination! (der Gedanke!) وجمعه die Gedanken.) — Der Gedanke ist klar."
+          },
+          {
+            "q": "Die ___ ist wichtig. (التربية!)",
+            "a": "Erziehung",
+            "why": "die Erziehung التربية (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Erziehung ist wichtig."
+          },
+          {
+            "q": "Der ___ hilft. (قائد الدورة!)",
+            "a": "Kursleiter",
+            "why": "der Kursleiter قائد الدورة (المدرّب) (der! مركّب (Kurs+Leiter) مذكّر (der!) وجمعه die Kursleiter.) — Der Kursleiter hilft."
+          },
+          {
+            "q": "Der ___ liest. (المتعلّم!)",
+            "a": "Lerner",
+            "why": "der Lerner المتعلّم (der! مذكّر (der!) وجمعه die Lerner (بلا تغيير!).) — Der Lerner liest."
           }
         ]
       },
@@ -703,6 +885,26 @@
             "q": "Das ___ wir. (نقبل!)",
             "a": "akzeptieren",
             "why": "akzeptieren يقبل (بشيء) — Das akzeptieren wir."
+          },
+          {
+            "q": "Der ___ ist klar. (الفكرة!)",
+            "a": "Gedanke",
+            "why": "der Gedanke الفكرة (der! اسم -e مذكّر n-Deklination! (der Gedanke!) وجمعه die Gedanken.) — Der Gedanke ist klar."
+          },
+          {
+            "q": "Die ___ ist wichtig. (التربية!)",
+            "a": "Erziehung",
+            "why": "die Erziehung التربية (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Erziehung ist wichtig."
+          },
+          {
+            "q": "Der ___ hilft. (قائد الدورة!)",
+            "a": "Kursleiter",
+            "why": "der Kursleiter قائد الدورة (المدرّب) (der! مركّب (Kurs+Leiter) مذكّر (der!) وجمعه die Kursleiter.) — Der Kursleiter hilft."
+          },
+          {
+            "q": "Der ___ liest. (المتعلّم!)",
+            "a": "Lerner",
+            "why": "der Lerner المتعلّم (der! مذكّر (der!) وجمعه die Lerner (بلا تغيير!).) — Der Lerner liest."
           }
         ]
       }
@@ -710,8 +912,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Wortschatz ist groß und das Zertifikat ist wichtig. Die Konzentration ist gut. Der Weg ist lang und die Arbeit ist wichtig. Die Schule ist gut und die Zeit ist kurz. Die Gesundheit ist wichtig und die Wohnung ist schön. Die Reise ist lang und das Geld ist wichtig. Die Sicherheit ist da und das Ergebnis ist gut. Das Niveau ist hoch. Deshalb übt er jeden Tag! Abschreiben ist nicht erlaubt. Die Aufforderung ist klar. Das akzeptieren wir.",
-      "ar": "المفردات كبيرة والشهادة مهمة. التركيز جيد. الطريق طويل والعمل مهم. المدرسة جيدة والوقت قصير. الصحة مهمة والسكن جميل. السفر طويل والمال مهم. الأمان موجود والنتيجة جيدة. المستوى عالٍ. لذلك يتدرب كل يوم! النسخ (الغشّ) غير مسموح. الدعوة واضحة. نحن نقبل ذلك."
+      "de": "Der Wortschatz ist groß und das Zertifikat ist wichtig. Die Konzentration ist gut. Der Weg ist lang und die Arbeit ist wichtig. Die Schule ist gut und die Zeit ist kurz. Die Gesundheit ist wichtig und die Wohnung ist schön. Die Reise ist lang und das Geld ist wichtig. Die Sicherheit ist da und das Ergebnis ist gut. Das Niveau ist hoch. Deshalb übt er jeden Tag! Abschreiben ist nicht erlaubt. Die Aufforderung ist klar. Das akzeptieren wir. Der Gedanke ist klar. Die Erziehung ist wichtig. Der Kursleiter hilft. Der Lerner liest.",
+      "ar": "المفردات كبيرة والشهادة مهمة. التركيز جيد. الطريق طويل والعمل مهم. المدرسة جيدة والوقت قصير. الصحة مهمة والسكن جميل. السفر طويل والمال مهم. الأمان موجود والنتيجة جيدة. المستوى عالٍ. لذلك يتدرب كل يوم! النسخ (الغشّ) غير مسموح. الدعوة واضحة. نحن نقبل ذلك. الفكرة واضحة. التربية مهمة. قائد الدورة يساعد. المتعلّم يقرأ."
     },
     "srsBundleWordIds": [
       "wortschatz",
@@ -719,7 +921,11 @@
       "konzentration",
       "abschreiben",
       "aufforderung",
-      "akzeptieren"
+      "akzeptieren",
+      "gedanke",
+      "erziehung",
+      "kursleiter",
+      "lerner"
     ],
     "warningCards": [
       {
@@ -786,7 +992,11 @@
     "word-konzentration",
     "word-abschreiben",
     "word-aufforderung",
-    "word-akzeptieren"
+    "word-akzeptieren",
+    "word-gedanke",
+    "word-erziehung",
+    "word-kursleiter",
+    "word-lerner"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -797,7 +1007,11 @@
       "konzentration",
       "abschreiben",
       "aufforderung",
-      "akzeptieren"
+      "akzeptieren",
+      "gedanke",
+      "erziehung",
+      "kursleiter",
+      "lerner"
     ]
   }
 }

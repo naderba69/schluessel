@@ -55,7 +55,11 @@
       "spontan",
       "besprechen",
       "beruhigen",
-      "begruessen"
+      "begruessen",
+      "rede",
+      "dialekt",
+      "duzen",
+      "botschaft"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -74,7 +78,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Er spricht fließend und die Aussprache ist klar! Ich begrüße Sie und wir besprechen den Text. Das beruhigt mich.",
+        "de": "Er spricht fließend und die Aussprache ist klar! Ich begrüße Sie und wir besprechen den Text. Das beruhigt mich. Die Botschaft ist klar. Die Rede ist lang, und der Dialekt ist schwer. Wir duzen ihn.",
         "ar": "يجري محاكاة كلام (٣ دقائق!): وصف + رأي + خاتمة!"
       },
       "situation": {
@@ -82,7 +86,7 @@
         "ar": "ثلاث دقائق! موضوع واحد! كلام حرّ! (محاكاة الكلام!)"
       },
       "successCriteria": [
-        "كلمات اليوم الست كلها في المحاكاة!",
+        "كلمات اليوم العشر كلها في المحاكاة!",
         "المرتبة الثانية: Spontan ANTWORTET er!",
         "مراجعة قواعد العرض والأسئلة! (Einleitung! Frage! Antwort!)",
         "المفردات الثابتة: fließend sprechen! die Aussprache üben! spontan antworten!"
@@ -207,6 +211,27 @@
               }
             ],
             "why": "besprechen يناقش · beruhigen يهدّئ · يطمئن · begrüßen يُحيّي · يرحّب بـ (خريطة التداخل 10-ي!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الكلام · الخطاب",
+                "de": "die Rede"
+              },
+              {
+                "ar": "اللهجة",
+                "de": "der Dialekt"
+              },
+              {
+                "ar": "يخاطب بـ«du» (بلا احترام رسمي)",
+                "de": "duzen"
+              },
+              {
+                "ar": "الرسالة (الجوهرية)",
+                "de": "die Botschaft"
+              }
+            ],
+            "why": "die Rede الكلام · الخطاب · der Dialekt اللهجة · duzen يخاطب بـ«du» (بلا احترام رسمي) · die Botschaft الرسالة (الجوهرية) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -271,6 +296,26 @@
             "q": "Ich ___ Sie. (أُحيّي!)",
             "a": "begrüße",
             "why": "begrüßen يُحيّي · يرحّب بـ — Ich begrüße Sie."
+          },
+          {
+            "q": "Die ___ ist lang. (الخطاب!)",
+            "a": "Rede",
+            "why": "die Rede الكلام · الخطاب (die! مؤنثة (die!) وجمعها die Reden.) — Die Rede ist lang."
+          },
+          {
+            "q": "Der ___ ist schwer. (اللهجة!)",
+            "a": "Dialekt",
+            "why": "der Dialekt اللهجة (der! مذكّر (der!) وجمعه die Dialekte.) — Der Dialekt ist schwer."
+          },
+          {
+            "q": "Wir ___ ihn. (نخاطبه بـdu!)",
+            "a": "duzen",
+            "why": "duzen يخاطب بـ«du» (بلا احترام رسمي) — Wir duzen ihn."
+          },
+          {
+            "q": "Die ___ ist klar. (الرسالة!)",
+            "a": "Botschaft",
+            "why": "die Botschaft الرسالة (الجوهرية) (die! مؤنثة (die!) وجمعها die Botschaften.) — Die Botschaft ist klar."
           }
         ]
       },
@@ -321,6 +366,26 @@
             "q": "~~Ich begrüße dich.~~",
             "a": "Ich begrüße Sie.",
             "why": "begrüßen يخاطب Sie في الخطاب الرسمي (لا dich!) — «Ich begrüße Sie» (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Rede ist lang~~",
+            "a": "die Rede ist lang",
+            "why": "الألمانية: die Rede (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Dialekt ist schwer~~",
+            "a": "der Dialekt ist schwer",
+            "why": "الألمانية: der Dialekt (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Wir duzen ihm.~~",
+            "a": "Wir duzen ihn.",
+            "why": "duzen يتعدى بالنصب: duzen ihn (لا ihm!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Botschaft ist klar~~",
+            "a": "die Botschaft ist klar",
+            "why": "الألمانية: die Botschaft (die!) — لا das أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -366,6 +431,11 @@
             "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم: besprechen · beruhigen · begrüßen)",
             "a": "Ich begrüße Sie und wir besprechen den Text. Das beruhigt mich.",
             "why": "المراجعة بالكلام! كلمات اليوم الست كلها في الجُمل."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Rede · der Dialekt · duzen · die Botschaft)",
+            "a": "Die Botschaft ist klar. Die Rede ist lang, und der Dialekt ist schwer. Wir duzen ihn.",
+            "why": "المراجعة بالكلام! كلمات اليوم العشر كلها في الجُمل."
           }
         ]
       },
@@ -495,6 +565,54 @@
             ],
             "a": "يُحيّي · يرحّب بـ",
             "why": "الصوت يقول «begrüßen» — معناها «يُحيّي · يرحّب بـ». ركّز!"
+          },
+          {
+            "audioId": "word-rede",
+            "speakText": "die Rede.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الكلام · الخطاب",
+              "اللهجة",
+              "يخاطب بـ«du» (بلا احترام رسمي)"
+            ],
+            "a": "الكلام · الخطاب",
+            "why": "الصوت يقول «die Rede» — معناها «الكلام · الخطاب». ركّز!"
+          },
+          {
+            "audioId": "word-dialekt",
+            "speakText": "der Dialekt.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "اللهجة",
+              "يخاطب بـ«du» (بلا احترام رسمي)",
+              "الرسالة (الجوهرية)"
+            ],
+            "a": "اللهجة",
+            "why": "الصوت يقول «der Dialekt» — معناها «اللهجة». ركّز!"
+          },
+          {
+            "audioId": "word-duzen",
+            "speakText": "duzen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يخاطب بـ«du» (بلا احترام رسمي)",
+              "الرسالة (الجوهرية)",
+              "الكلام · الخطاب"
+            ],
+            "a": "يخاطب بـ«du» (بلا احترام رسمي)",
+            "why": "الصوت يقول «duzen» — معناها «يخاطب بـ«du» (بلا احترام رسمي)». ركّز!"
+          },
+          {
+            "audioId": "word-botschaft",
+            "speakText": "die Botschaft.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الرسالة (الجوهرية)",
+              "الكلام · الخطاب",
+              "اللهجة"
+            ],
+            "a": "الرسالة (الجوهرية)",
+            "why": "الصوت يقول «die Botschaft» — معناها «الرسالة (الجوهرية)». ركّز!"
           }
         ]
       },
@@ -546,6 +664,30 @@
             "speakText": "begrüßen.",
             "a": "begrüßen",
             "why": "اكتب ما تسمعه حرفياً: «begrüßen» تعني «يُحيّي · يرحّب بـ». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-rede",
+            "speakText": "die Rede.",
+            "a": "die Rede",
+            "why": "اكتب ما تسمعه حرفياً: «die Rede» تعني «الكلام · الخطاب». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-dialekt",
+            "speakText": "der Dialekt.",
+            "a": "der Dialekt",
+            "why": "اكتب ما تسمعه حرفياً: «der Dialekt» تعني «اللهجة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-duzen",
+            "speakText": "duzen.",
+            "a": "duzen",
+            "why": "اكتب ما تسمعه حرفياً: «duzen» تعني «يخاطب بـ«du» (بلا احترام رسمي)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-botschaft",
+            "speakText": "die Botschaft.",
+            "a": "die Botschaft",
+            "why": "اكتب ما تسمعه حرفياً: «die Botschaft» تعني «الرسالة (الجوهرية)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -599,6 +741,26 @@
             "q": "Ich ___ Sie. (أُحيّي!)",
             "a": "begrüße",
             "why": "begrüßen يُحيّي · يرحّب بـ — Ich begrüße Sie."
+          },
+          {
+            "q": "Die ___ ist lang. (الخطاب!)",
+            "a": "Rede",
+            "why": "die Rede الكلام · الخطاب (die! مؤنثة (die!) وجمعها die Reden.) — Die Rede ist lang."
+          },
+          {
+            "q": "Der ___ ist schwer. (اللهجة!)",
+            "a": "Dialekt",
+            "why": "der Dialekt اللهجة (der! مذكّر (der!) وجمعه die Dialekte.) — Der Dialekt ist schwer."
+          },
+          {
+            "q": "Wir ___ ihn. (نخاطبه بـdu!)",
+            "a": "duzen",
+            "why": "duzen يخاطب بـ«du» (بلا احترام رسمي) — Wir duzen ihn."
+          },
+          {
+            "q": "Die ___ ist klar. (الرسالة!)",
+            "a": "Botschaft",
+            "why": "die Botschaft الرسالة (الجوهرية) (die! مؤنثة (die!) وجمعها die Botschaften.) — Die Botschaft ist klar."
           }
         ]
       },
@@ -642,6 +804,26 @@
             "q": "Ich ___ Sie. (أُحيّي!)",
             "a": "begrüße",
             "why": "begrüßen يُحيّي · يرحّب بـ — Ich begrüße Sie."
+          },
+          {
+            "q": "Die ___ ist lang. (الخطاب!)",
+            "a": "Rede",
+            "why": "die Rede الكلام · الخطاب (die! مؤنثة (die!) وجمعها die Reden.) — Die Rede ist lang."
+          },
+          {
+            "q": "Der ___ ist schwer. (اللهجة!)",
+            "a": "Dialekt",
+            "why": "der Dialekt اللهجة (der! مذكّر (der!) وجمعه die Dialekte.) — Der Dialekt ist schwer."
+          },
+          {
+            "q": "Wir ___ ihn. (نخاطبه بـdu!)",
+            "a": "duzen",
+            "why": "duzen يخاطب بـ«du» (بلا احترام رسمي) — Wir duzen ihn."
+          },
+          {
+            "q": "Die ___ ist klar. (الرسالة!)",
+            "a": "Botschaft",
+            "why": "die Botschaft الرسالة (الجوهرية) (die! مؤنثة (die!) وجمعها die Botschaften.) — Die Botschaft ist klar."
           }
         ]
       },
@@ -685,6 +867,26 @@
             "q": "Ich ___ Sie. (أُحيّي!)",
             "a": "begrüße",
             "why": "begrüßen يُحيّي · يرحّب بـ — Ich begrüße Sie."
+          },
+          {
+            "q": "Die ___ ist lang. (الخطاب!)",
+            "a": "Rede",
+            "why": "die Rede الكلام · الخطاب (die! مؤنثة (die!) وجمعها die Reden.) — Die Rede ist lang."
+          },
+          {
+            "q": "Der ___ ist schwer. (اللهجة!)",
+            "a": "Dialekt",
+            "why": "der Dialekt اللهجة (der! مذكّر (der!) وجمعه die Dialekte.) — Der Dialekt ist schwer."
+          },
+          {
+            "q": "Wir ___ ihn. (نخاطبه بـdu!)",
+            "a": "duzen",
+            "why": "duzen يخاطب بـ«du» (بلا احترام رسمي) — Wir duzen ihn."
+          },
+          {
+            "q": "Die ___ ist klar. (الرسالة!)",
+            "a": "Botschaft",
+            "why": "die Botschaft الرسالة (الجوهرية) (die! مؤنثة (die!) وجمعها die Botschaften.) — Die Botschaft ist klar."
           }
         ]
       }
@@ -692,8 +894,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Er spricht fließend und die Aussprache ist klar. Er antwortet spontan. Er spricht gut und erzählt gern. Er beschreibt die Situation und der Ausdruck ist deutlich. Die Betonung ist wichtig. Das Publikum hört zu und die Sicherheit ist da. Die Ruhe ist gut. Spontan antwortet er und die Antwort ist verständlich! Wir besprechen den Text. Das beruhigt mich. Ich begrüße Sie.",
-      "ar": "هو يتحدث ببطولة والنطق واضح. يجيب عفوياً. يتحدث جيداً ويسرد بسرور. يصف الموقف والأداء واضح. التأكيد مهم. المستمعون يصغون والأمان موجود. الراحة جيدة. عفوياً يجيب والإجابة مفهومة! نحن نناقش النصّ. هذا يهدّئني. أُحيّي سيادتكم (أهلاً!)."
+      "de": "Er spricht fließend und die Aussprache ist klar. Er antwortet spontan. Er spricht gut und erzählt gern. Er beschreibt die Situation und der Ausdruck ist deutlich. Die Betonung ist wichtig. Das Publikum hört zu und die Sicherheit ist da. Die Ruhe ist gut. Spontan antwortet er und die Antwort ist verständlich! Wir besprechen den Text. Das beruhigt mich. Ich begrüße Sie. Die Rede ist lang. Der Dialekt ist schwer. Wir duzen ihn. Die Botschaft ist klar.",
+      "ar": "هو يتحدث ببطولة والنطق واضح. يجيب عفوياً. يتحدث جيداً ويسرد بسرور. يصف الموقف والأداء واضح. التأكيد مهم. المستمعون يصغون والأمان موجود. الراحة جيدة. عفوياً يجيب والإجابة مفهومة! نحن نناقش النصّ. هذا يهدّئني. أُحيّي سيادتكم (أهلاً!). الخطاب طويل. اللهجة صعبة. نخاطبه بـ«du». الرسالة واضحة."
     },
     "srsBundleWordIds": [
       "fliessend",
@@ -701,7 +903,11 @@
       "spontan",
       "besprechen",
       "beruhigen",
-      "begruessen"
+      "begruessen",
+      "rede",
+      "dialekt",
+      "duzen",
+      "botschaft"
     ],
     "warningCards": [
       {
@@ -768,7 +974,11 @@
     "word-spontan",
     "word-besprechen",
     "word-beruhigen",
-    "word-begruessen"
+    "word-begruessen",
+    "word-rede",
+    "word-dialekt",
+    "word-duzen",
+    "word-botschaft"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -779,7 +989,11 @@
       "spontan",
       "besprechen",
       "beruhigen",
-      "begruessen"
+      "begruessen",
+      "rede",
+      "dialekt",
+      "duzen",
+      "botschaft"
     ]
   }
 }

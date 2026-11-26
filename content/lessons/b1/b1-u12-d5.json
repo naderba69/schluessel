@@ -55,7 +55,11 @@
       "benoten",
       "ausgezeichnet",
       "befriedigend",
-      "benoetigen"
+      "benoetigen",
+      "experte",
+      "erhoehung",
+      "faellig",
+      "broschuere"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -74,7 +78,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Die Anerkennung ist wichtig und das Niveau B1 ist da! Das Ergebnis ist ausgezeichnet — und das ist befriedigend. Das benötigt Zeit.",
+        "de": "Die Anerkennung ist wichtig und das Niveau B1 ist da! Das Ergebnis ist ausgezeichnet — und das ist befriedigend. Das benötigt Zeit. Der Experte ist da. Die Erhöhung kommt, und das ist fällig. Die Broschüre ist neu.",
         "ar": "يحكي عن رحلة B1: ثقافة + شهادة + تقييم!"
       },
       "situation": {
@@ -82,7 +86,7 @@
         "ar": "امتحان! شهادة! اعتراف! — المستوى B1! (الثقافة!)"
       },
       "successCriteria": [
-        "كلمات اليوم الست كلها في الحكي!",
+        "كلمات اليوم العشر كلها في الحكي!",
         "الانفصال: الفعل المُركَّب ينفصل والجزء الأخير يهرب آخر الجملة! والفعل ذو البادئة غير المنفصلة يُصرَّف بلا زيادة التمام!",
         "المفردات الثابتة: die Anerkennung bekommen! das Zertifikat nachweisen! die Prüfung benoten!",
         "الثقافة: معهد جوته وأوسد! (بطاقة الثقافة!)"
@@ -215,6 +219,27 @@
               }
             ],
             "why": "ausgezeichnet ممتاز · befriedigend مُرضٍ · benötigen يحتاج إلى (خريطة التداخل 10-ي!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الخبير",
+                "de": "der Experte"
+              },
+              {
+                "ar": "الزيادة · الرفع",
+                "de": "die Erhöhung"
+              },
+              {
+                "ar": "مستحقّ (الأداء)",
+                "de": "fällig"
+              },
+              {
+                "ar": "الكتيب (الدعاوي)",
+                "de": "die Broschüre"
+              }
+            ],
+            "why": "der Experte الخبير · die Erhöhung الزيادة · الرفع · fällig مستحقّ (الأداء) · die Broschüre الكتيب (الدعاوي) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -279,6 +304,26 @@
             "q": "Das ___ Zeit. (يحتاج!)",
             "a": "benötigt",
             "why": "benötigen يحتاج إلى — Das benötigt Zeit."
+          },
+          {
+            "q": "Der ___ ist da. (الخبير!)",
+            "a": "Experte",
+            "why": "der Experte الخبير (der! اسم -e مذكّر n-Deklination! (der Experte!) وجمعه die Experten.) — Der Experte ist da."
+          },
+          {
+            "q": "Die ___ kommt. (الزيادة!)",
+            "a": "Erhöhung",
+            "why": "die Erhöhung الزيادة · الرفع (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Erhöhung kommt."
+          },
+          {
+            "q": "Das ist ___. (مستحق!)",
+            "a": "fällig",
+            "why": "fällig مستحقّ (الأداء) — Das ist fällig."
+          },
+          {
+            "q": "Die ___ ist neu. (الكتيب!)",
+            "a": "Broschüre",
+            "why": "die Broschüre الكتيب (الدعاوي) (die! مؤنثة (die!) وجمعها die Broschüren.) — Die Broschüre ist neu."
           }
         ]
       },
@@ -329,6 +374,26 @@
             "q": "~~Das benötigen Zeit.~~",
             "a": "Das benötigt Zeit.",
             "why": "benötigen مع das/es يحتاج لاحقة -t: benötigt! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Experte ist da~~",
+            "a": "der Experte ist da",
+            "why": "الألمانية: der Experte (der! n-Deklination!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Erhöhung kommt~~",
+            "a": "die Erhöhung kommt",
+            "why": "الألمانية: die Erhöhung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Das ist fällige.~~",
+            "a": "Das ist fällig.",
+            "why": "fällig صفة بعد ist بلا لاحقة! (لا fällige!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Broschüre ist neu~~",
+            "a": "die Broschüre ist neu",
+            "why": "الألمانية: die Broschüre (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -369,6 +434,11 @@
             "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم: ausgezeichnet · befriedigend · benötigen)",
             "a": "Das Ergebnis ist ausgezeichnet — und das ist befriedigend. Das benötigt Zeit.",
             "why": "المراجعة بالكلام! كلمات اليوم الست كلها في الجُمل."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Experte · die Erhöhung · fällig · die Broschüre)",
+            "a": "Der Experte ist da. Die Erhöhung kommt, und das ist fällig. Die Broschüre ist neu.",
+            "why": "المراجعة بالكلام! كلمات اليوم العشر كلها في الجُمل."
           }
         ]
       },
@@ -498,6 +568,54 @@
             ],
             "a": "يحتاج إلى",
             "why": "الصوت يقول «benötigen» — معناها «يحتاج إلى». ركّز!"
+          },
+          {
+            "audioId": "word-experte",
+            "speakText": "der Experte.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الخبير",
+              "الزيادة · الرفع",
+              "مستحقّ (الأداء)"
+            ],
+            "a": "الخبير",
+            "why": "الصوت يقول «der Experte» — معناها «الخبير». ركّز!"
+          },
+          {
+            "audioId": "word-erhoehung",
+            "speakText": "die Erhöhung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الزيادة · الرفع",
+              "مستحقّ (الأداء)",
+              "الكتيب (الدعاوي)"
+            ],
+            "a": "الزيادة · الرفع",
+            "why": "الصوت يقول «die Erhöhung» — معناها «الزيادة · الرفع». ركّز!"
+          },
+          {
+            "audioId": "word-faellig",
+            "speakText": "fällig.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "مستحقّ (الأداء)",
+              "الكتيب (الدعاوي)",
+              "الخبير"
+            ],
+            "a": "مستحقّ (الأداء)",
+            "why": "الصوت يقول «fällig» — معناها «مستحقّ (الأداء)». ركّز!"
+          },
+          {
+            "audioId": "word-broschuere",
+            "speakText": "die Broschüre.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الكتيب (الدعاوي)",
+              "الخبير",
+              "الزيادة · الرفع"
+            ],
+            "a": "الكتيب (الدعاوي)",
+            "why": "الصوت يقول «die Broschüre» — معناها «الكتيب (الدعاوي)». ركّز!"
           }
         ]
       },
@@ -549,6 +667,30 @@
             "speakText": "benötigen.",
             "a": "benötigen",
             "why": "اكتب ما تسمعه حرفياً: «benötigen» تعني «يحتاج إلى». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-experte",
+            "speakText": "der Experte.",
+            "a": "der Experte",
+            "why": "اكتب ما تسمعه حرفياً: «der Experte» تعني «الخبير». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-erhoehung",
+            "speakText": "die Erhöhung.",
+            "a": "die Erhöhung",
+            "why": "اكتب ما تسمعه حرفياً: «die Erhöhung» تعني «الزيادة · الرفع». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-faellig",
+            "speakText": "fällig.",
+            "a": "fällig",
+            "why": "اكتب ما تسمعه حرفياً: «fällig» تعني «مستحقّ (الأداء)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-broschuere",
+            "speakText": "die Broschüre.",
+            "a": "die Broschüre",
+            "why": "اكتب ما تسمعه حرفياً: «die Broschüre» تعني «الكتيب (الدعاوي)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -602,6 +744,26 @@
             "q": "Das ___ Zeit. (يحتاج!)",
             "a": "benötigt",
             "why": "benötigen يحتاج إلى — Das benötigt Zeit."
+          },
+          {
+            "q": "Der ___ ist da. (الخبير!)",
+            "a": "Experte",
+            "why": "der Experte الخبير (der! اسم -e مذكّر n-Deklination! (der Experte!) وجمعه die Experten.) — Der Experte ist da."
+          },
+          {
+            "q": "Die ___ kommt. (الزيادة!)",
+            "a": "Erhöhung",
+            "why": "die Erhöhung الزيادة · الرفع (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Erhöhung kommt."
+          },
+          {
+            "q": "Das ist ___. (مستحق!)",
+            "a": "fällig",
+            "why": "fällig مستحقّ (الأداء) — Das ist fällig."
+          },
+          {
+            "q": "Die ___ ist neu. (الكتيب!)",
+            "a": "Broschüre",
+            "why": "die Broschüre الكتيب (الدعاوي) (die! مؤنثة (die!) وجمعها die Broschüren.) — Die Broschüre ist neu."
           }
         ]
       },
@@ -645,6 +807,26 @@
             "q": "Das ___ Zeit. (يحتاج!)",
             "a": "benötigt",
             "why": "benötigen يحتاج إلى — Das benötigt Zeit."
+          },
+          {
+            "q": "Der ___ ist da. (الخبير!)",
+            "a": "Experte",
+            "why": "der Experte الخبير (der! اسم -e مذكّر n-Deklination! (der Experte!) وجمعه die Experten.) — Der Experte ist da."
+          },
+          {
+            "q": "Die ___ kommt. (الزيادة!)",
+            "a": "Erhöhung",
+            "why": "die Erhöhung الزيادة · الرفع (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Erhöhung kommt."
+          },
+          {
+            "q": "Das ist ___. (مستحق!)",
+            "a": "fällig",
+            "why": "fällig مستحقّ (الأداء) — Das ist fällig."
+          },
+          {
+            "q": "Die ___ ist neu. (الكتيب!)",
+            "a": "Broschüre",
+            "why": "die Broschüre الكتيب (الدعاوي) (die! مؤنثة (die!) وجمعها die Broschüren.) — Die Broschüre ist neu."
           }
         ]
       },
@@ -688,6 +870,26 @@
             "q": "Das ___ Zeit. (يحتاج!)",
             "a": "benötigt",
             "why": "benötigen يحتاج إلى — Das benötigt Zeit."
+          },
+          {
+            "q": "Der ___ ist da. (الخبير!)",
+            "a": "Experte",
+            "why": "der Experte الخبير (der! اسم -e مذكّر n-Deklination! (der Experte!) وجمعه die Experten.) — Der Experte ist da."
+          },
+          {
+            "q": "Die ___ kommt. (الزيادة!)",
+            "a": "Erhöhung",
+            "why": "die Erhöhung الزيادة · الرفع (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Erhöhung kommt."
+          },
+          {
+            "q": "Das ist ___. (مستحق!)",
+            "a": "fällig",
+            "why": "fällig مستحقّ (الأداء) — Das ist fällig."
+          },
+          {
+            "q": "Die ___ ist neu. (الكتيب!)",
+            "a": "Broschüre",
+            "why": "die Broschüre الكتيب (الدعاوي) (die! مؤنثة (die!) وجمعها die Broschüren.) — Die Broschüre ist neu."
           }
         ]
       }
@@ -695,8 +897,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Die Anerkennung ist wichtig und die Prüfung ist offiziell. Er weist das Zertifikat nach und der Lehrer benotet die Prüfung. Das Niveau B1 ist da und die Note ist gut. Die Kultur ist bekannt und die Tradition ist international. Die Erfahrung ist wichtig und die Prüfung hat eine Note. Die Anerkennung bekommt man mit dem Zertifikat! Das Ergebnis ist ausgezeichnet. Das ist befriedigend. Das benötigt Zeit.",
-      "ar": "الاعتراف مهم والامتحان رسمي. هو يُثبت الشهادة والمعلّم يُقيّم الامتحان بدرجة. المستوى B1 حاضر والدرجة جيدة. الثقافة معروفة والتقليد دولي. الخبرة مهمة والامتحان له درجة. الاعتراف يُنال بالشهادة! النتيجة ممتازة. هذا مُرضٍ. هذا يحتاج وقتاً."
+      "de": "Die Anerkennung ist wichtig und die Prüfung ist offiziell. Er weist das Zertifikat nach und der Lehrer benotet die Prüfung. Das Niveau B1 ist da und die Note ist gut. Die Kultur ist bekannt und die Tradition ist international. Die Erfahrung ist wichtig und die Prüfung hat eine Note. Die Anerkennung bekommt man mit dem Zertifikat! Das Ergebnis ist ausgezeichnet. Das ist befriedigend. Das benötigt Zeit. Der Experte ist da. Die Erhöhung kommt. Das ist fällig. Die Broschüre ist neu.",
+      "ar": "الاعتراف مهم والامتحان رسمي. هو يُثبت الشهادة والمعلّم يُقيّم الامتحان بدرجة. المستوى B1 حاضر والدرجة جيدة. الثقافة معروفة والتقليد دولي. الخبرة مهمة والامتحان له درجة. الاعتراف يُنال بالشهادة! النتيجة ممتازة. هذا مُرضٍ. هذا يحتاج وقتاً. الخبير حاضر. الزيادة تأتي. هذا مستحق. الكتيب جديد."
     },
     "srsBundleWordIds": [
       "anerkennung",
@@ -704,7 +906,11 @@
       "benoten",
       "ausgezeichnet",
       "befriedigend",
-      "benoetigen"
+      "benoetigen",
+      "experte",
+      "erhoehung",
+      "faellig",
+      "broschuere"
     ],
     "warningCards": [
       {
@@ -771,7 +977,11 @@
     "word-benoten",
     "word-ausgezeichnet",
     "word-befriedigend",
-    "word-benoetigen"
+    "word-benoetigen",
+    "word-experte",
+    "word-erhoehung",
+    "word-faellig",
+    "word-broschuere"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -782,7 +992,11 @@
       "benoten",
       "ausgezeichnet",
       "befriedigend",
-      "benoetigen"
+      "benoetigen",
+      "experte",
+      "erhoehung",
+      "faellig",
+      "broschuere"
     ]
   }
 }

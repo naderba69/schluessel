@@ -55,7 +55,11 @@
       "disziplin",
       "anstrengend",
       "augenblick",
-      "anfangs"
+      "anfangs",
+      "gewohnheit",
+      "eile",
+      "dauernd",
+      "entspannend"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -74,7 +78,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Zeitplan ist wichtig und die Disziplin ist gut! Anfangs war der Tag anstrengend. Aber jeder Augenblick ist wichtig.",
+        "de": "Der Zeitplan ist wichtig und die Disziplin ist gut! Anfangs war der Tag anstrengend. Aber jeder Augenblick ist wichtig. Die Gewohnheit ist gut, aber die Eile ist nicht gut. Der Abend ist dauernd entspannend.",
         "ar": "يقسّم وقت امتحانه (٥٠٪!) في جدول ويتحدث عنه!"
       },
       "situation": {
@@ -82,7 +86,7 @@
         "ar": "ثلاث مهام! جدول واحد! خمسون بالمئة! (إدارة الوقت!)"
       },
       "successCriteria": [
-        "كلمات اليوم الست كلها في الجدول!",
+        "كلمات اليوم العشر كلها في الجدول!",
         "الانفصال: teilt … ein! (الجزء ein آخر!)",
         "مراجعة القواعد: trotzdem/obwohl والمرتبة الثانية!",
         "المواعيد: pünktlich! rechtzeitig! (كلمات مُدرَّسة!)"
@@ -207,6 +211,27 @@
               }
             ],
             "why": "anstrengend مرهق · شاقّ · der Augenblick اللحظة · anfangs في البداية · أول الأمر (خريطة التداخل 10-ي!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "العادة",
+                "de": "die Gewohnheit"
+              },
+              {
+                "ar": "العجلة",
+                "de": "die Eile"
+              },
+              {
+                "ar": "دائماً · مستمرّ",
+                "de": "dauernd"
+              },
+              {
+                "ar": "مُريح · مُرخٍ",
+                "de": "entspannend"
+              }
+            ],
+            "why": "die Gewohnheit العادة · die Eile العجلة · dauernd دائماً · مستمرّ · entspannend مُريح · مُرخٍ (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -271,6 +296,26 @@
             "q": "___ war es schwer. (في البداية!)",
             "a": "Anfangs",
             "why": "anfangs في البداية · أول الأمر — Anfangs war es schwer."
+          },
+          {
+            "q": "Die ___ ist gut. (العادة!)",
+            "a": "Gewohnheit",
+            "why": "die Gewohnheit العادة (die! مؤنثة (die!) وجمعها die Gewohnheiten.) — Die Gewohnheit ist gut."
+          },
+          {
+            "q": "Die ___ ist nicht gut. (العجلة!)",
+            "a": "Eile",
+            "why": "die Eile العجلة (die! تُستعمل عادةً بلا جمع: die Eile.) — Die Eile ist nicht gut."
+          },
+          {
+            "q": "Das Wetter ist ___ schlecht. (دائماً!)",
+            "a": "dauernd",
+            "why": "dauernd دائماً · مستمرّ — Das Wetter ist dauernd schlecht."
+          },
+          {
+            "q": "Der Abend ist ___. (مريح!)",
+            "a": "entspannend",
+            "why": "entspannend مُريح · مُرخٍ — Der Abend ist entspannend."
           }
         ]
       },
@@ -331,6 +376,26 @@
             "q": "~~Anfang war es schwer.~~",
             "a": "Anfangs war es schwer.",
             "why": "anfangs الظرف (في البداية!) بحرف s — لا «Anfang» (الاسم!) هنا! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Gewohnheit ist gut~~",
+            "a": "die Gewohnheit ist gut",
+            "why": "الألمانية: die Gewohnheit (die!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Eile ist nicht gut~~",
+            "a": "die Eile ist nicht gut",
+            "why": "الألمانية: die Eile (die! مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Das Wetter ist dauernde schlecht.~~",
+            "a": "Das Wetter ist dauernd schlecht.",
+            "why": "dauernd ظرف/صفة ثابتة الشكل! (لا dauernde!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Der Abend ist entspannende.~~",
+            "a": "Der Abend ist entspannend.",
+            "why": "entspannend صفة بعد ist بلا لاحقة! (لا entspannende!) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -381,6 +446,11 @@
             "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم: anstrengend · der Augenblick · anfangs)",
             "a": "Anfangs war der Tag anstrengend. Aber jeder Augenblick ist wichtig.",
             "why": "المراجعة بالكلام! كلمات اليوم الست كلها في الجُمل."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Gewohnheit · die Eile · dauernd · entspannend)",
+            "a": "Die Gewohnheit ist gut, aber die Eile ist nicht gut. Der Abend ist dauernd entspannend.",
+            "why": "المراجعة بالكلام! كلمات اليوم العشر كلها في الجُمل."
           }
         ]
       },
@@ -510,6 +580,54 @@
             ],
             "a": "في البداية · أول الأمر",
             "why": "الصوت يقول «anfangs» — معناها «في البداية · أول الأمر». ركّز!"
+          },
+          {
+            "audioId": "word-gewohnheit",
+            "speakText": "die Gewohnheit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العادة",
+              "العجلة",
+              "دائماً · مستمرّ"
+            ],
+            "a": "العادة",
+            "why": "الصوت يقول «die Gewohnheit» — معناها «العادة». ركّز!"
+          },
+          {
+            "audioId": "word-eile",
+            "speakText": "die Eile.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العجلة",
+              "دائماً · مستمرّ",
+              "مُريح · مُرخٍ"
+            ],
+            "a": "العجلة",
+            "why": "الصوت يقول «die Eile» — معناها «العجلة». ركّز!"
+          },
+          {
+            "audioId": "word-dauernd",
+            "speakText": "dauernd.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "دائماً · مستمرّ",
+              "مُريح · مُرخٍ",
+              "العادة"
+            ],
+            "a": "دائماً · مستمرّ",
+            "why": "الصوت يقول «dauernd» — معناها «دائماً · مستمرّ». ركّز!"
+          },
+          {
+            "audioId": "word-entspannend",
+            "speakText": "entspannend.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "مُريح · مُرخٍ",
+              "العادة",
+              "العجلة"
+            ],
+            "a": "مُريح · مُرخٍ",
+            "why": "الصوت يقول «entspannend» — معناها «مُريح · مُرخٍ». ركّز!"
           }
         ]
       },
@@ -561,6 +679,30 @@
             "speakText": "anfangs.",
             "a": "anfangs",
             "why": "اكتب ما تسمعه حرفياً: «anfangs» تعني «في البداية · أول الأمر». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gewohnheit",
+            "speakText": "die Gewohnheit.",
+            "a": "die Gewohnheit",
+            "why": "اكتب ما تسمعه حرفياً: «die Gewohnheit» تعني «العادة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-eile",
+            "speakText": "die Eile.",
+            "a": "die Eile",
+            "why": "اكتب ما تسمعه حرفياً: «die Eile» تعني «العجلة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-dauernd",
+            "speakText": "dauernd.",
+            "a": "dauernd",
+            "why": "اكتب ما تسمعه حرفياً: «dauernd» تعني «دائماً · مستمرّ». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-entspannend",
+            "speakText": "entspannend.",
+            "a": "entspannend",
+            "why": "اكتب ما تسمعه حرفياً: «entspannend» تعني «مُريح · مُرخٍ». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -614,6 +756,26 @@
             "q": "___ war es schwer. (في البداية!)",
             "a": "Anfangs",
             "why": "anfangs في البداية · أول الأمر — Anfangs war es schwer."
+          },
+          {
+            "q": "Die ___ ist gut. (العادة!)",
+            "a": "Gewohnheit",
+            "why": "die Gewohnheit العادة (die! مؤنثة (die!) وجمعها die Gewohnheiten.) — Die Gewohnheit ist gut."
+          },
+          {
+            "q": "Die ___ ist nicht gut. (العجلة!)",
+            "a": "Eile",
+            "why": "die Eile العجلة (die! تُستعمل عادةً بلا جمع: die Eile.) — Die Eile ist nicht gut."
+          },
+          {
+            "q": "Das Wetter ist ___ schlecht. (دائماً!)",
+            "a": "dauernd",
+            "why": "dauernd دائماً · مستمرّ — Das Wetter ist dauernd schlecht."
+          },
+          {
+            "q": "Der Abend ist ___. (مريح!)",
+            "a": "entspannend",
+            "why": "entspannend مُريح · مُرخٍ — Der Abend ist entspannend."
           }
         ]
       },
@@ -657,6 +819,26 @@
             "q": "___ war es schwer. (في البداية!)",
             "a": "Anfangs",
             "why": "anfangs في البداية · أول الأمر — Anfangs war es schwer."
+          },
+          {
+            "q": "Die ___ ist gut. (العادة!)",
+            "a": "Gewohnheit",
+            "why": "die Gewohnheit العادة (die! مؤنثة (die!) وجمعها die Gewohnheiten.) — Die Gewohnheit ist gut."
+          },
+          {
+            "q": "Die ___ ist nicht gut. (العجلة!)",
+            "a": "Eile",
+            "why": "die Eile العجلة (die! تُستعمل عادةً بلا جمع: die Eile.) — Die Eile ist nicht gut."
+          },
+          {
+            "q": "Das Wetter ist ___ schlecht. (دائماً!)",
+            "a": "dauernd",
+            "why": "dauernd دائماً · مستمرّ — Das Wetter ist dauernd schlecht."
+          },
+          {
+            "q": "Der Abend ist ___. (مريح!)",
+            "a": "entspannend",
+            "why": "entspannend مُريح · مُرخٍ — Der Abend ist entspannend."
           }
         ]
       },
@@ -700,6 +882,26 @@
             "q": "___ war es schwer. (في البداية!)",
             "a": "Anfangs",
             "why": "anfangs في البداية · أول الأمر — Anfangs war es schwer."
+          },
+          {
+            "q": "Die ___ ist gut. (العادة!)",
+            "a": "Gewohnheit",
+            "why": "die Gewohnheit العادة (die! مؤنثة (die!) وجمعها die Gewohnheiten.) — Die Gewohnheit ist gut."
+          },
+          {
+            "q": "Die ___ ist nicht gut. (العجلة!)",
+            "a": "Eile",
+            "why": "die Eile العجلة (die! تُستعمل عادةً بلا جمع: die Eile.) — Die Eile ist nicht gut."
+          },
+          {
+            "q": "Das Wetter ist ___ schlecht. (دائماً!)",
+            "a": "dauernd",
+            "why": "dauernd دائماً · مستمرّ — Das Wetter ist dauernd schlecht."
+          },
+          {
+            "q": "Der Abend ist ___. (مريح!)",
+            "a": "entspannend",
+            "why": "entspannend مُريح · مُرخٍ — Der Abend ist entspannend."
           }
         ]
       }
@@ -707,8 +909,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Zeitplan ist wichtig und die Disziplin ist gut. Er teilt die Zeit ein. Er kommt pünktlich und rechtzeitig. Die Reihenfolge ist klar. Die Uhr zeigt die Zeit und die Minute ist kurz. Die Stunde ist lang und die Woche ist schnell. Die Konzentration ist gut und die Pause ist wichtig. Die Ruhe ist da. Trotzdem ist die Zeit kurz! Der Tag ist anstrengend. Der Augenblick ist wichtig. Anfangs war es schwer.",
-      "ar": "جدول الوقت مهم والانضباط جيد. هو يقسّم الوقت. يأتي بالموعد وفي الوقت المناسب. الترتيب واضح. الساعة تُظهر الوقت والدقيقة قصيرة. الساعة (الزمن) طويلة والأسبوع سريع. التركيز جيد والاستراحة مهمة. الراحة موجودة. ومع ذلك الوقت قصير! اليوم مرهق. اللحظة مهمة. في البداية كان الأمر صعباً."
+      "de": "Der Zeitplan ist wichtig und die Disziplin ist gut. Er teilt die Zeit ein. Er kommt pünktlich und rechtzeitig. Die Reihenfolge ist klar. Die Uhr zeigt die Zeit und die Minute ist kurz. Die Stunde ist lang und die Woche ist schnell. Die Konzentration ist gut und die Pause ist wichtig. Die Ruhe ist da. Trotzdem ist die Zeit kurz! Der Tag ist anstrengend. Der Augenblick ist wichtig. Anfangs war es schwer. Die Gewohnheit ist gut. Die Eile ist nicht gut. Das Wetter ist dauernd schlecht. Der Abend ist entspannend.",
+      "ar": "جدول الوقت مهم والانضباط جيد. هو يقسّم الوقت. يأتي بالموعد وفي الوقت المناسب. الترتيب واضح. الساعة تُظهر الوقت والدقيقة قصيرة. الساعة (الزمن) طويلة والأسبوع سريع. التركيز جيد والاستراحة مهمة. الراحة موجودة. ومع ذلك الوقت قصير! اليوم مرهق. اللحظة مهمة. في البداية كان الأمر صعباً. العادة جيدة. العجلة ليست جيدة. الطقس سيئ دائماً. المساء مريح."
     },
     "srsBundleWordIds": [
       "zeitplan",
@@ -716,7 +918,11 @@
       "disziplin",
       "anstrengend",
       "augenblick",
-      "anfangs"
+      "anfangs",
+      "gewohnheit",
+      "eile",
+      "dauernd",
+      "entspannend"
     ],
     "warningCards": [
       {
@@ -783,7 +989,11 @@
     "word-disziplin",
     "word-anstrengend",
     "word-augenblick",
-    "word-anfangs"
+    "word-anfangs",
+    "word-gewohnheit",
+    "word-eile",
+    "word-dauernd",
+    "word-entspannend"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -794,7 +1004,11 @@
       "disziplin",
       "anstrengend",
       "augenblick",
-      "anfangs"
+      "anfangs",
+      "gewohnheit",
+      "eile",
+      "dauernd",
+      "entspannend"
     ]
   }
 }

@@ -55,7 +55,11 @@
       "ueberarbeiten",
       "ausdrucken",
       "abbildung",
-      "analysieren"
+      "analysieren",
+      "form",
+      "fortsetzung",
+      "doppelt",
+      "einfuehrung"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -74,7 +78,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Die Rechtschreibung ist richtig und der Stil ist klar! Die Abbildung ist klein. Ich drucke den Text aus und analysiere ihn.",
+        "de": "Die Rechtschreibung ist richtig und der Stil ist klar! Die Abbildung ist klein. Ich drucke den Text aus und analysiere ihn. Die Form ist wichtig. Die Einführung ist kurz, und die Fortsetzung kommt. Das ist doppelt.",
         "ar": "يجري محاكاة كتابة (نص ٨ جُمل!): مقدمة + جسم + خاتمة!"
       },
       "situation": {
@@ -82,7 +86,7 @@
         "ar": "موضوع واحد! ثماني جُمل! مسودة واحدة! (محاكاة الكتابة!)"
       },
       "successCriteria": [
-        "كلمات اليوم الست كلها في النص!",
+        "كلمات اليوم العشر كلها في النص!",
         "الانفصال: arbeitet … über! (الجزء über آخر!)",
         "مراجعة بنية النص: Einleitung ← Hauptteil ← Schluss!",
         "المفردات الثابتة: die Rechtschreibung üben! den Stil verbessern! den Text überarbeiten!"
@@ -211,6 +215,27 @@
               }
             ],
             "why": "ausdrucken يطبع (على الورق) · die Abbildung الصورة (الرسم التوضيحي) · analysieren يحلّل (خريطة التداخل 10-ي!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الشكل · الاستمارة",
+                "de": "die Form"
+              },
+              {
+                "ar": "التتمة · التكملة",
+                "de": "die Fortsetzung"
+              },
+              {
+                "ar": "مزدوج · مرّتين",
+                "de": "doppelt"
+              },
+              {
+                "ar": "المقدمة (التعريفية)",
+                "de": "die Einführung"
+              }
+            ],
+            "why": "die Form الشكل · الاستمارة · die Fortsetzung التتمة · التكملة · doppelt مزدوج · مرّتين · die Einführung المقدمة (التعريفية) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -275,6 +300,26 @@
             "q": "Wir ___ den Text. (نحلّل!)",
             "a": "analysieren",
             "why": "analysieren يحلّل — Wir analysieren den Text."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الشكل!)",
+            "a": "Form",
+            "why": "die Form الشكل · الاستمارة (die! مؤنثة (die!) وجمعها die Formen.) — Die Form ist wichtig."
+          },
+          {
+            "q": "Die ___ kommt. (التتمة!)",
+            "a": "Fortsetzung",
+            "why": "die Fortsetzung التتمة · التكملة (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Fortsetzung kommt."
+          },
+          {
+            "q": "Das ist ___. (مزدوج!)",
+            "a": "doppelt",
+            "why": "doppelt مزدوج · مرّتين — Das ist doppelt."
+          },
+          {
+            "q": "Die ___ ist kurz. (المقدمة!)",
+            "a": "Einführung",
+            "why": "die Einführung المقدمة (التعريفية) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Einführung ist kurz."
           }
         ]
       },
@@ -335,6 +380,26 @@
             "q": "~~Wir analysiert den Text.~~",
             "a": "Wir analysieren den Text.",
             "why": "analysieren مع wir: analysieren (لا analysiert!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Form ist wichtig~~",
+            "a": "die Form ist wichtig",
+            "why": "الألمانية: die Form (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Fortsetzung kommt~~",
+            "a": "die Fortsetzung kommt",
+            "why": "الألمانية: die Fortsetzung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Das ist doppelte.~~",
+            "a": "Das ist doppelt.",
+            "why": "doppelt صفة بعد ist بلا لاحقة! (لا doppelte!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Einführung ist kurz~~",
+            "a": "die Einführung ist kurz",
+            "why": "الألمانية: die Einführung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -385,6 +450,11 @@
             "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم: ausdrucken · die Abbildung · analysieren)",
             "a": "Die Abbildung ist klein. Ich drucke den Text aus und analysiere ihn.",
             "why": "المراجعة بالكلام! كلمات اليوم الست كلها في الجُمل."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Form · die Fortsetzung · doppelt · die Einführung)",
+            "a": "Die Form ist wichtig. Die Einführung ist kurz, und die Fortsetzung kommt. Das ist doppelt.",
+            "why": "المراجعة بالكلام! كلمات اليوم العشر كلها في الجُمل."
           }
         ]
       },
@@ -514,6 +584,54 @@
             ],
             "a": "يحلّل",
             "why": "الصوت يقول «analysieren» — معناها «يحلّل». ركّز!"
+          },
+          {
+            "audioId": "word-form",
+            "speakText": "die Form.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الشكل · الاستمارة",
+              "التتمة · التكملة",
+              "مزدوج · مرّتين"
+            ],
+            "a": "الشكل · الاستمارة",
+            "why": "الصوت يقول «die Form» — معناها «الشكل · الاستمارة». ركّز!"
+          },
+          {
+            "audioId": "word-fortsetzung",
+            "speakText": "die Fortsetzung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التتمة · التكملة",
+              "مزدوج · مرّتين",
+              "المقدمة (التعريفية)"
+            ],
+            "a": "التتمة · التكملة",
+            "why": "الصوت يقول «die Fortsetzung» — معناها «التتمة · التكملة». ركّز!"
+          },
+          {
+            "audioId": "word-doppelt",
+            "speakText": "doppelt.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "مزدوج · مرّتين",
+              "المقدمة (التعريفية)",
+              "الشكل · الاستمارة"
+            ],
+            "a": "مزدوج · مرّتين",
+            "why": "الصوت يقول «doppelt» — معناها «مزدوج · مرّتين». ركّز!"
+          },
+          {
+            "audioId": "word-einfuehrung",
+            "speakText": "die Einführung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المقدمة (التعريفية)",
+              "الشكل · الاستمارة",
+              "التتمة · التكملة"
+            ],
+            "a": "المقدمة (التعريفية)",
+            "why": "الصوت يقول «die Einführung» — معناها «المقدمة (التعريفية)». ركّز!"
           }
         ]
       },
@@ -565,6 +683,30 @@
             "speakText": "analysieren.",
             "a": "analysieren",
             "why": "اكتب ما تسمعه حرفياً: «analysieren» تعني «يحلّل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-form",
+            "speakText": "die Form.",
+            "a": "die Form",
+            "why": "اكتب ما تسمعه حرفياً: «die Form» تعني «الشكل · الاستمارة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-fortsetzung",
+            "speakText": "die Fortsetzung.",
+            "a": "die Fortsetzung",
+            "why": "اكتب ما تسمعه حرفياً: «die Fortsetzung» تعني «التتمة · التكملة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-doppelt",
+            "speakText": "doppelt.",
+            "a": "doppelt",
+            "why": "اكتب ما تسمعه حرفياً: «doppelt» تعني «مزدوج · مرّتين». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-einfuehrung",
+            "speakText": "die Einführung.",
+            "a": "die Einführung",
+            "why": "اكتب ما تسمعه حرفياً: «die Einführung» تعني «المقدمة (التعريفية)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -618,6 +760,26 @@
             "q": "Wir ___ den Text. (نحلّل!)",
             "a": "analysieren",
             "why": "analysieren يحلّل — Wir analysieren den Text."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الشكل!)",
+            "a": "Form",
+            "why": "die Form الشكل · الاستمارة (die! مؤنثة (die!) وجمعها die Formen.) — Die Form ist wichtig."
+          },
+          {
+            "q": "Die ___ kommt. (التتمة!)",
+            "a": "Fortsetzung",
+            "why": "die Fortsetzung التتمة · التكملة (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Fortsetzung kommt."
+          },
+          {
+            "q": "Das ist ___. (مزدوج!)",
+            "a": "doppelt",
+            "why": "doppelt مزدوج · مرّتين — Das ist doppelt."
+          },
+          {
+            "q": "Die ___ ist kurz. (المقدمة!)",
+            "a": "Einführung",
+            "why": "die Einführung المقدمة (التعريفية) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Einführung ist kurz."
           }
         ]
       },
@@ -661,6 +823,26 @@
             "q": "Wir ___ den Text. (نحلّل!)",
             "a": "analysieren",
             "why": "analysieren يحلّل — Wir analysieren den Text."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الشكل!)",
+            "a": "Form",
+            "why": "die Form الشكل · الاستمارة (die! مؤنثة (die!) وجمعها die Formen.) — Die Form ist wichtig."
+          },
+          {
+            "q": "Die ___ kommt. (التتمة!)",
+            "a": "Fortsetzung",
+            "why": "die Fortsetzung التتمة · التكملة (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Fortsetzung kommt."
+          },
+          {
+            "q": "Das ist ___. (مزدوج!)",
+            "a": "doppelt",
+            "why": "doppelt مزدوج · مرّتين — Das ist doppelt."
+          },
+          {
+            "q": "Die ___ ist kurz. (المقدمة!)",
+            "a": "Einführung",
+            "why": "die Einführung المقدمة (التعريفية) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Einführung ist kurz."
           }
         ]
       },
@@ -704,6 +886,26 @@
             "q": "Wir ___ den Text. (نحلّل!)",
             "a": "analysieren",
             "why": "analysieren يحلّل — Wir analysieren den Text."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الشكل!)",
+            "a": "Form",
+            "why": "die Form الشكل · الاستمارة (die! مؤنثة (die!) وجمعها die Formen.) — Die Form ist wichtig."
+          },
+          {
+            "q": "Die ___ kommt. (التتمة!)",
+            "a": "Fortsetzung",
+            "why": "die Fortsetzung التتمة · التكملة (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Fortsetzung kommt."
+          },
+          {
+            "q": "Das ist ___. (مزدوج!)",
+            "a": "doppelt",
+            "why": "doppelt مزدوج · مرّتين — Das ist doppelt."
+          },
+          {
+            "q": "Die ___ ist kurz. (المقدمة!)",
+            "a": "Einführung",
+            "why": "die Einführung المقدمة (التعريفية) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Einführung ist kurz."
           }
         ]
       }
@@ -711,8 +913,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Die Rechtschreibung ist wichtig und der Stil ist klar. Er arbeitet den Text über. Der Entwurf ist kurz und die Einleitung ist klar. Der Hauptteil ist gut und der Schluss ist kurz. Er formuliert den Satz und korrigiert den Fehler. Er verbessert den Stil und schreibt einfach. Richtig ist richtig und falsch ist falsch. Das Komma ist wichtig! Ich drucke den Text aus. Die Abbildung ist klein. Wir analysieren den Text.",
-      "ar": "الإملاء مهم والأسلوب واضح. هو يراجع النص. المسودة قصيرة والمقدمة واضحة. الجزء الرئيسي جيد والخاتمة قصيرة. يصيغ الجملة ويصحّح الخطأ. يحسّن الأسلوب ويكتب ببساطة. الصحيح صحيح والخطأ خطأ. الفاصلة مهمة! أطبع النصّ. الصورة صغيرة. نحن نحلّل النصّ."
+      "de": "Die Rechtschreibung ist wichtig und der Stil ist klar. Er arbeitet den Text über. Der Entwurf ist kurz und die Einleitung ist klar. Der Hauptteil ist gut und der Schluss ist kurz. Er formuliert den Satz und korrigiert den Fehler. Er verbessert den Stil und schreibt einfach. Richtig ist richtig und falsch ist falsch. Das Komma ist wichtig! Ich drucke den Text aus. Die Abbildung ist klein. Wir analysieren den Text. Die Form ist wichtig. Die Fortsetzung kommt. Das ist doppelt. Die Einführung ist kurz.",
+      "ar": "الإملاء مهم والأسلوب واضح. هو يراجع النص. المسودة قصيرة والمقدمة واضحة. الجزء الرئيسي جيد والخاتمة قصيرة. يصيغ الجملة ويصحّح الخطأ. يحسّن الأسلوب ويكتب ببساطة. الصحيح صحيح والخطأ خطأ. الفاصلة مهمة! أطبع النصّ. الصورة صغيرة. نحن نحلّل النصّ. الشكل مهم. التتمة تأتي. هذا مزدوج. المقدمة قصيرة."
     },
     "srsBundleWordIds": [
       "rechtschreibung",
@@ -720,7 +922,11 @@
       "ueberarbeiten",
       "ausdrucken",
       "abbildung",
-      "analysieren"
+      "analysieren",
+      "form",
+      "fortsetzung",
+      "doppelt",
+      "einfuehrung"
     ],
     "warningCards": [
       {
@@ -787,7 +993,11 @@
     "word-ueberarbeiten",
     "word-ausdrucken",
     "word-abbildung",
-    "word-analysieren"
+    "word-analysieren",
+    "word-form",
+    "word-fortsetzung",
+    "word-doppelt",
+    "word-einfuehrung"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -798,7 +1008,11 @@
       "ueberarbeiten",
       "ausdrucken",
       "abbildung",
-      "analysieren"
+      "analysieren",
+      "form",
+      "fortsetzung",
+      "doppelt",
+      "einfuehrung"
     ]
   }
 }
