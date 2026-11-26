@@ -67,7 +67,8 @@
       "zustaendig",
       "begruendung",
       "absagen",
-      "obwohl"
+      "obwohl",
+      "gehsteig"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -84,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Ich stimme zu, obwohl die Besprechung lang ist.",
+        "de": "Ich stimme zu, obwohl die Besprechung lang ist. Der Gehsteig ist breit.",
         "ar": "يبرّر موقفه في نقاش العمل — رغم أن + التعليل!"
       },
       "situation": {
@@ -93,8 +94,8 @@
       },
       "successCriteria": [
         "يبرّر بـ8 جمل (obwohl! + denn! + Begründung! + nämlich! + allerdings! + vorschlagen! + erledigen! + Zusammenarbeit!)",
-        "يستخدم الجديد (14 كلمة! + obwohl بفعل آخراً!)",
-        "يفرّق (obwohl-آخراً! ≠ denn-ثانياً! ≠ weil-آخراً!) ويسترجع (deshalb/trotzdem من d1! + TEKAMOLO من d2!)"
+        "يستخدم الجديد (15 كلمة! + obwohl بفعل آخراً!)",
+        "يفرّق (obwohl-آخراً! ≠ denn-ثانياً! ≠ weil-آخراً!) ويسترجع (deshalb/trotzdem من d1! + ترتيب الجملة من d2!)"
       ]
     },
     "stations": [
@@ -198,6 +199,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: trotzdem = «رغم ذلك» · deshalb = «لهذا السبب» · das Verständnis = «تفهّم»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الرصيف",
+                "de": "der Gehsteig"
+              },
+              {
+                "ar": "رغم أنّ",
+                "de": "obwohl"
+              },
+              {
+                "ar": "يُلغي (الموعد)",
+                "de": "absagen"
+              }
+            ],
+            "why": "der Gehsteig الرصيف · obwohl رغم أنّ · absagen يُلغي (الموعد) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -259,6 +277,11 @@
             "q": "Im ___ lese ich gern.",
             "a": "Zug",
             "why": "الكلمة الناقصة «Zug» تعني «قطار» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist breit. (الرصيف!)",
+            "a": "Gehsteig",
+            "why": "der Gehsteig الرصيف (der! مركّب (Gehen+Steig) مذكّر (der!) وجمعه die Gehsteige — وفي سويسرا: das Trottoir.) — Der Gehsteig ist breit."
           }
         ]
       },
@@ -305,6 +328,11 @@
             "q": "~~danke! — Bitte!~~",
             "a": "Danke! — Bitte!",
             "why": "الخطأ في «danke»! الصواب «Danke» — راجع القاعدة (شكراً)."
+          },
+          {
+            "q": "~~die Gehsteig ist breit~~",
+            "a": "der Gehsteig ist breit",
+            "why": "الألمانية: der Gehsteig (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -340,6 +368,11 @@
             "q": "كوّن جملة فيها «die Entschuldigung» («عفواً») ثم تحدّث بها.",
             "a": "Entschuldigung, wo ist der Bahnhof?",
             "why": "استعمل «die Entschuldigung» («عفواً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Gehsteig)",
+            "a": "Der Gehsteig ist breit.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -433,6 +466,18 @@
             ],
             "a": "Gut! Dann beginnen wir.",
             "why": "«يوسف» في الحوار: إغلاق إيجابي"
+          },
+          {
+            "audioId": "word-gehsteig",
+            "speakText": "der Gehsteig.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الرصيف",
+              "يُوافق (على)",
+              "يرفض"
+            ],
+            "a": "الرصيف",
+            "why": "الصوت يقول «der Gehsteig» — معناها «الرصيف». ركّز!"
           }
         ]
       },
@@ -466,6 +511,12 @@
             "speakText": "das Billett.",
             "a": "das Billett",
             "why": "اكتب ما تسمعه حرفياً: «das Billett» تعني «تذكرة (كلمة سويسرية!)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gehsteig",
+            "speakText": "der Gehsteig.",
+            "a": "der Gehsteig",
+            "why": "اكتب ما تسمعه حرفياً: «der Gehsteig» تعني «الرصيف». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -504,6 +555,11 @@
           {
             "q": "«يُبلِّغ»؟",
             "a": "mitteilen"
+          },
+          {
+            "q": "Der ___ ist breit. (الرصيف!)",
+            "a": "Gehsteig",
+            "why": "der Gehsteig الرصيف (der! مركّب (Gehen+Steig) مذكّر (der!) وجمعه die Gehsteige — وفي سويسرا: das Trottoir.) — Der Gehsteig ist breit."
           }
         ],
         "passingScore": 0.75
@@ -533,6 +589,11 @@
           {
             "q": "«يرفض»؟",
             "a": "ablehnen"
+          },
+          {
+            "q": "Der ___ ist breit. (الرصيف!)",
+            "a": "Gehsteig",
+            "why": "der Gehsteig الرصيف (der! مركّب (Gehen+Steig) مذكّر (der!) وجمعه die Gehsteige — وفي سويسرا: das Trottoir.) — Der Gehsteig ist breit."
           }
         ],
         "passingScore": 0.75
@@ -562,6 +623,11 @@
           {
             "q": "«يرفض»؟",
             "a": "ablehnen"
+          },
+          {
+            "q": "Der ___ ist breit. (الرصيف!)",
+            "a": "Gehsteig",
+            "why": "der Gehsteig الرصيف (der! مركّب (Gehen+Steig) مذكّر (der!) وجمعه die Gehsteige — وفي سويسرا: das Trottoir.) — Der Gehsteig ist breit."
           }
         ],
         "passingScore": 0.75
@@ -570,8 +636,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Ich stimme zu, obwohl die Besprechung lang ist. Ich habe eine Begründung: Die Regel ist wichtig. Ich schlage das vor. Allerdings ist die Zeit heute kurz. Ich lehne das ab, denn ich habe eine Begründung. Nämlich ist die Zusammenarbeit wichtig. Ich teile das dem Team mit. Das erledige ich heute.",
-      "ar": "يوم نقاش العمل: أوافق رغم أن الاجتماع طويل. لديّ تبرير: القاعدة مهمة. أقترح ذلك. صحيح لكن الوقت اليوم قصير. أرفض ذلك، فالعندي حجة. أي أن التعاون مهم. أُعلم الفريق بذلك. أُنجز ذلك اليوم."
+      "de": "Ich stimme zu, obwohl die Besprechung lang ist. Ich habe eine Begründung: Die Regel ist wichtig. Ich schlage das vor. Allerdings ist die Zeit heute kurz. Ich lehne das ab, denn ich habe eine Begründung. Nämlich ist die Zusammenarbeit wichtig. Ich teile das dem Team mit. Das erledige ich heute. Der Gehsteig ist breit.",
+      "ar": "يوم نقاش العمل: أوافق رغم أن الاجتماع طويل. لديّ تبرير: القاعدة مهمة. أقترح ذلك. صحيح لكن الوقت اليوم قصير. أرفض ذلك، فالعندي حجة. أي أن التعاون مهم. أُعلم الفريق بذلك. أُنجز ذلك اليوم. الرصيف عريض."
     },
     "srsBundleWordIds": [
       "zustimmen",
@@ -587,7 +653,8 @@
       "zustaendig",
       "begruendung",
       "absagen",
-      "obwohl"
+      "obwohl",
+      "gehsteig"
     ],
     "warningCards": [
       {
@@ -678,7 +745,8 @@
     "word-zustaendig",
     "word-begruendung",
     "word-absagen",
-    "word-obwohl"
+    "word-obwohl",
+    "word-gehsteig"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -697,7 +765,8 @@
       "zustaendig",
       "begruendung",
       "absagen",
-      "obwohl"
+      "obwohl",
+      "gehsteig"
     ]
   }
 }

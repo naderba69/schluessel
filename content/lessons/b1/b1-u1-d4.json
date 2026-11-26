@@ -67,7 +67,8 @@
       "eindruck",
       "zuverlaessig",
       "beanstanden",
-      "enttaeuschung"
+      "enttaeuschung",
+      "einfahrt"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -84,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Könnten Sie das bitte überprüfen?",
+        "de": "Könnten Sie das bitte überprüfen? Die Einfahrt ist frei.",
         "ar": "يعترض مهذباً في إيميل رسمي!"
       },
       "situation": {
@@ -180,7 +181,7 @@
                 "de": "die Enttäuschung"
               }
             ],
-            "why": "Zahlung الدفع (die! + Zahlungen!) · Anspruch الاستحقاق (der! + Ansprüche! auf + Akk!) · Eindruck الانطباع (der! + Eindrücke!) · Enttäuschung خيبة-الأمل (die!)"
+            "why": "Zahlung الدفع (die! + Zahlungen!) · Anspruch الاستحقاق (der! + Ansprüche! auf + النصب!) · Eindruck الانطباع (der! + Eindrücke!) · Enttäuschung خيبة-الأمل (die!)"
           },
           {
             "pairs": [
@@ -198,6 +199,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: zustimmen = «يُوافق (على)» · deshalb = «لهذا السبب» · das Verständnis = «تفهّم»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "مدخل السيارات",
+                "de": "die Einfahrt"
+              },
+              {
+                "ar": "خيبة الأمل",
+                "de": "die Enttäuschung"
+              },
+              {
+                "ar": "يعترض رسمياً",
+                "de": "beanstanden"
+              }
+            ],
+            "why": "die Einfahrt مدخل السيارات · die Enttäuschung خيبة الأمل · beanstanden يعترض رسمياً (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -259,6 +277,11 @@
             "q": "Im ___ lese ich gern.",
             "a": "Zug",
             "why": "الكلمة الناقصة «Zug» تعني «قطار» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist frei. (مدخل السيارات!)",
+            "a": "Einfahrt",
+            "why": "die Einfahrt مدخل السيارات (die! مؤنثة (die!) وجمعها die Einfahrten — والنظير die Ausfahrt (المخرج!).) — Die Einfahrt ist frei."
           }
         ]
       },
@@ -305,6 +328,11 @@
             "q": "~~danke! — Bitte!~~",
             "a": "Danke! — Bitte!",
             "why": "الخطأ في «danke»! الصواب «Danke» — راجع القاعدة (شكراً)."
+          },
+          {
+            "q": "~~der Einfahrt ist frei~~",
+            "a": "die Einfahrt ist frei",
+            "why": "الألمانية: die Einfahrt (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -340,6 +368,11 @@
             "q": "كوّن جملة فيها «die Entschuldigung» («عفواً») ثم تحدّث بها.",
             "a": "Entschuldigung, wo ist der Bahnhof?",
             "why": "استعمل «die Entschuldigung» («عفواً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Einfahrt)",
+            "a": "Die Einfahrt ist frei.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -433,6 +466,18 @@
             ],
             "a": "Gut. Morgen bekommen Sie die Antwort.",
             "why": "«مولر» في الحوار: تأكيد"
+          },
+          {
+            "audioId": "word-einfahrt",
+            "speakText": "die Einfahrt.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "مدخل السيارات",
+              "يصحّح",
+              "يتفقّد"
+            ],
+            "a": "مدخل السيارات",
+            "why": "الصوت يقول «die Einfahrt» — معناها «مدخل السيارات». ركّز!"
           }
         ]
       },
@@ -466,6 +511,12 @@
             "speakText": "absagen.",
             "a": "absagen",
             "why": "اكتب ما تسمعه حرفياً: «absagen» تعني «يُلغي (الموعد)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-einfahrt",
+            "speakText": "die Einfahrt.",
+            "a": "die Einfahrt",
+            "why": "اكتب ما تسمعه حرفياً: «die Einfahrt» تعني «مدخل السيارات». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -504,6 +555,11 @@
           {
             "q": "«يتفقّد»؟",
             "a": "überprüfen"
+          },
+          {
+            "q": "Die ___ ist frei. (مدخل السيارات!)",
+            "a": "Einfahrt",
+            "why": "die Einfahrt مدخل السيارات (die! مؤنثة (die!) وجمعها die Einfahrten — والنظير die Ausfahrt (المخرج!).) — Die Einfahrt ist frei."
           }
         ],
         "passingScore": 0.75
@@ -533,6 +589,11 @@
           {
             "q": "«يستبدل»؟",
             "a": "ersetzen"
+          },
+          {
+            "q": "Die ___ ist frei. (مدخل السيارات!)",
+            "a": "Einfahrt",
+            "why": "die Einfahrt مدخل السيارات (die! مؤنثة (die!) وجمعها die Einfahrten — والنظير die Ausfahrt (المخرج!).) — Die Einfahrt ist frei."
           }
         ],
         "passingScore": 0.75
@@ -562,6 +623,11 @@
           {
             "q": "«يتفقّد»؟",
             "a": "überprüfen"
+          },
+          {
+            "q": "Die ___ ist frei. (مدخل السيارات!)",
+            "a": "Einfahrt",
+            "why": "die Einfahrt مدخل السيارات (die! مؤنثة (die!) وجمعها die Einfahrten — والنظير die Ausfahrt (المخرج!).) — Die Einfahrt ist frei."
           }
         ],
         "passingScore": 0.75
@@ -570,8 +636,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Sehr geehrter Herr Direktor! Ich beanstande die Zahlung: Der Betrag stimmt nicht. Die Garantie ist wichtig. Es gibt einen Mangel. Das hat mich enttäuscht — das war eine Enttäuschung. Der Eindruck war nicht zuverlässig. Ich kann das beweisen! Ich habe Anspruch auf eine Antwort. Könnten Sie das bitte überprüfen? Wären Sie so freundlich, das zu korrigieren oder zu ersetzen? Mit freundlichen Grüßen!",
-      "ar": "سيدي المحترم! أعترض على الدفع: المبلغ غير صحيح. الكفالة مهمة. هناك عيب. هذا خيّب أملي — كانت خيبة أمل. الانطباع لم يكن موثوقاً. أستطيع إثبات ذلك! ليّ حقّ في إجابة. هل يمكنكم فحص ذلك من فضلكم؟ هل تكرّمون بتصحيح ذلك أو استبداله؟ مع تحياتي المحبّة!"
+      "de": "Sehr geehrter Herr Direktor! Ich beanstande die Zahlung: Der Betrag stimmt nicht. Die Garantie ist wichtig. Es gibt einen Mangel. Das hat mich enttäuscht — das war eine Enttäuschung. Der Eindruck war nicht zuverlässig. Ich kann das beweisen! Ich habe Anspruch auf eine Antwort. Könnten Sie das bitte überprüfen? Wären Sie so freundlich, das zu korrigieren oder zu ersetzen? Mit freundlichen Grüßen! Die Einfahrt ist frei.",
+      "ar": "سيدي المحترم! أعترض على الدفع: المبلغ غير صحيح. الكفالة مهمة. هناك عيب. هذا خيّب أملي — كانت خيبة أمل. الانطباع لم يكن موثوقاً. أستطيع إثبات ذلك! ليّ حقّ في إجابة. هل يمكنكم فحص ذلك من فضلكم؟ هل تكرّمون بتصحيح ذلك أو استبداله؟ مع تحياتي المحبّة! مدخل السيارات فارغ."
     },
     "srsBundleWordIds": [
       "korrigieren",
@@ -587,7 +653,8 @@
       "eindruck",
       "zuverlaessig",
       "beanstanden",
-      "enttaeuschung"
+      "enttaeuschung",
+      "einfahrt"
     ],
     "warningCards": [
       {
@@ -674,7 +741,8 @@
     "word-eindruck",
     "word-zuverlaessig",
     "word-beanstanden",
-    "word-enttaeuschung"
+    "word-enttaeuschung",
+    "word-einfahrt"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -693,7 +761,8 @@
       "eindruck",
       "zuverlaessig",
       "beanstanden",
-      "enttaeuschung"
+      "enttaeuschung",
+      "einfahrt"
     ]
   }
 }

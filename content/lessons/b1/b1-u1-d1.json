@@ -66,7 +66,9 @@
       "verstaendnis",
       "strecke",
       "hoeflich",
-      "muehe"
+      "muehe",
+      "strafzettel",
+      "vorfahrt"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Trotzdem komme ich rechtzeitig zur Arbeit.",
+        "de": "Trotzdem komme ich rechtzeitig zur Arbeit. Der Strafzettel ist teuer. Die Vorfahrt ist wichtig.",
         "ar": "يصل رغم التأخير إلى العمل في الوقت المحدد — بلباقة!"
       },
       "situation": {
@@ -92,7 +94,7 @@
       },
       "successCriteria": [
         "يروي 8 جمل (سبب! + deshalb! + trotzdem! + اعتذار! + وعد! + شكر!)",
-        "يستخدم الجديد (13 كلمة! + trotzdem/deshalb بـV2!)",
+        "يستخدم الجديد (15 كلمة! + trotzdem/deshalb بـV2!)",
         "يفرق (deshalb-لذلك! ≠ trotzdem-رغم ذلك!) و(الروابط-V2! ≠ weil-آخراً!) ويسترجع (A1: Verspätung/Stau! + A2: krank!)"
       ]
     },
@@ -172,6 +174,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: der Stau = «الازدحام المروري» · der Fahrplan = «جدول المواعيد» · trotzdem = «رغم ذلك»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الغرامة (المرورية)",
+                "de": "der Strafzettel"
+              },
+              {
+                "ar": "الأسبقية (في المرور)",
+                "de": "die Vorfahrt"
+              },
+              {
+                "ar": "مجهود",
+                "de": "die Mühe"
+              }
+            ],
+            "why": "der Strafzettel الغرامة (المرورية) · die Vorfahrt الأسبقية (في المرور) · die Mühe مجهود (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -228,6 +247,16 @@
             "q": "Ich bin ___.",
             "a": "krank",
             "why": "الكلمة الناقصة «krank» تعني «مريض» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist teuer. (الغرامة!)",
+            "a": "Strafzettel",
+            "why": "der Strafzettel الغرامة (المرورية) (der! مركّب (Strafe+Zettel) مذكّر (der!) وجمعه die Strafzettel (بلا تغيير!).) — Der Strafzettel ist teuer."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الأسبقية!)",
+            "a": "Vorfahrt",
+            "why": "die Vorfahrt الأسبقية (في المرور) (die! تُستعمل عادةً بلا جمع: die Vorfahrt (الأسبقية في المرور).) — Die Vorfahrt ist wichtig."
           }
         ]
       },
@@ -274,6 +303,16 @@
             "q": "~~danke! — Bitte!~~",
             "a": "Danke! — Bitte!",
             "why": "الخطأ في «danke»! الصواب «Danke» — راجع القاعدة (شكراً)."
+          },
+          {
+            "q": "~~die Strafzettel ist teuer~~",
+            "a": "der Strafzettel ist teuer",
+            "why": "الألمانية: der Strafzettel (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Vorfahrt ist wichtig~~",
+            "a": "die Vorfahrt ist wichtig",
+            "why": "الألمانية: die Vorfahrt (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -294,6 +333,11 @@
             "q": "احكِ للرئيس (سجّل): 8 جمل — التأخير! + السبب! + deshalb! + رغم ذلك! + تُبلِّغ! + اعتذار! + صبر! + شكر!",
             "a": "Der Zug fällt heute aus. Es gibt eine Störung. Deshalb komme ich mit dem Bus. Der Streik ist schlimm. Trotzdem komme ich rechtzeitig zur Arbeit. Ich melde mich beim Chef. Entschuldigung! Bitte haben Sie Geduld! Vielen Dank für Ihr Verständnis!",
             "why": "الاعتذار المهذب (B1): سبب محدَّد! + deshalb للنتيجة! + trotzdem للرغم! + sich melden! + Entschuldigung + شكر — لا اعتذار بلا سبب!"
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Strafzettel · die Vorfahrt)",
+            "a": "Der Strafzettel ist teuer. Die Vorfahrt ist wichtig.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -387,6 +431,30 @@
             ],
             "a": "Gut! Dann ist die Zeit schnell vorbei.",
             "why": "«لينا» في الحوار: مواساة"
+          },
+          {
+            "audioId": "word-strafzettel",
+            "speakText": "der Strafzettel.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الغرامة (المرورية)",
+              "الأسبقية (في المرور)",
+              "رغم ذلك"
+            ],
+            "a": "الغرامة (المرورية)",
+            "why": "الصوت يقول «der Strafzettel» — معناها «الغرامة (المرورية)». ركّز!"
+          },
+          {
+            "audioId": "word-vorfahrt",
+            "speakText": "die Vorfahrt.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الأسبقية (في المرور)",
+              "الغرامة (المرورية)",
+              "رغم ذلك"
+            ],
+            "a": "الأسبقية (في المرور)",
+            "why": "الصوت يقول «die Vorfahrt» — معناها «الأسبقية (في المرور)». ركّز!"
           }
         ]
       },
@@ -420,6 +488,18 @@
             "speakText": "das Pferd.",
             "a": "das Pferd",
             "why": "اكتب ما تسمعه حرفياً: «das Pferd» تعني «حصان». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-strafzettel",
+            "speakText": "der Strafzettel.",
+            "a": "der Strafzettel",
+            "why": "اكتب ما تسمعه حرفياً: «der Strafzettel» تعني «الغرامة (المرورية)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-vorfahrt",
+            "speakText": "die Vorfahrt.",
+            "a": "die Vorfahrt",
+            "why": "اكتب ما تسمعه حرفياً: «die Vorfahrt» تعني «الأسبقية (في المرور)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -458,6 +538,16 @@
           {
             "q": "«يُلغى»؟",
             "a": "ausfallen"
+          },
+          {
+            "q": "Der ___ ist teuer. (الغرامة!)",
+            "a": "Strafzettel",
+            "why": "der Strafzettel الغرامة (المرورية) (der! مركّب (Strafe+Zettel) مذكّر (der!) وجمعه die Strafzettel (بلا تغيير!).) — Der Strafzettel ist teuer."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الأسبقية!)",
+            "a": "Vorfahrt",
+            "why": "die Vorfahrt الأسبقية (في المرور) (die! تُستعمل عادةً بلا جمع: die Vorfahrt (الأسبقية في المرور).) — Die Vorfahrt ist wichtig."
           }
         ],
         "passingScore": 0.75
@@ -487,6 +577,16 @@
           {
             "q": "«رغم ذلك»؟",
             "a": "trotzdem"
+          },
+          {
+            "q": "Der ___ ist teuer. (الغرامة!)",
+            "a": "Strafzettel",
+            "why": "der Strafzettel الغرامة (المرورية) (der! مركّب (Strafe+Zettel) مذكّر (der!) وجمعه die Strafzettel (بلا تغيير!).) — Der Strafzettel ist teuer."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الأسبقية!)",
+            "a": "Vorfahrt",
+            "why": "die Vorfahrt الأسبقية (في المرور) (die! تُستعمل عادةً بلا جمع: die Vorfahrt (الأسبقية في المرور).) — Die Vorfahrt ist wichtig."
           }
         ],
         "passingScore": 0.75
@@ -516,6 +616,16 @@
           {
             "q": "«رغم ذلك»؟",
             "a": "trotzdem"
+          },
+          {
+            "q": "Der ___ ist teuer. (الغرامة!)",
+            "a": "Strafzettel",
+            "why": "der Strafzettel الغرامة (المرورية) (der! مركّب (Strafe+Zettel) مذكّر (der!) وجمعه die Strafzettel (بلا تغيير!).) — Der Strafzettel ist teuer."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الأسبقية!)",
+            "a": "Vorfahrt",
+            "why": "die Vorfahrt الأسبقية (في المرور) (die! تُستعمل عادةً بلا جمع: die Vorfahrt (الأسبقية في المرور).) — Die Vorfahrt ist wichtig."
           }
         ],
         "passingScore": 0.75
@@ -524,8 +634,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Zug fällt heute aus. Es gibt eine Störung. Deshalb komme ich mit dem Bus. Der Streik ist schlimm. Trotzdem komme ich rechtzeitig zur Arbeit. Ich melde mich beim Chef. Bitte haben Sie Geduld! Vielen Dank für Ihr Verständnis!",
-      "ar": "يوم الوصول للعمل: القطار يُلغى اليوم. هناك عطل. لذلك أصل مع الحافلة. الإضراب سيّئ. رغم ذلك أصل في الوقت المحدد. أُعلم الرئيس بوصولي. رجاءً اصبروا! شكراً جزيلاً لتفهّمكم!"
+      "de": "Der Zug fällt heute aus. Es gibt eine Störung. Deshalb komme ich mit dem Bus. Der Streik ist schlimm. Trotzdem komme ich rechtzeitig zur Arbeit. Ich melde mich beim Chef. Bitte haben Sie Geduld! Vielen Dank für Ihr Verständnis! Der Strafzettel ist teuer. Die Vorfahrt ist wichtig.",
+      "ar": "يوم الوصول للعمل: القطار يُلغى اليوم. هناك عطل. لذلك أصل مع الحافلة. الإضراب سيّئ. رغم ذلك أصل في الوقت المحدد. أُعلم الرئيس بوصولي. رجاءً اصبروا! شكراً جزيلاً لتفهّمكم! الغرامة غالية. الأسبقية مهمة."
     },
     "srsBundleWordIds": [
       "trotzdem",
@@ -540,7 +650,9 @@
       "verstaendnis",
       "strecke",
       "hoeflich",
-      "muehe"
+      "muehe",
+      "strafzettel",
+      "vorfahrt"
     ],
     "warningCards": [
       {
@@ -628,7 +740,9 @@
     "word-verstaendnis",
     "word-strecke",
     "word-hoeflich",
-    "word-muehe"
+    "word-muehe",
+    "word-strafzettel",
+    "word-vorfahrt"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -646,7 +760,9 @@
       "verstaendnis",
       "strecke",
       "hoeflich",
-      "muehe"
+      "muehe",
+      "strafzettel",
+      "vorfahrt"
     ]
   }
 }

@@ -2165,12 +2165,12 @@ describe("B1 يبدأ (D418/D419) — أول درس B1 بقواعد A2+ وخلط
   const b1 = ALL_LESSONS.filter((l) => l.level === "B1");
   const lowerIds = new Set(ALL_WORDS.filter((w) => w.level === "A1" || w.level === "A2").map((w) => w.id));
 
-  it("b1-u1-d1: 13 كلمة كلها في قائمة B1 + الترسانة الجديدة + خلط A1/A2 + المصائد على خريطة التداخل", () => {
+  it("b1-u1-d1: 15 كلمة (13+2 في D591 · N-381!) كلها في قائمة B1 + الترسانة الجديدة + خلط A1/A2 + المصائد على خريطة التداخل", () => {
     expect(b1.length).toBeGreaterThan(0);
     const l = b1.find((x) => x.id === "b1-u1-d1")!;
     expect(l.unit).toBe(1);
     expect(l.day).toBe(1);
-    expect(l.praesentation.wordIds).toHaveLength(13);
+    expect(l.praesentation.wordIds).toHaveLength(15); // D591 (N-381): +Strafzettel/Vorfahrt — إغلاق فجوة u1!
     for (const id of l.praesentation.wordIds) {
       const w = ALL_WORDS.find((x) => x.id === id)!;
       expect(w.level, id).toBe("B1");

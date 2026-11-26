@@ -49,13 +49,15 @@
     ],
     "guidedRetrieval": [
       "من d1+d3: deshalb «لذلك» (تقلب!) + obwohl «رغم أن» (آخراً!) + denn «فالـ» (بلا انقلاب!) — اليوم: الكل في ملخص واحد!",
-      "من d2+d4+d5: TEKAMOLO (الترتيب!) + Könnten-Sie (التليين!) + zwar/einerseits (المقارنة!) — اليوم: توليف الأسبوع!"
+      "من d2+d4+d5: ترتيب الجملة (الترتيب!) + Könnten-Sie (التليين!) + zwar/einerseits (المقارنة!) — اليوم: توليف الأسبوع!"
     ]
   },
   "praesentation": {
     "wordIds": [
       "abschluss",
-      "planung"
+      "planung",
+      "einbahnstrasse",
+      "ausfahrt"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -72,7 +74,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Die Woche ist zu Ende: dein Abschluss und deine Planung!",
+        "de": "Die Woche ist zu Ende: dein Abschluss und deine Planung! Die Einbahnstraße ist lang. Die Ausfahrt ist dort.",
         "ar": "يكتب ملخص أسبوعه ويخطّط للقادم بكل الروابط!"
       },
       "situation": {
@@ -81,7 +83,7 @@
       },
       "successCriteria": [
         "كل الروابط الخمسة: deshalb! · obwohl! · denn! · Könnten! · zwar!",
-        "TEKAMOLO: متى؟ لماذا؟ كيف؟ أين؟",
+        "ترتيب الجملة: متى؟ لماذا؟ كيف؟ أين؟",
         "Anrede/Gruß مهذبان في الختام!"
       ]
     },
@@ -165,6 +167,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: deshalb = «لهذا السبب» · trotzdem = «رغم ذلك» · das Verständnis = «تفهّم»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الشارع أحادي الاتجاه",
+                "de": "die Einbahnstraße"
+              },
+              {
+                "ar": "مخرج السيارات",
+                "de": "die Ausfahrt"
+              },
+              {
+                "ar": "التخطيط",
+                "de": "die Planung"
+              }
+            ],
+            "why": "die Einbahnstraße الشارع أحادي الاتجاه · die Ausfahrt مخرج السيارات · die Planung التخطيط (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -173,7 +192,7 @@
         "explanationRequired": true,
         "hints": [
           "روابط الأسبوع: أيّها أين؟",
-          "wegen + Genitiv! obwohl آخراً! deshalb تقلب!",
+          "wegen + الجرّ! obwohl آخراً! deshalb تقلب!",
           "Könnten-Sie للتليين!"
         ],
         "interleavedWith": [
@@ -185,7 +204,7 @@
           {
             "q": "Heute fahre ich ___ der Arbeit mit dem Bus.",
             "a": "wegen",
-            "why": "wegen «بسبب» + Genitiv! «wegen der Arbeit» — لا «wegen die Arbeit»! (d2: TEKAMOLO!)"
+            "why": "wegen «بسبب» + الجرّ! «wegen der Arbeit» — لا «wegen die Arbeit»! (d2: ترتيب الجملة!)"
           },
           {
             "q": "Obwohl die Zeit kurz ___, war die Planung gut.",
@@ -226,6 +245,16 @@
             "q": "Im ___ lese ich gern.",
             "a": "Zug",
             "why": "الكلمة الناقصة «Zug» تعني «قطار» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist lang. (الشارع أحادي الاتجاه!)",
+            "a": "Einbahnstraße",
+            "why": "die Einbahnstraße الشارع أحادي الاتجاه (die! مركّبة (Einbahn+Straße) مؤنثة (die!) وجمعها die Einbahnstraßen (ß→ss مع الـen!).) — Die Einbahnstraße ist lang."
+          },
+          {
+            "q": "Die ___ ist dort. (مخرج السيارات!)",
+            "a": "Ausfahrt",
+            "why": "die Ausfahrt مخرج السيارات (die! مؤنثة (die!) وجمعها die Ausfahrten — والنظير die Einfahrt (المدخل!).) — Die Ausfahrt ist dort."
           }
         ]
       },
@@ -234,7 +263,7 @@
         "explanationRequired": true,
         "hints": [
           "أخطاء الأسبوع الثلاثة الكبرى!",
-          "wegen + Genitiv! obwohl آخراً! deshalb تقلب!"
+          "wegen + الجرّ! obwohl آخراً! deshalb تقلب!"
         ],
         "interleavedWith": [
           "trotzdem",
@@ -245,7 +274,7 @@
           {
             "q": "~~Wegen die Arbeit komme ich früh.~~",
             "a": "Wegen der Arbeit komme ich früh.",
-            "why": "wegen + Genitiv! «der Arbeit» لا «die Arbeit»! (d2!)"
+            "why": "wegen + الجرّ! «der Arbeit» لا «die Arbeit»! (d2!)"
           },
           {
             "q": "~~Obwohl die Zeit war kurz, war die Planung gut.~~",
@@ -271,6 +300,16 @@
             "q": "~~danke! — Bitte!~~",
             "a": "Danke! — Bitte!",
             "why": "الخطأ في «danke»! الصواب «Danke» — راجع القاعدة (شكراً)."
+          },
+          {
+            "q": "~~der Einbahnstraße ist lang~~",
+            "a": "die Einbahnstraße ist lang",
+            "why": "الألمانية: die Einbahnstraße (die! مركّبة مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Ausfahrt ist dort~~",
+            "a": "die Ausfahrt ist dort",
+            "why": "الألمانية: die Ausfahrt (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -279,7 +318,7 @@
         "explanationRequired": true,
         "hints": [
           "ملخص الأسبوع: كل الروابط الخمسة!",
-          "8 جمل: Abschluss! + TEKAMOLO! + obwohl! + zwar! + denn! + deshalb! + Könnten! + Planung!"
+          "8 جمل: Abschluss! + ترتيب الجملة! + obwohl! + zwar! + denn! + deshalb! + Könnten! + Planung!"
         ],
         "interleavedWith": [
           "chef",
@@ -290,7 +329,7 @@
           {
             "q": "احكِ ملخص أسبوعك (سجّل): 8 جمل — الختام! + الطريق! + الرغم! + التسليم! + التعليل! + النتيجة! + الطلب المهذب! + التخطيط!",
             "a": "Die Woche ist zu Ende: Das ist der Abschluss. Heute fahre ich wegen der Arbeit mit dem Bus. Obwohl die Zeit kurz war, war die Planung gut. Zwar war es schwer, aber ich mache weiter. Ich bin müde, denn die Woche war lang. Deshalb schlafe ich heute früh. Könnten Sie mir morgen helfen? Schließlich fasse ich das zusammen: Insgesamt war die Woche gut.",
-            "why": "توليف الأسبوع (B1): Abschluss وPlanung (الجديد!) + TEKAMOLO (wegen!) + obwohl-آخراً! + zwar/aber! + denn-ثابت! + deshalb-تقلب! + Könnten-تليين! — أسبوعك كله في 8 جمل!"
+            "why": "توليف الأسبوع (B1): Abschluss وPlanung (الجديد!) + ترتيب الجملة (wegen!) + obwohl-آخراً! + zwar/aber! + denn-ثابت! + deshalb-تقلب! + Könnten-تليين! — أسبوعك كله في 8 جمل!"
           },
           {
             "q": "كوّن جملة فيها «der Chef» («مدير») ثم تحدّث بها.",
@@ -301,6 +340,11 @@
             "q": "كوّن جملة فيها «die Entschuldigung» («عفواً») ثم تحدّث بها.",
             "a": "Entschuldigung, wo ist der Bahnhof?",
             "why": "استعمل «die Entschuldigung» («عفواً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Einbahnstraße · die Ausfahrt)",
+            "a": "Die Einbahnstraße ist lang. Die Ausfahrt ist dort.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -380,6 +424,30 @@
             ],
             "a": "Schön! Ich habe viel gelernt.",
             "why": "«لينا» في الحوار: رضا"
+          },
+          {
+            "audioId": "word-einbahnstrasse",
+            "speakText": "die Einbahnstraße.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الشارع أحادي الاتجاه",
+              "مخرج السيارات",
+              "الختام"
+            ],
+            "a": "الشارع أحادي الاتجاه",
+            "why": "الصوت يقول «die Einbahnstraße» — معناها «الشارع أحادي الاتجاه». ركّز!"
+          },
+          {
+            "audioId": "word-ausfahrt",
+            "speakText": "die Ausfahrt.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "مخرج السيارات",
+              "الشارع أحادي الاتجاه",
+              "الختام"
+            ],
+            "a": "مخرج السيارات",
+            "why": "الصوت يقول «die Ausfahrt» — معناها «مخرج السيارات». ركّز!"
           }
         ]
       },
@@ -407,6 +475,18 @@
             "speakText": "der Standpunkt.",
             "a": "der Standpunkt",
             "why": "اكتب المسموع بدقة: der Standpunkt — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-einbahnstrasse",
+            "speakText": "die Einbahnstraße.",
+            "a": "die Einbahnstraße",
+            "why": "اكتب ما تسمعه حرفياً: «die Einbahnstraße» تعني «الشارع أحادي الاتجاه». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ausfahrt",
+            "speakText": "die Ausfahrt.",
+            "a": "die Ausfahrt",
+            "why": "اكتب ما تسمعه حرفياً: «die Ausfahrt» تعني «مخرج السيارات». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -445,6 +525,16 @@
           {
             "q": "«الإنهاء»؟",
             "a": "der Abschluss"
+          },
+          {
+            "q": "Die ___ ist lang. (الشارع أحادي الاتجاه!)",
+            "a": "Einbahnstraße",
+            "why": "die Einbahnstraße الشارع أحادي الاتجاه (die! مركّبة (Einbahn+Straße) مؤنثة (die!) وجمعها die Einbahnstraßen (ß→ss مع الـen!).) — Die Einbahnstraße ist lang."
+          },
+          {
+            "q": "Die ___ ist dort. (مخرج السيارات!)",
+            "a": "Ausfahrt",
+            "why": "die Ausfahrt مخرج السيارات (die! مؤنثة (die!) وجمعها die Ausfahrten — والنظير die Einfahrt (المدخل!).) — Die Ausfahrt ist dort."
           }
         ],
         "passingScore": 0.75
@@ -474,6 +564,16 @@
           {
             "q": "«الإنهاء»؟",
             "a": "der Abschluss"
+          },
+          {
+            "q": "Die ___ ist lang. (الشارع أحادي الاتجاه!)",
+            "a": "Einbahnstraße",
+            "why": "die Einbahnstraße الشارع أحادي الاتجاه (die! مركّبة (Einbahn+Straße) مؤنثة (die!) وجمعها die Einbahnstraßen (ß→ss مع الـen!).) — Die Einbahnstraße ist lang."
+          },
+          {
+            "q": "Die ___ ist dort. (مخرج السيارات!)",
+            "a": "Ausfahrt",
+            "why": "die Ausfahrt مخرج السيارات (die! مؤنثة (die!) وجمعها die Ausfahrten — والنظير die Einfahrt (المدخل!).) — Die Ausfahrt ist dort."
           }
         ],
         "passingScore": 0.75
@@ -503,6 +603,16 @@
           {
             "q": "«التخطيط»؟",
             "a": "die Planung"
+          },
+          {
+            "q": "Die ___ ist lang. (الشارع أحادي الاتجاه!)",
+            "a": "Einbahnstraße",
+            "why": "die Einbahnstraße الشارع أحادي الاتجاه (die! مركّبة (Einbahn+Straße) مؤنثة (die!) وجمعها die Einbahnstraßen (ß→ss مع الـen!).) — Die Einbahnstraße ist lang."
+          },
+          {
+            "q": "Die ___ ist dort. (مخرج السيارات!)",
+            "a": "Ausfahrt",
+            "why": "die Ausfahrt مخرج السيارات (die! مؤنثة (die!) وجمعها die Ausfahrten — والنظير die Einfahrt (المدخل!).) — Die Ausfahrt ist dort."
           }
         ],
         "passingScore": 0.75
@@ -511,17 +621,19 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Die Woche ist zu Ende: Das ist der Abschluss. Heute fahre ich wegen der Arbeit mit dem Bus. Obwohl die Zeit kurz war, war die Planung gut. Zwar war es schwer, aber ich mache weiter. Ich bin müde, denn die Woche war lang. Deshalb schlafe ich heute früh. Könnten Sie mir morgen helfen? Schließlich fasse ich das zusammen: Insgesamt war die Woche gut.",
-      "ar": "الأسبوع انتهى: هذا هو الختام. اليوم أذهب بسبب العمل بالحافلة. رغم أن الوقت قصير، كان التخطيط جيداً. صحيح أنه كان صعباً، لكنني أستمر. أنا متعب، فالأسبوع كان طويلاً. لذلك أنام اليوم مبكراً. هل يمكنكم مساعدتي غداً؟ أخيراً أُلخّص ذلك: إجمالاً كان الأسبوع جيداً."
+      "de": "Die Woche ist zu Ende: Das ist der Abschluss. Heute fahre ich wegen der Arbeit mit dem Bus. Obwohl die Zeit kurz war, war die Planung gut. Zwar war es schwer, aber ich mache weiter. Ich bin müde, denn die Woche war lang. Deshalb schlafe ich heute früh. Könnten Sie mir morgen helfen? Schließlich fasse ich das zusammen: Insgesamt war die Woche gut. Die Einbahnstraße ist lang. Die Ausfahrt ist dort.",
+      "ar": "الأسبوع انتهى: هذا هو الختام. اليوم أذهب بسبب العمل بالحافلة. رغم أن الوقت قصير، كان التخطيط جيداً. صحيح أنه كان صعباً، لكنني أستمر. أنا متعب، فالأسبوع كان طويلاً. لذلك أنام اليوم مبكراً. هل يمكنكم مساعدتي غداً؟ أخيراً أُلخّص ذلك: إجمالاً كان الأسبوع جيداً. الشارع أحادي الاتجاه طويل. مخرج السيارات هناك."
     },
     "srsBundleWordIds": [
       "abschluss",
-      "planung"
+      "planung",
+      "einbahnstrasse",
+      "ausfahrt"
     ],
     "warningCards": [
       {
         "commonError": {
-          "ar": "wegen + Akkusativ!",
+          "ar": "wegen + النصب!",
           "de": "~~Wegen die Arbeit~~"
         },
         "correct": {
@@ -532,7 +644,7 @@
           "q": "wegen ___ Arbeit (der!)",
           "a": "der"
         },
-        "whyArabicSpeakerFails": "العربية: «بسبب العمل» بلا إعراب ظاهر! والألمانية: wegen + Genitiv! «der Arbeit» لا «die Arbeit»! (خريطة التداخل 10‑ي)."
+        "whyArabicSpeakerFails": "العربية: «بسبب العمل» بلا إعراب ظاهر! والألمانية: wegen + الجرّ! «der Arbeit» لا «die Arbeit»! (خريطة التداخل 10‑ي)."
       },
       {
         "commonError": {
@@ -582,14 +694,18 @@
   ],
   "audioManifestRefs": [
     "word-abschluss",
-    "word-planung"
+    "word-planung",
+    "word-einbahnstrasse",
+    "word-ausfahrt"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوصول للعمل)",
     "goetheWordListOverlap": [
       "abschluss",
-      "planung"
+      "planung",
+      "einbahnstrasse",
+      "ausfahrt"
     ]
   }
 }

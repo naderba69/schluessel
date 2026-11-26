@@ -66,7 +66,9 @@
       "sinn",
       "wert",
       "bedeutung",
-      "vertrauen"
+      "vertrauen",
+      "intensivkurs",
+      "wissenschaftler"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Ich sorge mich um die Familie: der Sinn ist klar!",
+        "de": "Ich sorge mich um die Familie: der Sinn ist klar! Der Intensivkurs beginnt morgen. Der Wissenschaftler arbeitet hier.",
         "ar": "يصف حياته بالجُمدة الجديدة!"
       },
       "situation": {
@@ -93,7 +95,7 @@
       "successCriteria": [
         "الجُمدة: sorgen um! konzentrieren auf! entschließen zu! verabreden mit!",
         "sich إلزامي! zum = zu + dem!",
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الخمس عشرة كلها!",
         "Anrede/Gruß مهذبان!"
       ]
     },
@@ -206,6 +208,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: arbeiten = «يعمل» · sorgen = «يقلق» · sich konzentrieren = «يركّز (على)»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الدورة المكثّفة",
+                "de": "der Intensivkurs"
+              },
+              {
+                "ar": "العالم (الباحث)",
+                "de": "der Wissenschaftler"
+              },
+              {
+                "ar": "الثقة",
+                "de": "das Vertrauen"
+              }
+            ],
+            "why": "der Intensivkurs الدورة المكثّفة · der Wissenschaftler العالم (الباحث) · das Vertrauen الثقة (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -266,6 +285,16 @@
             "q": "Ich habe ___.",
             "a": "Zeit",
             "why": "الكلمة الناقصة «Zeit» تعني «الوقت» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ beginnt morgen. (الدورة المكثّفة!)",
+            "a": "Intensivkurs",
+            "why": "der Intensivkurs الدورة المكثّفة (der! مركّب (Intensiv+Kurs) مذكّر (der!) وجمعه die Intensivkurse.) — Der Intensivkurs beginnt morgen."
+          },
+          {
+            "q": "Der ___ arbeitet hier. (العالم!)",
+            "a": "Wissenschaftler",
+            "why": "der Wissenschaftler العالم (الباحث) (der! مذكّر (der!) وجمعه die Wissenschaftler (بلا تغيير!) — والمؤنث die Wissenschaftlerin.) — Der Wissenschaftler arbeitet hier."
           }
         ]
       },
@@ -311,6 +340,16 @@
             "q": "~~danke! — Bitte!~~",
             "a": "Danke! — Bitte!",
             "why": "الخطأ في «danke»! الصواب «Danke» — راجع القاعدة (شكراً)."
+          },
+          {
+            "q": "~~die Intensivkurs beginnt morgen~~",
+            "a": "der Intensivkurs beginnt morgen",
+            "why": "الألمانية: der Intensivkurs (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Wissenschaftler arbeitet hier~~",
+            "a": "der Wissenschaftler arbeitet hier",
+            "why": "الألمانية: der Wissenschaftler (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -345,6 +384,11 @@
             "q": "كوّن جملة فيها «der Arzt» («الطبيب») ثم تحدّث بها.",
             "a": "Ich gehe heute zum Arzt.",
             "why": "استعمل «der Arzt» («الطبيب») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Intensivkurs · der Wissenschaftler)",
+            "a": "Der Intensivkurs beginnt morgen. Der Wissenschaftler arbeitet hier.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -438,6 +482,30 @@
             ],
             "a": "Ruf an, wenn du Hilfe brauchst.",
             "why": "«يوسف» في الحوار: دعم"
+          },
+          {
+            "audioId": "word-intensivkurs",
+            "speakText": "der Intensivkurs.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الدورة المكثّفة",
+              "العالم (الباحث)",
+              "يقلق"
+            ],
+            "a": "الدورة المكثّفة",
+            "why": "الصوت يقول «der Intensivkurs» — معناها «الدورة المكثّفة». ركّز!"
+          },
+          {
+            "audioId": "word-wissenschaftler",
+            "speakText": "der Wissenschaftler.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العالم (الباحث)",
+              "الدورة المكثّفة",
+              "يقلق"
+            ],
+            "a": "العالم (الباحث)",
+            "why": "الصوت يقول «der Wissenschaftler» — معناها «العالم (الباحث)». ركّز!"
           }
         ]
       },
@@ -471,6 +539,18 @@
             "speakText": "die Absicht.",
             "a": "die Absicht",
             "why": "اكتب ما تسمعه حرفياً: «die Absicht» تعني «النية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-intensivkurs",
+            "speakText": "der Intensivkurs.",
+            "a": "der Intensivkurs",
+            "why": "اكتب ما تسمعه حرفياً: «der Intensivkurs» تعني «الدورة المكثّفة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-wissenschaftler",
+            "speakText": "der Wissenschaftler.",
+            "a": "der Wissenschaftler",
+            "why": "اكتب ما تسمعه حرفياً: «der Wissenschaftler» تعني «العالم (الباحث)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -509,6 +589,16 @@
           {
             "q": "«يُقرّر (الحاسم)»؟",
             "a": "sich entschließen"
+          },
+          {
+            "q": "Der ___ beginnt morgen. (الدورة المكثّفة!)",
+            "a": "Intensivkurs",
+            "why": "der Intensivkurs الدورة المكثّفة (der! مركّب (Intensiv+Kurs) مذكّر (der!) وجمعه die Intensivkurse.) — Der Intensivkurs beginnt morgen."
+          },
+          {
+            "q": "Der ___ arbeitet hier. (العالم!)",
+            "a": "Wissenschaftler",
+            "why": "der Wissenschaftler العالم (الباحث) (der! مذكّر (der!) وجمعه die Wissenschaftler (بلا تغيير!) — والمؤنث die Wissenschaftlerin.) — Der Wissenschaftler arbeitet hier."
           }
         ],
         "passingScore": 0.75
@@ -538,6 +628,16 @@
           {
             "q": "«يركّز (على)»؟",
             "a": "sich konzentrieren"
+          },
+          {
+            "q": "Der ___ beginnt morgen. (الدورة المكثّفة!)",
+            "a": "Intensivkurs",
+            "why": "der Intensivkurs الدورة المكثّفة (der! مركّب (Intensiv+Kurs) مذكّر (der!) وجمعه die Intensivkurse.) — Der Intensivkurs beginnt morgen."
+          },
+          {
+            "q": "Der ___ arbeitet hier. (العالم!)",
+            "a": "Wissenschaftler",
+            "why": "der Wissenschaftler العالم (الباحث) (der! مذكّر (der!) وجمعه die Wissenschaftler (بلا تغيير!) — والمؤنث die Wissenschaftlerin.) — Der Wissenschaftler arbeitet hier."
           }
         ],
         "passingScore": 0.75
@@ -567,6 +667,16 @@
           {
             "q": "«يركّز (على)»؟",
             "a": "sich konzentrieren"
+          },
+          {
+            "q": "Der ___ beginnt morgen. (الدورة المكثّفة!)",
+            "a": "Intensivkurs",
+            "why": "der Intensivkurs الدورة المكثّفة (der! مركّب (Intensiv+Kurs) مذكّر (der!) وجمعه die Intensivkurse.) — Der Intensivkurs beginnt morgen."
+          },
+          {
+            "q": "Der ___ arbeitet hier. (العالم!)",
+            "a": "Wissenschaftler",
+            "why": "der Wissenschaftler العالم (الباحث) (der! مذكّر (der!) وجمعه die Wissenschaftler (بلا تغيير!) — والمؤنث die Wissenschaftlerin.) — Der Wissenschaftler arbeitet hier."
           }
         ],
         "passingScore": 0.75
@@ -575,8 +685,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Ich sorge mich um die Familie. Ich konzentriere mich auf die Arbeit. Ich entschließe mich zum Studium. Ich verabrede mich mit dem Professor. Die Karriere ist wichtig. Das Diplom ist fertig. Das Vertrauen ist klar. Mit freundlichen Grüßen",
-      "ar": "أهتم بالعائلة. أركّز على العمل. أُقرّر الدراسة. أتواعد مع الأستاذ. المسار المهني مهم. الشهادة جاهزة. الثقة واضحة. مع تحياتي الخالصة."
+      "de": "Ich sorge mich um die Familie. Ich konzentriere mich auf die Arbeit. Ich entschließe mich zum Studium. Ich verabrede mich mit dem Professor. Die Karriere ist wichtig. Das Diplom ist fertig. Das Vertrauen ist klar. Mit freundlichen Grüßen Der Intensivkurs beginnt morgen. Der Wissenschaftler arbeitet hier.",
+      "ar": "أهتم بالعائلة. أركّز على العمل. أُقرّر الدراسة. أتواعد مع الأستاذ. المسار المهني مهم. الشهادة جاهزة. الثقة واضحة. مع تحياتي الخالصة. الدورة المكثّفة تبدأ غداً. العالم يعمل هنا."
     },
     "srsBundleWordIds": [
       "sorgen",
@@ -591,7 +701,9 @@
       "sinn",
       "wert",
       "bedeutung",
-      "vertrauen"
+      "vertrauen",
+      "intensivkurs",
+      "wissenschaftler"
     ],
     "warningCards": [
       {
@@ -676,7 +788,9 @@
     "word-sinn",
     "word-wert",
     "word-bedeutung",
-    "word-vertrauen"
+    "word-vertrauen",
+    "word-intensivkurs",
+    "word-wissenschaftler"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -694,7 +808,9 @@
       "sinn",
       "wert",
       "bedeutung",
-      "vertrauen"
+      "vertrauen",
+      "intensivkurs",
+      "wissenschaftler"
     ]
   }
 }

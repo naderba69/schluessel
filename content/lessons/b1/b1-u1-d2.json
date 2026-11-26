@@ -11,7 +11,7 @@
   },
   "canDoDaily": [
     "يصف طريقه إلى العمل بالتفصيل (متى؟! + لماذا؟! + كيف؟! + أين؟! بالترتيب!)",
-    "يستخدم entlang (Genitiv!) وwegen (Genitiv!) وmeinetwegen في جملة صحيحة!"
+    "يستخدم entlang (الجرّ!) وwegen (الجرّ!) وmeinetwegen في جملة صحيحة!"
   ],
   "warmup": {
     "cardIds": [
@@ -66,7 +66,9 @@
       "umgebung",
       "treten",
       "billett",
-      "meinetwegen"
+      "meinetwegen",
+      "fahrzeug",
+      "fussgaenger"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Morgen fahre ich entlang der Straße mit dem Rad zur Arbeit.",
+        "de": "Morgen fahre ich entlang der Straße mit dem Rad zur Arbeit. Das Fahrzeug ist neu. Der Fußgänger geht langsam.",
         "ar": "يصف طريقه إلى العمل بالتفصيل — بالترتيب الألماني المثالي!"
       },
       "situation": {
@@ -92,8 +94,8 @@
       },
       "successCriteria": [
         "يصف الطريق بـ8 جمل (متى؟! + لماذا؟! + كيف؟! + أين؟! + entlang! + Rückfahrt! + Gefahr! + Billett!)",
-        "يستخدم الجديد (13 كلمة! + TeKaMoLo بـV2!)",
-        "يرتّب (Te-Ka-Mo-Lo!) ويسترجع (deshalb/trotzdem من d1! + kennen/hin/zurück من A1!)"
+        "يستخدم الجديد (15 كلمة! + ترتيب الجملة بـV2!)",
+        "يرتّب (ترتيب الجملة!) ويسترجع (deshalb/trotzdem من d1! + kennen/hin/zurück من A1!)"
       ]
     },
     "stations": [
@@ -176,6 +178,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Verspätung = «تأخير» · der Stau = «الازدحام المروري» · der Fahrplan = «جدول المواعيد»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المركبة",
+                "de": "das Fahrzeug"
+              },
+              {
+                "ar": "الراجل (المشاة)",
+                "de": "der Fußgänger"
+              },
+              {
+                "ar": "من أجلي",
+                "de": "meinetwegen"
+              }
+            ],
+            "why": "das Fahrzeug المركبة · der Fußgänger الراجل (المشاة) · meinetwegen من أجلي (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -183,7 +202,7 @@
         "type": "gap-fill",
         "explanationRequired": true,
         "hints": [
-          "Genitiv بعد entlang وwegen (der! / des!)",
+          "الجرّ بعد entlang وwegen (der! / des!)",
           "الفعل ثانياً بعد الزمن!",
           "الأدوات: die! / der! / das!"
         ],
@@ -196,12 +215,12 @@
           {
             "q": "Ich fahre entlang ___ Straße zur Arbeit. (بالجرّ!)",
             "a": "der",
-            "why": "بعد entlang مباشرة Genitiv! — entlang der Straße (الشارع مفرد مؤنث: die → der!)"
+            "why": "بعد entlang مباشرة الجرّ! — entlang der Straße (الشارع مفرد مؤنث: die → der!)"
           },
           {
             "q": "Wegen ___ Staus nehme ich die U-Bahn. (بالجرّ!)",
             "a": "des",
-            "why": "wegen + Genitiv! — المذكر المحايد: des Staus (وليس der Stau!)"
+            "why": "wegen + الجرّ! — المذكر المحايد: des Staus (وليس der Stau!)"
           },
           {
             "q": "Morgen ___ ich wegen des Staus früh los. (V2!)",
@@ -237,6 +256,16 @@
             "q": "Im ___ lese ich gern.",
             "a": "Zug",
             "why": "الكلمة الناقصة «Zug» تعني «قطار» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist neu. (المركبة!)",
+            "a": "Fahrzeug",
+            "why": "das Fahrzeug المركبة (das! محايد (das!) وجمعه die Fahrzeuge.) — Das Fahrzeug ist neu."
+          },
+          {
+            "q": "Der ___ geht langsam. (الراجل!)",
+            "a": "Fußgänger",
+            "why": "der Fußgänger الراجل (المشاة) (der! مذكّر (der!) وجمعه die Fußgänger (بلا تغيير!) — والمؤنث die Fußgängerin.) — Der Fußgänger geht langsam."
           }
         ]
       },
@@ -246,7 +275,7 @@
         "hints": [
           "الخطأ في ترتيب الكلمات أو في الحالة — والباقي صحيح",
           "الترتيب: متى؟ ثم لماذا؟!",
-          "entlang: Genitiv بعدها أو Akkusativ بعد الاسم!"
+          "entlang: الجرّ بعدها أو النصب بعد الاسم!"
         ],
         "interleavedWith": [
           "kommen",
@@ -262,7 +291,7 @@
           {
             "q": "~~Ich fahre entlang die Straße.~~",
             "a": "Ich fahre entlang der Straße. / Ich fahre die Straße entlang.",
-            "why": "entlang: إما Genitiv بعدها (entlang der Straße) أو Akkusativ بعد الاسم (die Straße entlang) — لا خيار ثالث!"
+            "why": "entlang: إما الجرّ بعدها (entlang der Straße) أو النصب بعد الاسم (die Straße entlang) — لا خيار ثالث!"
           },
           {
             "q": "~~Morgen ich fahre mit der U-Bahn zurück.~~",
@@ -283,6 +312,16 @@
             "q": "~~danke! — Bitte!~~",
             "a": "Danke! — Bitte!",
             "why": "الخطأ في «danke»! الصواب «Danke» — راجع القاعدة (شكراً)."
+          },
+          {
+            "q": "~~der Fahrzeug ist neu~~",
+            "a": "das Fahrzeug ist neu",
+            "why": "الألمانية: das Fahrzeug (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Fußgänger geht langsam~~",
+            "a": "der Fußgänger geht langsam",
+            "why": "الألمانية: der Fußgänger (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -302,7 +341,7 @@
           {
             "q": "احكِ لزميلك (سجّل): 8 جمل — متى؟! + U-Bahn! + entlang! + Rückfahrt! + Gefahr! + Billett! + Kontrolle! + meinetwegen!",
             "a": "Morgen fahre ich entlang der Straße mit dem Rad zur Arbeit. Meinetwegen steigst du in die U-Bahn. Die Rückfahrt dauert heute länger: Die U-Bahn hat Verspätung. Es gibt eine Kontrolle. Heute fahre ich wegen der Gefahr langsam entlang der Fahrbahn zurück. In der Schweiz sagt man Billett. Die Gegend ist ruhig. Die Umgebung gefällt mir.",
-            "why": "الوصف التفصيلي (B1): متى؟ أولاً! + entlang (Genitiv!) + القصة كاملة (Rückfahrt! Gefahr! Billett!) — 8 جمل متسلسلة كأنك تروي رحلتك!"
+            "why": "الوصف التفصيلي (B1): متى؟ أولاً! + entlang (الجرّ!) + القصة كاملة (Rückfahrt! Gefahr! Billett!) — 8 جمل متسلسلة كأنك تروي رحلتك!"
           },
           {
             "q": "كوّن جملة فيها «der Chef» («مدير») ثم تحدّث بها.",
@@ -313,6 +352,11 @@
             "q": "كوّن جملة فيها «die Entschuldigung» («عفواً») ثم تحدّث بها.",
             "a": "Entschuldigung, wo ist der Bahnhof?",
             "why": "استعمل «die Entschuldigung» («عفواً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: das Fahrzeug · der Fußgänger)",
+            "a": "Das Fahrzeug ist neu. Der Fußgänger geht langsam.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -406,6 +450,30 @@
             ],
             "a": "Gut so! Komm gesund an.",
             "why": "«مولر» في الحوار: اطمئنان"
+          },
+          {
+            "audioId": "word-fahrzeug",
+            "speakText": "das Fahrzeug.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المركبة",
+              "الراجل (المشاة)",
+              "مترو الأنفاق"
+            ],
+            "a": "المركبة",
+            "why": "الصوت يقول «das Fahrzeug» — معناها «المركبة». ركّز!"
+          },
+          {
+            "audioId": "word-fussgaenger",
+            "speakText": "der Fußgänger.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الراجل (المشاة)",
+              "المركبة",
+              "مترو الأنفاق"
+            ],
+            "a": "الراجل (المشاة)",
+            "why": "الصوت يقول «der Fußgänger» — معناها «الراجل (المشاة)». ركّز!"
           }
         ]
       },
@@ -439,6 +507,18 @@
             "speakText": "höflich.",
             "a": "höflich",
             "why": "اكتب ما تسمعه حرفياً: «höflich» تعني «مهذب». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-fahrzeug",
+            "speakText": "das Fahrzeug.",
+            "a": "das Fahrzeug",
+            "why": "اكتب ما تسمعه حرفياً: «das Fahrzeug» تعني «المركبة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-fussgaenger",
+            "speakText": "der Fußgänger.",
+            "a": "der Fußgänger",
+            "why": "اكتب ما تسمعه حرفياً: «der Fußgänger» تعني «الراجل (المشاة)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -477,6 +557,16 @@
           {
             "q": "«راكب الدراجة»؟",
             "a": "der Radfahrer"
+          },
+          {
+            "q": "Das ___ ist neu. (المركبة!)",
+            "a": "Fahrzeug",
+            "why": "das Fahrzeug المركبة (das! محايد (das!) وجمعه die Fahrzeuge.) — Das Fahrzeug ist neu."
+          },
+          {
+            "q": "Der ___ geht langsam. (الراجل!)",
+            "a": "Fußgänger",
+            "why": "der Fußgänger الراجل (المشاة) (der! مذكّر (der!) وجمعه die Fußgänger (بلا تغيير!) — والمؤنث die Fußgängerin.) — Der Fußgänger geht langsam."
           }
         ],
         "passingScore": 0.75
@@ -506,6 +596,16 @@
           {
             "q": "«راكب الدراجة»؟",
             "a": "der Radfahrer"
+          },
+          {
+            "q": "Das ___ ist neu. (المركبة!)",
+            "a": "Fahrzeug",
+            "why": "das Fahrzeug المركبة (das! محايد (das!) وجمعه die Fahrzeuge.) — Das Fahrzeug ist neu."
+          },
+          {
+            "q": "Der ___ geht langsam. (الراجل!)",
+            "a": "Fußgänger",
+            "why": "der Fußgänger الراجل (المشاة) (der! مذكّر (der!) وجمعه die Fußgänger (بلا تغيير!) — والمؤنث die Fußgängerin.) — Der Fußgänger geht langsam."
           }
         ],
         "passingScore": 0.75
@@ -535,6 +635,16 @@
           {
             "q": "«راكب الدراجة»؟",
             "a": "der Radfahrer"
+          },
+          {
+            "q": "Das ___ ist neu. (المركبة!)",
+            "a": "Fahrzeug",
+            "why": "das Fahrzeug المركبة (das! محايد (das!) وجمعه die Fahrzeuge.) — Das Fahrzeug ist neu."
+          },
+          {
+            "q": "Der ___ geht langsam. (الراجل!)",
+            "a": "Fußgänger",
+            "why": "der Fußgänger الراجل (المشاة) (der! مذكّر (der!) وجمعه die Fußgänger (بلا تغيير!) — والمؤنث die Fußgängerin.) — Der Fußgänger geht langsam."
           }
         ],
         "passingScore": 0.75
@@ -543,8 +653,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Morgen fahre ich entlang der Straße mit dem Rad zur Arbeit. Die Rückfahrt dauert heute länger: Die U-Bahn hat Verspätung. Es gibt eine Kontrolle. Heute fahre ich wegen der Gefahr langsam entlang der Fahrbahn zurück. In der Schweiz sagt man Billett. Meinetwegen fährst du mit dem Rad. Ich kenne diese Gegend. Meine Umgebung ist ruhig.",
-      "ar": "يوم وصف الطريق: غداً أذهب بالدراجة على طول الشارع إلى العمل. رحلة العودة اليوم أطول: مترو الأنفاق متأخر. هناك فحص تذاكر. اليوم أعود ببطء على طول مسار المركبات بسبب الخطر. في سويسرا يقال: التذكرة Billett. من أجلي تركب الدراجة. أنا أعرف هذا الحي. جواري هادئ."
+      "de": "Morgen fahre ich entlang der Straße mit dem Rad zur Arbeit. Die Rückfahrt dauert heute länger: Die U-Bahn hat Verspätung. Es gibt eine Kontrolle. Heute fahre ich wegen der Gefahr langsam entlang der Fahrbahn zurück. In der Schweiz sagt man Billett. Meinetwegen fährst du mit dem Rad. Ich kenne diese Gegend. Meine Umgebung ist ruhig. Das Fahrzeug ist neu. Der Fußgänger geht langsam.",
+      "ar": "يوم وصف الطريق: غداً أذهب بالدراجة على طول الشارع إلى العمل. رحلة العودة اليوم أطول: مترو الأنفاق متأخر. هناك فحص تذاكر. اليوم أعود ببطء على طول مسار المركبات بسبب الخطر. في سويسرا يقال: التذكرة Billett. من أجلي تركب الدراجة. أنا أعرف هذا الحي. جواري هادئ. المركبة جديدة. الراجل يمشي ببطء."
     },
     "srsBundleWordIds": [
       "u-bahn",
@@ -559,7 +669,9 @@
       "umgebung",
       "treten",
       "billett",
-      "meinetwegen"
+      "meinetwegen",
+      "fahrzeug",
+      "fussgaenger"
     ],
     "warningCards": [
       {
@@ -579,7 +691,7 @@
       },
       {
         "commonError": {
-          "ar": "entlang-بلا-Genitiv",
+          "ar": "entlang-بلا-الجرّ",
           "de": "~~Ich fahre entlang die Straße.~~"
         },
         "correct": {
@@ -590,7 +702,7 @@
           "q": "Ich fahre entlang ___ Straße. (der!)",
           "a": "der"
         },
-        "whyArabicSpeakerFails": "«على طول الشارع»-العربية-مضاف-إلى-بلا-حالة — والألمانية: entlang + Genitiv (der Straße!) أو الاسم أولاً + Akkusativ (die Straße entlang!) — لا خلط! (خريطة التداخل 10‑ي)."
+        "whyArabicSpeakerFails": "«على طول الشارع»-العربية-مضاف-إلى-بلا-حالة — والألمانية: entlang + الجرّ (der Straße!) أو الاسم أولاً + النصب (die Straße entlang!) — لا خلط! (خريطة التداخل 10‑ي)."
       },
       {
         "commonError": {
@@ -647,7 +759,9 @@
     "word-umgebung",
     "word-treten",
     "word-billett",
-    "word-meinetwegen"
+    "word-meinetwegen",
+    "word-fahrzeug",
+    "word-fussgaenger"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -665,7 +779,9 @@
       "umgebung",
       "treten",
       "billett",
-      "meinetwegen"
+      "meinetwegen",
+      "fahrzeug",
+      "fussgaenger"
     ]
   }
 }

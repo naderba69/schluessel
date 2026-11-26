@@ -68,7 +68,8 @@
       "bemerken",
       "einigen",
       "standpunkt",
-      "streit"
+      "streit",
+      "tankstelle"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -85,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Ich bin müde, deshalb schlafe ich früh.",
+        "de": "Ich bin müde, deshalb schlafe ich früh. Die Tankstelle ist offen.",
         "ar": "يخلط الروابط في نقاش واحد بموضعها الصحيح!"
       },
       "situation": {
@@ -203,6 +204,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: zustimmen = «يُوافق (على)» · deshalb = «لهذا السبب» · korrigieren = «يصحّح»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "محطة البنزين",
+                "de": "die Tankstelle"
+              },
+              {
+                "ar": "الشجار",
+                "de": "der Streit"
+              },
+              {
+                "ar": "وجهة النظر",
+                "de": "der Standpunkt"
+              }
+            ],
+            "why": "die Tankstelle محطة البنزين · der Streit الشجار · der Standpunkt وجهة النظر (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -259,6 +277,11 @@
             "q": "Im ___ lese ich gern.",
             "a": "Zug",
             "why": "الكلمة الناقصة «Zug» تعني «قطار» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist offen. (محطة البنزين!)",
+            "a": "Tankstelle",
+            "why": "die Tankstelle محطة البنزين (die! مركّبة (Tank+Stelle) مؤنثة (die!) وجمعها die Tankstellen.) — Die Tankstelle ist offen."
           }
         ]
       },
@@ -305,6 +328,11 @@
             "q": "~~danke! — Bitte!~~",
             "a": "Danke! — Bitte!",
             "why": "الخطأ في «danke»! الصواب «Danke» — راجع القاعدة (شكراً)."
+          },
+          {
+            "q": "~~der Tankstelle ist offen~~",
+            "a": "die Tankstelle ist offen",
+            "why": "الألمانية: die Tankstelle (die! مركّبة مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -335,6 +363,11 @@
             "q": "كوّن جملة فيها «die Entschuldigung» («عفواً») ثم تحدّث بها.",
             "a": "Entschuldigung, wo ist der Bahnhof?",
             "why": "استعمل «die Entschuldigung» («عفواً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Tankstelle)",
+            "a": "Die Tankstelle ist offen.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -428,6 +461,18 @@
             ],
             "a": "Gut. Aber schließlich muss ich schlafen!",
             "why": "«يوسف» في الحوار: موافقة + مزاح (schließlich)"
+          },
+          {
+            "audioId": "word-tankstelle",
+            "speakText": "die Tankstelle.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "محطة البنزين",
+              "أخيراً",
+              "بالمناسبة"
+            ],
+            "a": "محطة البنزين",
+            "why": "الصوت يقول «die Tankstelle» — معناها «محطة البنزين». ركّز!"
           }
         ]
       },
@@ -461,6 +506,12 @@
             "speakText": "beanstanden.",
             "a": "beanstanden",
             "why": "اكتب ما تسمعه حرفياً: «beanstanden» تعني «يعترض رسمياً». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-tankstelle",
+            "speakText": "die Tankstelle.",
+            "a": "die Tankstelle",
+            "why": "اكتب ما تسمعه حرفياً: «die Tankstelle» تعني «محطة البنزين». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -499,6 +550,11 @@
           {
             "q": "«بالمناسبة»؟",
             "a": "übrigens"
+          },
+          {
+            "q": "Die ___ ist offen. (محطة البنزين!)",
+            "a": "Tankstelle",
+            "why": "die Tankstelle محطة البنزين (die! مركّبة (Tank+Stelle) مؤنثة (die!) وجمعها die Tankstellen.) — Die Tankstelle ist offen."
           }
         ],
         "passingScore": 0.75
@@ -528,6 +584,11 @@
           {
             "q": "«بالمناسبة»؟",
             "a": "übrigens"
+          },
+          {
+            "q": "Die ___ ist offen. (محطة البنزين!)",
+            "a": "Tankstelle",
+            "why": "die Tankstelle محطة البنزين (die! مركّبة (Tank+Stelle) مؤنثة (die!) وجمعها die Tankstellen.) — Die Tankstelle ist offen."
           }
         ],
         "passingScore": 0.75
@@ -557,6 +618,11 @@
           {
             "q": "«صحيح أن»؟",
             "a": "zwar"
+          },
+          {
+            "q": "Die ___ ist offen. (محطة البنزين!)",
+            "a": "Tankstelle",
+            "why": "die Tankstelle محطة البنزين (die! مركّبة (Tank+Stelle) مؤنثة (die!) وجمعها die Tankstellen.) — Die Tankstelle ist offen."
           }
         ],
         "passingScore": 0.75
@@ -565,8 +631,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Einerseits bin ich müde, andererseits arbeite ich weiter. Zwar ist die Zeit kurz, aber ich mache weiter. Obwohl die Arbeit schwer ist, stimme ich zu. Denn ich denke nach: Das ist mein Standpunkt. Übrigens bemerke ich etwas: Er behauptet das. Schließlich fasse ich das zusammen. Das ist die Tatsache: Nach einem Streit können wir uns einigen. Insgesamt ist das genauso wichtig.",
-      "ar": "من ناحية أنا متعب، ومن ناحية أخرى أعمل مستمراً. صحيح أن الوقت قصير، لكنني أستمر. رغم أن العمل صعب، أوافق. فالأنام أفكّر: هذا موقفي. بالمناسبة ألاحظ شيئاً: هو يزعم ذلك. أخيراً أُلخّص ذلك. هذه الحقيقة: بعد شجار يمكننا الاتفاق. إجمالاً هذا مهم بنفس القدر."
+      "de": "Einerseits bin ich müde, andererseits arbeite ich weiter. Zwar ist die Zeit kurz, aber ich mache weiter. Obwohl die Arbeit schwer ist, stimme ich zu. Denn ich denke nach: Das ist mein Standpunkt. Übrigens bemerke ich etwas: Er behauptet das. Schließlich fasse ich das zusammen. Das ist die Tatsache: Nach einem Streit können wir uns einigen. Insgesamt ist das genauso wichtig. Die Tankstelle ist offen.",
+      "ar": "من ناحية أنا متعب، ومن ناحية أخرى أعمل مستمراً. صحيح أن الوقت قصير، لكنني أستمر. رغم أن العمل صعب، أوافق. فالأنام أفكّر: هذا موقفي. بالمناسبة ألاحظ شيئاً: هو يزعم ذلك. أخيراً أُلخّص ذلك. هذه الحقيقة: بعد شجار يمكننا الاتفاق. إجمالاً هذا مهم بنفس القدر. محطة البنزين مفتوحة."
     },
     "srsBundleWordIds": [
       "schliesslich",
@@ -583,7 +649,8 @@
       "bemerken",
       "einigen",
       "standpunkt",
-      "streit"
+      "streit",
+      "tankstelle"
     ],
     "warningCards": [
       {
@@ -673,7 +740,8 @@
     "word-bemerken",
     "word-einigen",
     "word-standpunkt",
-    "word-streit"
+    "word-streit",
+    "word-tankstelle"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -693,7 +761,8 @@
       "bemerken",
       "einigen",
       "standpunkt",
-      "streit"
+      "streit",
+      "tankstelle"
     ]
   }
 }

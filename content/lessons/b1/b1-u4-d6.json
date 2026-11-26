@@ -55,7 +55,10 @@
   "praesentation": {
     "wordIds": [
       "betrieb",
-      "herausforderung"
+      "herausforderung",
+      "mensa",
+      "gymnastik",
+      "orchester"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -72,7 +75,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Studium oder Ausbildung: die Herausforderung ist groß!",
+        "de": "Studium oder Ausbildung: die Herausforderung ist groß! Die Mensa ist groß. Die Gymnastik macht Spaß, und das Orchester spielt heute.",
         "ar": "يلخّص قصة أسبوع التكوين في 8 جمل!"
       },
       "situation": {
@@ -166,6 +169,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: das Seminar = «الندوة» · das Diplom = «الشهادة (الجامعية)» · der Lebenslauf = «السيرة الذاتية»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المطعم الجامعي",
+                "de": "die Mensa"
+              },
+              {
+                "ar": "الجمباز · التمارين الرياضية",
+                "de": "die Gymnastik"
+              },
+              {
+                "ar": "الأوركسترا",
+                "de": "das Orchester"
+              }
+            ],
+            "why": "die Mensa المطعم الجامعي · die Gymnastik الجمباز · التمارين الرياضية · das Orchester الأوركسترا (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -216,6 +236,21 @@
             "q": "Der ___ ist gut.",
             "a": "Erfolg",
             "why": "الكلمة الناقصة «Erfolg» تعني «النجاح» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist groß. (المطعم الجامعي!)",
+            "a": "Mensa",
+            "why": "die Mensa المطعم الجامعي (die! مؤنثة (die!) وجمعها die Mensen — المطعم الجامعي! (قرض لاتيني mensa!).) — Die Mensa ist groß."
+          },
+          {
+            "q": "Die ___ macht Spaß. (الجمباز!)",
+            "a": "Gymnastik",
+            "why": "die Gymnastik الجمباز · التمارين الرياضية (die! تُستعمل عادةً بلا جمع: die Gymnastik.) — Die Gymnastik macht Spaß."
+          },
+          {
+            "q": "Das ___ spielt heute. (الأوركسترا!)",
+            "a": "Orchester",
+            "why": "das Orchester الأوركسترا (das! محايد (das!) وجمعه die Orchester (بلا تغيير!) — قرض لاتيني.) — Das Orchester spielt heute."
           }
         ]
       },
@@ -261,6 +296,21 @@
             "q": "~~Die wohnung ist neu.~~",
             "a": "Die Wohnung ist neu.",
             "why": "الخطأ في «wohnung»! الصواب «Wohnung» — راجع القاعدة (شقة)."
+          },
+          {
+            "q": "~~der Mensa ist groß~~",
+            "a": "die Mensa ist groß",
+            "why": "الألمانية: die Mensa (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Gymnastik macht Spaß~~",
+            "a": "die Gymnastik macht Spaß",
+            "why": "الألمانية: die Gymnastik (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Orchester spielt heute~~",
+            "a": "das Orchester spielt heute",
+            "why": "الألمانية: das Orchester (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -296,6 +346,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Mensa · die Gymnastik · das Orchester)",
+            "a": "Die Mensa ist groß. Die Gymnastik macht Spaß, und das Orchester spielt heute.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -375,6 +430,42 @@
             ],
             "a": "Gut! Jetzt wissen wir alles.",
             "why": "«لينا» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-mensa",
+            "speakText": "die Mensa.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المطعم الجامعي",
+              "الجمباز · التمارين الرياضية",
+              "الأوركسترا"
+            ],
+            "a": "المطعم الجامعي",
+            "why": "الصوت يقول «die Mensa» — معناها «المطعم الجامعي». ركّز!"
+          },
+          {
+            "audioId": "word-gymnastik",
+            "speakText": "die Gymnastik.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الجمباز · التمارين الرياضية",
+              "المطعم الجامعي",
+              "الأوركسترا"
+            ],
+            "a": "الجمباز · التمارين الرياضية",
+            "why": "الصوت يقول «die Gymnastik» — معناها «الجمباز · التمارين الرياضية». ركّز!"
+          },
+          {
+            "audioId": "word-orchester",
+            "speakText": "das Orchester.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الأوركسترا",
+              "المطعم الجامعي",
+              "الجمباز · التمارين الرياضية"
+            ],
+            "a": "الأوركسترا",
+            "why": "الصوت يقول «das Orchester» — معناها «الأوركسترا». ركّز!"
           }
         ]
       },
@@ -402,6 +493,24 @@
             "speakText": "die Bedeutung.",
             "a": "die Bedeutung",
             "why": "اكتب المسموع بدقة: die Bedeutung — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-mensa",
+            "speakText": "die Mensa.",
+            "a": "die Mensa",
+            "why": "اكتب ما تسمعه حرفياً: «die Mensa» تعني «المطعم الجامعي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gymnastik",
+            "speakText": "die Gymnastik.",
+            "a": "die Gymnastik",
+            "why": "اكتب ما تسمعه حرفياً: «die Gymnastik» تعني «الجمباز · التمارين الرياضية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-orchester",
+            "speakText": "das Orchester.",
+            "a": "das Orchester",
+            "why": "اكتب ما تسمعه حرفياً: «das Orchester» تعني «الأوركسترا». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -440,6 +549,21 @@
           {
             "q": "«التحدي كبير.»؟",
             "a": "Die Herausforderung ist groß."
+          },
+          {
+            "q": "Die ___ ist groß. (المطعم الجامعي!)",
+            "a": "Mensa",
+            "why": "die Mensa المطعم الجامعي (die! مؤنثة (die!) وجمعها die Mensen — المطعم الجامعي! (قرض لاتيني mensa!).) — Die Mensa ist groß."
+          },
+          {
+            "q": "Die ___ macht Spaß. (الجمباز!)",
+            "a": "Gymnastik",
+            "why": "die Gymnastik الجمباز · التمارين الرياضية (die! تُستعمل عادةً بلا جمع: die Gymnastik.) — Die Gymnastik macht Spaß."
+          },
+          {
+            "q": "Das ___ spielt heute. (الأوركسترا!)",
+            "a": "Orchester",
+            "why": "das Orchester الأوركسترا (das! محايد (das!) وجمعه die Orchester (بلا تغيير!) — قرض لاتيني.) — Das Orchester spielt heute."
           }
         ],
         "passingScore": 0.75
@@ -469,6 +593,21 @@
           {
             "q": "«التحدي»؟",
             "a": "die Herausforderung"
+          },
+          {
+            "q": "Die ___ ist groß. (المطعم الجامعي!)",
+            "a": "Mensa",
+            "why": "die Mensa المطعم الجامعي (die! مؤنثة (die!) وجمعها die Mensen — المطعم الجامعي! (قرض لاتيني mensa!).) — Die Mensa ist groß."
+          },
+          {
+            "q": "Die ___ macht Spaß. (الجمباز!)",
+            "a": "Gymnastik",
+            "why": "die Gymnastik الجمباز · التمارين الرياضية (die! تُستعمل عادةً بلا جمع: die Gymnastik.) — Die Gymnastik macht Spaß."
+          },
+          {
+            "q": "Das ___ spielt heute. (الأوركسترا!)",
+            "a": "Orchester",
+            "why": "das Orchester الأوركسترا (das! محايد (das!) وجمعه die Orchester (بلا تغيير!) — قرض لاتيني.) — Das Orchester spielt heute."
           }
         ],
         "passingScore": 0.75
@@ -498,6 +637,21 @@
           {
             "q": "«التحدي»؟",
             "a": "die Herausforderung"
+          },
+          {
+            "q": "Die ___ ist groß. (المطعم الجامعي!)",
+            "a": "Mensa",
+            "why": "die Mensa المطعم الجامعي (die! مؤنثة (die!) وجمعها die Mensen — المطعم الجامعي! (قرض لاتيني mensa!).) — Die Mensa ist groß."
+          },
+          {
+            "q": "Die ___ macht Spaß. (الجمباز!)",
+            "a": "Gymnastik",
+            "why": "die Gymnastik الجمباز · التمارين الرياضية (die! تُستعمل عادةً بلا جمع: die Gymnastik.) — Die Gymnastik macht Spaß."
+          },
+          {
+            "q": "Das ___ spielt heute. (الأوركسترا!)",
+            "a": "Orchester",
+            "why": "das Orchester الأوركسترا (das! محايد (das!) وجمعه die Orchester (بلا تغيير!) — قرض لاتيني.) — Das Orchester spielt heute."
           }
         ],
         "passingScore": 0.75
@@ -506,12 +660,15 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Sehr geehrte Damen und Herren, ich lerne, um erfolgreich zu sein. Die Dauer des Studiums ist lang. Die Ausbildung im Betrieb ist besser als das Studium. Ich bin geeignet für die Arbeit. Ich sorge mich um die Familie. Die Herausforderung ist groß. Mit freundlichen Grüßen",
-      "ar": "سادة أعزاء، أتعلّم لأنجح. مدة الدراسة طويلة. التكوين في المؤسسة أفضل من الدراسة. أنا مناسب للعمل. أهتمّ بالعائلة. التحدي كبير. مع تحياتي الخالصة."
+      "de": "Sehr geehrte Damen und Herren, ich lerne, um erfolgreich zu sein. Die Dauer des Studiums ist lang. Die Ausbildung im Betrieb ist besser als das Studium. Ich bin geeignet für die Arbeit. Ich sorge mich um die Familie. Die Herausforderung ist groß. Mit freundlichen Grüßen Die Mensa ist groß. Die Gymnastik macht Spaß. Das Orchester spielt heute.",
+      "ar": "سادة أعزاء، أتعلّم لأنجح. مدة الدراسة طويلة. التكوين في المؤسسة أفضل من الدراسة. أنا مناسب للعمل. أهتمّ بالعائلة. التحدي كبير. مع تحياتي الخالصة. المطعم الجامعي كبير. الجمباز ممتع. الأوركسترا تعزف اليوم."
     },
     "srsBundleWordIds": [
       "betrieb",
-      "herausforderung"
+      "herausforderung",
+      "mensa",
+      "gymnastik",
+      "orchester"
     ],
     "warningCards": [
       {
@@ -577,14 +734,20 @@
   ],
   "audioManifestRefs": [
     "word-betrieb",
-    "word-herausforderung"
+    "word-herausforderung",
+    "word-mensa",
+    "word-gymnastik",
+    "word-orchester"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (التكوين والدراسة — التوليف)",
     "goetheWordListOverlap": [
       "betrieb",
-      "herausforderung"
+      "herausforderung",
+      "mensa",
+      "gymnastik",
+      "orchester"
     ]
   }
 }

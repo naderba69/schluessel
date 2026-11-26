@@ -66,7 +66,9 @@
       "talent",
       "lebenslauf",
       "absicht",
-      "chance"
+      "chance",
+      "kandidat",
+      "nachhilfe"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Ich bin geeignet: die Hoffnung ist klar!",
+        "de": "Ich bin geeignet: die Hoffnung ist klar! Der Kandidat lernt viel. Die Nachhilfe hilft mir.",
         "ar": "يكتب خطاباً دافعاً للدراسة!"
       },
       "situation": {
@@ -206,6 +208,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: arbeiten = «يعمل» · überzeugen = «يُقنع» · die Überzeugung = «القناعة»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المرشّح (للامتحان)",
+                "de": "der Kandidat"
+              },
+              {
+                "ar": "الدروس الخصوصية",
+                "de": "die Nachhilfe"
+              },
+              {
+                "ar": "الفرصة",
+                "de": "die Chance"
+              }
+            ],
+            "why": "der Kandidat المرشّح (للامتحان) · die Nachhilfe الدروس الخصوصية · die Chance الفرصة (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -261,6 +280,16 @@
             "q": "Ich habe auf Sonne ___.",
             "a": "gehofft",
             "why": "الكلمة الناقصة «gehofft» تعني «يأمل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ lernt viel. (المرشّح!)",
+            "a": "Kandidat",
+            "why": "der Kandidat المرشّح (للامتحان) (der! اسم n-Deklination! (der Kandidat! نظير der Student!) وجمعه die Kandidaten.) — Der Kandidat lernt viel."
+          },
+          {
+            "q": "Die ___ hilft mir. (الدروس الخصوصية!)",
+            "a": "Nachhilfe",
+            "why": "die Nachhilfe الدروس الخصوصية (die! تُستعمل عادةً بلا جمع: die Nachhilfe (الدروس الخصوصية!).) — Die Nachhilfe hilft mir."
           }
         ]
       },
@@ -306,6 +335,16 @@
             "q": "~~danke! — Bitte!~~",
             "a": "Danke! — Bitte!",
             "why": "الخطأ في «danke»! الصواب «Danke» — راجع القاعدة (شكراً)."
+          },
+          {
+            "q": "~~die Kandidat lernt viel~~",
+            "a": "der Kandidat lernt viel",
+            "why": "الألمانية: der Kandidat (der! n-Deklination!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Nachhilfe hilft mir~~",
+            "a": "die Nachhilfe hilft mir",
+            "why": "الألمانية: die Nachhilfe (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -340,6 +379,11 @@
             "q": "كوّن جملة فيها «der Arzt» («الطبيب») ثم تحدّث بها.",
             "a": "Ich gehe heute zum Arzt.",
             "why": "استعمل «der Arzt» («الطبيب») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Kandidat · die Nachhilfe)",
+            "a": "Der Kandidat lernt viel. Die Nachhilfe hilft mir.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -433,6 +477,30 @@
             ],
             "a": "Viel Erfolg!",
             "why": "«لينا» في الحوار: تشجيع"
+          },
+          {
+            "audioId": "word-kandidat",
+            "speakText": "der Kandidat.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المرشّح (للامتحان)",
+              "الدروس الخصوصية",
+              "يُقنع"
+            ],
+            "a": "المرشّح (للامتحان)",
+            "why": "الصوت يقول «der Kandidat» — معناها «المرشّح (للامتحان)». ركّز!"
+          },
+          {
+            "audioId": "word-nachhilfe",
+            "speakText": "die Nachhilfe.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الدروس الخصوصية",
+              "المرشّح (للامتحان)",
+              "يُقنع"
+            ],
+            "a": "الدروس الخصوصية",
+            "why": "الصوت يقول «die Nachhilfe» — معناها «الدروس الخصوصية». ركّز!"
           }
         ]
       },
@@ -466,6 +534,18 @@
             "speakText": "als.",
             "a": "als",
             "why": "اكتب ما تسمعه حرفياً: «als» تعني «من/مما (للفرق)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-kandidat",
+            "speakText": "der Kandidat.",
+            "a": "der Kandidat",
+            "why": "اكتب ما تسمعه حرفياً: «der Kandidat» تعني «المرشّح (للامتحان)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-nachhilfe",
+            "speakText": "die Nachhilfe.",
+            "a": "die Nachhilfe",
+            "why": "اكتب ما تسمعه حرفياً: «die Nachhilfe» تعني «الدروس الخصوصية». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -504,6 +584,16 @@
           {
             "q": "«متحمّس»؟",
             "a": "begeistert"
+          },
+          {
+            "q": "Der ___ lernt viel. (المرشّح!)",
+            "a": "Kandidat",
+            "why": "der Kandidat المرشّح (للامتحان) (der! اسم n-Deklination! (der Kandidat! نظير der Student!) وجمعه die Kandidaten.) — Der Kandidat lernt viel."
+          },
+          {
+            "q": "Die ___ hilft mir. (الدروس الخصوصية!)",
+            "a": "Nachhilfe",
+            "why": "die Nachhilfe الدروس الخصوصية (die! تُستعمل عادةً بلا جمع: die Nachhilfe (الدروس الخصوصية!).) — Die Nachhilfe hilft mir."
           }
         ],
         "passingScore": 0.75
@@ -533,6 +623,16 @@
           {
             "q": "«القناعة»؟",
             "a": "die Überzeugung"
+          },
+          {
+            "q": "Der ___ lernt viel. (المرشّح!)",
+            "a": "Kandidat",
+            "why": "der Kandidat المرشّح (للامتحان) (der! اسم n-Deklination! (der Kandidat! نظير der Student!) وجمعه die Kandidaten.) — Der Kandidat lernt viel."
+          },
+          {
+            "q": "Die ___ hilft mir. (الدروس الخصوصية!)",
+            "a": "Nachhilfe",
+            "why": "die Nachhilfe الدروس الخصوصية (die! تُستعمل عادةً بلا جمع: die Nachhilfe (الدروس الخصوصية!).) — Die Nachhilfe hilft mir."
           }
         ],
         "passingScore": 0.75
@@ -562,6 +662,16 @@
           {
             "q": "«القناعة»؟",
             "a": "die Überzeugung"
+          },
+          {
+            "q": "Der ___ lernt viel. (المرشّح!)",
+            "a": "Kandidat",
+            "why": "der Kandidat المرشّح (للامتحان) (der! اسم n-Deklination! (der Kandidat! نظير der Student!) وجمعه die Kandidaten.) — Der Kandidat lernt viel."
+          },
+          {
+            "q": "Die ___ hilft mir. (الدروس الخصوصية!)",
+            "a": "Nachhilfe",
+            "why": "die Nachhilfe الدروس الخصوصية (die! تُستعمل عادةً بلا جمع: die Nachhilfe (الدروس الخصوصية!).) — Die Nachhilfe hilft mir."
           }
         ],
         "passingScore": 0.75
@@ -570,8 +680,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Sehr geehrte Damen und Herren, ich bin geeignet für das Studium. Ich bin begeistert und verantwortlich. Ich bin flexibel und kreativ. Die Hoffnung ist klar. Die Chance ist gut. Der Lebenslauf ist dabei. Die Absicht ist klar. Mit freundlichen Grüßen",
-      "ar": "سادة أعزاء، أنا مؤهل للدراسة. أنا متحمّس ومسؤول. أنا مرن ومبدع. الأمل واضح. الفرصة جيدة. السيرة الذاتية مرفقة. النية واضحة. مع تحياتي الخالصة."
+      "de": "Sehr geehrte Damen und Herren, ich bin geeignet für das Studium. Ich bin begeistert und verantwortlich. Ich bin flexibel und kreativ. Die Hoffnung ist klar. Die Chance ist gut. Der Lebenslauf ist dabei. Die Absicht ist klar. Mit freundlichen Grüßen Der Kandidat lernt viel. Die Nachhilfe hilft mir.",
+      "ar": "سادة أعزاء، أنا مؤهل للدراسة. أنا متحمّس ومسؤول. أنا مرن ومبدع. الأمل واضح. الفرصة جيدة. السيرة الذاتية مرفقة. النية واضحة. مع تحياتي الخالصة. المرشّح يتعلّم كثيراً. الدروس الخصوصية تساعدني."
     },
     "srsBundleWordIds": [
       "ueberzeugen",
@@ -586,7 +696,9 @@
       "talent",
       "lebenslauf",
       "absicht",
-      "chance"
+      "chance",
+      "kandidat",
+      "nachhilfe"
     ],
     "warningCards": [
       {
@@ -670,7 +782,9 @@
     "word-talent",
     "word-lebenslauf",
     "word-absicht",
-    "word-chance"
+    "word-chance",
+    "word-kandidat",
+    "word-nachhilfe"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -688,7 +802,9 @@
       "talent",
       "lebenslauf",
       "absicht",
-      "chance"
+      "chance",
+      "kandidat",
+      "nachhilfe"
     ]
   }
 }

@@ -66,7 +66,9 @@
       "methode",
       "theorie",
       "system",
-      "organisation"
+      "organisation",
+      "lexikon",
+      "kuli"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Die Dauer des Studiums ist lang.",
+        "de": "Die Dauer des Studiums ist lang. Das Lexikon ist dick. Der Kuli ist blau.",
         "ar": "يصف الدراسة والأنظمة بالإضافات!"
       },
       "situation": {
@@ -94,7 +96,7 @@
         "des + s للمذكر/المحايد!",
         "der بلا s للمؤنث!",
         "von + م.غ البديل المنطوق!",
-        "كلمات اليوم الثلاث عشرة كلها!"
+        "كلمات اليوم الخمس عشرة كلها!"
       ]
     },
     "stations": [
@@ -202,6 +204,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: das Studium = «دراسة جامعية» · die Höhe = «الارتفاع» · die Breite = «العرض»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المعجم",
+                "de": "das Lexikon"
+              },
+              {
+                "ar": "القلم (الجرافيتي)",
+                "de": "der Kuli"
+              },
+              {
+                "ar": "التنظيم",
+                "de": "die Organisation"
+              }
+            ],
+            "why": "das Lexikon المعجم · der Kuli القلم (الجرافيتي) · die Organisation التنظيم (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -262,6 +281,16 @@
             "q": "Ich ___ Zeit.",
             "a": "brauche",
             "why": "الكلمة الناقصة «brauche» تعني «يحتاج» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist dick. (المعجم!)",
+            "a": "Lexikon",
+            "why": "das Lexikon المعجم (das! محايد (das!) وجمعه الشاذّ die Lexika (لا Lexikons!).) — Das Lexikon ist dick."
+          },
+          {
+            "q": "Der ___ ist blau. (القلم!)",
+            "a": "Kuli",
+            "why": "der Kuli القلم (الجرافيتي) (der! مذكّر (der!) وجمعه die Kulis (-s!) — اختصار Kugelschreiber.) — Der Kuli ist blau."
           }
         ]
       },
@@ -307,6 +336,16 @@
             "q": "~~Wie heißen Sie, Bitte?~~",
             "a": "Wie heißen Sie, bitte?",
             "why": "الخطأ في «Bitte»! الصواب «bitte» — راجع القاعدة (من فضلك / تفضّل)."
+          },
+          {
+            "q": "~~der Lexikon ist dick~~",
+            "a": "das Lexikon ist dick",
+            "why": "الألمانية: das Lexikon (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Kuli ist blau~~",
+            "a": "der Kuli ist blau",
+            "why": "الألمانية: der Kuli (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -342,6 +381,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: das Lexikon · der Kuli)",
+            "a": "Das Lexikon ist dick. Der Kuli ist blau.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -435,6 +479,30 @@
             ],
             "a": "Ja! Der Weg ist das Ziel.",
             "why": "«يوسف» في الحوار: خلاصة"
+          },
+          {
+            "audioId": "word-lexikon",
+            "speakText": "das Lexikon.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المعجم",
+              "القلم (الجرافيتي)",
+              "الارتفاع"
+            ],
+            "a": "المعجم",
+            "why": "الصوت يقول «das Lexikon» — معناها «المعجم». ركّز!"
+          },
+          {
+            "audioId": "word-kuli",
+            "speakText": "der Kuli.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "القلم (الجرافيتي)",
+              "المعجم",
+              "الارتفاع"
+            ],
+            "a": "القلم (الجرافيتي)",
+            "why": "الصوت يقول «der Kuli» — معناها «القلم (الجرافيتي)». ركّز!"
           }
         ]
       },
@@ -468,6 +536,18 @@
             "speakText": "das Holz.",
             "a": "das Holz",
             "why": "اكتب ما تسمعه حرفياً: «das Holz» تعني «الخشب». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-lexikon",
+            "speakText": "das Lexikon.",
+            "a": "das Lexikon",
+            "why": "اكتب ما تسمعه حرفياً: «das Lexikon» تعني «المعجم». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-kuli",
+            "speakText": "der Kuli.",
+            "a": "der Kuli",
+            "why": "اكتب ما تسمعه حرفياً: «der Kuli» تعني «القلم (الجرافيتي)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -506,6 +586,16 @@
           {
             "q": "«الطول»؟",
             "a": "die Länge"
+          },
+          {
+            "q": "Das ___ ist dick. (المعجم!)",
+            "a": "Lexikon",
+            "why": "das Lexikon المعجم (das! محايد (das!) وجمعه الشاذّ die Lexika (لا Lexikons!).) — Das Lexikon ist dick."
+          },
+          {
+            "q": "Der ___ ist blau. (القلم!)",
+            "a": "Kuli",
+            "why": "der Kuli القلم (الجرافيتي) (der! مذكّر (der!) وجمعه die Kulis (-s!) — اختصار Kugelschreiber.) — Der Kuli ist blau."
           }
         ],
         "passingScore": 0.75
@@ -535,6 +625,16 @@
           {
             "q": "«العرض»؟",
             "a": "die Breite"
+          },
+          {
+            "q": "Das ___ ist dick. (المعجم!)",
+            "a": "Lexikon",
+            "why": "das Lexikon المعجم (das! محايد (das!) وجمعه الشاذّ die Lexika (لا Lexikons!).) — Das Lexikon ist dick."
+          },
+          {
+            "q": "Der ___ ist blau. (القلم!)",
+            "a": "Kuli",
+            "why": "der Kuli القلم (الجرافيتي) (der! مذكّر (der!) وجمعه die Kulis (-s!) — اختصار Kugelschreiber.) — Der Kuli ist blau."
           }
         ],
         "passingScore": 0.75
@@ -564,6 +664,16 @@
           {
             "q": "«العرض»؟",
             "a": "die Breite"
+          },
+          {
+            "q": "Das ___ ist dick. (المعجم!)",
+            "a": "Lexikon",
+            "why": "das Lexikon المعجم (das! محايد (das!) وجمعه الشاذّ die Lexika (لا Lexikons!).) — Das Lexikon ist dick."
+          },
+          {
+            "q": "Der ___ ist blau. (القلم!)",
+            "a": "Kuli",
+            "why": "der Kuli القلم (الجرافيتي) (der! مذكّر (der!) وجمعه die Kulis (-s!) — اختصار Kugelschreiber.) — Der Kuli ist blau."
           }
         ],
         "passingScore": 0.75
@@ -572,8 +682,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Die Dauer des Studiums ist lang. Das Semester ist kurz. Das System der Hochschule ist klar. Die Methode der Professoren ist gut. Die Generation der Studenten lernt viel. Der Bereich der Theorie ist wichtig. Die Höhe und die Breite sind klar. Mit freundlichen Grüßen",
-      "ar": "مدة الدراسة طويلة. الفصل الدراسي قصير. نظام الجامعة واضح. منهجية الأساتذة جيدة. جيل الطلاب يتعلم كثيراً. مجال النظرية مهم. الارتفاع والعرض واضحان. مع تحياتي الخالصة."
+      "de": "Die Dauer des Studiums ist lang. Das Semester ist kurz. Das System der Hochschule ist klar. Die Methode der Professoren ist gut. Die Generation der Studenten lernt viel. Der Bereich der Theorie ist wichtig. Die Höhe und die Breite sind klar. Mit freundlichen Grüßen Das Lexikon ist dick. Der Kuli ist blau.",
+      "ar": "مدة الدراسة طويلة. الفصل الدراسي قصير. نظام الجامعة واضح. منهجية الأساتذة جيدة. جيل الطلاب يتعلم كثيراً. مجال النظرية مهم. الارتفاع والعرض واضحان. مع تحياتي الخالصة. المعجم سميك. القلم أزرق."
     },
     "srsBundleWordIds": [
       "hoehe",
@@ -588,7 +698,9 @@
       "methode",
       "theorie",
       "system",
-      "organisation"
+      "organisation",
+      "lexikon",
+      "kuli"
     ],
     "warningCards": [
       {
@@ -672,7 +784,9 @@
     "word-methode",
     "word-theorie",
     "word-system",
-    "word-organisation"
+    "word-organisation",
+    "word-lexikon",
+    "word-kuli"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -690,7 +804,9 @@
       "methode",
       "theorie",
       "system",
-      "organisation"
+      "organisation",
+      "lexikon",
+      "kuli"
     ]
   }
 }

@@ -68,7 +68,8 @@
       "aenderung",
       "art",
       "als",
-      "wie"
+      "wie",
+      "intelligenz"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -85,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Vergleich ist wichtig: besser als oder wie?",
+        "de": "Der Vergleich ist wichtig: besser als oder wie? Die Intelligenz ist wichtig.",
         "ar": "يجيب في مقابلة دراسية ويقارن مسارين!"
       },
       "situation": {
@@ -95,7 +96,7 @@
       "successCriteria": [
         "als للفرق! wie للتشبيه!",
         "Vorteile/Nachteile في المقارنة!",
-        "كلمات اليوم الخمس عشرة كلها!",
+        "كلمات اليوم الست عشرة كلها!",
         "Anrede/Gruß مهذبان!"
       ]
     },
@@ -204,6 +205,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: wegen = «بسبب» · der Vergleich = «المقارنة» · unterschiedlich = «مختلف»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الذكاء",
+                "de": "die Intelligenz"
+              },
+              {
+                "ar": "مثل",
+                "de": "wie"
+              },
+              {
+                "ar": "من/مما (للفرق)",
+                "de": "als"
+              }
+            ],
+            "why": "die Intelligenz الذكاء · wie مثل · als من/مما (للفرق) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -264,6 +282,11 @@
             "q": "Ich habe ___.",
             "a": "Zeit",
             "why": "الكلمة الناقصة «Zeit» تعني «الوقت» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الذكاء!)",
+            "a": "Intelligenz",
+            "why": "die Intelligenz الذكاء (die! تُستعمل عادةً بلا جمع: die Intelligenz.) — Die Intelligenz ist wichtig."
           }
         ]
       },
@@ -309,6 +332,11 @@
             "q": "~~Wie geht's? — Danke, Gut.~~",
             "a": "Wie geht's? — Danke, gut.",
             "why": "الخطأ في «Gut»! الصواب «gut» — راجع القاعدة (جيّد)."
+          },
+          {
+            "q": "~~der Intelligenz ist wichtig~~",
+            "a": "die Intelligenz ist wichtig",
+            "why": "الألمانية: die Intelligenz (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -344,6 +372,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Intelligenz)",
+            "a": "Die Intelligenz ist wichtig.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -437,6 +470,18 @@
             ],
             "a": "Stimmt. Aber der Vergleich hilft.",
             "why": "«لينا» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-intelligenz",
+            "speakText": "die Intelligenz.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الذكاء",
+              "المقارنة",
+              "مختلف"
+            ],
+            "a": "الذكاء",
+            "why": "الصوت يقول «die Intelligenz» — معناها «الذكاء». ركّز!"
           }
         ]
       },
@@ -470,6 +515,12 @@
             "speakText": "das System.",
             "a": "das System",
             "why": "اكتب ما تسمعه حرفياً: «das System» تعني «النظام». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-intelligenz",
+            "speakText": "die Intelligenz.",
+            "a": "die Intelligenz",
+            "why": "اكتب ما تسمعه حرفياً: «die Intelligenz» تعني «الذكاء». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -508,6 +559,11 @@
           {
             "q": "«النقيض»؟",
             "a": "der Gegensatz"
+          },
+          {
+            "q": "Die ___ ist wichtig. (الذكاء!)",
+            "a": "Intelligenz",
+            "why": "die Intelligenz الذكاء (die! تُستعمل عادةً بلا جمع: die Intelligenz.) — Die Intelligenz ist wichtig."
           }
         ],
         "passingScore": 0.75
@@ -537,6 +593,11 @@
           {
             "q": "«مختلف»؟",
             "a": "unterschiedlich"
+          },
+          {
+            "q": "Die ___ ist wichtig. (الذكاء!)",
+            "a": "Intelligenz",
+            "why": "die Intelligenz الذكاء (die! تُستعمل عادةً بلا جمع: die Intelligenz.) — Die Intelligenz ist wichtig."
           }
         ],
         "passingScore": 0.75
@@ -566,6 +627,11 @@
           {
             "q": "«مختلف»؟",
             "a": "unterschiedlich"
+          },
+          {
+            "q": "Die ___ ist wichtig. (الذكاء!)",
+            "a": "Intelligenz",
+            "why": "die Intelligenz الذكاء (die! تُستعمل عادةً بلا جمع: die Intelligenz.) — Die Intelligenz ist wichtig."
           }
         ],
         "passingScore": 0.75
@@ -574,8 +640,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Vergleich ist wichtig. Dieser Weg ist besser als der andere. Die Vorteile sind klar. Die Nachteile sind klein. Die Wege sind ähnlich. Die Entwicklung ist gut. Der Fortschritt ist wichtig. Mit freundlichen Grüßen",
-      "ar": "المقارنة مهمة. هذا الطريق أفضل من الآخر. المزايا واضحة. العيوب صغيرة. الطرق متشابهة. التطور جيد. التقدّم مهم. مع تحياتي الخالصة."
+      "de": "Der Vergleich ist wichtig. Dieser Weg ist besser als der andere. Die Vorteile sind klar. Die Nachteile sind klein. Die Wege sind ähnlich. Die Entwicklung ist gut. Der Fortschritt ist wichtig. Mit freundlichen Grüßen Die Intelligenz ist wichtig.",
+      "ar": "المقارنة مهمة. هذا الطريق أفضل من الآخر. المزايا واضحة. العيوب صغيرة. الطرق متشابهة. التطور جيد. التقدّم مهم. مع تحياتي الخالصة. الذكاء مهم."
     },
     "srsBundleWordIds": [
       "vergleich",
@@ -592,7 +658,8 @@
       "aenderung",
       "art",
       "als",
-      "wie"
+      "wie",
+      "intelligenz"
     ],
     "warningCards": [
       {
@@ -680,7 +747,8 @@
     "word-aenderung",
     "word-art",
     "word-als",
-    "word-wie"
+    "word-wie",
+    "word-intelligenz"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -700,7 +768,8 @@
       "aenderung",
       "art",
       "als",
-      "wie"
+      "wie",
+      "intelligenz"
     ]
   }
 }
