@@ -52,7 +52,10 @@
     "wordIds": [
       "rechtschreibung",
       "stil",
-      "ueberarbeiten"
+      "ueberarbeiten",
+      "ausdrucken",
+      "abbildung",
+      "analysieren"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -71,7 +74,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Die Rechtschreibung ist richtig und der Stil ist klar!",
+        "de": "Die Rechtschreibung ist richtig und der Stil ist klar! Die Abbildung ist klein. Ich drucke den Text aus und analysiere ihn.",
         "ar": "يجري محاكاة كتابة (نص ٨ جُمل!): مقدمة + جسم + خاتمة!"
       },
       "situation": {
@@ -79,7 +82,7 @@
         "ar": "موضوع واحد! ثماني جُمل! مسودة واحدة! (محاكاة الكتابة!)"
       },
       "successCriteria": [
-        "كلمات اليوم الثلاث كلها في النص!",
+        "كلمات اليوم الست كلها في النص!",
         "الانفصال: arbeitet … über! (الجزء über آخر!)",
         "مراجعة بنية النص: Einleitung ← Hauptteil ← Schluss!",
         "المفردات الثابتة: die Rechtschreibung üben! den Stil verbessern! den Text überarbeiten!"
@@ -191,6 +194,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: fließend = «ببطولة» · die Aussprache = «النطق» · spontan = «عفوياً»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يطبع (على الورق)",
+                "de": "ausdrucken"
+              },
+              {
+                "ar": "الصورة (الرسم التوضيحي)",
+                "de": "die Abbildung"
+              },
+              {
+                "ar": "يحلّل",
+                "de": "analysieren"
+              }
+            ],
+            "why": "ausdrucken يطبع (على الورق) · die Abbildung الصورة (الرسم التوضيحي) · analysieren يحلّل (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -240,6 +260,21 @@
             "q": "Die ___ ist klar.",
             "a": "Aussprache",
             "why": "الكلمة الناقصة «Aussprache» تعني «النطق» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Ich drucke den Text ___. (أطبع!)",
+            "a": "aus",
+            "why": "ausdrucken يطبع (على الورق) — Ich drucke den Text aus."
+          },
+          {
+            "q": "Die ___ ist klein. (الصورة!)",
+            "a": "Abbildung",
+            "why": "die Abbildung الصورة (الرسم التوضيحي) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Abbildung ist klein."
+          },
+          {
+            "q": "Wir ___ den Text. (نحلّل!)",
+            "a": "analysieren",
+            "why": "analysieren يحلّل — Wir analysieren den Text."
           }
         ]
       },
@@ -285,6 +320,21 @@
             "q": "~~Um zehn Uhr ist schluss.~~",
             "a": "Um zehn Uhr ist Schluss.",
             "why": "الخطأ في «schluss»! الصواب «Schluss» — راجع القاعدة (النهاية)."
+          },
+          {
+            "q": "~~Ich drucke aus den Text.~~",
+            "a": "Ich drucke den Text aus.",
+            "why": "ausdrucken فعل منفصل: الجُملة القائلة tuckt الفعل في النهاية! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Abbildung ist klein~~",
+            "a": "die Abbildung ist klein",
+            "why": "الألمانية: die Abbildung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Wir analysiert den Text.~~",
+            "a": "Wir analysieren den Text.",
+            "why": "analysieren مع wir: analysieren (لا analysiert!) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -330,6 +380,11 @@
             "q": "كوّن جملة فيها «das Komma» («الفاصلة (الرقمية)») ثم تحدّث بها.",
             "a": "Das Komma ist wichtig.",
             "why": "استعمل «das Komma» («الفاصلة (الرقمية)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم: ausdrucken · die Abbildung · analysieren)",
+            "a": "Die Abbildung ist klein. Ich drucke den Text aus und analysiere ihn.",
+            "why": "المراجعة بالكلام! كلمات اليوم الست كلها في الجُمل."
           }
         ]
       },
@@ -423,6 +478,42 @@
             ],
             "a": "Danke! Ich überarbeite alles heute.",
             "why": "«يوسف» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-ausdrucken",
+            "speakText": "ausdrucken.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يطبع (على الورق)",
+              "الصورة (الرسم التوضيحي)",
+              "يحلّل"
+            ],
+            "a": "يطبع (على الورق)",
+            "why": "الصوت يقول «ausdrucken» — معناها «يطبع (على الورق)». ركّز!"
+          },
+          {
+            "audioId": "word-abbildung",
+            "speakText": "die Abbildung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الصورة (الرسم التوضيحي)",
+              "يحلّل",
+              "يطبع (على الورق)"
+            ],
+            "a": "الصورة (الرسم التوضيحي)",
+            "why": "الصوت يقول «die Abbildung» — معناها «الصورة (الرسم التوضيحي)». ركّز!"
+          },
+          {
+            "audioId": "word-analysieren",
+            "speakText": "analysieren.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يحلّل",
+              "يطبع (على الورق)",
+              "الصورة (الرسم التوضيحي)"
+            ],
+            "a": "يحلّل",
+            "why": "الصوت يقول «analysieren» — معناها «يحلّل». ركّز!"
           }
         ]
       },
@@ -456,6 +547,24 @@
             "speakText": "die Aussprache.",
             "a": "die Aussprache",
             "why": "اكتب ما تسمعه حرفياً: «die Aussprache» تعني «النطق». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ausdrucken",
+            "speakText": "ausdrucken.",
+            "a": "ausdrucken",
+            "why": "اكتب ما تسمعه حرفياً: «ausdrucken» تعني «يطبع (على الورق)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-abbildung",
+            "speakText": "die Abbildung.",
+            "a": "die Abbildung",
+            "why": "اكتب ما تسمعه حرفياً: «die Abbildung» تعني «الصورة (الرسم التوضيحي)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-analysieren",
+            "speakText": "analysieren.",
+            "a": "analysieren",
+            "why": "اكتب ما تسمعه حرفياً: «analysieren» تعني «يحلّل». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -494,6 +603,21 @@
           {
             "q": "«الكتابة الصحيحة»؟",
             "a": "die Rechtschreibung"
+          },
+          {
+            "q": "Ich drucke den Text ___. (أطبع!)",
+            "a": "aus",
+            "why": "ausdrucken يطبع (على الورق) — Ich drucke den Text aus."
+          },
+          {
+            "q": "Die ___ ist klein. (الصورة!)",
+            "a": "Abbildung",
+            "why": "die Abbildung الصورة (الرسم التوضيحي) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Abbildung ist klein."
+          },
+          {
+            "q": "Wir ___ den Text. (نحلّل!)",
+            "a": "analysieren",
+            "why": "analysieren يحلّل — Wir analysieren den Text."
           }
         ]
       },
@@ -522,6 +646,21 @@
           {
             "q": "«الأسلوب»؟",
             "a": "der Stil"
+          },
+          {
+            "q": "Ich drucke den Text ___. (أطبع!)",
+            "a": "aus",
+            "why": "ausdrucken يطبع (على الورق) — Ich drucke den Text aus."
+          },
+          {
+            "q": "Die ___ ist klein. (الصورة!)",
+            "a": "Abbildung",
+            "why": "die Abbildung الصورة (الرسم التوضيحي) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Abbildung ist klein."
+          },
+          {
+            "q": "Wir ___ den Text. (نحلّل!)",
+            "a": "analysieren",
+            "why": "analysieren يحلّل — Wir analysieren den Text."
           }
         ]
       },
@@ -550,6 +689,21 @@
           {
             "q": "«الأسلوب»؟",
             "a": "der Stil"
+          },
+          {
+            "q": "Ich drucke den Text ___. (أطبع!)",
+            "a": "aus",
+            "why": "ausdrucken يطبع (على الورق) — Ich drucke den Text aus."
+          },
+          {
+            "q": "Die ___ ist klein. (الصورة!)",
+            "a": "Abbildung",
+            "why": "die Abbildung الصورة (الرسم التوضيحي) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Abbildung ist klein."
+          },
+          {
+            "q": "Wir ___ den Text. (نحلّل!)",
+            "a": "analysieren",
+            "why": "analysieren يحلّل — Wir analysieren den Text."
           }
         ]
       }
@@ -557,13 +711,16 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Die Rechtschreibung ist wichtig und der Stil ist klar. Er arbeitet den Text über. Der Entwurf ist kurz und die Einleitung ist klar. Der Hauptteil ist gut und der Schluss ist kurz. Er formuliert den Satz und korrigiert den Fehler. Er verbessert den Stil und schreibt einfach. Richtig ist richtig und falsch ist falsch. Das Komma ist wichtig!",
-      "ar": "الإملاء مهم والأسلوب واضح. هو يراجع النص. المسودة قصيرة والمقدمة واضحة. الجزء الرئيسي جيد والخاتمة قصيرة. يصيغ الجملة ويصحّح الخطأ. يحسّن الأسلوب ويكتب ببساطة. الصحيح صحيح والخطأ خطأ. الفاصلة مهمة!"
+      "de": "Die Rechtschreibung ist wichtig und der Stil ist klar. Er arbeitet den Text über. Der Entwurf ist kurz und die Einleitung ist klar. Der Hauptteil ist gut und der Schluss ist kurz. Er formuliert den Satz und korrigiert den Fehler. Er verbessert den Stil und schreibt einfach. Richtig ist richtig und falsch ist falsch. Das Komma ist wichtig! Ich drucke den Text aus. Die Abbildung ist klein. Wir analysieren den Text.",
+      "ar": "الإملاء مهم والأسلوب واضح. هو يراجع النص. المسودة قصيرة والمقدمة واضحة. الجزء الرئيسي جيد والخاتمة قصيرة. يصيغ الجملة ويصحّح الخطأ. يحسّن الأسلوب ويكتب ببساطة. الصحيح صحيح والخطأ خطأ. الفاصلة مهمة! أطبع النصّ. الصورة صغيرة. نحن نحلّل النصّ."
     },
     "srsBundleWordIds": [
       "rechtschreibung",
       "stil",
-      "ueberarbeiten"
+      "ueberarbeiten",
+      "ausdrucken",
+      "abbildung",
+      "analysieren"
     ],
     "warningCards": [
       {
@@ -627,7 +784,10 @@
   "audioManifestRefs": [
     "word-rechtschreibung",
     "word-stil",
-    "word-ueberarbeiten"
+    "word-ueberarbeiten",
+    "word-ausdrucken",
+    "word-abbildung",
+    "word-analysieren"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -635,7 +795,10 @@
     "goetheWordListOverlap": [
       "rechtschreibung",
       "stil",
-      "ueberarbeiten"
+      "ueberarbeiten",
+      "ausdrucken",
+      "abbildung",
+      "analysieren"
     ]
   }
 }

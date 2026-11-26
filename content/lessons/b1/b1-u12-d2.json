@@ -52,7 +52,10 @@
     "wordIds": [
       "zeitplan",
       "einteilen",
-      "disziplin"
+      "disziplin",
+      "anstrengend",
+      "augenblick",
+      "anfangs"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -71,7 +74,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Zeitplan ist wichtig und die Disziplin ist gut!",
+        "de": "Der Zeitplan ist wichtig und die Disziplin ist gut! Anfangs war der Tag anstrengend. Aber jeder Augenblick ist wichtig.",
         "ar": "يقسّم وقت امتحانه (٥٠٪!) في جدول ويتحدث عنه!"
       },
       "situation": {
@@ -79,7 +82,7 @@
         "ar": "ثلاث مهام! جدول واحد! خمسون بالمئة! (إدارة الوقت!)"
       },
       "successCriteria": [
-        "كلمات اليوم الثلاث كلها في الجدول!",
+        "كلمات اليوم الست كلها في الجدول!",
         "الانفصال: teilt … ein! (الجزء ein آخر!)",
         "مراجعة القواعد: trotzdem/obwohl والمرتبة الثانية!",
         "المواعيد: pünktlich! rechtzeitig! (كلمات مُدرَّسة!)"
@@ -187,6 +190,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: der Wortschatz = «المفردات» · das Zertifikat = «الشهادة» · der Zeitplan = «جدول الوقت»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "مرهق · شاقّ",
+                "de": "anstrengend"
+              },
+              {
+                "ar": "اللحظة",
+                "de": "der Augenblick"
+              },
+              {
+                "ar": "في البداية · أول الأمر",
+                "de": "anfangs"
+              }
+            ],
+            "why": "anstrengend مرهق · شاقّ · der Augenblick اللحظة · anfangs في البداية · أول الأمر (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -236,6 +256,21 @@
             "q": "Das ___ ist wichtig.",
             "a": "Zertifikat",
             "why": "الكلمة الناقصة «Zertifikat» تعني «الشهادة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der Tag ist ___. (مرهق!)",
+            "a": "anstrengend",
+            "why": "anstrengend مرهق · شاقّ — Der Tag ist anstrengend."
+          },
+          {
+            "q": "Der ___ ist wichtig. (اللحظة!)",
+            "a": "Augenblick",
+            "why": "der Augenblick اللحظة (der! مذكّر (der!) وجمعه die Augenblicke (بلا تغيير الجذر!).) — Der Augenblick ist wichtig."
+          },
+          {
+            "q": "___ war es schwer. (في البداية!)",
+            "a": "Anfangs",
+            "why": "anfangs في البداية · أول الأمر — Anfangs war es schwer."
           }
         ]
       },
@@ -281,6 +316,21 @@
             "q": "~~Die reihenfolge ist klar.~~",
             "a": "Die Reihenfolge ist klar.",
             "why": "الخطأ في «reihenfolge»! الصواب «Reihenfolge» — راجع القاعدة (الترتيب)."
+          },
+          {
+            "q": "~~Der Tag ist anstrengende.~~",
+            "a": "Der Tag ist anstrengend.",
+            "why": "anstrengend صفة بعد ist تبقى بلا لاحقة! (لا anstrengende!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Augenblick ist wichtig~~",
+            "a": "der Augenblick ist wichtig",
+            "why": "الألمانية: der Augenblick (der! -e مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Anfang war es schwer.~~",
+            "a": "Anfangs war es schwer.",
+            "why": "anfangs الظرف (في البداية!) بحرف s — لا «Anfang» (الاسم!) هنا! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -326,6 +376,11 @@
             "q": "كوّن جملة فيها «die Pause» («استراحة») ثم تحدّث بها.",
             "a": "Die Pause ist kurz: zehn Minuten.",
             "why": "استعمل «die Pause» («استراحة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم: anstrengend · der Augenblick · anfangs)",
+            "a": "Anfangs war der Tag anstrengend. Aber jeder Augenblick ist wichtig.",
+            "why": "المراجعة بالكلام! كلمات اليوم الست كلها في الجُمل."
           }
         ]
       },
@@ -419,6 +474,42 @@
             ],
             "a": "Danke! Heute beginne ich.",
             "why": "«يوسف» في الحوار: عزم"
+          },
+          {
+            "audioId": "word-anstrengend",
+            "speakText": "anstrengend.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "مرهق · شاقّ",
+              "اللحظة",
+              "في البداية · أول الأمر"
+            ],
+            "a": "مرهق · شاقّ",
+            "why": "الصوت يقول «anstrengend» — معناها «مرهق · شاقّ». ركّز!"
+          },
+          {
+            "audioId": "word-augenblick",
+            "speakText": "der Augenblick.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "اللحظة",
+              "في البداية · أول الأمر",
+              "مرهق · شاقّ"
+            ],
+            "a": "اللحظة",
+            "why": "الصوت يقول «der Augenblick» — معناها «اللحظة». ركّز!"
+          },
+          {
+            "audioId": "word-anfangs",
+            "speakText": "anfangs.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "في البداية · أول الأمر",
+              "مرهق · شاقّ",
+              "اللحظة"
+            ],
+            "a": "في البداية · أول الأمر",
+            "why": "الصوت يقول «anfangs» — معناها «في البداية · أول الأمر». ركّز!"
           }
         ]
       },
@@ -452,6 +543,24 @@
             "speakText": "das Zertifikat.",
             "a": "das Zertifikat",
             "why": "اكتب ما تسمعه حرفياً: «das Zertifikat» تعني «الشهادة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-anstrengend",
+            "speakText": "anstrengend.",
+            "a": "anstrengend",
+            "why": "اكتب ما تسمعه حرفياً: «anstrengend» تعني «مرهق · شاقّ». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-augenblick",
+            "speakText": "der Augenblick.",
+            "a": "der Augenblick",
+            "why": "اكتب ما تسمعه حرفياً: «der Augenblick» تعني «اللحظة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-anfangs",
+            "speakText": "anfangs.",
+            "a": "anfangs",
+            "why": "اكتب ما تسمعه حرفياً: «anfangs» تعني «في البداية · أول الأمر». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -490,6 +599,21 @@
           {
             "q": "«البرنامج الزمني»؟",
             "a": "der Zeitplan"
+          },
+          {
+            "q": "Der Tag ist ___. (مرهق!)",
+            "a": "anstrengend",
+            "why": "anstrengend مرهق · شاقّ — Der Tag ist anstrengend."
+          },
+          {
+            "q": "Der ___ ist wichtig. (اللحظة!)",
+            "a": "Augenblick",
+            "why": "der Augenblick اللحظة (der! مذكّر (der!) وجمعه die Augenblicke (بلا تغيير الجذر!).) — Der Augenblick ist wichtig."
+          },
+          {
+            "q": "___ war es schwer. (في البداية!)",
+            "a": "Anfangs",
+            "why": "anfangs في البداية · أول الأمر — Anfangs war es schwer."
           }
         ]
       },
@@ -518,6 +642,21 @@
           {
             "q": "«يقسّم»؟",
             "a": "einteilen"
+          },
+          {
+            "q": "Der Tag ist ___. (مرهق!)",
+            "a": "anstrengend",
+            "why": "anstrengend مرهق · شاقّ — Der Tag ist anstrengend."
+          },
+          {
+            "q": "Der ___ ist wichtig. (اللحظة!)",
+            "a": "Augenblick",
+            "why": "der Augenblick اللحظة (der! مذكّر (der!) وجمعه die Augenblicke (بلا تغيير الجذر!).) — Der Augenblick ist wichtig."
+          },
+          {
+            "q": "___ war es schwer. (في البداية!)",
+            "a": "Anfangs",
+            "why": "anfangs في البداية · أول الأمر — Anfangs war es schwer."
           }
         ]
       },
@@ -546,6 +685,21 @@
           {
             "q": "«يقسّم»؟",
             "a": "einteilen"
+          },
+          {
+            "q": "Der Tag ist ___. (مرهق!)",
+            "a": "anstrengend",
+            "why": "anstrengend مرهق · شاقّ — Der Tag ist anstrengend."
+          },
+          {
+            "q": "Der ___ ist wichtig. (اللحظة!)",
+            "a": "Augenblick",
+            "why": "der Augenblick اللحظة (der! مذكّر (der!) وجمعه die Augenblicke (بلا تغيير الجذر!).) — Der Augenblick ist wichtig."
+          },
+          {
+            "q": "___ war es schwer. (في البداية!)",
+            "a": "Anfangs",
+            "why": "anfangs في البداية · أول الأمر — Anfangs war es schwer."
           }
         ]
       }
@@ -553,13 +707,16 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Zeitplan ist wichtig und die Disziplin ist gut. Er teilt die Zeit ein. Er kommt pünktlich und rechtzeitig. Die Reihenfolge ist klar. Die Uhr zeigt die Zeit und die Minute ist kurz. Die Stunde ist lang und die Woche ist schnell. Die Konzentration ist gut und die Pause ist wichtig. Die Ruhe ist da. Trotzdem ist die Zeit kurz!",
-      "ar": "جدول الوقت مهم والانضباط جيد. هو يقسّم الوقت. يأتي بالموعد وفي الوقت المناسب. الترتيب واضح. الساعة تُظهر الوقت والدقيقة قصيرة. الساعة (الزمن) طويلة والأسبوع سريع. التركيز جيد والاستراحة مهمة. الراحة موجودة. ومع ذلك الوقت قصير!"
+      "de": "Der Zeitplan ist wichtig und die Disziplin ist gut. Er teilt die Zeit ein. Er kommt pünktlich und rechtzeitig. Die Reihenfolge ist klar. Die Uhr zeigt die Zeit und die Minute ist kurz. Die Stunde ist lang und die Woche ist schnell. Die Konzentration ist gut und die Pause ist wichtig. Die Ruhe ist da. Trotzdem ist die Zeit kurz! Der Tag ist anstrengend. Der Augenblick ist wichtig. Anfangs war es schwer.",
+      "ar": "جدول الوقت مهم والانضباط جيد. هو يقسّم الوقت. يأتي بالموعد وفي الوقت المناسب. الترتيب واضح. الساعة تُظهر الوقت والدقيقة قصيرة. الساعة (الزمن) طويلة والأسبوع سريع. التركيز جيد والاستراحة مهمة. الراحة موجودة. ومع ذلك الوقت قصير! اليوم مرهق. اللحظة مهمة. في البداية كان الأمر صعباً."
     },
     "srsBundleWordIds": [
       "zeitplan",
       "einteilen",
-      "disziplin"
+      "disziplin",
+      "anstrengend",
+      "augenblick",
+      "anfangs"
     ],
     "warningCards": [
       {
@@ -623,7 +780,10 @@
   "audioManifestRefs": [
     "word-zeitplan",
     "word-einteilen",
-    "word-disziplin"
+    "word-disziplin",
+    "word-anstrengend",
+    "word-augenblick",
+    "word-anfangs"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -631,7 +791,10 @@
     "goetheWordListOverlap": [
       "zeitplan",
       "einteilen",
-      "disziplin"
+      "disziplin",
+      "anstrengend",
+      "augenblick",
+      "anfangs"
     ]
   }
 }

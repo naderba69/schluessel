@@ -52,7 +52,10 @@
     "wordIds": [
       "wortschatz",
       "zertifikat",
-      "konzentration"
+      "konzentration",
+      "abschreiben",
+      "aufforderung",
+      "akzeptieren"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -70,7 +73,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Wortschatz ist groß und die Konzentration ist gut!",
+        "de": "Der Wortschatz ist groß und die Konzentration ist gut! Die Aufforderung ist klar, und ich akzeptiere sie. Abschreiben ist nicht erlaubt.",
         "ar": "يُراجع ١٥ كلمة متراكمة من كل الوحدات في جُمل!"
       },
       "situation": {
@@ -78,7 +81,7 @@
         "ar": "إحدى عشرة وحدة! مفردات واحدة! هدف واحد! (المراجعة الأولى!)"
       },
       "successCriteria": [
-        "كلمات اليوم الثلاث كلها في المراجعة!",
+        "كلمات اليوم الست كلها في المراجعة!",
         "١٥ كلمة متراكمة من وحدات سابقة في جُمل!",
         "الروابط من الوحدة الأولى: deshalb! trotzdem! (المرتبة الثانية!)",
         "المفردات الثابتة: den Wortschatz wiederholen! das Zertifikat bekommen!"
@@ -190,6 +193,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: der Zusammenhalt = «التماسك» · die Erfüllung = «الرضا» · verwirklichen = «يحقّق»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "ينسخ (من النصّ)",
+                "de": "abschreiben"
+              },
+              {
+                "ar": "الدعوة (إلى عمل ما)",
+                "de": "die Aufforderung"
+              },
+              {
+                "ar": "يقبل (بشيء)",
+                "de": "akzeptieren"
+              }
+            ],
+            "why": "abschreiben ينسخ (من النصّ) · die Aufforderung الدعوة (إلى عمل ما) · akzeptieren يقبل (بشيء) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -239,6 +259,21 @@
             "q": "Die ___ ist groß.",
             "a": "Erfüllung",
             "why": "الكلمة الناقصة «Erfüllung» تعني «الرضا» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Er hat den Text ___. (ينسخ من النصّ!)",
+            "a": "abgeschrieben",
+            "why": "abschreiben ينسخ (من النصّ) — Abschreiben ist nicht erlaubt."
+          },
+          {
+            "q": "Die ___ ist klar. (الدعوة!)",
+            "a": "Aufforderung",
+            "why": "die Aufforderung الدعوة (إلى عمل ما) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Aufforderung ist klar."
+          },
+          {
+            "q": "Das ___ wir. (نقبل!)",
+            "a": "akzeptieren",
+            "why": "akzeptieren يقبل (بشيء) — Das akzeptieren wir."
           }
         ]
       },
@@ -284,6 +319,21 @@
             "q": "~~Ich habe zeit.~~",
             "a": "Ich habe Zeit.",
             "why": "الخطأ في «zeit»! الصواب «Zeit» — راجع القاعدة (الوقت)."
+          },
+          {
+            "q": "~~Er schreibt den Text nicht ab.~~",
+            "a": "Er schreibt den Text ab.",
+            "why": "abschreiben = ينسخ (يُلصق النصّ!) — النفي هنا يقلب المعنى! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Aufforderung ist klar~~",
+            "a": "die Aufforderung ist klar",
+            "why": "الألمانية: die Aufforderung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Das akzeptieren ich.~~",
+            "a": "Das akzeptieren wir.",
+            "why": "akzeptieren يوافق الفاعل: wir akzeptieren — لا «akzeptieren ich»! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -329,6 +379,11 @@
             "q": "كوّن جملة فيها «das Geld» («المال») ثم تحدّث بها.",
             "a": "Wie viel Geld hast du?",
             "why": "استعمل «das Geld» («المال») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم: abschreiben · die Aufforderung · akzeptieren)",
+            "a": "Die Aufforderung ist klar, und ich akzeptiere sie. Abschreiben ist nicht erlaubt.",
+            "why": "المراجعة بالكلام! كلمات اليوم الست كلها في الجُمل."
           }
         ]
       },
@@ -422,6 +477,42 @@
             ],
             "a": "Gute Arbeit! Du machst das.",
             "why": "«لينا» في الحوار: تعزيز"
+          },
+          {
+            "audioId": "word-abschreiben",
+            "speakText": "abschreiben.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "ينسخ (من النصّ)",
+              "الدعوة (إلى عمل ما)",
+              "يقبل (بشيء)"
+            ],
+            "a": "ينسخ (من النصّ)",
+            "why": "الصوت يقول «abschreiben» — معناها «ينسخ (من النصّ)». ركّز!"
+          },
+          {
+            "audioId": "word-aufforderung",
+            "speakText": "die Aufforderung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الدعوة (إلى عمل ما)",
+              "يقبل (بشيء)",
+              "ينسخ (من النصّ)"
+            ],
+            "a": "الدعوة (إلى عمل ما)",
+            "why": "الصوت يقول «die Aufforderung» — معناها «الدعوة (إلى عمل ما)». ركّز!"
+          },
+          {
+            "audioId": "word-akzeptieren",
+            "speakText": "akzeptieren.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يقبل (بشيء)",
+              "ينسخ (من النصّ)",
+              "الدعوة (إلى عمل ما)"
+            ],
+            "a": "يقبل (بشيء)",
+            "why": "الصوت يقول «akzeptieren» — معناها «يقبل (بشيء)». ركّز!"
           }
         ]
       },
@@ -455,6 +546,24 @@
             "speakText": "die Erfüllung.",
             "a": "die Erfüllung",
             "why": "اكتب ما تسمعه حرفياً: «die Erfüllung» تعني «الرضا». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-abschreiben",
+            "speakText": "abschreiben.",
+            "a": "abschreiben",
+            "why": "اكتب ما تسمعه حرفياً: «abschreiben» تعني «ينسخ (من النصّ)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-aufforderung",
+            "speakText": "die Aufforderung.",
+            "a": "die Aufforderung",
+            "why": "اكتب ما تسمعه حرفياً: «die Aufforderung» تعني «الدعوة (إلى عمل ما)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-akzeptieren",
+            "speakText": "akzeptieren.",
+            "a": "akzeptieren",
+            "why": "اكتب ما تسمعه حرفياً: «akzeptieren» تعني «يقبل (بشيء)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -493,6 +602,21 @@
           {
             "q": "«الإجازة»؟",
             "a": "das Zertifikat"
+          },
+          {
+            "q": "Er hat den Text ___. (ينسخ من النصّ!)",
+            "a": "abgeschrieben",
+            "why": "abschreiben ينسخ (من النصّ) — Abschreiben ist nicht erlaubt."
+          },
+          {
+            "q": "Die ___ ist klar. (الدعوة!)",
+            "a": "Aufforderung",
+            "why": "die Aufforderung الدعوة (إلى عمل ما) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Aufforderung ist klar."
+          },
+          {
+            "q": "Das ___ wir. (نقبل!)",
+            "a": "akzeptieren",
+            "why": "akzeptieren يقبل (بشيء) — Das akzeptieren wir."
           }
         ]
       },
@@ -521,6 +645,21 @@
           {
             "q": "«الشهادة»؟",
             "a": "das Zertifikat"
+          },
+          {
+            "q": "Er hat den Text ___. (ينسخ من النصّ!)",
+            "a": "abgeschrieben",
+            "why": "abschreiben ينسخ (من النصّ) — Abschreiben ist nicht erlaubt."
+          },
+          {
+            "q": "Die ___ ist klar. (الدعوة!)",
+            "a": "Aufforderung",
+            "why": "die Aufforderung الدعوة (إلى عمل ما) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Aufforderung ist klar."
+          },
+          {
+            "q": "Das ___ wir. (نقبل!)",
+            "a": "akzeptieren",
+            "why": "akzeptieren يقبل (بشيء) — Das akzeptieren wir."
           }
         ]
       },
@@ -549,6 +688,21 @@
           {
             "q": "«الشهادة»؟",
             "a": "das Zertifikat"
+          },
+          {
+            "q": "Er hat den Text ___. (ينسخ من النصّ!)",
+            "a": "abgeschrieben",
+            "why": "abschreiben ينسخ (من النصّ) — Abschreiben ist nicht erlaubt."
+          },
+          {
+            "q": "Die ___ ist klar. (الدعوة!)",
+            "a": "Aufforderung",
+            "why": "die Aufforderung الدعوة (إلى عمل ما) (die! -ung مؤنثة دائماً (die!) وجمعها -ungen.) — Die Aufforderung ist klar."
+          },
+          {
+            "q": "Das ___ wir. (نقبل!)",
+            "a": "akzeptieren",
+            "why": "akzeptieren يقبل (بشيء) — Das akzeptieren wir."
           }
         ]
       }
@@ -556,13 +710,16 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Wortschatz ist groß und das Zertifikat ist wichtig. Die Konzentration ist gut. Der Weg ist lang und die Arbeit ist wichtig. Die Schule ist gut und die Zeit ist kurz. Die Gesundheit ist wichtig und die Wohnung ist schön. Die Reise ist lang und das Geld ist wichtig. Die Sicherheit ist da und das Ergebnis ist gut. Das Niveau ist hoch. Deshalb übt er jeden Tag!",
-      "ar": "المفردات كبيرة والشهادة مهمة. التركيز جيد. الطريق طويل والعمل مهم. المدرسة جيدة والوقت قصير. الصحة مهمة والسكن جميل. السفر طويل والمال مهم. الأمان موجود والنتيجة جيدة. المستوى عالٍ. لذلك يتدرب كل يوم!"
+      "de": "Der Wortschatz ist groß und das Zertifikat ist wichtig. Die Konzentration ist gut. Der Weg ist lang und die Arbeit ist wichtig. Die Schule ist gut und die Zeit ist kurz. Die Gesundheit ist wichtig und die Wohnung ist schön. Die Reise ist lang und das Geld ist wichtig. Die Sicherheit ist da und das Ergebnis ist gut. Das Niveau ist hoch. Deshalb übt er jeden Tag! Abschreiben ist nicht erlaubt. Die Aufforderung ist klar. Das akzeptieren wir.",
+      "ar": "المفردات كبيرة والشهادة مهمة. التركيز جيد. الطريق طويل والعمل مهم. المدرسة جيدة والوقت قصير. الصحة مهمة والسكن جميل. السفر طويل والمال مهم. الأمان موجود والنتيجة جيدة. المستوى عالٍ. لذلك يتدرب كل يوم! النسخ (الغشّ) غير مسموح. الدعوة واضحة. نحن نقبل ذلك."
     },
     "srsBundleWordIds": [
       "wortschatz",
       "zertifikat",
-      "konzentration"
+      "konzentration",
+      "abschreiben",
+      "aufforderung",
+      "akzeptieren"
     ],
     "warningCards": [
       {
@@ -626,7 +783,10 @@
   "audioManifestRefs": [
     "word-wortschatz",
     "word-zertifikat",
-    "word-konzentration"
+    "word-konzentration",
+    "word-abschreiben",
+    "word-aufforderung",
+    "word-akzeptieren"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -634,7 +794,10 @@
     "goetheWordListOverlap": [
       "wortschatz",
       "zertifikat",
-      "konzentration"
+      "konzentration",
+      "abschreiben",
+      "aufforderung",
+      "akzeptieren"
     ]
   }
 }

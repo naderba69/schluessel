@@ -52,7 +52,10 @@
     "wordIds": [
       "fliessend",
       "aussprache",
-      "spontan"
+      "spontan",
+      "besprechen",
+      "beruhigen",
+      "begruessen"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -71,7 +74,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Er spricht fließend und die Aussprache ist klar!",
+        "de": "Er spricht fließend und die Aussprache ist klar! Ich begrüße Sie und wir besprechen den Text. Das beruhigt mich.",
         "ar": "يجري محاكاة كلام (٣ دقائق!): وصف + رأي + خاتمة!"
       },
       "situation": {
@@ -79,7 +82,7 @@
         "ar": "ثلاث دقائق! موضوع واحد! كلام حرّ! (محاكاة الكلام!)"
       },
       "successCriteria": [
-        "كلمات اليوم الثلاث كلها في المحاكاة!",
+        "كلمات اليوم الست كلها في المحاكاة!",
         "المرتبة الثانية: Spontan ANTWORTET er!",
         "مراجعة قواعد العرض والأسئلة! (Einleitung! Frage! Antwort!)",
         "المفردات الثابتة: fließend sprechen! die Aussprache üben! spontan antworten!"
@@ -187,6 +190,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: der Zeitplan = «جدول الوقت» · einteilen = «يقسّم» · die Disziplin = «الانضباط»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يناقش",
+                "de": "besprechen"
+              },
+              {
+                "ar": "يهدّئ · يطمئن",
+                "de": "beruhigen"
+              },
+              {
+                "ar": "يُحيّي · يرحّب بـ",
+                "de": "begrüßen"
+              }
+            ],
+            "why": "besprechen يناقش · beruhigen يهدّئ · يطمئن · begrüßen يُحيّي · يرحّب بـ (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -236,6 +256,21 @@
             "q": "Er ___ die Zeit ein.",
             "a": "teilt",
             "why": "الكلمة الناقصة «teilt» تعني «يقسّم» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir ___ den Text. (نناقش!)",
+            "a": "besprechen",
+            "why": "besprechen يناقش — Wir besprechen den Text."
+          },
+          {
+            "q": "Das ___ mich. (يهدّئني!)",
+            "a": "beruhigt",
+            "why": "beruhigen يهدّئ · يطمئن — Das beruhigt mich."
+          },
+          {
+            "q": "Ich ___ Sie. (أُحيّي!)",
+            "a": "begrüße",
+            "why": "begrüßen يُحيّي · يرحّب بـ — Ich begrüße Sie."
           }
         ]
       },
@@ -271,6 +306,21 @@
             "q": "~~Das publikum liest die Zeitung.~~",
             "a": "Das Publikum liest die Zeitung.",
             "why": "الخطأ في «publikum»! الصواب «Publikum» — راجع القاعدة (الجمهور)."
+          },
+          {
+            "q": "~~Wir bespricht den Text.~~",
+            "a": "Wir besprechen den Text.",
+            "why": "besprechen مع wir: besprechen (لا bespricht — تلك لـer/sie/es!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Das beruhigen mich.~~",
+            "a": "Das beruhigt mich.",
+            "why": "beruhigen مع das/es يحتاج لاحقة -t: beruhigt! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Ich begrüße dich.~~",
+            "a": "Ich begrüße Sie.",
+            "why": "begrüßen يخاطب Sie في الخطاب الرسمي (لا dich!) — «Ich begrüße Sie» (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -311,6 +361,11 @@
             "q": "كوّن جملة فيها «sicher» («متأكد») ثم تحدّث بها.",
             "a": "Ich bin sicher.",
             "why": "استعمل «sicher» («متأكد») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم: besprechen · beruhigen · begrüßen)",
+            "a": "Ich begrüße Sie und wir besprechen den Text. Das beruhigt mich.",
+            "why": "المراجعة بالكلام! كلمات اليوم الست كلها في الجُمل."
           }
         ]
       },
@@ -404,6 +459,42 @@
             ],
             "a": "Sehr gut! Fließend kommt mit der Zeit.",
             "why": "«لينا» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-besprechen",
+            "speakText": "besprechen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يناقش",
+              "يهدّئ · يطمئن",
+              "يُحيّي · يرحّب بـ"
+            ],
+            "a": "يناقش",
+            "why": "الصوت يقول «besprechen» — معناها «يناقش». ركّز!"
+          },
+          {
+            "audioId": "word-beruhigen",
+            "speakText": "beruhigen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يهدّئ · يطمئن",
+              "يُحيّي · يرحّب بـ",
+              "يناقش"
+            ],
+            "a": "يهدّئ · يطمئن",
+            "why": "الصوت يقول «beruhigen» — معناها «يهدّئ · يطمئن». ركّز!"
+          },
+          {
+            "audioId": "word-begruessen",
+            "speakText": "begrüßen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يُحيّي · يرحّب بـ",
+              "يناقش",
+              "يهدّئ · يطمئن"
+            ],
+            "a": "يُحيّي · يرحّب بـ",
+            "why": "الصوت يقول «begrüßen» — معناها «يُحيّي · يرحّب بـ». ركّز!"
           }
         ]
       },
@@ -437,6 +528,24 @@
             "speakText": "einteilen.",
             "a": "einteilen",
             "why": "اكتب ما تسمعه حرفياً: «einteilen» تعني «يقسّم». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-besprechen",
+            "speakText": "besprechen.",
+            "a": "besprechen",
+            "why": "اكتب ما تسمعه حرفياً: «besprechen» تعني «يناقش». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-beruhigen",
+            "speakText": "beruhigen.",
+            "a": "beruhigen",
+            "why": "اكتب ما تسمعه حرفياً: «beruhigen» تعني «يهدّئ · يطمئن». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-begruessen",
+            "speakText": "begrüßen.",
+            "a": "begrüßen",
+            "why": "اكتب ما تسمعه حرفياً: «begrüßen» تعني «يُحيّي · يرحّب بـ». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -475,6 +584,21 @@
           {
             "q": "«طريقة النطق»؟",
             "a": "die Aussprache"
+          },
+          {
+            "q": "Wir ___ den Text. (نناقش!)",
+            "a": "besprechen",
+            "why": "besprechen يناقش — Wir besprechen den Text."
+          },
+          {
+            "q": "Das ___ mich. (يهدّئني!)",
+            "a": "beruhigt",
+            "why": "beruhigen يهدّئ · يطمئن — Das beruhigt mich."
+          },
+          {
+            "q": "Ich ___ Sie. (أُحيّي!)",
+            "a": "begrüße",
+            "why": "begrüßen يُحيّي · يرحّب بـ — Ich begrüße Sie."
           }
         ]
       },
@@ -503,6 +627,21 @@
           {
             "q": "«النطق»؟",
             "a": "die Aussprache"
+          },
+          {
+            "q": "Wir ___ den Text. (نناقش!)",
+            "a": "besprechen",
+            "why": "besprechen يناقش — Wir besprechen den Text."
+          },
+          {
+            "q": "Das ___ mich. (يهدّئني!)",
+            "a": "beruhigt",
+            "why": "beruhigen يهدّئ · يطمئن — Das beruhigt mich."
+          },
+          {
+            "q": "Ich ___ Sie. (أُحيّي!)",
+            "a": "begrüße",
+            "why": "begrüßen يُحيّي · يرحّب بـ — Ich begrüße Sie."
           }
         ]
       },
@@ -531,6 +670,21 @@
           {
             "q": "«النطق»؟",
             "a": "die Aussprache"
+          },
+          {
+            "q": "Wir ___ den Text. (نناقش!)",
+            "a": "besprechen",
+            "why": "besprechen يناقش — Wir besprechen den Text."
+          },
+          {
+            "q": "Das ___ mich. (يهدّئني!)",
+            "a": "beruhigt",
+            "why": "beruhigen يهدّئ · يطمئن — Das beruhigt mich."
+          },
+          {
+            "q": "Ich ___ Sie. (أُحيّي!)",
+            "a": "begrüße",
+            "why": "begrüßen يُحيّي · يرحّب بـ — Ich begrüße Sie."
           }
         ]
       }
@@ -538,13 +692,16 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Er spricht fließend und die Aussprache ist klar. Er antwortet spontan. Er spricht gut und erzählt gern. Er beschreibt die Situation und der Ausdruck ist deutlich. Die Betonung ist wichtig. Das Publikum hört zu und die Sicherheit ist da. Die Ruhe ist gut. Spontan antwortet er und die Antwort ist verständlich!",
-      "ar": "هو يتحدث ببطولة والنطق واضح. يجيب عفوياً. يتحدث جيداً ويسرد بسرور. يصف الموقف والأداء واضح. التأكيد مهم. المستمعون يصغون والأمان موجود. الراحة جيدة. عفوياً يجيب والإجابة مفهومة!"
+      "de": "Er spricht fließend und die Aussprache ist klar. Er antwortet spontan. Er spricht gut und erzählt gern. Er beschreibt die Situation und der Ausdruck ist deutlich. Die Betonung ist wichtig. Das Publikum hört zu und die Sicherheit ist da. Die Ruhe ist gut. Spontan antwortet er und die Antwort ist verständlich! Wir besprechen den Text. Das beruhigt mich. Ich begrüße Sie.",
+      "ar": "هو يتحدث ببطولة والنطق واضح. يجيب عفوياً. يتحدث جيداً ويسرد بسرور. يصف الموقف والأداء واضح. التأكيد مهم. المستمعون يصغون والأمان موجود. الراحة جيدة. عفوياً يجيب والإجابة مفهومة! نحن نناقش النصّ. هذا يهدّئني. أُحيّي سيادتكم (أهلاً!)."
     },
     "srsBundleWordIds": [
       "fliessend",
       "aussprache",
-      "spontan"
+      "spontan",
+      "besprechen",
+      "beruhigen",
+      "begruessen"
     ],
     "warningCards": [
       {
@@ -608,7 +765,10 @@
   "audioManifestRefs": [
     "word-fliessend",
     "word-aussprache",
-    "word-spontan"
+    "word-spontan",
+    "word-besprechen",
+    "word-beruhigen",
+    "word-begruessen"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -616,7 +776,10 @@
     "goetheWordListOverlap": [
       "fliessend",
       "aussprache",
-      "spontan"
+      "spontan",
+      "besprechen",
+      "beruhigen",
+      "begruessen"
     ]
   }
 }

@@ -52,7 +52,10 @@
     "wordIds": [
       "anerkennung",
       "nachweisen",
-      "benoten"
+      "benoten",
+      "ausgezeichnet",
+      "befriedigend",
+      "benoetigen"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -71,7 +74,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Die Anerkennung ist wichtig und das Niveau B1 ist da!",
+        "de": "Die Anerkennung ist wichtig und das Niveau B1 ist da! Das Ergebnis ist ausgezeichnet — und das ist befriedigend. Das benötigt Zeit.",
         "ar": "يحكي عن رحلة B1: ثقافة + شهادة + تقييم!"
       },
       "situation": {
@@ -79,7 +82,7 @@
         "ar": "امتحان! شهادة! اعتراف! — المستوى B1! (الثقافة!)"
       },
       "successCriteria": [
-        "كلمات اليوم الثلاث كلها في الحكي!",
+        "كلمات اليوم الست كلها في الحكي!",
         "الانفصال: الفعل المُركَّب ينفصل والجزء الأخير يهرب آخر الجملة! والفعل ذو البادئة غير المنفصلة يُصرَّف بلا زيادة التمام!",
         "المفردات الثابتة: die Anerkennung bekommen! das Zertifikat nachweisen! die Prüfung benoten!",
         "الثقافة: معهد جوته وأوسد! (بطاقة الثقافة!)"
@@ -195,6 +198,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Rechtschreibung = «الإملاء» · der Stil = «الأسلوب» · überarbeiten = «يعيد العمل في»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "ممتاز",
+                "de": "ausgezeichnet"
+              },
+              {
+                "ar": "مُرضٍ",
+                "de": "befriedigend"
+              },
+              {
+                "ar": "يحتاج إلى",
+                "de": "benötigen"
+              }
+            ],
+            "why": "ausgezeichnet ممتاز · befriedigend مُرضٍ · benötigen يحتاج إلى (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -244,6 +264,21 @@
             "q": "Der ___ ist klar.",
             "a": "Stil",
             "why": "الكلمة الناقصة «Stil» تعني «الأسلوب» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das Ergebnis ist ___. (ممتاز!)",
+            "a": "ausgezeichnet",
+            "why": "ausgezeichnet ممتاز — Das Ergebnis ist ausgezeichnet."
+          },
+          {
+            "q": "Das ist ___. (مُرضٍ!)",
+            "a": "befriedigend",
+            "why": "befriedigend مُرضٍ — Das ist befriedigend."
+          },
+          {
+            "q": "Das ___ Zeit. (يحتاج!)",
+            "a": "benötigt",
+            "why": "benötigen يحتاج إلى — Das benötigt Zeit."
           }
         ]
       },
@@ -279,6 +314,21 @@
             "q": "~~Das niveau ist hoch.~~",
             "a": "Das Niveau ist hoch.",
             "why": "الخطأ في «niveau»! الصواب «Niveau» — راجع القاعدة (المستوى)."
+          },
+          {
+            "q": "~~Das Ergebnis ist ausgezeichnetes.~~",
+            "a": "Das Ergebnis ist ausgezeichnet.",
+            "why": "ausgezeichnet صفة الخبر بعد ist بلا لاحقة! (لا ausgezeichnetes!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Das ist befriedigende.~~",
+            "a": "Das ist befriedigend.",
+            "why": "befriedigend صفة بعد ist تبقى بلا لاحقة! (لا befriedigende!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Das benötigen Zeit.~~",
+            "a": "Das benötigt Zeit.",
+            "why": "benötigen مع das/es يحتاج لاحقة -t: benötigt! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -314,6 +364,11 @@
             "q": "اختم بتجربتك! (جملتان!)",
             "a": "Die Erfahrung ist gut. Das Niveau B1 ist da.",
             "why": "التجربة ثم المستوى! (b1-landeskunde-u12!)"
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم: ausgezeichnet · befriedigend · benötigen)",
+            "a": "Das Ergebnis ist ausgezeichnet — und das ist befriedigend. Das benötigt Zeit.",
+            "why": "المراجعة بالكلام! كلمات اليوم الست كلها في الجُمل."
           }
         ]
       },
@@ -407,6 +462,42 @@
             ],
             "a": "Das tue ich! Danke für alles.",
             "why": "«يوسف» في الحوار: امتنان"
+          },
+          {
+            "audioId": "word-ausgezeichnet",
+            "speakText": "ausgezeichnet.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "ممتاز",
+              "مُرضٍ",
+              "يحتاج إلى"
+            ],
+            "a": "ممتاز",
+            "why": "الصوت يقول «ausgezeichnet» — معناها «ممتاز». ركّز!"
+          },
+          {
+            "audioId": "word-befriedigend",
+            "speakText": "befriedigend.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "مُرضٍ",
+              "يحتاج إلى",
+              "ممتاز"
+            ],
+            "a": "مُرضٍ",
+            "why": "الصوت يقول «befriedigend» — معناها «مُرضٍ». ركّز!"
+          },
+          {
+            "audioId": "word-benoetigen",
+            "speakText": "benötigen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يحتاج إلى",
+              "ممتاز",
+              "مُرضٍ"
+            ],
+            "a": "يحتاج إلى",
+            "why": "الصوت يقول «benötigen» — معناها «يحتاج إلى». ركّز!"
           }
         ]
       },
@@ -440,6 +531,24 @@
             "speakText": "der Stil.",
             "a": "der Stil",
             "why": "اكتب ما تسمعه حرفياً: «der Stil» تعني «الأسلوب». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ausgezeichnet",
+            "speakText": "ausgezeichnet.",
+            "a": "ausgezeichnet",
+            "why": "اكتب ما تسمعه حرفياً: «ausgezeichnet» تعني «ممتاز». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-befriedigend",
+            "speakText": "befriedigend.",
+            "a": "befriedigend",
+            "why": "اكتب ما تسمعه حرفياً: «befriedigend» تعني «مُرضٍ». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-benoetigen",
+            "speakText": "benötigen.",
+            "a": "benötigen",
+            "why": "اكتب ما تسمعه حرفياً: «benötigen» تعني «يحتاج إلى». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -478,6 +587,21 @@
           {
             "q": "«يُقيّم بدرجة»؟",
             "a": "benoten"
+          },
+          {
+            "q": "Das Ergebnis ist ___. (ممتاز!)",
+            "a": "ausgezeichnet",
+            "why": "ausgezeichnet ممتاز — Das Ergebnis ist ausgezeichnet."
+          },
+          {
+            "q": "Das ist ___. (مُرضٍ!)",
+            "a": "befriedigend",
+            "why": "befriedigend مُرضٍ — Das ist befriedigend."
+          },
+          {
+            "q": "Das ___ Zeit. (يحتاج!)",
+            "a": "benötigt",
+            "why": "benötigen يحتاج إلى — Das benötigt Zeit."
           }
         ]
       },
@@ -506,6 +630,21 @@
           {
             "q": "«يُثبت»؟",
             "a": "nachweisen"
+          },
+          {
+            "q": "Das Ergebnis ist ___. (ممتاز!)",
+            "a": "ausgezeichnet",
+            "why": "ausgezeichnet ممتاز — Das Ergebnis ist ausgezeichnet."
+          },
+          {
+            "q": "Das ist ___. (مُرضٍ!)",
+            "a": "befriedigend",
+            "why": "befriedigend مُرضٍ — Das ist befriedigend."
+          },
+          {
+            "q": "Das ___ Zeit. (يحتاج!)",
+            "a": "benötigt",
+            "why": "benötigen يحتاج إلى — Das benötigt Zeit."
           }
         ]
       },
@@ -534,6 +673,21 @@
           {
             "q": "«يُثبت»؟",
             "a": "nachweisen"
+          },
+          {
+            "q": "Das Ergebnis ist ___. (ممتاز!)",
+            "a": "ausgezeichnet",
+            "why": "ausgezeichnet ممتاز — Das Ergebnis ist ausgezeichnet."
+          },
+          {
+            "q": "Das ist ___. (مُرضٍ!)",
+            "a": "befriedigend",
+            "why": "befriedigend مُرضٍ — Das ist befriedigend."
+          },
+          {
+            "q": "Das ___ Zeit. (يحتاج!)",
+            "a": "benötigt",
+            "why": "benötigen يحتاج إلى — Das benötigt Zeit."
           }
         ]
       }
@@ -541,13 +695,16 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Die Anerkennung ist wichtig und die Prüfung ist offiziell. Er weist das Zertifikat nach und der Lehrer benotet die Prüfung. Das Niveau B1 ist da und die Note ist gut. Die Kultur ist bekannt und die Tradition ist international. Die Erfahrung ist wichtig und die Prüfung hat eine Note. Die Anerkennung bekommt man mit dem Zertifikat!",
-      "ar": "الاعتراف مهم والامتحان رسمي. هو يُثبت الشهادة والمعلّم يُقيّم الامتحان بدرجة. المستوى B1 حاضر والدرجة جيدة. الثقافة معروفة والتقليد دولي. الخبرة مهمة والامتحان له درجة. الاعتراف يُنال بالشهادة!"
+      "de": "Die Anerkennung ist wichtig und die Prüfung ist offiziell. Er weist das Zertifikat nach und der Lehrer benotet die Prüfung. Das Niveau B1 ist da und die Note ist gut. Die Kultur ist bekannt und die Tradition ist international. Die Erfahrung ist wichtig und die Prüfung hat eine Note. Die Anerkennung bekommt man mit dem Zertifikat! Das Ergebnis ist ausgezeichnet. Das ist befriedigend. Das benötigt Zeit.",
+      "ar": "الاعتراف مهم والامتحان رسمي. هو يُثبت الشهادة والمعلّم يُقيّم الامتحان بدرجة. المستوى B1 حاضر والدرجة جيدة. الثقافة معروفة والتقليد دولي. الخبرة مهمة والامتحان له درجة. الاعتراف يُنال بالشهادة! النتيجة ممتازة. هذا مُرضٍ. هذا يحتاج وقتاً."
     },
     "srsBundleWordIds": [
       "anerkennung",
       "nachweisen",
-      "benoten"
+      "benoten",
+      "ausgezeichnet",
+      "befriedigend",
+      "benoetigen"
     ],
     "warningCards": [
       {
@@ -611,7 +768,10 @@
   "audioManifestRefs": [
     "word-anerkennung",
     "word-nachweisen",
-    "word-benoten"
+    "word-benoten",
+    "word-ausgezeichnet",
+    "word-befriedigend",
+    "word-benoetigen"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -619,7 +779,10 @@
     "goetheWordListOverlap": [
       "anerkennung",
       "nachweisen",
-      "benoten"
+      "benoten",
+      "ausgezeichnet",
+      "befriedigend",
+      "benoetigen"
     ]
   }
 }

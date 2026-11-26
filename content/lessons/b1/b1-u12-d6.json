@@ -51,7 +51,10 @@
   "praesentation": {
     "wordIds": [
       "rueckblick",
-      "ausblick"
+      "ausblick",
+      "beschliessen",
+      "behalten",
+      "alltaeglich"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -76,7 +79,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Rückblick ist gut und der Ausblick ist klar!",
+        "de": "Der Rückblick ist gut und der Ausblick ist klar! Ich behalte die Wörter und wir beschließen den Kurs. Das ist alltäglich.",
         "ar": "يُلخّص رحلة B1 كاملة: الاسترجاع ثم النظرة المستقبلية!"
       },
       "situation": {
@@ -200,6 +203,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: nachweisen = «يُثبت» · benoten = «يُقيّم بدرجة» · der Rückblick = «الاسترجاع»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "يقرّر · يختم",
+                "de": "beschließen"
+              },
+              {
+                "ar": "يحتفظ بـ · يُبقي",
+                "de": "behalten"
+              },
+              {
+                "ar": "يومي · مألوف",
+                "de": "alltäglich"
+              }
+            ],
+            "why": "beschließen يقرّر · يختم · behalten يحتفظ بـ · يُبقي · alltäglich يومي · مألوف (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -243,6 +263,21 @@
             "q": "Die ___ ist bald.",
             "a": "Prüfung",
             "why": "الكلمة الناقصة «Prüfung» تعني «الامتحان» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Wir ___ den Kurs. (نختم!)",
+            "a": "beschließen",
+            "why": "beschließen يقرّر · يختم — Wir beschließen den Kurs."
+          },
+          {
+            "q": "Ich ___ die Wörter. (أحتفظ!)",
+            "a": "behalte",
+            "why": "behalten يحتفظ بـ · يُبقي — Ich behalte die Wörter."
+          },
+          {
+            "q": "Das ist ___. (مألوف!)",
+            "a": "alltäglich",
+            "why": "alltäglich يومي · مألوف — Das ist alltäglich."
           }
         ]
       },
@@ -288,6 +323,21 @@
             "q": "~~Die kultur ist gut.~~",
             "a": "Die Kultur ist gut.",
             "why": "الخطأ في «kultur»! الصواب «Kultur» — راجع القاعدة (ثقافة)."
+          },
+          {
+            "q": "~~Wir beschließen den Kurs ab.~~",
+            "a": "Wir beschließen den Kurs.",
+            "why": "beschließen فعل غير منفصل (ب-م-ش)! لا «... ab» في النهاية! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Ich behalte die Wörter nicht.~~",
+            "a": "Ich behalte die Wörter.",
+            "why": "behalten = يحتفظ (إيجابي!) — النفي هنا يقلب المعنى! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Das ist alltägliche.~~",
+            "a": "Das ist alltäglich.",
+            "why": "alltäglich صفة بعد ist تبقى بلا لاحقة! (لا alltägliche!) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -333,6 +383,11 @@
             "q": "كوّن جملة فيها «das Ziel» («وجهة») ثم تحدّث بها.",
             "a": "Mein Ziel ist Berlin.",
             "why": "استعمل «das Ziel» («وجهة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم: beschließen · behalten · alltäglich)",
+            "a": "Ich behalte die Wörter und wir beschließen den Kurs. Das ist alltäglich.",
+            "why": "المراجعة بالكلام! كلمات اليوم الست كلها في الجُمل."
           }
         ]
       },
@@ -412,6 +467,42 @@
             ],
             "a": "Und ein schöner Ausblick!",
             "why": "«لينا» في الحوار: إغلاق شعري"
+          },
+          {
+            "audioId": "word-beschliessen",
+            "speakText": "beschließen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يقرّر · يختم",
+              "يحتفظ بـ · يُبقي",
+              "يومي · مألوف"
+            ],
+            "a": "يقرّر · يختم",
+            "why": "الصوت يقول «beschließen» — معناها «يقرّر · يختم». ركّز!"
+          },
+          {
+            "audioId": "word-behalten",
+            "speakText": "behalten.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يحتفظ بـ · يُبقي",
+              "يومي · مألوف",
+              "يقرّر · يختم"
+            ],
+            "a": "يحتفظ بـ · يُبقي",
+            "why": "الصوت يقول «behalten» — معناها «يحتفظ بـ · يُبقي». ركّز!"
+          },
+          {
+            "audioId": "word-alltaeglich",
+            "speakText": "alltäglich.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "يومي · مألوف",
+              "يقرّر · يختم",
+              "يحتفظ بـ · يُبقي"
+            ],
+            "a": "يومي · مألوف",
+            "why": "الصوت يقول «alltäglich» — معناها «يومي · مألوف». ركّز!"
           }
         ]
       },
@@ -439,6 +530,24 @@
             "speakText": "nachweisen.",
             "a": "nachweisen",
             "why": "اكتب المسموع بدقة: nachweisen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-beschliessen",
+            "speakText": "beschließen.",
+            "a": "beschließen",
+            "why": "اكتب ما تسمعه حرفياً: «beschließen» تعني «يقرّر · يختم». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-behalten",
+            "speakText": "behalten.",
+            "a": "behalten",
+            "why": "اكتب ما تسمعه حرفياً: «behalten» تعني «يحتفظ بـ · يُبقي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-alltaeglich",
+            "speakText": "alltäglich.",
+            "a": "alltäglich",
+            "why": "اكتب ما تسمعه حرفياً: «alltäglich» تعني «يومي · مألوف». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -477,6 +586,21 @@
           {
             "q": "«المستقبل الواعد»؟",
             "a": "der Ausblick"
+          },
+          {
+            "q": "Wir ___ den Kurs. (نختم!)",
+            "a": "beschließen",
+            "why": "beschließen يقرّر · يختم — Wir beschließen den Kurs."
+          },
+          {
+            "q": "Ich ___ die Wörter. (أحتفظ!)",
+            "a": "behalte",
+            "why": "behalten يحتفظ بـ · يُبقي — Ich behalte die Wörter."
+          },
+          {
+            "q": "Das ist ___. (مألوف!)",
+            "a": "alltäglich",
+            "why": "alltäglich يومي · مألوف — Das ist alltäglich."
           }
         ]
       },
@@ -505,6 +629,21 @@
           {
             "q": "«النظرة المستقبلية»؟",
             "a": "der Ausblick"
+          },
+          {
+            "q": "Wir ___ den Kurs. (نختم!)",
+            "a": "beschließen",
+            "why": "beschließen يقرّر · يختم — Wir beschließen den Kurs."
+          },
+          {
+            "q": "Ich ___ die Wörter. (أحتفظ!)",
+            "a": "behalte",
+            "why": "behalten يحتفظ بـ · يُبقي — Ich behalte die Wörter."
+          },
+          {
+            "q": "Das ist ___. (مألوف!)",
+            "a": "alltäglich",
+            "why": "alltäglich يومي · مألوف — Das ist alltäglich."
           }
         ]
       },
@@ -533,6 +672,21 @@
           {
             "q": "«النظرة المستقبلية»؟",
             "a": "der Ausblick"
+          },
+          {
+            "q": "Wir ___ den Kurs. (نختم!)",
+            "a": "beschließen",
+            "why": "beschließen يقرّر · يختم — Wir beschließen den Kurs."
+          },
+          {
+            "q": "Ich ___ die Wörter. (أحتفظ!)",
+            "a": "behalte",
+            "why": "behalten يحتفظ بـ · يُبقي — Ich behalte die Wörter."
+          },
+          {
+            "q": "Das ist ___. (مألوف!)",
+            "a": "alltäglich",
+            "why": "alltäglich يومي · مألوف — Das ist alltäglich."
           }
         ]
       }
@@ -540,12 +694,15 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Rückblick ist gut und die Reise war lang. Sprechen und Schreiben sind wichtig: die Rechtschreibung ist richtig und der Stil ist klar. Die Prüfung ist offiziell und die Anerkennung ist da. Die Kultur ist bekannt und die Erfahrung ist gut. Der Ausblick ist klar und der Weg geht weiter. Das Niveau B1 ist erreicht!",
-      "ar": "الاسترجاع جيد والرحلة كانت طويلة. التحدث والكتابة مهمان: الإملاء صحيح والأسلوب واضح. الامتحان رسمي والاعتراف حاضر. الثقافة معروفة والخبرة جيدة. النظرة المستقبلية واضحة والطريق يمضي. المستوى B1 مُنال!"
+      "de": "Der Rückblick ist gut und die Reise war lang. Sprechen und Schreiben sind wichtig: die Rechtschreibung ist richtig und der Stil ist klar. Die Prüfung ist offiziell und die Anerkennung ist da. Die Kultur ist bekannt und die Erfahrung ist gut. Der Ausblick ist klar und der Weg geht weiter. Das Niveau B1 ist erreicht! Wir beschließen den Kurs. Ich behalte die Wörter. Das ist alltäglich.",
+      "ar": "الاسترجاع جيد والرحلة كانت طويلة. التحدث والكتابة مهمان: الإملاء صحيح والأسلوب واضح. الامتحان رسمي والاعتراف حاضر. الثقافة معروفة والخبرة جيدة. النظرة المستقبلية واضحة والطريق يمضي. المستوى B1 مُنال! نختم الدورة (نقرّر ختامها). أحتفظ بالكلمات. هذا مألوف (يومي)."
     },
     "srsBundleWordIds": [
       "rueckblick",
-      "ausblick"
+      "ausblick",
+      "beschliessen",
+      "behalten",
+      "alltaeglich"
     ],
     "warningCards": [
       {
@@ -614,14 +771,20 @@
   ],
   "audioManifestRefs": [
     "word-rueckblick",
-    "word-ausblick"
+    "word-ausblick",
+    "word-beschliessen",
+    "word-behalten",
+    "word-alltaeglich"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الوحدة 12: التكامل — توليف!)",
     "goetheWordListOverlap": [
       "rueckblick",
-      "ausblick"
+      "ausblick",
+      "beschliessen",
+      "behalten",
+      "alltaeglich"
     ]
   }
 }
