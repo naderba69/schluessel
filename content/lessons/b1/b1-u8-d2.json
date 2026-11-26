@@ -68,7 +68,8 @@
       "annehmen",
       "praktikant",
       "einstellen",
-      "gruessen"
+      "gruessen",
+      "personal"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -85,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Bewerbung um die Stelle als Koch!",
+        "de": "Bewerbung um die Stelle als Koch! Das Personal ist freundlich. Die Nachfrage ist groß.",
         "ar": "يكتب قالب الترشح كاملاً!"
       },
       "situation": {
@@ -93,7 +94,7 @@
         "ar": "المكتب: المحتوى! الاستفسار! المتدرّب!"
       },
       "successCriteria": [
-        "الكلمات الخمس عشرة + الصيغ الثابتة!",
+        "الكلمات الست عشرة + الصيغ الثابتة!",
         "«الموضوع بلا فعل!» (Bewerbung um die Stelle als Koch!)",
         "«التحية رسمية!» (Sehr geehrte Damen und Herren!)",
         "«المرفقات آخراً!» (Mit Lebenslauf und Zeugnis!)"
@@ -192,6 +193,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Bewerbung = «طلب (توظيف)» · der Lebenslauf = «السيرة الذاتية» · das Zeugnis = «شهادة (مدرسية)»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الموظفون · الطاقم",
+                "de": "das Personal"
+              },
+              {
+                "ar": "يحيّي",
+                "de": "grüßen"
+              },
+              {
+                "ar": "يوظّف",
+                "de": "einstellen"
+              }
+            ],
+            "why": "das Personal الموظفون · الطاقم · grüßen يحيّي · einstellen يوظّف (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -252,6 +270,11 @@
             "q": "Ich kaufe eine ___.",
             "a": "Lampe",
             "why": "الكلمة الناقصة «Lampe» تعني «مصباح» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist freundlich. (الموظفون!)",
+            "a": "Personal",
+            "why": "das Personal الموظفون · الطاقم (das! محايد (das!) ويُستعمل عادةً بلا جمع: das Personal (الموظفون جماعة!).) — Das Personal ist freundlich."
           }
         ]
       },
@@ -297,6 +320,11 @@
             "q": "~~Ein wasser, bitte!~~",
             "a": "Ein Wasser, bitte!",
             "why": "الخطأ في «wasser»! الصواب «Wasser» — راجع القاعدة (الماء)."
+          },
+          {
+            "q": "~~der Personal ist freundlich~~",
+            "a": "das Personal ist freundlich",
+            "why": "الألمانية: das Personal (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -342,6 +370,11 @@
             "q": "كوّن جملة فيها «das Kind» («الطفل») ثم تحدّث بها.",
             "a": "Das ist das Kind.",
             "why": "استعمل «das Kind» («الطفل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: das Personal)",
+            "a": "Das Personal ist freundlich. Die Nachfrage ist groß.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -435,6 +468,18 @@
             ],
             "a": "Wir melden uns bald.",
             "why": "«مولر» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-personal",
+            "speakText": "das Personal.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الموظفون · الطاقم",
+              "الاستفسار",
+              "يستلم"
+            ],
+            "a": "الموظفون · الطاقم",
+            "why": "الصوت يقول «das Personal» — معناها «الموظفون · الطاقم». ركّز!"
           }
         ]
       },
@@ -468,6 +513,12 @@
             "speakText": "die Kopie.",
             "a": "die Kopie",
             "why": "اكتب ما تسمعه حرفياً: «die Kopie» تعني «النسخة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-personal",
+            "speakText": "das Personal.",
+            "a": "das Personal",
+            "why": "اكتب ما تسمعه حرفياً: «das Personal» تعني «الموظفون · الطاقم». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -506,6 +557,11 @@
           {
             "q": "«يترقّب»؟",
             "a": "erwarten"
+          },
+          {
+            "q": "Das ___ ist freundlich. (الموظفون!)",
+            "a": "Personal",
+            "why": "das Personal الموظفون · الطاقم (das! محايد (das!) ويُستعمل عادةً بلا جمع: das Personal (الموظفون جماعة!).) — Das Personal ist freundlich."
           }
         ],
         "passingScore": 0.75
@@ -535,6 +591,11 @@
           {
             "q": "«يستلم»؟",
             "a": "erhalten"
+          },
+          {
+            "q": "Das ___ ist freundlich. (الموظفون!)",
+            "a": "Personal",
+            "why": "das Personal الموظفون · الطاقم (das! محايد (das!) ويُستعمل عادةً بلا جمع: das Personal (الموظفون جماعة!).) — Das Personal ist freundlich."
           }
         ],
         "passingScore": 0.75
@@ -564,6 +625,11 @@
           {
             "q": "«يستلم»؟",
             "a": "erhalten"
+          },
+          {
+            "q": "Das ___ ist freundlich. (الموظفون!)",
+            "a": "Personal",
+            "why": "das Personal الموظفون · الطاقم (das! محايد (das!) ويُستعمل عادةً بلا جمع: das Personal (الموظفون جماعة!).) — Das Personal ist freundlich."
           }
         ],
         "passingScore": 0.75
@@ -572,8 +638,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Bewerbung um die Stelle als Koch. Sehr geehrte Damen und Herren! Mit Interesse habe ich Ihre Anzeige gelesen. Ich erstelle den Lebenslauf. Wir erwarten den Lebenslauf. Der Chef erhält die Bewerbung. Nach der Bewerbung kommt die Nachfrage. Der Test ist mündlich. Die Teilnahme am Seminar ist gut. Nach der Lehre kommt die Fortbildung. Ich brauche einen Briefumschlag. Der Inhalt der Bewerbung ist gut. Ich lese die Beschreibung. Der Praktikant lernt viel. Der Chef erfüllt die Wünsche. Der Chef stellt den Bewerber ein. Der Chef nimmt den Bewerber an. Für Ihre Antwort danke ich Ihnen. Mit freundlichen Grüßen Mit Lebenslauf und Zeugnis.",
-      "ar": "مرحباً! ترشح لمنصب طباخ. أيها السادة والسيدات المحترمون! قرأتُ إعلانكم باهتمام. أُنشئ السيرة الذاتية. نترقّب السيرة الذاتية. الرئيس يستلم الترشح. بعد الترشح يأتي الاستفسار. الاختبار شفهي. المشاركة في الندوة جيدة. بعد التلمذة المهنية يأتي التدريب المستمر. أحتاج إلى ظرف. محتوى الترشح جيد. أقرأ الوصف. المتدرّب يتعلّم كثيراً. الرئيس يحقّق الرغبات. الرئيس يوظّف المتقدّم. الرئيس يقبل المتقدّم. أشكركم على ردّكم. مع تحياتي المخلصة! مع السيرة والشهادة."
+      "de": "Guten Tag! Bewerbung um die Stelle als Koch. Sehr geehrte Damen und Herren! Mit Interesse habe ich Ihre Anzeige gelesen. Ich erstelle den Lebenslauf. Wir erwarten den Lebenslauf. Der Chef erhält die Bewerbung. Nach der Bewerbung kommt die Nachfrage. Der Test ist mündlich. Die Teilnahme am Seminar ist gut. Nach der Lehre kommt die Fortbildung. Ich brauche einen Briefumschlag. Der Inhalt der Bewerbung ist gut. Ich lese die Beschreibung. Der Praktikant lernt viel. Der Chef erfüllt die Wünsche. Der Chef stellt den Bewerber ein. Der Chef nimmt den Bewerber an. Für Ihre Antwort danke ich Ihnen. Mit freundlichen Grüßen Mit Lebenslauf und Zeugnis. Das Personal ist freundlich.",
+      "ar": "مرحباً! ترشح لمنصب طباخ. أيها السادة والسيدات المحترمون! قرأتُ إعلانكم باهتمام. أُنشئ السيرة الذاتية. نترقّب السيرة الذاتية. الرئيس يستلم الترشح. بعد الترشح يأتي الاستفسار. الاختبار شفهي. المشاركة في الندوة جيدة. بعد التلمذة المهنية يأتي التدريب المستمر. أحتاج إلى ظرف. محتوى الترشح جيد. أقرأ الوصف. المتدرّب يتعلّم كثيراً. الرئيس يحقّق الرغبات. الرئيس يوظّف المتقدّم. الرئيس يقبل المتقدّم. أشكركم على ردّكم. مع تحياتي المخلصة! مع السيرة والشهادة. الموظفون ودودون."
     },
     "srsBundleWordIds": [
       "nachfrage",
@@ -590,7 +656,8 @@
       "annehmen",
       "praktikant",
       "einstellen",
-      "gruessen"
+      "gruessen",
+      "personal"
     ],
     "warningCards": [
       {
@@ -679,7 +746,8 @@
     "word-annehmen",
     "word-praktikant",
     "word-einstellen",
-    "word-gruessen"
+    "word-gruessen",
+    "word-personal"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -699,7 +767,8 @@
       "annehmen",
       "praktikant",
       "einstellen",
-      "gruessen"
+      "gruessen",
+      "personal"
     ]
   }
 }

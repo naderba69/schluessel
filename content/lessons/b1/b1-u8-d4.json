@@ -68,7 +68,8 @@
       "kopieren",
       "senden",
       "ansprechen",
-      "unterschrieben"
+      "unterschrieben",
+      "ordner"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -86,7 +87,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Persönliche Daten: Name, Alter, Adresse.",
+        "de": "Persönliche Daten: Name, Alter, Adresse. Der Ordner ist neu. Die Daten sind wichtig.",
         "ar": "يكتب سيرته الذاتية كاملة + خطاب الترشح!"
       },
       "situation": {
@@ -94,7 +95,7 @@
         "ar": "المكتب! البيانات! الخبرة! التوقيع!"
       },
       "successCriteria": [
-        "الكلمات الخمس عشرة + الأقسام الستة!",
+        "الكلمات الست عشرة + الأقسام الستة!",
         "«البيانات أولاً!» (Persönliche Daten: Name, Alter, Adresse.)",
         "«الخبرة بالتسمية!» (Erfahrung: Praktikum und Tätigkeit.)",
         "«الخطاب موقَّع!» (Die Bewerbung ist unterschrieben.)"
@@ -193,6 +194,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: der Bewerber = «المتقدّم للعمل» · die Lehrstelle = «مكان التلمذة» · die Kopie = «النسخة»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المجلّد",
+                "de": "der Ordner"
+              },
+              {
+                "ar": "موقَّع",
+                "de": "unterschrieben"
+              },
+              {
+                "ar": "يخاطب",
+                "de": "ansprechen"
+              }
+            ],
+            "why": "der Ordner المجلّد · unterschrieben موقَّع · ansprechen يخاطب (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -253,6 +271,11 @@
             "q": "Ich kaufe eine ___.",
             "a": "Lampe",
             "why": "الكلمة الناقصة «Lampe» تعني «مصباح» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist neu. (المجلّد!)",
+            "a": "Ordner",
+            "why": "der Ordner المجلّد (der! مذكّر (der!) وجمعه die Ordner (بلا تغيير!).) — Der Ordner ist neu."
           }
         ]
       },
@@ -298,6 +321,11 @@
             "q": "~~Ein wasser, bitte!~~",
             "a": "Ein Wasser, bitte!",
             "why": "الخطأ في «wasser»! الصواب «Wasser» — راجع القاعدة (الماء)."
+          },
+          {
+            "q": "~~die Ordner ist neu~~",
+            "a": "der Ordner ist neu",
+            "why": "الألمانية: der Ordner (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -343,6 +371,11 @@
             "q": "كوّن جملة فيها «das Kind» («الطفل») ثم تحدّث بها.",
             "a": "Das ist das Kind.",
             "why": "استعمل «das Kind» («الطفل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Ordner)",
+            "a": "Der Ordner ist neu. Die Daten sind wichtig.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -436,6 +469,18 @@
             ],
             "a": "Hier, bitte. Danke!",
             "why": "«يوسف» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-ordner",
+            "speakText": "der Ordner.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المجلّد",
+              "تاريخ الميلاد",
+              "شخصي"
+            ],
+            "a": "المجلّد",
+            "why": "الصوت يقول «der Ordner» — معناها «المجلّد». ركّز!"
           }
         ]
       },
@@ -469,6 +514,12 @@
             "speakText": "die Mobilität.",
             "a": "die Mobilität",
             "why": "اكتب ما تسمعه حرفياً: «die Mobilität» تعني «التنقّل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ordner",
+            "speakText": "der Ordner.",
+            "a": "der Ordner",
+            "why": "اكتب ما تسمعه حرفياً: «der Ordner» تعني «المجلّد». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -507,6 +558,11 @@
           {
             "q": "«البيانات»؟",
             "a": "die Daten"
+          },
+          {
+            "q": "Der ___ ist neu. (المجلّد!)",
+            "a": "Ordner",
+            "why": "der Ordner المجلّد (der! مذكّر (der!) وجمعه die Ordner (بلا تغيير!).) — Der Ordner ist neu."
           }
         ],
         "passingScore": 0.75
@@ -536,6 +592,11 @@
           {
             "q": "«شخصي»؟",
             "a": "persönlich"
+          },
+          {
+            "q": "Der ___ ist neu. (المجلّد!)",
+            "a": "Ordner",
+            "why": "der Ordner المجلّد (der! مذكّر (der!) وجمعه die Ordner (بلا تغيير!).) — Der Ordner ist neu."
           }
         ],
         "passingScore": 0.75
@@ -565,6 +626,11 @@
           {
             "q": "«شخصي»؟",
             "a": "persönlich"
+          },
+          {
+            "q": "Der ___ ist neu. (المجلّد!)",
+            "a": "Ordner",
+            "why": "der Ordner المجلّد (der! مذكّر (der!) وجمعه die Ordner (بلا تغيير!).) — Der Ordner ist neu."
           }
         ],
         "passingScore": 0.75
@@ -587,7 +653,8 @@
       "kopieren",
       "senden",
       "ansprechen",
-      "unterschrieben"
+      "unterschrieben",
+      "ordner"
     ],
     "warningCards": [
       {
@@ -637,8 +704,8 @@
       }
     ],
     "summary": {
-      "de": "Persönliche Daten: Name, Alter, Adresse. Das sind meine persönlichen Daten. Ich schreibe mein Geburtsdatum. Der Wohnort ist wichtig. Die Daten sind wichtig. Ich lese die Angaben. Ausbildung: Grundschule und Lehre. Die Grundschule ist klein. Erfahrung: Praktikum und Tätigkeit. Ich stelle meine Erfahrung dar. Ich führe die Tätigkeit auf. Kenntnisse und Fähigkeiten. Sprachen: Deutsch und Arabisch. Interessen: Musik und Sport. Die Einleitung ist kurz. Der Abschnitt über die Arbeit ist wichtig. Mit Verweis auf Ihre Anzeige schreibe ich Ihnen. Ich kopiere die Zeugnisse. Ich sende die Bewerbung. Sprechen Sie mich an! Die Bewerbung ist unterschrieben.",
-      "ar": "البيانات الشخصية: الاسم! العمر! العنوان! هذه بياناتي الشخصية. أكتب تاريخ ميلادي. مكان السكن مهمّ. البيانات مهمّة. أقرأ المعلومات. التعليم: المدرسة الابتدائية والتلمذة المهنية! المدرسة الابتدائية صغيرة. الخبرة: التدريب والنشاط! أعرض خبرتي. أذكر النشاط في القائمة. المعرفة والمهارات. اللغات: الألمانية والعربية. الاهتمامات: الموسيقى والرياضة. المقدمة قصيرة. القسم عن العمل مهمّ. في إشارة إلى إعلانكم أكتب إليكم. أُصوّر الشهادات. أُرسل الترشح. راسلوني! الترشح موقَّع."
+      "de": "Persönliche Daten: Name, Alter, Adresse. Das sind meine persönlichen Daten. Ich schreibe mein Geburtsdatum. Der Wohnort ist wichtig. Die Daten sind wichtig. Ich lese die Angaben. Ausbildung: Grundschule und Lehre. Die Grundschule ist klein. Erfahrung: Praktikum und Tätigkeit. Ich stelle meine Erfahrung dar. Ich führe die Tätigkeit auf. Kenntnisse und Fähigkeiten. Sprachen: Deutsch und Arabisch. Interessen: Musik und Sport. Die Einleitung ist kurz. Der Abschnitt über die Arbeit ist wichtig. Mit Verweis auf Ihre Anzeige schreibe ich Ihnen. Ich kopiere die Zeugnisse. Ich sende die Bewerbung. Sprechen Sie mich an! Die Bewerbung ist unterschrieben. Der Ordner ist neu.",
+      "ar": "البيانات الشخصية: الاسم! العمر! العنوان! هذه بياناتي الشخصية. أكتب تاريخ ميلادي. مكان السكن مهمّ. البيانات مهمّة. أقرأ المعلومات. التعليم: المدرسة الابتدائية والتلمذة المهنية! المدرسة الابتدائية صغيرة. الخبرة: التدريب والنشاط! أعرض خبرتي. أذكر النشاط في القائمة. المعرفة والمهارات. اللغات: الألمانية والعربية. الاهتمامات: الموسيقى والرياضة. المقدمة قصيرة. القسم عن العمل مهمّ. في إشارة إلى إعلانكم أكتب إليكم. أُصوّر الشهادات. أُرسل الترشح. راسلوني! الترشح موقَّع. المجلّد جديد."
     }
   },
   "gReferences": {
@@ -680,7 +747,8 @@
     "word-kopieren",
     "word-senden",
     "word-ansprechen",
-    "word-unterschrieben"
+    "word-unterschrieben",
+    "word-ordner"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -700,7 +768,8 @@
       "kopieren",
       "senden",
       "ansprechen",
-      "unterschrieben"
+      "unterschrieben",
+      "ordner"
     ]
   }
 }

@@ -2871,6 +2871,19 @@ def build_all() -> None:
     ("word-ueberraschung", "die Überraschung.", "ueberraschung", ["b1-u12-d6"]),
     ("word-zufall", "der Zufall.", "zufall", ["b1-u12-d6"]),
     ("word-veraendern", "verändern.", "veraendern", ["b1-u12-d6"]),
+    ("word-fachmann", "der Fachmann.", "fachmann", ["b1-u8-d1"]),
+    ("word-personal", "das Personal.", "personal", ["b1-u8-d2"]),
+    ("word-sekretaer", "der Sekretär.", "sekretaer", ["b1-u8-d3"]),
+    ("word-ordner", "der Ordner.", "ordner", ["b1-u8-d4"]),
+    ("word-vertreter", "der Vertreter.", "vertreter", ["b1-u8-d5"]),
+    ("word-entlassung", "die Entlassung.", "entlassung", ["b1-u8-d6"]),
+    ("word-vertretung", "die Vertretung.", "vertretung", ["b1-u8-d6"]),
+    ("word-rente", "die Rente.", "rente", ["b1-u8-d6"]),
+    ("word-gegner", "der Gegner.", "gegner", ["b1-u9-d6"]),
+    ("word-prozess", "der Prozess.", "prozess", ["b1-u9-d6"]),
+    ("word-faktor", "der Faktor.", "faktor", ["b1-u10-d6"]),
+    ("word-gedicht", "das Gedicht.", "gedicht", ["b1-u11-d6"]),
+    ("word-literatur", "die Literatur.", "literatur", ["b1-u11-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً

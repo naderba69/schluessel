@@ -68,7 +68,8 @@
       "ausstellen",
       "organisiert",
       "mobilitaet",
-      "weiterbildung"
+      "weiterbildung",
+      "sekretaer"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -87,7 +88,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Ich möchte mich vorstellen!",
+        "de": "Ich möchte mich vorstellen! Der Sekretär arbeitet hier. Die Arbeitszeit ist wichtig.",
         "ar": "يُجري مقابلة توظيف تمثيلية كاملة!"
       },
       "situation": {
@@ -95,7 +96,7 @@
         "ar": "المقابلة! المديرة! المتقدّم!"
       },
       "successCriteria": [
-        "الكلمات الخمس عشرة + صيغ المقابلة الست!",
+        "الكلمات الست عشرة + صيغ المقابلة الست!",
         "«أُعرّف بنفسي!» (Ich möchte mich vorstellen!)",
         "«أسأل عن الشروط!» (Wie sind die Arbeitszeit und die Überstunden?)",
         "«أُنهي بالشكر!» (Für das Gespräch danke ich Ihnen.)"
@@ -194,6 +195,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: der Bewerber = «المتقدّم للعمل» · die Lehrstelle = «مكان التلمذة» · die Kopie = «النسخة»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "السكرتير",
+                "de": "der Sekretär"
+              },
+              {
+                "ar": "التطوير المهني",
+                "de": "die Weiterbildung"
+              },
+              {
+                "ar": "التنقّل",
+                "de": "die Mobilität"
+              }
+            ],
+            "why": "der Sekretär السكرتير · die Weiterbildung التطوير المهني · die Mobilität التنقّل (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -254,6 +272,11 @@
             "q": "Ich kaufe eine ___.",
             "a": "Lampe",
             "why": "الكلمة الناقصة «Lampe» تعني «مصباح» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ arbeitet hier. (السكرتير!)",
+            "a": "Sekretär",
+            "why": "der Sekretär السكرتير (der! اسم n-Deklination (der Sekretär!) وجمعه die Sekretäre — ونظيره المؤنث die Sekretärin.) — Der Sekretär arbeitet hier."
           }
         ]
       },
@@ -299,6 +322,11 @@
             "q": "~~Ein wasser, bitte!~~",
             "a": "Ein Wasser, bitte!",
             "why": "الخطأ في «wasser»! الصواب «Wasser» — راجع القاعدة (الماء)."
+          },
+          {
+            "q": "~~die Sekretär arbeitet hier~~",
+            "a": "der Sekretär arbeitet hier",
+            "why": "الألمانية: der Sekretär (der! n-Deklination!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -344,6 +372,11 @@
             "q": "كوّن جملة فيها «das Kind» («الطفل») ثم تحدّث بها.",
             "a": "Das ist das Kind.",
             "why": "استعمل «das Kind» («الطفل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Sekretär)",
+            "a": "Der Sekretär arbeitet hier. Die Arbeitszeit ist wichtig.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -437,6 +470,18 @@
             ],
             "a": "Bis morgen!",
             "why": "«لينا» في الحوار: وداع"
+          },
+          {
+            "audioId": "word-sekretaer",
+            "speakText": "der Sekretär.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "السكرتير",
+              "العامل",
+              "ساعات العمل"
+            ],
+            "a": "السكرتير",
+            "why": "الصوت يقول «der Sekretär» — معناها «السكرتير». ركّز!"
           }
         ]
       },
@@ -470,6 +515,12 @@
             "speakText": "einstellen.",
             "a": "einstellen",
             "why": "اكتب ما تسمعه حرفياً: «einstellen» تعني «يوظّف». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-sekretaer",
+            "speakText": "der Sekretär.",
+            "a": "der Sekretär",
+            "why": "اكتب ما تسمعه حرفياً: «der Sekretär» تعني «السكرتير». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -508,6 +559,11 @@
           {
             "q": "«ساعات العمل»؟",
             "a": "die Arbeitszeit"
+          },
+          {
+            "q": "Der ___ arbeitet hier. (السكرتير!)",
+            "a": "Sekretär",
+            "why": "der Sekretär السكرتير (der! اسم n-Deklination (der Sekretär!) وجمعه die Sekretäre — ونظيره المؤنث die Sekretärin.) — Der Sekretär arbeitet hier."
           }
         ],
         "passingScore": 0.75
@@ -537,6 +593,11 @@
           {
             "q": "«العامل»؟",
             "a": "der Arbeitnehmer"
+          },
+          {
+            "q": "Der ___ arbeitet hier. (السكرتير!)",
+            "a": "Sekretär",
+            "why": "der Sekretär السكرتير (der! اسم n-Deklination (der Sekretär!) وجمعه die Sekretäre — ونظيره المؤنث die Sekretärin.) — Der Sekretär arbeitet hier."
           }
         ],
         "passingScore": 0.75
@@ -566,6 +627,11 @@
           {
             "q": "«العامل»؟",
             "a": "der Arbeitnehmer"
+          },
+          {
+            "q": "Der ___ arbeitet hier. (السكرتير!)",
+            "a": "Sekretär",
+            "why": "der Sekretär السكرتير (der! اسم n-Deklination (der Sekretär!) وجمعه die Sekretäre — ونظيره المؤنث die Sekretärin.) — Der Sekretär arbeitet hier."
           }
         ],
         "passingScore": 0.75
@@ -574,8 +640,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Ich bin für das Gespräch da. Ich möchte mich vorstellen. Ich präsentiere mich und meine Erfahrung. Der Bewerber gibt die Präsentation. Die Chefin fragt den Bewerber. Der Arbeitnehmer arbeitet im Büro. Meine Kollegin ist nett. Die Arbeitszeit ist wichtig. Heute mache ich die Überstunden. Die Weiterbildung ist nach der Arbeit. Die Mobilität ist für die Stelle wichtig. Der Bewerber ist organisiert und zuverlässig. Der Bewerber tritt gut auf. Ich bin bei der Firma beschäftigt. Der Praktikant bearbeitet die Texte. Wir verlängern den Vertrag. Der Chef stellt das Zeugnis aus. Wie sind die Arbeitszeit und die Überstunden? Für das Gespräch danke ich Ihnen.",
-      "ar": "طاب يومك! أنا هنا من أجل اللقاء. أُريد أن أُعرّف بنفسي. أُعرّض نفسي وخبرتي. المتقدّم يُلقي العرض التقديمي. المديرة تسأل المتقدّم. العامل يعمل في المكتب. زميلتي لطيفة. ساعات العمل مهمة. اليوم أعمل الساعات الإضافية. التطوير المهني بعد العمل. التنقّل مهمّ للمنصب. المتقدّم منظَّم وجدير بالثقة. المتقدّم يظهر بشكل جيد. أنا موظَّف في الشركة. المتدرّب يُنجز النصوص. نُجدّد العقد. الرئيس يُصدر الشهادة. كيف هي ساعات العمل والساعات الإضافية؟ أشكركم على اللقاء."
+      "de": "Guten Tag! Ich bin für das Gespräch da. Ich möchte mich vorstellen. Ich präsentiere mich und meine Erfahrung. Der Bewerber gibt die Präsentation. Die Chefin fragt den Bewerber. Der Arbeitnehmer arbeitet im Büro. Meine Kollegin ist nett. Die Arbeitszeit ist wichtig. Heute mache ich die Überstunden. Die Weiterbildung ist nach der Arbeit. Die Mobilität ist für die Stelle wichtig. Der Bewerber ist organisiert und zuverlässig. Der Bewerber tritt gut auf. Ich bin bei der Firma beschäftigt. Der Praktikant bearbeitet die Texte. Wir verlängern den Vertrag. Der Chef stellt das Zeugnis aus. Wie sind die Arbeitszeit und die Überstunden? Für das Gespräch danke ich Ihnen. Der Sekretär arbeitet hier.",
+      "ar": "طاب يومك! أنا هنا من أجل اللقاء. أُريد أن أُعرّف بنفسي. أُعرّض نفسي وخبرتي. المتقدّم يُلقي العرض التقديمي. المديرة تسأل المتقدّم. العامل يعمل في المكتب. زميلتي لطيفة. ساعات العمل مهمة. اليوم أعمل الساعات الإضافية. التطوير المهني بعد العمل. التنقّل مهمّ للمنصب. المتقدّم منظَّم وجدير بالثقة. المتقدّم يظهر بشكل جيد. أنا موظَّف في الشركة. المتدرّب يُنجز النصوص. نُجدّد العقد. الرئيس يُصدر الشهادة. كيف هي ساعات العمل والساعات الإضافية؟ أشكركم على اللقاء. السكرتير يعمل هنا."
     },
     "srsBundleWordIds": [
       "arbeitnehmer",
@@ -592,7 +658,8 @@
       "ausstellen",
       "organisiert",
       "mobilitaet",
-      "weiterbildung"
+      "weiterbildung",
+      "sekretaer"
     ],
     "warningCards": [
       {
@@ -681,7 +748,8 @@
     "word-ausstellen",
     "word-organisiert",
     "word-mobilitaet",
-    "word-weiterbildung"
+    "word-weiterbildung",
+    "word-sekretaer"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -701,7 +769,8 @@
       "ausstellen",
       "organisiert",
       "mobilitaet",
-      "weiterbildung"
+      "weiterbildung",
+      "sekretaer"
     ]
   }
 }

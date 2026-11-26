@@ -52,7 +52,9 @@
     "wordIds": [
       "versoehnung",
       "versoehnen",
-      "frieden"
+      "frieden",
+      "gegner",
+      "prozess"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -69,7 +71,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Am Ende steht die Versöhnung — der Frieden kommt!",
+        "de": "Am Ende steht die Versöhnung — der Frieden kommt! Der Gegner ist stark. Der Prozess beginnt heute.",
         "ar": "يُلخّص الوحدة في 8 جمل وصولاً إلى التصالح!"
       },
       "situation": {
@@ -77,7 +79,7 @@
         "ar": "نزاع! حلّ! وتصالح! (الوحدة كلها في خاتمة واحدة!)"
       },
       "successCriteria": [
-        "كلمات اليوم الثلاث + مراجعة كلمات الوحدة كلها!",
+        "كلمات اليوم الخمس + مراجعة كلمات الوحدة كلها!",
         "الترتيب الكامل: Nachfragen ← Klärung ← Bild ← Regelung ← Runde ← Versöhnung!",
         "المفردات الثابتة: sich versöhnen (uns!) Frieden schließen!",
         "الخاتمة: der Frieden kommt und bleibt!"
@@ -176,6 +178,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: das Protokoll = «البروتوكول» · die Absprache = «الاتفاق المسبق» · die Übersicht = «نظرة عامة»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الخصم",
+                "de": "der Gegner"
+              },
+              {
+                "ar": "القضية · المحاكمة",
+                "de": "der Prozess"
+              },
+              {
+                "ar": "السلام",
+                "de": "der Frieden"
+              }
+            ],
+            "why": "der Gegner الخصم · der Prozess القضية · المحاكمة · der Frieden السلام (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -236,6 +255,16 @@
             "q": "Die ___ ist gut.",
             "a": "Regelung",
             "why": "الكلمة الناقصة «Regelung» تعني «التسوية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist stark. (الخصم!)",
+            "a": "Gegner",
+            "why": "der Gegner الخصم (der! مذكّر (der!) وجمعه die Gegner (بلا تغيير!) — والمؤنث die Gegnerin.) — Der Gegner ist stark."
+          },
+          {
+            "q": "Der ___ beginnt heute. (القضية!)",
+            "a": "Prozess",
+            "why": "der Prozess القضية · المحاكمة (der! مذكّر (der!) وجمعه die Prozesse — والكلمة قرض لاتيني (ss في المفرد!).) — Der Prozess beginnt heute."
           }
         ]
       },
@@ -281,6 +310,16 @@
             "q": "~~Das ist eine ausnahme.~~",
             "a": "Das ist eine Ausnahme.",
             "why": "الخطأ في «ausnahme»! الصواب «Ausnahme» — راجع القاعدة (الاستثناء)."
+          },
+          {
+            "q": "~~die Gegner ist stark~~",
+            "a": "der Gegner ist stark",
+            "why": "الألمانية: der Gegner (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Prozess beginne heute~~",
+            "a": "Der Prozess beginnt heute.",
+            "why": "الضمير der Prozess يطلب الفعل المُصرَّف beginnt (لا beginne!) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -321,6 +360,11 @@
             "q": "كوّن جملة فيها «beilegen» («يسوّي (النزاع)») ثم تحدّث بها.",
             "a": "Er legt den Streit bei.",
             "why": "استعمل «beilegen» («يسوّي (النزاع)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Gegner · der Prozess)",
+            "a": "Der Gegner ist stark. Der Prozess beginnt heute.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -414,6 +458,30 @@
             ],
             "a": "Und auf die Versöhnung!",
             "why": "«لينا» في الحوار: إغلاق دافئ"
+          },
+          {
+            "audioId": "word-gegner",
+            "speakText": "der Gegner.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الخصم",
+              "القضية · المحاكمة",
+              "التصالح"
+            ],
+            "a": "الخصم",
+            "why": "الصوت يقول «der Gegner» — معناها «الخصم». ركّز!"
+          },
+          {
+            "audioId": "word-prozess",
+            "speakText": "der Prozess.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "القضية · المحاكمة",
+              "الخصم",
+              "التصالح"
+            ],
+            "a": "القضية · المحاكمة",
+            "why": "الصوت يقول «der Prozess» — معناها «القضية · المحاكمة». ركّز!"
           }
         ]
       },
@@ -447,6 +515,18 @@
             "speakText": "die Rolle.",
             "a": "die Rolle",
             "why": "اكتب ما تسمعه حرفياً: «die Rolle» تعني «الدور». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gegner",
+            "speakText": "der Gegner.",
+            "a": "der Gegner",
+            "why": "اكتب ما تسمعه حرفياً: «der Gegner» تعني «الخصم». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-prozess",
+            "speakText": "der Prozess.",
+            "a": "der Prozess",
+            "why": "اكتب ما تسمعه حرفياً: «der Prozess» تعني «القضية · المحاكمة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -485,6 +565,16 @@
           {
             "q": "«يتصالح»؟",
             "a": "sich versöhnen"
+          },
+          {
+            "q": "Der ___ ist stark. (الخصم!)",
+            "a": "Gegner",
+            "why": "der Gegner الخصم (der! مذكّر (der!) وجمعه die Gegner (بلا تغيير!) — والمؤنث die Gegnerin.) — Der Gegner ist stark."
+          },
+          {
+            "q": "Der ___ beginnt heute. (القضية!)",
+            "a": "Prozess",
+            "why": "der Prozess القضية · المحاكمة (der! مذكّر (der!) وجمعه die Prozesse — والكلمة قرض لاتيني (ss في المفرد!).) — Der Prozess beginnt heute."
           }
         ]
       },
@@ -513,6 +603,16 @@
           {
             "q": "«يتصالح»؟",
             "a": "sich versöhnen"
+          },
+          {
+            "q": "Der ___ ist stark. (الخصم!)",
+            "a": "Gegner",
+            "why": "der Gegner الخصم (der! مذكّر (der!) وجمعه die Gegner (بلا تغيير!) — والمؤنث die Gegnerin.) — Der Gegner ist stark."
+          },
+          {
+            "q": "Der ___ beginnt heute. (القضية!)",
+            "a": "Prozess",
+            "why": "der Prozess القضية · المحاكمة (der! مذكّر (der!) وجمعه die Prozesse — والكلمة قرض لاتيني (ss في المفرد!).) — Der Prozess beginnt heute."
           }
         ]
       },
@@ -541,6 +641,16 @@
           {
             "q": "«السلام»؟",
             "a": "der Frieden"
+          },
+          {
+            "q": "Der ___ ist stark. (الخصم!)",
+            "a": "Gegner",
+            "why": "der Gegner الخصم (der! مذكّر (der!) وجمعه die Gegner (بلا تغيير!) — والمؤنث die Gegnerin.) — Der Gegner ist stark."
+          },
+          {
+            "q": "Der ___ beginnt heute. (القضية!)",
+            "a": "Prozess",
+            "why": "der Prozess القضية · المحاكمة (der! مذكّر (der!) وجمعه die Prozesse — والكلمة قرض لاتيني (ss في المفرد!).) — Der Prozess beginnt heute."
           }
         ]
       }
@@ -548,13 +658,15 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Am Ende steht die Versöhnung! Die Einigung ist fertig, die Vereinbarung ist klar und der Kompromiss ist gut. Die Regelung ist klar: Wir erstatten die Kosten und die Zufriedenheit ist wichtig. Die Runde ist offen, der Beschluss steht und wir setzen ihn um. Jetzt versöhnen wir uns. Der Frieden kommt und bleibt!",
-      "ar": "في النهاية يقف التصالح! الاتفاق جاهز والموافقة واضحة والتنازل جيّد. التسوية واضحة: نُعيد المصاريف والرضا مهمّ. الجولة مفتوحة والقرار صار ونُنفّذه. الآن نتصالح. السلام قادم ويبقى!"
+      "de": "Am Ende steht die Versöhnung! Die Einigung ist fertig, die Vereinbarung ist klar und der Kompromiss ist gut. Die Regelung ist klar: Wir erstatten die Kosten und die Zufriedenheit ist wichtig. Die Runde ist offen, der Beschluss steht und wir setzen ihn um. Jetzt versöhnen wir uns. Der Frieden kommt und bleibt! Der Gegner ist stark. Der Prozess beginnt heute.",
+      "ar": "في النهاية يقف التصالح! الاتفاق جاهز والموافقة واضحة والتنازل جيّد. التسوية واضحة: نُعيد المصاريف والرضا مهمّ. الجولة مفتوحة والقرار صار ونُنفّذه. الآن نتصالح. السلام قادم ويبقى! الخصم قويّ. القضية تبدأ اليوم."
     },
     "srsBundleWordIds": [
       "versoehnung",
       "versoehnen",
-      "frieden"
+      "frieden",
+      "gegner",
+      "prozess"
     ],
     "warningCards": [
       {
@@ -621,7 +733,9 @@
   "audioManifestRefs": [
     "word-versoehnung",
     "word-versoehnen",
-    "word-frieden"
+    "word-frieden",
+    "word-gegner",
+    "word-prozess"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -629,7 +743,9 @@
     "goetheWordListOverlap": [
       "versoehnung",
       "versoehnen",
-      "frieden"
+      "frieden",
+      "gegner",
+      "prozess"
     ]
   }
 }

@@ -68,7 +68,8 @@
       "ausgebildet",
       "lehre",
       "kopie",
-      "lehrstelle"
+      "lehrstelle",
+      "fachmann"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -85,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Ich suche eine gute Lehrstelle!",
+        "de": "Ich suche eine gute Lehrstelle! Der Fachmann arbeitet hier. Die Qualifikation ist wichtig.",
         "ar": "يتحدّث عن الترشح والعمل بالصفات الصحيحة!"
       },
       "situation": {
@@ -93,7 +94,7 @@
         "ar": "المقابلة: المتقدّم! التأهيل! الأجر!"
       },
       "successCriteria": [
-        "الكلمات الخمس عشرة + الصفات المخلوطة!",
+        "الكلمات الست عشرة + الصفات المخلوطة!",
         "«eine gutE» للمؤنث! «ein gutES» للمحايد! «ein gutER» للمذكر!",
         "«einen gutEN» منصوباً! «einem gutEN» جرّاً!",
         "كل فعل بحرفّه! (setzen … ein! erkennen … an!)"
@@ -192,6 +193,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Arbeit = «العمل» · der Chef = «مدير» · das Gehalt = «راتب»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الخبير · الفني",
+                "de": "der Fachmann"
+              },
+              {
+                "ar": "مكان التلمذة",
+                "de": "die Lehrstelle"
+              },
+              {
+                "ar": "النسخة",
+                "de": "die Kopie"
+              }
+            ],
+            "why": "der Fachmann الخبير · الفني · die Lehrstelle مكان التلمذة · die Kopie النسخة (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -252,6 +270,11 @@
             "q": "Die ___ ist neu für mich.",
             "a": "Schule",
             "why": "الكلمة الناقصة «Schule» تعني «المدرسة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ hilft. (الخبير!)",
+            "a": "Fachmann",
+            "why": "der Fachmann الخبير · الفني (der! مذكّر (der!) وجمعه الشاذّ die Fachleute (لا Fachmänner!). ونظيره المؤنث die Fachfrau.) — Der Fachmann hilft."
           }
         ]
       },
@@ -297,6 +320,11 @@
             "q": "~~Ein wasser, bitte!~~",
             "a": "Ein Wasser, bitte!",
             "why": "الخطأ في «wasser»! الصواب «Wasser» — راجع القاعدة (الماء)."
+          },
+          {
+            "q": "~~die Fachmann hilft~~",
+            "a": "der Fachmann hilft",
+            "why": "الألمانية: der Fachmann (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -342,6 +370,11 @@
             "q": "كوّن جملة فيها «das Kind» («الطفل») ثم تحدّث بها.",
             "a": "Das ist das Kind.",
             "why": "استعمل «das Kind» («الطفل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Fachmann)",
+            "a": "Der Fachmann arbeitet hier. Die Qualifikation ist wichtig.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -435,6 +468,18 @@
             ],
             "a": "Viel Erfolg!",
             "why": "«لينا» في الحوار: تشجيع"
+          },
+          {
+            "audioId": "word-fachmann",
+            "speakText": "der Fachmann.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الخبير · الفني",
+              "النشاط",
+              "يعمل"
+            ],
+            "a": "الخبير · الفني",
+            "why": "الصوت يقول «der Fachmann» — معناها «الخبير · الفني». ركّز!"
           }
         ]
       },
@@ -468,6 +513,12 @@
             "speakText": "die Sorge.",
             "a": "die Sorge",
             "why": "اكتب ما تسمعه حرفياً: «die Sorge» تعني «القلق». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-fachmann",
+            "speakText": "der Fachmann.",
+            "a": "der Fachmann",
+            "why": "اكتب ما تسمعه حرفياً: «der Fachmann» تعني «الخبير · الفني». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -506,6 +557,11 @@
           {
             "q": "«يعمل»؟",
             "a": "berufstätig"
+          },
+          {
+            "q": "Der ___ hilft. (الخبير!)",
+            "a": "Fachmann",
+            "why": "der Fachmann الخبير · الفني (der! مذكّر (der!) وجمعه الشاذّ die Fachleute (لا Fachmänner!). ونظيره المؤنث die Fachfrau.) — Der Fachmann hilft."
           }
         ],
         "passingScore": 0.75
@@ -535,6 +591,11 @@
           {
             "q": "«مهنياً»؟",
             "a": "beruflich"
+          },
+          {
+            "q": "Der ___ hilft. (الخبير!)",
+            "a": "Fachmann",
+            "why": "der Fachmann الخبير · الفني (der! مذكّر (der!) وجمعه الشاذّ die Fachleute (لا Fachmänner!). ونظيره المؤنث die Fachfrau.) — Der Fachmann hilft."
           }
         ],
         "passingScore": 0.75
@@ -564,6 +625,11 @@
           {
             "q": "«يعمل»؟",
             "a": "berufstätig"
+          },
+          {
+            "q": "Der ___ hilft. (الخبير!)",
+            "a": "Fachmann",
+            "why": "der Fachmann الخبير · الفني (der! مذكّر (der!) وجمعه الشاذّ die Fachleute (لا Fachmänner!). ونظيره المؤنث die Fachfrau.) — Der Fachmann hilft."
           }
         ],
         "passingScore": 0.75
@@ -572,8 +638,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Ich bin berufstätig. Ich suche eine gute Lehrstelle — mit einer guten Qualifikation! Der Bewerber kommt morgen. Das ist beruflich wichtig. Ich habe ein neues Zeugnis und eine Kopie. Er ist ein guter Kollege. Er ist gut ausgebildet. Er leitet das Team. Wir setzen die Energie ein. Der Chef erkennt die Erfahrung an. Mit einem guten Lohn! Die Lehre beginnt im Sommer. Ich arbeite in Vollzeit. Sie arbeitet in Teilzeit.",
-      "ar": "مرحباً! أنا على رأس العمل. أبحث عن مكان تلمذة جيد — بتأهيل جيد! المتقدّم للعمل يأتي غداً. هذا مهم مهنياً. لديّ شهادة جديدة ونسخة. هو زميل جيد. هو مدرَّب جيداً. هو يدير الفريق. نحن نستخدم الطاقة. الرئيس يعترف بالخبرة. بأجر جيد! التلمذة المهنية تبدأ في الصيف. أنا أعمل بدوام كامل. هي تعمل بدوام جزئي."
+      "de": "Guten Tag! Ich bin berufstätig. Ich suche eine gute Lehrstelle — mit einer guten Qualifikation! Der Bewerber kommt morgen. Das ist beruflich wichtig. Ich habe ein neues Zeugnis und eine Kopie. Er ist ein guter Kollege. Er ist gut ausgebildet. Er leitet das Team. Wir setzen die Energie ein. Der Chef erkennt die Erfahrung an. Mit einem guten Lohn! Die Lehre beginnt im Sommer. Ich arbeite in Vollzeit. Sie arbeitet in Teilzeit. Der Fachmann hilft.",
+      "ar": "مرحباً! أنا على رأس العمل. أبحث عن مكان تلمذة جيد — بتأهيل جيد! المتقدّم للعمل يأتي غداً. هذا مهم مهنياً. لديّ شهادة جديدة ونسخة. هو زميل جيد. هو مدرَّب جيداً. هو يدير الفريق. نحن نستخدم الطاقة. الرئيس يعترف بالخبرة. بأجر جيد! التلمذة المهنية تبدأ في الصيف. أنا أعمل بدوام كامل. هي تعمل بدوام جزئي. الخبير يساعد."
     },
     "srsBundleWordIds": [
       "taetigkeit",
@@ -590,7 +656,8 @@
       "ausgebildet",
       "lehre",
       "kopie",
-      "lehrstelle"
+      "lehrstelle",
+      "fachmann"
     ],
     "warningCards": [
       {
@@ -678,7 +745,8 @@
     "word-ausgebildet",
     "word-lehre",
     "word-kopie",
-    "word-lehrstelle"
+    "word-lehrstelle",
+    "word-fachmann"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -698,7 +766,8 @@
       "ausgebildet",
       "lehre",
       "kopie",
-      "lehrstelle"
+      "lehrstelle",
+      "fachmann"
     ]
   }
 }

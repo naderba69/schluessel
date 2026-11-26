@@ -68,7 +68,8 @@
       "verhindern",
       "loesen",
       "festlegen",
-      "geschickt"
+      "geschickt",
+      "vertreter"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -86,7 +87,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Meister gibt eine Anleitung.",
+        "de": "Der Meister gibt eine Anleitung. Der Vertreter kommt morgen. Der Auftrag ist wichtig.",
         "ar": "يصف مهنته بالكلمات المصاحبة الثابتة!"
       },
       "situation": {
@@ -94,7 +95,7 @@
         "ar": "الورشة! المعلّم! المتدرّب! الرعاية!"
       },
       "successCriteria": [
-        "الكلمات الخمس عشرة + الشراكات الثابتة!",
+        "الكلمات الست عشرة + الشراكات الثابتة!",
         "«التعليمات تُعطى!» (Der Meister gibt eine Anleitung.)",
         "«المشكلة تُحلّ!» (Der Lehrling löst das Problem.)",
         "«الرعاية تُتولى!» (Ich übernehme die Betreuung.)"
@@ -193,6 +194,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: der Bewerber = «المتقدّم للعمل» · die Lehrstelle = «مكان التلمذة» · die Kopie = «النسخة»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المندوب · الوكيل",
+                "de": "der Vertreter"
+              },
+              {
+                "ar": "بارعاة",
+                "de": "geschickt"
+              },
+              {
+                "ar": "يحدّد",
+                "de": "festlegen"
+              }
+            ],
+            "why": "der Vertreter المندوب · الوكيل · geschickt بارعاة · festlegen يحدّد (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -253,6 +271,11 @@
             "q": "Ich kaufe eine ___.",
             "a": "Lampe",
             "why": "الكلمة الناقصة «Lampe» تعني «مصباح» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ kommt morgen. (المندوب!)",
+            "a": "Vertreter",
+            "why": "der Vertreter المندوب · الوكيل (der! مذكّر (der!) وجمعه die Vertreter (بلا تغيير!) — والمؤنث die Vertreterin.) — Der Vertreter kommt morgen."
           }
         ]
       },
@@ -298,6 +321,11 @@
             "q": "~~Ein wasser, bitte!~~",
             "a": "Ein Wasser, bitte!",
             "why": "الخطأ في «wasser»! الصواب «Wasser» — راجع القاعدة (الماء)."
+          },
+          {
+            "q": "~~die Vertreter kommt morgen~~",
+            "a": "der Vertreter kommt morgen",
+            "why": "الألمانية: der Vertreter (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -343,6 +371,11 @@
             "q": "كوّن جملة فيها «das Kind» («الطفل») ثم تحدّث بها.",
             "a": "Das ist das Kind.",
             "why": "استعمل «das Kind» («الطفل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Vertreter)",
+            "a": "Der Vertreter kommt morgen. Der Auftrag ist wichtig.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -436,6 +469,18 @@
             ],
             "a": "Verstanden, Meister!",
             "why": "«يوسف» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-vertreter",
+            "speakText": "der Vertreter.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المندوب · الوكيل",
+              "الطلب (المهمة!)",
+              "التعليمات"
+            ],
+            "a": "المندوب · الوكيل",
+            "why": "الصوت يقول «der Vertreter» — معناها «المندوب · الوكيل». ركّز!"
           }
         ]
       },
@@ -469,6 +514,12 @@
             "speakText": "ansprechen.",
             "a": "ansprechen",
             "why": "اكتب ما تسمعه حرفياً: «ansprechen» تعني «يخاطب». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-vertreter",
+            "speakText": "der Vertreter.",
+            "a": "der Vertreter",
+            "why": "اكتب ما تسمعه حرفياً: «der Vertreter» تعني «المندوب · الوكيل». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -507,6 +558,11 @@
           {
             "q": "«الرعاية»؟",
             "a": "die Betreuung"
+          },
+          {
+            "q": "Der ___ kommt morgen. (المندوب!)",
+            "a": "Vertreter",
+            "why": "der Vertreter المندوب · الوكيل (der! مذكّر (der!) وجمعه die Vertreter (بلا تغيير!) — والمؤنث die Vertreterin.) — Der Vertreter kommt morgen."
           }
         ],
         "passingScore": 0.75
@@ -536,6 +592,11 @@
           {
             "q": "«الطلب (المهمة!)»؟",
             "a": "der Auftrag"
+          },
+          {
+            "q": "Der ___ kommt morgen. (المندوب!)",
+            "a": "Vertreter",
+            "why": "der Vertreter المندوب · الوكيل (der! مذكّر (der!) وجمعه die Vertreter (بلا تغيير!) — والمؤنث die Vertreterin.) — Der Vertreter kommt morgen."
           }
         ],
         "passingScore": 0.75
@@ -565,6 +626,11 @@
           {
             "q": "«الطلب (المهمة!)»؟",
             "a": "der Auftrag"
+          },
+          {
+            "q": "Der ___ kommt morgen. (المندوب!)",
+            "a": "Vertreter",
+            "why": "der Vertreter المندوب · الوكيل (der! مذكّر (der!) وجمعه die Vertreter (بلا تغيير!) — والمؤنث die Vertreterin.) — Der Vertreter kommt morgen."
           }
         ],
         "passingScore": 0.75
@@ -587,7 +653,8 @@
       "verhindern",
       "loesen",
       "festlegen",
-      "geschickt"
+      "geschickt",
+      "vertreter"
     ],
     "warningCards": [
       {
@@ -637,8 +704,8 @@
       }
     ],
     "summary": {
-      "de": "Der Meister gibt eine Anleitung. Der Lehrling löst das Problem. Der Azubi arbeitet geschickt. Ich lege den Termin fest. Ich übernehme die Betreuung und ich betreue die Azubis. Wir sichern den Arbeitsplatz und verhindern den Fehler. Der Auftrag ist wichtig. Die Leitung ist gut. Das Verhältnis zu den Kollegen ist gut. Der Meister unterrichtet den Lehrling. Die Betreuung ist wichtig!",
-      "ar": "المعلّم يُعطي تعليمات. المتدرّب يحلّ المشكلة. المتدرّب يعمل بمهارة. أحدّد الموعد. أتولّى الرعاية وأُشرف على المتدرّبين. نُؤمّن مكان العمل ونمنع الخطأ. الطلب مهمّ. الإدارة جيدة. العلاقة مع الزملاء جيدة. المعلّم يُدرّس المتدرّب. الرعاية مهمّة!"
+      "de": "Der Meister gibt eine Anleitung. Der Lehrling löst das Problem. Der Azubi arbeitet geschickt. Ich lege den Termin fest. Ich übernehme die Betreuung und ich betreue die Azubis. Wir sichern den Arbeitsplatz und verhindern den Fehler. Der Auftrag ist wichtig. Die Leitung ist gut. Das Verhältnis zu den Kollegen ist gut. Der Meister unterrichtet den Lehrling. Die Betreuung ist wichtig! Der Vertreter kommt morgen.",
+      "ar": "المعلّم يُعطي تعليمات. المتدرّب يحلّ المشكلة. المتدرّب يعمل بمهارة. أحدّد الموعد. أتولّى الرعاية وأُشرف على المتدرّبين. نُؤمّن مكان العمل ونمنع الخطأ. الطلب مهمّ. الإدارة جيدة. العلاقة مع الزملاء جيدة. المعلّم يُدرّس المتدرّب. الرعاية مهمّة! المندوب يأتي غداً."
     }
   },
   "gReferences": {
@@ -680,7 +747,8 @@
     "word-verhindern",
     "word-loesen",
     "word-festlegen",
-    "word-geschickt"
+    "word-geschickt",
+    "word-vertreter"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -700,7 +768,8 @@
       "verhindern",
       "loesen",
       "festlegen",
-      "geschickt"
+      "geschickt",
+      "vertreter"
     ]
   }
 }

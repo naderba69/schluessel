@@ -51,7 +51,10 @@
   "praesentation": {
     "wordIds": [
       "zusage",
-      "besetzen"
+      "besetzen",
+      "entlassung",
+      "vertretung",
+      "rente"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -68,7 +71,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Das Interview war gut — und jetzt die Zusage!",
+        "de": "Das Interview war gut — und jetzt die Zusage! Die Entlassung ist schlimm. Die Vertretung hilft, und die Rente kommt später.",
         "ar": "يكتب توليف الوحدة 8 في 8 جمل!"
       },
       "situation": {
@@ -76,7 +79,7 @@
         "ar": "الترشح! المقابلة! القرار: Zusage أم Absage!"
       },
       "successCriteria": [
-        "الكلمتان الجديدتان + خيوط الوحدة الخمسة!",
+        "الكلمات الخمس + خيوط الوحدة الخمسة!",
         "الصفة بحرفها المُشبَع (eine gute Chance!) وفق 10‑ي!",
         "الترشح بالعناصر (Lebenslauf + Zeugnisse!) والمقابلة (Ich spreche die Leitung an!).",
         "الكولوكيشنات الثابتة: Anleitung geben! Betreuung übernehmen! Stelle besetzen! Zusage bekommen!"
@@ -163,6 +166,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: der Auftrag = «الطلب (المهمة!)» · der Azubi = «المتدرّب (في الشمال!)» · die Zusage = «القبول»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الطرد من العمل",
+                "de": "die Entlassung"
+              },
+              {
+                "ar": "النيابة · التمثيل",
+                "de": "die Vertretung"
+              },
+              {
+                "ar": "المعاش التقاعدي",
+                "de": "die Rente"
+              }
+            ],
+            "why": "die Entlassung الطرد من العمل · die Vertretung النيابة · التمثيل · die Rente المعاش التقاعدي (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -198,6 +218,21 @@
             "q": "Der ___ löst das Problem.",
             "a": "Lehrling",
             "why": "الكلمة الناقصة «Lehrling» تعني «المتدرّب (في الجنوب!)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist schlimm. (الطرد من العمل!)",
+            "a": "Entlassung",
+            "why": "die Entlassung الطرد من العمل (die! مؤنثة (die!) وجمعها die Entlassungen.) — Die Entlassung ist schlimm."
+          },
+          {
+            "q": "Die ___ kommt heute. (النيابة!)",
+            "a": "Vertretung",
+            "why": "die Vertretung النيابة · التمثيل (die! مؤنثة (die!) وجمعها die Vertretungen.) — Die Vertretung kommt heute."
+          },
+          {
+            "q": "Die ___ ist wichtig. (المعاش التقاعدي!)",
+            "a": "Rente",
+            "why": "die Rente المعاش التقاعدي (die! مؤنثة (die!) وجمعها die Renten — وفي النمسا/سويسرا: die Pension.) — Die Rente ist wichtig."
           }
         ]
       },
@@ -243,6 +278,21 @@
             "q": "~~Der Lehrling Löst das Problem.~~",
             "a": "Der Lehrling löst das Problem.",
             "why": "الخطأ في «Löst»! الصواب «löst» — راجع القاعدة (يحلّ (مشكلة!))."
+          },
+          {
+            "q": "~~der Entlassung ist schlimm~~",
+            "a": "die Entlassung ist schlimm",
+            "why": "الألمانية: die Entlassung (die! -ung مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Vertretung kommt heute~~",
+            "a": "die Vertretung kommt heute",
+            "why": "الألمانية: die Vertretung (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Rente ist wichtig~~",
+            "a": "die Rente ist wichtig",
+            "why": "الألمانية: die Rente (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -293,6 +343,11 @@
             "q": "كوّن جملة فيها «unterrichten» («يُدرّس») ثم تحدّث بها.",
             "a": "Der Meister unterrichtet den Lehrling.",
             "why": "استعمل «unterrichten» («يُدرّس») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Entlassung · die Vertretung · die Rente)",
+            "a": "Die Entlassung ist schlimm. Die Vertretung hilft, und die Rente kommt später.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -372,6 +427,42 @@
             ],
             "a": "Viel Erfolg im neuen Job!",
             "why": "«لينا» في الحوار: دعم"
+          },
+          {
+            "audioId": "word-entlassung",
+            "speakText": "die Entlassung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الطرد من العمل",
+              "النيابة · التمثيل",
+              "المعاش التقاعدي"
+            ],
+            "a": "الطرد من العمل",
+            "why": "الصوت يقول «die Entlassung» — معناها «الطرد من العمل». ركّز!"
+          },
+          {
+            "audioId": "word-vertretung",
+            "speakText": "die Vertretung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "النيابة · التمثيل",
+              "الطرد من العمل",
+              "المعاش التقاعدي"
+            ],
+            "a": "النيابة · التمثيل",
+            "why": "الصوت يقول «die Vertretung» — معناها «النيابة · التمثيل». ركّز!"
+          },
+          {
+            "audioId": "word-rente",
+            "speakText": "die Rente.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المعاش التقاعدي",
+              "الطرد من العمل",
+              "النيابة · التمثيل"
+            ],
+            "a": "المعاش التقاعدي",
+            "why": "الصوت يقول «die Rente» — معناها «المعاش التقاعدي». ركّز!"
           }
         ]
       },
@@ -399,6 +490,24 @@
             "speakText": "festlegen.",
             "a": "festlegen",
             "why": "اكتب المسموع بدقة: festlegen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-entlassung",
+            "speakText": "die Entlassung.",
+            "a": "die Entlassung",
+            "why": "اكتب ما تسمعه حرفياً: «die Entlassung» تعني «الطرد من العمل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-vertretung",
+            "speakText": "die Vertretung.",
+            "a": "die Vertretung",
+            "why": "اكتب ما تسمعه حرفياً: «die Vertretung» تعني «النيابة · التمثيل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-rente",
+            "speakText": "die Rente.",
+            "a": "die Rente",
+            "why": "اكتب ما تسمعه حرفياً: «die Rente» تعني «المعاش التقاعدي». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -437,6 +546,21 @@
           {
             "q": "«الموافقة على الترشح»؟",
             "a": "die Zusage"
+          },
+          {
+            "q": "Die ___ ist schlimm. (الطرد من العمل!)",
+            "a": "Entlassung",
+            "why": "die Entlassung الطرد من العمل (die! مؤنثة (die!) وجمعها die Entlassungen.) — Die Entlassung ist schlimm."
+          },
+          {
+            "q": "Die ___ kommt heute. (النيابة!)",
+            "a": "Vertretung",
+            "why": "die Vertretung النيابة · التمثيل (die! مؤنثة (die!) وجمعها die Vertretungen.) — Die Vertretung kommt heute."
+          },
+          {
+            "q": "Die ___ ist wichtig. (المعاش التقاعدي!)",
+            "a": "Rente",
+            "why": "die Rente المعاش التقاعدي (die! مؤنثة (die!) وجمعها die Renten — وفي النمسا/سويسرا: die Pension.) — Die Rente ist wichtig."
           }
         ]
       },
@@ -465,6 +589,21 @@
           {
             "q": "«الموافقة على الترشح»؟",
             "a": "die Zusage"
+          },
+          {
+            "q": "Die ___ ist schlimm. (الطرد من العمل!)",
+            "a": "Entlassung",
+            "why": "die Entlassung الطرد من العمل (die! مؤنثة (die!) وجمعها die Entlassungen.) — Die Entlassung ist schlimm."
+          },
+          {
+            "q": "Die ___ kommt heute. (النيابة!)",
+            "a": "Vertretung",
+            "why": "die Vertretung النيابة · التمثيل (die! مؤنثة (die!) وجمعها die Vertretungen.) — Die Vertretung kommt heute."
+          },
+          {
+            "q": "Die ___ ist wichtig. (المعاش التقاعدي!)",
+            "a": "Rente",
+            "why": "die Rente المعاش التقاعدي (die! مؤنثة (die!) وجمعها die Renten — وفي النمسا/سويسرا: die Pension.) — Die Rente ist wichtig."
           }
         ]
       },
@@ -493,6 +632,21 @@
           {
             "q": "«يشغل (الوظيفة)»؟",
             "a": "besetzen"
+          },
+          {
+            "q": "Die ___ ist schlimm. (الطرد من العمل!)",
+            "a": "Entlassung",
+            "why": "die Entlassung الطرد من العمل (die! مؤنثة (die!) وجمعها die Entlassungen.) — Die Entlassung ist schlimm."
+          },
+          {
+            "q": "Die ___ kommt heute. (النيابة!)",
+            "a": "Vertretung",
+            "why": "die Vertretung النيابة · التمثيل (die! مؤنثة (die!) وجمعها die Vertretungen.) — Die Vertretung kommt heute."
+          },
+          {
+            "q": "Die ___ ist wichtig. (المعاش التقاعدي!)",
+            "a": "Rente",
+            "why": "die Rente المعاش التقاعدي (die! مؤنثة (die!) وجمعها die Renten — وفي النمسا/سويسرا: die Pension.) — Die Rente ist wichtig."
           }
         ]
       }
@@ -500,12 +654,15 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Meine Bewerbung für die Stelle ist fertig: der Lebenslauf mit den persönlichen Daten und die Zeugnisse. Im Interview spreche ich die Leitung an. Ich bin Azubi und arbeite geschickt: Der Meister gibt eine Anleitung, und ich übernehme die Betreuung. Ich löse die Probleme und sichere den Arbeitsplatz. Nach dem Interview besetzt die Firma die Stelle. Ich bekomme eine Zusage — und keine Absage!",
-      "ar": "مرحباً! ترشحي للوظيفة جاهز: السيرة الذاتية بالبيانات الشخصية والشهادات. في المقابلة أخاطب الإدارة. أنا متدرّب وأعمل بمهارة: المعلّم يُعطي تعليمات وأتولّى الرعاية. أحلّ المشاكل وأؤمّن مكان العمل. بعد المقابلة تشغل الشركة الوظيفة. أحصل على قبول — لا رفض!"
+      "de": "Guten Tag! Meine Bewerbung für die Stelle ist fertig: der Lebenslauf mit den persönlichen Daten und die Zeugnisse. Im Interview spreche ich die Leitung an. Ich bin Azubi und arbeite geschickt: Der Meister gibt eine Anleitung, und ich übernehme die Betreuung. Ich löse die Probleme und sichere den Arbeitsplatz. Nach dem Interview besetzt die Firma die Stelle. Ich bekomme eine Zusage — und keine Absage! Die Entlassung ist schlimm. Die Vertretung kommt heute. Die Rente ist wichtig.",
+      "ar": "مرحباً! ترشحي للوظيفة جاهز: السيرة الذاتية بالبيانات الشخصية والشهادات. في المقابلة أخاطب الإدارة. أنا متدرّب وأعمل بمهارة: المعلّم يُعطي تعليمات وأتولّى الرعاية. أحلّ المشاكل وأؤمّن مكان العمل. بعد المقابلة تشغل الشركة الوظيفة. أحصل على قبول — لا رفض! الطرد من العمل سيّئ. النيابة تأتي اليوم. المعاش التقاعدي مهم."
     },
     "srsBundleWordIds": [
       "zusage",
-      "besetzen"
+      "besetzen",
+      "entlassung",
+      "vertretung",
+      "rente"
     ],
     "warningCards": [
       {
@@ -570,14 +727,20 @@
   ],
   "audioManifestRefs": [
     "word-zusage",
-    "word-besetzen"
+    "word-besetzen",
+    "word-entlassung",
+    "word-vertretung",
+    "word-rente"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (العمل والترشيح — التوليف!)",
     "goetheWordListOverlap": [
       "zusage",
-      "besetzen"
+      "besetzen",
+      "entlassung",
+      "vertretung",
+      "rente"
     ]
   }
 }

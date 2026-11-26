@@ -52,7 +52,9 @@
     "wordIds": [
       "zusammenhalt",
       "erfuellung",
-      "verwirklichen"
+      "verwirklichen",
+      "gedicht",
+      "literatur"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -74,7 +76,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Zusammenhalt ist wichtig und die Erfüllung ist groß!",
+        "de": "Der Zusammenhalt ist wichtig und die Erfüllung ist groß! Das Gedicht ist schön. Die Literatur ist spannend.",
         "ar": "يُلخّص الوحدة كلها في فقرة (٨ جُمل)! (استراتيجيات ← قراءة ← عرض ← نص ← أسئلة!)"
       },
       "situation": {
@@ -82,7 +84,7 @@
         "ar": "وحدة واحدة! خمسة أيام! تماسك واحد! (التوليف!)"
       },
       "successCriteria": [
-        "كلمات اليوم الثلاث كلها في التوليف!",
+        "كلمات اليوم الخمس كلها في التوليف!",
         "مسار الوحدة: الاستراتيجية ← القراءة ← العرض ← النص ← الأسئلة!",
         "المفردات الثابتة: Zusammenhalt zeigen! Erfüllung finden! einen Traum verwirklichen!",
         "المراجعة: الانفصال والقوة والمرتبة الثانية!"
@@ -169,6 +171,23 @@
               }
             ],
             "why": "مراجعة المجتمع! die Leidenschaft الشغف · das Ehrenamt التطوع (die Ehrenämter!) · die Wertschätzung التقدير (die!)"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "القصيدة",
+                "de": "das Gedicht"
+              },
+              {
+                "ar": "الأدب",
+                "de": "die Literatur"
+              },
+              {
+                "ar": "يحقّق",
+                "de": "verwirklichen"
+              }
+            ],
+            "why": "das Gedicht القصيدة · die Literatur الأدب · verwirklichen يحقّق (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -218,6 +237,16 @@
             "q": "Das Hobby ___ ihn.",
             "a": "fasziniert",
             "why": "الكلمة الناقصة «fasziniert» تعني «يجذب بشدة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist schön. (القصيدة!)",
+            "a": "Gedicht",
+            "why": "das Gedicht القصيدة (das! محايد (das!) وجمعه die Gedichte.) — Das Gedicht ist schön."
+          },
+          {
+            "q": "Die ___ ist spannend. (الأدب!)",
+            "a": "Literatur",
+            "why": "die Literatur الأدب (die! مؤنثة (die!) وتُستعمل عادةً بلا جمع: die Literatur.) — Die Literatur ist spannend."
           }
         ]
       },
@@ -263,6 +292,16 @@
             "q": "~~Der hauptteil ist wichtig.~~",
             "a": "Der Hauptteil ist wichtig.",
             "why": "الخطأ في «hauptteil»! الصواب «Hauptteil» — راجع القاعدة (الجزء الرئيسي)."
+          },
+          {
+            "q": "~~der Gedicht ist schön~~",
+            "a": "das Gedicht ist schön",
+            "why": "الألمانية: das Gedicht (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Literatur ist spannend~~",
+            "a": "die Literatur ist spannend",
+            "why": "الألمانية: die Literatur (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -308,6 +347,11 @@
             "q": "كوّن جملة فيها «die Wertschätzung» («التقدير») ثم تحدّث بها.",
             "a": "Die Wertschätzung ist groß.",
             "why": "استعمل «die Wertschätzung» («التقدير») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: das Gedicht · die Literatur)",
+            "a": "Das Gedicht ist schön. Die Literatur ist spannend.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -401,6 +445,30 @@
             ],
             "a": "Auf das Team!",
             "why": "«يوسف» في الحوار: نخب"
+          },
+          {
+            "audioId": "word-gedicht",
+            "speakText": "das Gedicht.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "القصيدة",
+              "الأدب",
+              "التماسك"
+            ],
+            "a": "القصيدة",
+            "why": "الصوت يقول «das Gedicht» — معناها «القصيدة». ركّز!"
+          },
+          {
+            "audioId": "word-literatur",
+            "speakText": "die Literatur.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الأدب",
+              "القصيدة",
+              "التماسك"
+            ],
+            "a": "الأدب",
+            "why": "الصوت يقول «die Literatur» — معناها «الأدب». ركّز!"
           }
         ]
       },
@@ -434,6 +502,18 @@
             "speakText": "faszinieren.",
             "a": "faszinieren",
             "why": "اكتب ما تسمعه حرفياً: «faszinieren» تعني «يجذب بشدة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gedicht",
+            "speakText": "das Gedicht.",
+            "a": "das Gedicht",
+            "why": "اكتب ما تسمعه حرفياً: «das Gedicht» تعني «القصيدة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-literatur",
+            "speakText": "die Literatur.",
+            "a": "die Literatur",
+            "why": "اكتب ما تسمعه حرفياً: «die Literatur» تعني «الأدب». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -472,6 +552,16 @@
           {
             "q": "«التكافل الاجتماعي»؟",
             "a": "der Zusammenhalt"
+          },
+          {
+            "q": "Das ___ ist schön. (القصيدة!)",
+            "a": "Gedicht",
+            "why": "das Gedicht القصيدة (das! محايد (das!) وجمعه die Gedichte.) — Das Gedicht ist schön."
+          },
+          {
+            "q": "Die ___ ist spannend. (الأدب!)",
+            "a": "Literatur",
+            "why": "die Literatur الأدب (die! مؤنثة (die!) وتُستعمل عادةً بلا جمع: die Literatur.) — Die Literatur ist spannend."
           }
         ]
       },
@@ -500,6 +590,16 @@
           {
             "q": "«الرضا»؟",
             "a": "die Erfüllung"
+          },
+          {
+            "q": "Das ___ ist schön. (القصيدة!)",
+            "a": "Gedicht",
+            "why": "das Gedicht القصيدة (das! محايد (das!) وجمعه die Gedichte.) — Das Gedicht ist schön."
+          },
+          {
+            "q": "Die ___ ist spannend. (الأدب!)",
+            "a": "Literatur",
+            "why": "die Literatur الأدب (die! مؤنثة (die!) وتُستعمل عادةً بلا جمع: die Literatur.) — Die Literatur ist spannend."
           }
         ]
       },
@@ -528,6 +628,16 @@
           {
             "q": "«الرضا»؟",
             "a": "die Erfüllung"
+          },
+          {
+            "q": "Das ___ ist schön. (القصيدة!)",
+            "a": "Gedicht",
+            "why": "das Gedicht القصيدة (das! محايد (das!) وجمعه die Gedichte.) — Das Gedicht ist schön."
+          },
+          {
+            "q": "Die ___ ist spannend. (الأدب!)",
+            "a": "Literatur",
+            "why": "die Literatur الأدب (die! مؤنثة (die!) وتُستعمل عادةً بلا جمع: die Literatur.) — Die Literatur ist spannend."
           }
         ]
       }
@@ -535,13 +645,15 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Zusammenhalt ist wichtig und die Erfüllung ist groß. Er verwirklicht den Traum. Die Strategie ist wichtig und das Kapitel ist spannend. Der Hauptteil ist klar und der Entwurf ist kurz. Der Schwerpunkt ist deutlich und die Sichtweise ist wichtig. Die Leidenschaft ist groß und das Ehrenamt ist wichtig. Die Wertschätzung ist da!",
-      "ar": "التماسك مهم والرضا كبير. هو يحقّق الحلم. الاستراتيجية مهمة والفصل مثير. الجزء الرئيسي واضح والمسودة قصيرة. محور التركيز واضح وزاوية النظر مهمة. الشغف كبير والعمل التطوعي مهم. التقدير موجود!"
+      "de": "Der Zusammenhalt ist wichtig und die Erfüllung ist groß. Er verwirklicht den Traum. Die Strategie ist wichtig und das Kapitel ist spannend. Der Hauptteil ist klar und der Entwurf ist kurz. Der Schwerpunkt ist deutlich und die Sichtweise ist wichtig. Die Leidenschaft ist groß und das Ehrenamt ist wichtig. Die Wertschätzung ist da! Das Gedicht ist schön. Die Literatur ist spannend.",
+      "ar": "التماسك مهم والرضا كبير. هو يحقّق الحلم. الاستراتيجية مهمة والفصل مثير. الجزء الرئيسي واضح والمسودة قصيرة. محور التركيز واضح وزاوية النظر مهمة. الشغف كبير والعمل التطوعي مهم. التقدير موجود! القصيدة جميلة. الأدب مشوّق."
     },
     "srsBundleWordIds": [
       "zusammenhalt",
       "erfuellung",
-      "verwirklichen"
+      "verwirklichen",
+      "gedicht",
+      "literatur"
     ],
     "warningCards": [
       {
@@ -608,7 +720,9 @@
   "audioManifestRefs": [
     "word-zusammenhalt",
     "word-erfuellung",
-    "word-verwirklichen"
+    "word-verwirklichen",
+    "word-gedicht",
+    "word-literatur"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -616,7 +730,9 @@
     "goetheWordListOverlap": [
       "zusammenhalt",
       "erfuellung",
-      "verwirklichen"
+      "verwirklichen",
+      "gedicht",
+      "literatur"
     ]
   }
 }

@@ -257,7 +257,10 @@ describe("D110 — الحارس الدائم على المحتوى الحقيق�
     const DECLARED_OUTSIDE_A2 = new Set(["lieblings", "zukunft"]);
     // D417: مترادف معلَن — «die Bank» مالٌ في محتوانا (Banken) ومقعد في قائمة B1 («die Bank, ¨-e» ← Bänke) — كلا الجمعين صحيح لمعناه
     // D430 (N-278): zeitpunkt — الرسم المطبعي «der Zeitpunkt, -» مختصر (لا جمع مقروء!) والصحيح Duden = die Zeitpunkte
-    const DECLARED_HOMONYM_PLURALS = new Set(["bank", "zeitpunkt"]);
+    // D589 (N-379): fachmann — المدخل الثنائي «der Fachmann / die Fachfrau, -en»: اللاحقة «-en» تعود لـFachfrau (Fachfrauen!)
+    // والمحلّل يلصقها بـFachmann خطأً («Fachmannen»!)؛ الصحيح Duden = die Fachleute — والقائمة نفسها تطبعه مدخلاً منفصلاً
+    // «die Fachleute (Pl.)» في الصفحة نفسها (ص38)!
+    const DECLARED_HOMONYM_PLURALS = new Set(["bank", "zeitpunkt", "fachmann"]);
     for (const w of words.filter((x) => x.level === "A2" && !DECLARED_OUTSIDE_A2.has(x.id))) expect(w.goetheList, w.id).toContain("A2");
     const { plurals } = auditGoethe(words, LISTS);
     expect(plurals.filter((x) => !DECLARED_HOMONYM_PLURALS.has(x.id))).toEqual([]);

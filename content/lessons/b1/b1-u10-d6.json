@@ -52,7 +52,8 @@
     "wordIds": [
       "bilanz",
       "fazit",
-      "genauigkeit"
+      "genauigkeit",
+      "faktor"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -69,7 +70,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Am Ende: die Bilanz — und das Fazit ist klar!",
+        "de": "Am Ende: die Bilanz — und das Fazit ist klar! Der Faktor ist wichtig. Die Zahlen sind klar.",
         "ar": "يُلخّص الوحدة في 8 جمل وصولاً إلى الحصيلة!"
       },
       "situation": {
@@ -77,7 +78,7 @@
         "ar": "حصيلة! خلاصة! ودقّة! (الوحدة كلها في خاتمة واحدة!)"
       },
       "successCriteria": [
-        "كلمات اليوم الثلاث + مراجعة كلمات الوحدة كلها!",
+        "كلمات اليوم الأربع + مراجعة كلمات الوحدة كلها!",
         "الترتيب الكامل: Prozent ← Grafik ← Vortrag ← Bericht ← Drittel ← Bilanz!",
         "الشريك الثابت: Bilanz ziehen! (لا machen!)",
         "الخاتمة: das Fazit ist klar und die Genauigkeit ist wichtig!"
@@ -176,6 +177,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Hälfte = «النصف» · die Anzahl = «العدد (الكمّي)» · die Bilanz = «الحصيلة»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "العامل (الرقمي)",
+                "de": "der Faktor"
+              },
+              {
+                "ar": "الدقّة",
+                "de": "die Genauigkeit"
+              },
+              {
+                "ar": "الخلاصة",
+                "de": "das Fazit"
+              }
+            ],
+            "why": "der Faktor العامل (الرقمي) · die Genauigkeit الدقّة · das Fazit الخلاصة (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -230,6 +248,11 @@
             "q": "Eine ___ ist viel.",
             "a": "Million",
             "why": "الكلمة الناقصة «Million» تعني «المليون» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ist ein ___. (عامل!)",
+            "a": "Faktor",
+            "why": "der Faktor العامل (الرقمي) (der! مذكّر (der!) وجمعه die Faktoren (-en!) — قرض لاتيني.) — Das ist ein Faktor."
           }
         ]
       },
@@ -275,6 +298,11 @@
             "q": "~~Eine handvoll ist klein.~~",
             "a": "Eine Handvoll ist klein.",
             "why": "الخطأ في «handvoll»! الصواب «Handvoll» — راجع القاعدة (حفنة)."
+          },
+          {
+            "q": "~~Das ist eine Faktor.~~",
+            "a": "Das ist ein Faktor.",
+            "why": "der Faktor = مذكّر: ein Faktor (لا eine!) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -315,6 +343,11 @@
             "q": "كوّن جملة فيها «die Stichprobe» («العيّنة (الإحصائية)») ثم تحدّث بها.",
             "a": "Die Stichprobe ist klein.",
             "why": "استعمل «die Stichprobe» («العيّنة (الإحصائية)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Faktor)",
+            "a": "Der Faktor ist wichtig. Die Zahlen sind klar.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -408,6 +441,18 @@
             ],
             "a": "Danke für die klare Auswertung!",
             "why": "«يوسف» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-faktor",
+            "speakText": "der Faktor.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العامل (الرقمي)",
+              "الحصيلة",
+              "الخلاصة"
+            ],
+            "a": "العامل (الرقمي)",
+            "why": "الصوت يقول «der Faktor» — معناها «العامل (الرقمي)». ركّز!"
           }
         ]
       },
@@ -441,6 +486,12 @@
             "speakText": "die Million.",
             "a": "die Million",
             "why": "اكتب ما تسمعه حرفياً: «die Million» تعني «المليون». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-faktor",
+            "speakText": "der Faktor.",
+            "a": "der Faktor",
+            "why": "اكتب ما تسمعه حرفياً: «der Faktor» تعني «العامل (الرقمي)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -479,6 +530,11 @@
           {
             "q": "«الميزان»؟",
             "a": "die Bilanz"
+          },
+          {
+            "q": "Das ist ein ___. (عامل!)",
+            "a": "Faktor",
+            "why": "der Faktor العامل (الرقمي) (der! مذكّر (der!) وجمعه die Faktoren (-en!) — قرض لاتيني.) — Das ist ein Faktor."
           }
         ]
       },
@@ -507,6 +563,11 @@
           {
             "q": "«الخلاصة»؟",
             "a": "das Fazit"
+          },
+          {
+            "q": "Das ist ein ___. (عامل!)",
+            "a": "Faktor",
+            "why": "der Faktor العامل (الرقمي) (der! مذكّر (der!) وجمعه die Faktoren (-en!) — قرض لاتيني.) — Das ist ein Faktor."
           }
         ]
       },
@@ -535,6 +596,11 @@
           {
             "q": "«الخلاصة»؟",
             "a": "das Fazit"
+          },
+          {
+            "q": "Das ist ein ___. (عامل!)",
+            "a": "Faktor",
+            "why": "der Faktor العامل (الرقمي) (der! مذكّر (der!) وجمعه die Faktoren (-en!) — قرض لاتيني.) — Das ist ein Faktor."
           }
         ]
       }
@@ -542,13 +608,14 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Die Bilanz ist klar: Fünfundachtzig Komma drei Prozent. Ein Drittel ist genug und zwei Drittel sind hoch. Die Grafik zeigt den Verlauf und die Spitze ist deutlich. Die Erhebung ist repräsentativ und die Auswertung ist klar. Die Werte sind zahlreich und die Rate ist hoch. Das Fazit ist klar: Die Genauigkeit ist wichtig!",
-      "ar": "الحصيلة واضحة: خمسة وثمانون فاصلة ثلاثة بالمئة. الثلث يكفي والثلثان مرتفعان. الرسم يُظهر المسار والقمة واضحة. المسح مُمثِّل والتحليل واضح. القيم كثيرة والمعدل عالٍ. الخلاصة واضحة: الدقّة مهمّة!"
+      "de": "Die Bilanz ist klar: Fünfundachtzig Komma drei Prozent. Ein Drittel ist genug und zwei Drittel sind hoch. Die Grafik zeigt den Verlauf und die Spitze ist deutlich. Die Erhebung ist repräsentativ und die Auswertung ist klar. Die Werte sind zahlreich und die Rate ist hoch. Das Fazit ist klar: Die Genauigkeit ist wichtig! Das ist ein Faktor.",
+      "ar": "الحصيلة واضحة: خمسة وثمانون فاصلة ثلاثة بالمئة. الثلث يكفي والثلثان مرتفعان. الرسم يُظهر المسار والقمة واضحة. المسح مُمثِّل والتحليل واضح. القيم كثيرة والمعدل عالٍ. الخلاصة واضحة: الدقّة مهمّة! هذا عامل."
     },
     "srsBundleWordIds": [
       "bilanz",
       "fazit",
-      "genauigkeit"
+      "genauigkeit",
+      "faktor"
     ],
     "warningCards": [
       {
@@ -614,7 +681,8 @@
   "audioManifestRefs": [
     "word-bilanz",
     "word-fazit",
-    "word-genauigkeit"
+    "word-genauigkeit",
+    "word-faktor"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -622,7 +690,8 @@
     "goetheWordListOverlap": [
       "bilanz",
       "fazit",
-      "genauigkeit"
+      "genauigkeit",
+      "faktor"
     ]
   }
 }
