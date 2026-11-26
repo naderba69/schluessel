@@ -55,7 +55,11 @@
   "praesentation": {
     "wordIds": [
       "herz",
-      "knochen"
+      "knochen",
+      "atem",
+      "vitamin",
+      "zahnbuerste",
+      "zahncreme"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -72,7 +76,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Das Herz ist stark: die Gesundheit auch!",
+        "de": "Das Herz ist stark: die Gesundheit auch! Der Atem ist ruhig. Das Vitamin ist wichtig. Die Zahnbürste und die Zahncreme sind neu.",
         "ar": "يلخّص قصة أسبوع الصحة في 8 جمل!"
       },
       "situation": {
@@ -149,6 +153,27 @@
               }
             ],
             "why": "مراجعة الأسبوع: die Untersuchung الفحص (d1!) · messen يقيس (d3!) · tasten يتحسّس (d3!) · blass شاحب (d3!) · die Übung التمرين (d2!) — كلها من أسبوع الصحة!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "النَّفَس",
+                "de": "der Atem"
+              },
+              {
+                "ar": "الفيتامين",
+                "de": "das Vitamin"
+              },
+              {
+                "ar": "فرشاة الأسنان",
+                "de": "die Zahnbürste"
+              },
+              {
+                "ar": "معجون الأسنان",
+                "de": "die Zahncreme"
+              }
+            ],
+            "why": "der Atem النَّفَس · das Vitamin الفيتامين · die Zahnbürste فرشاة الأسنان · die Zahncreme معجون الأسنان (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -209,6 +234,26 @@
             "q": "___ habe ich Zeit.",
             "a": "Morgen",
             "why": "الكلمة الناقصة «Morgen» تعني «الصباح / غداً (حسب الكبير!)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist ruhig. (النَّفَس!)",
+            "a": "Atem",
+            "why": "der Atem النَّفَس (der! يُستعمل عادةً بلا جمع: der Atem.) — Der Atem ist ruhig."
+          },
+          {
+            "q": "Das ___ ist wichtig. (الفيتامين!)",
+            "a": "Vitamin",
+            "why": "das Vitamin الفيتامين (das! محايد (das!) وجمعه die Vitamine (-e!).) — Das Vitamin ist wichtig."
+          },
+          {
+            "q": "Die ___ ist neu. (فرشاة الأسنان!)",
+            "a": "Zahnbürste",
+            "why": "die Zahnbürste فرشاة الأسنان (die! مركّبة (Zahn+Bürste) مؤنثة (die!) وجمعها die Zahnbürsten.) — Die Zahnbürste ist neu."
+          },
+          {
+            "q": "Die ___ ist leer. (معجون الأسنان!)",
+            "a": "Zahncreme",
+            "why": "die Zahncreme معجون الأسنان (die! مؤنثة (die!) وجمعها die Zahncremes (-s!) — وتُكتب أيضاً Zahnpasta.) — Die Zahncreme ist leer."
           }
         ]
       },
@@ -254,6 +299,26 @@
             "q": "~~Ich habe zeit.~~",
             "a": "Ich habe Zeit.",
             "why": "الخطأ في «zeit»! الصواب «Zeit» — راجع القاعدة (الوقت)."
+          },
+          {
+            "q": "~~die Atem ist ruhig~~",
+            "a": "der Atem ist ruhig",
+            "why": "الألمانية: der Atem (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Vitamin ist wichtig~~",
+            "a": "das Vitamin ist wichtig",
+            "why": "الألمانية: das Vitamin (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Zahnbürste ist neu~~",
+            "a": "die Zahnbürste ist neu",
+            "why": "الألمانية: die Zahnbürste (die! مركّبة مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Zahncreme ist leer~~",
+            "a": "die Zahncreme ist leer",
+            "why": "الألمانية: die Zahncreme (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -289,6 +354,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Atem · das Vitamin · die Zahnbürste · die Zahncreme)",
+            "a": "Der Atem ist ruhig. Das Vitamin ist wichtig. Die Zahnbürste und die Zahncreme sind neu.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -368,6 +438,54 @@
             ],
             "a": "Danke! Ich beginne heute mit Sport.",
             "why": "«يوسف» في الحوار: عزم"
+          },
+          {
+            "audioId": "word-atem",
+            "speakText": "der Atem.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "النَّفَس",
+              "الفيتامين",
+              "فرشاة الأسنان"
+            ],
+            "a": "النَّفَس",
+            "why": "الصوت يقول «der Atem» — معناها «النَّفَس». ركّز!"
+          },
+          {
+            "audioId": "word-vitamin",
+            "speakText": "das Vitamin.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الفيتامين",
+              "النَّفَس",
+              "فرشاة الأسنان"
+            ],
+            "a": "الفيتامين",
+            "why": "الصوت يقول «das Vitamin» — معناها «الفيتامين». ركّز!"
+          },
+          {
+            "audioId": "word-zahnbuerste",
+            "speakText": "die Zahnbürste.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "فرشاة الأسنان",
+              "النَّفَس",
+              "الفيتامين"
+            ],
+            "a": "فرشاة الأسنان",
+            "why": "الصوت يقول «die Zahnbürste» — معناها «فرشاة الأسنان». ركّز!"
+          },
+          {
+            "audioId": "word-zahncreme",
+            "speakText": "die Zahncreme.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "معجون الأسنان",
+              "النَّفَس",
+              "الفيتامين"
+            ],
+            "a": "معجون الأسنان",
+            "why": "الصوت يقول «die Zahncreme» — معناها «معجون الأسنان». ركّز!"
           }
         ]
       },
@@ -395,6 +513,30 @@
             "speakText": "der Knopf.",
             "a": "der Knopf",
             "why": "اكتب المسموع بدقة: der Knopf — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-atem",
+            "speakText": "der Atem.",
+            "a": "der Atem",
+            "why": "اكتب ما تسمعه حرفياً: «der Atem» تعني «النَّفَس». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-vitamin",
+            "speakText": "das Vitamin.",
+            "a": "das Vitamin",
+            "why": "اكتب ما تسمعه حرفياً: «das Vitamin» تعني «الفيتامين». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-zahnbuerste",
+            "speakText": "die Zahnbürste.",
+            "a": "die Zahnbürste",
+            "why": "اكتب ما تسمعه حرفياً: «die Zahnbürste» تعني «فرشاة الأسنان». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-zahncreme",
+            "speakText": "die Zahncreme.",
+            "a": "die Zahncreme",
+            "why": "اكتب ما تسمعه حرفياً: «die Zahncreme» تعني «معجون الأسنان». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -433,6 +575,26 @@
           {
             "q": "«العظام»؟",
             "a": "der Knochen"
+          },
+          {
+            "q": "Der ___ ist ruhig. (النَّفَس!)",
+            "a": "Atem",
+            "why": "der Atem النَّفَس (der! يُستعمل عادةً بلا جمع: der Atem.) — Der Atem ist ruhig."
+          },
+          {
+            "q": "Das ___ ist wichtig. (الفيتامين!)",
+            "a": "Vitamin",
+            "why": "das Vitamin الفيتامين (das! محايد (das!) وجمعه die Vitamine (-e!).) — Das Vitamin ist wichtig."
+          },
+          {
+            "q": "Die ___ ist neu. (فرشاة الأسنان!)",
+            "a": "Zahnbürste",
+            "why": "die Zahnbürste فرشاة الأسنان (die! مركّبة (Zahn+Bürste) مؤنثة (die!) وجمعها die Zahnbürsten.) — Die Zahnbürste ist neu."
+          },
+          {
+            "q": "Die ___ ist leer. (معجون الأسنان!)",
+            "a": "Zahncreme",
+            "why": "die Zahncreme معجون الأسنان (die! مؤنثة (die!) وجمعها die Zahncremes (-s!) — وتُكتب أيضاً Zahnpasta.) — Die Zahncreme ist leer."
           }
         ],
         "passingScore": 0.75
@@ -462,6 +624,26 @@
           {
             "q": "«العظم»؟",
             "a": "der Knochen"
+          },
+          {
+            "q": "Der ___ ist ruhig. (النَّفَس!)",
+            "a": "Atem",
+            "why": "der Atem النَّفَس (der! يُستعمل عادةً بلا جمع: der Atem.) — Der Atem ist ruhig."
+          },
+          {
+            "q": "Das ___ ist wichtig. (الفيتامين!)",
+            "a": "Vitamin",
+            "why": "das Vitamin الفيتامين (das! محايد (das!) وجمعه die Vitamine (-e!).) — Das Vitamin ist wichtig."
+          },
+          {
+            "q": "Die ___ ist neu. (فرشاة الأسنان!)",
+            "a": "Zahnbürste",
+            "why": "die Zahnbürste فرشاة الأسنان (die! مركّبة (Zahn+Bürste) مؤنثة (die!) وجمعها die Zahnbürsten.) — Die Zahnbürste ist neu."
+          },
+          {
+            "q": "Die ___ ist leer. (معجون الأسنان!)",
+            "a": "Zahncreme",
+            "why": "die Zahncreme معجون الأسنان (die! مؤنثة (die!) وجمعها die Zahncremes (-s!) — وتُكتب أيضاً Zahnpasta.) — Die Zahncreme ist leer."
           }
         ],
         "passingScore": 0.75
@@ -491,6 +673,26 @@
           {
             "q": "«العظم»؟",
             "a": "der Knochen"
+          },
+          {
+            "q": "Der ___ ist ruhig. (النَّفَس!)",
+            "a": "Atem",
+            "why": "der Atem النَّفَس (der! يُستعمل عادةً بلا جمع: der Atem.) — Der Atem ist ruhig."
+          },
+          {
+            "q": "Das ___ ist wichtig. (الفيتامين!)",
+            "a": "Vitamin",
+            "why": "das Vitamin الفيتامين (das! محايد (das!) وجمعه die Vitamine (-e!).) — Das Vitamin ist wichtig."
+          },
+          {
+            "q": "Die ___ ist neu. (فرشاة الأسنان!)",
+            "a": "Zahnbürste",
+            "why": "die Zahnbürste فرشاة الأسنان (die! مركّبة (Zahn+Bürste) مؤنثة (die!) وجمعها die Zahnbürsten.) — Die Zahnbürste ist neu."
+          },
+          {
+            "q": "Die ___ ist leer. (معجون الأسنان!)",
+            "a": "Zahncreme",
+            "why": "die Zahncreme معجون الأسنان (die! مؤنثة (die!) وجمعها die Zahncremes (-s!) — وتُكتب أيضاً Zahnpasta.) — Die Zahncreme ist leer."
           }
         ],
         "passingScore": 0.75
@@ -499,12 +701,16 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Patient kommt in die Klinik. Er wird untersucht: das Herz und der Knochen. Er achtet auf die Gesundheit. Zuerst wird gewogen, dann getestet. Die Angabe im Formular ist erforderlich. Die Krankenkasse ist Pflicht: der Schutz ist staatlich. Das Herz ist stark. Mit freundlichen Grüßen",
-      "ar": "المريض يأتي إلى العيادة. يُفحص: القلب والعظم. ينتبه إلى الصحّة. أولاً يُوزن ثم يُختبر. البيان في الاستمارة مطلوب. الصندوق واجب: الحماية حكومية. القلب قوي. مع تحياتي الخالصة."
+      "de": "Der Patient kommt in die Klinik. Er wird untersucht: das Herz und der Knochen. Er achtet auf die Gesundheit. Zuerst wird gewogen, dann getestet. Die Angabe im Formular ist erforderlich. Die Krankenkasse ist Pflicht: der Schutz ist staatlich. Das Herz ist stark. Mit freundlichen Grüßen Der Atem ist ruhig. Das Vitamin ist wichtig. Die Zahnbürste ist neu. Die Zahncreme ist leer.",
+      "ar": "المريض يأتي إلى العيادة. يُفحص: القلب والعظم. ينتبه إلى الصحّة. أولاً يُوزن ثم يُختبر. البيان في الاستمارة مطلوب. الصندوق واجب: الحماية حكومية. القلب قوي. مع تحياتي الخالصة. النَّفَس هادئ. الفيتامين مهم. فرشاة الأسنان جديدة. معجون الأسنان فارغ."
     },
     "srsBundleWordIds": [
       "herz",
-      "knochen"
+      "knochen",
+      "atem",
+      "vitamin",
+      "zahnbuerste",
+      "zahncreme"
     ],
     "warningCards": [
       {
@@ -570,14 +776,22 @@
   ],
   "audioManifestRefs": [
     "word-herz",
-    "word-knochen"
+    "word-knochen",
+    "word-atem",
+    "word-vitamin",
+    "word-zahnbuerste",
+    "word-zahncreme"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الصحة والتأمين — التوليف)",
     "goetheWordListOverlap": [
       "herz",
-      "knochen"
+      "knochen",
+      "atem",
+      "vitamin",
+      "zahnbuerste",
+      "zahncreme"
     ]
   }
 }

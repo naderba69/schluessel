@@ -68,7 +68,8 @@
       "angehoerige",
       "voraussetzung",
       "kasten",
-      "spalte"
+      "spalte",
+      "schwangerschaft"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -85,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Die Angabe ist erforderlich: das Feld und die Zeile!",
+        "de": "Die Angabe ist erforderlich: das Feld und die Zeile! Die Schwangerschaft ist neun Monate lang.",
         "ar": "يملأ استمارة تأمين ويشرح حقولها!"
       },
       "situation": {
@@ -95,7 +96,7 @@
       "successCriteria": [
         "الحقول: das Feld + die Zeile + die Spalte!",
         "اللفظ الحاسم: erforderlich! nötig! Pflicht!",
-        "كلمات اليوم الخمس عشرة كلها!",
+        "كلمات اليوم الست عشرة كلها!",
         "Anrede/Gruß مهذبان!"
       ]
     },
@@ -199,6 +200,23 @@
               }
             ],
             "why": "die Pflicht الواجب (die! die Pflichten!) · die Angehörige القريبة (die!) · die Voraussetzung الشرط (-ung!) · der Kasten المربّع (der! die Kästen!) · die Spalte العمود (die!) — ومراجعة: das Formular الاستمارة!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الحمل (الإنجابي)",
+                "de": "die Schwangerschaft"
+              },
+              {
+                "ar": "العمود (في الاستمارة)",
+                "de": "die Spalte"
+              },
+              {
+                "ar": "الصندوق",
+                "de": "der Kasten"
+              }
+            ],
+            "why": "die Schwangerschaft الحمل (الإنجابي) · die Spalte العمود (في الاستمارة) · der Kasten الصندوق (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -259,6 +277,11 @@
             "q": "Das ___ steht im Kalender.",
             "a": "Datum",
             "why": "الكلمة الناقصة «Datum» تعني «التاريخ» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الحمل!)",
+            "a": "Schwangerschaft",
+            "why": "die Schwangerschaft الحمل (الإنجابي) (die! مؤنثة (die!) وجمعها die Schwangerschaften.) — Die Schwangerschaft ist neun Monate lang."
           }
         ]
       },
@@ -304,6 +327,11 @@
             "q": "~~Ich habe zeit.~~",
             "a": "Ich habe Zeit.",
             "why": "الخطأ في «zeit»! الصواب «Zeit» — راجع القاعدة (الوقت)."
+          },
+          {
+            "q": "~~der Schwangerschaft ist wichtig~~",
+            "a": "die Schwangerschaft ist wichtig",
+            "why": "الألمانية: die Schwangerschaft (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -339,6 +367,11 @@
             "q": "كوّن جملة فيها «wohnen» («يسكن») ثم تحدّث بها.",
             "a": "Ich wohne in Tunis.",
             "why": "استعمل «wohnen» («يسكن») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Schwangerschaft)",
+            "a": "Die Schwangerschaft ist neun Monate lang.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -432,6 +465,18 @@
             ],
             "a": "Danke für die Hilfe.",
             "why": "«يوسف» في الحوار: امتنان"
+          },
+          {
+            "audioId": "word-schwangerschaft",
+            "speakText": "die Schwangerschaft.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الحمل (الإنجابي)",
+              "البيان",
+              "الحقل (في الاستمارة)"
+            ],
+            "a": "الحمل (الإنجابي)",
+            "why": "الصوت يقول «die Schwangerschaft» — معناها «الحمل (الإنجابي)». ركّز!"
           }
         ]
       },
@@ -465,6 +510,12 @@
             "speakText": "nicken.",
             "a": "nicken",
             "why": "اكتب ما تسمعه حرفياً: «nicken» تعني «يُومئ (بالرأس)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-schwangerschaft",
+            "speakText": "die Schwangerschaft.",
+            "a": "die Schwangerschaft",
+            "why": "اكتب ما تسمعه حرفياً: «die Schwangerschaft» تعني «الحمل (الإنجابي)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -503,6 +554,11 @@
           {
             "q": "«الجنس (ذكر/أنثى)»؟",
             "a": "das Geschlecht"
+          },
+          {
+            "q": "Die ___ ist wichtig. (الحمل!)",
+            "a": "Schwangerschaft",
+            "why": "die Schwangerschaft الحمل (الإنجابي) (die! مؤنثة (die!) وجمعها die Schwangerschaften.) — Die Schwangerschaft ist neun Monate lang."
           }
         ],
         "passingScore": 0.75
@@ -532,6 +588,11 @@
           {
             "q": "«الحقل (في الاستمارة)»؟",
             "a": "das Feld"
+          },
+          {
+            "q": "Die ___ ist wichtig. (الحمل!)",
+            "a": "Schwangerschaft",
+            "why": "die Schwangerschaft الحمل (الإنجابي) (die! مؤنثة (die!) وجمعها die Schwangerschaften.) — Die Schwangerschaft ist neun Monate lang."
           }
         ],
         "passingScore": 0.75
@@ -561,6 +622,11 @@
           {
             "q": "«الحقل (في الاستمارة)»؟",
             "a": "das Feld"
+          },
+          {
+            "q": "Die ___ ist wichtig. (الحمل!)",
+            "a": "Schwangerschaft",
+            "why": "die Schwangerschaft الحمل (الإنجابي) (die! مؤنثة (die!) وجمعها die Schwangerschaften.) — Die Schwangerschaft ist neun Monate lang."
           }
         ],
         "passingScore": 0.75
@@ -569,8 +635,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Die Angabe ist erforderlich. Das Feld ist klein. Die Zeile ist lang. Die Geburt ist wichtig. Das Geschlecht ist klar. Der Beleg ist nötig. Die Versichertenkarte ist dabei. Die Pflicht ist nicht schwer.",
-      "ar": "البيان مطلوب. الحقل صغير. السطر طويل. الميلاد مهم. الجنس واضح. الإثبات لازم. بطاقة التأمين مرفقة. الواجب ليس صعباً."
+      "de": "Die Angabe ist erforderlich. Das Feld ist klein. Die Zeile ist lang. Die Geburt ist wichtig. Das Geschlecht ist klar. Der Beleg ist nötig. Die Versichertenkarte ist dabei. Die Pflicht ist nicht schwer. Die Schwangerschaft ist neun Monate lang.",
+      "ar": "البيان مطلوب. الحقل صغير. السطر طويل. الميلاد مهم. الجنس واضح. الإثبات لازم. بطاقة التأمين مرفقة. الواجب ليس صعباً. الحمل تسعة أشهر."
     },
     "srsBundleWordIds": [
       "angabe",
@@ -587,7 +653,8 @@
       "angehoerige",
       "voraussetzung",
       "kasten",
-      "spalte"
+      "spalte",
+      "schwangerschaft"
     ],
     "warningCards": [
       {
@@ -675,7 +742,8 @@
     "word-angehoerige",
     "word-voraussetzung",
     "word-kasten",
-    "word-spalte"
+    "word-spalte",
+    "word-schwangerschaft"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -695,7 +763,8 @@
       "angehoerige",
       "voraussetzung",
       "kasten",
-      "spalte"
+      "spalte",
+      "schwangerschaft"
     ]
   }
 }

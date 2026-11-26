@@ -66,7 +66,9 @@
       "verursachen",
       "warnen",
       "widersprechen",
-      "zweifel"
+      "zweifel",
+      "serie",
+      "studio"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Das ist doch klar: die Kritik ist wichtig!",
+        "de": "Das ist doch klar: die Kritik ist wichtig! Die Serie ist spannend. Das Studio ist groß.",
         "ar": "يعبّر عن رأيه بنبرة صحيحة!"
       },
       "situation": {
@@ -93,7 +95,7 @@
       "successCriteria": [
         "الجسيمات الأربع: doch! ja! mal! schon!",
         "النبرة لا المعنى!",
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الخمس عشرة كلها!",
         "نبرة مهذبة في الطلب!"
       ]
     },
@@ -194,6 +196,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Meinung = «رأي» · sagen = «يقول» · wichtig = «مهم»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المسلسل · السلسلة",
+                "de": "die Serie"
+              },
+              {
+                "ar": "الاستوديو",
+                "de": "das Studio"
+              },
+              {
+                "ar": "الشك",
+                "de": "der Zweifel"
+              }
+            ],
+            "why": "die Serie المسلسل · السلسلة · das Studio الاستوديو · der Zweifel الشك (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -239,6 +258,16 @@
             "q": "Er ___ uns.",
             "a": "warnt",
             "why": "warnen يحذّر! «Er warnt»!"
+          },
+          {
+            "q": "Die ___ ist spannend. (المسلسل!)",
+            "a": "Serie",
+            "why": "die Serie المسلسل · السلسلة (die! مؤنثة (die!) وجمعها die Serien.) — Die Serie ist spannend."
+          },
+          {
+            "q": "Das ___ ist groß. (الاستوديو!)",
+            "a": "Studio",
+            "why": "das Studio الاستوديو (das! محايد (das!) وجمعه die Studios (s!).) — Das Studio ist groß."
           }
         ]
       },
@@ -284,6 +313,16 @@
             "q": "~~Ich habe zeit.~~",
             "a": "Ich habe Zeit.",
             "why": "الخطأ في «zeit»! الصواب «Zeit» — راجع القاعدة (الوقت)."
+          },
+          {
+            "q": "~~der Serie ist spannend~~",
+            "a": "die Serie ist spannend",
+            "why": "الألمانية: die Serie (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Studio ist groß~~",
+            "a": "das Studio ist groß",
+            "why": "الألمانية: das Studio (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -319,6 +358,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Serie · das Studio)",
+            "a": "Die Serie ist spannend. Das Studio ist groß.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -412,6 +456,30 @@
             ],
             "a": "Danke für die gute Kritik.",
             "why": "«يوسف» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-serie",
+            "speakText": "die Serie.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المسلسل · السلسلة",
+              "الاستوديو",
+              "التعبير"
+            ],
+            "a": "المسلسل · السلسلة",
+            "why": "الصوت يقول «die Serie» — معناها «المسلسل · السلسلة». ركّز!"
+          },
+          {
+            "audioId": "word-studio",
+            "speakText": "das Studio.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الاستوديو",
+              "المسلسل · السلسلة",
+              "التعبير"
+            ],
+            "a": "الاستوديو",
+            "why": "الصوت يقول «das Studio» — معناها «الاستوديو». ركّز!"
           }
         ]
       },
@@ -445,6 +513,18 @@
             "speakText": "der Zuschauer.",
             "a": "der Zuschauer",
             "why": "اكتب ما تسمعه حرفياً: «der Zuschauer» تعني «المشاهد». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-serie",
+            "speakText": "die Serie.",
+            "a": "die Serie",
+            "why": "اكتب ما تسمعه حرفياً: «die Serie» تعني «المسلسل · السلسلة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-studio",
+            "speakText": "das Studio.",
+            "a": "das Studio",
+            "why": "اكتب ما تسمعه حرفياً: «das Studio» تعني «الاستوديو». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -483,6 +563,16 @@
           {
             "q": "«المستمع»؟",
             "a": "der Hörer"
+          },
+          {
+            "q": "Die ___ ist spannend. (المسلسل!)",
+            "a": "Serie",
+            "why": "die Serie المسلسل · السلسلة (die! مؤنثة (die!) وجمعها die Serien.) — Die Serie ist spannend."
+          },
+          {
+            "q": "Das ___ ist groß. (الاستوديو!)",
+            "a": "Studio",
+            "why": "das Studio الاستوديو (das! محايد (das!) وجمعه die Studios (s!).) — Das Studio ist groß."
           }
         ],
         "passingScore": 0.75
@@ -512,6 +602,16 @@
           {
             "q": "«القارئ»؟",
             "a": "der Leser"
+          },
+          {
+            "q": "Die ___ ist spannend. (المسلسل!)",
+            "a": "Serie",
+            "why": "die Serie المسلسل · السلسلة (die! مؤنثة (die!) وجمعها die Serien.) — Die Serie ist spannend."
+          },
+          {
+            "q": "Das ___ ist groß. (الاستوديو!)",
+            "a": "Studio",
+            "why": "das Studio الاستوديو (das! محايد (das!) وجمعه die Studios (s!).) — Das Studio ist groß."
           }
         ],
         "passingScore": 0.75
@@ -541,6 +641,16 @@
           {
             "q": "«الحكاية»؟",
             "a": "die Erzählung"
+          },
+          {
+            "q": "Die ___ ist spannend. (المسلسل!)",
+            "a": "Serie",
+            "why": "die Serie المسلسل · السلسلة (die! مؤنثة (die!) وجمعها die Serien.) — Die Serie ist spannend."
+          },
+          {
+            "q": "Das ___ ist groß. (الاستوديو!)",
+            "a": "Studio",
+            "why": "das Studio الاستوديو (das! محايد (das!) وجمعه die Studios (s!).) — Das Studio ist groß."
           }
         ],
         "passingScore": 0.75
@@ -549,8 +659,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Das ist doch klar! Die Kritik ist wichtig. Der Leser liest die Erzählung. Der Hörer hat Zweifel. Der Ratschlag ist gut. Das war schon richtig. Er warnt uns. Sagen Sie mal!",
-      "ar": "هذا واضح بالتأكيد! النقد مهم. القارئ يقرأ الحكاية. المستمع لديه شك. النصيحة جيدة. كان هذا صحيحاً فعلاً. هو يحذّرنا. قل لي!"
+      "de": "Das ist doch klar! Die Kritik ist wichtig. Der Leser liest die Erzählung. Der Hörer hat Zweifel. Der Ratschlag ist gut. Das war schon richtig. Er warnt uns. Sagen Sie mal! Die Serie ist spannend. Das Studio ist groß.",
+      "ar": "هذا واضح بالتأكيد! النقد مهم. القارئ يقرأ الحكاية. المستمع لديه شك. النصيحة جيدة. كان هذا صحيحاً فعلاً. هو يحذّرنا. قل لي! المسلسل مشوّق. الاستوديو كبير."
     },
     "srsBundleWordIds": [
       "ausdruck",
@@ -565,7 +675,9 @@
       "verursachen",
       "warnen",
       "widersprechen",
-      "zweifel"
+      "zweifel",
+      "serie",
+      "studio"
     ],
     "warningCards": [
       {
@@ -649,7 +761,9 @@
     "word-verursachen",
     "word-warnen",
     "word-widersprechen",
-    "word-zweifel"
+    "word-zweifel",
+    "word-serie",
+    "word-studio"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -667,7 +781,9 @@
       "verursachen",
       "warnen",
       "widersprechen",
-      "zweifel"
+      "zweifel",
+      "serie",
+      "studio"
     ]
   }
 }

@@ -66,7 +66,9 @@
       "beitrag",
       "leistung",
       "therapie",
-      "beratung"
+      "beratung",
+      "schmerzmittel",
+      "krankenpfleger"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Patient wird behandelt: die Medizin wird verschrieben!",
+        "de": "Der Patient wird behandelt: die Medizin wird verschrieben! Das Schmerzmittel hilft. Der Krankenpfleger hilft mir.",
         "ar": "يصف يوماً في العيادة بالمجهول التجريبي!"
       },
       "situation": {
@@ -93,7 +95,7 @@
       "successCriteria": [
         "المجهول: werden + التصريف الثاني!",
         "von + م.غ للفاعل!",
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الخمس عشرة كلها!",
         "Anrede/Gruß مهذبان!"
       ]
     },
@@ -189,6 +191,23 @@
               }
             ],
             "why": "die Leistung الخدمة (-ung!) · die Therapie العلاج (die! die Therapien!) · die Beratung الاستشارة (-ung!) — ومراجعة: der Schmerz الألم!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "مسكّن الألم",
+                "de": "das Schmerzmittel"
+              },
+              {
+                "ar": "الممرض",
+                "de": "der Krankenpfleger"
+              },
+              {
+                "ar": "الاستشارة",
+                "de": "die Beratung"
+              }
+            ],
+            "why": "das Schmerzmittel مسكّن الألم · der Krankenpfleger الممرض · die Beratung الاستشارة (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -249,6 +268,16 @@
             "q": "Ich ___ Zeit.",
             "a": "brauche",
             "why": "الكلمة الناقصة «brauche» تعني «يحتاج» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ hilft. (مسكّن الألم!)",
+            "a": "Schmerzmittel",
+            "why": "das Schmerzmittel مسكّن الألم (das! مركّب (Schmerz+Mittel) محايد (das!) وجمعه die Schmerzmittel.) — Das Schmerzmittel hilft."
+          },
+          {
+            "q": "Der ___ hilft mir. (الممرض!)",
+            "a": "Krankenpfleger",
+            "why": "der Krankenpfleger الممرض (der! مركّب (Kranken+Pfleger) مذكّر (der!) وجمعه die Krankenpfleger — والمؤنث die Krankenpflegerin.) — Der Krankenpfleger hilft mir."
           }
         ]
       },
@@ -294,6 +323,16 @@
             "q": "~~Wie geht's? — Danke, Gut.~~",
             "a": "Wie geht's? — Danke, gut.",
             "why": "الخطأ في «Gut»! الصواب «gut» — راجع القاعدة (جيّد)."
+          },
+          {
+            "q": "~~der Schmerzmittel hilft~~",
+            "a": "das Schmerzmittel hilft",
+            "why": "الألمانية: das Schmerzmittel (das! مركّب محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Krankenpfleger hilft mir~~",
+            "a": "der Krankenpfleger hilft mir",
+            "why": "الألمانية: der Krankenpfleger (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -329,6 +368,11 @@
             "q": "كوّن جملة فيها «warten» («ينتظر») ثم تحدّث بها.",
             "a": "Wir warten auf den Kellner.",
             "why": "استعمل «warten» («ينتظر») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: das Schmerzmittel · der Krankenpfleger)",
+            "a": "Das Schmerzmittel hilft. Der Krankenpfleger hilft mir.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -422,6 +466,30 @@
             ],
             "a": "Danke, Herr Doktor.",
             "why": "«يوسف» في الحوار: امتنان"
+          },
+          {
+            "audioId": "word-schmerzmittel",
+            "speakText": "das Schmerzmittel.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "مسكّن الألم",
+              "الممرض",
+              "يعالج"
+            ],
+            "a": "مسكّن الألم",
+            "why": "الصوت يقول «das Schmerzmittel» — معناها «مسكّن الألم». ركّز!"
+          },
+          {
+            "audioId": "word-krankenpfleger",
+            "speakText": "der Krankenpfleger.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الممرض",
+              "مسكّن الألم",
+              "يعالج"
+            ],
+            "a": "الممرض",
+            "why": "الصوت يقول «der Krankenpfleger» — معناها «الممرض». ركّز!"
           }
         ]
       },
@@ -455,6 +523,18 @@
             "speakText": "der Beginn.",
             "a": "der Beginn",
             "why": "اكتب ما تسمعه حرفياً: «der Beginn» تعني «البداية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-schmerzmittel",
+            "speakText": "das Schmerzmittel.",
+            "a": "das Schmerzmittel",
+            "why": "اكتب ما تسمعه حرفياً: «das Schmerzmittel» تعني «مسكّن الألم». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-krankenpfleger",
+            "speakText": "der Krankenpfleger.",
+            "a": "der Krankenpfleger",
+            "why": "اكتب ما تسمعه حرفياً: «der Krankenpfleger» تعني «الممرض». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -493,6 +573,16 @@
           {
             "q": "«يؤمّن (يُعِد التأمين)»؟",
             "a": "versichern"
+          },
+          {
+            "q": "Das ___ hilft. (مسكّن الألم!)",
+            "a": "Schmerzmittel",
+            "why": "das Schmerzmittel مسكّن الألم (das! مركّب (Schmerz+Mittel) محايد (das!) وجمعه die Schmerzmittel.) — Das Schmerzmittel hilft."
+          },
+          {
+            "q": "Der ___ hilft mir. (الممرض!)",
+            "a": "Krankenpfleger",
+            "why": "der Krankenpfleger الممرض (der! مركّب (Kranken+Pfleger) مذكّر (der!) وجمعه die Krankenpfleger — والمؤنث die Krankenpflegerin.) — Der Krankenpfleger hilft mir."
           }
         ],
         "passingScore": 0.75
@@ -522,6 +612,16 @@
           {
             "q": "«التأمين»؟",
             "a": "die Versicherung"
+          },
+          {
+            "q": "Das ___ hilft. (مسكّن الألم!)",
+            "a": "Schmerzmittel",
+            "why": "das Schmerzmittel مسكّن الألم (das! مركّب (Schmerz+Mittel) محايد (das!) وجمعه die Schmerzmittel.) — Das Schmerzmittel hilft."
+          },
+          {
+            "q": "Der ___ hilft mir. (الممرض!)",
+            "a": "Krankenpfleger",
+            "why": "der Krankenpfleger الممرض (der! مركّب (Kranken+Pfleger) مذكّر (der!) وجمعه die Krankenpfleger — والمؤنث die Krankenpflegerin.) — Der Krankenpfleger hilft mir."
           }
         ],
         "passingScore": 0.75
@@ -551,6 +651,16 @@
           {
             "q": "«يصف (دواء)»؟",
             "a": "verschreiben"
+          },
+          {
+            "q": "Das ___ hilft. (مسكّن الألم!)",
+            "a": "Schmerzmittel",
+            "why": "das Schmerzmittel مسكّن الألم (das! مركّب (Schmerz+Mittel) محايد (das!) وجمعه die Schmerzmittel.) — Das Schmerzmittel hilft."
+          },
+          {
+            "q": "Der ___ hilft mir. (الممرض!)",
+            "a": "Krankenpfleger",
+            "why": "der Krankenpfleger الممرض (der! مركّب (Kranken+Pfleger) مذكّر (der!) وجمعه die Krankenpfleger — والمؤنث die Krankenpflegerin.) — Der Krankenpfleger hilft mir."
           }
         ],
         "passingScore": 0.75
@@ -559,8 +669,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Patient wird in der Klinik behandelt. Die Untersuchung wird gemacht. Das Medikament wird verschrieben. Die Versicherung wird bezahlt. Die Beratung ist kostenlos. Die Therapie ist lang. Die Überweisung kommt vom Arzt. Die Leistung ist gut.",
-      "ar": "المريض يُعالَج في العيادة. الفحص يُجرى. الدواء يُوصف. التأمين يُدفع. الاستشارة مجانية. العلاج طويل. التحويل يأتي من الطبيب. الخدمة جيدة."
+      "de": "Der Patient wird in der Klinik behandelt. Die Untersuchung wird gemacht. Das Medikament wird verschrieben. Die Versicherung wird bezahlt. Die Beratung ist kostenlos. Die Therapie ist lang. Die Überweisung kommt vom Arzt. Die Leistung ist gut. Das Schmerzmittel hilft. Der Krankenpfleger hilft mir.",
+      "ar": "المريض يُعالَج في العيادة. الفحص يُجرى. الدواء يُوصف. التأمين يُدفع. الاستشارة مجانية. العلاج طويل. التحويل يأتي من الطبيب. الخدمة جيدة. مسكّن الألم يساعد. الممرض يساعدني."
     },
     "srsBundleWordIds": [
       "behandeln",
@@ -575,7 +685,9 @@
       "beitrag",
       "leistung",
       "therapie",
-      "beratung"
+      "beratung",
+      "schmerzmittel",
+      "krankenpfleger"
     ],
     "warningCards": [
       {
@@ -659,7 +771,9 @@
     "word-beitrag",
     "word-leistung",
     "word-therapie",
-    "word-beratung"
+    "word-beratung",
+    "word-schmerzmittel",
+    "word-krankenpfleger"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -677,7 +791,9 @@
       "beitrag",
       "leistung",
       "therapie",
-      "beratung"
+      "beratung",
+      "schmerzmittel",
+      "krankenpfleger"
     ]
   }
 }

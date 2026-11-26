@@ -66,7 +66,9 @@
       "wunderschoen",
       "wunder",
       "ueberhaupt",
-      "ironisch"
+      "ironisch",
+      "video",
+      "monitor"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Toll! — echt oder ironisch?",
+        "de": "Toll! — echt oder ironisch? Das Video ist kurz. Der Monitor ist groß.",
         "ar": "يفرّق بين النبرتين في 8 جمل!"
       },
       "situation": {
@@ -91,7 +93,7 @@
         "ar": "النبرة: المعجزة! اللوم! الجوّ!"
       },
       "successCriteria": [
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الخمس عشرة كلها!",
         "«Toll!» ساخراً = المعنى عكسي! (نبرة الصوت!)",
         "«Ganz im Ernst!» + «Ehrlich gesagt» = جادّ!",
         "Das wirkt …! لوصف النبرة!"
@@ -194,6 +196,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Meinung = «رأي» · wichtig = «مهم» · helfen = «يساعد»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الفيديو",
+                "de": "das Video"
+              },
+              {
+                "ar": "الشاشة (الرقمية)",
+                "de": "der Monitor"
+              },
+              {
+                "ar": "ساخر",
+                "de": "ironisch"
+              }
+            ],
+            "why": "das Video الفيديو · der Monitor الشاشة (الرقمية) · ironisch ساخر (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -254,6 +273,16 @@
             "q": "Ich habe ___.",
             "a": "Zeit",
             "why": "الكلمة الناقصة «Zeit» تعني «الوقت» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist kurz. (الفيديو!)",
+            "a": "Video",
+            "why": "das Video الفيديو (das! محايد (das!) وجمعه die Videos (s!).) — Das Video ist kurz."
+          },
+          {
+            "q": "Der ___ ist groß. (الشاشة!)",
+            "a": "Monitor",
+            "why": "der Monitor الشاشة (الرقمية) (der! مذكّر (der!) وجمعه die Monitore.) — Der Monitor ist groß."
           }
         ]
       },
@@ -299,6 +328,16 @@
             "q": "~~Ich Brauche Zeit.~~",
             "a": "Ich brauche Zeit.",
             "why": "الخطأ في «Brauche»! الصواب «brauche» — راجع القاعدة (يحتاج)."
+          },
+          {
+            "q": "~~der Video ist kurz~~",
+            "a": "das Video ist kurz",
+            "why": "الألمانية: das Video (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Monitor ist groß~~",
+            "a": "der Monitor ist groß",
+            "why": "الألمانية: der Monitor (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -334,6 +373,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: das Video · der Monitor)",
+            "a": "Das Video ist kurz. Der Monitor ist groß.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -427,6 +471,30 @@
             ],
             "a": "Genau. Ehrlich sein ist am besten!",
             "why": "«لينا» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-video",
+            "speakText": "das Video.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الفيديو",
+              "الشاشة (الرقمية)",
+              "صادق"
+            ],
+            "a": "الفيديو",
+            "why": "الصوت يقول «das Video» — معناها «الفيديو». ركّز!"
+          },
+          {
+            "audioId": "word-monitor",
+            "speakText": "der Monitor.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الشاشة (الرقمية)",
+              "الفيديو",
+              "صادق"
+            ],
+            "a": "الشاشة (الرقمية)",
+            "why": "الصوت يقول «der Monitor» — معناها «الشاشة (الرقمية)». ركّز!"
           }
         ]
       },
@@ -460,6 +528,18 @@
             "speakText": "negativ.",
             "a": "negativ",
             "why": "اكتب ما تسمعه حرفياً: «negativ» تعني «سلبي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-video",
+            "speakText": "das Video.",
+            "a": "das Video",
+            "why": "اكتب ما تسمعه حرفياً: «das Video» تعني «الفيديو». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-monitor",
+            "speakText": "der Monitor.",
+            "a": "der Monitor",
+            "why": "اكتب ما تسمعه حرفياً: «der Monitor» تعني «الشاشة (الرقمية)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -498,6 +578,16 @@
           {
             "q": "«جدّي»؟",
             "a": "ernsthaft"
+          },
+          {
+            "q": "Das ___ ist kurz. (الفيديو!)",
+            "a": "Video",
+            "why": "das Video الفيديو (das! محايد (das!) وجمعه die Videos (s!).) — Das Video ist kurz."
+          },
+          {
+            "q": "Der ___ ist groß. (الشاشة!)",
+            "a": "Monitor",
+            "why": "der Monitor الشاشة (الرقمية) (der! مذكّر (der!) وجمعه die Monitore.) — Der Monitor ist groß."
           }
         ],
         "passingScore": 0.75
@@ -527,6 +617,16 @@
           {
             "q": "«جادّ»؟",
             "a": "ernst"
+          },
+          {
+            "q": "Das ___ ist kurz. (الفيديو!)",
+            "a": "Video",
+            "why": "das Video الفيديو (das! محايد (das!) وجمعه die Videos (s!).) — Das Video ist kurz."
+          },
+          {
+            "q": "Der ___ ist groß. (الشاشة!)",
+            "a": "Monitor",
+            "why": "der Monitor الشاشة (الرقمية) (der! مذكّر (der!) وجمعه die Monitore.) — Der Monitor ist groß."
           }
         ],
         "passingScore": 0.75
@@ -556,6 +656,16 @@
           {
             "q": "«جادّ»؟",
             "a": "ernst"
+          },
+          {
+            "q": "Das ___ ist kurz. (الفيديو!)",
+            "a": "Video",
+            "why": "das Video الفيديو (das! محايد (das!) وجمعه die Videos (s!).) — Das Video ist kurz."
+          },
+          {
+            "q": "Der ___ ist groß. (الشاشة!)",
+            "a": "Monitor",
+            "why": "der Monitor الشاشة (الرقمية) (der! مذكّر (der!) وجمعه die Monitore.) — Der Monitor ist groß."
           }
         ],
         "passingScore": 0.75
@@ -564,8 +674,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Ach, toll! Das Wetter ist wunderschön! Ein Wunder! Ganz im Ernst: Die Lage ist ernst. Ehrlich gesagt ist die Stimmung schlecht. Der Vorwurf wirkt frech. Das ist ernsthaft. Überhaupt kein Wunder! Das ist kein Humor! Die Laune ist schlecht. Das wirkt ironisch.",
-      "ar": "يا للروعة! الطقس بديع! معجزة! — (السخرية!) — بجدّية تامّة: الوضع جادّ. بصراحة الجوّ سيّئ. اللوم يبدو وقحاً. هذا جدّي. أبداً ليست معجزة! هذا ليس فكاهة! المزاج سيّئ. هذا يبدو ساخراً."
+      "de": "Ach, toll! Das Wetter ist wunderschön! Ein Wunder! Ganz im Ernst: Die Lage ist ernst. Ehrlich gesagt ist die Stimmung schlecht. Der Vorwurf wirkt frech. Das ist ernsthaft. Überhaupt kein Wunder! Das ist kein Humor! Die Laune ist schlecht. Das wirkt ironisch. Das Video ist kurz. Der Monitor ist groß.",
+      "ar": "يا للروعة! الطقس بديع! معجزة! — (السخرية!) — بجدّية تامّة: الوضع جادّ. بصراحة الجوّ سيّئ. اللوم يبدو وقحاً. هذا جدّي. أبداً ليست معجزة! هذا ليس فكاهة! المزاج سيّئ. هذا يبدو ساخراً. الفيديو قصير. الشاشة كبيرة."
     },
     "srsBundleWordIds": [
       "ehrlich",
@@ -580,7 +690,9 @@
       "wunderschoen",
       "wunder",
       "ueberhaupt",
-      "ironisch"
+      "ironisch",
+      "video",
+      "monitor"
     ],
     "warningCards": [
       {
@@ -664,7 +776,9 @@
     "word-wunderschoen",
     "word-wunder",
     "word-ueberhaupt",
-    "word-ironisch"
+    "word-ironisch",
+    "word-video",
+    "word-monitor"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -681,7 +795,9 @@
       "frech",
       "wunderschoen",
       "wunder",
-      "ueberhaupt"
+      "ueberhaupt",
+      "video",
+      "monitor"
     ]
   }
 }

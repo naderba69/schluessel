@@ -66,7 +66,9 @@
       "ausreichend",
       "folgend",
       "ueberlegen",
-      "reihenfolge"
+      "reihenfolge",
+      "kanal",
+      "annonce"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Die Kritik ist wichtig, denn der Beweis ist klar!",
+        "de": "Die Kritik ist wichtig, denn der Beweis ist klar! Der Kanal zeigt Filme. Die Annonce ist kurz.",
         "ar": "يحاجج برأيٍ وأسبابه في 8 جمل!"
       },
       "situation": {
@@ -93,7 +95,7 @@
       "successCriteria": [
         "الرأي أولاً ثم السبب!",
         "weil: الفعل آخراً! denn: الفعل ثانياً!",
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الخمس عشرة كلها!",
         "Meiner Meinung nach ثابتة!"
       ]
     },
@@ -194,6 +196,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Meinung = «رأي» · der Grund = «السبب» · wichtig = «مهم»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "القناة",
+                "de": "der Kanal"
+              },
+              {
+                "ar": "الإعلان (في الصحيفة)",
+                "de": "die Annonce"
+              },
+              {
+                "ar": "الترتيب",
+                "de": "die Reihenfolge"
+              }
+            ],
+            "why": "der Kanal القناة · die Annonce الإعلان (في الصحيفة) · die Reihenfolge الترتيب (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -244,6 +263,16 @@
             "q": "Ich habe ___.",
             "a": "Zeit",
             "why": "الكلمة الناقصة «Zeit» تعني «الوقت» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ zeigt Filme. (القناة!)",
+            "a": "Kanal",
+            "why": "der Kanal القناة (der! مذكّر (der!) وجمعه die Kanäle (تقلب a→ä!).) — Der Kanal zeigt Filme."
+          },
+          {
+            "q": "Die ___ ist kurz. (الإعلان!)",
+            "a": "Annonce",
+            "why": "die Annonce الإعلان (في الصحيفة) (die! مؤنثة (die!) وجمعها die Annoncen — قرض فرنسي (الإعلان في الصحيفة).) — Die Annonce ist kurz."
           }
         ]
       },
@@ -289,6 +318,16 @@
             "q": "~~Ich Brauche Zeit.~~",
             "a": "Ich brauche Zeit.",
             "why": "الخطأ في «Brauche»! الصواب «brauche» — راجع القاعدة (يحتاج)."
+          },
+          {
+            "q": "~~die Kanal zeigt Filme~~",
+            "a": "der Kanal zeigt Filme",
+            "why": "الألمانية: der Kanal (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Annonce ist kurz~~",
+            "a": "die Annonce ist kurz",
+            "why": "الألمانية: die Annonce (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -324,6 +363,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Kanal · die Annonce)",
+            "a": "Der Kanal zeigt Filme. Die Annonce ist kurz.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -417,6 +461,30 @@
             ],
             "a": "Sehr gut gesagt!",
             "why": "«لينا» في الحوار: تعزيز"
+          },
+          {
+            "audioId": "word-kanal",
+            "speakText": "der Kanal.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "القناة",
+              "الإعلان (في الصحيفة)",
+              "البرهان"
+            ],
+            "a": "القناة",
+            "why": "الصوت يقول «der Kanal» — معناها «القناة». ركّز!"
+          },
+          {
+            "audioId": "word-annonce",
+            "speakText": "die Annonce.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الإعلان (في الصحيفة)",
+              "القناة",
+              "البرهان"
+            ],
+            "a": "الإعلان (في الصحيفة)",
+            "why": "الصوت يقول «die Annonce» — معناها «الإعلان (في الصحيفة)». ركّز!"
           }
         ]
       },
@@ -450,6 +518,18 @@
             "speakText": "widersprechen.",
             "a": "widersprechen",
             "why": "اكتب ما تسمعه حرفياً: «widersprechen» تعني «يعترض». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-kanal",
+            "speakText": "der Kanal.",
+            "a": "der Kanal",
+            "why": "اكتب ما تسمعه حرفياً: «der Kanal» تعني «القناة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-annonce",
+            "speakText": "die Annonce.",
+            "a": "die Annonce",
+            "why": "اكتب ما تسمعه حرفياً: «die Annonce» تعني «الإعلان (في الصحيفة)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -488,6 +568,16 @@
           {
             "q": "«يتبع»؟",
             "a": "folgen"
+          },
+          {
+            "q": "Der ___ zeigt Filme. (القناة!)",
+            "a": "Kanal",
+            "why": "der Kanal القناة (der! مذكّر (der!) وجمعه die Kanäle (تقلب a→ä!).) — Der Kanal zeigt Filme."
+          },
+          {
+            "q": "Die ___ ist kurz. (الإعلان!)",
+            "a": "Annonce",
+            "why": "die Annonce الإعلان (في الصحيفة) (die! مؤنثة (die!) وجمعها die Annoncen — قرض فرنسي (الإعلان في الصحيفة).) — Die Annonce ist kurz."
           }
         ],
         "passingScore": 0.75
@@ -517,6 +607,16 @@
           {
             "q": "«قاطع»؟",
             "a": "eindeutig"
+          },
+          {
+            "q": "Der ___ zeigt Filme. (القناة!)",
+            "a": "Kanal",
+            "why": "der Kanal القناة (der! مذكّر (der!) وجمعه die Kanäle (تقلب a→ä!).) — Der Kanal zeigt Filme."
+          },
+          {
+            "q": "Die ___ ist kurz. (الإعلان!)",
+            "a": "Annonce",
+            "why": "die Annonce الإعلان (في الصحيفة) (die! مؤنثة (die!) وجمعها die Annoncen — قرض فرنسي (الإعلان في الصحيفة).) — Die Annonce ist kurz."
           }
         ],
         "passingScore": 0.75
@@ -546,6 +646,16 @@
           {
             "q": "«قاطع»؟",
             "a": "eindeutig"
+          },
+          {
+            "q": "Der ___ zeigt Filme. (القناة!)",
+            "a": "Kanal",
+            "why": "der Kanal القناة (der! مذكّر (der!) وجمعه die Kanäle (تقلب a→ä!).) — Der Kanal zeigt Filme."
+          },
+          {
+            "q": "Die ___ ist kurz. (الإعلان!)",
+            "a": "Annonce",
+            "why": "die Annonce الإعلان (في الصحيفة) (die! مؤنثة (die!) وجمعها die Annoncen — قرض فرنسي (الإعلان في الصحيفة).) — Die Annonce ist kurz."
           }
         ],
         "passingScore": 0.75
@@ -554,8 +664,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Meiner Meinung nach ist die Kritik wichtig. Der Beweis ist klar. Die Wirklichkeit ist eindeutig. Der Ratschlag ist sinnvoll, weil er hilft. Die Sicherheit ist wichtig. Die Zeit ist ausreichend. Das ist fair. Mit freundlichen Grüßen",
-      "ar": "من رأيي أن النقد مهم. البرهان واضح. الواقع قاطع. النصيحة مفيدة لأنه يساعد. اليقين مهم. الوقت كافٍ. هذا عادل. مع تحياتي الخالصة."
+      "de": "Meiner Meinung nach ist die Kritik wichtig. Der Beweis ist klar. Die Wirklichkeit ist eindeutig. Der Ratschlag ist sinnvoll, weil er hilft. Die Sicherheit ist wichtig. Die Zeit ist ausreichend. Das ist fair. Mit freundlichen Grüßen Der Kanal zeigt Filme. Die Annonce ist kurz.",
+      "ar": "من رأيي أن النقد مهم. البرهان واضح. الواقع قاطع. النصيحة مفيدة لأنه يساعد. اليقين مهم. الوقت كافٍ. هذا عادل. مع تحياتي الخالصة. القناة تعرض أفلاماً. الإعلان قصير."
     },
     "srsBundleWordIds": [
       "beweis",
@@ -570,7 +680,9 @@
       "ausreichend",
       "folgend",
       "ueberlegen",
-      "reihenfolge"
+      "reihenfolge",
+      "kanal",
+      "annonce"
     ],
     "warningCards": [
       {
@@ -654,7 +766,9 @@
     "word-ausreichend",
     "word-folgend",
     "word-ueberlegen",
-    "word-reihenfolge"
+    "word-reihenfolge",
+    "word-kanal",
+    "word-annonce"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -672,7 +786,9 @@
       "ausreichend",
       "folgend",
       "ueberlegen",
-      "reihenfolge"
+      "reihenfolge",
+      "kanal",
+      "annonce"
     ]
   }
 }

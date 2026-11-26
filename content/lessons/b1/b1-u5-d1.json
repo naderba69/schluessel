@@ -66,7 +66,9 @@
       "umfrage",
       "erklaerung",
       "zuschauer",
-      "wirkung"
+      "wirkung",
+      "magazin",
+      "reklame"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Ich möchte wissen, woher die Nachricht kommt: die Quelle ist wichtig!",
+        "de": "Ich möchte wissen, woher die Nachricht kommt: die Quelle ist wichtig! Das Magazin ist neu. Die Reklame ist laut.",
         "ar": "يسأل عن الخبر بلباقة بغير المباشر!"
       },
       "situation": {
@@ -93,7 +95,7 @@
       "successCriteria": [
         "غير مباشر: الفعل آخراً! + ob للسؤال بنعم/لا!",
         "الفاصلة قبل أداة السؤال!",
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الخمس عشرة كلها!",
         "أسئلة مهذبة: أريد أن أعرف…!"
       ]
     },
@@ -194,6 +196,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Nachricht = «الرسالة/النبأ» · wissen = «يعرف (معلومة)» · die Meinung = «رأي»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "المجلة",
+                "de": "das Magazin"
+              },
+              {
+                "ar": "الدعاية",
+                "de": "die Reklame"
+              },
+              {
+                "ar": "الأثر",
+                "de": "die Wirkung"
+              }
+            ],
+            "why": "das Magazin المجلة · die Reklame الدعاية · die Wirkung الأثر (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -244,6 +263,16 @@
             "q": "Der ___ ist preiswert.",
             "a": "Artikel",
             "why": "الكلمة الناقصة «Artikel» تعني «منتج» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist neu. (المجلة!)",
+            "a": "Magazin",
+            "why": "das Magazin المجلة (das! محايد (das!) وجمعه die Magazine.) — Das Magazin ist neu."
+          },
+          {
+            "q": "Die ___ ist laut. (الدعاية!)",
+            "a": "Reklame",
+            "why": "die Reklame الدعاية (die! مؤنثة (die!) وجمعها die Reklamen.) — Die Reklame ist laut."
           }
         ]
       },
@@ -289,6 +318,16 @@
             "q": "~~Das Datum ist Falsch.~~",
             "a": "Das Datum ist falsch.",
             "why": "الخطأ في «Falsch»! الصواب «falsch» — راجع القاعدة (خاطئ)."
+          },
+          {
+            "q": "~~der Magazin ist neu~~",
+            "a": "das Magazin ist neu",
+            "why": "الألمانية: das Magazin (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Reklame ist laut~~",
+            "a": "die Reklame ist laut",
+            "why": "الألمانية: die Reklame (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -324,6 +363,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: das Magazin · die Reklame)",
+            "a": "Das Magazin ist neu. Die Reklame ist laut.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -417,6 +461,30 @@
             ],
             "a": "Sehr gut gedacht!",
             "why": "«لينا» في الحوار: تعزيز"
+          },
+          {
+            "audioId": "word-magazin",
+            "speakText": "das Magazin.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المجلة",
+              "الدعاية",
+              "الخبر"
+            ],
+            "a": "المجلة",
+            "why": "الصوت يقول «das Magazin» — معناها «المجلة». ركّز!"
+          },
+          {
+            "audioId": "word-reklame",
+            "speakText": "die Reklame.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الدعاية",
+              "المجلة",
+              "الخبر"
+            ],
+            "a": "الدعاية",
+            "why": "الصوت يقول «die Reklame» — معناها «الدعاية». ركّز!"
           }
         ]
       },
@@ -450,6 +518,18 @@
             "speakText": "der Betrieb.",
             "a": "der Betrieb",
             "why": "اكتب ما تسمعه حرفياً: «der Betrieb» تعني «المؤسسة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-magazin",
+            "speakText": "das Magazin.",
+            "a": "das Magazin",
+            "why": "اكتب ما تسمعه حرفياً: «das Magazin» تعني «المجلة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-reklame",
+            "speakText": "die Reklame.",
+            "a": "die Reklame",
+            "why": "اكتب ما تسمعه حرفياً: «die Reklame» تعني «الدعاية». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -488,6 +568,16 @@
           {
             "q": "«العنوان»؟",
             "a": "die Überschrift"
+          },
+          {
+            "q": "Das ___ ist neu. (المجلة!)",
+            "a": "Magazin",
+            "why": "das Magazin المجلة (das! محايد (das!) وجمعه die Magazine.) — Das Magazin ist neu."
+          },
+          {
+            "q": "Die ___ ist laut. (الدعاية!)",
+            "a": "Reklame",
+            "why": "die Reklame الدعاية (die! مؤنثة (die!) وجمعها die Reklamen.) — Die Reklame ist laut."
           }
         ],
         "passingScore": 0.75
@@ -517,6 +607,16 @@
           {
             "q": "«التعليق»؟",
             "a": "der Kommentar"
+          },
+          {
+            "q": "Das ___ ist neu. (المجلة!)",
+            "a": "Magazin",
+            "why": "das Magazin المجلة (das! محايد (das!) وجمعه die Magazine.) — Das Magazin ist neu."
+          },
+          {
+            "q": "Die ___ ist laut. (الدعاية!)",
+            "a": "Reklame",
+            "why": "die Reklame الدعاية (die! مؤنثة (die!) وجمعها die Reklamen.) — Die Reklame ist laut."
           }
         ],
         "passingScore": 0.75
@@ -546,6 +646,16 @@
           {
             "q": "«التقرير»؟",
             "a": "der Bericht"
+          },
+          {
+            "q": "Das ___ ist neu. (المجلة!)",
+            "a": "Magazin",
+            "why": "das Magazin المجلة (das! محايد (das!) وجمعه die Magazine.) — Das Magazin ist neu."
+          },
+          {
+            "q": "Die ___ ist laut. (الدعاية!)",
+            "a": "Reklame",
+            "why": "die Reklame الدعاية (die! مؤنثة (die!) وجمعها die Reklamen.) — Die Reklame ist laut."
           }
         ],
         "passingScore": 0.75
@@ -554,8 +664,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Der Bericht ist neu. Ich möchte wissen, woher die Nachricht kommt. Ich möchte wissen, ob die Meldung wahr ist. Die Quelle ist wichtig. Die Wahrheit ist wichtig. Er veröffentlicht den Bericht. Die Wirkung ist groß. Die Presse ist frei.",
-      "ar": "التقرير جديد. أريد أن أعرف من أين يأتي الخبر. أريد أن أعرف هل الخبر صحيح. المصدر مهم. الحقيقة مهمة. هو ينشر التقرير. الأثر كبير. الصحافة حرّة."
+      "de": "Der Bericht ist neu. Ich möchte wissen, woher die Nachricht kommt. Ich möchte wissen, ob die Meldung wahr ist. Die Quelle ist wichtig. Die Wahrheit ist wichtig. Er veröffentlicht den Bericht. Die Wirkung ist groß. Die Presse ist frei. Das Magazin ist neu. Die Reklame ist laut.",
+      "ar": "التقرير جديد. أريد أن أعرف من أين يأتي الخبر. أريد أن أعرف هل الخبر صحيح. المصدر مهم. الحقيقة مهمة. هو ينشر التقرير. الأثر كبير. الصحافة حرّة. المجلة جديدة. الدعاية صاخبة."
     },
     "srsBundleWordIds": [
       "meldung",
@@ -570,7 +680,9 @@
       "umfrage",
       "erklaerung",
       "zuschauer",
-      "wirkung"
+      "wirkung",
+      "magazin",
+      "reklame"
     ],
     "warningCards": [
       {
@@ -654,7 +766,9 @@
     "word-umfrage",
     "word-erklaerung",
     "word-zuschauer",
-    "word-wirkung"
+    "word-wirkung",
+    "word-magazin",
+    "word-reklame"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -672,7 +786,9 @@
       "umfrage",
       "erklaerung",
       "zuschauer",
-      "wirkung"
+      "wirkung",
+      "magazin",
+      "reklame"
     ]
   }
 }

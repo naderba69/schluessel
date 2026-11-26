@@ -68,7 +68,8 @@
       "wahl",
       "kittel",
       "knopf",
-      "fleck"
+      "fleck",
+      "waerme"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -85,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Das Gesetz ist wichtig: die Krankenkasse ist Pflicht!",
+        "de": "Das Gesetz ist wichtig: die Krankenkasse ist Pflicht! Die Wärme ist gut.",
         "ar": "يشرح نظام التأمين الصحي لصديق!"
       },
       "situation": {
@@ -212,6 +213,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Klinik = «العيادة (الكبيرة)» · die Grenze = «الحد» · die Beschäftigung = «التوظيف»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الدفء",
+                "de": "die Wärme"
+              },
+              {
+                "ar": "البقعة",
+                "de": "der Fleck"
+              },
+              {
+                "ar": "الزر",
+                "de": "der Knopf"
+              }
+            ],
+            "why": "die Wärme الدفء · der Fleck البقعة · der Knopf الزر (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -272,6 +290,11 @@
             "q": "Obst ist ___.",
             "a": "gesund",
             "why": "الكلمة الناقصة «gesund» تعني «صحّي» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist gut. (الدفء!)",
+            "a": "Wärme",
+            "why": "die Wärme الدفء (die! تُستعمل عادةً بلا جمع: die Wärme.) — Die Wärme ist gut."
           }
         ]
       },
@@ -317,6 +340,11 @@
             "q": "~~Wie heißen Sie, Bitte?~~",
             "a": "Wie heißen Sie, bitte?",
             "why": "الخطأ في «Bitte»! الصواب «bitte» — راجع القاعدة (من فضلك / تفضّل)."
+          },
+          {
+            "q": "~~der Wärme ist gut~~",
+            "a": "die Wärme ist gut",
+            "why": "الألمانية: die Wärme (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -351,6 +379,11 @@
             "q": "كوّن جملة فيها «wohnen» («يسكن») ثم تحدّث بها.",
             "a": "Ich wohne in Tunis.",
             "why": "استعمل «wohnen» («يسكن») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Wärme)",
+            "a": "Die Wärme ist gut.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -444,6 +477,18 @@
             ],
             "a": "Alles klar. Danke für die Information.",
             "why": "«يوسف» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-waerme",
+            "speakText": "die Wärme.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الدفء",
+              "الحد",
+              "التوظيف"
+            ],
+            "a": "الدفء",
+            "why": "الصوت يقول «die Wärme» — معناها «الدفء». ركّز!"
           }
         ]
       },
@@ -477,6 +522,12 @@
             "speakText": "der Kasten.",
             "a": "der Kasten",
             "why": "اكتب ما تسمعه حرفياً: «der Kasten» تعني «الصندوق». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-waerme",
+            "speakText": "die Wärme.",
+            "a": "die Wärme",
+            "why": "اكتب ما تسمعه حرفياً: «die Wärme» تعني «الدفء». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -515,6 +566,11 @@
           {
             "q": "«التوظيف»؟",
             "a": "die Beschäftigung"
+          },
+          {
+            "q": "Die ___ ist gut. (الدفء!)",
+            "a": "Wärme",
+            "why": "die Wärme الدفء (die! تُستعمل عادةً بلا جمع: die Wärme.) — Die Wärme ist gut."
           }
         ],
         "passingScore": 0.75
@@ -544,6 +600,11 @@
           {
             "q": "«التوظيف»؟",
             "a": "die Beschäftigung"
+          },
+          {
+            "q": "Die ___ ist gut. (الدفء!)",
+            "a": "Wärme",
+            "why": "die Wärme الدفء (die! تُستعمل عادةً بلا جمع: die Wärme.) — Die Wärme ist gut."
           }
         ],
         "passingScore": 0.75
@@ -573,6 +634,11 @@
           {
             "q": "«التوظيف»؟",
             "a": "die Beschäftigung"
+          },
+          {
+            "q": "Die ___ ist gut. (الدفء!)",
+            "a": "Wärme",
+            "why": "die Wärme الدفء (die! تُستعمل عادةً بلا جمع: die Wärme.) — Die Wärme ist gut."
           }
         ],
         "passingScore": 0.75
@@ -581,8 +647,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Das Gesetz ist wichtig. Die Krankenkasse ist Pflicht. Der Schutz ist staatlich. Der Beitrag ist acht Prozent. Jeder zahlt jeden Monat ein. Die Wahl ist frei. Die Liste der Anbieter ist lang. Die Kasse bezahlt die Medizin.",
-      "ar": "القانون مهم. الصندوق الصحي واجب. الحماية حكومية. الاشتراك ثمانية بالمئة. الجميع يدفع كل شهر. الاختيار حر. قائمة المزوّدين طويلة. الصندوق يدفع للطب."
+      "de": "Das Gesetz ist wichtig. Die Krankenkasse ist Pflicht. Der Schutz ist staatlich. Der Beitrag ist acht Prozent. Jeder zahlt jeden Monat ein. Die Wahl ist frei. Die Liste der Anbieter ist lang. Die Kasse bezahlt die Medizin. Die Wärme ist gut.",
+      "ar": "القانون مهم. الصندوق الصحي واجب. الحماية حكومية. الاشتراك ثمانية بالمئة. الجميع يدفع كل شهر. الاختيار حر. قائمة المزوّدين طويلة. الصندوق يدفع للطب. الدفء جيد."
     },
     "srsBundleWordIds": [
       "grenze",
@@ -599,7 +665,8 @@
       "wahl",
       "kittel",
       "knopf",
-      "fleck"
+      "fleck",
+      "waerme"
     ],
     "warningCards": [
       {
@@ -687,7 +754,8 @@
     "word-wahl",
     "word-kittel",
     "word-knopf",
-    "word-fleck"
+    "word-fleck",
+    "word-waerme"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -707,7 +775,8 @@
       "wahl",
       "kittel",
       "knopf",
-      "fleck"
+      "fleck",
+      "waerme"
     ]
   }
 }

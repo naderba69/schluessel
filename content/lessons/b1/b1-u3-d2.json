@@ -68,7 +68,8 @@
       "bewegung",
       "schlaf",
       "haut",
-      "muskel"
+      "muskel",
+      "brust"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -85,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Ich achte auf die Gesundheit: der Schlaf und die Bewegung!",
+        "de": "Ich achte auf die Gesundheit: der Schlaf und die Bewegung! Die Brust tut weh. Das ist nicht schön.",
         "ar": "يصف عادات صحّية بأفعال جامدة!"
       },
       "situation": {
@@ -95,7 +96,7 @@
       "successCriteria": [
         "الحرف المحفوظ: auf! an! um! zu!",
         "الحالة: المفعول به/غير المباشر محفوظة!",
-        "كلمات اليوم الخمس عشرة كلها!",
+        "كلمات اليوم الست عشرة كلها!",
         "Anrede/Gruß مهذبان!"
       ]
     },
@@ -199,6 +200,23 @@
               }
             ],
             "why": "die Übung التمرين (die!) · die Bewegung الحركة (-ung!) · der Schlaf النوم (der!) · die Haut الجلد (die! die Häute!) · der Muskel العضلة (der!) — ومراجعة: der Arzt الطبيب!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الصدر",
+                "de": "die Brust"
+              },
+              {
+                "ar": "العضلة",
+                "de": "der Muskel"
+              },
+              {
+                "ar": "الجلد",
+                "de": "die Haut"
+              }
+            ],
+            "why": "die Brust الصدر · der Muskel العضلة · die Haut الجلد (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -259,6 +277,11 @@
             "q": "___ habe ich Zeit.",
             "a": "Morgen",
             "why": "الكلمة الناقصة «Morgen» تعني «الصباح / غداً (حسب الكبير!)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ tut weh. (الصدر!)",
+            "a": "Brust",
+            "why": "die Brust الصدر (die! مؤنثة (die!) وجمعها die Brüste (تقلب u→ü!).) — Die Brust tut weh."
           }
         ]
       },
@@ -304,6 +327,11 @@
             "q": "~~danke! — Bitte!~~",
             "a": "Danke! — Bitte!",
             "why": "الخطأ في «danke»! الصواب «Danke» — راجع القاعدة (شكراً)."
+          },
+          {
+            "q": "~~der Brust tut weh~~",
+            "a": "die Brust tut weh",
+            "why": "الألمانية: die Brust (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -339,6 +367,11 @@
             "q": "كوّن جملة فيها «essen» («يأكل») ثم تحدّث بها.",
             "a": "Ich esse ein Brötchen.",
             "why": "استعمل «essen» («يأكل») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Brust)",
+            "a": "Die Brust tut weh. Das ist nicht schön.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -432,6 +465,18 @@
             ],
             "a": "Gut. Gesundheit ist wichtig.",
             "why": "«يوسف» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-brust",
+            "speakText": "die Brust.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الصدر",
+              "يتخلى (عن)",
+              "يتعوّد (على)"
+            ],
+            "a": "الصدر",
+            "why": "الصوت يقول «die Brust» — معناها «الصدر». ركّز!"
           }
         ]
       },
@@ -465,6 +510,12 @@
             "speakText": "die Therapie.",
             "a": "die Therapie",
             "why": "اكتب ما تسمعه حرفياً: «die Therapie» تعني «العلاج (الطويل)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-brust",
+            "speakText": "die Brust.",
+            "a": "die Brust",
+            "why": "اكتب ما تسمعه حرفياً: «die Brust» تعني «الصدر». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -503,6 +554,11 @@
           {
             "q": "«ينتبه (إلى)»؟",
             "a": "achten"
+          },
+          {
+            "q": "Die ___ tut weh. (الصدر!)",
+            "a": "Brust",
+            "why": "die Brust الصدر (die! مؤنثة (die!) وجمعها die Brüste (تقلب u→ü!).) — Die Brust tut weh."
           }
         ],
         "passingScore": 0.75
@@ -532,6 +588,11 @@
           {
             "q": "«يتعوّد (على)»؟",
             "a": "sich gewöhnen"
+          },
+          {
+            "q": "Die ___ tut weh. (الصدر!)",
+            "a": "Brust",
+            "why": "die Brust الصدر (die! مؤنثة (die!) وجمعها die Brüste (تقلب u→ü!).) — Die Brust tut weh."
           }
         ],
         "passingScore": 0.75
@@ -561,6 +622,11 @@
           {
             "q": "«يتعوّد (على)»؟",
             "a": "sich gewöhnen"
+          },
+          {
+            "q": "Die ___ tut weh. (الصدر!)",
+            "a": "Brust",
+            "why": "die Brust الصدر (die! مؤنثة (die!) وجمعها die Brüste (تقلب u→ü!).) — Die Brust tut weh."
           }
         ],
         "passingScore": 0.75
@@ -569,8 +635,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Ich verzichte auf den Kuchen. Ich achte auf die Gesundheit. Ich leide an Schmerzen. Ich gewöhne mich an die Bewegung. Der Schlaf ist wichtig. Die Übung ist gut. Die Haut und der Muskel sind gesund. Mit freundlichen Grüßen",
-      "ar": "أتخلى عن الكعكة. أنتبه إلى الصحة. أعاني من الألم. أتعوّد على الحركة. النوم مهم. التمرين جيد. الجلد والعضلة سليمان. مع تحياتي الخالصة."
+      "de": "Ich verzichte auf den Kuchen. Ich achte auf die Gesundheit. Ich leide an Schmerzen. Ich gewöhne mich an die Bewegung. Der Schlaf ist wichtig. Die Übung ist gut. Die Haut und der Muskel sind gesund. Mit freundlichen Grüßen Die Brust tut weh.",
+      "ar": "أتخلى عن الكعكة. أنتبه إلى الصحة. أعاني من الألم. أتعوّد على الحركة. النوم مهم. التمرين جيد. الجلد والعضلة سليمان. مع تحياتي الخالصة. الصدر يألمن."
     },
     "srsBundleWordIds": [
       "verzichten",
@@ -587,7 +653,8 @@
       "bewegung",
       "schlaf",
       "haut",
-      "muskel"
+      "muskel",
+      "brust"
     ],
     "warningCards": [
       {
@@ -676,7 +743,8 @@
     "word-bewegung",
     "word-schlaf",
     "word-haut",
-    "word-muskel"
+    "word-muskel",
+    "word-brust"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -696,7 +764,8 @@
       "bewegung",
       "schlaf",
       "haut",
-      "muskel"
+      "muskel",
+      "brust"
     ]
   }
 }

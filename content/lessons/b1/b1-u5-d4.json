@@ -66,7 +66,9 @@
       "regeln",
       "positiv",
       "negativ",
-      "offiziell"
+      "offiziell",
+      "kabel",
+      "lautsprecher"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Zum Abschluss schreibe ich den Kommentar!",
+        "de": "Zum Abschluss schreibe ich den Kommentar! Das Kabel ist lang. Der Lautsprecher ist laut.",
         "ar": "يكتب تعليقاً كاملاً في 8 جمل!"
       },
       "situation": {
@@ -93,7 +95,7 @@
       "successCriteria": [
         "المقدّمة أولاً (Sehr geehrte …)! والخاتمة آخراً (Zum Abschluss …)!",
         "الرأي + السبب في الوسط (Meiner Meinung nach + weshalb)!",
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الخمس عشرة كلها!",
         "trotz تتبعها كلمة مضاف! («Trotz der Kritik» لا «Trotz die Kritik»!)"
       ]
     },
@@ -194,6 +196,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Meinung = «رأي» · wichtig = «مهم» · helfen = «يساعد»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الكابل · السلك",
+                "de": "das Kabel"
+              },
+              {
+                "ar": "مكبر الصوت",
+                "de": "der Lautsprecher"
+              },
+              {
+                "ar": "رسمي",
+                "de": "offiziell"
+              }
+            ],
+            "why": "das Kabel الكابل · السلك · der Lautsprecher مكبر الصوت · offiziell رسمي (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -254,6 +273,16 @@
             "q": "Ich habe ___.",
             "a": "Zeit",
             "why": "الكلمة الناقصة «Zeit» تعني «الوقت» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist lang. (السلك!)",
+            "a": "Kabel",
+            "why": "das Kabel الكابل · السلك (das! محايد (das!) وجمعه die Kabel (بلا تغيير!).) — Das Kabel ist lang."
+          },
+          {
+            "q": "Der ___ ist laut. (مكبر الصوت!)",
+            "a": "Lautsprecher",
+            "why": "der Lautsprecher مكبر الصوت (der! مركّب (Laut+Sprecher) مذكّر (der!) وجمعه die Lautsprecher.) — Der Lautsprecher ist laut."
           }
         ]
       },
@@ -299,6 +328,16 @@
             "q": "~~Ich Brauche Zeit.~~",
             "a": "Ich brauche Zeit.",
             "why": "الخطأ في «Brauche»! الصواب «brauche» — راجع القاعدة (يحتاج)."
+          },
+          {
+            "q": "~~der Kabel ist lang~~",
+            "a": "das Kabel ist lang",
+            "why": "الألمانية: das Kabel (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Lautsprecher ist laut~~",
+            "a": "der Lautsprecher ist laut",
+            "why": "الألمانية: der Lautsprecher (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -334,6 +373,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: das Kabel · der Lautsprecher)",
+            "a": "Das Kabel ist lang. Der Lautsprecher ist laut.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -427,6 +471,30 @@
             ],
             "a": "Danke! Jetzt schreibe ich meinen.",
             "why": "«يوسف» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-kabel",
+            "speakText": "das Kabel.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الكابل · السلك",
+              "مكبر الصوت",
+              "ومن ثمّ"
+            ],
+            "a": "الكابل · السلك",
+            "why": "الصوت يقول «das Kabel» — معناها «الكابل · السلك». ركّز!"
+          },
+          {
+            "audioId": "word-lautsprecher",
+            "speakText": "der Lautsprecher.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "مكبر الصوت",
+              "الكابل · السلك",
+              "ومن ثمّ"
+            ],
+            "a": "مكبر الصوت",
+            "why": "الصوت يقول «der Lautsprecher» — معناها «مكبر الصوت». ركّز!"
           }
         ]
       },
@@ -460,6 +528,18 @@
             "speakText": "überlegen.",
             "a": "überlegen",
             "why": "اكتب ما تسمعه حرفياً: «überlegen» تعني «يتفكّر». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-kabel",
+            "speakText": "das Kabel.",
+            "a": "das Kabel",
+            "why": "اكتب ما تسمعه حرفياً: «das Kabel» تعني «الكابل · السلك». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-lautsprecher",
+            "speakText": "der Lautsprecher.",
+            "a": "der Lautsprecher",
+            "why": "اكتب ما تسمعه حرفياً: «der Lautsprecher» تعني «مكبر الصوت». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -498,6 +578,16 @@
           {
             "q": "«لكن»؟",
             "a": "jedoch"
+          },
+          {
+            "q": "Das ___ ist lang. (السلك!)",
+            "a": "Kabel",
+            "why": "das Kabel الكابل · السلك (das! محايد (das!) وجمعه die Kabel (بلا تغيير!).) — Das Kabel ist lang."
+          },
+          {
+            "q": "Der ___ ist laut. (مكبر الصوت!)",
+            "a": "Lautsprecher",
+            "why": "der Lautsprecher مكبر الصوت (der! مركّب (Laut+Sprecher) مذكّر (der!) وجمعه die Lautsprecher.) — Der Lautsprecher ist laut."
           }
         ],
         "passingScore": 0.75
@@ -527,6 +617,16 @@
           {
             "q": "«لكن»؟",
             "a": "jedoch"
+          },
+          {
+            "q": "Das ___ ist lang. (السلك!)",
+            "a": "Kabel",
+            "why": "das Kabel الكابل · السلك (das! محايد (das!) وجمعه die Kabel (بلا تغيير!).) — Das Kabel ist lang."
+          },
+          {
+            "q": "Der ___ ist laut. (مكبر الصوت!)",
+            "a": "Lautsprecher",
+            "why": "der Lautsprecher مكبر الصوت (der! مركّب (Laut+Sprecher) مذكّر (der!) وجمعه die Lautsprecher.) — Der Lautsprecher ist laut."
           }
         ],
         "passingScore": 0.75
@@ -556,6 +656,16 @@
           {
             "q": "«رغم»؟",
             "a": "trotz"
+          },
+          {
+            "q": "Das ___ ist lang. (السلك!)",
+            "a": "Kabel",
+            "why": "das Kabel الكابل · السلك (das! محايد (das!) وجمعه die Kabel (بلا تغيير!).) — Das Kabel ist lang."
+          },
+          {
+            "q": "Der ___ ist laut. (مكبر الصوت!)",
+            "a": "Lautsprecher",
+            "why": "der Lautsprecher مكبر الصوت (der! مركّب (Laut+Sprecher) مذكّر (der!) وجمعه die Lautsprecher.) — Der Lautsprecher ist laut."
           }
         ],
         "passingScore": 0.75
@@ -564,8 +674,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Sehr geehrte Damen und Herren, ich möchte zum Thema Verhalten schreiben. Meiner Meinung nach ist das Verhalten wichtig. Jedoch beeinflusst die Presse die Menschen negativ, weshalb ich die offiziellen Vorschriften wichtig finde. Ich möchte Folgendes festhalten: Wir nehmen Rücksicht auf die Kinder. Zum Abschluss möchte ich auf die Kritik hinweisen. Mit freundlichen Grüßen",
-      "ar": "سيداتي وسادتي الأفاضل، أودّ أن أكتب عن موضوع السلوك. من رأيي أن السلوك مهم. لكن الصحافة تؤثّر على الناس سلبياً، ومن ثمّ أرى اللوائح الرسمية مهمة. وأودّ أن أثبّت ما يلي: نراعي الأطفال. وفي الختام أودّ أن أشير إلى النقد. مع تحياتي الخالصة."
+      "de": "Sehr geehrte Damen und Herren, ich möchte zum Thema Verhalten schreiben. Meiner Meinung nach ist das Verhalten wichtig. Jedoch beeinflusst die Presse die Menschen negativ, weshalb ich die offiziellen Vorschriften wichtig finde. Ich möchte Folgendes festhalten: Wir nehmen Rücksicht auf die Kinder. Zum Abschluss möchte ich auf die Kritik hinweisen. Mit freundlichen Grüßen Das Kabel ist lang. Der Lautsprecher ist laut.",
+      "ar": "سيداتي وسادتي الأفاضل، أودّ أن أكتب عن موضوع السلوك. من رأيي أن السلوك مهم. لكن الصحافة تؤثّر على الناس سلبياً، ومن ثمّ أرى اللوائح الرسمية مهمة. وأودّ أن أثبّت ما يلي: نراعي الأطفال. وفي الختام أودّ أن أشير إلى النقد. مع تحياتي الخالصة. السلك طويل. مكبر الصوت صاخب."
     },
     "srsBundleWordIds": [
       "weshalb",
@@ -580,7 +690,9 @@
       "regeln",
       "positiv",
       "negativ",
-      "offiziell"
+      "offiziell",
+      "kabel",
+      "lautsprecher"
     ],
     "warningCards": [
       {
@@ -664,7 +776,9 @@
     "word-regeln",
     "word-positiv",
     "word-negativ",
-    "word-offiziell"
+    "word-offiziell",
+    "word-kabel",
+    "word-lautsprecher"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -682,7 +796,9 @@
       "regeln",
       "positiv",
       "negativ",
-      "offiziell"
+      "offiziell",
+      "kabel",
+      "lautsprecher"
     ]
   }
 }

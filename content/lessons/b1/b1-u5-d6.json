@@ -55,7 +55,10 @@
   "praesentation": {
     "wordIds": [
       "medien",
-      "publikum"
+      "publikum",
+      "fotografie",
+      "kassette",
+      "festplatte"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -72,7 +75,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Ganz im Ernst: Die Medien und das Publikum!",
+        "de": "Ganz im Ernst: Die Medien und das Publikum! Die Fotografie ist schön. Die Kassette ist alt, und die Festplatte ist voll.",
         "ar": "يكتب توليف الأسبوع في 8 جمل!"
       },
       "situation": {
@@ -191,6 +194,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: das Seminar = «الندوة» · das Diplom = «الشهادة (الجامعية)» · der Lebenslauf = «السيرة الذاتية»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التصوير",
+                "de": "die Fotografie"
+              },
+              {
+                "ar": "الشريط (الصوتي)",
+                "de": "die Kassette"
+              },
+              {
+                "ar": "القرص الصلب",
+                "de": "die Festplatte"
+              }
+            ],
+            "why": "die Fotografie التصوير · die Kassette الشريط (الصوتي) · die Festplatte القرص الصلب (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -251,6 +271,21 @@
             "q": "Sie liebt ihre ___.",
             "a": "Arbeit",
             "why": "الكلمة الناقصة «Arbeit» تعني «العمل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist schön. (التصوير!)",
+            "a": "Fotografie",
+            "why": "die Fotografie التصوير (die! مؤنثة (die!) وجمعها die Fotografien (-ien!).) — Die Fotografie ist schön."
+          },
+          {
+            "q": "Die ___ ist alt. (الشريط!)",
+            "a": "Kassette",
+            "why": "die Kassette الشريط (الصوتي) (die! مؤنثة (die!) وجمعها die Kassetten.) — Die Kassette ist alt."
+          },
+          {
+            "q": "Die ___ ist voll. (القرص الصلب!)",
+            "a": "Festplatte",
+            "why": "die Festplatte القرص الصلب (die! مركّبة (Fest+Platte) مؤنثة (die!) وجمعها die Festplatten.) — Die Festplatte ist voll."
           }
         ]
       },
@@ -296,6 +331,21 @@
             "q": "~~Die wohnung ist neu.~~",
             "a": "Die Wohnung ist neu.",
             "why": "الخطأ في «wohnung»! الصواب «Wohnung» — راجع القاعدة (شقة)."
+          },
+          {
+            "q": "~~der Fotografie ist schön~~",
+            "a": "die Fotografie ist schön",
+            "why": "الألمانية: die Fotografie (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Kassette ist alt~~",
+            "a": "die Kassette ist alt",
+            "why": "الألمانية: die Kassette (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Festplatte ist voll~~",
+            "a": "die Festplatte ist voll",
+            "why": "الألمانية: die Festplatte (die! مركّبة مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -331,6 +381,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Fotografie · die Kassette · die Festplatte)",
+            "a": "Die Fotografie ist schön. Die Kassette ist alt, und die Festplatte ist voll.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -410,6 +465,42 @@
             ],
             "a": "Danke. Das nehme ich mit.",
             "why": "«يوسف» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-fotografie",
+            "speakText": "die Fotografie.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التصوير",
+              "الشريط (الصوتي)",
+              "القرص الصلب"
+            ],
+            "a": "التصوير",
+            "why": "الصوت يقول «die Fotografie» — معناها «التصوير». ركّز!"
+          },
+          {
+            "audioId": "word-kassette",
+            "speakText": "die Kassette.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الشريط (الصوتي)",
+              "التصوير",
+              "القرص الصلب"
+            ],
+            "a": "الشريط (الصوتي)",
+            "why": "الصوت يقول «die Kassette» — معناها «الشريط (الصوتي)». ركّز!"
+          },
+          {
+            "audioId": "word-festplatte",
+            "speakText": "die Festplatte.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "القرص الصلب",
+              "التصوير",
+              "الشريط (الصوتي)"
+            ],
+            "a": "القرص الصلب",
+            "why": "الصوت يقول «die Festplatte» — معناها «القرص الصلب». ركّز!"
           }
         ]
       },
@@ -437,6 +528,24 @@
             "speakText": "überhaupt.",
             "a": "überhaupt",
             "why": "اكتب المسموع بدقة: überhaupt — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-fotografie",
+            "speakText": "die Fotografie.",
+            "a": "die Fotografie",
+            "why": "اكتب ما تسمعه حرفياً: «die Fotografie» تعني «التصوير». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-kassette",
+            "speakText": "die Kassette.",
+            "a": "die Kassette",
+            "why": "اكتب ما تسمعه حرفياً: «die Kassette» تعني «الشريط (الصوتي)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-festplatte",
+            "speakText": "die Festplatte.",
+            "a": "die Festplatte",
+            "why": "اكتب ما تسمعه حرفياً: «die Festplatte» تعني «القرص الصلب». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -475,6 +584,21 @@
           {
             "q": "«الجمهور يقرأ الصحيفة.»؟",
             "a": "Das Publikum liest die Zeitung."
+          },
+          {
+            "q": "Die ___ ist schön. (التصوير!)",
+            "a": "Fotografie",
+            "why": "die Fotografie التصوير (die! مؤنثة (die!) وجمعها die Fotografien (-ien!).) — Die Fotografie ist schön."
+          },
+          {
+            "q": "Die ___ ist alt. (الشريط!)",
+            "a": "Kassette",
+            "why": "die Kassette الشريط (الصوتي) (die! مؤنثة (die!) وجمعها die Kassetten.) — Die Kassette ist alt."
+          },
+          {
+            "q": "Die ___ ist voll. (القرص الصلب!)",
+            "a": "Festplatte",
+            "why": "die Festplatte القرص الصلب (die! مركّبة (Fest+Platte) مؤنثة (die!) وجمعها die Festplatten.) — Die Festplatte ist voll."
           }
         ],
         "passingScore": 0.75
@@ -504,6 +628,21 @@
           {
             "q": "«الجمهور»؟",
             "a": "das Publikum"
+          },
+          {
+            "q": "Die ___ ist schön. (التصوير!)",
+            "a": "Fotografie",
+            "why": "die Fotografie التصوير (die! مؤنثة (die!) وجمعها die Fotografien (-ien!).) — Die Fotografie ist schön."
+          },
+          {
+            "q": "Die ___ ist alt. (الشريط!)",
+            "a": "Kassette",
+            "why": "die Kassette الشريط (الصوتي) (die! مؤنثة (die!) وجمعها die Kassetten.) — Die Kassette ist alt."
+          },
+          {
+            "q": "Die ___ ist voll. (القرص الصلب!)",
+            "a": "Festplatte",
+            "why": "die Festplatte القرص الصلب (die! مركّبة (Fest+Platte) مؤنثة (die!) وجمعها die Festplatten.) — Die Festplatte ist voll."
           }
         ],
         "passingScore": 0.75
@@ -533,6 +672,21 @@
           {
             "q": "«الجمهور»؟",
             "a": "das Publikum"
+          },
+          {
+            "q": "Die ___ ist schön. (التصوير!)",
+            "a": "Fotografie",
+            "why": "die Fotografie التصوير (die! مؤنثة (die!) وجمعها die Fotografien (-ien!).) — Die Fotografie ist schön."
+          },
+          {
+            "q": "Die ___ ist alt. (الشريط!)",
+            "a": "Kassette",
+            "why": "die Kassette الشريط (الصوتي) (die! مؤنثة (die!) وجمعها die Kassetten.) — Die Kassette ist alt."
+          },
+          {
+            "q": "Die ___ ist voll. (القرص الصلب!)",
+            "a": "Festplatte",
+            "why": "die Festplatte القرص الصلب (die! مركّبة (Fest+Platte) مؤنثة (die!) وجمعها die Festplatten.) — Die Festplatte ist voll."
           }
         ],
         "passingScore": 0.75
@@ -541,12 +695,15 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Ganz im Ernst: Die Medien sind wichtig. Meiner Meinung nach ist das Publikum wichtig, denn es liest. Ich möchte wissen, ob die Zeitung das veröffentlicht. Das ist doch klar! Ach, toll! Zum Abschluss möchte ich über die Medien und das Publikum schreiben. Mit freundlichen Grüßen",
-      "ar": "بجدّية تامّة: الإعلام مهم. من رأيي الجمهور مهم لأنه يقرأ. أودّ أن أعرف هل تنشر الصحيفة ذلك. هذا مفروض من الواضح! يا للروعة! في الختام أودّ أن أكتب عن الإعلام والجمهور. مع تحياتي الخالصة."
+      "de": "Ganz im Ernst: Die Medien sind wichtig. Meiner Meinung nach ist das Publikum wichtig, denn es liest. Ich möchte wissen, ob die Zeitung das veröffentlicht. Das ist doch klar! Ach, toll! Zum Abschluss möchte ich über die Medien und das Publikum schreiben. Mit freundlichen Grüßen Die Fotografie ist schön. Die Kassette ist alt. Die Festplatte ist voll.",
+      "ar": "بجدّية تامّة: الإعلام مهم. من رأيي الجمهور مهم لأنه يقرأ. أودّ أن أعرف هل تنشر الصحيفة ذلك. هذا مفروض من الواضح! يا للروعة! في الختام أودّ أن أكتب عن الإعلام والجمهور. مع تحياتي الخالصة. التصوير جميل. الشريط قديم. القرص الصلب ممتلئ."
     },
     "srsBundleWordIds": [
       "medien",
-      "publikum"
+      "publikum",
+      "fotografie",
+      "kassette",
+      "festplatte"
     ],
     "warningCards": [
       {
@@ -611,14 +768,20 @@
   ],
   "audioManifestRefs": [
     "word-medien",
-    "word-publikum"
+    "word-publikum",
+    "word-fotografie",
+    "word-kassette",
+    "word-festplatte"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (الإعلام والرأي — التوليف)",
     "goetheWordListOverlap": [
       "medien",
-      "publikum"
+      "publikum",
+      "fotografie",
+      "kassette",
+      "festplatte"
     ]
   }
 }
