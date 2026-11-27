@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u14-d6",
+  "level": "B2",
+  "unit": 14,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Dankbarkeit am Ende: Jubel mit allen — und dann eine gute Auszeit!",
+    "ar": "الوحدة 14 (اليوم الحاسم!) اليوم السادس: الامتنان والهتاف والاستراحة!"
+  },
+  "canDoDaily": [
+    "يُظهر الامتنان بعد الامتحان! (die Dankbarkeit!)",
+    "يصف الابتهاج والاستراحة! (der Jubel! die Auszeit!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "selbsteinschaetzung",
+      "pruefling",
+      "erwartung"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الامتنان كبير.»؟"
+        },
+        "choices": [
+          "Die Dankbarkeit ist groß.",
+          "Der Dankbarkeit ist groß.",
+          "Das Dankbarkeit ist groß."
+        ],
+        "answer": "Die Dankbarkeit ist groß.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الاستراحة جيدة.»؟"
+        },
+        "choices": [
+          "Die Auszeit ist gut.",
+          "Der Auszeit ist gut.",
+          "Das Auszeit ist gut."
+        ],
+        "answer": "Die Auszeit ist gut.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "dankbarkeit",
+      "jubel",
+      "auszeit"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u14-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Dankbarkeit, Jubel, Auszeit: Wir schließen die Woche ab!",
+        "ar": "اليوم السادس من الوحدة 14! (الامتنان! الهتاف! الاستراحة!)"
+      },
+      "situation": {
+        "de": "Dankbarkeit, Jubel, Auszeit — zusammen abschließen.",
+        "ar": "امتنان! هتاف! استراحة! — نختم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Dankbarkeit (die! على -keit!) وder Jubel (der!) وdie Auszeit (die! مركّبة!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Dankbarkeit zeigen! eine Auszeit nehmen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "selbsteinschaetzung",
+          "pruefling",
+          "erwartung"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Dankbarkeit",
+                "ar": "الامتنان"
+              },
+              {
+                "de": "der Jubel",
+                "ar": "الهتاف (الابتهاج)"
+              },
+              {
+                "de": "die Auszeit",
+                "ar": "استراحة (وقت للنفس)"
+              }
+            ],
+            "why": "die Dankbarkeit الامتنان (die! -keit مؤنثة!) · der Jubel الهتاف (الابتهاج) (der! der!) · die Auszeit استراحة (وقت للنفس) (die! die!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Selbsteinschätzung",
+                "ar": "التقييم الذاتي"
+              },
+              {
+                "de": "der Prüfling",
+                "ar": "الممتحَن (المترشّح)"
+              },
+              {
+                "de": "die Erwartung",
+                "ar": "التوقع"
+              }
+            ],
+            "why": "استدعاء سابق: die Selbsteinschätzung التقييم الذاتي · der Prüfling الممتحَن (المترشّح) · die Erwartung التوقع"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Dankbarkeit",
+                "ar": "الامتنان"
+              },
+              {
+                "de": "die Selbsteinschätzung",
+                "ar": "التقييم الذاتي"
+              },
+              {
+                "de": "der Jubel",
+                "ar": "الهتاف (الابتهاج)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "selbsteinschaetzung",
+          "pruefling",
+          "erwartung"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (الامتنان!)",
+            "a": "Dankbarkeit",
+            "why": "die Dankbarkeit الامتنان (die! -keit مؤنثة!) — Die Dankbarkeit ist groß."
+          },
+          {
+            "q": "der ___ ist wichtig. (الهتاف (الابتهاج)!)",
+            "a": "Jubel",
+            "why": "der Jubel الهتاف (الابتهاج) (der! der!) — Der Jubel ist laut."
+          },
+          {
+            "q": "die ___ ist wichtig. (استراحة (وقت للنفس)!)",
+            "a": "Auszeit",
+            "why": "die Auszeit استراحة (وقت للنفس) (die! die!) — Die Auszeit ist gut."
+          },
+          {
+            "q": "Die ___ ist gut.",
+            "a": "Selbsteinschätzung",
+            "why": "الكلمة الناقصة «Selbsteinschätzung» تعني «التقييم الذاتي» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist bereit.",
+            "a": "Prüfling",
+            "why": "الكلمة الناقصة «Prüfling» تعني «الممتحَن (المترشّح)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist klar.",
+            "a": "Erwartung",
+            "why": "الكلمة الناقصة «Erwartung» تعني «التوقع» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "selbsteinschaetzung",
+          "pruefling",
+          "erwartung"
+        ],
+        "items": [
+          {
+            "q": "~~das Dankbarkeit!~~",
+            "a": "Die Dankbarkeit ist groß.",
+            "why": "الألمانية: die Dankbarkeit (die! على -keit!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Jubel!~~",
+            "a": "Der Jubel ist laut.",
+            "why": "العربية: «الهتاف» مؤنث! والألمانية: der Jubel (der! مذكّر!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Auszeit!~~",
+            "a": "Die Auszeit ist gut.",
+            "why": "الألمانية: die Auszeit (die! مركّبة على Zeit!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die selbsteinschätzung ist gut.~~",
+            "a": "Die Selbsteinschätzung ist gut.",
+            "why": "الخطأ في «selbsteinschätzung»! الصواب «Selbsteinschätzung» — راجع القاعدة (التقييم الذاتي)."
+          },
+          {
+            "q": "~~Der prüfling ist bereit.~~",
+            "a": "Der Prüfling ist bereit.",
+            "why": "الخطأ في «prüfling»! الصواب «Prüfling» — راجع القاعدة (الممتحَن (المترشّح))."
+          },
+          {
+            "q": "~~Die erwartung ist klar.~~",
+            "a": "Die Erwartung ist klar.",
+            "why": "الخطأ في «erwartung»! الصواب «Erwartung» — راجع القاعدة (التوقع)."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "selbsteinschaetzung",
+          "pruefling",
+          "erwartung"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالامتنان! (جملتان!)",
+            "a": "Die Dankbarkeit ist groß. Der Jubel ist laut.",
+            "why": "الامتنان أولًا!"
+          },
+          {
+            "q": "تحدّث عن الهتاف (الابتهاج)! (جملتان!)",
+            "a": "Der Jubel ist laut. Das ist gut.",
+            "why": "الهتاف (الابتهاج) — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "تحدّث عن استراحة (وقت للنفس)! (جملتان!)",
+            "a": "Die Auszeit ist gut. die Auszeit hilft.",
+            "why": "استراحة (وقت للنفس) — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Selbsteinschätzung» («التقييم الذاتي») ثم تحدّث بها.",
+            "a": "Die Selbsteinschätzung ist gut.",
+            "why": "استعمل «die Selbsteinschätzung» («التقييم الذاتي») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Prüfling» («الممتحَن (المترشّح)») ثم تحدّث بها.",
+            "a": "Der Prüfling ist bereit.",
+            "why": "استعمل «der Prüfling» («الممتحَن (المترشّح)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Erwartung» («التوقع») ثم تحدّث بها.",
+            "a": "Die Erwartung ist klar.",
+            "why": "استعمل «die Erwartung» («التوقع») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "selbsteinschaetzung",
+          "pruefling",
+          "erwartung"
+        ],
+        "items": [
+          {
+            "audioId": "word-dankbarkeit",
+            "speakText": "die Dankbarkeit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الامتنان",
+              "الهتاف (الابتهاج)",
+              "استراحة (وقت للنفس)"
+            ],
+            "a": "الامتنان",
+            "why": "الصوت يقول «die Dankbarkeit» — معناها «الامتنان». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-jubel",
+            "speakText": "der Jubel.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الهتاف (الابتهاج)",
+              "استراحة (وقت للنفس)",
+              "الامتنان"
+            ],
+            "a": "الهتاف (الابتهاج)",
+            "why": "الصوت يقول «der Jubel» — معناها «الهتاف (الابتهاج)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-auszeit",
+            "speakText": "die Auszeit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "استراحة (وقت للنفس)",
+              "الامتنان",
+              "الهتاف (الابتهاج)"
+            ],
+            "a": "استراحة (وقت للنفس)",
+            "why": "الصوت يقول «die Auszeit» — معناها «استراحة (وقت للنفس)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-selbsteinschaetzung",
+            "speakText": "die Selbsteinschätzung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التقييم الذاتي",
+              "الممتحَن (المترشّح)",
+              "الامتنان"
+            ],
+            "a": "التقييم الذاتي",
+            "why": "الكلمة المسموعة «die Selbsteinschätzung» تعني «التقييم الذاتي». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-pruefling",
+            "speakText": "der Prüfling.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الممتحَن (المترشّح)",
+              "التوقع",
+              "الهتاف (الابتهاج)"
+            ],
+            "a": "الممتحَن (المترشّح)",
+            "why": "الكلمة المسموعة «der Prüfling» تعني «الممتحَن (المترشّح)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-erwartung",
+            "speakText": "die Erwartung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التوقع",
+              "التقييم الذاتي",
+              "استراحة (وقت للنفس)"
+            ],
+            "a": "التوقع",
+            "why": "الكلمة المسموعة «die Erwartung» تعني «التوقع». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-selbsteinschaetzung",
+            "speakText": "die Selbsteinschätzung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "التقييم الذاتي",
+              "الممتحَن (المترشّح)",
+              "الامتنان"
+            ],
+            "a": "التقييم الذاتي",
+            "why": "الكلمة المسموعة «die Selbsteinschätzung» تعني «التقييم الذاتي». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "selbsteinschaetzung",
+          "pruefling"
+        ],
+        "items": [
+          {
+            "audioId": "word-dankbarkeit",
+            "speakText": "die Dankbarkeit.",
+            "a": "die Dankbarkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Dankbarkeit» تعني «الامتنان». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-jubel",
+            "speakText": "der Jubel.",
+            "a": "der Jubel",
+            "why": "اكتب ما تسمعه حرفياً: «der Jubel» تعني «الهتاف (الابتهاج)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-selbsteinschaetzung",
+            "speakText": "die Selbsteinschätzung.",
+            "a": "die Selbsteinschätzung",
+            "why": "اكتب ما تسمعه حرفياً: «die Selbsteinschätzung» تعني «التقييم الذاتي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-pruefling",
+            "speakText": "der Prüfling.",
+            "a": "der Prüfling",
+            "why": "اكتب ما تسمعه حرفياً: «der Prüfling» تعني «الممتحَن (المترشّح)». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الامتنان»؟",
+            "a": "die Dankbarkeit"
+          },
+          {
+            "q": "«الهتاف (الابتهاج)»؟",
+            "a": "der Jubel"
+          },
+          {
+            "q": "«استراحة (وقت للنفس)»؟",
+            "a": "die Auszeit"
+          },
+          {
+            "q": "«الامتنان كبير.»؟",
+            "a": "Die Dankbarkeit ist groß."
+          },
+          {
+            "q": "«الهتاف عالٍ.»؟",
+            "a": "Der Jubel ist laut."
+          },
+          {
+            "q": "«الاستراحة جيدة.»؟",
+            "a": "Die Auszeit ist gut."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Dankbarkeit",
+            "a": "الامتنان"
+          },
+          {
+            "q": "der Jubel",
+            "a": "الهتاف (الابتهاج)"
+          },
+          {
+            "q": "die Auszeit",
+            "a": "استراحة (وقت للنفس)"
+          },
+          {
+            "q": "«الاستراحة جيدة.»؟",
+            "a": "Die Auszeit ist gut."
+          },
+          {
+            "q": "«الهتاف عالٍ.»؟",
+            "a": "Der Jubel ist laut."
+          },
+          {
+            "q": "«الامتنان كبير.»؟",
+            "a": "Die Dankbarkeit ist groß."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«استراحة (وقت للنفس)»؟",
+            "a": "die Auszeit"
+          },
+          {
+            "q": "«الهتاف (الابتهاج)»؟",
+            "a": "der Jubel"
+          },
+          {
+            "q": "«الامتنان»؟",
+            "a": "die Dankbarkeit"
+          },
+          {
+            "q": "die Dankbarkeit",
+            "a": "الامتنان"
+          },
+          {
+            "q": "der Jubel",
+            "a": "الهتاف (الابتهاج)"
+          },
+          {
+            "q": "die Auszeit",
+            "a": "استراحة (وقت للنفس)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Dankbarkeit ist groß. Der Jubel ist laut. Die Auszeit ist gut. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 14 (اليوم الحاسم!) اليوم السادس: الامتنان والهتاف والاستراحة! نتعلّم اليوم: الامتنان والهتاف (الابتهاج) واستراحة (وقت للنفس)!"
+    },
+    "srsBundleWordIds": [
+      "dankbarkeit",
+      "jubel",
+      "auszeit"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "das Dankbarkeit!",
+          "de": "~~das Dankbarkeit ist groß.~~"
+        },
+        "correct": {
+          "ar": "die Dankbarkeit!",
+          "de": "Die Dankbarkeit ist groß."
+        },
+        "exercise": {
+          "q": "___ Dankbarkeit ist groß.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Dankbarkeit (die! على -keit!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Jubel!",
+          "de": "~~die Jubel ist laut.~~"
+        },
+        "correct": {
+          "ar": "der Jubel!",
+          "de": "Der Jubel ist laut."
+        },
+        "exercise": {
+          "q": "___ Jubel ist laut.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الهتاف» مؤنث! والألمانية: der Jubel (der! مذكّر!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Auszeit!",
+          "de": "~~der Auszeit ist gut.~~"
+        },
+        "correct": {
+          "ar": "die Auszeit!",
+          "de": "Die Auszeit ist gut."
+        },
+        "exercise": {
+          "q": "___ Auszeit ist gut.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Auszeit (die! مركّبة على Zeit!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Dankbarkeit",
+      "https://www.duden.de/rechtschreibung/Jubel",
+      "https://www.duden.de/rechtschreibung/Auszeit"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-dankbarkeit",
+    "word-jubel",
+    "word-auszeit"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 14 (اليوم الحاسم!) الامتنان",
+    "goetheWordListOverlap": [
+      "dankbarkeit",
+      "jubel",
+      "auszeit"
+    ]
+  }
+}

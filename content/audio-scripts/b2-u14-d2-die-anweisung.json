@@ -1,0 +1,64 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "b2-u14-d2-die-anweisung",
+ "kind": "dialogue",
+ "level": "B2",
+ "title": {
+  "de": "Die Anweisung",
+  "ar": "التعليمات"
+ },
+ "usedIn": [
+  "b2-u14-d2"
+ ],
+ "lengthScale": 1.1,
+ "lines": [
+  {
+   "id": "b2u14d2-l1",
+   "speaker": "lena",
+   "text": "Die Anweisung ist klar: keine Nervosität — nur Sammlung und Ruhe!",
+   "direction": "قبل البدء"
+  },
+  {
+   "id": "b2u14d2-l2",
+   "speaker": "yusuf",
+   "text": "Was steht in der Anweisung?",
+   "direction": "استفسار"
+  },
+  {
+   "id": "b2u14d2-l3",
+   "speaker": "lena",
+   "text": "Die Anweisung sagt: Ruhe und Sammlung!",
+   "direction": "تعريف"
+  },
+  {
+   "id": "b2u14d2-l4",
+   "speaker": "yusuf",
+   "text": "Und die Nervosität?",
+   "direction": "استفسار"
+  },
+  {
+   "id": "b2u14d2-l5",
+   "speaker": "lena",
+   "text": "Die Nervosität ist normal — aber wir atmen tief.",
+   "direction": "تفسير"
+  },
+  {
+   "id": "b2u14d2-l6",
+   "speaker": "yusuf",
+   "text": "Und die Sammlung?",
+   "direction": "استفسار"
+  },
+  {
+   "id": "b2u14d2-l7",
+   "speaker": "lena",
+   "text": "Die Sammlung kommt mit der Ruhe.",
+   "direction": "مبدأ"
+  },
+  {
+   "id": "b2u14d2-l8",
+   "speaker": "yusuf",
+   "text": "Gut. Ich sammle mich.",
+   "direction": "إغلاق"
+  }
+ ]
+}

@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u14-d4",
+  "level": "B2",
+  "unit": 14,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Erleichterung nach der Prüfung: ein langer Seufzer — und die Ernüchterung kommt später!",
+    "ar": "الوحدة 14 (اليوم الحاسم!) اليوم الرابع: الارتياح وخيبة التوقّع والتنهّدة!"
+  },
+  "canDoDaily": [
+    "يصف الشعور بعد الامتحان! (die Erleichterung!)",
+    "يصف خيبة التوقّع والتنهّدة! (die Ernüchterung! der Seufzer!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "loesungsweg",
+      "skizze",
+      "fehlersuche"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الارتياح كبير.»؟"
+        },
+        "choices": [
+          "Die Erleichterung ist groß.",
+          "Der Erleichterung ist groß.",
+          "Das Erleichterung ist groß."
+        ],
+        "answer": "Die Erleichterung ist groß.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«التنهّدة طويلة.»؟"
+        },
+        "choices": [
+          "Der Seufzer ist lang.",
+          "Das Seufzer ist lang.",
+          "Die Seufzer ist lang."
+        ],
+        "answer": "Der Seufzer ist lang.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "erleichterung",
+      "ernuechterung",
+      "seufzer"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u14-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Erleichterung, Ernüchterung, Seufzer: Die Prüfung ist zu Ende!",
+        "ar": "اليوم الرابع من الوحدة 14! (الارتياح! الصحو! التنهّدة!)"
+      },
+      "situation": {
+        "de": "Erleichterung, Ernüchterung, Seufzer — zusammen da sein.",
+        "ar": "ارتياح! صحو! تنهّدة! — نتنفّس معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Erleichterung (die! -ung!) وdie Ernüchterung (die! -ung!) وder Seufzer (der! جمعه بلا تغيير!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Erleichterung zeigen! einen Seufzer hören!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "loesungsweg",
+          "skizze",
+          "fehlersuche"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Erleichterung",
+                "ar": "الارتياح"
+              },
+              {
+                "de": "die Ernüchterung",
+                "ar": "الصحو المؤلم (خيبة التوقّع)"
+              },
+              {
+                "de": "der Seufzer",
+                "ar": "التنهّدة"
+              }
+            ],
+            "why": "die Erleichterung الارتياح (die! -ung مؤنثة!) · die Ernüchterung الصحو المؤلم (خيبة التوقّع) (die! -ung مؤنثة!) · der Seufzer التنهّدة (der! der!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "der Lösungsweg",
+                "ar": "مسار الحلّ"
+              },
+              {
+                "de": "die Skizze",
+                "ar": "المسودّة (الرسم التخطيطي)"
+              },
+              {
+                "de": "die Fehlersuche",
+                "ar": "البحث عن الأخطاء"
+              }
+            ],
+            "why": "استدعاء سابق: der Lösungsweg مسار الحلّ · die Skizze المسودّة (الرسم التخطيطي) · die Fehlersuche البحث عن الأخطاء"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Erleichterung",
+                "ar": "الارتياح"
+              },
+              {
+                "de": "der Lösungsweg",
+                "ar": "مسار الحلّ"
+              },
+              {
+                "de": "die Ernüchterung",
+                "ar": "الصحو المؤلم (خيبة التوقّع)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "loesungsweg",
+          "skizze",
+          "fehlersuche"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (الارتياح!)",
+            "a": "Erleichterung",
+            "why": "die Erleichterung الارتياح (die! -ung مؤنثة!) — Die Erleichterung ist groß."
+          },
+          {
+            "q": "die ___ ist wichtig. (الصحو المؤلم (خيبة التوقّع)!)",
+            "a": "Ernüchterung",
+            "why": "die Ernüchterung الصحو المؤلم (خيبة التوقّع) (die! -ung مؤنثة!) — Die Ernüchterung ist schwer."
+          },
+          {
+            "q": "der ___ ist wichtig. (التنهّدة!)",
+            "a": "Seufzer",
+            "why": "der Seufzer التنهّدة (der! der!) — Der Seufzer ist lang."
+          },
+          {
+            "q": "Der ___ ist klar.",
+            "a": "Lösungsweg",
+            "why": "الكلمة الناقصة «Lösungsweg» تعني «مسار الحلّ» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist kurz.",
+            "a": "Skizze",
+            "why": "الكلمة الناقصة «Skizze» تعني «المسودّة (الرسم التخطيطي)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Fehlersuche",
+            "why": "الكلمة الناقصة «Fehlersuche» تعني «البحث عن الأخطاء» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "loesungsweg",
+          "skizze",
+          "fehlersuche"
+        ],
+        "items": [
+          {
+            "q": "~~das Erleichterung!~~",
+            "a": "Die Erleichterung ist groß.",
+            "why": "الألمانية: die Erleichterung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Ernüchterung!~~",
+            "a": "Die Ernüchterung ist schwer.",
+            "why": "الألمانية: die Ernüchterung (die! -ung!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Seufzer!~~",
+            "a": "Der Seufzer ist lang.",
+            "why": "العربية: «التنهّدة» مؤنثة! والألمانية: der Seufzer (der! مذكّر!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Der lösungsweg ist klar.~~",
+            "a": "Der Lösungsweg ist klar.",
+            "why": "الخطأ في «lösungsweg»! الصواب «Lösungsweg» — راجع القاعدة (مسار الحلّ)."
+          },
+          {
+            "q": "~~Die skizze ist kurz.~~",
+            "a": "Die Skizze ist kurz.",
+            "why": "الخطأ في «skizze»! الصواب «Skizze» — راجع القاعدة (المسودّة (الرسم التخطيطي))."
+          },
+          {
+            "q": "~~Die fehlersuche ist wichtig.~~",
+            "a": "Die Fehlersuche ist wichtig.",
+            "why": "الخطأ في «fehlersuche»! الصواب «Fehlersuche» — راجع القاعدة (البحث عن الأخطاء)."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "loesungsweg",
+          "skizze",
+          "fehlersuche"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالارتياح! (جملتان!)",
+            "a": "Die Erleichterung ist groß. Die Ernüchterung ist schwer.",
+            "why": "الارتياح أولًا!"
+          },
+          {
+            "q": "تحدّث عن الصحو المؤلم (خيبة التوقّع)! (جملتان!)",
+            "a": "Die Ernüchterung ist schwer. Das ist gut.",
+            "why": "الصحو المؤلم (خيبة التوقّع) — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "تحدّث عن التنهّدة! (جملتان!)",
+            "a": "Der Seufzer ist lang. der Seufzer hilft.",
+            "why": "التنهّدة — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "كوّن جملة فيها «der Lösungsweg» («مسار الحلّ») ثم تحدّث بها.",
+            "a": "Der Lösungsweg ist klar.",
+            "why": "استعمل «der Lösungsweg» («مسار الحلّ») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Skizze» («المسودّة (الرسم التخطيطي)») ثم تحدّث بها.",
+            "a": "Die Skizze ist kurz.",
+            "why": "استعمل «die Skizze» («المسودّة (الرسم التخطيطي)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Fehlersuche» («البحث عن الأخطاء») ثم تحدّث بها.",
+            "a": "Die Fehlersuche ist wichtig.",
+            "why": "استعمل «die Fehlersuche» («البحث عن الأخطاء») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "loesungsweg",
+          "skizze",
+          "fehlersuche"
+        ],
+        "items": [
+          {
+            "audioId": "word-erleichterung",
+            "speakText": "die Erleichterung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الارتياح",
+              "الصحو المؤلم (خيبة التوقّع)",
+              "التنهّدة"
+            ],
+            "a": "الارتياح",
+            "why": "الصوت يقول «die Erleichterung» — معناها «الارتياح». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ernuechterung",
+            "speakText": "die Ernüchterung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الصحو المؤلم (خيبة التوقّع)",
+              "التنهّدة",
+              "الارتياح"
+            ],
+            "a": "الصحو المؤلم (خيبة التوقّع)",
+            "why": "الصوت يقول «die Ernüchterung» — معناها «الصحو المؤلم (خيبة التوقّع)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-seufzer",
+            "speakText": "der Seufzer.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التنهّدة",
+              "الارتياح",
+              "الصحو المؤلم (خيبة التوقّع)"
+            ],
+            "a": "التنهّدة",
+            "why": "الصوت يقول «der Seufzer» — معناها «التنهّدة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-loesungsweg",
+            "speakText": "der Lösungsweg.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "مسار الحلّ",
+              "المسودّة (الرسم التخطيطي)",
+              "الارتياح"
+            ],
+            "a": "مسار الحلّ",
+            "why": "الكلمة المسموعة «der Lösungsweg» تعني «مسار الحلّ». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-skizze",
+            "speakText": "die Skizze.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "المسودّة (الرسم التخطيطي)",
+              "البحث عن الأخطاء",
+              "الصحو المؤلم (خيبة التوقّع)"
+            ],
+            "a": "المسودّة (الرسم التخطيطي)",
+            "why": "الكلمة المسموعة «die Skizze» تعني «المسودّة (الرسم التخطيطي)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-fehlersuche",
+            "speakText": "die Fehlersuche.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "البحث عن الأخطاء",
+              "مسار الحلّ",
+              "التنهّدة"
+            ],
+            "a": "البحث عن الأخطاء",
+            "why": "الكلمة المسموعة «die Fehlersuche» تعني «البحث عن الأخطاء». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-loesungsweg",
+            "speakText": "der Lösungsweg.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "مسار الحلّ",
+              "المسودّة (الرسم التخطيطي)",
+              "الارتياح"
+            ],
+            "a": "مسار الحلّ",
+            "why": "الكلمة المسموعة «der Lösungsweg» تعني «مسار الحلّ». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "loesungsweg",
+          "skizze"
+        ],
+        "items": [
+          {
+            "audioId": "word-erleichterung",
+            "speakText": "die Erleichterung.",
+            "a": "die Erleichterung",
+            "why": "اكتب ما تسمعه حرفياً: «die Erleichterung» تعني «الارتياح». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ernuechterung",
+            "speakText": "die Ernüchterung.",
+            "a": "die Ernüchterung",
+            "why": "اكتب ما تسمعه حرفياً: «die Ernüchterung» تعني «الصحو المؤلم (خيبة التوقّع)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-loesungsweg",
+            "speakText": "der Lösungsweg.",
+            "a": "der Lösungsweg",
+            "why": "اكتب ما تسمعه حرفياً: «der Lösungsweg» تعني «مسار الحلّ». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-skizze",
+            "speakText": "die Skizze.",
+            "a": "die Skizze",
+            "why": "اكتب ما تسمعه حرفياً: «die Skizze» تعني «المسودّة (الرسم التخطيطي)». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الارتياح»؟",
+            "a": "die Erleichterung"
+          },
+          {
+            "q": "«الصحو المؤلم (خيبة التوقّع)»؟",
+            "a": "die Ernüchterung"
+          },
+          {
+            "q": "«التنهّدة»؟",
+            "a": "der Seufzer"
+          },
+          {
+            "q": "«الارتياح كبير.»؟",
+            "a": "Die Erleichterung ist groß."
+          },
+          {
+            "q": "«خيبة التوقّع صعبة.»؟",
+            "a": "Die Ernüchterung ist schwer."
+          },
+          {
+            "q": "«التنهّدة طويلة.»؟",
+            "a": "Der Seufzer ist lang."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Erleichterung",
+            "a": "الارتياح"
+          },
+          {
+            "q": "die Ernüchterung",
+            "a": "الصحو المؤلم (خيبة التوقّع)"
+          },
+          {
+            "q": "der Seufzer",
+            "a": "التنهّدة"
+          },
+          {
+            "q": "«التنهّدة طويلة.»؟",
+            "a": "Der Seufzer ist lang."
+          },
+          {
+            "q": "«خيبة التوقّع صعبة.»؟",
+            "a": "Die Ernüchterung ist schwer."
+          },
+          {
+            "q": "«الارتياح كبير.»؟",
+            "a": "Die Erleichterung ist groß."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«التنهّدة»؟",
+            "a": "der Seufzer"
+          },
+          {
+            "q": "«الصحو المؤلم (خيبة التوقّع)»؟",
+            "a": "die Ernüchterung"
+          },
+          {
+            "q": "«الارتياح»؟",
+            "a": "die Erleichterung"
+          },
+          {
+            "q": "die Erleichterung",
+            "a": "الارتياح"
+          },
+          {
+            "q": "die Ernüchterung",
+            "a": "الصحو المؤلم (خيبة التوقّع)"
+          },
+          {
+            "q": "der Seufzer",
+            "a": "التنهّدة"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Erleichterung ist groß. Die Ernüchterung ist schwer. Der Seufzer ist lang. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 14 (اليوم الحاسم!) اليوم الرابع: الارتياح وخيبة التوقّع والتنهّدة! نتعلّم اليوم: الارتياح والصحو المؤلم (خيبة التوقّع) والتنهّدة!"
+    },
+    "srsBundleWordIds": [
+      "erleichterung",
+      "ernuechterung",
+      "seufzer"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "das Erleichterung!",
+          "de": "~~das Erleichterung ist groß.~~"
+        },
+        "correct": {
+          "ar": "die Erleichterung!",
+          "de": "Die Erleichterung ist groß."
+        },
+        "exercise": {
+          "q": "___ Erleichterung ist groß.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Erleichterung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Ernüchterung!",
+          "de": "~~der Ernüchterung ist schwer.~~"
+        },
+        "correct": {
+          "ar": "die Ernüchterung!",
+          "de": "Die Ernüchterung ist schwer."
+        },
+        "exercise": {
+          "q": "___ Ernüchterung ist schwer.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Ernüchterung (die! -ung!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Seufzer!",
+          "de": "~~die Seufzer ist lang.~~"
+        },
+        "correct": {
+          "ar": "der Seufzer!",
+          "de": "Der Seufzer ist lang."
+        },
+        "exercise": {
+          "q": "___ Seufzer ist lang.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «التنهّدة» مؤنثة! والألمانية: der Seufzer (der! مذكّر!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Erleichterung",
+      "https://www.duden.de/rechtschreibung/Ernuechterung",
+      "https://www.duden.de/rechtschreibung/Seufzer"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-erleichterung",
+    "word-ernuechterung",
+    "word-seufzer"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 14 (اليوم الحاسم!) الارتياح",
+    "goetheWordListOverlap": [
+      "erleichterung",
+      "ernuechterung",
+      "seufzer"
+    ]
+  }
+}

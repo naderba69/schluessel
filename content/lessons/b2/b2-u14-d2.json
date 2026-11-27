@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u14-d2",
+  "level": "B2",
+  "unit": 14,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Anweisung ist klar: keine Nervosität — nur Sammlung und Ruhe!",
+    "ar": "الوحدة 14 (اليوم الحاسم!) اليوم الثاني: التعليمات والتوتر والهدوء!"
+  },
+  "canDoDaily": [
+    "يفهم تعليمات الامتحان! (die Anweisung!)",
+    "يصف التوتر والهدوء! (die Nervosität! die Sammlung!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "pruefungssimulation",
+      "gewichtung",
+      "zeitfenster"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التعليمات واضحة.»؟"
+        },
+        "choices": [
+          "Die Anweisung ist klar.",
+          "Der Anweisung ist klar.",
+          "Das Anweisung ist klar."
+        ],
+        "answer": "Die Anweisung ist klar.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الهدوء والتركيز يساعدان.»؟"
+        },
+        "choices": [
+          "Die Sammlung hilft.",
+          "Der Sammlung hilft.",
+          "Das Sammlung hilft."
+        ],
+        "answer": "Die Sammlung hilft.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "anweisung",
+      "nervositaet",
+      "sammlung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u14-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Anweisung, Nervosität, Sammlung: Wir starten die Prüfung!",
+        "ar": "اليوم الثاني من الوحدة 14! (التعليمات! التوتر! الهدوء!)"
+      },
+      "situation": {
+        "de": "Anweisung, Nervosität, Sammlung — zusammen starten.",
+        "ar": "تعليمات! توتر! هدوء! — نبدأ معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Anweisung (die! -ung!) وdie Nervosität (die! اسم مؤنث!) وdie Sammlung (die! -ung!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Anweisungen lesen! Sammlung bewahren!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "pruefungssimulation",
+          "gewichtung",
+          "zeitfenster"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Anweisung",
+                "ar": "التعليمات (الأمر)"
+              },
+              {
+                "de": "die Nervosität",
+                "ar": "العصبية (التوتر)"
+              },
+              {
+                "de": "die Sammlung",
+                "ar": "الهدوء والتركيز (التجمّع)"
+              }
+            ],
+            "why": "die Anweisung التعليمات (الأمر) (die! -ung مؤنثة!) · die Nervosität العصبية (التوتر) (die! die!) · die Sammlung الهدوء والتركيز (التجمّع) (die! -ung مؤنثة!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Prüfungssimulation",
+                "ar": "محاكاة الامتحان"
+              },
+              {
+                "de": "die Gewichtung",
+                "ar": "التوزيع (الوزن النسبي)"
+              },
+              {
+                "de": "das Zeitfenster",
+                "ar": "النافذة الزمنية (المدة)"
+              }
+            ],
+            "why": "استدعاء سابق: die Prüfungssimulation محاكاة الامتحان · die Gewichtung التوزيع (الوزن النسبي) · das Zeitfenster النافذة الزمنية (المدة)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Anweisung",
+                "ar": "التعليمات (الأمر)"
+              },
+              {
+                "de": "die Prüfungssimulation",
+                "ar": "محاكاة الامتحان"
+              },
+              {
+                "de": "die Nervosität",
+                "ar": "العصبية (التوتر)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "pruefungssimulation",
+          "gewichtung",
+          "zeitfenster"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (التعليمات (الأمر)!)",
+            "a": "Anweisung",
+            "why": "die Anweisung التعليمات (الأمر) (die! -ung مؤنثة!) — Die Anweisung ist klar."
+          },
+          {
+            "q": "die ___ ist wichtig. (العصبية (التوتر)!)",
+            "a": "Nervosität",
+            "why": "die Nervosität العصبية (التوتر) (die! die!) — Die Nervosität ist groß."
+          },
+          {
+            "q": "die ___ ist wichtig. (الهدوء والتركيز (التجمّع)!)",
+            "a": "Sammlung",
+            "why": "die Sammlung الهدوء والتركيز (التجمّع) (die! -ung مؤنثة!) — Die Sammlung hilft."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Prüfungssimulation",
+            "why": "الكلمة الناقصة «Prüfungssimulation» تعني «محاكاة الامتحان» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist klar.",
+            "a": "Gewichtung",
+            "why": "الكلمة الناقصة «Gewichtung» تعني «التوزيع (الوزن النسبي)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist kurz.",
+            "a": "Zeitfenster",
+            "why": "الكلمة الناقصة «Zeitfenster» تعني «النافذة الزمنية (المدة)» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "pruefungssimulation",
+          "gewichtung",
+          "zeitfenster"
+        ],
+        "items": [
+          {
+            "q": "~~das Anweisung!~~",
+            "a": "Die Anweisung ist klar.",
+            "why": "الألمانية: die Anweisung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Nervosität!~~",
+            "a": "Die Nervosität ist groß.",
+            "why": "الألمانية: die Nervosität (die! اسم مؤنث!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Sammlung!~~",
+            "a": "Die Sammlung hilft.",
+            "why": "العربية: «التركيز» مذكّر! والألمانية: die Sammlung (die! -ung!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die prüfungssimulation ist wichtig.~~",
+            "a": "Die Prüfungssimulation ist wichtig.",
+            "why": "الخطأ في «prüfungssimulation»! الصواب «Prüfungssimulation» — راجع القاعدة (محاكاة الامتحان)."
+          },
+          {
+            "q": "~~Die gewichtung ist klar.~~",
+            "a": "Die Gewichtung ist klar.",
+            "why": "الخطأ في «gewichtung»! الصواب «Gewichtung» — راجع القاعدة (التوزيع (الوزن النسبي))."
+          },
+          {
+            "q": "~~Das zeitfenster ist kurz.~~",
+            "a": "Das Zeitfenster ist kurz.",
+            "why": "الخطأ في «zeitfenster»! الصواب «Zeitfenster» — راجع القاعدة (النافذة الزمنية (المدة))."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "pruefungssimulation",
+          "gewichtung",
+          "zeitfenster"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالتعليمات (الأمر)! (جملتان!)",
+            "a": "Die Anweisung ist klar. Die Nervosität ist groß.",
+            "why": "التعليمات (الأمر) أولًا!"
+          },
+          {
+            "q": "تحدّث عن العصبية (التوتر)! (جملتان!)",
+            "a": "Die Nervosität ist groß. Das ist gut.",
+            "why": "العصبية (التوتر) — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "تحدّث عن الهدوء والتركيز (التجمّع)! (جملتان!)",
+            "a": "Die Sammlung hilft. die Sammlung hilft.",
+            "why": "الهدوء والتركيز (التجمّع) — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Prüfungssimulation» («محاكاة الامتحان») ثم تحدّث بها.",
+            "a": "Die Prüfungssimulation ist wichtig.",
+            "why": "استعمل «die Prüfungssimulation» («محاكاة الامتحان») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Gewichtung» («التوزيع (الوزن النسبي)») ثم تحدّث بها.",
+            "a": "Die Gewichtung ist klar.",
+            "why": "استعمل «die Gewichtung» («التوزيع (الوزن النسبي)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Zeitfenster» («النافذة الزمنية (المدة)») ثم تحدّث بها.",
+            "a": "Das Zeitfenster ist kurz.",
+            "why": "استعمل «das Zeitfenster» («النافذة الزمنية (المدة)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "pruefungssimulation",
+          "gewichtung",
+          "zeitfenster"
+        ],
+        "items": [
+          {
+            "audioId": "word-anweisung",
+            "speakText": "die Anweisung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التعليمات (الأمر)",
+              "العصبية (التوتر)",
+              "الهدوء والتركيز (التجمّع)"
+            ],
+            "a": "التعليمات (الأمر)",
+            "why": "الصوت يقول «die Anweisung» — معناها «التعليمات (الأمر)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-nervositaet",
+            "speakText": "die Nervosität.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العصبية (التوتر)",
+              "الهدوء والتركيز (التجمّع)",
+              "التعليمات (الأمر)"
+            ],
+            "a": "العصبية (التوتر)",
+            "why": "الصوت يقول «die Nervosität» — معناها «العصبية (التوتر)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-sammlung",
+            "speakText": "die Sammlung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الهدوء والتركيز (التجمّع)",
+              "التعليمات (الأمر)",
+              "العصبية (التوتر)"
+            ],
+            "a": "الهدوء والتركيز (التجمّع)",
+            "why": "الصوت يقول «die Sammlung» — معناها «الهدوء والتركيز (التجمّع)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-pruefungssimulation",
+            "speakText": "die Prüfungssimulation.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "محاكاة الامتحان",
+              "التوزيع (الوزن النسبي)",
+              "التعليمات (الأمر)"
+            ],
+            "a": "محاكاة الامتحان",
+            "why": "الكلمة المسموعة «die Prüfungssimulation» تعني «محاكاة الامتحان». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-gewichtung",
+            "speakText": "die Gewichtung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "التوزيع (الوزن النسبي)",
+              "النافذة الزمنية (المدة)",
+              "العصبية (التوتر)"
+            ],
+            "a": "التوزيع (الوزن النسبي)",
+            "why": "الكلمة المسموعة «die Gewichtung» تعني «التوزيع (الوزن النسبي)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-zeitfenster",
+            "speakText": "das Zeitfenster.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "النافذة الزمنية (المدة)",
+              "محاكاة الامتحان",
+              "الهدوء والتركيز (التجمّع)"
+            ],
+            "a": "النافذة الزمنية (المدة)",
+            "why": "الكلمة المسموعة «das Zeitfenster» تعني «النافذة الزمنية (المدة)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-pruefungssimulation",
+            "speakText": "die Prüfungssimulation.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "محاكاة الامتحان",
+              "التوزيع (الوزن النسبي)",
+              "التعليمات (الأمر)"
+            ],
+            "a": "محاكاة الامتحان",
+            "why": "الكلمة المسموعة «die Prüfungssimulation» تعني «محاكاة الامتحان». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "pruefungssimulation",
+          "gewichtung"
+        ],
+        "items": [
+          {
+            "audioId": "word-anweisung",
+            "speakText": "die Anweisung.",
+            "a": "die Anweisung",
+            "why": "اكتب ما تسمعه حرفياً: «die Anweisung» تعني «التعليمات (الأمر)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-nervositaet",
+            "speakText": "die Nervosität.",
+            "a": "die Nervosität",
+            "why": "اكتب ما تسمعه حرفياً: «die Nervosität» تعني «العصبية (التوتر)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-pruefungssimulation",
+            "speakText": "die Prüfungssimulation.",
+            "a": "die Prüfungssimulation",
+            "why": "اكتب ما تسمعه حرفياً: «die Prüfungssimulation» تعني «محاكاة الامتحان». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gewichtung",
+            "speakText": "die Gewichtung.",
+            "a": "die Gewichtung",
+            "why": "اكتب ما تسمعه حرفياً: «die Gewichtung» تعني «التوزيع (الوزن النسبي)». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التعليمات (الأمر)»؟",
+            "a": "die Anweisung"
+          },
+          {
+            "q": "«العصبية (التوتر)»؟",
+            "a": "die Nervosität"
+          },
+          {
+            "q": "«الهدوء والتركيز (التجمّع)»؟",
+            "a": "die Sammlung"
+          },
+          {
+            "q": "«التعليمات واضحة.»؟",
+            "a": "Die Anweisung ist klar."
+          },
+          {
+            "q": "«التوتر كبير.»؟",
+            "a": "Die Nervosität ist groß."
+          },
+          {
+            "q": "«الهدوء والتركيز يساعدان.»؟",
+            "a": "Die Sammlung hilft."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Anweisung",
+            "a": "التعليمات (الأمر)"
+          },
+          {
+            "q": "die Nervosität",
+            "a": "العصبية (التوتر)"
+          },
+          {
+            "q": "die Sammlung",
+            "a": "الهدوء والتركيز (التجمّع)"
+          },
+          {
+            "q": "«الهدوء والتركيز يساعدان.»؟",
+            "a": "Die Sammlung hilft."
+          },
+          {
+            "q": "«التوتر كبير.»؟",
+            "a": "Die Nervosität ist groß."
+          },
+          {
+            "q": "«التعليمات واضحة.»؟",
+            "a": "Die Anweisung ist klar."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الهدوء والتركيز (التجمّع)»؟",
+            "a": "die Sammlung"
+          },
+          {
+            "q": "«العصبية (التوتر)»؟",
+            "a": "die Nervosität"
+          },
+          {
+            "q": "«التعليمات (الأمر)»؟",
+            "a": "die Anweisung"
+          },
+          {
+            "q": "die Anweisung",
+            "a": "التعليمات (الأمر)"
+          },
+          {
+            "q": "die Nervosität",
+            "a": "العصبية (التوتر)"
+          },
+          {
+            "q": "die Sammlung",
+            "a": "الهدوء والتركيز (التجمّع)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Anweisung ist klar. Die Nervosität ist groß. Die Sammlung hilft. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 14 (اليوم الحاسم!) اليوم الثاني: التعليمات والتوتر والهدوء! نتعلّم اليوم: التعليمات (الأمر) والعصبية (التوتر) والهدوء والتركيز (التجمّع)!"
+    },
+    "srsBundleWordIds": [
+      "anweisung",
+      "nervositaet",
+      "sammlung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "das Anweisung!",
+          "de": "~~das Anweisung ist klar.~~"
+        },
+        "correct": {
+          "ar": "die Anweisung!",
+          "de": "Die Anweisung ist klar."
+        },
+        "exercise": {
+          "q": "___ Anweisung ist klar.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Anweisung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Nervosität!",
+          "de": "~~der Nervosität ist groß.~~"
+        },
+        "correct": {
+          "ar": "die Nervosität!",
+          "de": "Die Nervosität ist groß."
+        },
+        "exercise": {
+          "q": "___ Nervosität ist groß.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Nervosität (die! اسم مؤنث!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Sammlung!",
+          "de": "~~der Sammlung hilft.~~"
+        },
+        "correct": {
+          "ar": "die Sammlung!",
+          "de": "Die Sammlung hilft."
+        },
+        "exercise": {
+          "q": "___ Sammlung hilft.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التركيز» مذكّر! والألمانية: die Sammlung (die! -ung!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Anweisung",
+      "https://www.duden.de/rechtschreibung/Nervositaet",
+      "https://www.duden.de/rechtschreibung/Sammlung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-anweisung",
+    "word-nervositaet",
+    "word-sammlung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 14 (اليوم الحاسم!) التعليمات",
+    "goetheWordListOverlap": [
+      "anweisung",
+      "nervositaet",
+      "sammlung"
+    ]
+  }
+}

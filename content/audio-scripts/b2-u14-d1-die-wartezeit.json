@@ -1,0 +1,64 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "b2-u14-d1-die-wartezeit",
+ "kind": "dialogue",
+ "level": "B2",
+ "title": {
+  "de": "Die Wartezeit",
+  "ar": "فترة الانتظار"
+ },
+ "usedIn": [
+  "b2-u14-d1"
+ ],
+ "lengthScale": 1.1,
+ "lines": [
+  {
+   "id": "b2u14d1-l1",
+   "speaker": "mueller",
+   "text": "Die Wartezeit vor dem Prüfungsraum: die Aufsicht ist streng und der Prüfungsraum ist groß!",
+   "direction": "قبل الامتحان"
+  },
+  {
+   "id": "b2u14d1-l2",
+   "speaker": "yusuf",
+   "text": "Wie lang ist die Wartezeit?",
+   "direction": "استفسار"
+  },
+  {
+   "id": "b2u14d1-l3",
+   "speaker": "mueller",
+   "text": "Die Wartezeit ist lang, aber wir bleiben ruhig.",
+   "direction": "تفسير"
+  },
+  {
+   "id": "b2u14d1-l4",
+   "speaker": "yusuf",
+   "text": "Und die Aufsicht?",
+   "direction": "استفسار"
+  },
+  {
+   "id": "b2u14d1-l5",
+   "speaker": "mueller",
+   "text": "Die Aufsicht kontrolliert den Prüfungsraum.",
+   "direction": "تعريف"
+  },
+  {
+   "id": "b2u14d1-l6",
+   "speaker": "yusuf",
+   "text": "Und der Prüfungsraum?",
+   "direction": "استفسار"
+  },
+  {
+   "id": "b2u14d1-l7",
+   "speaker": "mueller",
+   "text": "Der Prüfungsraum ist groß und hell.",
+   "direction": "تفسير"
+  },
+  {
+   "id": "b2u14d1-l8",
+   "speaker": "yusuf",
+   "text": "Gut. Ich warte ruhig.",
+   "direction": "إغلاق"
+  }
+ ]
+}

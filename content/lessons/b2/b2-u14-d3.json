@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u14-d3",
+  "level": "B2",
+  "unit": 14,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Klarheit im Kopf: mit Gründlichkeit lösen — und eine Atempause nicht vergessen!",
+    "ar": "الوحدة 14 (اليوم الحاسم!) اليوم الثالث: الوضوح والاستقصاء ولحظة التنفّس!"
+  },
+  "canDoDaily": [
+    "يبقى واضحاً أثناء الامتحان! (die Klarheit!)",
+    "يصف الاستقصاء ولحظة التنفّس! (die Gründlichkeit! die Atempause!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "pruefungsangst",
+      "gelassenheit",
+      "zuversicht"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الوضوح مهم.»؟"
+        },
+        "choices": [
+          "Die Klarheit ist wichtig.",
+          "Der Klarheit ist wichtig.",
+          "Das Klarheit ist wichtig."
+        ],
+        "answer": "Die Klarheit ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«لحظة التنفّس قصيرة.»؟"
+        },
+        "choices": [
+          "Die Atempause ist kurz.",
+          "Der Atempause ist kurz.",
+          "Das Atempause ist kurz."
+        ],
+        "answer": "Die Atempause ist kurz.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "klarheit",
+      "gruendlichkeit",
+      "atempause"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u14-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Klarheit, Gründlichkeit, Atempause: Wir lösen die Aufgaben!",
+        "ar": "اليوم الثالث من الوحدة 14! (الوضوح! الاستقصاء! التنفّس!)"
+      },
+      "situation": {
+        "de": "Klarheit, Gründlichkeit, Atempause — zusammen lösen.",
+        "ar": "وضوح! استقصاء! تنفّس! — نحلّ معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Klarheit (die! على -heit!) وdie Gründlichkeit (die! على -keit!) وdie Atempause (die! مركّبة!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Klarheit schaffen! eine Atempause machen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "pruefungsangst",
+          "gelassenheit",
+          "zuversicht"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Klarheit",
+                "ar": "الوضوح"
+              },
+              {
+                "de": "die Gründlichkeit",
+                "ar": "الاستقصاء (الدقّة في العمل)"
+              },
+              {
+                "de": "die Atempause",
+                "ar": "لحظة تنفّس (استراحة قصيرة)"
+              }
+            ],
+            "why": "die Klarheit الوضوح (die! die!) · die Gründlichkeit الاستقصاء (الدقّة في العمل) (die! -keit مؤنثة!) · die Atempause لحظة تنفّس (استراحة قصيرة) (die! -e مؤنثة!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Prüfungsangst",
+                "ar": "قلق الامتحان"
+              },
+              {
+                "de": "die Gelassenheit",
+                "ar": "الطمأنينة (رباطة الجأش)"
+              },
+              {
+                "de": "die Zuversicht",
+                "ar": "الثقة المتفائلة (اليقين)"
+              }
+            ],
+            "why": "استدعاء سابق: die Prüfungsangst قلق الامتحان · die Gelassenheit الطمأنينة (رباطة الجأش) · die Zuversicht الثقة المتفائلة (اليقين)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Klarheit",
+                "ar": "الوضوح"
+              },
+              {
+                "de": "die Prüfungsangst",
+                "ar": "قلق الامتحان"
+              },
+              {
+                "de": "die Gründlichkeit",
+                "ar": "الاستقصاء (الدقّة في العمل)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "pruefungsangst",
+          "gelassenheit",
+          "zuversicht"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (الوضوح!)",
+            "a": "Klarheit",
+            "why": "die Klarheit الوضوح (die! die!) — Die Klarheit ist wichtig."
+          },
+          {
+            "q": "die ___ ist wichtig. (الاستقصاء (الدقّة في العمل)!)",
+            "a": "Gründlichkeit",
+            "why": "die Gründlichkeit الاستقصاء (الدقّة في العمل) (die! -keit مؤنثة!) — Die Gründlichkeit ist wichtig."
+          },
+          {
+            "q": "die ___ ist wichtig. (لحظة تنفّس (استراحة قصيرة)!)",
+            "a": "Atempause",
+            "why": "die Atempause لحظة تنفّس (استراحة قصيرة) (die! -e مؤنثة!) — Die Atempause ist kurz."
+          },
+          {
+            "q": "Die ___ ist groß.",
+            "a": "Prüfungsangst",
+            "why": "الكلمة الناقصة «Prüfungsangst» تعني «قلق الامتحان» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ hilft.",
+            "a": "Gelassenheit",
+            "why": "الكلمة الناقصة «Gelassenheit» تعني «الطمأنينة (رباطة الجأش)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist stark.",
+            "a": "Zuversicht",
+            "why": "الكلمة الناقصة «Zuversicht» تعني «الثقة المتفائلة (اليقين)» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "pruefungsangst",
+          "gelassenheit",
+          "zuversicht"
+        ],
+        "items": [
+          {
+            "q": "~~der Klarheit!~~",
+            "a": "Die Klarheit ist wichtig.",
+            "why": "الألمانية: die Klarheit (die! على -heit!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Gründlichkeit!~~",
+            "a": "Die Gründlichkeit ist wichtig.",
+            "why": "الألمانية: die Gründlichkeit (die! على -keit!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Atempause!~~",
+            "a": "Die Atempause ist kurz.",
+            "why": "العربية: «التنفّس» مذكّر! والألمانية: die Atempause (die! مركّبة على -e!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die prüfungsangst ist groß.~~",
+            "a": "Die Prüfungsangst ist groß.",
+            "why": "الخطأ في «prüfungsangst»! الصواب «Prüfungsangst» — راجع القاعدة (قلق الامتحان)."
+          },
+          {
+            "q": "~~Die gelassenheit hilft.~~",
+            "a": "Die Gelassenheit hilft.",
+            "why": "الخطأ في «gelassenheit»! الصواب «Gelassenheit» — راجع القاعدة (الطمأنينة (رباطة الجأش))."
+          },
+          {
+            "q": "~~Die zuversicht ist stark.~~",
+            "a": "Die Zuversicht ist stark.",
+            "why": "الخطأ في «zuversicht»! الصواب «Zuversicht» — راجع القاعدة (الثقة المتفائلة (اليقين))."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "pruefungsangst",
+          "gelassenheit",
+          "zuversicht"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالوضوح! (جملتان!)",
+            "a": "Die Klarheit ist wichtig. Die Gründlichkeit ist wichtig.",
+            "why": "الوضوح أولًا!"
+          },
+          {
+            "q": "تحدّث عن الاستقصاء (الدقّة في العمل)! (جملتان!)",
+            "a": "Die Gründlichkeit ist wichtig. Das ist gut.",
+            "why": "الاستقصاء (الدقّة في العمل) — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "تحدّث عن لحظة تنفّس (استراحة قصيرة)! (جملتان!)",
+            "a": "Die Atempause ist kurz. die Atempause hilft.",
+            "why": "لحظة تنفّس (استراحة قصيرة) — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Prüfungsangst» («قلق الامتحان») ثم تحدّث بها.",
+            "a": "Die Prüfungsangst ist groß.",
+            "why": "استعمل «die Prüfungsangst» («قلق الامتحان») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Gelassenheit» («الطمأنينة (رباطة الجأش)») ثم تحدّث بها.",
+            "a": "Die Gelassenheit hilft.",
+            "why": "استعمل «die Gelassenheit» («الطمأنينة (رباطة الجأش)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Zuversicht» («الثقة المتفائلة (اليقين)») ثم تحدّث بها.",
+            "a": "Die Zuversicht ist stark.",
+            "why": "استعمل «die Zuversicht» («الثقة المتفائلة (اليقين)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "pruefungsangst",
+          "gelassenheit",
+          "zuversicht"
+        ],
+        "items": [
+          {
+            "audioId": "word-klarheit",
+            "speakText": "die Klarheit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الوضوح",
+              "الاستقصاء (الدقّة في العمل)",
+              "لحظة تنفّس (استراحة قصيرة)"
+            ],
+            "a": "الوضوح",
+            "why": "الصوت يقول «die Klarheit» — معناها «الوضوح». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-gruendlichkeit",
+            "speakText": "die Gründlichkeit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الاستقصاء (الدقّة في العمل)",
+              "لحظة تنفّس (استراحة قصيرة)",
+              "الوضوح"
+            ],
+            "a": "الاستقصاء (الدقّة في العمل)",
+            "why": "الصوت يقول «die Gründlichkeit» — معناها «الاستقصاء (الدقّة في العمل)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-atempause",
+            "speakText": "die Atempause.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "لحظة تنفّس (استراحة قصيرة)",
+              "الوضوح",
+              "الاستقصاء (الدقّة في العمل)"
+            ],
+            "a": "لحظة تنفّس (استراحة قصيرة)",
+            "why": "الصوت يقول «die Atempause» — معناها «لحظة تنفّس (استراحة قصيرة)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-pruefungsangst",
+            "speakText": "die Prüfungsangst.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "قلق الامتحان",
+              "الطمأنينة (رباطة الجأش)",
+              "الوضوح"
+            ],
+            "a": "قلق الامتحان",
+            "why": "الكلمة المسموعة «die Prüfungsangst» تعني «قلق الامتحان». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-gelassenheit",
+            "speakText": "die Gelassenheit.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الطمأنينة (رباطة الجأش)",
+              "الثقة المتفائلة (اليقين)",
+              "الاستقصاء (الدقّة في العمل)"
+            ],
+            "a": "الطمأنينة (رباطة الجأش)",
+            "why": "الكلمة المسموعة «die Gelassenheit» تعني «الطمأنينة (رباطة الجأش)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-zuversicht",
+            "speakText": "die Zuversicht.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الثقة المتفائلة (اليقين)",
+              "قلق الامتحان",
+              "لحظة تنفّس (استراحة قصيرة)"
+            ],
+            "a": "الثقة المتفائلة (اليقين)",
+            "why": "الكلمة المسموعة «die Zuversicht» تعني «الثقة المتفائلة (اليقين)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-pruefungsangst",
+            "speakText": "die Prüfungsangst.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "قلق الامتحان",
+              "الطمأنينة (رباطة الجأش)",
+              "الوضوح"
+            ],
+            "a": "قلق الامتحان",
+            "why": "الكلمة المسموعة «die Prüfungsangst» تعني «قلق الامتحان». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "pruefungsangst",
+          "gelassenheit"
+        ],
+        "items": [
+          {
+            "audioId": "word-klarheit",
+            "speakText": "die Klarheit.",
+            "a": "die Klarheit",
+            "why": "اكتب ما تسمعه حرفياً: «die Klarheit» تعني «الوضوح». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gruendlichkeit",
+            "speakText": "die Gründlichkeit.",
+            "a": "die Gründlichkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Gründlichkeit» تعني «الاستقصاء (الدقّة في العمل)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-pruefungsangst",
+            "speakText": "die Prüfungsangst.",
+            "a": "die Prüfungsangst",
+            "why": "اكتب ما تسمعه حرفياً: «die Prüfungsangst» تعني «قلق الامتحان». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gelassenheit",
+            "speakText": "die Gelassenheit.",
+            "a": "die Gelassenheit",
+            "why": "اكتب ما تسمعه حرفياً: «die Gelassenheit» تعني «الطمأنينة (رباطة الجأش)». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الوضوح»؟",
+            "a": "die Klarheit"
+          },
+          {
+            "q": "«الاستقصاء (الدقّة في العمل)»؟",
+            "a": "die Gründlichkeit"
+          },
+          {
+            "q": "«لحظة تنفّس (استراحة قصيرة)»؟",
+            "a": "die Atempause"
+          },
+          {
+            "q": "«الوضوح مهم.»؟",
+            "a": "Die Klarheit ist wichtig."
+          },
+          {
+            "q": "«الاستقصاء مهم.»؟",
+            "a": "Die Gründlichkeit ist wichtig."
+          },
+          {
+            "q": "«لحظة التنفّس قصيرة.»؟",
+            "a": "Die Atempause ist kurz."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Klarheit",
+            "a": "الوضوح"
+          },
+          {
+            "q": "die Gründlichkeit",
+            "a": "الاستقصاء (الدقّة في العمل)"
+          },
+          {
+            "q": "die Atempause",
+            "a": "لحظة تنفّس (استراحة قصيرة)"
+          },
+          {
+            "q": "«لحظة التنفّس قصيرة.»؟",
+            "a": "Die Atempause ist kurz."
+          },
+          {
+            "q": "«الاستقصاء مهم.»؟",
+            "a": "Die Gründlichkeit ist wichtig."
+          },
+          {
+            "q": "«الوضوح مهم.»؟",
+            "a": "Die Klarheit ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«لحظة تنفّس (استراحة قصيرة)»؟",
+            "a": "die Atempause"
+          },
+          {
+            "q": "«الاستقصاء (الدقّة في العمل)»؟",
+            "a": "die Gründlichkeit"
+          },
+          {
+            "q": "«الوضوح»؟",
+            "a": "die Klarheit"
+          },
+          {
+            "q": "die Klarheit",
+            "a": "الوضوح"
+          },
+          {
+            "q": "die Gründlichkeit",
+            "a": "الاستقصاء (الدقّة في العمل)"
+          },
+          {
+            "q": "die Atempause",
+            "a": "لحظة تنفّس (استراحة قصيرة)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Klarheit ist wichtig. Die Gründlichkeit ist wichtig. Die Atempause ist kurz. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 14 (اليوم الحاسم!) اليوم الثالث: الوضوح والاستقصاء ولحظة التنفّس! نتعلّم اليوم: الوضوح والاستقصاء (الدقّة في العمل) ولحظة تنفّس (استراحة قصيرة)!"
+    },
+    "srsBundleWordIds": [
+      "klarheit",
+      "gruendlichkeit",
+      "atempause"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Klarheit!",
+          "de": "~~der Klarheit ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Klarheit!",
+          "de": "Die Klarheit ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Klarheit ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Klarheit (die! على -heit!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Gründlichkeit!",
+          "de": "~~das Gründlichkeit ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Gründlichkeit!",
+          "de": "Die Gründlichkeit ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Gründlichkeit ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Gründlichkeit (die! على -keit!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Atempause!",
+          "de": "~~der Atempause ist kurz.~~"
+        },
+        "correct": {
+          "ar": "die Atempause!",
+          "de": "Die Atempause ist kurz."
+        },
+        "exercise": {
+          "q": "___ Atempause ist kurz.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التنفّس» مذكّر! والألمانية: die Atempause (die! مركّبة على -e!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Klarheit",
+      "https://www.duden.de/rechtschreibung/Gruendlichkeit",
+      "https://www.duden.de/rechtschreibung/Atempause"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-klarheit",
+    "word-gruendlichkeit",
+    "word-atempause"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 14 (اليوم الحاسم!) الوضوح",
+    "goetheWordListOverlap": [
+      "klarheit",
+      "gruendlichkeit",
+      "atempause"
+    ]
+  }
+}

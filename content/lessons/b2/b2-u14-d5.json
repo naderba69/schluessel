@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u14-d5",
+  "level": "B2",
+  "unit": 14,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Bewertung kommt: die Bescheinigung danach — und für später eine Verlängerung!",
+    "ar": "الوحدة 14 (اليوم الحاسم!) اليوم الخامس: التقييم والشهادة والتمديد!"
+  },
+  "canDoDaily": [
+    "يفهم عملية التقييم! (die Bewertung!)",
+    "يصف الشهادة والتمديد! (die Bescheinigung! die Verlängerung!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "glaubwuerdigkeit",
+      "korrektur",
+      "durchgang"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التقييم عادل.»؟"
+        },
+        "choices": [
+          "Die Bewertung ist fair.",
+          "Der Bewertung ist fair.",
+          "Das Bewertung ist fair."
+        ],
+        "answer": "Die Bewertung ist fair.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«التمديد ممكن.»؟"
+        },
+        "choices": [
+          "Die Verlängerung ist möglich.",
+          "Der Verlängerung ist möglich.",
+          "Das Verlängerung ist möglich."
+        ],
+        "answer": "Die Verlängerung ist möglich.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "bewertung",
+      "bescheinigung",
+      "verlaengerung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u14-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Bewertung, Bescheinigung, Verlängerung: Wir warten auf das Ergebnis!",
+        "ar": "اليوم الخامس من الوحدة 14! (التقييم! الشهادة! التمديد!)"
+      },
+      "situation": {
+        "de": "Bewertung, Bescheinigung, Verlängerung — zusammen warten.",
+        "ar": "تقييم! شهادة! تمديد! — ننتظر معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Bewertung (die! -ung!) وdie Bescheinigung (die! -ung!) وdie Verlängerung (die! -ung!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Bewertung bekommen! eine Verlängerung beantragen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "glaubwuerdigkeit",
+          "korrektur",
+          "durchgang"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Bewertung",
+                "ar": "التقييم (الدرجة)"
+              },
+              {
+                "de": "die Bescheinigung",
+                "ar": "الشهادة (الإفادة الرسمية)"
+              },
+              {
+                "de": "die Verlängerung",
+                "ar": "التمديد"
+              }
+            ],
+            "why": "die Bewertung التقييم (الدرجة) (die! -ung مؤنثة!) · die Bescheinigung الشهادة (الإفادة الرسمية) (die! -ung مؤنثة!) · die Verlängerung التمديد (die! -ung مؤنثة!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Glaubwürdigkeit",
+                "ar": "المصداقية (الجدير بالتصديق)"
+              },
+              {
+                "de": "die Korrektur",
+                "ar": "التصحيح"
+              },
+              {
+                "de": "der Durchgang",
+                "ar": "الدور (الجولة في الامتحان)"
+              }
+            ],
+            "why": "استدعاء سابق: die Glaubwürdigkeit المصداقية (الجدير بالتصديق) · die Korrektur التصحيح · der Durchgang الدور (الجولة في الامتحان)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Bewertung",
+                "ar": "التقييم (الدرجة)"
+              },
+              {
+                "de": "die Glaubwürdigkeit",
+                "ar": "المصداقية (الجدير بالتصديق)"
+              },
+              {
+                "de": "die Bescheinigung",
+                "ar": "الشهادة (الإفادة الرسمية)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "glaubwuerdigkeit",
+          "korrektur",
+          "durchgang"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (التقييم (الدرجة)!)",
+            "a": "Bewertung",
+            "why": "die Bewertung التقييم (الدرجة) (die! -ung مؤنثة!) — Die Bewertung ist fair."
+          },
+          {
+            "q": "die ___ ist wichtig. (الشهادة (الإفادة الرسمية)!)",
+            "a": "Bescheinigung",
+            "why": "die Bescheinigung الشهادة (الإفادة الرسمية) (die! -ung مؤنثة!) — Die Bescheinigung ist wichtig."
+          },
+          {
+            "q": "die ___ ist wichtig. (التمديد!)",
+            "a": "Verlängerung",
+            "why": "die Verlängerung التمديد (die! -ung مؤنثة!) — Die Verlängerung ist möglich."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Glaubwürdigkeit",
+            "why": "الكلمة الناقصة «Glaubwürdigkeit» تعني «المصداقية (الجدير بالتصديق)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist fertig.",
+            "a": "Korrektur",
+            "why": "الكلمة الناقصة «Korrektur» تعني «التصحيح» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist vorbei.",
+            "a": "Durchgang",
+            "why": "الكلمة الناقصة «Durchgang» تعني «الدور (الجولة في الامتحان)» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "glaubwuerdigkeit",
+          "korrektur",
+          "durchgang"
+        ],
+        "items": [
+          {
+            "q": "~~der Bewertung!~~",
+            "a": "Die Bewertung ist fair.",
+            "why": "الألمانية: die Bewertung (die! -ung مؤنثة دائماً!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Bescheinigung!~~",
+            "a": "Die Bescheinigung ist wichtig.",
+            "why": "الألمانية: die Bescheinigung (die! -ung!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Verlängerung!~~",
+            "a": "Die Verlängerung ist möglich.",
+            "why": "العربية: «التمديد» مذكّر! والألمانية: die Verlängerung (die! -ung!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die glaubwürdigkeit ist wichtig.~~",
+            "a": "Die Glaubwürdigkeit ist wichtig.",
+            "why": "الخطأ في «glaubwürdigkeit»! الصواب «Glaubwürdigkeit» — راجع القاعدة (المصداقية (الجدير بالتصديق))."
+          },
+          {
+            "q": "~~Die korrektur ist fertig.~~",
+            "a": "Die Korrektur ist fertig.",
+            "why": "الخطأ في «korrektur»! الصواب «Korrektur» — راجع القاعدة (التصحيح)."
+          },
+          {
+            "q": "~~Der durchgang ist vorbei.~~",
+            "a": "Der Durchgang ist vorbei.",
+            "why": "الخطأ في «durchgang»! الصواب «Durchgang» — راجع القاعدة (الدور (الجولة في الامتحان))."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "glaubwuerdigkeit",
+          "korrektur",
+          "durchgang"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالتقييم (الدرجة)! (جملتان!)",
+            "a": "Die Bewertung ist fair. Die Bescheinigung ist wichtig.",
+            "why": "التقييم (الدرجة) أولًا!"
+          },
+          {
+            "q": "تحدّث عن الشهادة (الإفادة الرسمية)! (جملتان!)",
+            "a": "Die Bescheinigung ist wichtig. Das ist gut.",
+            "why": "الشهادة (الإفادة الرسمية) — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "تحدّث عن التمديد! (جملتان!)",
+            "a": "Die Verlängerung ist möglich. die Verlängerung hilft.",
+            "why": "التمديد — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Glaubwürdigkeit» («المصداقية (الجدير بالتصديق)») ثم تحدّث بها.",
+            "a": "Die Glaubwürdigkeit ist wichtig.",
+            "why": "استعمل «die Glaubwürdigkeit» («المصداقية (الجدير بالتصديق)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Korrektur» («التصحيح») ثم تحدّث بها.",
+            "a": "Die Korrektur ist fertig.",
+            "why": "استعمل «die Korrektur» («التصحيح») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Durchgang» («الدور (الجولة في الامتحان)») ثم تحدّث بها.",
+            "a": "Der Durchgang ist vorbei.",
+            "why": "استعمل «der Durchgang» («الدور (الجولة في الامتحان)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "glaubwuerdigkeit",
+          "korrektur",
+          "durchgang"
+        ],
+        "items": [
+          {
+            "audioId": "word-bewertung",
+            "speakText": "die Bewertung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التقييم (الدرجة)",
+              "الشهادة (الإفادة الرسمية)",
+              "التمديد"
+            ],
+            "a": "التقييم (الدرجة)",
+            "why": "الصوت يقول «die Bewertung» — معناها «التقييم (الدرجة)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-bescheinigung",
+            "speakText": "die Bescheinigung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الشهادة (الإفادة الرسمية)",
+              "التمديد",
+              "التقييم (الدرجة)"
+            ],
+            "a": "الشهادة (الإفادة الرسمية)",
+            "why": "الصوت يقول «die Bescheinigung» — معناها «الشهادة (الإفادة الرسمية)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-verlaengerung",
+            "speakText": "die Verlängerung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التمديد",
+              "التقييم (الدرجة)",
+              "الشهادة (الإفادة الرسمية)"
+            ],
+            "a": "التمديد",
+            "why": "الصوت يقول «die Verlängerung» — معناها «التمديد». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-glaubwuerdigkeit",
+            "speakText": "die Glaubwürdigkeit.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "المصداقية (الجدير بالتصديق)",
+              "التصحيح",
+              "التقييم (الدرجة)"
+            ],
+            "a": "المصداقية (الجدير بالتصديق)",
+            "why": "الكلمة المسموعة «die Glaubwürdigkeit» تعني «المصداقية (الجدير بالتصديق)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-korrektur",
+            "speakText": "die Korrektur.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "التصحيح",
+              "الدور (الجولة في الامتحان)",
+              "الشهادة (الإفادة الرسمية)"
+            ],
+            "a": "التصحيح",
+            "why": "الكلمة المسموعة «die Korrektur» تعني «التصحيح». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-durchgang",
+            "speakText": "der Durchgang.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الدور (الجولة في الامتحان)",
+              "المصداقية (الجدير بالتصديق)",
+              "التمديد"
+            ],
+            "a": "الدور (الجولة في الامتحان)",
+            "why": "الكلمة المسموعة «der Durchgang» تعني «الدور (الجولة في الامتحان)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-glaubwuerdigkeit",
+            "speakText": "die Glaubwürdigkeit.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "المصداقية (الجدير بالتصديق)",
+              "التصحيح",
+              "التقييم (الدرجة)"
+            ],
+            "a": "المصداقية (الجدير بالتصديق)",
+            "why": "الكلمة المسموعة «die Glaubwürdigkeit» تعني «المصداقية (الجدير بالتصديق)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "glaubwuerdigkeit",
+          "korrektur"
+        ],
+        "items": [
+          {
+            "audioId": "word-bewertung",
+            "speakText": "die Bewertung.",
+            "a": "die Bewertung",
+            "why": "اكتب ما تسمعه حرفياً: «die Bewertung» تعني «التقييم (الدرجة)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-bescheinigung",
+            "speakText": "die Bescheinigung.",
+            "a": "die Bescheinigung",
+            "why": "اكتب ما تسمعه حرفياً: «die Bescheinigung» تعني «الشهادة (الإفادة الرسمية)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-glaubwuerdigkeit",
+            "speakText": "die Glaubwürdigkeit.",
+            "a": "die Glaubwürdigkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Glaubwürdigkeit» تعني «المصداقية (الجدير بالتصديق)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-korrektur",
+            "speakText": "die Korrektur.",
+            "a": "die Korrektur",
+            "why": "اكتب ما تسمعه حرفياً: «die Korrektur» تعني «التصحيح». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التقييم (الدرجة)»؟",
+            "a": "die Bewertung"
+          },
+          {
+            "q": "«الشهادة (الإفادة الرسمية)»؟",
+            "a": "die Bescheinigung"
+          },
+          {
+            "q": "«التمديد»؟",
+            "a": "die Verlängerung"
+          },
+          {
+            "q": "«التقييم عادل.»؟",
+            "a": "Die Bewertung ist fair."
+          },
+          {
+            "q": "«الشهادة مهمة.»؟",
+            "a": "Die Bescheinigung ist wichtig."
+          },
+          {
+            "q": "«التمديد ممكن.»؟",
+            "a": "Die Verlängerung ist möglich."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Bewertung",
+            "a": "التقييم (الدرجة)"
+          },
+          {
+            "q": "die Bescheinigung",
+            "a": "الشهادة (الإفادة الرسمية)"
+          },
+          {
+            "q": "die Verlängerung",
+            "a": "التمديد"
+          },
+          {
+            "q": "«التمديد ممكن.»؟",
+            "a": "Die Verlängerung ist möglich."
+          },
+          {
+            "q": "«الشهادة مهمة.»؟",
+            "a": "Die Bescheinigung ist wichtig."
+          },
+          {
+            "q": "«التقييم عادل.»؟",
+            "a": "Die Bewertung ist fair."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«التمديد»؟",
+            "a": "die Verlängerung"
+          },
+          {
+            "q": "«الشهادة (الإفادة الرسمية)»؟",
+            "a": "die Bescheinigung"
+          },
+          {
+            "q": "«التقييم (الدرجة)»؟",
+            "a": "die Bewertung"
+          },
+          {
+            "q": "die Bewertung",
+            "a": "التقييم (الدرجة)"
+          },
+          {
+            "q": "die Bescheinigung",
+            "a": "الشهادة (الإفادة الرسمية)"
+          },
+          {
+            "q": "die Verlängerung",
+            "a": "التمديد"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Bewertung ist fair. Die Bescheinigung ist wichtig. Die Verlängerung ist möglich. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 14 (اليوم الحاسم!) اليوم الخامس: التقييم والشهادة والتمديد! نتعلّم اليوم: التقييم (الدرجة) والشهادة (الإفادة الرسمية) والتمديد!"
+    },
+    "srsBundleWordIds": [
+      "bewertung",
+      "bescheinigung",
+      "verlaengerung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Bewertung!",
+          "de": "~~der Bewertung ist fair.~~"
+        },
+        "correct": {
+          "ar": "die Bewertung!",
+          "de": "Die Bewertung ist fair."
+        },
+        "exercise": {
+          "q": "___ Bewertung ist fair.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Bewertung (die! -ung مؤنثة دائماً!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Bescheinigung!",
+          "de": "~~das Bescheinigung ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Bescheinigung!",
+          "de": "Die Bescheinigung ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Bescheinigung ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Bescheinigung (die! -ung!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Verlängerung!",
+          "de": "~~der Verlängerung ist möglich.~~"
+        },
+        "correct": {
+          "ar": "die Verlängerung!",
+          "de": "Die Verlängerung ist möglich."
+        },
+        "exercise": {
+          "q": "___ Verlängerung ist möglich.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التمديد» مذكّر! والألمانية: die Verlängerung (die! -ung!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Bewertung",
+      "https://www.duden.de/rechtschreibung/Bescheinigung",
+      "https://www.duden.de/rechtschreibung/Verlaengerung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-bewertung",
+    "word-bescheinigung",
+    "word-verlaengerung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 14 (اليوم الحاسم!) التقييم",
+    "goetheWordListOverlap": [
+      "bewertung",
+      "bescheinigung",
+      "verlaengerung"
+    ]
+  }
+}

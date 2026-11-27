@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u14-d5-die-bewertung",
+  "kind": "dialogue",
+  "level": "B2",
+  "title": {
+    "de": "Die Bewertung",
+    "ar": "التقييم"
+  },
+  "usedIn": [
+    "b2-u14-d5"
+  ],
+  "lengthScale": 1.1,
+  "lines": [
+    {
+      "id": "b2u14d5-l1",
+      "speaker": "mueller",
+      "text": "Die Bewertung kommt: die Bescheinigung danach — und für später eine Verlängerung!",
+      "direction": "يوم الحكم"
+    },
+    {
+      "id": "b2u14d5-l2",
+      "speaker": "yusuf",
+      "text": "Wann kommt die Bewertung?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u14d5-l3",
+      "speaker": "mueller",
+      "text": "Die Bewertung kommt nach zwei Wochen.",
+      "direction": "تفسير"
+    },
+    {
+      "id": "b2u14d5-l4",
+      "speaker": "yusuf",
+      "text": "Und die Bescheinigung?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u14d5-l5",
+      "speaker": "mueller",
+      "text": "Die Bescheinigung bekommst du per Post.",
+      "direction": "تعريف"
+    },
+    {
+      "id": "b2u14d5-l6",
+      "speaker": "yusuf",
+      "text": "Und die Verlängerung?",
+      "direction": "استفسار"
+    },
+    {
+      "id": "b2u14d5-l7",
+      "speaker": "mueller",
+      "text": "Die Verlängerung ist möglich — aber selten.",
+      "direction": "مبدأ"
+    },
+    {
+      "id": "b2u14d5-l8",
+      "speaker": "yusuf",
+      "text": "Gut. Ich warte ab.",
+      "direction": "إغلاق"
+    }
+  ]
+}

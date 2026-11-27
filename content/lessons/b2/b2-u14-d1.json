@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u14-d1",
+  "level": "B2",
+  "unit": 14,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Wartezeit vor dem Prüfungsraum: die Aufsicht ist streng und der Prüfungsraum ist groß!",
+    "ar": "الوحدة 14 (اليوم الحاسم!) اليوم الأول: فترة الانتظار والمراقبة وقاعة الامتحان!"
+  },
+  "canDoDaily": [
+    "يصف وقت الانتظار قبل الامتحان! (die Wartezeit!)",
+    "يصف المراقبة والقاعة! (die Aufsicht! der Prüfungsraum!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "lernplan",
+      "fertigkeit",
+      "selbstkontrolle"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«فترة الانتظار طويلة.»؟"
+        },
+        "choices": [
+          "Die Wartezeit ist lang.",
+          "Der Wartezeit ist lang.",
+          "Das Wartezeit ist lang."
+        ],
+        "answer": "Die Wartezeit ist lang.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«قاعة الامتحان كبيرة.»؟"
+        },
+        "choices": [
+          "Der Prüfungsraum ist groß.",
+          "Das Prüfungsraum ist groß.",
+          "Die Prüfungsraum ist groß."
+        ],
+        "answer": "Der Prüfungsraum ist groß.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "wartezeit",
+      "aufsicht",
+      "pruefungsraum"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u14-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Wartezeit, Aufsicht, Prüfungsraum: Wir warten vor der Prüfung!",
+        "ar": "اليوم الأول من الوحدة 14! (الانتظار! المراقبة! القاعة!)"
+      },
+      "situation": {
+        "de": "Wartezeit, Aufsicht, Prüfungsraum — zusammen warten.",
+        "ar": "انتظار! مراقبة! قاعة! — ننتظر معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Wartezeit (die! مركّبة!) وdie Aufsicht (die!) وder Prüfungsraum (der! مركّب!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: unter Aufsicht stehen! in den Prüfungsraum gehen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "lernplan",
+          "fertigkeit",
+          "selbstkontrolle"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Wartezeit",
+                "ar": "فترة الانتظار"
+              },
+              {
+                "de": "die Aufsicht",
+                "ar": "الإشراف (مراقبة الامتحان)"
+              },
+              {
+                "de": "der Prüfungsraum",
+                "ar": "قاعة الامتحان"
+              }
+            ],
+            "why": "die Wartezeit فترة الانتظار (die! die!) · die Aufsicht الإشراف (مراقبة الامتحان) (die! die!) · der Prüfungsraum قاعة الامتحان (der! der!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "der Lernplan",
+                "ar": "خطة التعلّم"
+              },
+              {
+                "de": "die Fertigkeit",
+                "ar": "المهارة"
+              },
+              {
+                "de": "die Selbstkontrolle",
+                "ar": "ضبط النفس (المراقبة الذاتية)"
+              }
+            ],
+            "why": "استدعاء سابق: der Lernplan خطة التعلّم · die Fertigkeit المهارة · die Selbstkontrolle ضبط النفس (المراقبة الذاتية)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Wartezeit",
+                "ar": "فترة الانتظار"
+              },
+              {
+                "de": "der Lernplan",
+                "ar": "خطة التعلّم"
+              },
+              {
+                "de": "die Aufsicht",
+                "ar": "الإشراف (مراقبة الامتحان)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "lernplan",
+          "fertigkeit",
+          "selbstkontrolle"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (فترة الانتظار!)",
+            "a": "Wartezeit",
+            "why": "die Wartezeit فترة الانتظار (die! die!) — Die Wartezeit ist lang."
+          },
+          {
+            "q": "die ___ ist wichtig. (الإشراف (مراقبة الامتحان)!)",
+            "a": "Aufsicht",
+            "why": "die Aufsicht الإشراف (مراقبة الامتحان) (die! die!) — Die Aufsicht ist streng."
+          },
+          {
+            "q": "der ___ ist wichtig. (قاعة الامتحان!)",
+            "a": "Prüfungsraum",
+            "why": "der Prüfungsraum قاعة الامتحان (der! der!) — Der Prüfungsraum ist groß."
+          },
+          {
+            "q": "Der ___ ist klar.",
+            "a": "Lernplan",
+            "why": "الكلمة الناقصة «Lernplan» تعني «خطة التعلّم» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Fertigkeit",
+            "why": "الكلمة الناقصة «Fertigkeit» تعني «المهارة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ hilft.",
+            "a": "Selbstkontrolle",
+            "why": "الكلمة الناقصة «Selbstkontrolle» تعني «ضبط النفس (المراقبة الذاتية)» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "lernplan",
+          "fertigkeit",
+          "selbstkontrolle"
+        ],
+        "items": [
+          {
+            "q": "~~der Wartezeit!~~",
+            "a": "Die Wartezeit ist lang.",
+            "why": "العربية: «الانتظار» مذكّر! والألمانية: die Wartezeit (die! مركّبة على Zeit!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Aufsicht!~~",
+            "a": "Die Aufsicht ist streng.",
+            "why": "الألمانية: die Aufsicht (die!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Prüfungsraum!~~",
+            "a": "Der Prüfungsraum ist groß.",
+            "why": "العربية: «القاعة» مؤنثة! والألمانية: der Prüfungsraum (der! مركّب مذكّر!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Der lernplan ist klar.~~",
+            "a": "Der Lernplan ist klar.",
+            "why": "الخطأ في «lernplan»! الصواب «Lernplan» — راجع القاعدة (خطة التعلّم)."
+          },
+          {
+            "q": "~~Die fertigkeit ist wichtig.~~",
+            "a": "Die Fertigkeit ist wichtig.",
+            "why": "الخطأ في «fertigkeit»! الصواب «Fertigkeit» — راجع القاعدة (المهارة)."
+          },
+          {
+            "q": "~~Die selbstkontrolle hilft.~~",
+            "a": "Die Selbstkontrolle hilft.",
+            "why": "الخطأ في «selbstkontrolle»! الصواب «Selbstkontrolle» — راجع القاعدة (ضبط النفس (المراقبة الذاتية))."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "lernplan",
+          "fertigkeit",
+          "selbstkontrolle"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـفترة الانتظار! (جملتان!)",
+            "a": "Die Wartezeit ist lang. Die Aufsicht ist streng.",
+            "why": "فترة الانتظار أولًا!"
+          },
+          {
+            "q": "تحدّث عن الإشراف (مراقبة الامتحان)! (جملتان!)",
+            "a": "Die Aufsicht ist streng. Das ist gut.",
+            "why": "الإشراف (مراقبة الامتحان) — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "تحدّث عن قاعة الامتحان! (جملتان!)",
+            "a": "Der Prüfungsraum ist groß. der Prüfungsraum hilft.",
+            "why": "قاعة الامتحان — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "كوّن جملة فيها «der Lernplan» («خطة التعلّم») ثم تحدّث بها.",
+            "a": "Der Lernplan ist klar.",
+            "why": "استعمل «der Lernplan» («خطة التعلّم») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Fertigkeit» («المهارة») ثم تحدّث بها.",
+            "a": "Die Fertigkeit ist wichtig.",
+            "why": "استعمل «die Fertigkeit» («المهارة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Selbstkontrolle» («ضبط النفس (المراقبة الذاتية)») ثم تحدّث بها.",
+            "a": "Die Selbstkontrolle hilft.",
+            "why": "استعمل «die Selbstkontrolle» («ضبط النفس (المراقبة الذاتية)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "lernplan",
+          "fertigkeit",
+          "selbstkontrolle"
+        ],
+        "items": [
+          {
+            "audioId": "word-wartezeit",
+            "speakText": "die Wartezeit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "فترة الانتظار",
+              "الإشراف (مراقبة الامتحان)",
+              "قاعة الامتحان"
+            ],
+            "a": "فترة الانتظار",
+            "why": "الصوت يقول «die Wartezeit» — معناها «فترة الانتظار». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-aufsicht",
+            "speakText": "die Aufsicht.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الإشراف (مراقبة الامتحان)",
+              "قاعة الامتحان",
+              "فترة الانتظار"
+            ],
+            "a": "الإشراف (مراقبة الامتحان)",
+            "why": "الصوت يقول «die Aufsicht» — معناها «الإشراف (مراقبة الامتحان)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-pruefungsraum",
+            "speakText": "der Prüfungsraum.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "قاعة الامتحان",
+              "فترة الانتظار",
+              "الإشراف (مراقبة الامتحان)"
+            ],
+            "a": "قاعة الامتحان",
+            "why": "الصوت يقول «der Prüfungsraum» — معناها «قاعة الامتحان». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-lernplan",
+            "speakText": "der Lernplan.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "خطة التعلّم",
+              "المهارة",
+              "فترة الانتظار"
+            ],
+            "a": "خطة التعلّم",
+            "why": "الكلمة المسموعة «der Lernplan» تعني «خطة التعلّم». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-fertigkeit",
+            "speakText": "die Fertigkeit.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "المهارة",
+              "ضبط النفس (المراقبة الذاتية)",
+              "الإشراف (مراقبة الامتحان)"
+            ],
+            "a": "المهارة",
+            "why": "الكلمة المسموعة «die Fertigkeit» تعني «المهارة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-selbstkontrolle",
+            "speakText": "die Selbstkontrolle.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "ضبط النفس (المراقبة الذاتية)",
+              "خطة التعلّم",
+              "قاعة الامتحان"
+            ],
+            "a": "ضبط النفس (المراقبة الذاتية)",
+            "why": "الكلمة المسموعة «die Selbstkontrolle» تعني «ضبط النفس (المراقبة الذاتية)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-lernplan",
+            "speakText": "der Lernplan.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "خطة التعلّم",
+              "المهارة",
+              "فترة الانتظار"
+            ],
+            "a": "خطة التعلّم",
+            "why": "الكلمة المسموعة «der Lernplan» تعني «خطة التعلّم». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "lernplan",
+          "fertigkeit"
+        ],
+        "items": [
+          {
+            "audioId": "word-wartezeit",
+            "speakText": "die Wartezeit.",
+            "a": "die Wartezeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Wartezeit» تعني «فترة الانتظار». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-aufsicht",
+            "speakText": "die Aufsicht.",
+            "a": "die Aufsicht",
+            "why": "اكتب ما تسمعه حرفياً: «die Aufsicht» تعني «الإشراف (مراقبة الامتحان)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-lernplan",
+            "speakText": "der Lernplan.",
+            "a": "der Lernplan",
+            "why": "اكتب ما تسمعه حرفياً: «der Lernplan» تعني «خطة التعلّم». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-fertigkeit",
+            "speakText": "die Fertigkeit.",
+            "a": "die Fertigkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Fertigkeit» تعني «المهارة». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«فترة الانتظار»؟",
+            "a": "die Wartezeit"
+          },
+          {
+            "q": "«الإشراف (مراقبة الامتحان)»؟",
+            "a": "die Aufsicht"
+          },
+          {
+            "q": "«قاعة الامتحان»؟",
+            "a": "der Prüfungsraum"
+          },
+          {
+            "q": "«فترة الانتظار طويلة.»؟",
+            "a": "Die Wartezeit ist lang."
+          },
+          {
+            "q": "«المراقبة صارمة.»؟",
+            "a": "Die Aufsicht ist streng."
+          },
+          {
+            "q": "«قاعة الامتحان كبيرة.»؟",
+            "a": "Der Prüfungsraum ist groß."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Wartezeit",
+            "a": "فترة الانتظار"
+          },
+          {
+            "q": "die Aufsicht",
+            "a": "الإشراف (مراقبة الامتحان)"
+          },
+          {
+            "q": "der Prüfungsraum",
+            "a": "قاعة الامتحان"
+          },
+          {
+            "q": "«قاعة الامتحان كبيرة.»؟",
+            "a": "Der Prüfungsraum ist groß."
+          },
+          {
+            "q": "«المراقبة صارمة.»؟",
+            "a": "Die Aufsicht ist streng."
+          },
+          {
+            "q": "«فترة الانتظار طويلة.»؟",
+            "a": "Die Wartezeit ist lang."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«قاعة الامتحان»؟",
+            "a": "der Prüfungsraum"
+          },
+          {
+            "q": "«الإشراف (مراقبة الامتحان)»؟",
+            "a": "die Aufsicht"
+          },
+          {
+            "q": "«فترة الانتظار»؟",
+            "a": "die Wartezeit"
+          },
+          {
+            "q": "die Wartezeit",
+            "a": "فترة الانتظار"
+          },
+          {
+            "q": "die Aufsicht",
+            "a": "الإشراف (مراقبة الامتحان)"
+          },
+          {
+            "q": "der Prüfungsraum",
+            "a": "قاعة الامتحان"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Wartezeit ist lang. Die Aufsicht ist streng. Der Prüfungsraum ist groß. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 14 (اليوم الحاسم!) اليوم الأول: فترة الانتظار والمراقبة وقاعة الامتحان! نتعلّم اليوم: فترة الانتظار والإشراف (مراقبة الامتحان) وقاعة الامتحان!"
+    },
+    "srsBundleWordIds": [
+      "wartezeit",
+      "aufsicht",
+      "pruefungsraum"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Wartezeit!",
+          "de": "~~der Wartezeit ist lang.~~"
+        },
+        "correct": {
+          "ar": "die Wartezeit!",
+          "de": "Die Wartezeit ist lang."
+        },
+        "exercise": {
+          "q": "___ Wartezeit ist lang.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الانتظار» مذكّر! والألمانية: die Wartezeit (die! مركّبة على Zeit!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Aufsicht!",
+          "de": "~~das Aufsicht ist streng.~~"
+        },
+        "correct": {
+          "ar": "die Aufsicht!",
+          "de": "Die Aufsicht ist streng."
+        },
+        "exercise": {
+          "q": "___ Aufsicht ist streng.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Aufsicht (die!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Prüfungsraum!",
+          "de": "~~die Prüfungsraum ist groß.~~"
+        },
+        "correct": {
+          "ar": "der Prüfungsraum!",
+          "de": "Der Prüfungsraum ist groß."
+        },
+        "exercise": {
+          "q": "___ Prüfungsraum ist groß.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «القاعة» مؤنثة! والألمانية: der Prüfungsraum (der! مركّب مذكّر!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Wartezeit",
+      "https://www.duden.de/rechtschreibung/Aufsicht",
+      "https://www.duden.de/rechtschreibung/Pruefungsraum"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-wartezeit",
+    "word-aufsicht",
+    "word-pruefungsraum"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 14 (اليوم الحاسم!) فترة الانتظار",
+    "goetheWordListOverlap": [
+      "wartezeit",
+      "aufsicht",
+      "pruefungsraum"
+    ]
+  }
+}
