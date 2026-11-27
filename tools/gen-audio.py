@@ -2954,6 +2954,29 @@ def build_all() -> None:
     ("word-fasching", "der Fasching.", "fasching", ["b1-u6-d6"]),
     ("word-auftritt", "der Auftritt.", "auftritt", ["b1-u6-d6"]),
     ("word-sand", "der Sand.", "sand", ["b1-u6-d6"]),
+    ("word-umweltverschmutzung", "die Umweltverschmutzung.", "umweltverschmutzung", ["b1-u7-d1"]),
+    ("word-kraftwerk", "das Kraftwerk.", "kraftwerk", ["b1-u7-d1"]),
+    ("word-muellabfuhr", "die Müllabfuhr.", "muellabfuhr", ["b1-u7-d2"]),
+    ("word-gift", "das Gift.", "gift", ["b1-u7-d2"]),
+    ("word-landwirtschaft", "die Landwirtschaft.", "landwirtschaft", ["b1-u7-d2"]),
+    ("word-bauer", "der Bauer.", "bauer", ["b1-u7-d2"]),
+    ("word-ernte", "die Ernte.", "ernte", ["b1-u7-d2"]),
+    ("word-sturm", "der Sturm.", "sturm", ["b1-u7-d3"]),
+    ("word-fabrik", "die Fabrik.", "fabrik", ["b1-u7-d3"]),
+    ("word-industrie", "die Industrie.", "industrie", ["b1-u7-d3"]),
+    ("word-benzin", "das Benzin.", "benzin", ["b1-u7-d3"]),
+    ("word-krise", "die Krise.", "krise", ["b1-u7-d3"]),
+    ("word-politik", "die Politik.", "politik", ["b1-u7-d4"]),
+    ("word-politisch", "politisch.", "politisch", ["b1-u7-d4"]),
+    ("word-politiker", "der Politiker.", "politiker", ["b1-u7-d4"]),
+    ("word-gewerkschaft", "die Gewerkschaft.", "gewerkschaft", ["b1-u7-d4"]),
+    ("word-asyl", "das Asyl.", "asyl", ["b1-u7-d4"]),
+    ("word-jugend", "die Jugend.", "jugend", ["b1-u7-d5"]),
+    ("word-senioren", "die Senioren.", "senioren", ["b1-u7-d5"]),
+    ("word-einwohner", "der Einwohner.", "einwohner", ["b1-u7-d5"]),
+    ("word-risiko", "das Risiko.", "risiko", ["b1-u7-d6"]),
+    ("word-konsumieren", "konsumieren.", "konsumieren", ["b1-u7-d6"]),
+    ("word-konsum", "der Konsum.", "konsum", ["b1-u7-d6"]),
     ]
     char_tracks = [
         # D31/D35: اسم المنتج Schlüssel — «رحلة يوسف» لا يُنطق للمستخدم أبداً
@@ -3034,7 +3057,10 @@ def build_all() -> None:
 if __name__ == "__main__":
     if len(sys.argv) >= 2 and sys.argv[1] == "one":
         text, out = sys.argv[2], Path(sys.argv[3])
-        print(json.dumps(make_clip(text, out), ensure_ascii=False))
+        # D593: المركّبات الطويلة (die Umweltverschmutzung) تتجاوز 1.5s بالنطق الطبيعي —
+        # --length-scale < 1 يوسّع النطق فيبقى النص كاملاً بالأداة (N-043) ضمن حد D578
+        ls = float(sys.argv[sys.argv.index("--length-scale") + 1]) if "--length-scale" in sys.argv else None
+        print(json.dumps(make_clip(text, out, length_scale=ls), ensure_ascii=False))
     elif len(sys.argv) >= 2 and sys.argv[1] == "voice-for":
         # D100: أي صوت سيُستخدم فعلاً لهذه الشخصية؟ (kerstin أو fallback صريح)
         print(json.dumps(voice_for(sys.argv[2] if len(sys.argv) >= 3 else None), ensure_ascii=False))

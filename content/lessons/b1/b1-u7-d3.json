@@ -64,7 +64,12 @@
       "umweltfreundlich",
       "ueberschwemmung",
       "ozon",
-      "bevor"
+      "bevor",
+      "sturm",
+      "fabrik",
+      "industrie",
+      "benzin",
+      "krise"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -81,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Als die Überschwemmung kam, sammelten wir das Altglas!",
+        "de": "Als die Überschwemmung kam, sammelten wir das Altglas! Der Sturm ist stark. Die Industrie ist wichtig, und die Krise ist schwer.",
         "ar": "يروي يوم الفيضان بأدوات الزمان الثلاث!"
       },
       "situation": {
@@ -89,7 +94,7 @@
         "ar": "اليوم: الفيضان! الكارثة! المظاهرة!"
       },
       "successCriteria": [
-        "كلمات اليوم الإحدى عشرة كلها!",
+        "كلمات اليوم الست عشرة كلها!",
         "als للمرة الماضية! (Als die Überschwemmung kam!)",
         "wenn للدأب والتكرار! (Wenn wir Zeit haben!)",
         "bevor + الفعل آخراً! (Bevor wir die Blumen gossen!)"
@@ -184,6 +189,31 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Umwelt = «البيئة» · das Klima = «المناخ» · die Wiese = «المرج»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "العاصفة",
+                "de": "der Sturm"
+              },
+              {
+                "ar": "المصنع",
+                "de": "die Fabrik"
+              },
+              {
+                "ar": "الصناعة",
+                "de": "die Industrie"
+              },
+              {
+                "ar": "البنزين",
+                "de": "das Benzin"
+              },
+              {
+                "ar": "الأزمة",
+                "de": "die Krise"
+              }
+            ],
+            "why": "der Sturm العاصفة · die Fabrik المصنع · die Industrie الصناعة · das Benzin البنزين · die Krise الأزمة (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -228,6 +258,31 @@
             "q": "Dort sind ___.",
             "a": "Wolken",
             "why": "الكلمة الناقصة «Wolken» تعني «سحابة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist stark! (العاصفة!)",
+            "a": "Sturm",
+            "why": "der Sturm العاصفة (der! مذكّر (der!) وجمعه die Stürme (تقلب u→ü!).) — Der Sturm ist stark!"
+          },
+          {
+            "q": "Die ___ ist groß. (المصنع!)",
+            "a": "Fabrik",
+            "why": "die Fabrik المصنع (die! مؤنثة (die!) وجمعها die Fabriken (القاعدة: الفرعية المنتهية بـ-e تسقط قبل -en!).) — Die Fabrik ist groß."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الصناعة!)",
+            "a": "Industrie",
+            "why": "die Industrie الصناعة (die! مؤنثة (die!) وجمعها die Industrien — قرض فرنسي.) — Die Industrie ist wichtig."
+          },
+          {
+            "q": "Das ___ ist teuer. (البنزين!)",
+            "a": "Benzin",
+            "why": "das Benzin البنزين (das! يُستعمل عادةً بلا جمع: das Benzin.) — Das Benzin ist teuer."
+          },
+          {
+            "q": "Die ___ ist schwer. (الأزمة!)",
+            "a": "Krise",
+            "why": "die Krise الأزمة (die! مؤنثة (die!) وجمعها die Krisen — قرض يوناني (الأزمة!).) — Die Krise ist schwer."
           }
         ]
       },
@@ -273,6 +328,31 @@
             "q": "~~Wie ist das wetter heute?~~",
             "a": "Wie ist das Wetter heute?",
             "why": "الخطأ في «wetter»! الصواب «Wetter» — راجع القاعدة (الطقس)."
+          },
+          {
+            "q": "~~die Sturm ist stark~~",
+            "a": "der Sturm ist stark",
+            "why": "الألمانية: der Sturm (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Fabrik ist groß~~",
+            "a": "die Fabrik ist groß",
+            "why": "الألمانية: die Fabrik (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Industrie ist wichtig~~",
+            "a": "die Industrie ist wichtig",
+            "why": "الألمانية: die Industrie (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Benzin ist teuer~~",
+            "a": "das Benzin ist teuer",
+            "why": "الألمانية: das Benzin (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Krise ist schwer~~",
+            "a": "die Krise ist schwer",
+            "why": "الألمانية: die Krise (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -312,6 +392,11 @@
             "q": "كوّن جملة فيها «der Sommer» («الصيف») ثم تحدّث بها.",
             "a": "Im Sommer ist es heiß.",
             "why": "استعمل «der Sommer» («الصيف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Sturm · die Fabrik · die Industrie · das Benzin · die Krise)",
+            "a": "Der Sturm ist stark. Die Industrie ist wichtig, und die Krise ist schwer.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -405,6 +490,66 @@
             ],
             "a": "Hoffentlich kommt keine Überschwemmung wieder.",
             "why": "«لينا» في الحوار: أمل"
+          },
+          {
+            "audioId": "word-sturm",
+            "speakText": "der Sturm.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العاصفة",
+              "المصنع",
+              "الصناعة"
+            ],
+            "a": "العاصفة",
+            "why": "الصوت يقول «der Sturm» — معناها «العاصفة». ركّز!"
+          },
+          {
+            "audioId": "word-fabrik",
+            "speakText": "die Fabrik.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المصنع",
+              "العاصفة",
+              "الصناعة"
+            ],
+            "a": "المصنع",
+            "why": "الصوت يقول «die Fabrik» — معناها «المصنع». ركّز!"
+          },
+          {
+            "audioId": "word-industrie",
+            "speakText": "die Industrie.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الصناعة",
+              "العاصفة",
+              "المصنع"
+            ],
+            "a": "الصناعة",
+            "why": "الصوت يقول «die Industrie» — معناها «الصناعة». ركّز!"
+          },
+          {
+            "audioId": "word-benzin",
+            "speakText": "das Benzin.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "البنزين",
+              "العاصفة",
+              "المصنع"
+            ],
+            "a": "البنزين",
+            "why": "الصوت يقول «das Benzin» — معناها «البنزين». ركّز!"
+          },
+          {
+            "audioId": "word-krise",
+            "speakText": "die Krise.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الأزمة",
+              "العاصفة",
+              "المصنع"
+            ],
+            "a": "الأزمة",
+            "why": "الصوت يقول «die Krise» — معناها «الأزمة». ركّز!"
           }
         ]
       },
@@ -438,6 +583,36 @@
             "speakText": "die Forschung.",
             "a": "die Forschung",
             "why": "اكتب ما تسمعه حرفياً: «die Forschung» تعني «البحث العلمي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-sturm",
+            "speakText": "der Sturm.",
+            "a": "der Sturm",
+            "why": "اكتب ما تسمعه حرفياً: «der Sturm» تعني «العاصفة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-fabrik",
+            "speakText": "die Fabrik.",
+            "a": "die Fabrik",
+            "why": "اكتب ما تسمعه حرفياً: «die Fabrik» تعني «المصنع». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-industrie",
+            "speakText": "die Industrie.",
+            "a": "die Industrie",
+            "why": "اكتب ما تسمعه حرفياً: «die Industrie» تعني «الصناعة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-benzin",
+            "speakText": "das Benzin.",
+            "a": "das Benzin",
+            "why": "اكتب ما تسمعه حرفياً: «das Benzin» تعني «البنزين». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-krise",
+            "speakText": "die Krise.",
+            "a": "die Krise",
+            "why": "اكتب ما تسمعه حرفياً: «die Krise» تعني «الأزمة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -476,6 +651,31 @@
           {
             "q": "«الزجاج القديم»؟",
             "a": "das Altglas"
+          },
+          {
+            "q": "Der ___ ist stark! (العاصفة!)",
+            "a": "Sturm",
+            "why": "der Sturm العاصفة (der! مذكّر (der!) وجمعه die Stürme (تقلب u→ü!).) — Der Sturm ist stark!"
+          },
+          {
+            "q": "Die ___ ist groß. (المصنع!)",
+            "a": "Fabrik",
+            "why": "die Fabrik المصنع (die! مؤنثة (die!) وجمعها die Fabriken (القاعدة: الفرعية المنتهية بـ-e تسقط قبل -en!).) — Die Fabrik ist groß."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الصناعة!)",
+            "a": "Industrie",
+            "why": "die Industrie الصناعة (die! مؤنثة (die!) وجمعها die Industrien — قرض فرنسي.) — Die Industrie ist wichtig."
+          },
+          {
+            "q": "Das ___ ist teuer. (البنزين!)",
+            "a": "Benzin",
+            "why": "das Benzin البنزين (das! يُستعمل عادةً بلا جمع: das Benzin.) — Das Benzin ist teuer."
+          },
+          {
+            "q": "Die ___ ist schwer. (الأزمة!)",
+            "a": "Krise",
+            "why": "die Krise الأزمة (die! مؤنثة (die!) وجمعها die Krisen — قرض يوناني (الأزمة!).) — Die Krise ist schwer."
           }
         ],
         "passingScore": 0.75
@@ -505,6 +705,31 @@
           {
             "q": "«الزجاج القديم»؟",
             "a": "das Altglas"
+          },
+          {
+            "q": "Der ___ ist stark! (العاصفة!)",
+            "a": "Sturm",
+            "why": "der Sturm العاصفة (der! مذكّر (der!) وجمعه die Stürme (تقلب u→ü!).) — Der Sturm ist stark!"
+          },
+          {
+            "q": "Die ___ ist groß. (المصنع!)",
+            "a": "Fabrik",
+            "why": "die Fabrik المصنع (die! مؤنثة (die!) وجمعها die Fabriken (القاعدة: الفرعية المنتهية بـ-e تسقط قبل -en!).) — Die Fabrik ist groß."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الصناعة!)",
+            "a": "Industrie",
+            "why": "die Industrie الصناعة (die! مؤنثة (die!) وجمعها die Industrien — قرض فرنسي.) — Die Industrie ist wichtig."
+          },
+          {
+            "q": "Das ___ ist teuer. (البنزين!)",
+            "a": "Benzin",
+            "why": "das Benzin البنزين (das! يُستعمل عادةً بلا جمع: das Benzin.) — Das Benzin ist teuer."
+          },
+          {
+            "q": "Die ___ ist schwer. (الأزمة!)",
+            "a": "Krise",
+            "why": "die Krise الأزمة (die! مؤنثة (die!) وجمعها die Krisen — قرض يوناني (الأزمة!).) — Die Krise ist schwer."
           }
         ],
         "passingScore": 0.75
@@ -534,6 +759,31 @@
           {
             "q": "«المادة القابلة لإعادة التدوير»؟",
             "a": "der Wertstoff"
+          },
+          {
+            "q": "Der ___ ist stark! (العاصفة!)",
+            "a": "Sturm",
+            "why": "der Sturm العاصفة (der! مذكّر (der!) وجمعه die Stürme (تقلب u→ü!).) — Der Sturm ist stark!"
+          },
+          {
+            "q": "Die ___ ist groß. (المصنع!)",
+            "a": "Fabrik",
+            "why": "die Fabrik المصنع (die! مؤنثة (die!) وجمعها die Fabriken (القاعدة: الفرعية المنتهية بـ-e تسقط قبل -en!).) — Die Fabrik ist groß."
+          },
+          {
+            "q": "Die ___ ist wichtig. (الصناعة!)",
+            "a": "Industrie",
+            "why": "die Industrie الصناعة (die! مؤنثة (die!) وجمعها die Industrien — قرض فرنسي.) — Die Industrie ist wichtig."
+          },
+          {
+            "q": "Das ___ ist teuer. (البنزين!)",
+            "a": "Benzin",
+            "why": "das Benzin البنزين (das! يُستعمل عادةً بلا جمع: das Benzin.) — Das Benzin ist teuer."
+          },
+          {
+            "q": "Die ___ ist schwer. (الأزمة!)",
+            "a": "Krise",
+            "why": "die Krise الأزمة (die! مؤنثة (die!) وجمعها die Krisen — قرض يوناني (الأزمة!).) — Die Krise ist schwer."
           }
         ],
         "passingScore": 0.75
@@ -542,8 +792,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Als die Überschwemmung kam, war das eine Katastrophe. Der Feinstaub und das Ozon sind giftig. Wenn wir die Mülltrennung machen, ist das umweltfreundlich. Wir sammeln das Altglas und die Verpackung. Der Wertstoff ist wichtig. Bevor wir die Blumen gossen, war die Demonstration.",
-      "ar": "مرحباً! عندما جاء الفيضان (مرة واحدة!)، كانت تلك كارثة. الجسيمات الدقيقة والأوزون سامّان. كلما فرزنا النفايات، كان ذلك صديقاً للبيئة. نحن نجمع الزجاج القديم والتغليف. المادة القابلة لإعادة التدوير مهمة. قبل أن نسقي الزهور، كانت المظاهرة."
+      "de": "Guten Tag! Als die Überschwemmung kam, war das eine Katastrophe. Der Feinstaub und das Ozon sind giftig. Wenn wir die Mülltrennung machen, ist das umweltfreundlich. Wir sammeln das Altglas und die Verpackung. Der Wertstoff ist wichtig. Bevor wir die Blumen gossen, war die Demonstration. Der Sturm ist stark! Die Fabrik ist groß. Die Industrie ist wichtig. Das Benzin ist teuer. Die Krise ist schwer.",
+      "ar": "مرحباً! عندما جاء الفيضان (مرة واحدة!)، كانت تلك كارثة. الجسيمات الدقيقة والأوزون سامّان. كلما فرزنا النفايات، كان ذلك صديقاً للبيئة. نحن نجمع الزجاج القديم والتغليف. المادة القابلة لإعادة التدوير مهمة. قبل أن نسقي الزهور، كانت المظاهرة. العاصفة قوية! المصنع كبير. الصناعة مهمة. البنزين غالٍ. الأزمة صعبة."
     },
     "srsBundleWordIds": [
       "verpackung",
@@ -556,7 +806,12 @@
       "umweltfreundlich",
       "ueberschwemmung",
       "ozon",
-      "bevor"
+      "bevor",
+      "sturm",
+      "fabrik",
+      "industrie",
+      "benzin",
+      "krise"
     ],
     "warningCards": [
       {
@@ -636,7 +891,12 @@
     "word-umweltfreundlich",
     "word-ueberschwemmung",
     "word-ozon",
-    "word-bevor"
+    "word-bevor",
+    "word-sturm",
+    "word-fabrik",
+    "word-industrie",
+    "word-benzin",
+    "word-krise"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -652,7 +912,12 @@
       "umweltfreundlich",
       "ueberschwemmung",
       "ozon",
-      "bevor"
+      "bevor",
+      "sturm",
+      "fabrik",
+      "industrie",
+      "benzin",
+      "krise"
     ]
   }
 }

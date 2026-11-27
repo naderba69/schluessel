@@ -66,7 +66,10 @@
       "vorhaben",
       "sowohl",
       "weder",
-      "entweder"
+      "entweder",
+      "jugend",
+      "senioren",
+      "einwohner"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Sowohl die Natur als auch die Erde sind wichtig!",
+        "de": "Sowohl die Natur als auch die Erde sind wichtig! Die Jugend ist schön. Die Senioren sind hier, und der Einwohner wohnt hier.",
         "ar": "يتحدّث عن البيئة بالأزواج المتلازمة!"
       },
       "situation": {
@@ -91,7 +94,7 @@
         "ar": "العمل: الحق! الضمير! الحملة!"
       },
       "successCriteria": [
-        "كلمات اليوم العشر كلها!",
+        "كلمات اليوم الست عشرة كلها!",
         "كل زوج بقريئه! (sowohl…als auch! weder…noch! nicht nur…sondern auch! entweder…oder!)",
         "الفعل بعد الجزء الثاني! (Sowohl die Natur als auch die Erde SIND wichtig!)",
         "sondern للتصحيح! (لا aber!)"
@@ -186,6 +189,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Umwelt = «البيئة» · das Klima = «المناخ» · die Wiese = «المرج»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الشباب (مرحلة الشباب)",
+                "de": "die Jugend"
+              },
+              {
+                "ar": "كبار السنّ",
+                "de": "die Senioren"
+              },
+              {
+                "ar": "السكّان",
+                "de": "der Einwohner"
+              }
+            ],
+            "why": "die Jugend الشباب (مرحلة الشباب) · die Senioren كبار السنّ · der Einwohner السكّان (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -236,6 +256,21 @@
             "q": "Die ___ sind für meine Mutter.",
             "a": "Blumen",
             "why": "الكلمة الناقصة «Blumen» تعني «زهرة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist schön. (الشباب!)",
+            "a": "Jugend",
+            "why": "die Jugend الشباب (مرحلة الشباب) (die! تُستعمل عادةً بلا جمع: die Jugend (مرحلة الشباب!).) — Die Jugend ist schön."
+          },
+          {
+            "q": "Die ___ sind hier. (كبار السنّ!)",
+            "a": "Senioren",
+            "why": "die Senioren كبار السنّ (die! كلمة جمع فقط (die Senioren (Pl.)!) — جمعها هي نفسها.) — Die Senioren sind hier."
+          },
+          {
+            "q": "Der ___ wohnt hier. (السكّان!)",
+            "a": "Einwohner",
+            "why": "der Einwohner السكّان (der! مركّب (Ein+wohnen) مذكّر (der!) وجمعه die Einwohner (علامة «-» = مطابق!) — والمؤنث die Einwohnerin.) — Der Einwohner wohnt hier."
           }
         ]
       },
@@ -276,6 +311,21 @@
             "q": "~~Wie ist das wetter heute?~~",
             "a": "Wie ist das Wetter heute?",
             "why": "الخطأ في «wetter»! الصواب «Wetter» — راجع القاعدة (الطقس)."
+          },
+          {
+            "q": "~~der Jugend ist schön~~",
+            "a": "die Jugend ist schön",
+            "why": "الألمانية: die Jugend (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Senioren sind hier~~",
+            "a": "die Senioren sind hier",
+            "why": "الألمانية: die Senioren (die! كلمة جمع فقط!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Einwohner wohnt hier~~",
+            "a": "der Einwohner wohnt hier",
+            "why": "الألمانية: der Einwohner (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -316,6 +366,11 @@
             "q": "كوّن جملة فيها «der Sommer» («الصيف») ثم تحدّث بها.",
             "a": "Im Sommer ist es heiß.",
             "why": "استعمل «der Sommer» («الصيف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Jugend · die Senioren · der Einwohner)",
+            "a": "Die Jugend ist schön. Die Senioren sind hier, und der Einwohner wohnt hier.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -409,6 +464,42 @@
             ],
             "a": "Sehr gut gedacht!",
             "why": "«لينا» في الحوار: تعزيز"
+          },
+          {
+            "audioId": "word-jugend",
+            "speakText": "die Jugend.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الشباب (مرحلة الشباب)",
+              "كبار السنّ",
+              "السكّان"
+            ],
+            "a": "الشباب (مرحلة الشباب)",
+            "why": "الصوت يقول «die Jugend» — معناها «الشباب (مرحلة الشباب)». ركّز!"
+          },
+          {
+            "audioId": "word-senioren",
+            "speakText": "die Senioren.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "كبار السنّ",
+              "الشباب (مرحلة الشباب)",
+              "السكّان"
+            ],
+            "a": "كبار السنّ",
+            "why": "الصوت يقول «die Senioren» — معناها «كبار السنّ». ركّز!"
+          },
+          {
+            "audioId": "word-einwohner",
+            "speakText": "der Einwohner.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "السكّان",
+              "الشباب (مرحلة الشباب)",
+              "كبار السنّ"
+            ],
+            "a": "السكّان",
+            "why": "الصوت يقول «der Einwohner» — معناها «السكّان». ركّز!"
           }
         ]
       },
@@ -442,6 +533,24 @@
             "speakText": "der Protest.",
             "a": "der Protest",
             "why": "اكتب ما تسمعه حرفياً: «der Protest» تعني «الاحتجاج». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-jugend",
+            "speakText": "die Jugend.",
+            "a": "die Jugend",
+            "why": "اكتب ما تسمعه حرفياً: «die Jugend» تعني «الشباب (مرحلة الشباب)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-senioren",
+            "speakText": "die Senioren.",
+            "a": "die Senioren",
+            "why": "اكتب ما تسمعه حرفياً: «die Senioren» تعني «كبار السنّ». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-einwohner",
+            "speakText": "der Einwohner.",
+            "a": "der Einwohner",
+            "why": "اكتب ما تسمعه حرفياً: «der Einwohner» تعني «السكّان». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -480,6 +589,21 @@
           {
             "q": "«الماضي»؟",
             "a": "die Vergangenheit"
+          },
+          {
+            "q": "Die ___ ist schön. (الشباب!)",
+            "a": "Jugend",
+            "why": "die Jugend الشباب (مرحلة الشباب) (die! تُستعمل عادةً بلا جمع: die Jugend (مرحلة الشباب!).) — Die Jugend ist schön."
+          },
+          {
+            "q": "Die ___ sind hier. (كبار السنّ!)",
+            "a": "Senioren",
+            "why": "die Senioren كبار السنّ (die! كلمة جمع فقط (die Senioren (Pl.)!) — جمعها هي نفسها.) — Die Senioren sind hier."
+          },
+          {
+            "q": "Der ___ wohnt hier. (السكّان!)",
+            "a": "Einwohner",
+            "why": "der Einwohner السكّان (der! مركّب (Ein+wohnen) مذكّر (der!) وجمعه die Einwohner (علامة «-» = مطابق!) — والمؤنث die Einwohnerin.) — Der Einwohner wohnt hier."
           }
         ],
         "passingScore": 0.75
@@ -509,6 +633,21 @@
           {
             "q": "«الحظر»؟",
             "a": "das Verbot"
+          },
+          {
+            "q": "Die ___ ist schön. (الشباب!)",
+            "a": "Jugend",
+            "why": "die Jugend الشباب (مرحلة الشباب) (die! تُستعمل عادةً بلا جمع: die Jugend (مرحلة الشباب!).) — Die Jugend ist schön."
+          },
+          {
+            "q": "Die ___ sind hier. (كبار السنّ!)",
+            "a": "Senioren",
+            "why": "die Senioren كبار السنّ (die! كلمة جمع فقط (die Senioren (Pl.)!) — جمعها هي نفسها.) — Die Senioren sind hier."
+          },
+          {
+            "q": "Der ___ wohnt hier. (السكّان!)",
+            "a": "Einwohner",
+            "why": "der Einwohner السكّان (der! مركّب (Ein+wohnen) مذكّر (der!) وجمعه die Einwohner (علامة «-» = مطابق!) — والمؤنث die Einwohnerin.) — Der Einwohner wohnt hier."
           }
         ],
         "passingScore": 0.75
@@ -538,6 +677,21 @@
           {
             "q": "«الحظر»؟",
             "a": "das Verbot"
+          },
+          {
+            "q": "Die ___ ist schön. (الشباب!)",
+            "a": "Jugend",
+            "why": "die Jugend الشباب (مرحلة الشباب) (die! تُستعمل عادةً بلا جمع: die Jugend (مرحلة الشباب!).) — Die Jugend ist schön."
+          },
+          {
+            "q": "Die ___ sind hier. (كبار السنّ!)",
+            "a": "Senioren",
+            "why": "die Senioren كبار السنّ (die! كلمة جمع فقط (die Senioren (Pl.)!) — جمعها هي نفسها.) — Die Senioren sind hier."
+          },
+          {
+            "q": "Der ___ wohnt hier. (السكّان!)",
+            "a": "Einwohner",
+            "why": "der Einwohner السكّان (der! مركّب (Ein+wohnen) مذكّر (der!) وجمعه die Einwohner (علامة «-» = مطابق!) — والمؤنث die Einwohnerin.) — Der Einwohner wohnt hier."
           }
         ],
         "passingScore": 0.75
@@ -546,8 +700,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Sowohl die Natur als auch die Erde sind wichtig. Das Modell ist nicht nur gut, sondern auch wichtig. Nicht nur der Gewinn, sondern auch das Recht! Entweder das Verbot oder die Aktion. Das Gewissen ist wichtig: keine Schuld! Wir nutzen das Verbot. Die Vergangenheit ist wichtig. Ich habe vor, zu helfen. Die Zeit ist reif!",
-      "ar": "مرحباً! كلاهما الطبيعة والأرض مهمّتان. النموذج ليس فقط جيّداً، بل مهماً أيضاً. ليس فقط الربح، بل الحق أيضاً! إمّا الحظر أو الحملة. الضمير مهم: لا ذنب! نحن نستخدم الحظر. الماضي مهم. أنا أعتزم أن أساعد. الوقت ناضج (حان الوقت!)"
+      "de": "Guten Tag! Sowohl die Natur als auch die Erde sind wichtig. Das Modell ist nicht nur gut, sondern auch wichtig. Nicht nur der Gewinn, sondern auch das Recht! Entweder das Verbot oder die Aktion. Das Gewissen ist wichtig: keine Schuld! Wir nutzen das Verbot. Die Vergangenheit ist wichtig. Ich habe vor, zu helfen. Die Zeit ist reif! Die Jugend ist schön. Die Senioren sind hier. Der Einwohner wohnt hier.",
+      "ar": "مرحباً! كلاهما الطبيعة والأرض مهمّتان. النموذج ليس فقط جيّداً، بل مهماً أيضاً. ليس فقط الربح، بل الحق أيضاً! إمّا الحظر أو الحملة. الضمير مهم: لا ذنب! نحن نستخدم الحظر. الماضي مهم. أنا أعتزم أن أساعد. الوقت ناضج (حان الوقت!) الشباب جميل. كبار السنّ هنا. الساكن يسكن هنا."
     },
     "srsBundleWordIds": [
       "nutzen",
@@ -562,7 +716,10 @@
       "vorhaben",
       "sowohl",
       "weder",
-      "entweder"
+      "entweder",
+      "jugend",
+      "senioren",
+      "einwohner"
     ],
     "warningCards": [
       {
@@ -646,7 +803,10 @@
     "word-vorhaben",
     "word-sowohl",
     "word-weder",
-    "word-entweder"
+    "word-entweder",
+    "word-jugend",
+    "word-senioren",
+    "word-einwohner"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -664,7 +824,10 @@
       "vorhaben",
       "sowohl",
       "weder",
-      "entweder"
+      "entweder",
+      "jugend",
+      "senioren",
+      "einwohner"
     ]
   }
 }

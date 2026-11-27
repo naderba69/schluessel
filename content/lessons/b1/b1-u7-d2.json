@@ -64,7 +64,12 @@
       "aktion",
       "giftig",
       "forschung",
-      "entwickeln"
+      "entwickeln",
+      "muellabfuhr",
+      "gift",
+      "landwirtschaft",
+      "bauer",
+      "ernte"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -81,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Ich freue mich auf die Aktion!",
+        "de": "Ich freue mich auf die Aktion! Die Müllabfuhr kommt. Das Gift ist gefährlich, und die Landwirtschaft ist wichtig.",
         "ar": "يتحدّث عن البيئة بجرّات الأفعال الثابتة!"
       },
       "situation": {
@@ -89,7 +94,7 @@
         "ar": "العمل: الحماية! الجفاف! الحملة!"
       },
       "successCriteria": [
-        "كلمات اليوم الإحدى عشرة كلها!",
+        "كلمات اليوم الست عشرة كلها!",
         "كل فعل بحرفّه الثابت! (freuen auf! sorgen für! denken an! warten auf! helfen bei!)",
         "الحالة: auf/an هنا نصب! وbei جرّ!",
         "sorgen für (يهتم بـ) ≠ sich sorgen um (يقلق على)!"
@@ -184,6 +189,31 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Umwelt = «البيئة» · das Klima = «المناخ» · die Wiese = «المرج»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "مصلحة القمّامة",
+                "de": "die Müllabfuhr"
+              },
+              {
+                "ar": "السمّ",
+                "de": "das Gift"
+              },
+              {
+                "ar": "الفلاحة (الزراعة)",
+                "de": "die Landwirtschaft"
+              },
+              {
+                "ar": "الفلاح",
+                "de": "der Bauer"
+              },
+              {
+                "ar": "الحصاد",
+                "de": "die Ernte"
+              }
+            ],
+            "why": "die Müllabfuhr مصلحة القمّامة · das Gift السمّ · die Landwirtschaft الفلاحة (الزراعة) · der Bauer الفلاح · die Ernte الحصاد (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -234,6 +264,31 @@
             "q": "Die ___ sind für meine Mutter.",
             "a": "Blumen",
             "why": "الكلمة الناقصة «Blumen» تعني «زهرة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ kommt. (مصلحة القمّامة!)",
+            "a": "Müllabfuhr",
+            "why": "die Müllabfuhr مصلحة القمّامة (die! مركّبة (Müll+Abfuhr) مؤنثة (die!) وجمعها die Müllabfuhren (قياسي — المطبوع بلا علامة).) — Die Müllabfuhr kommt."
+          },
+          {
+            "q": "Das ___ ist gefährlich! (السمّ!)",
+            "a": "Gift",
+            "why": "das Gift السمّ (das! محايد (das!) وجمعه die Gifte.) — Das Gift ist gefährlich!"
+          },
+          {
+            "q": "Die ___ ist wichtig. (الفلاحة!)",
+            "a": "Landwirtschaft",
+            "why": "die Landwirtschaft الفلاحة (الزراعة) (die! مركّبة (Land+Wirtschaft) مؤنثة (die!) وجمعها die Landwirtschaften (قياسي — المطبوع بلا علامة).) — Die Landwirtschaft ist wichtig."
+          },
+          {
+            "q": "Der ___ arbeitet. (الفلاح!)",
+            "a": "Bauer",
+            "why": "der Bauer الفلاح (der! مذكّر (der!) وجمعه die Bauern (علامة -n!) — والمؤنث die Bäuerin.) — Der Bauer arbeitet."
+          },
+          {
+            "q": "Die ___ ist gut. (الحصاد!)",
+            "a": "Ernte",
+            "why": "die Ernte الحصاد (die! مؤنثة (die!) وجمعها die Ernten.) — Die Ernte ist gut."
           }
         ]
       },
@@ -269,6 +324,31 @@
             "q": "~~Es regnet heute.~~ (ناقصة: der Regen)",
             "a": "Es regnet heute. der Regen.",
             "why": "الجملة تفتقد «der Regen» (المطر) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~der Müllabfuhr kommt~~",
+            "a": "die Müllabfuhr kommt",
+            "why": "الألمانية: die Müllabfuhr (die! مركّبة مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Gift ist gefährlich~~",
+            "a": "das Gift ist gefährlich",
+            "why": "الألمانية: das Gift (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Landwirtschaft ist wichtig~~",
+            "a": "die Landwirtschaft ist wichtig",
+            "why": "الألمانية: die Landwirtschaft (die! مركّبة مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Bauer arbeitet~~",
+            "a": "der Bauer arbeitet",
+            "why": "الألمانية: der Bauer (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Ernte ist gut~~",
+            "a": "die Ernte ist gut",
+            "why": "الألمانية: die Ernte (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -304,6 +384,11 @@
             "q": "كوّن جملة فيها «der Sommer» («الصيف») ثم تحدّث بها.",
             "a": "Im Sommer ist es heiß.",
             "why": "استعمل «der Sommer» («الصيف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Müllabfuhr · das Gift · die Landwirtschaft · der Bauer · die Ernte)",
+            "a": "Die Müllabfuhr kommt. Das Gift ist gefährlich, und die Landwirtschaft ist wichtig.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -397,6 +482,66 @@
             ],
             "a": "Bis Samstag!",
             "why": "«يوسف» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-muellabfuhr",
+            "speakText": "die Müllabfuhr.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "مصلحة القمّامة",
+              "السمّ",
+              "الفلاحة (الزراعة)"
+            ],
+            "a": "مصلحة القمّامة",
+            "why": "الصوت يقول «die Müllabfuhr» — معناها «مصلحة القمّامة». ركّز!"
+          },
+          {
+            "audioId": "word-gift",
+            "speakText": "das Gift.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "السمّ",
+              "مصلحة القمّامة",
+              "الفلاحة (الزراعة)"
+            ],
+            "a": "السمّ",
+            "why": "الصوت يقول «das Gift» — معناها «السمّ». ركّز!"
+          },
+          {
+            "audioId": "word-landwirtschaft",
+            "speakText": "die Landwirtschaft.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الفلاحة (الزراعة)",
+              "مصلحة القمّامة",
+              "السمّ"
+            ],
+            "a": "الفلاحة (الزراعة)",
+            "why": "الصوت يقول «die Landwirtschaft» — معناها «الفلاحة (الزراعة)». ركّز!"
+          },
+          {
+            "audioId": "word-bauer",
+            "speakText": "der Bauer.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الفلاح",
+              "مصلحة القمّامة",
+              "السمّ"
+            ],
+            "a": "الفلاح",
+            "why": "الصوت يقول «der Bauer» — معناها «الفلاح». ركّز!"
+          },
+          {
+            "audioId": "word-ernte",
+            "speakText": "die Ernte.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الحصاد",
+              "مصلحة القمّامة",
+              "السمّ"
+            ],
+            "a": "الحصاد",
+            "why": "الصوت يقول «die Ernte» — معناها «الحصاد». ركّز!"
           }
         ]
       },
@@ -430,6 +575,36 @@
             "speakText": "nachdem.",
             "a": "nachdem",
             "why": "اكتب ما تسمعه حرفياً: «nachdem» تعني «بعد أن». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-muellabfuhr",
+            "speakText": "die Müllabfuhr.",
+            "a": "die Müllabfuhr",
+            "why": "اكتب ما تسمعه حرفياً: «die Müllabfuhr» تعني «مصلحة القمّامة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gift",
+            "speakText": "das Gift.",
+            "a": "das Gift",
+            "why": "اكتب ما تسمعه حرفياً: «das Gift» تعني «السمّ». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-landwirtschaft",
+            "speakText": "die Landwirtschaft.",
+            "a": "die Landwirtschaft",
+            "why": "اكتب ما تسمعه حرفياً: «die Landwirtschaft» تعني «الفلاحة (الزراعة)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-bauer",
+            "speakText": "der Bauer.",
+            "a": "der Bauer",
+            "why": "اكتب ما تسمعه حرفياً: «der Bauer» تعني «الفلاح». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ernte",
+            "speakText": "die Ernte.",
+            "a": "die Ernte",
+            "why": "اكتب ما تسمعه حرفياً: «die Ernte» تعني «الحصاد». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -468,6 +643,31 @@
           {
             "q": "«البلاستيك»؟",
             "a": "das Plastik"
+          },
+          {
+            "q": "Die ___ kommt. (مصلحة القمّامة!)",
+            "a": "Müllabfuhr",
+            "why": "die Müllabfuhr مصلحة القمّامة (die! مركّبة (Müll+Abfuhr) مؤنثة (die!) وجمعها die Müllabfuhren (قياسي — المطبوع بلا علامة).) — Die Müllabfuhr kommt."
+          },
+          {
+            "q": "Das ___ ist gefährlich! (السمّ!)",
+            "a": "Gift",
+            "why": "das Gift السمّ (das! محايد (das!) وجمعه die Gifte.) — Das Gift ist gefährlich!"
+          },
+          {
+            "q": "Die ___ ist wichtig. (الفلاحة!)",
+            "a": "Landwirtschaft",
+            "why": "die Landwirtschaft الفلاحة (الزراعة) (die! مركّبة (Land+Wirtschaft) مؤنثة (die!) وجمعها die Landwirtschaften (قياسي — المطبوع بلا علامة).) — Die Landwirtschaft ist wichtig."
+          },
+          {
+            "q": "Der ___ arbeitet. (الفلاح!)",
+            "a": "Bauer",
+            "why": "der Bauer الفلاح (der! مذكّر (der!) وجمعه die Bauern (علامة -n!) — والمؤنث die Bäuerin.) — Der Bauer arbeitet."
+          },
+          {
+            "q": "Die ___ ist gut. (الحصاد!)",
+            "a": "Ernte",
+            "why": "die Ernte الحصاد (die! مؤنثة (die!) وجمعها die Ernten.) — Die Ernte ist gut."
           }
         ],
         "passingScore": 0.75
@@ -497,6 +697,31 @@
           {
             "q": "«الضجيج»؟",
             "a": "der Lärm"
+          },
+          {
+            "q": "Die ___ kommt. (مصلحة القمّامة!)",
+            "a": "Müllabfuhr",
+            "why": "die Müllabfuhr مصلحة القمّامة (die! مركّبة (Müll+Abfuhr) مؤنثة (die!) وجمعها die Müllabfuhren (قياسي — المطبوع بلا علامة).) — Die Müllabfuhr kommt."
+          },
+          {
+            "q": "Das ___ ist gefährlich! (السمّ!)",
+            "a": "Gift",
+            "why": "das Gift السمّ (das! محايد (das!) وجمعه die Gifte.) — Das Gift ist gefährlich!"
+          },
+          {
+            "q": "Die ___ ist wichtig. (الفلاحة!)",
+            "a": "Landwirtschaft",
+            "why": "die Landwirtschaft الفلاحة (الزراعة) (die! مركّبة (Land+Wirtschaft) مؤنثة (die!) وجمعها die Landwirtschaften (قياسي — المطبوع بلا علامة).) — Die Landwirtschaft ist wichtig."
+          },
+          {
+            "q": "Der ___ arbeitet. (الفلاح!)",
+            "a": "Bauer",
+            "why": "der Bauer الفلاح (der! مذكّر (der!) وجمعه die Bauern (علامة -n!) — والمؤنث die Bäuerin.) — Der Bauer arbeitet."
+          },
+          {
+            "q": "Die ___ ist gut. (الحصاد!)",
+            "a": "Ernte",
+            "why": "die Ernte الحصاد (die! مؤنثة (die!) وجمعها die Ernten.) — Die Ernte ist gut."
           }
         ],
         "passingScore": 0.75
@@ -526,6 +751,31 @@
           {
             "q": "«حماية البيئة»؟",
             "a": "der Umweltschutz"
+          },
+          {
+            "q": "Die ___ kommt. (مصلحة القمّامة!)",
+            "a": "Müllabfuhr",
+            "why": "die Müllabfuhr مصلحة القمّامة (die! مركّبة (Müll+Abfuhr) مؤنثة (die!) وجمعها die Müllabfuhren (قياسي — المطبوع بلا علامة).) — Die Müllabfuhr kommt."
+          },
+          {
+            "q": "Das ___ ist gefährlich! (السمّ!)",
+            "a": "Gift",
+            "why": "das Gift السمّ (das! محايد (das!) وجمعه die Gifte.) — Das Gift ist gefährlich!"
+          },
+          {
+            "q": "Die ___ ist wichtig. (الفلاحة!)",
+            "a": "Landwirtschaft",
+            "why": "die Landwirtschaft الفلاحة (الزراعة) (die! مركّبة (Land+Wirtschaft) مؤنثة (die!) وجمعها die Landwirtschaften (قياسي — المطبوع بلا علامة).) — Die Landwirtschaft ist wichtig."
+          },
+          {
+            "q": "Der ___ arbeitet. (الفلاح!)",
+            "a": "Bauer",
+            "why": "der Bauer الفلاح (der! مذكّر (der!) وجمعه die Bauern (علامة -n!) — والمؤنث die Bäuerin.) — Der Bauer arbeitet."
+          },
+          {
+            "q": "Die ___ ist gut. (الحصاد!)",
+            "a": "Ernte",
+            "why": "die Ernte الحصاد (die! مؤنثة (die!) وجمعها die Ernten.) — Die Ernte ist gut."
           }
         ],
         "passingScore": 0.75
@@ -534,8 +784,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Die Dürre ist ein Problem. Der Lärm ist auch ein Problem. Wir sorgen für die Umwelt. Der Umweltschutz ist wichtig. Das Plastik und der Kunststoff sind giftig für die Natur. Die Dose ist neu. Wir verbrauchen viel Energie. Ich freue mich auf die Forschung. Wir entwickeln eine neue Aktion! Ich denke an die Blumen.",
-      "ar": "مرحباً! الجفاف مشكلة. الضجيج أيضاً مشكلة. نحن نهتمّ بالبيئة. حماية البيئة مهمة. البلاستيك والمادة الاصطناعية سامّان للطبيعة. العلبة جديدة. نحن نستهلك طاقةً كثيرة. أنا أتطلّع بفرح إلى البحث العلمي. نحن نطوّر حملةً جديدة! أنا أفكّر في الزهور."
+      "de": "Guten Tag! Die Dürre ist ein Problem. Der Lärm ist auch ein Problem. Wir sorgen für die Umwelt. Der Umweltschutz ist wichtig. Das Plastik und der Kunststoff sind giftig für die Natur. Die Dose ist neu. Wir verbrauchen viel Energie. Ich freue mich auf die Forschung. Wir entwickeln eine neue Aktion! Ich denke an die Blumen. Die Müllabfuhr kommt. Das Gift ist gefährlich! Die Landwirtschaft ist wichtig. Der Bauer arbeitet. Die Ernte ist gut.",
+      "ar": "مرحباً! الجفاف مشكلة. الضجيج أيضاً مشكلة. نحن نهتمّ بالبيئة. حماية البيئة مهمة. البلاستيك والمادة الاصطناعية سامّان للطبيعة. العلبة جديدة. نحن نستهلك طاقةً كثيرة. أنا أتطلّع بفرح إلى البحث العلمي. نحن نطوّر حملةً جديدة! أنا أفكّر في الزهور. مصلحة القمّامة تأتي. السمّ خطير! الفلاحة مهمة. الفلاح يعمل. الحصاد جيد."
     },
     "srsBundleWordIds": [
       "duerre",
@@ -548,7 +798,12 @@
       "aktion",
       "giftig",
       "forschung",
-      "entwickeln"
+      "entwickeln",
+      "muellabfuhr",
+      "gift",
+      "landwirtschaft",
+      "bauer",
+      "ernte"
     ],
     "warningCards": [
       {
@@ -628,7 +883,12 @@
     "word-aktion",
     "word-giftig",
     "word-forschung",
-    "word-entwickeln"
+    "word-entwickeln",
+    "word-muellabfuhr",
+    "word-gift",
+    "word-landwirtschaft",
+    "word-bauer",
+    "word-ernte"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -644,7 +904,12 @@
       "aktion",
       "giftig",
       "forschung",
-      "entwickeln"
+      "entwickeln",
+      "muellabfuhr",
+      "gift",
+      "landwirtschaft",
+      "bauer",
+      "ernte"
     ]
   }
 }

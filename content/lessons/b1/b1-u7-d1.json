@@ -67,7 +67,9 @@
       "wanderung",
       "erde",
       "nachdem",
-      "trennen"
+      "trennen",
+      "umweltverschmutzung",
+      "kraftwerk"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -84,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Nachdem wir den Abfall getrennt hatten, wanderten wir los!",
+        "de": "Nachdem wir den Abfall getrennt hatten, wanderten wir los! Die Umweltverschmutzung ist groß, und das Kraftwerk ist hier.",
         "ar": "يروي أحداث الرحلة بالترتيب في 8 جمل!"
       },
       "situation": {
@@ -92,7 +94,7 @@
         "ar": "الرحلة: التنزّه! المرج! النفايات!"
       },
       "successCriteria": [
-        "كلمات اليوم الاثنتا عشرة كلها!",
+        "كلمات اليوم الست عشرة كلها!",
         "«nachdem» + hatte/war + التصريف الثالث أولاً! (الأسبق!)",
         "الجملة الثانية بالماضي البسيط! (wanderten / gossen / genossen)",
         "hatte للفعل المتعدي، وwar للفعل الناقص (wachsen ← war gewachsen)!"
@@ -195,6 +197,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: der Wald = «غابة» · die Wolke = «سحابة» · die Blume = «زهرة»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "تلّوث البيئة",
+                "de": "die Umweltverschmutzung"
+              },
+              {
+                "ar": "محطة الطاقة",
+                "de": "das Kraftwerk"
+              },
+              {
+                "ar": "يفصل",
+                "de": "trennen"
+              }
+            ],
+            "why": "die Umweltverschmutzung تلّوث البيئة · das Kraftwerk محطة الطاقة · trennen يفصل (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -244,6 +263,16 @@
             "q": "Am Abend gehen wir oft ___.",
             "a": "spazieren",
             "why": "الكلمة الناقصة «spazieren» تعني «يتمشّى» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist groß. (تلّوث البيئة!)",
+            "a": "Umweltverschmutzung",
+            "why": "die Umweltverschmutzung تلّوث البيئة (die! مركّبة (Umwelt+Verschmutzung) مؤنثة (die! -ung!) وجمعها die Umweltverschmutzungen.) — Die Umweltverschmutzung ist groß."
+          },
+          {
+            "q": "Das ___ ist hier. (محطة الطاقة!)",
+            "a": "Kraftwerk",
+            "why": "das Kraftwerk محطة الطاقة (das! مركّب (Kraft+Werk) محايد (das!) وجمعه die Kraftwerke.) — Das Kraftwerk ist hier."
           }
         ]
       },
@@ -288,6 +317,16 @@
             "q": "~~Ich Lebe in Berlin.~~",
             "a": "Ich lebe in Berlin.",
             "why": "الخطأ في «Lebe»! الصواب «lebe» — راجع القاعدة (يعيش (حياته))."
+          },
+          {
+            "q": "~~der Umweltverschmutzung ist groß~~",
+            "a": "die Umweltverschmutzung ist groß",
+            "why": "الألمانية: die Umweltverschmutzung (die! -ung مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Kraftwerk ist hier~~",
+            "a": "das Kraftwerk ist hier",
+            "why": "الألمانية: das Kraftwerk (das! مركّب محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -327,6 +366,11 @@
             "q": "كوّن جملة فيها «der Wind» («الرياح») ثم تحدّث بها.",
             "a": "Der Wind ist heute kalt.",
             "why": "استعمل «der Wind» («الرياح») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Umweltverschmutzung · das Kraftwerk)",
+            "a": "Die Umweltverschmutzung ist groß, und das Kraftwerk ist hier.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -420,6 +464,30 @@
             ],
             "a": "Und wir schützen sie.",
             "why": "«لينا» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-umweltverschmutzung",
+            "speakText": "die Umweltverschmutzung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "تلّوث البيئة",
+              "محطة الطاقة",
+              "البيئة"
+            ],
+            "a": "تلّوث البيئة",
+            "why": "الصوت يقول «die Umweltverschmutzung» — معناها «تلّوث البيئة». ركّز!"
+          },
+          {
+            "audioId": "word-kraftwerk",
+            "speakText": "das Kraftwerk.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "محطة الطاقة",
+              "تلّوث البيئة",
+              "البيئة"
+            ],
+            "a": "محطة الطاقة",
+            "why": "الصوت يقول «das Kraftwerk» — معناها «محطة الطاقة». ركّز!"
           }
         ]
       },
@@ -453,6 +521,18 @@
             "speakText": "die Rückkehr.",
             "a": "die Rückkehr",
             "why": "اكتب ما تسمعه حرفياً: «die Rückkehr» تعني «العودة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-umweltverschmutzung",
+            "speakText": "die Umweltverschmutzung.",
+            "a": "die Umweltverschmutzung",
+            "why": "اكتب ما تسمعه حرفياً: «die Umweltverschmutzung» تعني «تلّوث البيئة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-kraftwerk",
+            "speakText": "das Kraftwerk.",
+            "a": "das Kraftwerk",
+            "why": "اكتب ما تسمعه حرفياً: «das Kraftwerk» تعني «محطة الطاقة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -491,6 +571,16 @@
           {
             "q": "«المناخ»؟",
             "a": "das Klima"
+          },
+          {
+            "q": "Die ___ ist groß. (تلّوث البيئة!)",
+            "a": "Umweltverschmutzung",
+            "why": "die Umweltverschmutzung تلّوث البيئة (die! مركّبة (Umwelt+Verschmutzung) مؤنثة (die! -ung!) وجمعها die Umweltverschmutzungen.) — Die Umweltverschmutzung ist groß."
+          },
+          {
+            "q": "Das ___ ist hier. (محطة الطاقة!)",
+            "a": "Kraftwerk",
+            "why": "das Kraftwerk محطة الطاقة (das! مركّب (Kraft+Werk) محايد (das!) وجمعه die Kraftwerke.) — Das Kraftwerk ist hier."
           }
         ],
         "passingScore": 0.75
@@ -520,6 +610,16 @@
           {
             "q": "«يحمي»؟",
             "a": "schützen"
+          },
+          {
+            "q": "Die ___ ist groß. (تلّوث البيئة!)",
+            "a": "Umweltverschmutzung",
+            "why": "die Umweltverschmutzung تلّوث البيئة (die! مركّبة (Umwelt+Verschmutzung) مؤنثة (die! -ung!) وجمعها die Umweltverschmutzungen.) — Die Umweltverschmutzung ist groß."
+          },
+          {
+            "q": "Das ___ ist hier. (محطة الطاقة!)",
+            "a": "Kraftwerk",
+            "why": "das Kraftwerk محطة الطاقة (das! مركّب (Kraft+Werk) محايد (das!) وجمعه die Kraftwerke.) — Das Kraftwerk ist hier."
           }
         ],
         "passingScore": 0.75
@@ -549,6 +649,16 @@
           {
             "q": "«المناخ»؟",
             "a": "das Klima"
+          },
+          {
+            "q": "Die ___ ist groß. (تلّوث البيئة!)",
+            "a": "Umweltverschmutzung",
+            "why": "die Umweltverschmutzung تلّوث البيئة (die! مركّبة (Umwelt+Verschmutzung) مؤنثة (die! -ung!) وجمعها die Umweltverschmutzungen.) — Die Umweltverschmutzung ist groß."
+          },
+          {
+            "q": "Das ___ ist hier. (محطة الطاقة!)",
+            "a": "Kraftwerk",
+            "why": "das Kraftwerk محطة الطاقة (das! مركّب (Kraft+Werk) محايد (das!) وجمعه die Kraftwerke.) — Das Kraftwerk ist hier."
           }
         ],
         "passingScore": 0.75
@@ -557,8 +667,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Die Umwelt ist wichtig. Nachdem wir den Abfall getrennt hatten, wanderten wir über die Wiese. Die Wanderung war schön. Nachdem wir gepflanzt hatten, gossen wir die Blumen. Wir leben auf der Erde. Wir sparen Energie für das Klima. Nachdem die Blumen gewachsen waren, genossen wir die Ruhe. Wir schützen die Umwelt!",
-      "ar": "مرحباً! البيئة مهمة. بعد أن فصلنا النفايات، تجوّلنا عبر المرج. الرحلة التنزّهية كانت جميلة. بعد أن زرعنا، سقينا الزهور. نحن نعيش على الأرض. نوفّر الطاقة من أجل المناخ. بعد أن نمت الزهور، استمتعنا بالهدوء. نحن نحمي البيئة!"
+      "de": "Guten Tag! Die Umwelt ist wichtig. Nachdem wir den Abfall getrennt hatten, wanderten wir über die Wiese. Die Wanderung war schön. Nachdem wir gepflanzt hatten, gossen wir die Blumen. Wir leben auf der Erde. Wir sparen Energie für das Klima. Nachdem die Blumen gewachsen waren, genossen wir die Ruhe. Wir schützen die Umwelt! Die Umweltverschmutzung ist groß. Das Kraftwerk ist hier.",
+      "ar": "مرحباً! البيئة مهمة. بعد أن فصلنا النفايات، تجوّلنا عبر المرج. الرحلة التنزّهية كانت جميلة. بعد أن زرعنا، سقينا الزهور. نحن نعيش على الأرض. نوفّر الطاقة من أجل المناخ. بعد أن نمت الزهور، استمتعنا بالهدوء. نحن نحمي البيئة! التلوث كبير. محطة الطاقة هنا."
     },
     "srsBundleWordIds": [
       "umwelt",
@@ -574,7 +684,9 @@
       "wanderung",
       "erde",
       "nachdem",
-      "trennen"
+      "trennen",
+      "umweltverschmutzung",
+      "kraftwerk"
     ],
     "warningCards": [
       {
@@ -660,7 +772,9 @@
     "word-wanderung",
     "word-erde",
     "word-nachdem",
-    "word-trennen"
+    "word-trennen",
+    "word-umweltverschmutzung",
+    "word-kraftwerk"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -679,7 +793,9 @@
       "wanderung",
       "erde",
       "nachdem",
-      "trennen"
+      "trennen",
+      "umweltverschmutzung",
+      "kraftwerk"
     ]
   }
 }

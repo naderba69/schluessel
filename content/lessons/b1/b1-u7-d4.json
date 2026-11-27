@@ -64,7 +64,12 @@
       "mitglied",
       "versammlung",
       "protest",
-      "einfluss"
+      "einfluss",
+      "politik",
+      "politisch",
+      "politiker",
+      "gewerkschaft",
+      "asyl"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -81,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Ich versuche, die Umwelt zu schützen!",
+        "de": "Ich versuche, die Umwelt zu schützen! Die Politik ist wichtig. Der Politiker spricht, und die Gewerkschaft hilft.",
         "ar": "يتحدّث عن حماية البيئة بـzu + المصدر!"
       },
       "situation": {
@@ -89,7 +94,7 @@
         "ar": "العمل: الاحتجاج! التجمّع! الدعم!"
       },
       "successCriteria": [
-        "كلمات اليوم الإحدى عشرة كلها!",
+        "كلمات اليوم الست عشرة كلها!",
         "versuchen/anfangen/aufhören/planen + zu + المصدر!",
         "الفعل الناقص (möchte/kann) + المصدر بلا zu!",
         "zu قبل المصدر مباشرة! (zu schützen!)"
@@ -184,6 +189,31 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Umwelt = «البيئة» · das Klima = «المناخ» · die Wiese = «المرج»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "السياسة",
+                "de": "die Politik"
+              },
+              {
+                "ar": "سياسي",
+                "de": "politisch"
+              },
+              {
+                "ar": "السياسيّ (الرجل السياسي)",
+                "de": "der Politiker"
+              },
+              {
+                "ar": "النقابة",
+                "de": "die Gewerkschaft"
+              },
+              {
+                "ar": "اللجوء (الحماية السياسية)",
+                "de": "das Asyl"
+              }
+            ],
+            "why": "die Politik السياسة · politisch سياسي · der Politiker السياسيّ (الرجل السياسي) · die Gewerkschaft النقابة · das Asyl اللجوء (الحماية السياسية) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -234,6 +264,31 @@
             "q": "Die ___ sind für meine Mutter.",
             "a": "Blumen",
             "why": "الكلمة الناقصة «Blumen» تعني «زهرة» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig. (السياسة!)",
+            "a": "Politik",
+            "why": "die Politik السياسة (die! مؤنثة (die!) وجمعها die Politiken (نادر — المطبوع بلا علامة).) — Die Politik ist wichtig."
+          },
+          {
+            "q": "Das Thema ist ___. (سياسي!)",
+            "a": "politisch",
+            "why": "politisch سياسي (صفة — بلا جمع.) — Das Thema ist politisch."
+          },
+          {
+            "q": "Der ___ spricht. (السياسي!)",
+            "a": "Politiker",
+            "why": "der Politiker السياسيّ (الرجل السياسي) (der! مذكّر (der!) وجمعه die Politiker (علامة «-» = مطابق!) — والمؤنث die Politikerin (وجمعها die Politikerinnen!).) — Der Politiker spricht."
+          },
+          {
+            "q": "Die ___ hilft. (النقابة!)",
+            "a": "Gewerkschaft",
+            "why": "die Gewerkschaft النقابة (die! مركّبة (Gewerk+schaft!) مؤنثة (die! -schaft!) وجمعها die Gewerkschaften.) — Die Gewerkschaft hilft."
+          },
+          {
+            "q": "Das ___ ist wichtig. (اللجوء!)",
+            "a": "Asyl",
+            "why": "das Asyl اللجوء (الحماية السياسية) (das! محايد (das!) وجمعه die Asyle (قياسي — المطبوع بلا علامة) — قرض لاتيني.) — Das Asyl ist wichtig."
           }
         ]
       },
@@ -279,6 +334,31 @@
             "q": "~~Wie ist das wetter heute?~~",
             "a": "Wie ist das Wetter heute?",
             "why": "الخطأ في «wetter»! الصواب «Wetter» — راجع القاعدة (الطقس)."
+          },
+          {
+            "q": "~~der Politik ist wichtig~~",
+            "a": "die Politik ist wichtig",
+            "why": "الألمانية: die Politik (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Das Thema ist Politik~~",
+            "a": "Das Thema ist politisch",
+            "why": "الصفة: politisch (بلا جمع!) — والاسم die Politik كلمة أخرى! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Politiker spricht~~",
+            "a": "der Politiker spricht",
+            "why": "الألمانية: der Politiker (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Gewerkschaft hilft~~",
+            "a": "die Gewerkschaft hilft",
+            "why": "الألمانية: die Gewerkschaft (die! -schaft مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Asyl ist wichtig~~",
+            "a": "das Asyl ist wichtig",
+            "why": "الألمانية: das Asyl (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -319,6 +399,11 @@
             "q": "كوّن جملة فيها «der Sommer» («الصيف») ثم تحدّث بها.",
             "a": "Im Sommer ist es heiß.",
             "why": "استعمل «der Sommer» («الصيف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Politik · politisch · der Politiker · die Gewerkschaft · das Asyl)",
+            "a": "Die Politik ist wichtig. Der Politiker spricht, und die Gewerkschaft hilft.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -412,6 +497,66 @@
             ],
             "a": "Für die Umwelt!",
             "why": "«يوسف» في الحوار: شعار"
+          },
+          {
+            "audioId": "word-politik",
+            "speakText": "die Politik.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "السياسة",
+              "سياسي",
+              "السياسيّ (الرجل السياسي)"
+            ],
+            "a": "السياسة",
+            "why": "الصوت يقول «die Politik» — معناها «السياسة». ركّز!"
+          },
+          {
+            "audioId": "word-politisch",
+            "speakText": "politisch.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "سياسي",
+              "السياسة",
+              "السياسيّ (الرجل السياسي)"
+            ],
+            "a": "سياسي",
+            "why": "الصوت يقول «politisch» — معناها «سياسي». ركّز!"
+          },
+          {
+            "audioId": "word-politiker",
+            "speakText": "der Politiker.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "السياسيّ (الرجل السياسي)",
+              "السياسة",
+              "سياسي"
+            ],
+            "a": "السياسيّ (الرجل السياسي)",
+            "why": "الصوت يقول «der Politiker» — معناها «السياسيّ (الرجل السياسي)». ركّز!"
+          },
+          {
+            "audioId": "word-gewerkschaft",
+            "speakText": "die Gewerkschaft.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "النقابة",
+              "السياسة",
+              "سياسي"
+            ],
+            "a": "النقابة",
+            "why": "الصوت يقول «die Gewerkschaft» — معناها «النقابة». ركّز!"
+          },
+          {
+            "audioId": "word-asyl",
+            "speakText": "das Asyl.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "اللجوء (الحماية السياسية)",
+              "السياسة",
+              "سياسي"
+            ],
+            "a": "اللجوء (الحماية السياسية)",
+            "why": "الصوت يقول «das Asyl» — معناها «اللجوء (الحماية السياسية)». ركّز!"
           }
         ]
       },
@@ -445,6 +590,36 @@
             "speakText": "das Ozon.",
             "a": "das Ozon",
             "why": "اكتب ما تسمعه حرفياً: «das Ozon» تعني «الأوزون». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-politik",
+            "speakText": "die Politik.",
+            "a": "die Politik",
+            "why": "اكتب ما تسمعه حرفياً: «die Politik» تعني «السياسة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-politisch",
+            "speakText": "politisch.",
+            "a": "politisch",
+            "why": "اكتب ما تسمعه حرفياً: «politisch» تعني «سياسي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-politiker",
+            "speakText": "der Politiker.",
+            "a": "der Politiker",
+            "why": "اكتب ما تسمعه حرفياً: «der Politiker» تعني «السياسيّ (الرجل السياسي)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gewerkschaft",
+            "speakText": "die Gewerkschaft.",
+            "a": "die Gewerkschaft",
+            "why": "اكتب ما تسمعه حرفياً: «die Gewerkschaft» تعني «النقابة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-asyl",
+            "speakText": "das Asyl.",
+            "a": "das Asyl",
+            "why": "اكتب ما تسمعه حرفياً: «das Asyl» تعني «اللجوء (الحماية السياسية)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -483,6 +658,31 @@
           {
             "q": "«ثمين»؟",
             "a": "wertvoll"
+          },
+          {
+            "q": "Die ___ ist wichtig. (السياسة!)",
+            "a": "Politik",
+            "why": "die Politik السياسة (die! مؤنثة (die!) وجمعها die Politiken (نادر — المطبوع بلا علامة).) — Die Politik ist wichtig."
+          },
+          {
+            "q": "Das Thema ist ___. (سياسي!)",
+            "a": "politisch",
+            "why": "politisch سياسي (صفة — بلا جمع.) — Das Thema ist politisch."
+          },
+          {
+            "q": "Der ___ spricht. (السياسي!)",
+            "a": "Politiker",
+            "why": "der Politiker السياسيّ (الرجل السياسي) (der! مذكّر (der!) وجمعه die Politiker (علامة «-» = مطابق!) — والمؤنث die Politikerin (وجمعها die Politikerinnen!).) — Der Politiker spricht."
+          },
+          {
+            "q": "Die ___ hilft. (النقابة!)",
+            "a": "Gewerkschaft",
+            "why": "die Gewerkschaft النقابة (die! مركّبة (Gewerk+schaft!) مؤنثة (die! -schaft!) وجمعها die Gewerkschaften.) — Die Gewerkschaft hilft."
+          },
+          {
+            "q": "Das ___ ist wichtig. (اللجوء!)",
+            "a": "Asyl",
+            "why": "das Asyl اللجوء (الحماية السياسية) (das! محايد (das!) وجمعه die Asyle (قياسي — المطبوع بلا علامة) — قرض لاتيني.) — Das Asyl ist wichtig."
           }
         ],
         "passingScore": 0.75
@@ -512,6 +712,31 @@
           {
             "q": "«المعدن»؟",
             "a": "das Metall"
+          },
+          {
+            "q": "Die ___ ist wichtig. (السياسة!)",
+            "a": "Politik",
+            "why": "die Politik السياسة (die! مؤنثة (die!) وجمعها die Politiken (نادر — المطبوع بلا علامة).) — Die Politik ist wichtig."
+          },
+          {
+            "q": "Das Thema ist ___. (سياسي!)",
+            "a": "politisch",
+            "why": "politisch سياسي (صفة — بلا جمع.) — Das Thema ist politisch."
+          },
+          {
+            "q": "Der ___ spricht. (السياسي!)",
+            "a": "Politiker",
+            "why": "der Politiker السياسيّ (الرجل السياسي) (der! مذكّر (der!) وجمعه die Politiker (علامة «-» = مطابق!) — والمؤنث die Politikerin (وجمعها die Politikerinnen!).) — Der Politiker spricht."
+          },
+          {
+            "q": "Die ___ hilft. (النقابة!)",
+            "a": "Gewerkschaft",
+            "why": "die Gewerkschaft النقابة (die! مركّبة (Gewerk+schaft!) مؤنثة (die! -schaft!) وجمعها die Gewerkschaften.) — Die Gewerkschaft hilft."
+          },
+          {
+            "q": "Das ___ ist wichtig. (اللجوء!)",
+            "a": "Asyl",
+            "why": "das Asyl اللجوء (الحماية السياسية) (das! محايد (das!) وجمعه die Asyle (قياسي — المطبوع بلا علامة) — قرض لاتيني.) — Das Asyl ist wichtig."
           }
         ],
         "passingScore": 0.75
@@ -541,6 +766,31 @@
           {
             "q": "«المعدن»؟",
             "a": "das Metall"
+          },
+          {
+            "q": "Die ___ ist wichtig. (السياسة!)",
+            "a": "Politik",
+            "why": "die Politik السياسة (die! مؤنثة (die!) وجمعها die Politiken (نادر — المطبوع بلا علامة).) — Die Politik ist wichtig."
+          },
+          {
+            "q": "Das Thema ist ___. (سياسي!)",
+            "a": "politisch",
+            "why": "politisch سياسي (صفة — بلا جمع.) — Das Thema ist politisch."
+          },
+          {
+            "q": "Der ___ spricht. (السياسي!)",
+            "a": "Politiker",
+            "why": "der Politiker السياسيّ (الرجل السياسي) (der! مذكّر (der!) وجمعه die Politiker (علامة «-» = مطابق!) — والمؤنث die Politikerin (وجمعها die Politikerinnen!).) — Der Politiker spricht."
+          },
+          {
+            "q": "Die ___ hilft. (النقابة!)",
+            "a": "Gewerkschaft",
+            "why": "die Gewerkschaft النقابة (die! مركّبة (Gewerk+schaft!) مؤنثة (die! -schaft!) وجمعها die Gewerkschaften.) — Die Gewerkschaft hilft."
+          },
+          {
+            "q": "Das ___ ist wichtig. (اللجوء!)",
+            "a": "Asyl",
+            "why": "das Asyl اللجوء (الحماية السياسية) (das! محايد (das!) وجمعه die Asyle (قياسي — المطبوع بلا علامة) — قرض لاتيني.) — Das Asyl ist wichtig."
           }
         ],
         "passingScore": 0.75
@@ -549,8 +799,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Ich versuche, die Umwelt zu schützen. Wir beginnen, das Metall ordentlich zu trennen. Der Müll ist wertvoll und nicht wertlos! Ich höre auf, Plastik zu verwenden. Wir planen eine Versammlung: Der Protest hat Einfluss! Die Unterstützung ist wichtig. Ich fördere die Aktion. Das Mitglied hilft!",
-      "ar": "مرحباً! أحاول أن أحمي البيئة. نبدأ بفصل المعدن بترتيب. النفايات ثمينة وليست بلا قيمة! أتوقّف عن استخدام البلاستيك. نخطّط لتجمّع: الاحتجاج له تأثير! الدعم مهم. أنا أشجّع الحملة. العضو يساعد!"
+      "de": "Guten Tag! Ich versuche, die Umwelt zu schützen. Wir beginnen, das Metall ordentlich zu trennen. Der Müll ist wertvoll und nicht wertlos! Ich höre auf, Plastik zu verwenden. Wir planen eine Versammlung: Der Protest hat Einfluss! Die Unterstützung ist wichtig. Ich fördere die Aktion. Das Mitglied hilft! Die Politik ist wichtig. Das Thema ist politisch. Der Politiker spricht. Die Gewerkschaft hilft. Das Asyl ist wichtig.",
+      "ar": "مرحباً! أحاول أن أحمي البيئة. نبدأ بفصل المعدن بترتيب. النفايات ثمينة وليست بلا قيمة! أتوقّف عن استخدام البلاستيك. نخطّط لتجمّع: الاحتجاج له تأثير! الدعم مهم. أنا أشجّع الحملة. العضو يساعد! السياسة مهمة. الموضوع سياسي. السياسي يتكلّم. النقابة تساعد. اللجوء مهم."
     },
     "srsBundleWordIds": [
       "verwenden",
@@ -563,7 +813,12 @@
       "mitglied",
       "versammlung",
       "protest",
-      "einfluss"
+      "einfluss",
+      "politik",
+      "politisch",
+      "politiker",
+      "gewerkschaft",
+      "asyl"
     ],
     "warningCards": [
       {
@@ -643,7 +898,12 @@
     "word-mitglied",
     "word-versammlung",
     "word-protest",
-    "word-einfluss"
+    "word-einfluss",
+    "word-politik",
+    "word-politisch",
+    "word-politiker",
+    "word-gewerkschaft",
+    "word-asyl"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -659,7 +919,12 @@
       "mitglied",
       "versammlung",
       "protest",
-      "einfluss"
+      "einfluss",
+      "politik",
+      "politisch",
+      "politiker",
+      "gewerkschaft",
+      "asyl"
     ]
   }
 }

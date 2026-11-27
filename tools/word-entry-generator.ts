@@ -116,10 +116,11 @@ export function planWord(spec: WordSpec, ipa: string): Planned {
   return { word: Word.parse(draft), ipa, clipText: clipText(spoken) };
 }
 
-export type GenerateClip = (text: string, outAbs: string) => { durationMs: number; sizeBytes: number; hash: string; pcmSha256: string; rmsDb: number };
+export type GenerateClip = (text: string, outAbs: string, lengthScale?: number) => { durationMs: number; sizeBytes: number; hash: string; pcmSha256: string; rmsDb: number };
 
-export const piperClip: GenerateClip = (text, outAbs) =>
-  JSON.parse(execFileSync("python3", [join(ROOT, "tools/gen-audio.py"), "one", text, outAbs], { encoding: "utf8", timeout: 120_000 }).trim().split("\n").at(-1)!);
+export const piperClip: GenerateClip = (text, outAbs, lengthScale) =>
+  JSON.parse(execFileSync("python3", [join(ROOT, "tools/gen-audio.py"), "one", text, outAbs,
+    ...(lengthScale !== undefined ? ["--length-scale", String(lengthScale)] : [])], { encoding: "utf8", timeout: 120_000 }).trim().split("\n").at(-1)!);
 
 export type GenReport = { planned: Planned[]; written: boolean; srsDistanceByLevel: Record<string, number> };
 
@@ -192,12 +193,19 @@ export function runGenerator(opts: {
     const clip = opts.clip ?? piperClip;
     for (const p of planned) {
       const rel = `words/audio/de-DE/word-${p.word.id}.opus`;
+      // D593: المركّبات الطويلة (die Umweltverschmutzung) قد تتجاوز 1.5s بالنطق الطبيعي —
+      // المحاولات المتأخرة بتسريع length_scale < 1 (النص يبقى كاملاً بالأداة: N-043 «تُسمَع كما تُرى»!)
+      const scales = [undefined, 0.85, 0.75];
+      let ls: number | undefined;
       let m = clip(p.clipText, join(content, rel));
-      for (let attempt = 2; attempt <= 3 && m.durationMs > WORD_CLIP_MAX_SEC * 1000; attempt++) m = clip(p.clipText, join(content, rel));
+      for (let attempt = 2; attempt <= 3 && m.durationMs > WORD_CLIP_MAX_SEC * 1000; attempt++) {
+        ls = scales[attempt - 1];
+        m = clip(p.clipText, join(content, rel), ls);
+      }
       if (m.durationMs > WORD_CLIP_MAX_SEC * 1000) throw new Error(`مقطع ${p.word.id} أطول من ${WORD_CLIP_MAX_SEC}s بعد 3 محاولات — قصّر النص`);
       newTracks.push({
         id: `word-${p.word.id}`, file: rel, role: "word", isGuest: false,
-        voiceParams: { speaker: VOICE_ID, speedWpm: 110 }, textDe: p.clipText, priority: "P2",
+        voiceParams: { speaker: VOICE_ID, speedWpm: 110, ...(ls !== undefined ? { lengthScale: ls } : {}) }, textDe: p.clipText, priority: "P2",
         lessonRefs: [p.word.usedInLessons[0]], ...m,
       });
     }
