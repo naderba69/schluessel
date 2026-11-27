@@ -1,0 +1,602 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u13-d3",
+  "level": "B2",
+  "unit": 13,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Prüfungsangst ist weg: die Gelassenheit bleibt und die Zuversicht wächst!",
+    "ar": "الوحدة 13 (التكثيف والامتحان!) اليوم الثالث: القلق والطمأنينة والثقة!"
+  },
+  "canDoDaily": [
+    "يعبّر عن قلق الامتحان! (die Prüfungsangst!)",
+    "يصف الطمأنينة والثقة! (die Gelassenheit! die Zuversicht!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bewaeltigung",
+      "balance",
+      "ruhepause"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«قلق الامتحان كبير.»؟"
+        },
+        "choices": [
+          "Die Prüfungsangst ist groß.",
+          "Der Prüfungsangst ist groß.",
+          "Das Prüfungsangst ist groß."
+        ],
+        "answer": "Die Prüfungsangst ist groß.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "&الطمأنينة تساعد.»؟"
+        },
+        "choices": [
+          "Die Gelassenheit hilft.",
+          "Der Gelassenheit hilft.",
+          "Das Gelassenheit hilft."
+        ],
+        "answer": "Die Gelassenheit hilft.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "pruefungsangst",
+      "gelassenheit",
+      "zuversicht"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u13-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ch-ich-laut",
+      "double-consonant",
+      "ng-velar",
+      "umlaut-a",
+      "v-f",
+      "z"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Prüfungsangst, Gelassenheit, Zuversicht: Wir bleiben ruhig!",
+        "ar": "اليوم الثالث من الوحدة 13! (القلق! الطمأنينة! الثقة!)"
+      },
+      "situation": {
+        "de": "Prüfungsangst, Gelassenheit, Zuversicht — zusammen sprechen.",
+        "ar": "قلق! طمأنينة! ثقة! — نتحدّث معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Prüfungsangst (die! مركّبة!) وdie Gelassenheit (-heit!) وdie Zuversicht (die! مركّبة!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Prüfungsangst haben! Gelassenheit bewahren!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "bewaeltigung",
+          "balance",
+          "ruhepause"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Prüfungsangst",
+                "ar": "قلق الامتحان"
+              },
+              {
+                "de": "die Gelassenheit",
+                "ar": "الطمأنينة (رباطة الجأش)"
+              },
+              {
+                "de": "die Zuversicht",
+                "ar": "الثقة المتفائلة (اليقين)"
+              }
+            ],
+            "why": "die Prüfungsangst قلق الامتحان (die! die!) · die Gelassenheit الطمأنينة (رباطة الجأش) (die! die!) · die Zuversicht الثقة المتفائلة (اليقين) (die! die!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Bewältigung",
+                "ar": "المواجهة (التغلّب على الصعوبات)"
+              },
+              {
+                "de": "die Balance",
+                "ar": "التوازن"
+              },
+              {
+                "de": "die Ruhepause",
+                "ar": "الراحة (استراحة قصيرة)"
+              }
+            ],
+            "why": "استدعاء سابق: die Bewältigung المواجهة (التغلّب على الصعوبات) · die Balance التوازن · die Ruhepause الراحة (استراحة قصيرة)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Prüfungsangst",
+                "ar": "قلق الامتحان"
+              },
+              {
+                "de": "die Bewältigung",
+                "ar": "المواجهة (التغلّب على الصعوبات)"
+              },
+              {
+                "de": "die Gelassenheit",
+                "ar": "الطمأنينة (رباطة الجأش)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "bewaeltigung",
+          "balance",
+          "ruhepause"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (قلق الامتحان!)",
+            "a": "Prüfungsangst",
+            "why": "die Prüfungsangst قلق الامتحان (die! die!) — Die Prüfungsangst ist groß."
+          },
+          {
+            "q": "die ___ ist wichtig. (الطمأنينة (رباطة الجأش)!)",
+            "a": "Gelassenheit",
+            "why": "die Gelassenheit الطمأنينة (رباطة الجأش) (die! die!) — Die Gelassenheit hilft."
+          },
+          {
+            "q": "die ___ ist wichtig. (الثقة المتفائلة (اليقين)!)",
+            "a": "Zuversicht",
+            "why": "die Zuversicht الثقة المتفائلة (اليقين) (die! die!) — Die Zuversicht ist stark."
+          },
+          {
+            "q": "Die ___ geht.",
+            "a": "Bewältigung",
+            "why": "الكلمة الناقصة «Bewältigung» تعني «المواجهة (التغلّب على الصعوبات)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Balance",
+            "why": "الكلمة الناقصة «Balance» تعني «التوازن» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist gut.",
+            "a": "Ruhepause",
+            "why": "الكلمة الناقصة «Ruhepause» تعني «الراحة (استراحة قصيرة)» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "bewaeltigung",
+          "balance",
+          "ruhepause"
+        ],
+        "items": [
+          {
+            "q": "~~der Prüfungsangst!~~",
+            "a": "Die Prüfungsangst ist groß.",
+            "why": "العربية: «القلق» مذكّر! والألمانية: die Prüfungsangst (die! مركّبة مؤنثة!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Gelassenheit!~~",
+            "a": "Die Gelassenheit hilft.",
+            "why": "الألمانية: die Gelassenheit (die! -heit مؤنثة!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Zuversicht!~~",
+            "a": "Die Zuversicht ist stark.",
+            "why": "العربية: «اليقين» مذكّر! والألمانية: die Zuversicht (die! مركّبة!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die bewältigung geht.~~",
+            "a": "Die Bewältigung geht.",
+            "why": "الخطأ في «bewältigung»! الصواب «Bewältigung» — راجع القاعدة (المواجهة (التغلّب على الصعوبات))."
+          },
+          {
+            "q": "~~Die balance ist wichtig.~~",
+            "a": "Die Balance ist wichtig.",
+            "why": "الخطأ في «balance»! الصواب «Balance» — راجع القاعدة (التوازن)."
+          },
+          {
+            "q": "~~Die ruhepause ist gut.~~",
+            "a": "Die Ruhepause ist gut.",
+            "why": "الخطأ في «ruhepause»! الصواب «Ruhepause» — راجع القاعدة (الراحة (استراحة قصيرة))."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "bewaeltigung",
+          "balance",
+          "ruhepause"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـقلق الامتحان! (جملتان!)",
+            "a": "Die Prüfungsangst ist groß. Die Gelassenheit hilft.",
+            "why": "قلق الامتحان أولًا!"
+          },
+          {
+            "q": "تحدّث عن الطمأنينة (رباطة الجأش)! (جملتان!)",
+            "a": "Die Gelassenheit hilft. Das ist gut.",
+            "why": "الطمأنينة (رباطة الجأش)!"
+          },
+          {
+            "q": "تحدّث عن الثقة المتفائلة (اليقين)! (جملتان!)",
+            "a": "Die Zuversicht ist stark. die Zuversicht hilft.",
+            "why": "الثقة المتفائلة (اليقين)!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Bewältigung» («المواجهة (التغلّب على الصعوبات)») ثم تحدّث بها.",
+            "a": "Die Bewältigung geht.",
+            "why": "استعمل «die Bewältigung» («المواجهة (التغلّب على الصعوبات)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Balance» («التوازن») ثم تحدّث بها.",
+            "a": "Die Balance ist wichtig.",
+            "why": "استعمل «die Balance» («التوازن») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Ruhepause» («الراحة (استراحة قصيرة)») ثم تحدّث بها.",
+            "a": "Die Ruhepause ist gut.",
+            "why": "استعمل «die Ruhepause» («الراحة (استراحة قصيرة)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "bewaeltigung",
+          "balance",
+          "ruhepause"
+        ],
+        "items": [
+          {
+            "audioId": "word-pruefungsangst",
+            "speakText": "die Prüfungsangst.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "قلق الامتحان",
+              "الطمأنينة (رباطة الجأش)",
+              "الثقة المتفائلة (اليقين)"
+            ],
+            "a": "قلق الامتحان",
+            "why": "الصوت يقول «die Prüfungsangst» — معناها «قلق الامتحان». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-gelassenheit",
+            "speakText": "die Gelassenheit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الطمأنينة (رباطة الجأش)",
+              "الثقة المتفائلة (اليقين)",
+              "قلق الامتحان"
+            ],
+            "a": "الطمأنينة (رباطة الجأش)",
+            "why": "الصوت يقول «die Gelassenheit» — معناها «الطمأنينة (رباطة الجأش)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-zuversicht",
+            "speakText": "die Zuversicht.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الثقة المتفائلة (اليقين)",
+              "قلق الامتحان",
+              "الطمأنينة (رباطة الجأش)"
+            ],
+            "a": "الثقة المتفائلة (اليقين)",
+            "why": "الصوت يقول «die Zuversicht» — معناها «الثقة المتفائلة (اليقين)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-bewaeltigung",
+            "speakText": "die Bewältigung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "المواجهة (التغلّب على الصعوبات)",
+              "التوازن",
+              "قلق الامتحان"
+            ],
+            "a": "المواجهة (التغلّب على الصعوبات)",
+            "why": "الكلمة المسموعة «die Bewältigung» تعني «المواجهة (التغلّب على الصعوبات)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-balance",
+            "speakText": "die Balance.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "التوازن",
+              "الراحة (استراحة قصيرة)",
+              "الطمأنينة (رباطة الجأش)"
+            ],
+            "a": "التوازن",
+            "why": "الكلمة المسموعة «die Balance» تعني «التوازن». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-ruhepause",
+            "speakText": "die Ruhepause.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الراحة (استراحة قصيرة)",
+              "المواجهة (التغلّب على الصعوبات)",
+              "الثقة المتفائلة (اليقين)"
+            ],
+            "a": "الراحة (استراحة قصيرة)",
+            "why": "الكلمة المسموعة «die Ruhepause» تعني «الراحة (استراحة قصيرة)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-bewaeltigung",
+            "speakText": "die Bewältigung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "المواجهة (التغلّب على الصعوبات)",
+              "التوازن",
+              "قلق الامتحان"
+            ],
+            "a": "المواجهة (التغلّب على الصعوبات)",
+            "why": "الكلمة المسموعة «die Bewältigung» تعني «المواجهة (التغلّب على الصعوبات)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "bewaeltigung",
+          "balance"
+        ],
+        "items": [
+          {
+            "audioId": "word-pruefungsangst",
+            "speakText": "die Prüfungsangst.",
+            "a": "die Prüfungsangst",
+            "why": "اكتب ما تسمعه حرفياً: «die Prüfungsangst» تعني «قلق الامتحان». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gelassenheit",
+            "speakText": "die Gelassenheit.",
+            "a": "die Gelassenheit",
+            "why": "اكتب ما تسمعه حرفياً: «die Gelassenheit» تعني «الطمأنينة (رباطة الجأش)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-bewaeltigung",
+            "speakText": "die Bewältigung.",
+            "a": "die Bewältigung",
+            "why": "اكتب ما تسمعه حرفياً: «die Bewältigung» تعني «المواجهة (التغلّب على الصعوبات)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-balance",
+            "speakText": "die Balance.",
+            "a": "die Balance",
+            "why": "اكتب ما تسمعه حرفياً: «die Balance» تعني «التوازن». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«قلق الامتحان»؟",
+            "a": "die Prüfungsangst"
+          },
+          {
+            "q": "«الطمأنينة (رباطة الجأش)»؟",
+            "a": "die Gelassenheit"
+          },
+          {
+            "q": "«الثقة المتفائلة (اليقين)»؟",
+            "a": "die Zuversicht"
+          },
+          {
+            "q": "«قلق الامتحان كبير.»؟",
+            "a": "Die Prüfungsangst ist groß."
+          },
+          {
+            "q": "«الطمأنينة تساعد.»؟",
+            "a": "Die Gelassenheit hilft."
+          },
+          {
+            "q": "«الثقة المتفائلة قوية.»؟",
+            "a": "Die Zuversicht ist stark."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Prüfungsangst",
+            "a": "قلق الامتحان"
+          },
+          {
+            "q": "die Gelassenheit",
+            "a": "الطمأنينة (رباطة الجأش)"
+          },
+          {
+            "q": "die Zuversicht",
+            "a": "الثقة المتفائلة (اليقين)"
+          },
+          {
+            "q": "«الثقة المتفائلة قوية.»؟",
+            "a": "Die Zuversicht ist stark."
+          },
+          {
+            "q": "«الطمأنينة تساعد.»؟",
+            "a": "Die Gelassenheit hilft."
+          },
+          {
+            "q": "«قلق الامتحان كبير.»؟",
+            "a": "Die Prüfungsangst ist groß."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الثقة المتفائلة (اليقين)»؟",
+            "a": "die Zuversicht"
+          },
+          {
+            "q": "«الطمأنينة (رباطة الجأش)»؟",
+            "a": "die Gelassenheit"
+          },
+          {
+            "q": "«قلق الامتحان»؟",
+            "a": "die Prüfungsangst"
+          },
+          {
+            "q": "die Prüfungsangst",
+            "a": "قلق الامتحان"
+          },
+          {
+            "q": "die Gelassenheit",
+            "a": "الطمأنينة (رباطة الجأش)"
+          },
+          {
+            "q": "die Zuversicht",
+            "a": "الثقة المتفائلة (اليقين)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Prüfungsangst ist groß. Die Gelassenheit hilft. Die Zuversicht ist stark. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 13 (التكثيف والامتحان!) اليوم الثالث: القلق والطمأنينة والثقة! نتعلّم اليوم: قلق الامتحان والطمأنينة (رباطة الجأش) والثقة المتفائلة (اليقين)!"
+    },
+    "srsBundleWordIds": [
+      "pruefungsangst",
+      "gelassenheit",
+      "zuversicht"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Prüfungsangst!",
+          "de": "~~der Prüfungsangst ist groß.~~"
+        },
+        "correct": {
+          "ar": "die Prüfungsangst!",
+          "de": "Die Prüfungsangst ist groß."
+        },
+        "exercise": {
+          "q": "___ Prüfungsangst ist groß.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «القلق» مذكّر! والألمانية: die Prüfungsangst (die! مركّبة مؤنثة!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Gelassenheit!",
+          "de": "~~das Gelassenheit hilft.~~"
+        },
+        "correct": {
+          "ar": "die Gelassenheit!",
+          "de": "Die Gelassenheit hilft."
+        },
+        "exercise": {
+          "q": "___ Gelassenheit hilft.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Gelassenheit (die! -heit مؤنثة!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Zuversicht!",
+          "de": "~~der Zuversicht ist stark.~~"
+        },
+        "correct": {
+          "ar": "die Zuversicht!",
+          "de": "Die Zuversicht ist stark."
+        },
+        "exercise": {
+          "q": "___ Zuversicht ist stark.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «اليقين» مذكّر! والألمانية: die Zuversicht (die! مركّبة!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Pruefungsangst",
+      "https://www.duden.de/rechtschreibung/Gelassenheit",
+      "https://www.duden.de/rechtschreibung/Zuversicht"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-pruefungsangst",
+    "word-gelassenheit",
+    "word-zuversicht"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 13 (التكثيف والامتحان!) قلق الامتحان",
+    "goetheWordListOverlap": [
+      "pruefungsangst",
+      "gelassenheit",
+      "zuversicht"
+    ]
+  }
+}

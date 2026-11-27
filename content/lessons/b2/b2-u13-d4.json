@@ -1,0 +1,602 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u13-d4",
+  "level": "B2",
+  "unit": 13,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Lösungsweg ist klar: erst die Skizze, dann die Fehlersuche!",
+    "ar": "الوحدة 13 (التكثيف والامتحان!) اليوم الرابع: مسار الحلّ والمسودّة والبحث عن الأخطاء!"
+  },
+  "canDoDaily": [
+    "يصف مسار الحلّ! (der Lösungsweg!)",
+    "يستعمل المسودّة والبحث عن الأخطاء! (die Skizze! die Fehlersuche!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "behandlung",
+      "vorsorge",
+      "diagnose"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«مسار الحلّ واضح.»؟"
+        },
+        "choices": [
+          "Der Lösungsweg ist klar.",
+          "Das Lösungsweg ist klar.",
+          "Die Lösungsweg ist klar."
+        ],
+        "answer": "Der Lösungsweg ist klar.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "&المسودّة قصيرة.»؟"
+        },
+        "choices": [
+          "Die Skizze ist kurz.",
+          "Der Skizze ist kurz.",
+          "Das Skizze ist kurz."
+        ],
+        "answer": "Die Skizze ist kurz.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "loesungsweg",
+      "skizze",
+      "fehlersuche"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u13-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ch-ach-laut",
+      "double-consonant",
+      "ng-velar",
+      "v-f",
+      "w-v",
+      "z"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Lösungsweg, Skizze, Fehlersuche: Wir lösen die Aufgabe!",
+        "ar": "اليوم الرابع من الوحدة 13! (الحلّ! المسودّة! الأخطاء!)"
+      },
+      "situation": {
+        "de": "Lösungsweg, Skizze, Fehlersuche — zusammen arbeiten.",
+        "ar": "حلّ! مسودّة! أخطاء! — نعمل معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "der Lösungsweg (der! مركّب!) وdie Skizze (die! على -e!) وdie Fehlersuche (die! مركّبة!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: den Lösungsweg finden! die Fehlersuche machen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge",
+          "diagnose"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "der Lösungsweg",
+                "ar": "مسار الحلّ"
+              },
+              {
+                "de": "die Skizze",
+                "ar": "المسودّة (الرسم التخطيطي)"
+              },
+              {
+                "de": "die Fehlersuche",
+                "ar": "البحث عن الأخطاء"
+              }
+            ],
+            "why": "der Lösungsweg مسار الحلّ (der! der!) · die Skizze المسودّة (الرسم التخطيطي) (die! -e مؤنثة!) · die Fehlersuche البحث عن الأخطاء (die! -e مؤنثة!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Behandlung",
+                "ar": "العلاج"
+              },
+              {
+                "de": "die Vorsorge",
+                "ar": "الوقاية"
+              },
+              {
+                "de": "die Diagnose",
+                "ar": "التشخيص"
+              }
+            ],
+            "why": "استدعاء سابق: die Behandlung العلاج · die Vorsorge الوقاية · die Diagnose التشخيص"
+          },
+          {
+            "pairs": [
+              {
+                "de": "der Lösungsweg",
+                "ar": "مسار الحلّ"
+              },
+              {
+                "de": "die Behandlung",
+                "ar": "العلاج"
+              },
+              {
+                "de": "die Skizze",
+                "ar": "المسودّة (الرسم التخطيطي)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge",
+          "diagnose"
+        ],
+        "items": [
+          {
+            "q": "der ___ ist wichtig. (مسار الحلّ!)",
+            "a": "Lösungsweg",
+            "why": "der Lösungsweg مسار الحلّ (der! der!) — Der Lösungsweg ist klar."
+          },
+          {
+            "q": "die ___ ist wichtig. (المسودّة (الرسم التخطيطي)!)",
+            "a": "Skizze",
+            "why": "die Skizze المسودّة (الرسم التخطيطي) (die! -e مؤنثة!) — Die Skizze ist kurz."
+          },
+          {
+            "q": "die ___ ist wichtig. (البحث عن الأخطاء!)",
+            "a": "Fehlersuche",
+            "why": "die Fehlersuche البحث عن الأخطاء (die! -e مؤنثة!) — Die Fehlersuche ist wichtig."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Behandlung",
+            "why": "الكلمة الناقصة «Behandlung» تعني «العلاج» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Vorsorge",
+            "why": "الكلمة الناقصة «Vorsorge» تعني «الوقاية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist klar.",
+            "a": "Diagnose",
+            "why": "الكلمة الناقصة «Diagnose» تعني «التشخيص» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge",
+          "diagnose"
+        ],
+        "items": [
+          {
+            "q": "~~die Lösungsweg!~~",
+            "a": "Der Lösungsweg ist klar.",
+            "why": "العربية: «المسار» مذكّر فعلاً! لكن المركّب: der Lösungsweg (der!) — والأداة تُخطئ كثيراً هنا! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Skizze!~~",
+            "a": "Die Skizze ist kurz.",
+            "why": "العربية: «المسودّة» مذكّر! والألمانية: die Skizze (die! على -e مؤنثة!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Fehlersuche!~~",
+            "a": "Die Fehlersuche ist wichtig.",
+            "why": "الألمانية: die Fehlersuche (die! مركّبة مؤنثة!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die behandlung ist wichtig.~~",
+            "a": "Die Behandlung ist wichtig.",
+            "why": "الخطأ في «behandlung»! الصواب «Behandlung» — راجع القاعدة (العلاج)."
+          },
+          {
+            "q": "~~Die vorsorge ist wichtig.~~",
+            "a": "Die Vorsorge ist wichtig.",
+            "why": "الخطأ في «vorsorge»! الصواب «Vorsorge» — راجع القاعدة (الوقاية)."
+          },
+          {
+            "q": "~~Die diagnose ist klar.~~",
+            "a": "Die Diagnose ist klar.",
+            "why": "الخطأ في «diagnose»! الصواب «Diagnose» — راجع القاعدة (التشخيص)."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge",
+          "diagnose"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـمسار الحلّ! (جملتان!)",
+            "a": "Der Lösungsweg ist klar. Die Skizze ist kurz.",
+            "why": "مسار الحلّ أولًا!"
+          },
+          {
+            "q": "تحدّث عن المسودّة (الرسم التخطيطي)! (جملتان!)",
+            "a": "Die Skizze ist kurz. Das ist gut.",
+            "why": "المسودّة (الرسم التخطيطي)!"
+          },
+          {
+            "q": "تحدّث عن البحث عن الأخطاء! (جملتان!)",
+            "a": "Die Fehlersuche ist wichtig. die Fehlersuche hilft.",
+            "why": "البحث عن الأخطاء!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Behandlung» («العلاج») ثم تحدّث بها.",
+            "a": "Die Behandlung ist wichtig.",
+            "why": "استعمل «die Behandlung» («العلاج») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Vorsorge» («الوقاية») ثم تحدّث بها.",
+            "a": "Die Vorsorge ist wichtig.",
+            "why": "استعمل «die Vorsorge» («الوقاية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Diagnose» («التشخيص») ثم تحدّث بها.",
+            "a": "Die Diagnose ist klar.",
+            "why": "استعمل «die Diagnose» («التشخيص») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge",
+          "diagnose"
+        ],
+        "items": [
+          {
+            "audioId": "word-loesungsweg",
+            "speakText": "der Lösungsweg.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "مسار الحلّ",
+              "المسودّة (الرسم التخطيطي)",
+              "البحث عن الأخطاء"
+            ],
+            "a": "مسار الحلّ",
+            "why": "الصوت يقول «der Lösungsweg» — معناها «مسار الحلّ». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-skizze",
+            "speakText": "die Skizze.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المسودّة (الرسم التخطيطي)",
+              "البحث عن الأخطاء",
+              "مسار الحلّ"
+            ],
+            "a": "المسودّة (الرسم التخطيطي)",
+            "why": "الصوت يقول «die Skizze» — معناها «المسودّة (الرسم التخطيطي)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-fehlersuche",
+            "speakText": "die Fehlersuche.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "البحث عن الأخطاء",
+              "مسار الحلّ",
+              "المسودّة (الرسم التخطيطي)"
+            ],
+            "a": "البحث عن الأخطاء",
+            "why": "الصوت يقول «die Fehlersuche» — معناها «البحث عن الأخطاء». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-behandlung",
+            "speakText": "die Behandlung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "العلاج",
+              "الوقاية",
+              "مسار الحلّ"
+            ],
+            "a": "العلاج",
+            "why": "الكلمة المسموعة «die Behandlung» تعني «العلاج». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-vorsorge",
+            "speakText": "die Vorsorge.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الوقاية",
+              "التشخيص",
+              "المسودّة (الرسم التخطيطي)"
+            ],
+            "a": "الوقاية",
+            "why": "الكلمة المسموعة «die Vorsorge» تعني «الوقاية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-diagnose",
+            "speakText": "die Diagnose.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التشخيص",
+              "العلاج",
+              "البحث عن الأخطاء"
+            ],
+            "a": "التشخيص",
+            "why": "الكلمة المسموعة «die Diagnose» تعني «التشخيص». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-behandlung",
+            "speakText": "die Behandlung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "العلاج",
+              "الوقاية",
+              "مسار الحلّ"
+            ],
+            "a": "العلاج",
+            "why": "الكلمة المسموعة «die Behandlung» تعني «العلاج». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "behandlung",
+          "vorsorge"
+        ],
+        "items": [
+          {
+            "audioId": "word-loesungsweg",
+            "speakText": "der Lösungsweg.",
+            "a": "der Lösungsweg",
+            "why": "اكتب ما تسمعه حرفياً: «der Lösungsweg» تعني «مسار الحلّ». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-skizze",
+            "speakText": "die Skizze.",
+            "a": "die Skizze",
+            "why": "اكتب ما تسمعه حرفياً: «die Skizze» تعني «المسودّة (الرسم التخطيطي)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-behandlung",
+            "speakText": "die Behandlung.",
+            "a": "die Behandlung",
+            "why": "اكتب ما تسمعه حرفياً: «die Behandlung» تعني «العلاج». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-vorsorge",
+            "speakText": "die Vorsorge.",
+            "a": "die Vorsorge",
+            "why": "اكتب ما تسمعه حرفياً: «die Vorsorge» تعني «الوقاية». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«مسار الحلّ»؟",
+            "a": "der Lösungsweg"
+          },
+          {
+            "q": "«المسودّة (الرسم التخطيطي)»؟",
+            "a": "die Skizze"
+          },
+          {
+            "q": "«البحث عن الأخطاء»؟",
+            "a": "die Fehlersuche"
+          },
+          {
+            "q": "«مسار الحلّ واضح.»؟",
+            "a": "Der Lösungsweg ist klar."
+          },
+          {
+            "q": "«المسودّة قصيرة.»؟",
+            "a": "Die Skizze ist kurz."
+          },
+          {
+            "q": "«البحث عن الأخطاء مهم.»؟",
+            "a": "Die Fehlersuche ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "der Lösungsweg",
+            "a": "مسار الحلّ"
+          },
+          {
+            "q": "die Skizze",
+            "a": "المسودّة (الرسم التخطيطي)"
+          },
+          {
+            "q": "die Fehlersuche",
+            "a": "البحث عن الأخطاء"
+          },
+          {
+            "q": "«البحث عن الأخطاء مهم.»؟",
+            "a": "Die Fehlersuche ist wichtig."
+          },
+          {
+            "q": "«المسودّة قصيرة.»؟",
+            "a": "Die Skizze ist kurz."
+          },
+          {
+            "q": "«مسار الحلّ واضح.»؟",
+            "a": "Der Lösungsweg ist klar."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«البحث عن الأخطاء»؟",
+            "a": "die Fehlersuche"
+          },
+          {
+            "q": "«المسودّة (الرسم التخطيطي)»؟",
+            "a": "die Skizze"
+          },
+          {
+            "q": "«مسار الحلّ»؟",
+            "a": "der Lösungsweg"
+          },
+          {
+            "q": "der Lösungsweg",
+            "a": "مسار الحلّ"
+          },
+          {
+            "q": "die Skizze",
+            "a": "المسودّة (الرسم التخطيطي)"
+          },
+          {
+            "q": "die Fehlersuche",
+            "a": "البحث عن الأخطاء"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Lösungsweg ist klar. Die Skizze ist kurz. Die Fehlersuche ist wichtig. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 13 (التكثيف والامتحان!) اليوم الرابع: مسار الحلّ والمسودّة والبحث عن الأخطاء! نتعلّم اليوم: مسار الحلّ والمسودّة (الرسم التخطيطي) والبحث عن الأخطاء!"
+    },
+    "srsBundleWordIds": [
+      "loesungsweg",
+      "skizze",
+      "fehlersuche"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Lösungsweg!",
+          "de": "~~die Lösungsweg ist klar.~~"
+        },
+        "correct": {
+          "ar": "der Lösungsweg!",
+          "de": "Der Lösungsweg ist klar."
+        },
+        "exercise": {
+          "q": "___ Lösungsweg ist klar.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «المسار» مذكّر فعلاً! لكن المركّب: der Lösungsweg (der!) — والأداة تُخطئ كثيراً هنا! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Skizze!",
+          "de": "~~der Skizze ist kurz.~~"
+        },
+        "correct": {
+          "ar": "die Skizze!",
+          "de": "Die Skizze ist kurz."
+        },
+        "exercise": {
+          "q": "___ Skizze ist kurz.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «المسودّة» مذكّر! والألمانية: die Skizze (die! على -e مؤنثة!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Fehlersuche!",
+          "de": "~~das Fehlersuche ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Fehlersuche!",
+          "de": "Die Fehlersuche ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Fehlersuche ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Fehlersuche (die! مركّبة مؤنثة!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Loesungsweg",
+      "https://www.duden.de/rechtschreibung/Skizze",
+      "https://www.duden.de/rechtschreibung/Fehlersuche"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-loesungsweg",
+    "word-skizze",
+    "word-fehlersuche"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 13 (التكثيف والامتحان!) مسار الحلّ",
+    "goetheWordListOverlap": [
+      "loesungsweg",
+      "skizze",
+      "fehlersuche"
+    ]
+  }
+}

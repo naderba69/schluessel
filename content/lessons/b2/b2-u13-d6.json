@@ -1,0 +1,602 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u13-d6",
+  "level": "B2",
+  "unit": 13,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Selbsteinschätzung ist ehrlich: der Prüfling ist bereit und die Erwartung ist klar!",
+    "ar": "الوحدة 13 (التكثيف والامتحان!) اليوم السادس: التقييم الذاتي والمترشّح والتوقع!"
+  },
+  "canDoDaily": [
+    "يقيّم نفسه! (die Selbsteinschätzung!)",
+    "يصف المترشّح والتوقع! (der Prüfling! die Erwartung!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "psyche",
+      "resilienz",
+      "selbstwert"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التقييم الذاتي جيد.»؟"
+        },
+        "choices": [
+          "Die Selbsteinschätzung ist gut.",
+          "Der Selbsteinschätzung ist gut.",
+          "Das Selbsteinschätzung ist gut."
+        ],
+        "answer": "Die Selbsteinschätzung ist gut.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«التوقع واضح.»؟"
+        },
+        "choices": [
+          "Die Erwartung ist klar.",
+          "Der Erwartung ist klar.",
+          "Das Erwartung ist klar."
+        ],
+        "answer": "Die Erwartung ist klar.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "selbsteinschaetzung",
+      "pruefling",
+      "erwartung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u13-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ng-velar",
+      "r-uvular",
+      "umlaut-a",
+      "umlaut-u",
+      "w-v",
+      "z"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Selbsteinschätzung, Prüfling, Erwartung: Wir schaffen die Prüfung!",
+        "ar": "اليوم السادس من الوحدة 13! (التقييم! المترشّح! التوقع!)"
+      },
+      "situation": {
+        "de": "Selbsteinschätzung, Prüfling, Erwartung — zusammen schaffen.",
+        "ar": "تقييم! مترشّح! توقع! — نجتاز معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Selbsteinschätzung (die! -ung!) وder Prüfling (der! على -ling!) وdie Erwartung (die! -ung!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Selbsteinschätzung machen! die Erwartung erfüllen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "psyche",
+          "resilienz",
+          "selbstwert"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Selbsteinschätzung",
+                "ar": "التقييم الذاتي"
+              },
+              {
+                "de": "der Prüfling",
+                "ar": "الممتحَن (المترشّح)"
+              },
+              {
+                "de": "die Erwartung",
+                "ar": "التوقع"
+              }
+            ],
+            "why": "die Selbsteinschätzung التقييم الذاتي (die! -ung مؤنثة!) · der Prüfling الممتحَن (المترشّح) (der! der!) · die Erwartung التوقع (die! -ung مؤنثة!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Psyche",
+                "ar": "النفس (الحالة النفسية)"
+              },
+              {
+                "de": "die Resilienz",
+                "ar": "الصلابة النفسية (القدرة على التعافي)"
+              },
+              {
+                "de": "der Selbstwert",
+                "ar": "تقدير الذات (قيمة الذات)"
+              }
+            ],
+            "why": "استدعاء سابق: die Psyche النفس (الحالة النفسية) · die Resilienz الصلابة النفسية (القدرة على التعافي) · der Selbstwert تقدير الذات (قيمة الذات)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Selbsteinschätzung",
+                "ar": "التقييم الذاتي"
+              },
+              {
+                "de": "die Psyche",
+                "ar": "النفس (الحالة النفسية)"
+              },
+              {
+                "de": "der Prüfling",
+                "ar": "الممتحَن (المترشّح)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "psyche",
+          "resilienz",
+          "selbstwert"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (التقييم الذاتي!)",
+            "a": "Selbsteinschätzung",
+            "why": "die Selbsteinschätzung التقييم الذاتي (die! -ung مؤنثة!) — Die Selbsteinschätzung ist gut."
+          },
+          {
+            "q": "der ___ ist wichtig. (الممتحَن (المترشّح)!)",
+            "a": "Prüfling",
+            "why": "der Prüfling الممتحَن (المترشّح) (der! der!) — Der Prüfling ist bereit."
+          },
+          {
+            "q": "die ___ ist wichtig. (التوقع!)",
+            "a": "Erwartung",
+            "why": "die Erwartung التوقع (die! -ung مؤنثة!) — Die Erwartung ist klar."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Psyche",
+            "why": "الكلمة الناقصة «Psyche» تعني «النفس (الحالة النفسية)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ hilft.",
+            "a": "Resilienz",
+            "why": "الكلمة الناقصة «Resilienz» تعني «الصلابة النفسية (القدرة على التعافي)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist wichtig.",
+            "a": "Selbstwert",
+            "why": "الكلمة الناقصة «Selbstwert» تعني «تقدير الذات (قيمة الذات)» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "psyche",
+          "resilienz",
+          "selbstwert"
+        ],
+        "items": [
+          {
+            "q": "~~der Selbsteinschätzung!~~",
+            "a": "Die Selbsteinschätzung ist gut.",
+            "why": "العربية: «التقييم» مذكّر! والألمانية: die Selbsteinschätzung (die! -ung مؤنثة!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Prüfling!~~",
+            "a": "Der Prüfling ist bereit.",
+            "why": "العربية: «المترشّح» مذكّر فعلاً! والألمانية: der Prüfling (der! على -ling!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Erwartung!~~",
+            "a": "Die Erwartung ist klar.",
+            "why": "العربية: «التوقع» مذكّر! والألمانية: die Erwartung (die! -ung مؤنثة!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die psyche ist wichtig.~~",
+            "a": "Die Psyche ist wichtig.",
+            "why": "الخطأ في «psyche»! الصواب «Psyche» — راجع القاعدة (النفس (الحالة النفسية))."
+          },
+          {
+            "q": "~~Die resilienz hilft.~~",
+            "a": "Die Resilienz hilft.",
+            "why": "الخطأ في «resilienz»! الصواب «Resilienz» — راجع القاعدة (الصلابة النفسية (القدرة على التعافي))."
+          },
+          {
+            "q": "~~Der selbstwert ist wichtig.~~",
+            "a": "Der Selbstwert ist wichtig.",
+            "why": "الخطأ في «selbstwert»! الصواب «Selbstwert» — راجع القاعدة (تقدير الذات (قيمة الذات))."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "psyche",
+          "resilienz",
+          "selbstwert"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالتقييم الذاتي! (جملتان!)",
+            "a": "Die Selbsteinschätzung ist gut. Der Prüfling ist bereit.",
+            "why": "التقييم الذاتي أولًا!"
+          },
+          {
+            "q": "تحدّث عن الممتحَن (المترشّح)! (جملتان!)",
+            "a": "Der Prüfling ist bereit. Das ist gut.",
+            "why": "الممتحَن (المترشّح)!"
+          },
+          {
+            "q": "تحدّث عن التوقع! (جملتان!)",
+            "a": "Die Erwartung ist klar. die Erwartung hilft.",
+            "why": "التوقع — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Psyche» («النفس (الحالة النفسية)») ثم تحدّث بها.",
+            "a": "Die Psyche ist wichtig.",
+            "why": "استعمل «die Psyche» («النفس (الحالة النفسية)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Resilienz» («الصلابة النفسية (القدرة على التعافي)») ثم تحدّث بها.",
+            "a": "Die Resilienz hilft.",
+            "why": "استعمل «die Resilienz» («الصلابة النفسية (القدرة على التعافي)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Selbstwert» («تقدير الذات (قيمة الذات)») ثم تحدّث بها.",
+            "a": "Der Selbstwert ist wichtig.",
+            "why": "استعمل «der Selbstwert» («تقدير الذات (قيمة الذات)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "psyche",
+          "resilienz",
+          "selbstwert"
+        ],
+        "items": [
+          {
+            "audioId": "word-selbsteinschaetzung",
+            "speakText": "die Selbsteinschätzung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التقييم الذاتي",
+              "الممتحَن (المترشّح)",
+              "التوقع"
+            ],
+            "a": "التقييم الذاتي",
+            "why": "الصوت يقول «die Selbsteinschätzung» — معناها «التقييم الذاتي». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-pruefling",
+            "speakText": "der Prüfling.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الممتحَن (المترشّح)",
+              "التوقع",
+              "التقييم الذاتي"
+            ],
+            "a": "الممتحَن (المترشّح)",
+            "why": "الصوت يقول «der Prüfling» — معناها «الممتحَن (المترشّح)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-erwartung",
+            "speakText": "die Erwartung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التوقع",
+              "التقييم الذاتي",
+              "الممتحَن (المترشّح)"
+            ],
+            "a": "التوقع",
+            "why": "الصوت يقول «die Erwartung» — معناها «التوقع». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-psyche",
+            "speakText": "die Psyche.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "النفس (الحالة النفسية)",
+              "الصلابة النفسية (القدرة على التعافي)",
+              "التقييم الذاتي"
+            ],
+            "a": "النفس (الحالة النفسية)",
+            "why": "الكلمة المسموعة «die Psyche» تعني «النفس (الحالة النفسية)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-resilienz",
+            "speakText": "die Resilienz.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الصلابة النفسية (القدرة على التعافي)",
+              "تقدير الذات (قيمة الذات)",
+              "الممتحَن (المترشّح)"
+            ],
+            "a": "الصلابة النفسية (القدرة على التعافي)",
+            "why": "الكلمة المسموعة «die Resilienz» تعني «الصلابة النفسية (القدرة على التعافي)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-selbstwert",
+            "speakText": "der Selbstwert.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "تقدير الذات (قيمة الذات)",
+              "النفس (الحالة النفسية)",
+              "التوقع"
+            ],
+            "a": "تقدير الذات (قيمة الذات)",
+            "why": "الكلمة المسموعة «der Selbstwert» تعني «تقدير الذات (قيمة الذات)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-psyche",
+            "speakText": "die Psyche.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "النفس (الحالة النفسية)",
+              "الصلابة النفسية (القدرة على التعافي)",
+              "التقييم الذاتي"
+            ],
+            "a": "النفس (الحالة النفسية)",
+            "why": "الكلمة المسموعة «die Psyche» تعني «النفس (الحالة النفسية)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "psyche",
+          "resilienz"
+        ],
+        "items": [
+          {
+            "audioId": "word-selbsteinschaetzung",
+            "speakText": "die Selbsteinschätzung.",
+            "a": "die Selbsteinschätzung",
+            "why": "اكتب ما تسمعه حرفياً: «die Selbsteinschätzung» تعني «التقييم الذاتي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-pruefling",
+            "speakText": "der Prüfling.",
+            "a": "der Prüfling",
+            "why": "اكتب ما تسمعه حرفياً: «der Prüfling» تعني «الممتحَن (المترشّح)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-psyche",
+            "speakText": "die Psyche.",
+            "a": "die Psyche",
+            "why": "اكتب ما تسمعه حرفياً: «die Psyche» تعني «النفس (الحالة النفسية)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-resilienz",
+            "speakText": "die Resilienz.",
+            "a": "die Resilienz",
+            "why": "اكتب ما تسمعه حرفياً: «die Resilienz» تعني «الصلابة النفسية (القدرة على التعافي)». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التقييم الذاتي»؟",
+            "a": "die Selbsteinschätzung"
+          },
+          {
+            "q": "«الممتحَن (المترشّح)»؟",
+            "a": "der Prüfling"
+          },
+          {
+            "q": "«التوقع»؟",
+            "a": "die Erwartung"
+          },
+          {
+            "q": "«التقييم الذاتي جيد.»؟",
+            "a": "Die Selbsteinschätzung ist gut."
+          },
+          {
+            "q": "«المترشّح جاهز.»؟",
+            "a": "Der Prüfling ist bereit."
+          },
+          {
+            "q": "«التوقع واضح.»؟",
+            "a": "Die Erwartung ist klar."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Selbsteinschätzung",
+            "a": "التقييم الذاتي"
+          },
+          {
+            "q": "der Prüfling",
+            "a": "الممتحَن (المترشّح)"
+          },
+          {
+            "q": "die Erwartung",
+            "a": "التوقع"
+          },
+          {
+            "q": "«التوقع واضح.»؟",
+            "a": "Die Erwartung ist klar."
+          },
+          {
+            "q": "«المترشّح جاهز.»؟",
+            "a": "Der Prüfling ist bereit."
+          },
+          {
+            "q": "«التقييم الذاتي جيد.»؟",
+            "a": "Die Selbsteinschätzung ist gut."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«التوقع»؟",
+            "a": "die Erwartung"
+          },
+          {
+            "q": "«الممتحَن (المترشّح)»؟",
+            "a": "der Prüfling"
+          },
+          {
+            "q": "«التقييم الذاتي»؟",
+            "a": "die Selbsteinschätzung"
+          },
+          {
+            "q": "die Selbsteinschätzung",
+            "a": "التقييم الذاتي"
+          },
+          {
+            "q": "der Prüfling",
+            "a": "الممتحَن (المترشّح)"
+          },
+          {
+            "q": "die Erwartung",
+            "a": "التوقع"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Selbsteinschätzung ist gut. Der Prüfling ist bereit. Die Erwartung ist klar. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 13 (التكثيف والامتحان!) اليوم السادس: التقييم الذاتي والمترشّح والتوقع! نتعلّم اليوم: التقييم الذاتي والممتحَن (المترشّح) والتوقع!"
+    },
+    "srsBundleWordIds": [
+      "selbsteinschaetzung",
+      "pruefling",
+      "erwartung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Selbsteinschätzung!",
+          "de": "~~der Selbsteinschätzung ist gut.~~"
+        },
+        "correct": {
+          "ar": "die Selbsteinschätzung!",
+          "de": "Die Selbsteinschätzung ist gut."
+        },
+        "exercise": {
+          "q": "___ Selbsteinschätzung ist gut.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التقييم» مذكّر! والألمانية: die Selbsteinschätzung (die! -ung مؤنثة!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Prüfling!",
+          "de": "~~die Prüfling ist bereit.~~"
+        },
+        "correct": {
+          "ar": "der Prüfling!",
+          "de": "Der Prüfling ist bereit."
+        },
+        "exercise": {
+          "q": "___ Prüfling ist bereit.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «المترشّح» مذكّر فعلاً! والألمانية: der Prüfling (der! على -ling!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Erwartung!",
+          "de": "~~das Erwartung ist klar.~~"
+        },
+        "correct": {
+          "ar": "die Erwartung!",
+          "de": "Die Erwartung ist klar."
+        },
+        "exercise": {
+          "q": "___ Erwartung ist klar.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التوقع» مذكّر! والألمانية: die Erwartung (die! -ung مؤنثة!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Selbsteinschaetzung",
+      "https://www.duden.de/rechtschreibung/Pruefling",
+      "https://www.duden.de/rechtschreibung/Erwartung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-selbsteinschaetzung",
+    "word-pruefling",
+    "word-erwartung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 13 (التكثيف والامتحان!) التقييم الذاتي",
+    "goetheWordListOverlap": [
+      "selbsteinschaetzung",
+      "pruefling",
+      "erwartung"
+    ]
+  }
+}

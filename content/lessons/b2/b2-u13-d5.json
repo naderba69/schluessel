@@ -1,0 +1,603 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u13-d5",
+  "level": "B2",
+  "unit": 13,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Glaubwürdigkeit ist wichtig: die Korrektur kommt und der Durchgang ist vorbei!",
+    "ar": "الوحدة 13 (التكثيف والامتحان!) اليوم الخامس: المصداقية والتصحيح والدور!"
+  },
+  "canDoDaily": [
+    "يتحقق من المصداقية! (die Glaubwürdigkeit!)",
+    "يصف التصحيح والدور! (die Korrektur! der Durchgang!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "hygiene",
+      "ansteckung",
+      "immunsystem"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«المصداقية مهمة.»؟"
+        },
+        "choices": [
+          "Die Glaubwürdigkeit ist wichtig.",
+          "Der Glaubwürdigkeit ist wichtig.",
+          "Das Glaubwürdigkeit ist wichtig."
+        ],
+        "answer": "Die Glaubwürdigkeit ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "&التصحيح جاهز.»؟"
+        },
+        "choices": [
+          "Die Korrektur ist fertig.",
+          "Der Korrektur ist fertig.",
+          "Das Korrektur ist fertig."
+        ],
+        "answer": "Die Korrektur ist fertig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "glaubwuerdigkeit",
+      "korrektur",
+      "durchgang"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u13-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "auslaut-b",
+      "ch-ach-laut",
+      "double-consonant",
+      "ng-velar",
+      "r-uvular",
+      "umlaut-u",
+      "w-v"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Glaubwürdigkeit, Korrektur, Durchgang: Wir prüfen den Text!",
+        "ar": "اليوم الخامس من الوحدة 13! (المصداقية! التصحيح! الدور!)"
+      },
+      "situation": {
+        "de": "Glaubwürdigkeit, Korrektur, Durchgang — zusammen prüfen.",
+        "ar": "مصداقية! تصحيح! دور! — نفحص معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Glaubwürdigkeit (die! -keit!) وdie Korrektur (die! على -ur!) وder Durchgang (der! مركّب!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: die Glaubwürdigkeit prüfen! die Korrektur machen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hygiene",
+          "ansteckung",
+          "immunsystem"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Glaubwürdigkeit",
+                "ar": "المصداقية (الجدير بالتصديق)"
+              },
+              {
+                "de": "die Korrektur",
+                "ar": "التصحيح"
+              },
+              {
+                "de": "der Durchgang",
+                "ar": "الدور (الجولة في الامتحان)"
+              }
+            ],
+            "why": "die Glaubwürdigkeit المصداقية (الجدير بالتصديق) (die! -keit مؤنثة!) · die Korrektur التصحيح (die! die!) · der Durchgang الدور (الجولة في الامتحان) (der! der!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Hygiene",
+                "ar": "النظافة الصحية"
+              },
+              {
+                "de": "die Ansteckung",
+                "ar": "العدوى"
+              },
+              {
+                "de": "das Immunsystem",
+                "ar": "الجهاز المناعي"
+              }
+            ],
+            "why": "استدعاء سابق: die Hygiene النظافة الصحية · die Ansteckung العدوى · das Immunsystem الجهاز المناعي"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Glaubwürdigkeit",
+                "ar": "المصداقية (الجدير بالتصديق)"
+              },
+              {
+                "de": "die Hygiene",
+                "ar": "النظافة الصحية"
+              },
+              {
+                "de": "die Korrektur",
+                "ar": "التصحيح"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hygiene",
+          "ansteckung",
+          "immunsystem"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (المصداقية (الجدير بالتصديق)!)",
+            "a": "Glaubwürdigkeit",
+            "why": "die Glaubwürdigkeit المصداقية (الجدير بالتصديق) (die! -keit مؤنثة!) — Die Glaubwürdigkeit ist wichtig."
+          },
+          {
+            "q": "die ___ ist wichtig. (التصحيح!)",
+            "a": "Korrektur",
+            "why": "die Korrektur التصحيح (die! die!) — Die Korrektur ist fertig."
+          },
+          {
+            "q": "der ___ ist wichtig. (الدور (الجولة في الامتحان)!)",
+            "a": "Durchgang",
+            "why": "der Durchgang الدور (الجولة في الامتحان) (der! der!) — Der Durchgang ist vorbei."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Hygiene",
+            "why": "الكلمة الناقصة «Hygiene» تعني «النظافة الصحية» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist schlimm.",
+            "a": "Ansteckung",
+            "why": "الكلمة الناقصة «Ansteckung» تعني «العدوى» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist stark.",
+            "a": "Immunsystem",
+            "why": "الكلمة الناقصة «Immunsystem» تعني «الجهاز المناعي» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hygiene",
+          "ansteckung",
+          "immunsystem"
+        ],
+        "items": [
+          {
+            "q": "~~der Glaubwürdigkeit!~~",
+            "a": "Die Glaubwürdigkeit ist wichtig.",
+            "why": "العربية: «التصديق» مذكّر! والألمانية: die Glaubwürdigkeit (die! -keit مؤنثة!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Korrektur!~~",
+            "a": "Die Korrektur ist fertig.",
+            "why": "العربية: «التصحيح» مذكّر! والألمانية: die Korrektur (die! على -ur!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Durchgang!~~",
+            "a": "Der Durchgang ist vorbei.",
+            "why": "الألمانية: der Durchgang (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die hygiene ist wichtig.~~",
+            "a": "Die Hygiene ist wichtig.",
+            "why": "الخطأ في «hygiene»! الصواب «Hygiene» — راجع القاعدة (النظافة الصحية)."
+          },
+          {
+            "q": "~~Die ansteckung ist schlimm.~~",
+            "a": "Die Ansteckung ist schlimm.",
+            "why": "الخطأ في «ansteckung»! الصواب «Ansteckung» — راجع القاعدة (العدوى)."
+          },
+          {
+            "q": "~~Das immunsystem ist stark.~~",
+            "a": "Das Immunsystem ist stark.",
+            "why": "الخطأ في «immunsystem»! الصواب «Immunsystem» — راجع القاعدة (الجهاز المناعي)."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "hygiene",
+          "ansteckung",
+          "immunsystem"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالمصداقية (الجدير بالتصديق)! (جملتان!)",
+            "a": "Die Glaubwürdigkeit ist wichtig. Die Korrektur ist fertig.",
+            "why": "المصداقية (الجدير بالتصديق) أولًا!"
+          },
+          {
+            "q": "تحدّث عن التصحيح! (جملتان!)",
+            "a": "Die Korrektur ist fertig. Das ist gut.",
+            "why": "التصحيح — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "تحدّث عن الدور (الجولة في الامتحان)! (جملتان!)",
+            "a": "Der Durchgang ist vorbei. der Durchgang hilft.",
+            "why": "الدور (الجولة في الامتحان)!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Hygiene» («النظافة الصحية») ثم تحدّث بها.",
+            "a": "Die Hygiene ist wichtig.",
+            "why": "استعمل «die Hygiene» («النظافة الصحية») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Ansteckung» («العدوى») ثم تحدّث بها.",
+            "a": "Die Ansteckung ist schlimm.",
+            "why": "استعمل «die Ansteckung» («العدوى») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «das Immunsystem» («الجهاز المناعي») ثم تحدّث بها.",
+            "a": "Das Immunsystem ist stark.",
+            "why": "استعمل «das Immunsystem» («الجهاز المناعي») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "hygiene",
+          "ansteckung",
+          "immunsystem"
+        ],
+        "items": [
+          {
+            "audioId": "word-glaubwuerdigkeit",
+            "speakText": "die Glaubwürdigkeit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المصداقية (الجدير بالتصديق)",
+              "التصحيح",
+              "الدور (الجولة في الامتحان)"
+            ],
+            "a": "المصداقية (الجدير بالتصديق)",
+            "why": "الصوت يقول «die Glaubwürdigkeit» — معناها «المصداقية (الجدير بالتصديق)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-korrektur",
+            "speakText": "die Korrektur.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التصحيح",
+              "الدور (الجولة في الامتحان)",
+              "المصداقية (الجدير بالتصديق)"
+            ],
+            "a": "التصحيح",
+            "why": "الصوت يقول «die Korrektur» — معناها «التصحيح». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-durchgang",
+            "speakText": "der Durchgang.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الدور (الجولة في الامتحان)",
+              "المصداقية (الجدير بالتصديق)",
+              "التصحيح"
+            ],
+            "a": "الدور (الجولة في الامتحان)",
+            "why": "الصوت يقول «der Durchgang» — معناها «الدور (الجولة في الامتحان)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-hygiene",
+            "speakText": "die Hygiene.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "النظافة الصحية",
+              "العدوى",
+              "المصداقية (الجدير بالتصديق)"
+            ],
+            "a": "النظافة الصحية",
+            "why": "الكلمة المسموعة «die Hygiene» تعني «النظافة الصحية». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-ansteckung",
+            "speakText": "die Ansteckung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "العدوى",
+              "الجهاز المناعي",
+              "التصحيح"
+            ],
+            "a": "العدوى",
+            "why": "الكلمة المسموعة «die Ansteckung» تعني «العدوى». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-immunsystem",
+            "speakText": "das Immunsystem.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الجهاز المناعي",
+              "النظافة الصحية",
+              "الدور (الجولة في الامتحان)"
+            ],
+            "a": "الجهاز المناعي",
+            "why": "الكلمة المسموعة «das Immunsystem» تعني «الجهاز المناعي». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-hygiene",
+            "speakText": "die Hygiene.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "النظافة الصحية",
+              "العدوى",
+              "المصداقية (الجدير بالتصديق)"
+            ],
+            "a": "النظافة الصحية",
+            "why": "الكلمة المسموعة «die Hygiene» تعني «النظافة الصحية». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "hygiene",
+          "ansteckung"
+        ],
+        "items": [
+          {
+            "audioId": "word-glaubwuerdigkeit",
+            "speakText": "die Glaubwürdigkeit.",
+            "a": "die Glaubwürdigkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Glaubwürdigkeit» تعني «المصداقية (الجدير بالتصديق)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-korrektur",
+            "speakText": "die Korrektur.",
+            "a": "die Korrektur",
+            "why": "اكتب ما تسمعه حرفياً: «die Korrektur» تعني «التصحيح». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-hygiene",
+            "speakText": "die Hygiene.",
+            "a": "die Hygiene",
+            "why": "اكتب ما تسمعه حرفياً: «die Hygiene» تعني «النظافة الصحية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ansteckung",
+            "speakText": "die Ansteckung.",
+            "a": "die Ansteckung",
+            "why": "اكتب ما تسمعه حرفياً: «die Ansteckung» تعني «العدوى». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«المصداقية (الجدير بالتصديق)»؟",
+            "a": "die Glaubwürdigkeit"
+          },
+          {
+            "q": "«التصحيح»؟",
+            "a": "die Korrektur"
+          },
+          {
+            "q": "«الدور (الجولة في الامتحان)»؟",
+            "a": "der Durchgang"
+          },
+          {
+            "q": "«المصداقية مهمة.»؟",
+            "a": "Die Glaubwürdigkeit ist wichtig."
+          },
+          {
+            "q": "«التصحيح جاهز.»؟",
+            "a": "Die Korrektur ist fertig."
+          },
+          {
+            "q": "«الدور انتهى.»؟",
+            "a": "Der Durchgang ist vorbei."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Glaubwürdigkeit",
+            "a": "المصداقية (الجدير بالتصديق)"
+          },
+          {
+            "q": "die Korrektur",
+            "a": "التصحيح"
+          },
+          {
+            "q": "der Durchgang",
+            "a": "الدور (الجولة في الامتحان)"
+          },
+          {
+            "q": "«الدور انتهى.»؟",
+            "a": "Der Durchgang ist vorbei."
+          },
+          {
+            "q": "«التصحيح جاهز.»؟",
+            "a": "Die Korrektur ist fertig."
+          },
+          {
+            "q": "«المصداقية مهمة.»؟",
+            "a": "Die Glaubwürdigkeit ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الدور (الجولة في الامتحان)»؟",
+            "a": "der Durchgang"
+          },
+          {
+            "q": "«التصحيح»؟",
+            "a": "die Korrektur"
+          },
+          {
+            "q": "«المصداقية (الجدير بالتصديق)»؟",
+            "a": "die Glaubwürdigkeit"
+          },
+          {
+            "q": "die Glaubwürdigkeit",
+            "a": "المصداقية (الجدير بالتصديق)"
+          },
+          {
+            "q": "die Korrektur",
+            "a": "التصحيح"
+          },
+          {
+            "q": "der Durchgang",
+            "a": "الدور (الجولة في الامتحان)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Glaubwürdigkeit ist wichtig. Die Korrektur ist fertig. Der Durchgang ist vorbei. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 13 (التكثيف والامتحان!) اليوم الخامس: المصداقية والتصحيح والدور! نتعلّم اليوم: المصداقية (الجدير بالتصديق) والتصحيح والدور (الجولة في الامتحان)!"
+    },
+    "srsBundleWordIds": [
+      "glaubwuerdigkeit",
+      "korrektur",
+      "durchgang"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Glaubwürdigkeit!",
+          "de": "~~der Glaubwürdigkeit ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Glaubwürdigkeit!",
+          "de": "Die Glaubwürdigkeit ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Glaubwürdigkeit ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التصديق» مذكّر! والألمانية: die Glaubwürdigkeit (die! -keit مؤنثة!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Korrektur!",
+          "de": "~~der Korrektur ist fertig.~~"
+        },
+        "correct": {
+          "ar": "die Korrektur!",
+          "de": "Die Korrektur ist fertig."
+        },
+        "exercise": {
+          "q": "___ Korrektur ist fertig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التصحيح» مذكّر! والألمانية: die Korrektur (die! على -ur!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Durchgang!",
+          "de": "~~die Durchgang ist vorbei.~~"
+        },
+        "correct": {
+          "ar": "der Durchgang!",
+          "de": "Der Durchgang ist vorbei."
+        },
+        "exercise": {
+          "q": "___ Durchgang ist vorbei.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "الألمانية: der Durchgang (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Glaubwuerdigkeit",
+      "https://www.duden.de/rechtschreibung/Korrektur",
+      "https://www.duden.de/rechtschreibung/Durchgang"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-glaubwuerdigkeit",
+    "word-korrektur",
+    "word-durchgang"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 13 (التكثيف والامتحان!) المصداقية",
+    "goetheWordListOverlap": [
+      "glaubwuerdigkeit",
+      "korrektur",
+      "durchgang"
+    ]
+  }
+}

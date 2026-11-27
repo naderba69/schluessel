@@ -1,0 +1,604 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u13-d2",
+  "level": "B2",
+  "unit": 13,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Prüfungssimulation ist heute: die Gewichtung ist klar und das Zeitfenster ist kurz!",
+    "ar": "الوحدة 13 (التكثيف والامتحان!) اليوم الثاني: المحاكاة والتوزيع والمدة!"
+  },
+  "canDoDaily": [
+    "يجري محاكاة الامتحان! (die Prüfungssimulation!)",
+    "يصف التوزيع والمدة! (die Gewichtung! das Zeitfenster!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "druck",
+      "resilienz",
+      "wille"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«محاكاة الامتحان مهمة.»؟"
+        },
+        "choices": [
+          "Die Prüfungssimulation ist wichtig.",
+          "Der Prüfungssimulation ist wichtig.",
+          "Das Prüfungssimulation ist wichtig."
+        ],
+        "answer": "Die Prüfungssimulation ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "&المدة قصيرة.»؟"
+        },
+        "choices": [
+          "Das Zeitfenster ist kurz.",
+          "Die Zeitfenster ist kurz.",
+          "Der Zeitfenster ist kurz."
+        ],
+        "answer": "Das Zeitfenster ist kurz.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "pruefungssimulation",
+      "gewichtung",
+      "zeitfenster"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u13-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "ch-ach-laut",
+      "double-consonant",
+      "ng-velar",
+      "umlaut-u",
+      "v-f",
+      "vowel-long-short",
+      "w-v",
+      "z"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Prüfungssimulation, Gewichtung, Zeitfenster: Wir üben die Prüfung!",
+        "ar": "اليوم الثاني من الوحدة 13! (المحاكاة! التوزيع! المدة!)"
+      },
+      "situation": {
+        "de": "Prüfungssimulation, Gewichtung, Zeitfenster — zusammen üben.",
+        "ar": "محاكاة! توزيع! مدة! — نتمرّن معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Prüfungssimulation (die! مركّبة!) وdie Gewichtung (-ung!) وdas Zeitfenster (das! مركّب!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: eine Prüfungssimulation machen! die Gewichtung kennen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "druck",
+          "resilienz",
+          "wille"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Prüfungssimulation",
+                "ar": "محاكاة الامتحان"
+              },
+              {
+                "de": "die Gewichtung",
+                "ar": "التوزيع (الوزن النسبي)"
+              },
+              {
+                "de": "das Zeitfenster",
+                "ar": "النافذة الزمنية (المدة)"
+              }
+            ],
+            "why": "die Prüfungssimulation محاكاة الامتحان (die! die!) · die Gewichtung التوزيع (الوزن النسبي) (die! -ung مؤنثة!) · das Zeitfenster النافذة الزمنية (المدة) (das! das!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "der Druck",
+                "ar": "الضغط"
+              },
+              {
+                "de": "die Resilienz",
+                "ar": "الصلابة النفسية (القدرة على التعافي)"
+              },
+              {
+                "de": "der Wille",
+                "ar": "الإرادة (عزيمة الإرادة)"
+              }
+            ],
+            "why": "استدعاء سابق: der Druck الضغط · die Resilienz الصلابة النفسية (القدرة على التعافي) · der Wille الإرادة (عزيمة الإرادة)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Prüfungssimulation",
+                "ar": "محاكاة الامتحان"
+              },
+              {
+                "de": "der Druck",
+                "ar": "الضغط"
+              },
+              {
+                "de": "die Gewichtung",
+                "ar": "التوزيع (الوزن النسبي)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "druck",
+          "resilienz",
+          "wille"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (محاكاة الامتحان!)",
+            "a": "Prüfungssimulation",
+            "why": "die Prüfungssimulation محاكاة الامتحان (die! die!) — Die Prüfungssimulation ist wichtig."
+          },
+          {
+            "q": "die ___ ist wichtig. (التوزيع (الوزن النسبي)!)",
+            "a": "Gewichtung",
+            "why": "die Gewichtung التوزيع (الوزن النسبي) (die! -ung مؤنثة!) — Die Gewichtung ist klar."
+          },
+          {
+            "q": "das ___ ist wichtig. (النافذة الزمنية (المدة)!)",
+            "a": "Zeitfenster",
+            "why": "das Zeitfenster النافذة الزمنية (المدة) (das! das!) — Das Zeitfenster ist kurz."
+          },
+          {
+            "q": "Der ___ ist groß.",
+            "a": "Druck",
+            "why": "الكلمة الناقصة «Druck» تعني «الضغط» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ hilft.",
+            "a": "Resilienz",
+            "why": "الكلمة الناقصة «Resilienz» تعني «الصلابة النفسية (القدرة على التعافي)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist stark.",
+            "a": "Wille",
+            "why": "الكلمة الناقصة «Wille» تعني «الإرادة (عزيمة الإرادة)» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "druck",
+          "resilienz",
+          "wille"
+        ],
+        "items": [
+          {
+            "q": "~~der Prüfungssimulation!~~",
+            "a": "Die Prüfungssimulation ist wichtig.",
+            "why": "العربية: «المحاكاة» مذكّر! والألمانية: die Prüfungssimulation (die! مركّبة!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Gewichtung!~~",
+            "a": "Die Gewichtung ist klar.",
+            "why": "الألمانية: die Gewichtung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Zeitfenster!~~",
+            "a": "Das Zeitfenster ist kurz.",
+            "why": "العربية: «النافذة» مؤنثة! والألمانية: das Zeitfenster (das! مركّب محايد!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Der druck ist groß.~~",
+            "a": "Der Druck ist groß.",
+            "why": "الخطأ في «druck»! الصواب «Druck» — راجع القاعدة (الضغط)."
+          },
+          {
+            "q": "~~Die resilienz hilft.~~",
+            "a": "Die Resilienz hilft.",
+            "why": "الخطأ في «resilienz»! الصواب «Resilienz» — راجع القاعدة (الصلابة النفسية (القدرة على التعافي))."
+          },
+          {
+            "q": "~~Der wille ist stark.~~",
+            "a": "Der Wille ist stark.",
+            "why": "الخطأ في «wille»! الصواب «Wille» — راجع القاعدة (الإرادة (عزيمة الإرادة))."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "druck",
+          "resilienz",
+          "wille"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـمحاكاة الامتحان! (جملتان!)",
+            "a": "Die Prüfungssimulation ist wichtig. Die Gewichtung ist klar.",
+            "why": "محاكاة الامتحان أولًا!"
+          },
+          {
+            "q": "تحدّث عن التوزيع (الوزن النسبي)! (جملتان!)",
+            "a": "Die Gewichtung ist klar. Das ist gut.",
+            "why": "التوزيع (الوزن النسبي)!"
+          },
+          {
+            "q": "تحدّث عن النافذة الزمنية (المدة)! (جملتان!)",
+            "a": "Das Zeitfenster ist kurz. das Zeitfenster hilft.",
+            "why": "النافذة الزمنية (المدة)!"
+          },
+          {
+            "q": "كوّن جملة فيها «der Druck» («الضغط») ثم تحدّث بها.",
+            "a": "Der Druck ist groß.",
+            "why": "استعمل «der Druck» («الضغط») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Resilienz» («الصلابة النفسية (القدرة على التعافي)») ثم تحدّث بها.",
+            "a": "Die Resilienz hilft.",
+            "why": "استعمل «die Resilienz» («الصلابة النفسية (القدرة على التعافي)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Wille» («الإرادة (عزيمة الإرادة)») ثم تحدّث بها.",
+            "a": "Der Wille ist stark.",
+            "why": "استعمل «der Wille» («الإرادة (عزيمة الإرادة)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "druck",
+          "resilienz",
+          "wille"
+        ],
+        "items": [
+          {
+            "audioId": "word-pruefungssimulation",
+            "speakText": "die Prüfungssimulation.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "محاكاة الامتحان",
+              "التوزيع (الوزن النسبي)",
+              "النافذة الزمنية (المدة)"
+            ],
+            "a": "محاكاة الامتحان",
+            "why": "الصوت يقول «die Prüfungssimulation» — معناها «محاكاة الامتحان». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-gewichtung",
+            "speakText": "die Gewichtung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التوزيع (الوزن النسبي)",
+              "النافذة الزمنية (المدة)",
+              "محاكاة الامتحان"
+            ],
+            "a": "التوزيع (الوزن النسبي)",
+            "why": "الصوت يقول «die Gewichtung» — معناها «التوزيع (الوزن النسبي)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-zeitfenster",
+            "speakText": "das Zeitfenster.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "النافذة الزمنية (المدة)",
+              "محاكاة الامتحان",
+              "التوزيع (الوزن النسبي)"
+            ],
+            "a": "النافذة الزمنية (المدة)",
+            "why": "الصوت يقول «das Zeitfenster» — معناها «النافذة الزمنية (المدة)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-druck",
+            "speakText": "der Druck.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الضغط",
+              "الصلابة النفسية (القدرة على التعافي)",
+              "محاكاة الامتحان"
+            ],
+            "a": "الضغط",
+            "why": "الكلمة المسموعة «der Druck» تعني «الضغط». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-resilienz",
+            "speakText": "die Resilienz.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الصلابة النفسية (القدرة على التعافي)",
+              "الإرادة (عزيمة الإرادة)",
+              "التوزيع (الوزن النسبي)"
+            ],
+            "a": "الصلابة النفسية (القدرة على التعافي)",
+            "why": "الكلمة المسموعة «die Resilienz» تعني «الصلابة النفسية (القدرة على التعافي)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-wille",
+            "speakText": "der Wille.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الإرادة (عزيمة الإرادة)",
+              "الضغط",
+              "النافذة الزمنية (المدة)"
+            ],
+            "a": "الإرادة (عزيمة الإرادة)",
+            "why": "الكلمة المسموعة «der Wille» تعني «الإرادة (عزيمة الإرادة)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-druck",
+            "speakText": "der Druck.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الضغط",
+              "الصلابة النفسية (القدرة على التعافي)",
+              "محاكاة الامتحان"
+            ],
+            "a": "الضغط",
+            "why": "الكلمة المسموعة «der Druck» تعني «الضغط». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "druck",
+          "resilienz"
+        ],
+        "items": [
+          {
+            "audioId": "word-pruefungssimulation",
+            "speakText": "die Prüfungssimulation.",
+            "a": "die Prüfungssimulation",
+            "why": "اكتب ما تسمعه حرفياً: «die Prüfungssimulation» تعني «محاكاة الامتحان». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gewichtung",
+            "speakText": "die Gewichtung.",
+            "a": "die Gewichtung",
+            "why": "اكتب ما تسمعه حرفياً: «die Gewichtung» تعني «التوزيع (الوزن النسبي)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-druck",
+            "speakText": "der Druck.",
+            "a": "der Druck",
+            "why": "اكتب ما تسمعه حرفياً: «der Druck» تعني «الضغط». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-resilienz",
+            "speakText": "die Resilienz.",
+            "a": "die Resilienz",
+            "why": "اكتب ما تسمعه حرفياً: «die Resilienz» تعني «الصلابة النفسية (القدرة على التعافي)». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«محاكاة الامتحان»؟",
+            "a": "die Prüfungssimulation"
+          },
+          {
+            "q": "«التوزيع (الوزن النسبي)»؟",
+            "a": "die Gewichtung"
+          },
+          {
+            "q": "«النافذة الزمنية (المدة)»؟",
+            "a": "das Zeitfenster"
+          },
+          {
+            "q": "«محاكاة الامتحان مهمة.»؟",
+            "a": "Die Prüfungssimulation ist wichtig."
+          },
+          {
+            "q": "«التوزيع واضح.»؟",
+            "a": "Die Gewichtung ist klar."
+          },
+          {
+            "q": "«المدة قصيرة.»؟",
+            "a": "Das Zeitfenster ist kurz."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Prüfungssimulation",
+            "a": "محاكاة الامتحان"
+          },
+          {
+            "q": "die Gewichtung",
+            "a": "التوزيع (الوزن النسبي)"
+          },
+          {
+            "q": "das Zeitfenster",
+            "a": "النافذة الزمنية (المدة)"
+          },
+          {
+            "q": "«المدة قصيرة.»؟",
+            "a": "Das Zeitfenster ist kurz."
+          },
+          {
+            "q": "«التوزيع واضح.»؟",
+            "a": "Die Gewichtung ist klar."
+          },
+          {
+            "q": "«محاكاة الامتحان مهمة.»؟",
+            "a": "Die Prüfungssimulation ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«النافذة الزمنية (المدة)»؟",
+            "a": "das Zeitfenster"
+          },
+          {
+            "q": "«التوزيع (الوزن النسبي)»؟",
+            "a": "die Gewichtung"
+          },
+          {
+            "q": "«محاكاة الامتحان»؟",
+            "a": "die Prüfungssimulation"
+          },
+          {
+            "q": "die Prüfungssimulation",
+            "a": "محاكاة الامتحان"
+          },
+          {
+            "q": "die Gewichtung",
+            "a": "التوزيع (الوزن النسبي)"
+          },
+          {
+            "q": "das Zeitfenster",
+            "a": "النافذة الزمنية (المدة)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Prüfungssimulation ist wichtig. Die Gewichtung ist klar. Das Zeitfenster ist kurz. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 13 (التكثيف والامتحان!) اليوم الثاني: المحاكاة والتوزيع والمدة! نتعلّم اليوم: محاكاة الامتحان والتوزيع (الوزن النسبي) والنافذة الزمنية (المدة)!"
+    },
+    "srsBundleWordIds": [
+      "pruefungssimulation",
+      "gewichtung",
+      "zeitfenster"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Prüfungssimulation!",
+          "de": "~~der Prüfungssimulation ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Prüfungssimulation!",
+          "de": "Die Prüfungssimulation ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Prüfungssimulation ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «المحاكاة» مذكّر! والألمانية: die Prüfungssimulation (die! مركّبة!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Gewichtung!",
+          "de": "~~das Gewichtung ist klar.~~"
+        },
+        "correct": {
+          "ar": "die Gewichtung!",
+          "de": "Die Gewichtung ist klar."
+        },
+        "exercise": {
+          "q": "___ Gewichtung ist klar.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Gewichtung (die! -ung مؤنثة دائماً!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Zeitfenster!",
+          "de": "~~der Zeitfenster ist kurz.~~"
+        },
+        "correct": {
+          "ar": "das Zeitfenster!",
+          "de": "Das Zeitfenster ist kurz."
+        },
+        "exercise": {
+          "q": "___ Zeitfenster ist kurz.",
+          "a": "das"
+        },
+        "whyArabicSpeakerFails": "العربية: «النافذة» مؤنثة! والألمانية: das Zeitfenster (das! مركّب محايد!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Pruefungssimulation",
+      "https://www.duden.de/rechtschreibung/Gewichtung",
+      "https://www.duden.de/rechtschreibung/Zeitfenster"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-pruefungssimulation",
+    "word-gewichtung",
+    "word-zeitfenster"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 13 (التكثيف والامتحان!) محاكاة الامتحان",
+    "goetheWordListOverlap": [
+      "pruefungssimulation",
+      "gewichtung",
+      "zeitfenster"
+    ]
+  }
+}

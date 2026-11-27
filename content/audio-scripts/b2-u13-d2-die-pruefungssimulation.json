@@ -1,0 +1,64 @@
+{
+ "schemaVersion": "1.0.0",
+ "id": "b2-u13-d2-die-pruefungssimulation",
+ "kind": "dialogue",
+ "level": "B2",
+ "title": {
+  "de": "Die Prüfungssimulation",
+  "ar": "محاكاة الامتحان"
+ },
+ "usedIn": [
+  "b2-u13-d2"
+ ],
+ "lengthScale": 1.1,
+ "lines": [
+  {
+   "id": "b2u13d2-l1",
+   "speaker": "mueller",
+   "text": "Die Prüfungssimulation ist heute: die Gewichtung ist klar und das Zeitfenster ist kurz!",
+   "direction": "يوم المحاكاة"
+  },
+  {
+   "id": "b2u13d2-l2",
+   "speaker": "yusuf",
+   "text": "Was ist die Prüfungssimulation?",
+   "direction": "استفسار"
+  },
+  {
+   "id": "b2u13d2-l3",
+   "speaker": "mueller",
+   "text": "Die Prüfungssimulation ist ein Test wie die echte Prüfung.",
+   "direction": "تعريف"
+  },
+  {
+   "id": "b2u13d2-l4",
+   "speaker": "yusuf",
+   "text": "Und die Gewichtung?",
+   "direction": "استفسار"
+  },
+  {
+   "id": "b2u13d2-l5",
+   "speaker": "mueller",
+   "text": "Die Gewichtung zeigt: welcher Teil ist wichtig.",
+   "direction": "تفسير"
+  },
+  {
+   "id": "b2u13d2-l6",
+   "speaker": "yusuf",
+   "text": "Und das Zeitfenster?",
+   "direction": "استفسار"
+  },
+  {
+   "id": "b2u13d2-l7",
+   "speaker": "mueller",
+   "text": "Das Zeitfenster ist kurz — aber wir schaffen das!",
+   "direction": "مبدأ"
+  },
+  {
+   "id": "b2u13d2-l8",
+   "speaker": "yusuf",
+   "text": "Ich übe weiter!",
+   "direction": "إغلاق"
+  }
+ ]
+}

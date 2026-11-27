@@ -1,0 +1,601 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u13-d1",
+  "level": "B2",
+  "unit": 13,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Lernplan ist klar: die Fertigkeit wächst, und die Selbstkontrolle hilft!",
+    "ar": "الوحدة 13 (التكثيف والامتحان!) اليوم الأول: خطة التعلّم والمهارات وضبط النفس!"
+  },
+  "canDoDaily": [
+    "يضع خطة تعلّم! (der Lernplan!)",
+    "يصف المهارة وضبط النفس! (die Fertigkeit! die Selbstkontrolle!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "psyche",
+      "trost",
+      "ausdauer"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«خطة التعلّم واضحة.»؟"
+        },
+        "choices": [
+          "Der Lernplan ist klar.",
+          "Das Lernplan ist klar.",
+          "Die Lernplan ist klar."
+        ],
+        "answer": "Der Lernplan ist klar.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "&المهارة مهمة.»؟"
+        },
+        "choices": [
+          "Die Fertigkeit ist wichtig.",
+          "Der Fertigkeit ist wichtig.",
+          "Das Fertigkeit ist wichtig."
+        ],
+        "answer": "Die Fertigkeit ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "lernplan",
+      "fertigkeit",
+      "selbstkontrolle"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u13-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": [
+      "double-consonant",
+      "r-uvular",
+      "sp-st-initial",
+      "v-f",
+      "z"
+    ]
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Lernplan, Fertigkeit, Selbstkontrolle: Wir planen die Woche!",
+        "ar": "اليوم الأول من الوحدة 13! (الخطة! المهارة! ضبط النفس!)"
+      },
+      "situation": {
+        "de": "Lernplan, Fertigkeit, Selbstkontrolle — zusammen lernen.",
+        "ar": "خطة! مهارة! ضبط نفس! — نتعلّم معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "der Lernplan (der! مركّب!) وdie Fertigkeit (-keit!) وdie Selbstkontrolle (die! على -e!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: einen Lernplan machen! Selbstkontrolle zeigen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "psyche",
+          "trost",
+          "ausdauer"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "der Lernplan",
+                "ar": "خطة التعلّم"
+              },
+              {
+                "de": "die Fertigkeit",
+                "ar": "المهارة"
+              },
+              {
+                "de": "die Selbstkontrolle",
+                "ar": "ضبط النفس (المراقبة الذاتية)"
+              }
+            ],
+            "why": "der Lernplan خطة التعلّم (der! der!) · die Fertigkeit المهارة (die! -keit مؤنثة!) · die Selbstkontrolle ضبط النفس (المراقبة الذاتية) (die! -e مؤنثة!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Psyche",
+                "ar": "النفس (الحالة النفسية)"
+              },
+              {
+                "de": "der Trost",
+                "ar": "المواساة (سلوى العزاء)"
+              },
+              {
+                "de": "die Ausdauer",
+                "ar": "المثابرة (القدرة على التحمّل)"
+              }
+            ],
+            "why": "استدعاء سابق: die Psyche النفس (الحالة النفسية) · der Trost المواساة (سلوى العزاء) · die Ausdauer المثابرة (القدرة على التحمّل)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "der Lernplan",
+                "ar": "خطة التعلّم"
+              },
+              {
+                "de": "die Psyche",
+                "ar": "النفس (الحالة النفسية)"
+              },
+              {
+                "de": "die Fertigkeit",
+                "ar": "المهارة"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "psyche",
+          "trost",
+          "ausdauer"
+        ],
+        "items": [
+          {
+            "q": "der ___ ist wichtig. (خطة التعلّم!)",
+            "a": "Lernplan",
+            "why": "der Lernplan خطة التعلّم (der! der!) — Der Lernplan ist klar."
+          },
+          {
+            "q": "die ___ ist wichtig. (المهارة!)",
+            "a": "Fertigkeit",
+            "why": "die Fertigkeit المهارة (die! -keit مؤنثة!) — Die Fertigkeit ist wichtig."
+          },
+          {
+            "q": "die ___ ist wichtig. (ضبط النفس (المراقبة الذاتية)!)",
+            "a": "Selbstkontrolle",
+            "why": "die Selbstkontrolle ضبط النفس (المراقبة الذاتية) (die! -e مؤنثة!) — Die Selbstkontrolle hilft."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Psyche",
+            "why": "الكلمة الناقصة «Psyche» تعني «النفس (الحالة النفسية)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ hilft.",
+            "a": "Trost",
+            "why": "الكلمة الناقصة «Trost» تعني «المواساة (سلوى العزاء)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist stark.",
+            "a": "Ausdauer",
+            "why": "الكلمة الناقصة «Ausdauer» تعني «المثابرة (القدرة على التحمّل)» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "psyche",
+          "trost",
+          "ausdauer"
+        ],
+        "items": [
+          {
+            "q": "~~die Lernplan!~~",
+            "a": "Der Lernplan ist klar.",
+            "why": "العربية: «الخطة» مؤنثة! والألمانية: der Lernplan (der! مركّب مذكّر!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Fertigkeit!~~",
+            "a": "Die Fertigkeit ist wichtig.",
+            "why": "الألمانية: die Fertigkeit (die! -keit مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Selbstkontrolle!~~",
+            "a": "Die Selbstkontrolle hilft.",
+            "why": "العربية: «الضبط» مذكّر! والألمانية: die Selbstkontrolle (die! على -e!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die psyche ist wichtig.~~",
+            "a": "Die Psyche ist wichtig.",
+            "why": "الخطأ في «psyche»! الصواب «Psyche» — راجع القاعدة (النفس (الحالة النفسية))."
+          },
+          {
+            "q": "~~Der trost hilft.~~",
+            "a": "Der Trost hilft.",
+            "why": "الخطأ في «trost»! الصواب «Trost» — راجع القاعدة (المواساة (سلوى العزاء))."
+          },
+          {
+            "q": "~~Die ausdauer ist stark.~~",
+            "a": "Die Ausdauer ist stark.",
+            "why": "الخطأ في «ausdauer»! الصواب «Ausdauer» — راجع القاعدة (المثابرة (القدرة على التحمّل))."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "psyche",
+          "trost",
+          "ausdauer"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـخطة التعلّم! (جملتان!)",
+            "a": "Der Lernplan ist klar. Die Fertigkeit ist wichtig.",
+            "why": "خطة التعلّم أولًا!"
+          },
+          {
+            "q": "تحدّث عن المهارة! (جملتان!)",
+            "a": "Die Fertigkeit ist wichtig. Das ist gut.",
+            "why": "المهارة — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "تحدّث عن ضبط النفس (المراقبة الذاتية)! (جملتان!)",
+            "a": "Die Selbstkontrolle hilft. die Selbstkontrolle hilft.",
+            "why": "ضبط النفس (المراقبة الذاتية)!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Psyche» («النفس (الحالة النفسية)») ثم تحدّث بها.",
+            "a": "Die Psyche ist wichtig.",
+            "why": "استعمل «die Psyche» («النفس (الحالة النفسية)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Trost» («المواساة (سلوى العزاء)») ثم تحدّث بها.",
+            "a": "Der Trost hilft.",
+            "why": "استعمل «der Trost» («المواساة (سلوى العزاء)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Ausdauer» («المثابرة (القدرة على التحمّل)») ثم تحدّث بها.",
+            "a": "Die Ausdauer ist stark.",
+            "why": "استعمل «die Ausdauer» («المثابرة (القدرة على التحمّل)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "psyche",
+          "trost",
+          "ausdauer"
+        ],
+        "items": [
+          {
+            "audioId": "word-lernplan",
+            "speakText": "der Lernplan.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "خطة التعلّم",
+              "المهارة",
+              "ضبط النفس (المراقبة الذاتية)"
+            ],
+            "a": "خطة التعلّم",
+            "why": "الصوت يقول «der Lernplan» — معناها «خطة التعلّم». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-fertigkeit",
+            "speakText": "die Fertigkeit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المهارة",
+              "ضبط النفس (المراقبة الذاتية)",
+              "خطة التعلّم"
+            ],
+            "a": "المهارة",
+            "why": "الصوت يقول «die Fertigkeit» — معناها «المهارة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-selbstkontrolle",
+            "speakText": "die Selbstkontrolle.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "ضبط النفس (المراقبة الذاتية)",
+              "خطة التعلّم",
+              "المهارة"
+            ],
+            "a": "ضبط النفس (المراقبة الذاتية)",
+            "why": "الصوت يقول «die Selbstkontrolle» — معناها «ضبط النفس (المراقبة الذاتية)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-psyche",
+            "speakText": "die Psyche.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "النفس (الحالة النفسية)",
+              "المواساة (سلوى العزاء)",
+              "خطة التعلّم"
+            ],
+            "a": "النفس (الحالة النفسية)",
+            "why": "الكلمة المسموعة «die Psyche» تعني «النفس (الحالة النفسية)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-trost",
+            "speakText": "der Trost.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "المواساة (سلوى العزاء)",
+              "المثابرة (القدرة على التحمّل)",
+              "المهارة"
+            ],
+            "a": "المواساة (سلوى العزاء)",
+            "why": "الكلمة المسموعة «der Trost» تعني «المواساة (سلوى العزاء)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-ausdauer",
+            "speakText": "die Ausdauer.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "المثابرة (القدرة على التحمّل)",
+              "النفس (الحالة النفسية)",
+              "ضبط النفس (المراقبة الذاتية)"
+            ],
+            "a": "المثابرة (القدرة على التحمّل)",
+            "why": "الكلمة المسموعة «die Ausdauer» تعني «المثابرة (القدرة على التحمّل)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-psyche",
+            "speakText": "die Psyche.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "النفس (الحالة النفسية)",
+              "المواساة (سلوى العزاء)",
+              "خطة التعلّم"
+            ],
+            "a": "النفس (الحالة النفسية)",
+            "why": "الكلمة المسموعة «die Psyche» تعني «النفس (الحالة النفسية)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "psyche",
+          "trost"
+        ],
+        "items": [
+          {
+            "audioId": "word-lernplan",
+            "speakText": "der Lernplan.",
+            "a": "der Lernplan",
+            "why": "اكتب ما تسمعه حرفياً: «der Lernplan» تعني «خطة التعلّم». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-fertigkeit",
+            "speakText": "die Fertigkeit.",
+            "a": "die Fertigkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Fertigkeit» تعني «المهارة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-psyche",
+            "speakText": "die Psyche.",
+            "a": "die Psyche",
+            "why": "اكتب ما تسمعه حرفياً: «die Psyche» تعني «النفس (الحالة النفسية)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-trost",
+            "speakText": "der Trost.",
+            "a": "der Trost",
+            "why": "اكتب ما تسمعه حرفياً: «der Trost» تعني «المواساة (سلوى العزاء)». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«خطة التعلّم»؟",
+            "a": "der Lernplan"
+          },
+          {
+            "q": "«المهارة»؟",
+            "a": "die Fertigkeit"
+          },
+          {
+            "q": "«ضبط النفس (المراقبة الذاتية)»؟",
+            "a": "die Selbstkontrolle"
+          },
+          {
+            "q": "«خطة التعلّم واضحة.»؟",
+            "a": "Der Lernplan ist klar."
+          },
+          {
+            "q": "«المهارة مهمة.»؟",
+            "a": "Die Fertigkeit ist wichtig."
+          },
+          {
+            "q": "«ضبط النفس يساعد.»؟",
+            "a": "Die Selbstkontrolle hilft."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "der Lernplan",
+            "a": "خطة التعلّم"
+          },
+          {
+            "q": "die Fertigkeit",
+            "a": "المهارة"
+          },
+          {
+            "q": "die Selbstkontrolle",
+            "a": "ضبط النفس (المراقبة الذاتية)"
+          },
+          {
+            "q": "«ضبط النفس يساعد.»؟",
+            "a": "Die Selbstkontrolle hilft."
+          },
+          {
+            "q": "«المهارة مهمة.»؟",
+            "a": "Die Fertigkeit ist wichtig."
+          },
+          {
+            "q": "«خطة التعلّم واضحة.»؟",
+            "a": "Der Lernplan ist klar."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«ضبط النفس (المراقبة الذاتية)»؟",
+            "a": "die Selbstkontrolle"
+          },
+          {
+            "q": "«المهارة»؟",
+            "a": "die Fertigkeit"
+          },
+          {
+            "q": "«خطة التعلّم»؟",
+            "a": "der Lernplan"
+          },
+          {
+            "q": "der Lernplan",
+            "a": "خطة التعلّم"
+          },
+          {
+            "q": "die Fertigkeit",
+            "a": "المهارة"
+          },
+          {
+            "q": "die Selbstkontrolle",
+            "a": "ضبط النفس (المراقبة الذاتية)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Lernplan ist klar. Die Fertigkeit ist wichtig. Die Selbstkontrolle hilft. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 13 (التكثيف والامتحان!) اليوم الأول: خطة التعلّم والمهارات وضبط النفس! نتعلّم اليوم: خطة التعلّم والمهارة وضبط النفس (المراقبة الذاتية)!"
+    },
+    "srsBundleWordIds": [
+      "lernplan",
+      "fertigkeit",
+      "selbstkontrolle"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Lernplan!",
+          "de": "~~die Lernplan ist klar.~~"
+        },
+        "correct": {
+          "ar": "der Lernplan!",
+          "de": "Der Lernplan ist klar."
+        },
+        "exercise": {
+          "q": "___ Lernplan ist klar.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الخطة» مؤنثة! والألمانية: der Lernplan (der! مركّب مذكّر!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Fertigkeit!",
+          "de": "~~der Fertigkeit ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Fertigkeit!",
+          "de": "Die Fertigkeit ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Fertigkeit ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Fertigkeit (die! -keit مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Selbstkontrolle!",
+          "de": "~~das Selbstkontrolle hilft.~~"
+        },
+        "correct": {
+          "ar": "die Selbstkontrolle!",
+          "de": "Die Selbstkontrolle hilft."
+        },
+        "exercise": {
+          "q": "___ Selbstkontrolle hilft.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الضبط» مذكّر! والألمانية: die Selbstkontrolle (die! على -e!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Lernplan",
+      "https://www.duden.de/rechtschreibung/Fertigkeit",
+      "https://www.duden.de/rechtschreibung/Selbstkontrolle"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-lernplan",
+    "word-fertigkeit",
+    "word-selbstkontrolle"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 13 (التكثيف والامتحان!) خطة التعلّم",
+    "goetheWordListOverlap": [
+      "lernplan",
+      "fertigkeit",
+      "selbstkontrolle"
+    ]
+  }
+}
