@@ -55,7 +55,10 @@
   "praesentation": {
     "wordIds": [
       "rueckkehr",
-      "unvergesslich"
+      "unvergesslich",
+      "fasching",
+      "auftritt",
+      "sand"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -72,7 +75,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Die Rückkehr war unvergesslich!",
+        "de": "Die Rückkehr war unvergesslich! Der Fasching ist laut. Der Auftritt ist kurz, und der Sand ist warm.",
         "ar": "يكتب توليف الوحدة 6 في 8 جمل!"
       },
       "situation": {
@@ -80,7 +83,7 @@
         "ar": "العودة: الرحلة! الوداع! ما لا يُنسى!"
       },
       "successCriteria": [
-        "الكلمتان الجديدتان + خيوط الوحدة الخمسة!",
+        "الكلمات الخمس + خيوط الوحدة الخمسة!",
         "«hätte gern» للطلب! «Könnte ich …?» للتهذيب!",
         "«hätte + التصريف الثالث» للماضي الافتراضي! «hätte + مصدرين» مع الأدوات!",
         "«wenn + حرف كان» للشرط غير الواقعي!"
@@ -171,6 +174,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: das Seminar = «الندوة» · das Diplom = «الشهادة (الجامعية)» · der Lebenslauf = «السيرة الذاتية»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "كرنفال الشتاء",
+                "de": "der Fasching"
+              },
+              {
+                "ar": "الظهور (على المسرح)",
+                "de": "der Auftritt"
+              },
+              {
+                "ar": "الرمل",
+                "de": "der Sand"
+              }
+            ],
+            "why": "der Fasching كرنفال الشتاء · der Auftritt الظهور (على المسرح) · der Sand الرمل (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -231,6 +251,21 @@
             "q": "Sie liebt ihre ___.",
             "a": "Arbeit",
             "why": "الكلمة الناقصة «Arbeit» تعني «العمل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist laut. (كرنفال الشتاء!)",
+            "a": "Fasching",
+            "why": "der Fasching كرنفال الشتاء (der! مذكّر (der!) وجمعه die Faschinge — وفي سويسرا: die Fasnacht (وبديل: der Karneval!).) — Der Fasching ist laut."
+          },
+          {
+            "q": "Der ___ ist kurz. (الظهور!)",
+            "a": "Auftritt",
+            "why": "der Auftritt الظهور (على المسرح) (der! مذكّر (der!) وجمعه die Auftritte.) — Der Auftritt ist kurz."
+          },
+          {
+            "q": "Der ___ ist warm. (الرمل!)",
+            "a": "Sand",
+            "why": "der Sand الرمل (der! يُستعمل عادةً بلا جمع: der Sand.) — Der Sand ist warm."
           }
         ]
       },
@@ -276,6 +311,21 @@
             "q": "~~Das ist die regel.~~",
             "a": "Das ist die Regel.",
             "why": "الخطأ في «regel»! الصواب «Regel» — راجع القاعدة (قاعدة)."
+          },
+          {
+            "q": "~~die Fasching ist laut~~",
+            "a": "der Fasching ist laut",
+            "why": "الألمانية: der Fasching (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Auftritt ist kurz~~",
+            "a": "der Auftritt ist kurz",
+            "why": "الألمانية: der Auftritt (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Sand ist warm~~",
+            "a": "der Sand ist warm",
+            "why": "الألمانية: der Sand (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -326,6 +376,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Fasching · der Auftritt · der Sand)",
+            "a": "Der Fasching ist laut. Der Auftritt ist kurz, und der Sand ist warm.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -405,6 +460,42 @@
             ],
             "a": "Wirklich!",
             "why": "«يوسف» في الحوار: تأكيد"
+          },
+          {
+            "audioId": "word-fasching",
+            "speakText": "der Fasching.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "كرنفال الشتاء",
+              "الظهور (على المسرح)",
+              "الرمل"
+            ],
+            "a": "كرنفال الشتاء",
+            "why": "الصوت يقول «der Fasching» — معناها «كرنفال الشتاء». ركّز!"
+          },
+          {
+            "audioId": "word-auftritt",
+            "speakText": "der Auftritt.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الظهور (على المسرح)",
+              "كرنفال الشتاء",
+              "الرمل"
+            ],
+            "a": "الظهور (على المسرح)",
+            "why": "الصوت يقول «der Auftritt» — معناها «الظهور (على المسرح)». ركّز!"
+          },
+          {
+            "audioId": "word-sand",
+            "speakText": "der Sand.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الرمل",
+              "كرنفال الشتاء",
+              "الظهور (على المسرح)"
+            ],
+            "a": "الرمل",
+            "why": "الصوت يقول «der Sand» — معناها «الرمل». ركّز!"
           }
         ]
       },
@@ -432,6 +523,24 @@
             "speakText": "verbringen.",
             "a": "verbringen",
             "why": "اكتب المسموع بدقة: verbringen — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-fasching",
+            "speakText": "der Fasching.",
+            "a": "der Fasching",
+            "why": "اكتب ما تسمعه حرفياً: «der Fasching» تعني «كرنفال الشتاء». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-auftritt",
+            "speakText": "der Auftritt.",
+            "a": "der Auftritt",
+            "why": "اكتب ما تسمعه حرفياً: «der Auftritt» تعني «الظهور (على المسرح)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-sand",
+            "speakText": "der Sand.",
+            "a": "der Sand",
+            "why": "اكتب ما تسمعه حرفياً: «der Sand» تعني «الرمل». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -470,6 +579,21 @@
           {
             "q": "«الرحلة العائدة»؟",
             "a": "die Rückkehr"
+          },
+          {
+            "q": "Der ___ ist laut. (كرنفال الشتاء!)",
+            "a": "Fasching",
+            "why": "der Fasching كرنفال الشتاء (der! مذكّر (der!) وجمعه die Faschinge — وفي سويسرا: die Fasnacht (وبديل: der Karneval!).) — Der Fasching ist laut."
+          },
+          {
+            "q": "Der ___ ist kurz. (الظهور!)",
+            "a": "Auftritt",
+            "why": "der Auftritt الظهور (على المسرح) (der! مذكّر (der!) وجمعه die Auftritte.) — Der Auftritt ist kurz."
+          },
+          {
+            "q": "Der ___ ist warm. (الرمل!)",
+            "a": "Sand",
+            "why": "der Sand الرمل (der! يُستعمل عادةً بلا جمع: der Sand.) — Der Sand ist warm."
           }
         ],
         "passingScore": 0.75
@@ -499,6 +623,21 @@
           {
             "q": "«لا يُنسى»؟",
             "a": "unvergesslich"
+          },
+          {
+            "q": "Der ___ ist laut. (كرنفال الشتاء!)",
+            "a": "Fasching",
+            "why": "der Fasching كرنفال الشتاء (der! مذكّر (der!) وجمعه die Faschinge — وفي سويسرا: die Fasnacht (وبديل: der Karneval!).) — Der Fasching ist laut."
+          },
+          {
+            "q": "Der ___ ist kurz. (الظهور!)",
+            "a": "Auftritt",
+            "why": "der Auftritt الظهور (على المسرح) (der! مذكّر (der!) وجمعه die Auftritte.) — Der Auftritt ist kurz."
+          },
+          {
+            "q": "Der ___ ist warm. (الرمل!)",
+            "a": "Sand",
+            "why": "der Sand الرمل (der! يُستعمل عادةً بلا جمع: der Sand.) — Der Sand ist warm."
           }
         ],
         "passingScore": 0.75
@@ -528,6 +667,21 @@
           {
             "q": "«لا يُنسى»؟",
             "a": "unvergesslich"
+          },
+          {
+            "q": "Der ___ ist laut. (كرنفال الشتاء!)",
+            "a": "Fasching",
+            "why": "der Fasching كرنفال الشتاء (der! مذكّر (der!) وجمعه die Faschinge — وفي سويسرا: die Fasnacht (وبديل: der Karneval!).) — Der Fasching ist laut."
+          },
+          {
+            "q": "Der ___ ist kurz. (الظهور!)",
+            "a": "Auftritt",
+            "why": "der Auftritt الظهور (على المسرح) (der! مذكّر (der!) وجمعه die Auftritte.) — Der Auftritt ist kurz."
+          },
+          {
+            "q": "Der ___ ist warm. (الرمل!)",
+            "a": "Sand",
+            "why": "der Sand الرمل (der! يُستعمل عادةً بلا جمع: der Sand.) — Der Sand ist warm."
           }
         ],
         "passingScore": 0.75
@@ -536,12 +690,15 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Die Rückkehr ist heute. Ich hätte gern einen Ausflug ins Tal gemacht. Könnte ich bitte die Fahrkarte haben? Wenn ich mehr Bargeld hätte, könnte ich mehr kaufen. Hätten Sie mir helfen können? Ich hätte eine Beschwerde: Der Koffer hat einen Schaden. Das Fundbüro hat alles gefunden. Ich verabschiede mich. Die Reise war unvergesslich! Danke für alles!",
-      "ar": "مرحباً! العودة اليوم. كنتُ أودّ أن أقضي رحلةً إلى الوادي. هل يمكنني الحصول على تذكرة السفر؟ لو كان لديّ نقود أكثر، لاستطعت الشراء أكثر. هل كان بإمكانكم مساعدتي؟ لديّ شكوى: الحقيبة بها عطب. مكتب المفقودات وجد كل شيء. أودّع. الرحلة كانت ما لا يُنسى! شكراً على كل شيء!"
+      "de": "Guten Tag! Die Rückkehr ist heute. Ich hätte gern einen Ausflug ins Tal gemacht. Könnte ich bitte die Fahrkarte haben? Wenn ich mehr Bargeld hätte, könnte ich mehr kaufen. Hätten Sie mir helfen können? Ich hätte eine Beschwerde: Der Koffer hat einen Schaden. Das Fundbüro hat alles gefunden. Ich verabschiede mich. Die Reise war unvergesslich! Danke für alles! Der Fasching ist laut. Der Auftritt ist kurz. Der Sand ist warm.",
+      "ar": "مرحباً! العودة اليوم. كنتُ أودّ أن أقضي رحلةً إلى الوادي. هل يمكنني الحصول على تذكرة السفر؟ لو كان لديّ نقود أكثر، لاستطعت الشراء أكثر. هل كان بإمكانكم مساعدتي؟ لديّ شكوى: الحقيبة بها عطب. مكتب المفقودات وجد كل شيء. أودّع. الرحلة كانت ما لا يُنسى! شكراً على كل شيء! كرنفال الشتاء صاخب. الظهور قصير. الرمل دافئ."
     },
     "srsBundleWordIds": [
       "rueckkehr",
-      "unvergesslich"
+      "unvergesslich",
+      "fasching",
+      "auftritt",
+      "sand"
     ],
     "warningCards": [
       {
@@ -606,14 +763,20 @@
   ],
   "audioManifestRefs": [
     "word-rueckkehr",
-    "word-unvergesslich"
+    "word-unvergesslich",
+    "word-fasching",
+    "word-auftritt",
+    "word-sand"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (التواصل اليومي — التوليف!)",
     "goetheWordListOverlap": [
       "rueckkehr",
-      "unvergesslich"
+      "unvergesslich",
+      "fasching",
+      "auftritt",
+      "sand"
     ]
   }
 }

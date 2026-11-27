@@ -66,7 +66,9 @@
       "erhoehen",
       "unterlagen",
       "strom",
-      "abstimmen"
+      "abstimmen",
+      "stecker",
+      "grundstueck"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Wie viel kostet die Wohnung? Das ist mir zu teuer!",
+        "de": "Wie viel kostet die Wohnung? Das ist mir zu teuer! Der Stecker ist hier. Das Grundstück ist groß.",
         "ar": "يتصل بسمسار: يسأل عن الشقة ويتفاوض على السعر!"
       },
       "situation": {
@@ -189,6 +191,23 @@
               }
             ],
             "why": "die Unterlagen الأوراق (جمع فقط!) · der Strom الكهرباء (في die Rechnung!) · abstimmen يتناسق (stimmt ab/stimmte ab!) — ومراجعة: das Zimmer الغرفة!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "القابس (الكهربائي)",
+                "de": "der Stecker"
+              },
+              {
+                "ar": "القطعة الأرضية",
+                "de": "das Grundstück"
+              },
+              {
+                "ar": "يتناسق (مع)",
+                "de": "abstimmen"
+              }
+            ],
+            "why": "der Stecker القابس (الكهربائي) · das Grundstück القطعة الأرضية · abstimmen يتناسق (مع) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -234,6 +253,16 @@
             "q": "Ich ___ die Wohnung übernehmen.",
             "a": "möchte",
             "why": "«etwas übernehmen» يتسلّم/يتنازل — مع möchte الطلب المهذب! (مراجعة: übernehmen!)"
+          },
+          {
+            "q": "Der ___ ist hier. (القابس!)",
+            "a": "Stecker",
+            "why": "der Stecker القابس (الكهربائي) (der! مذكّر (der!) وجمعه die Stecker (بلا تغيير!).) — Der Stecker ist hier."
+          },
+          {
+            "q": "Das ___ ist groß. (القطعة الأرضية!)",
+            "a": "Grundstück",
+            "why": "das Grundstück القطعة الأرضية (das! مركّب (Grund+Stück) محايد (das!) وجمعه die Grundstücke.) — Das Grundstück ist groß."
           }
         ]
       },
@@ -268,6 +297,16 @@
             "q": "~~Ich habe ein Auto Gemietet.~~",
             "a": "Ich habe ein Auto gemietet.",
             "why": "الخطأ في «Gemietet»! الصواب «gemietet» — راجع القاعدة (يستأجر)."
+          },
+          {
+            "q": "~~die Stecker ist hier~~",
+            "a": "der Stecker ist hier",
+            "why": "الألمانية: der Stecker (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Grundstück ist groß~~",
+            "a": "das Grundstück ist groß",
+            "why": "الألمانية: das Grundstück (das! مركّب محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -288,6 +327,11 @@
             "q": "أنت تتصل بسمسار (سجّل المكالمة): 8 جمل — Anrede! + السؤال عن المبلغ! + الرفض المهذب! + سقفك! + تقديرك! + الرفض لرفع السعر! + الرغبة بالتنازل! + Gruß!",
             "a": "Guten Tag. Ich bin interessiert an der Wohnung. Wie hoch ist die Summe? Das ist mir zu teuer. Höchstens 600 Euro, ungefähr. Der Preis ist endgültig: Sie können ihn nicht erhöhen. Ich möchte die Wohnung übernehmen und nicht mieten. Die Unterlagen schicke ich morgen. Mit freundlichen Grüßen",
             "why": "توليف المكالمة (B1): Anrede! + interessiert مهتم + Summe المبلغ + zu teuer التليين! + höchstens السقف! + ungefähr التقدير! + endgültig النهائي + erhöhen يرفع (الرفض!) + übernehmen التنازل + Unterlagen الأوراق + Gruß الثابت — مكالمة تفاوض كاملة! (قواعد التفاوض 10‑ي)"
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Stecker · das Grundstück)",
+            "a": "Der Stecker ist hier. Das Grundstück ist groß.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -381,6 +425,30 @@
             ],
             "a": "Ich hoffe. Das Angebot ist gut.",
             "why": "«يوسف» في الحوار: أمل"
+          },
+          {
+            "audioId": "word-stecker",
+            "speakText": "der Stecker.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "القابس (الكهربائي)",
+              "القطعة الأرضية",
+              "يترك (رسالة)"
+            ],
+            "a": "القابس (الكهربائي)",
+            "why": "الصوت يقول «der Stecker» — معناها «القابس (الكهربائي)». ركّز!"
+          },
+          {
+            "audioId": "word-grundstueck",
+            "speakText": "das Grundstück.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "القطعة الأرضية",
+              "القابس (الكهربائي)",
+              "يترك (رسالة)"
+            ],
+            "a": "القطعة الأرضية",
+            "why": "الصوت يقول «das Grundstück» — معناها «القطعة الأرضية». ركّز!"
           }
         ]
       },
@@ -414,6 +482,18 @@
             "speakText": "regelmäßig.",
             "a": "regelmäßig",
             "why": "اكتب ما تسمعه حرفياً: «regelmäßig» تعني «بانتظام». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-stecker",
+            "speakText": "der Stecker.",
+            "a": "der Stecker",
+            "why": "اكتب ما تسمعه حرفياً: «der Stecker» تعني «القابس (الكهربائي)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-grundstueck",
+            "speakText": "das Grundstück.",
+            "a": "das Grundstück",
+            "why": "اكتب ما تسمعه حرفياً: «das Grundstück» تعني «القطعة الأرضية». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -452,6 +532,16 @@
           {
             "q": "«يتنازل (عن)»؟",
             "a": "übernehmen"
+          },
+          {
+            "q": "Der ___ ist hier. (القابس!)",
+            "a": "Stecker",
+            "why": "der Stecker القابس (الكهربائي) (der! مذكّر (der!) وجمعه die Stecker (بلا تغيير!).) — Der Stecker ist hier."
+          },
+          {
+            "q": "Das ___ ist groß. (القطعة الأرضية!)",
+            "a": "Grundstück",
+            "why": "das Grundstück القطعة الأرضية (das! مركّب (Grund+Stück) محايد (das!) وجمعه die Grundstücke.) — Das Grundstück ist groß."
           }
         ],
         "passingScore": 0.75
@@ -481,6 +571,16 @@
           {
             "q": "«مهتم»؟",
             "a": "interessiert"
+          },
+          {
+            "q": "Der ___ ist hier. (القابس!)",
+            "a": "Stecker",
+            "why": "der Stecker القابس (الكهربائي) (der! مذكّر (der!) وجمعه die Stecker (بلا تغيير!).) — Der Stecker ist hier."
+          },
+          {
+            "q": "Das ___ ist groß. (القطعة الأرضية!)",
+            "a": "Grundstück",
+            "why": "das Grundstück القطعة الأرضية (das! مركّب (Grund+Stück) محايد (das!) وجمعه die Grundstücke.) — Das Grundstück ist groß."
           }
         ],
         "passingScore": 0.75
@@ -510,6 +610,16 @@
           {
             "q": "«مهتم»؟",
             "a": "interessiert"
+          },
+          {
+            "q": "Der ___ ist hier. (القابس!)",
+            "a": "Stecker",
+            "why": "der Stecker القابس (الكهربائي) (der! مذكّر (der!) وجمعه die Stecker (بلا تغيير!).) — Der Stecker ist hier."
+          },
+          {
+            "q": "Das ___ ist groß. (القطعة الأرضية!)",
+            "a": "Grundstück",
+            "why": "das Grundstück القطعة الأرضية (das! مركّب (Grund+Stück) محايد (das!) وجمعه die Grundstücke.) — Das Grundstück ist groß."
           }
         ],
         "passingScore": 0.75
@@ -518,8 +628,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag. Ich bin interessiert an der Wohnung. Wie hoch ist die Summe? Das ist mir zu teuer. Höchstens 600 Euro, ungefähr. Der Preis ist endgültig: Sie können ihn nicht erhöhen. Ich möchte die Wohnung übernehmen und nicht mieten. Die Unterlagen schicke ich morgen. Mit freundlichen Grüßen",
-      "ar": "مرحباً. أنا مهتم بالشقة. كم المبلغ؟ هذا غالٍ جداً بالنسبة لي. 600 يورو على الأكثر، تقريباً. السعر نهائي: لا يمكنكم رفعه. أريد أن أتسلّم الشقة ولا أستأجرها. الأوراق أرسلها غداً. مع تحياتي الخالصة."
+      "de": "Guten Tag. Ich bin interessiert an der Wohnung. Wie hoch ist die Summe? Das ist mir zu teuer. Höchstens 600 Euro, ungefähr. Der Preis ist endgültig: Sie können ihn nicht erhöhen. Ich möchte die Wohnung übernehmen und nicht mieten. Die Unterlagen schicke ich morgen. Mit freundlichen Grüßen Der Stecker ist hier. Das Grundstück ist groß.",
+      "ar": "مرحباً. أنا مهتم بالشقة. كم المبلغ؟ هذا غالٍ جداً بالنسبة لي. 600 يورو على الأكثر، تقريباً. السعر نهائي: لا يمكنكم رفعه. أريد أن أتسلّم الشقة ولا أستأجرها. الأوراق أرسلها غداً. مع تحياتي الخالصة. القابس هنا. القطعة الأرضية كبيرة."
     },
     "srsBundleWordIds": [
       "hinterlassen",
@@ -534,7 +644,9 @@
       "erhoehen",
       "unterlagen",
       "strom",
-      "abstimmen"
+      "abstimmen",
+      "stecker",
+      "grundstueck"
     ],
     "warningCards": [
       {
@@ -618,7 +730,9 @@
     "word-erhoehen",
     "word-unterlagen",
     "word-strom",
-    "word-abstimmen"
+    "word-abstimmen",
+    "word-stecker",
+    "word-grundstueck"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -636,7 +750,9 @@
       "erhoehen",
       "unterlagen",
       "strom",
-      "abstimmen"
+      "abstimmen",
+      "stecker",
+      "grundstueck"
     ]
   }
 }

@@ -66,7 +66,10 @@
       "forderung",
       "wuetend",
       "aergerlich",
-      "dokument"
+      "dokument",
+      "kostuem",
+      "ballett",
+      "vergnuegen"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Hätten Sie die Ware prüfen sollen?",
+        "de": "Hätten Sie die Ware prüfen sollen? Das Kostüm ist bunt. Das Ballett ist schön, und das Vergnügen ist groß.",
         "ar": "يشتكي من الماضي في 8 جمل!"
       },
       "situation": {
@@ -91,7 +94,7 @@
         "ar": "المحطة: الفقد! العطب! مكتب المفقودات!"
       },
       "successCriteria": [
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الست عشرة كلها!",
         "«hätte + التصريف الثالث» للماضي الافتراضي (haben)! «wäre + التصريف الثالث» لكلمات sein!",
         "التصريف الثالث آخراً!",
         "«Ich habe … genommen» واقع ≠ «Ich hätte … genommen» افتراض!"
@@ -194,6 +197,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: das Seminar = «الندوة» · das Diplom = «الشهادة (الجامعية)» · der Lebenslauf = «السيرة الذاتية»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الزي (التنكّري)",
+                "de": "das Kostüm"
+              },
+              {
+                "ar": "الباليه",
+                "de": "das Ballett"
+              },
+              {
+                "ar": "المتعة",
+                "de": "das Vergnügen"
+              }
+            ],
+            "why": "das Kostüm الزي (التنكّري) · das Ballett الباليه · das Vergnügen المتعة (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -254,6 +274,21 @@
             "q": "Sie liebt ihre ___.",
             "a": "Arbeit",
             "why": "الكلمة الناقصة «Arbeit» تعني «العمل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Das ___ ist bunt. (الزي!)",
+            "a": "Kostüm",
+            "why": "das Kostüm الزي (التنكّري) (das! محايد (das!) وجمعه die Kostüme — قرض فرنسي.) — Das Kostüm ist bunt."
+          },
+          {
+            "q": "Das ___ ist schön. (الباليه!)",
+            "a": "Ballett",
+            "why": "das Ballett الباليه (das! محايد (das!) وجمعه die Ballette — قرض فرنسي.) — Das Ballett ist schön."
+          },
+          {
+            "q": "Das ___ ist groß. (المتعة!)",
+            "a": "Vergnügen",
+            "why": "das Vergnügen المتعة (das! محايد (das!) وجمعه die Vergnügen (نادر!).) — Das Vergnügen ist groß."
           }
         ]
       },
@@ -300,6 +335,21 @@
             "q": "~~Das ist die regel.~~",
             "a": "Das ist die Regel.",
             "why": "الخطأ في «regel»! الصواب «Regel» — راجع القاعدة (قاعدة)."
+          },
+          {
+            "q": "~~der Kostüm ist bunt~~",
+            "a": "das Kostüm ist bunt",
+            "why": "الألمانية: das Kostüm (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Ballett ist schön~~",
+            "a": "das Ballett ist schön",
+            "why": "الألمانية: das Ballett (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Vergnügen ist groß~~",
+            "a": "das Vergnügen ist groß",
+            "why": "الألمانية: das Vergnügen (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -350,6 +400,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: das Kostüm · das Ballett · das Vergnügen)",
+            "a": "Das Kostüm ist bunt. Das Ballett ist schön, und das Vergnügen ist groß.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -443,6 +498,42 @@
             ],
             "a": "Kein Problem. Entschuldigung für den Verlust.",
             "why": "«مولر» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-kostuem",
+            "speakText": "das Kostüm.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الزي (التنكّري)",
+              "الباليه",
+              "المتعة"
+            ],
+            "a": "الزي (التنكّري)",
+            "why": "الصوت يقول «das Kostüm» — معناها «الزي (التنكّري)». ركّز!"
+          },
+          {
+            "audioId": "word-ballett",
+            "speakText": "das Ballett.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الباليه",
+              "الزي (التنكّري)",
+              "المتعة"
+            ],
+            "a": "الباليه",
+            "why": "الصوت يقول «das Ballett» — معناها «الباليه». ركّز!"
+          },
+          {
+            "audioId": "word-vergnuegen",
+            "speakText": "das Vergnügen.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المتعة",
+              "الزي (التنكّري)",
+              "الباليه"
+            ],
+            "a": "المتعة",
+            "why": "الصوت يقول «das Vergnügen» — معناها «المتعة». ركّز!"
           }
         ]
       },
@@ -476,6 +567,24 @@
             "speakText": "auffordern.",
             "a": "auffordern",
             "why": "اكتب ما تسمعه حرفياً: «auffordern» تعني «يطلب من». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-kostuem",
+            "speakText": "das Kostüm.",
+            "a": "das Kostüm",
+            "why": "اكتب ما تسمعه حرفياً: «das Kostüm» تعني «الزي (التنكّري)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ballett",
+            "speakText": "das Ballett.",
+            "a": "das Ballett",
+            "why": "اكتب ما تسمعه حرفياً: «das Ballett» تعني «الباليه». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-vergnuegen",
+            "speakText": "das Vergnügen.",
+            "a": "das Vergnügen",
+            "why": "اكتب ما تسمعه حرفياً: «das Vergnügen» تعني «المتعة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -514,6 +623,21 @@
           {
             "q": "«البديل»؟",
             "a": "der Ersatz"
+          },
+          {
+            "q": "Das ___ ist bunt. (الزي!)",
+            "a": "Kostüm",
+            "why": "das Kostüm الزي (التنكّري) (das! محايد (das!) وجمعه die Kostüme — قرض فرنسي.) — Das Kostüm ist bunt."
+          },
+          {
+            "q": "Das ___ ist schön. (الباليه!)",
+            "a": "Ballett",
+            "why": "das Ballett الباليه (das! محايد (das!) وجمعه die Ballette — قرض فرنسي.) — Das Ballett ist schön."
+          },
+          {
+            "q": "Das ___ ist groß. (المتعة!)",
+            "a": "Vergnügen",
+            "why": "das Vergnügen المتعة (das! محايد (das!) وجمعه die Vergnügen (نادر!).) — Das Vergnügen ist groß."
           }
         ],
         "passingScore": 0.75
@@ -543,6 +667,21 @@
           {
             "q": "«الفقد»؟",
             "a": "der Verlust"
+          },
+          {
+            "q": "Das ___ ist bunt. (الزي!)",
+            "a": "Kostüm",
+            "why": "das Kostüm الزي (التنكّري) (das! محايد (das!) وجمعه die Kostüme — قرض فرنسي.) — Das Kostüm ist bunt."
+          },
+          {
+            "q": "Das ___ ist schön. (الباليه!)",
+            "a": "Ballett",
+            "why": "das Ballett الباليه (das! محايد (das!) وجمعه die Ballette — قرض فرنسي.) — Das Ballett ist schön."
+          },
+          {
+            "q": "Das ___ ist groß. (المتعة!)",
+            "a": "Vergnügen",
+            "why": "das Vergnügen المتعة (das! محايد (das!) وجمعه die Vergnügen (نادر!).) — Das Vergnügen ist groß."
           }
         ],
         "passingScore": 0.75
@@ -572,6 +711,21 @@
           {
             "q": "«الفقد»؟",
             "a": "der Verlust"
+          },
+          {
+            "q": "Das ___ ist bunt. (الزي!)",
+            "a": "Kostüm",
+            "why": "das Kostüm الزي (التنكّري) (das! محايد (das!) وجمعه die Kostüme — قرض فرنسي.) — Das Kostüm ist bunt."
+          },
+          {
+            "q": "Das ___ ist schön. (الباليه!)",
+            "a": "Ballett",
+            "why": "das Ballett الباليه (das! محايد (das!) وجمعه die Ballette — قرض فرنسي.) — Das Ballett ist schön."
+          },
+          {
+            "q": "Das ___ ist groß. (المتعة!)",
+            "a": "Vergnügen",
+            "why": "das Vergnügen المتعة (das! محايد (das!) وجمعه die Vergnügen (نادر!).) — Das Vergnügen ist groß."
           }
         ],
         "passingScore": 0.75
@@ -580,8 +734,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Ich hätte eine Beschwerde. Ich hätte den früheren Zug genommen, dann wäre der Verlust nicht passiert. Jetzt hat der Koffer einen Schaden: Das ist ärgerlich! Ich war zuerst wütend, aber ich bleibe höflich. Hätten Sie die Ware prüfen sollen? Ich hätte gern einen Ersatz. Könnte ich die Ware umtauschen? Gibt es eine Alternative? Bitte berechnen Sie nichts. Das Fundbüro hat die Ware gefunden. Das ist meine Forderung: Haben Sie das Dokument? Vielen Dank!",
-      "ar": "مرحباً! لديّ شكوى. كنتُ سأركب القطار الأسبق، عندها ما كان الفقد ليحدث. الآن الحقيبة بها عطب: هذا مزعج! كنتُ أولاً غاضباً، لكنني أبقى مهذّباً. هل كان ينبغي لكم فحص البضاعة؟ أودّ بديلاً. هل يمكنني استبدال البضاعة؟ هل هناك بديل؟ من فضلكم لا تُحسبون شيئاً. مكتب المفقودات وجد البضاعة. هذه مطالبتي: هل معك الوثيقة؟ شكراً جزيلاً!"
+      "de": "Guten Tag! Ich hätte eine Beschwerde. Ich hätte den früheren Zug genommen, dann wäre der Verlust nicht passiert. Jetzt hat der Koffer einen Schaden: Das ist ärgerlich! Ich war zuerst wütend, aber ich bleibe höflich. Hätten Sie die Ware prüfen sollen? Ich hätte gern einen Ersatz. Könnte ich die Ware umtauschen? Gibt es eine Alternative? Bitte berechnen Sie nichts. Das Fundbüro hat die Ware gefunden. Das ist meine Forderung: Haben Sie das Dokument? Vielen Dank! Das Kostüm ist bunt. Das Ballett ist schön. Das Vergnügen ist groß.",
+      "ar": "مرحباً! لديّ شكوى. كنتُ سأركب القطار الأسبق، عندها ما كان الفقد ليحدث. الآن الحقيبة بها عطب: هذا مزعج! كنتُ أولاً غاضباً، لكنني أبقى مهذّباً. هل كان ينبغي لكم فحص البضاعة؟ أودّ بديلاً. هل يمكنني استبدال البضاعة؟ هل هناك بديل؟ من فضلكم لا تُحسبون شيئاً. مكتب المفقودات وجد البضاعة. هذه مطالبتي: هل معك الوثيقة؟ شكراً جزيلاً! الزي ملوّن. الباليه جميل. المتعة كبيرة."
     },
     "srsBundleWordIds": [
       "beschwerde",
@@ -596,7 +750,10 @@
       "forderung",
       "wuetend",
       "aergerlich",
-      "dokument"
+      "dokument",
+      "kostuem",
+      "ballett",
+      "vergnuegen"
     ],
     "warningCards": [
       {
@@ -679,7 +836,10 @@
     "word-forderung",
     "word-wuetend",
     "word-aergerlich",
-    "word-dokument"
+    "word-dokument",
+    "word-kostuem",
+    "word-ballett",
+    "word-vergnuegen"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -697,7 +857,10 @@
       "forderung",
       "wuetend",
       "aergerlich",
-      "dokument"
+      "dokument",
+      "kostuem",
+      "ballett",
+      "vergnuegen"
     ]
   }
 }

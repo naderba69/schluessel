@@ -66,7 +66,9 @@
       "mahnung",
       "gebuehr",
       "regelmaessig",
-      "gelegenheit"
+      "gelegenheit",
+      "klingel",
+      "briefkasten"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Brief an die Behörde ist fertig.",
+        "de": "Der Brief an die Behörde ist fertig. Die Klingel ist laut. Der Briefkasten ist voll.",
         "ar": "يكتب خطاباً رسمياً للجهة الرسمية بكلمات اليوم!"
       },
       "situation": {
@@ -92,7 +94,7 @@
       },
       "successCriteria": [
         "Anrede و Gruß بالصيغ المثالية!",
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الخمس عشرة كلها!",
         "جمل قصيرة مباشرة!",
         "Anrede/Gruß مهذبان!"
       ]
@@ -185,6 +187,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: der Brief = «رسالة (بريدية)» · antworten = «يجيب (بالردّ)» · Bitte = «من فضلك / تفضّل»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الجرس (الباب)",
+                "de": "die Klingel"
+              },
+              {
+                "ar": "صندوق البريد",
+                "de": "der Briefkasten"
+              },
+              {
+                "ar": "الفرصة",
+                "de": "die Gelegenheit"
+              }
+            ],
+            "why": "die Klingel الجرس (الباب) · der Briefkasten صندوق البريد · die Gelegenheit الفرصة (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -245,6 +264,16 @@
             "q": "___! — Bitte!",
             "a": "Danke",
             "why": "الكلمة الناقصة «Danke» تعني «شكراً» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist laut. (الجرس!)",
+            "a": "Klingel",
+            "why": "die Klingel الجرس (الباب) (die! مؤنثة (die!) وجمعها die Klingeln.) — Die Klingel ist laut."
+          },
+          {
+            "q": "Der ___ ist voll. (صندوق البريد!)",
+            "a": "Briefkasten",
+            "why": "der Briefkasten صندوق البريد (der! مركّب (Brief+Kasten) مذكّر (der!) وجمعه die Briefkästen (تقلب a→ä!).) — Der Briefkasten ist voll."
           }
         ]
       },
@@ -284,6 +313,16 @@
             "q": "~~Meine Tante ist Freundlich.~~",
             "a": "Meine Tante ist freundlich.",
             "why": "الخطأ في «Freundlich»! الصواب «freundlich» — راجع القاعدة (ودود/لطيف)."
+          },
+          {
+            "q": "~~der Klingel ist laut~~",
+            "a": "die Klingel ist laut",
+            "why": "الألمانية: die Klingel (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Briefkasten ist voll~~",
+            "a": "der Briefkasten ist voll",
+            "why": "الألمانية: der Briefkasten (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -319,6 +358,11 @@
             "q": "كوّن جملة فيها «bitten» («يطلب (من شخص)») ثم تحدّث بها.",
             "a": "Ich bitte um Hilfe.",
             "why": "استعمل «bitten» («يطلب (من شخص)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Klingel · der Briefkasten)",
+            "a": "Die Klingel ist laut. Der Briefkasten ist voll.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -412,6 +456,30 @@
             ],
             "a": "Geduld! Der Antrag ist jetzt richtig.",
             "why": "«لينا» في الحوار: مواساة"
+          },
+          {
+            "audioId": "word-klingel",
+            "speakText": "die Klingel.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الجرس (الباب)",
+              "صندوق البريد",
+              "التوصية"
+            ],
+            "a": "الجرس (الباب)",
+            "why": "الصوت يقول «die Klingel» — معناها «الجرس (الباب)». ركّز!"
+          },
+          {
+            "audioId": "word-briefkasten",
+            "speakText": "der Briefkasten.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "صندوق البريد",
+              "الجرس (الباب)",
+              "التوصية"
+            ],
+            "a": "صندوق البريد",
+            "why": "الصوت يقول «der Briefkasten» — معناها «صندوق البريد». ركّز!"
           }
         ]
       },
@@ -445,6 +513,18 @@
             "speakText": "der Vorort.",
             "a": "der Vorort",
             "why": "اكتب ما تسمعه حرفياً: «der Vorort» تعني «الضاحية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-klingel",
+            "speakText": "die Klingel.",
+            "a": "die Klingel",
+            "why": "اكتب ما تسمعه حرفياً: «die Klingel» تعني «الجرس (الباب)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-briefkasten",
+            "speakText": "der Briefkasten.",
+            "a": "der Briefkasten",
+            "why": "اكتب ما تسمعه حرفياً: «der Briefkasten» تعني «صندوق البريد». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -483,6 +563,16 @@
           {
             "q": "«الرد»؟",
             "a": "die Rückmeldung"
+          },
+          {
+            "q": "Die ___ ist laut. (الجرس!)",
+            "a": "Klingel",
+            "why": "die Klingel الجرس (الباب) (die! مؤنثة (die!) وجمعها die Klingeln.) — Die Klingel ist laut."
+          },
+          {
+            "q": "Der ___ ist voll. (صندوق البريد!)",
+            "a": "Briefkasten",
+            "why": "der Briefkasten صندوق البريد (der! مركّب (Brief+Kasten) مذكّر (der!) وجمعه die Briefkästen (تقلب a→ä!).) — Der Briefkasten ist voll."
           }
         ],
         "passingScore": 0.75
@@ -512,6 +602,16 @@
           {
             "q": "«التوصية»؟",
             "a": "die Empfehlung"
+          },
+          {
+            "q": "Die ___ ist laut. (الجرس!)",
+            "a": "Klingel",
+            "why": "die Klingel الجرس (الباب) (die! مؤنثة (die!) وجمعها die Klingeln.) — Die Klingel ist laut."
+          },
+          {
+            "q": "Der ___ ist voll. (صندوق البريد!)",
+            "a": "Briefkasten",
+            "why": "der Briefkasten صندوق البريد (der! مركّب (Brief+Kasten) مذكّر (der!) وجمعه die Briefkästen (تقلب a→ä!).) — Der Briefkasten ist voll."
           }
         ],
         "passingScore": 0.75
@@ -541,6 +641,16 @@
           {
             "q": "«التوصية»؟",
             "a": "die Empfehlung"
+          },
+          {
+            "q": "Die ___ ist laut. (الجرس!)",
+            "a": "Klingel",
+            "why": "die Klingel الجرس (الباب) (die! مؤنثة (die!) وجمعها die Klingeln.) — Die Klingel ist laut."
+          },
+          {
+            "q": "Der ___ ist voll. (صندوق البريد!)",
+            "a": "Briefkasten",
+            "why": "der Briefkasten صندوق البريد (der! مركّب (Brief+Kasten) مذكّر (der!) وجمعه die Briefkästen (تقلب a→ä!).) — Der Briefkasten ist voll."
           }
         ],
         "passingScore": 0.75
@@ -549,8 +659,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Sehr geehrte Damen und Herren, ich beantrage eine Bestätigung. Der Antrag ist fertig. Die Behörde braucht die Anlage. Das Amt ist in der Stadt. Ich warte auf die Zustimmung. Die Gebühr ist hoch. Ich schreibe regelmäßig. Mit freundlichen Grüßen",
-      "ar": "سادة أعزاء، أطلب تأكيداً رسمياً. الطلب جاهز. الجهة الرسمية تحتاج المرفق. الهيئة في المدينة. أنتظر الموافقة. الرسوم مرتفعة. أكتب بانتظام. مع تحياتي الخالصة."
+      "de": "Sehr geehrte Damen und Herren, ich beantrage eine Bestätigung. Der Antrag ist fertig. Die Behörde braucht die Anlage. Das Amt ist in der Stadt. Ich warte auf die Zustimmung. Die Gebühr ist hoch. Ich schreibe regelmäßig. Mit freundlichen Grüßen Die Klingel ist laut. Der Briefkasten ist voll.",
+      "ar": "سادة أعزاء، أطلب تأكيداً رسمياً. الطلب جاهز. الجهة الرسمية تحتاج المرفق. الهيئة في المدينة. أنتظر الموافقة. الرسوم مرتفعة. أكتب بانتظام. مع تحياتي الخالصة. الجرس صاخب. صندوق البريد ممتلئ."
     },
     "srsBundleWordIds": [
       "empfehlung",
@@ -565,7 +675,9 @@
       "mahnung",
       "gebuehr",
       "regelmaessig",
-      "gelegenheit"
+      "gelegenheit",
+      "klingel",
+      "briefkasten"
     ],
     "warningCards": [
       {
@@ -648,7 +760,9 @@
     "word-mahnung",
     "word-gebuehr",
     "word-regelmaessig",
-    "word-gelegenheit"
+    "word-gelegenheit",
+    "word-klingel",
+    "word-briefkasten"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -666,7 +780,9 @@
       "mahnung",
       "gebuehr",
       "regelmaessig",
-      "gelegenheit"
+      "gelegenheit",
+      "klingel",
+      "briefkasten"
     ]
   }
 }

@@ -66,7 +66,9 @@
       "auswahl",
       "auswaehlen",
       "entscheiden",
-      "eventuell"
+      "eventuell",
+      "korridor",
+      "treppenhaus"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Ihre Anzeige habe ich gelesen: Ihre Wohnung ist tatsächlich gut!",
+        "de": "Ihre Anzeige habe ich gelesen: Ihre Wohnung ist tatsächlich gut! Der Korridor ist lang. Das Treppenhaus ist hell.",
         "ar": "يكتب رداً رسمياً على إعلان شقة!"
       },
       "situation": {
@@ -93,7 +95,7 @@
       "successCriteria": [
         "الترتيب: الرجوع! التعريف! الطلب! الختام!",
         "Anrede و Gruß الثابتان!",
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الخمس عشرة كلها!",
         "spätestens للحدود الزمنية!"
       ]
     },
@@ -189,6 +191,23 @@
               }
             ],
             "why": "auswählen يختار (trennbar: wählt aus!) · entscheiden يقرر (entschied — قوي!) · eventuell ربما (تقلب!) — ومراجعة: die Frist المهلة!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الممر",
+                "de": "der Korridor"
+              },
+              {
+                "ar": "الدرج (بيت الدرج)",
+                "de": "das Treppenhaus"
+              },
+              {
+                "ar": "ربما",
+                "de": "eventuell"
+              }
+            ],
+            "why": "der Korridor الممر · das Treppenhaus الدرج (بيت الدرج) · eventuell ربما (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -244,6 +263,16 @@
             "q": "Ich ___ später.",
             "a": "antworte",
             "why": "الكلمة الناقصة «antworte» تعني «يجيب (بالردّ)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist lang. (الممر!)",
+            "a": "Korridor",
+            "why": "der Korridor الممر (der! مذكّر (der!) وجمعه die Korridore — قرض إيطالي (والبديل الألماني: der Flur!).) — Der Korridor ist lang."
+          },
+          {
+            "q": "Das ___ ist hell. (بيت الدرج!)",
+            "a": "Treppenhaus",
+            "why": "das Treppenhaus الدرج (بيت الدرج) (das! مركّب (Treppen+Haus) محايد (das!) وجمعه die Treppenhäuser (تقلب a→ä!).) — Das Treppenhaus ist hell."
           }
         ]
       },
@@ -289,6 +318,16 @@
             "q": "~~Ich habe zeit.~~",
             "a": "Ich habe Zeit.",
             "why": "الخطأ في «zeit»! الصواب «Zeit» — راجع القاعدة (الوقت)."
+          },
+          {
+            "q": "~~die Korridor ist lang~~",
+            "a": "der Korridor ist lang",
+            "why": "الألمانية: der Korridor (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Treppenhaus ist hell~~",
+            "a": "das Treppenhaus ist hell",
+            "why": "الألمانية: das Treppenhaus (das! مركّب محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -318,6 +357,11 @@
             "q": "كوّن جملة فيها «freundlich» («ودود/لطيف») ثم تحدّث بها.",
             "a": "Meine Tante ist freundlich.",
             "why": "استعمل «freundlich» («ودود/لطيف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Korridor · das Treppenhaus)",
+            "a": "Der Korridor ist lang. Das Treppenhaus ist hell.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -411,6 +455,30 @@
             ],
             "a": "Bis morgen. Tschüss!",
             "why": "«مولر» في الحوار: وداع"
+          },
+          {
+            "audioId": "word-korridor",
+            "speakText": "der Korridor.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الممر",
+              "الدرج (بيت الدرج)",
+              "التعريف (بالنفس)"
+            ],
+            "a": "الممر",
+            "why": "الصوت يقول «der Korridor» — معناها «الممر». ركّز!"
+          },
+          {
+            "audioId": "word-treppenhaus",
+            "speakText": "das Treppenhaus.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الدرج (بيت الدرج)",
+              "الممر",
+              "التعريف (بالنفس)"
+            ],
+            "a": "الدرج (بيت الدرج)",
+            "why": "الصوت يقول «das Treppenhaus» — معناها «الدرج (بيت الدرج)». ركّز!"
           }
         ]
       },
@@ -444,6 +512,18 @@
             "speakText": "der Strom.",
             "a": "der Strom",
             "why": "اكتب ما تسمعه حرفياً: «der Strom» تعني «الكهرباء». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-korridor",
+            "speakText": "der Korridor.",
+            "a": "der Korridor",
+            "why": "اكتب ما تسمعه حرفياً: «der Korridor» تعني «الممر». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-treppenhaus",
+            "speakText": "das Treppenhaus.",
+            "a": "das Treppenhaus",
+            "why": "اكتب ما تسمعه حرفياً: «das Treppenhaus» تعني «الدرج (بيت الدرج)». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -482,6 +562,16 @@
           {
             "q": "«يذكر»؟",
             "a": "angeben"
+          },
+          {
+            "q": "Der ___ ist lang. (الممر!)",
+            "a": "Korridor",
+            "why": "der Korridor الممر (der! مذكّر (der!) وجمعه die Korridore — قرض إيطالي (والبديل الألماني: der Flur!).) — Der Korridor ist lang."
+          },
+          {
+            "q": "Das ___ ist hell. (بيت الدرج!)",
+            "a": "Treppenhaus",
+            "why": "das Treppenhaus الدرج (بيت الدرج) (das! مركّب (Treppen+Haus) محايد (das!) وجمعه die Treppenhäuser (تقلب a→ä!).) — Das Treppenhaus ist hell."
           }
         ],
         "passingScore": 0.75
@@ -511,6 +601,16 @@
           {
             "q": "«التوقيت»؟",
             "a": "der Zeitpunkt"
+          },
+          {
+            "q": "Der ___ ist lang. (الممر!)",
+            "a": "Korridor",
+            "why": "der Korridor الممر (der! مذكّر (der!) وجمعه die Korridore — قرض إيطالي (والبديل الألماني: der Flur!).) — Der Korridor ist lang."
+          },
+          {
+            "q": "Das ___ ist hell. (بيت الدرج!)",
+            "a": "Treppenhaus",
+            "why": "das Treppenhaus الدرج (بيت الدرج) (das! مركّب (Treppen+Haus) محايد (das!) وجمعه die Treppenhäuser (تقلب a→ä!).) — Das Treppenhaus ist hell."
           }
         ],
         "passingScore": 0.75
@@ -540,6 +640,16 @@
           {
             "q": "«التوقيت»؟",
             "a": "der Zeitpunkt"
+          },
+          {
+            "q": "Der ___ ist lang. (الممر!)",
+            "a": "Korridor",
+            "why": "der Korridor الممر (der! مذكّر (der!) وجمعه die Korridore — قرض إيطالي (والبديل الألماني: der Flur!).) — Der Korridor ist lang."
+          },
+          {
+            "q": "Das ___ ist hell. (بيت الدرج!)",
+            "a": "Treppenhaus",
+            "why": "das Treppenhaus الدرج (بيت الدرج) (das! مركّب (Treppen+Haus) محايد (das!) وجمعه die Treppenhäuser (تقلب a→ä!).) — Das Treppenhaus ist hell."
           }
         ],
         "passingScore": 0.75
@@ -548,8 +658,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Sehr geehrte Damen und Herren, Ihre Anzeige habe ich gelesen. Zunächst schreibe ich über mich: ich bin Mieter und interessiert an der Wohnung. Der Zustand ist tatsächlich gut. Bitte geben Sie den Zeitpunkt an — spätestens am Montag. Ich möchte die Wohnung gerne auswählen. Daher warte ich auf die Entscheidung. Mit freundlichen Grüßen",
-      "ar": "سادة أعزاء، قرأت إعلانكم. أولاً أكتب عن نفسي: أنا مستأجر ومهتم بالشقة. الحالة جيدة في الواقع. يرجى ذكر التوقيت — في أبعد تقدير يوم الاثنين. أود اختيار الشقة. لذا أنتظر القرار. مع تحياتي الخالصة."
+      "de": "Sehr geehrte Damen und Herren, Ihre Anzeige habe ich gelesen. Zunächst schreibe ich über mich: ich bin Mieter und interessiert an der Wohnung. Der Zustand ist tatsächlich gut. Bitte geben Sie den Zeitpunkt an — spätestens am Montag. Ich möchte die Wohnung gerne auswählen. Daher warte ich auf die Entscheidung. Mit freundlichen Grüßen Der Korridor ist lang. Das Treppenhaus ist hell.",
+      "ar": "سادة أعزاء، قرأت إعلانكم. أولاً أكتب عن نفسي: أنا مستأجر ومهتم بالشقة. الحالة جيدة في الواقع. يرجى ذكر التوقيت — في أبعد تقدير يوم الاثنين. أود اختيار الشقة. لذا أنتظر القرار. مع تحياتي الخالصة. الممر طويل. بيت الدرج مضيء."
     },
     "srsBundleWordIds": [
       "vorstellung",
@@ -564,7 +674,9 @@
       "auswahl",
       "auswaehlen",
       "entscheiden",
-      "eventuell"
+      "eventuell",
+      "korridor",
+      "treppenhaus"
     ],
     "warningCards": [
       {
@@ -648,7 +760,9 @@
     "word-auswahl",
     "word-auswaehlen",
     "word-entscheiden",
-    "word-eventuell"
+    "word-eventuell",
+    "word-korridor",
+    "word-treppenhaus"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -666,7 +780,9 @@
       "auswahl",
       "auswaehlen",
       "entscheiden",
-      "eventuell"
+      "eventuell",
+      "korridor",
+      "treppenhaus"
     ]
   }
 }

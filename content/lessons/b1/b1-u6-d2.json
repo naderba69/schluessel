@@ -66,7 +66,10 @@
       "uebernachtung",
       "verlangen",
       "auffordern",
-      "kompromiss"
+      "kompromiss",
+      "kueste",
+      "ozean",
+      "tourismus"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Wären Sie so freundlich, mir zu helfen?",
+        "de": "Wären Sie so freundlich, mir zu helfen? Die Küste ist lang. Der Ozean ist blau, und der Tourismus ist wichtig.",
         "ar": "يطلب بأربع درجات في حوار المطعم!"
       },
       "situation": {
@@ -91,7 +94,7 @@
         "ar": "المطعم والفندق: القائمة! الحلوى! النادلة! المبيت!"
       },
       "successCriteria": [
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الست عشرة كلها!",
         "السلّم: …, bitte! ← Könnte ich …? ← Hätten Sie …? ← Wären Sie so freundlich …!",
         "«zu» + الفعل آخراً بعد Wären Sie so freundlich!",
         "Geben Sie …! = بلا تهذيب!"
@@ -194,6 +197,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: das Seminar = «الندوة» · das Diplom = «الشهادة (الجامعية)» · der Lebenslauf = «السيرة الذاتية»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الساحل",
+                "de": "die Küste"
+              },
+              {
+                "ar": "المحيط",
+                "de": "der Ozean"
+              },
+              {
+                "ar": "السياحة",
+                "de": "der Tourismus"
+              }
+            ],
+            "why": "die Küste الساحل · der Ozean المحيط · der Tourismus السياحة (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -254,6 +274,21 @@
             "q": "Sie liebt ihre ___.",
             "a": "Arbeit",
             "why": "الكلمة الناقصة «Arbeit» تعني «العمل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist lang. (الساحل!)",
+            "a": "Küste",
+            "why": "die Küste الساحل (die! مؤنثة (die!) وجمعها die Küsten.) — Die Küste ist lang."
+          },
+          {
+            "q": "Der ___ ist blau. (المحيط!)",
+            "a": "Ozean",
+            "why": "der Ozean المحيط (der! مذكّر (der!) وجمعه die Ozeane — قرض لاتيني (das Meer = البحر!).) — Der Ozean ist blau."
+          },
+          {
+            "q": "Der ___ ist wichtig. (السياحة!)",
+            "a": "Tourismus",
+            "why": "der Tourismus السياحة (der! يُستعمل عادةً بلا جمع: der Tourismus.) — Der Tourismus ist wichtig."
           }
         ]
       },
@@ -300,6 +335,21 @@
             "q": "~~Das ist die regel.~~",
             "a": "Das ist die Regel.",
             "why": "الخطأ في «regel»! الصواب «Regel» — راجع القاعدة (قاعدة)."
+          },
+          {
+            "q": "~~der Küste ist lang~~",
+            "a": "die Küste ist lang",
+            "why": "الألمانية: die Küste (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Ozean ist blau~~",
+            "a": "der Ozean ist blau",
+            "why": "الألمانية: der Ozean (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Tourismus ist wichtig~~",
+            "a": "der Tourismus ist wichtig",
+            "why": "الألمانية: der Tourismus (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -345,6 +395,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Küste · der Ozean · der Tourismus)",
+            "a": "Die Küste ist lang. Der Ozean ist blau, und der Tourismus ist wichtig.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -438,6 +493,42 @@
             ],
             "a": "Gute Reise!",
             "why": "«لينا» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-kueste",
+            "speakText": "die Küste.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الساحل",
+              "المحيط",
+              "السياحة"
+            ],
+            "a": "الساحل",
+            "why": "الصوت يقول «die Küste» — معناها «الساحل». ركّز!"
+          },
+          {
+            "audioId": "word-ozean",
+            "speakText": "der Ozean.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المحيط",
+              "الساحل",
+              "السياحة"
+            ],
+            "a": "المحيط",
+            "why": "الصوت يقول «der Ozean» — معناها «المحيط». ركّز!"
+          },
+          {
+            "audioId": "word-tourismus",
+            "speakText": "der Tourismus.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "السياحة",
+              "الساحل",
+              "المحيط"
+            ],
+            "a": "السياحة",
+            "why": "الصوت يقول «der Tourismus» — معناها «السياحة». ركّز!"
           }
         ]
       },
@@ -471,6 +562,24 @@
             "speakText": "das Denkmal.",
             "a": "das Denkmal",
             "why": "اكتب ما تسمعه حرفياً: «das Denkmal» تعني «النصب التذكاري». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-kueste",
+            "speakText": "die Küste.",
+            "a": "die Küste",
+            "why": "اكتب ما تسمعه حرفياً: «die Küste» تعني «الساحل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ozean",
+            "speakText": "der Ozean.",
+            "a": "der Ozean",
+            "why": "اكتب ما تسمعه حرفياً: «der Ozean» تعني «المحيط». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-tourismus",
+            "speakText": "der Tourismus.",
+            "a": "der Tourismus",
+            "why": "اكتب ما تسمعه حرفياً: «der Tourismus» تعني «السياحة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -509,6 +618,21 @@
           {
             "q": "«الفرح»؟",
             "a": "die Freude"
+          },
+          {
+            "q": "Die ___ ist lang. (الساحل!)",
+            "a": "Küste",
+            "why": "die Küste الساحل (die! مؤنثة (die!) وجمعها die Küsten.) — Die Küste ist lang."
+          },
+          {
+            "q": "Der ___ ist blau. (المحيط!)",
+            "a": "Ozean",
+            "why": "der Ozean المحيط (der! مذكّر (der!) وجمعه die Ozeane — قرض لاتيني (das Meer = البحر!).) — Der Ozean ist blau."
+          },
+          {
+            "q": "Der ___ ist wichtig. (السياحة!)",
+            "a": "Tourismus",
+            "why": "der Tourismus السياحة (der! يُستعمل عادةً بلا جمع: der Tourismus.) — Der Tourismus ist wichtig."
           }
         ],
         "passingScore": 0.75
@@ -538,6 +662,21 @@
           {
             "q": "«لطيف»؟",
             "a": "angenehm"
+          },
+          {
+            "q": "Die ___ ist lang. (الساحل!)",
+            "a": "Küste",
+            "why": "die Küste الساحل (die! مؤنثة (die!) وجمعها die Küsten.) — Die Küste ist lang."
+          },
+          {
+            "q": "Der ___ ist blau. (المحيط!)",
+            "a": "Ozean",
+            "why": "der Ozean المحيط (der! مذكّر (der!) وجمعه die Ozeane — قرض لاتيني (das Meer = البحر!).) — Der Ozean ist blau."
+          },
+          {
+            "q": "Der ___ ist wichtig. (السياحة!)",
+            "a": "Tourismus",
+            "why": "der Tourismus السياحة (der! يُستعمل عادةً بلا جمع: der Tourismus.) — Der Tourismus ist wichtig."
           }
         ],
         "passingScore": 0.75
@@ -567,6 +706,21 @@
           {
             "q": "«لطيف»؟",
             "a": "angenehm"
+          },
+          {
+            "q": "Die ___ ist lang. (الساحل!)",
+            "a": "Küste",
+            "why": "die Küste الساحل (die! مؤنثة (die!) وجمعها die Küsten.) — Die Küste ist lang."
+          },
+          {
+            "q": "Der ___ ist blau. (المحيط!)",
+            "a": "Ozean",
+            "why": "der Ozean المحيط (der! مذكّر (der!) وجمعه die Ozeane — قرض لاتيني (das Meer = البحر!).) — Der Ozean ist blau."
+          },
+          {
+            "q": "Der ___ ist wichtig. (السياحة!)",
+            "a": "Tourismus",
+            "why": "der Tourismus السياحة (der! يُستعمل عادةً بلا جمع: der Tourismus.) — Der Tourismus ist wichtig."
           }
         ],
         "passingScore": 0.75
@@ -575,8 +729,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Das Menü, bitte. Könnte ich bitte die Nachspeise haben? Hätten Sie vielleicht eine Übernachtung? Wären Sie so freundlich, mir zu helfen? Die Kellnerin bedient uns. Das ist angenehm und macht Freude. Der Respekt ist wichtig. Er kommt mir entgegen: Das ist ein Kompromiss. Ich verlange nichts. Ich fordere Sie nicht auf. Er ist dankbar. Vielen Dank!",
-      "ar": "مرحباً! القائمة، من فضلك. هل يمكنني الحصول على الحلوى؟ هل عندكم مبيت؟ هل تساعدني من لطفك؟ النادلة تخدمنا. هذا لطيف ويُفرِح. الاحترام مهم. هو يتساهل معي: هذه تسوية. أنا لا أطالب بشيء. أنا لا أطلب من أحد. هو ممتن. شكراً جزيلاً!"
+      "de": "Guten Tag! Das Menü, bitte. Könnte ich bitte die Nachspeise haben? Hätten Sie vielleicht eine Übernachtung? Wären Sie so freundlich, mir zu helfen? Die Kellnerin bedient uns. Das ist angenehm und macht Freude. Der Respekt ist wichtig. Er kommt mir entgegen: Das ist ein Kompromiss. Ich verlange nichts. Ich fordere Sie nicht auf. Er ist dankbar. Vielen Dank! Die Küste ist lang. Der Ozean ist blau. Der Tourismus ist wichtig.",
+      "ar": "مرحباً! القائمة، من فضلك. هل يمكنني الحصول على الحلوى؟ هل عندكم مبيت؟ هل تساعدني من لطفك؟ النادلة تخدمنا. هذا لطيف ويُفرِح. الاحترام مهم. هو يتساهل معي: هذه تسوية. أنا لا أطالب بشيء. أنا لا أطلب من أحد. هو ممتن. شكراً جزيلاً! الساحل طويل. المحيط أزرق. السياحة مهمة."
     },
     "srsBundleWordIds": [
       "dankbar",
@@ -591,7 +745,10 @@
       "uebernachtung",
       "verlangen",
       "auffordern",
-      "kompromiss"
+      "kompromiss",
+      "kueste",
+      "ozean",
+      "tourismus"
     ],
     "warningCards": [
       {
@@ -674,7 +831,10 @@
     "word-uebernachtung",
     "word-verlangen",
     "word-auffordern",
-    "word-kompromiss"
+    "word-kompromiss",
+    "word-kueste",
+    "word-ozean",
+    "word-tourismus"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -692,7 +852,10 @@
       "uebernachtung",
       "verlangen",
       "auffordern",
-      "kompromiss"
+      "kompromiss",
+      "kueste",
+      "ozean",
+      "tourismus"
     ]
   }
 }

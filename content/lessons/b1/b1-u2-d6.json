@@ -55,7 +55,9 @@
   "praesentation": {
     "wordIds": [
       "beginn",
-      "aufenthalt"
+      "aufenthalt",
+      "abfalleimer",
+      "garderobe"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -72,7 +74,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Der Beginn ist gut: der Aufenthalt in der Wohnung!",
+        "de": "Der Beginn ist gut: der Aufenthalt in der Wohnung! Der Abfalleimer ist leer. Die Garderobe ist hier.",
         "ar": "يلخّص قصة البحث عن السكن في 8 جمل!"
       },
       "situation": {
@@ -166,6 +168,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: kosten = «يُكلِّف (يَسْتَهْلِك سعراً)» · der Beginn = «البداية» · der Aufenthalt = «الإقامة»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "سلة المهملات",
+                "de": "der Abfalleimer"
+              },
+              {
+                "ar": "معلّقة المعاطف",
+                "de": "die Garderobe"
+              },
+              {
+                "ar": "الإقامة",
+                "de": "der Aufenthalt"
+              }
+            ],
+            "why": "der Abfalleimer سلة المهملات · die Garderobe معلّقة المعاطف · der Aufenthalt الإقامة (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -221,6 +240,16 @@
             "q": "Ich ___ um Hilfe.",
             "a": "bitte",
             "why": "الكلمة الناقصة «bitte» تعني «يطلب (من شخص)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist leer. (سلة المهملات!)",
+            "a": "Abfalleimer",
+            "why": "der Abfalleimer سلة المهملات (der! مركّب (Abfall+Eimer) مذكّر (der!) وجمعه die Abfalleimer (بلا تغيير!).) — Der Abfalleimer ist leer."
+          },
+          {
+            "q": "Die ___ ist hier. (معلّقة المعاطف!)",
+            "a": "Garderobe",
+            "why": "die Garderobe معلّقة المعاطف (die! مؤنثة (die!) وجمعها die Garderoben — قرض فرنسي (المكان لتعليق المعاطف!).) — Die Garderobe ist hier."
           }
         ]
       },
@@ -256,6 +285,16 @@
             "q": "~~Die bestätigung kommt morgen.~~",
             "a": "Die Bestätigung kommt morgen.",
             "why": "الخطأ في «bestätigung»! الصواب «Bestätigung» — راجع القاعدة (التأكيد)."
+          },
+          {
+            "q": "~~die Abfalleimer ist leer~~",
+            "a": "der Abfalleimer ist leer",
+            "why": "الألمانية: der Abfalleimer (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Garderobe ist hier~~",
+            "a": "die Garderobe ist hier",
+            "why": "الألمانية: die Garderobe (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -281,6 +320,11 @@
             "q": "كوّن جملة فيها «der Preis» («السعر (والجائزة!)») ثم تحدّث بها.",
             "a": "Der Preis ist super!",
             "why": "استعمل «der Preis» («السعر (والجائزة!)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Abfalleimer · die Garderobe)",
+            "a": "Der Abfalleimer ist leer. Die Garderobe ist hier.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -360,6 +404,30 @@
             ],
             "a": "Das freut mich. Viel Glück!",
             "why": "«لينا» في الحوار: دعم"
+          },
+          {
+            "audioId": "word-abfalleimer",
+            "speakText": "der Abfalleimer.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "سلة المهملات",
+              "معلّقة المعاطف",
+              "البداية"
+            ],
+            "a": "سلة المهملات",
+            "why": "الصوت يقول «der Abfalleimer» — معناها «سلة المهملات». ركّز!"
+          },
+          {
+            "audioId": "word-garderobe",
+            "speakText": "die Garderobe.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "معلّقة المعاطف",
+              "سلة المهملات",
+              "البداية"
+            ],
+            "a": "معلّقة المعاطف",
+            "why": "الصوت يقول «die Garderobe» — معناها «معلّقة المعاطف». ركّز!"
           }
         ]
       },
@@ -387,6 +455,18 @@
             "speakText": "die Schulden.",
             "a": "die Schulden",
             "why": "اكتب المسموع بدقة: die Schulden — ركّز على نهاية الكلمة!"
+          },
+          {
+            "audioId": "word-abfalleimer",
+            "speakText": "der Abfalleimer.",
+            "a": "der Abfalleimer",
+            "why": "اكتب ما تسمعه حرفياً: «der Abfalleimer» تعني «سلة المهملات». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-garderobe",
+            "speakText": "die Garderobe.",
+            "a": "die Garderobe",
+            "why": "اكتب ما تسمعه حرفياً: «die Garderobe» تعني «معلّقة المعاطف». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -425,6 +505,16 @@
           {
             "q": "«المكوث»؟",
             "a": "der Aufenthalt"
+          },
+          {
+            "q": "Der ___ ist leer. (سلة المهملات!)",
+            "a": "Abfalleimer",
+            "why": "der Abfalleimer سلة المهملات (der! مركّب (Abfall+Eimer) مذكّر (der!) وجمعه die Abfalleimer (بلا تغيير!).) — Der Abfalleimer ist leer."
+          },
+          {
+            "q": "Die ___ ist hier. (معلّقة المعاطف!)",
+            "a": "Garderobe",
+            "why": "die Garderobe معلّقة المعاطف (die! مؤنثة (die!) وجمعها die Garderoben — قرض فرنسي (المكان لتعليق المعاطف!).) — Die Garderobe ist hier."
           }
         ],
         "passingScore": 0.75
@@ -454,6 +544,16 @@
           {
             "q": "«الإقامة»؟",
             "a": "der Aufenthalt"
+          },
+          {
+            "q": "Der ___ ist leer. (سلة المهملات!)",
+            "a": "Abfalleimer",
+            "why": "der Abfalleimer سلة المهملات (der! مركّب (Abfall+Eimer) مذكّر (der!) وجمعه die Abfalleimer (بلا تغيير!).) — Der Abfalleimer ist leer."
+          },
+          {
+            "q": "Die ___ ist hier. (معلّقة المعاطف!)",
+            "a": "Garderobe",
+            "why": "die Garderobe معلّقة المعاطف (die! مؤنثة (die!) وجمعها die Garderoben — قرض فرنسي (المكان لتعليق المعاطف!).) — Die Garderobe ist hier."
           }
         ],
         "passingScore": 0.75
@@ -483,6 +583,16 @@
           {
             "q": "«الإقامة»؟",
             "a": "der Aufenthalt"
+          },
+          {
+            "q": "Der ___ ist leer. (سلة المهملات!)",
+            "a": "Abfalleimer",
+            "why": "der Abfalleimer سلة المهملات (der! مركّب (Abfall+Eimer) مذكّر (der!) وجمعه die Abfalleimer (بلا تغيير!).) — Der Abfalleimer ist leer."
+          },
+          {
+            "q": "Die ___ ist hier. (معلّقة المعاطف!)",
+            "a": "Garderobe",
+            "why": "die Garderobe معلّقة المعاطف (die! مؤنثة (die!) وجمعها die Garderoben — قرض فرنسي (المكان لتعليق المعاطف!).) — Die Garderobe ist hier."
           }
         ],
         "passingScore": 0.75
@@ -491,12 +601,14 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Sehr geehrte Damen und Herren, Ihre Anzeige habe ich gelesen. Der Mieter, der die Wohnung sucht, bin ich. Das ist mir zu teuer: höchstens 600 Euro, ungefähr. Zunächst schreibe ich über mich. Die Unterlagen schicke ich morgen. Daher warte ich auf die Entscheidung. Der Beginn des Aufenthalts ist bald. Mit freundlichen Grüßen",
-      "ar": "سادة أعزاء، قرأت إعلانكم. المستأجر الذي يبحث عن الشقة أنا. هذا غالٍ جداً بالنسبة لي: 600 يورو على الأكثر، تقريباً. أولاً أكتب عن نفسي. الأوراق أرسلها غداً. لذا أنتظر القرار. بداية الإقامة قريبة. مع تحياتي الخالصة."
+      "de": "Sehr geehrte Damen und Herren, Ihre Anzeige habe ich gelesen. Der Mieter, der die Wohnung sucht, bin ich. Das ist mir zu teuer: höchstens 600 Euro, ungefähr. Zunächst schreibe ich über mich. Die Unterlagen schicke ich morgen. Daher warte ich auf die Entscheidung. Der Beginn des Aufenthalts ist bald. Mit freundlichen Grüßen Der Abfalleimer ist leer. Die Garderobe ist hier.",
+      "ar": "سادة أعزاء، قرأت إعلانكم. المستأجر الذي يبحث عن الشقة أنا. هذا غالٍ جداً بالنسبة لي: 600 يورو على الأكثر، تقريباً. أولاً أكتب عن نفسي. الأوراق أرسلها غداً. لذا أنتظر القرار. بداية الإقامة قريبة. مع تحياتي الخالصة. سلة المهملات فارغة. معلّقة المعاطف هنا."
     },
     "srsBundleWordIds": [
       "beginn",
-      "aufenthalt"
+      "aufenthalt",
+      "abfalleimer",
+      "garderobe"
     ],
     "warningCards": [
       {
@@ -562,14 +674,18 @@
   ],
   "audioManifestRefs": [
     "word-beginn",
-    "word-aufenthalt"
+    "word-aufenthalt",
+    "word-abfalleimer",
+    "word-garderobe"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
     "netzwerkChapter": "Netzwerk neu B1 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — الموضوع من study-plan §8 (البحث عن سكن — التوليف)",
     "goetheWordListOverlap": [
       "beginn",
-      "aufenthalt"
+      "aufenthalt",
+      "abfalleimer",
+      "garderobe"
     ]
   }
 }

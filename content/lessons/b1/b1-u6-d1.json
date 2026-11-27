@@ -66,7 +66,10 @@
       "tal",
       "gasthaus",
       "denkmal",
-      "galerie"
+      "galerie",
+      "rundfahrt",
+      "gebirge",
+      "burg"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Ich hätte gern einen Ausflug ins Tal!",
+        "de": "Ich hätte gern einen Ausflug ins Tal! Die Rundfahrt ist schön. Das Gebirge ist hoch, und die Burg ist alt.",
         "ar": "يطلب بلطف في 8 جمل!"
       },
       "situation": {
@@ -91,7 +94,7 @@
         "ar": "الرحلة: الراكب! الوادي! بيت الضيافة!"
       },
       "successCriteria": [
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الست عشرة كلها!",
         "«hätte gern» للطلب! «Könnte ich …?» للسؤال! «Wäre …?» للافتراض!",
         "الفعل الآخر آخراً بعد Könnte ich!",
         "Könnte أشدّ تهذيباً من Kann!"
@@ -194,6 +197,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: das Seminar = «الندوة» · das Diplom = «الشهادة (الجامعية)» · der Lebenslauf = «السيرة الذاتية»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الجولة (السياحية)",
+                "de": "die Rundfahrt"
+              },
+              {
+                "ar": "الجبال (سلسلة)",
+                "de": "das Gebirge"
+              },
+              {
+                "ar": "القلعة",
+                "de": "die Burg"
+              }
+            ],
+            "why": "die Rundfahrt الجولة (السياحية) · das Gebirge الجبال (سلسلة) · die Burg القلعة (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -254,6 +274,21 @@
             "q": "Sie liebt ihre ___.",
             "a": "Arbeit",
             "why": "الكلمة الناقصة «Arbeit» تعني «العمل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist schön. (الجولة!)",
+            "a": "Rundfahrt",
+            "why": "die Rundfahrt الجولة (السياحية) (die! مركّبة (Rund+Fahrt) مؤنثة (die!) وجمعها die Rundfahrten.) — Die Rundfahrt ist schön."
+          },
+          {
+            "q": "Das ___ ist hoch. (الجبال!)",
+            "a": "Gebirge",
+            "why": "das Gebirge الجبال (سلسلة) (das! محايد (das!) وجمعه die Gebirge (بلا تغيير!) — اسم جماعي (der Berg = جبل واحد!).) — Das Gebirge ist hoch."
+          },
+          {
+            "q": "Die ___ ist alt. (القلعة!)",
+            "a": "Burg",
+            "why": "die Burg القلعة (die! مؤنثة (die!) وجمعها die Burgen — القلعة (der Schloss = القصر!).) — Die Burg ist alt."
           }
         ]
       },
@@ -299,6 +334,21 @@
             "q": "~~Die wohnung ist neu.~~",
             "a": "Die Wohnung ist neu.",
             "why": "الخطأ في «wohnung»! الصواب «Wohnung» — راجع القاعدة (شقة)."
+          },
+          {
+            "q": "~~der Rundfahrt ist schön~~",
+            "a": "die Rundfahrt ist schön",
+            "why": "الألمانية: die Rundfahrt (die! مركّبة مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Gebirge ist hoch~~",
+            "a": "das Gebirge ist hoch",
+            "why": "الألمانية: das Gebirge (das! محايد!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Burg ist alt~~",
+            "a": "die Burg ist alt",
+            "why": "الألمانية: die Burg (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -334,6 +384,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Rundfahrt · das Gebirge · die Burg)",
+            "a": "Die Rundfahrt ist schön. Das Gebirge ist hoch, und die Burg ist alt.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -427,6 +482,42 @@
             ],
             "a": "Wirklich? Danke! Ich bin dabei.",
             "why": "«يوسف» في الحوار: فرح"
+          },
+          {
+            "audioId": "word-rundfahrt",
+            "speakText": "die Rundfahrt.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الجولة (السياحية)",
+              "الجبال (سلسلة)",
+              "القلعة"
+            ],
+            "a": "الجولة (السياحية)",
+            "why": "الصوت يقول «die Rundfahrt» — معناها «الجولة (السياحية)». ركّز!"
+          },
+          {
+            "audioId": "word-gebirge",
+            "speakText": "das Gebirge.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الجبال (سلسلة)",
+              "الجولة (السياحية)",
+              "القلعة"
+            ],
+            "a": "الجبال (سلسلة)",
+            "why": "الصوت يقول «das Gebirge» — معناها «الجبال (سلسلة)». ركّز!"
+          },
+          {
+            "audioId": "word-burg",
+            "speakText": "die Burg.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "القلعة",
+              "الجولة (السياحية)",
+              "الجبال (سلسلة)"
+            ],
+            "a": "القلعة",
+            "why": "الصوت يقول «die Burg» — معناها «القلعة». ركّز!"
           }
         ]
       },
@@ -460,6 +551,24 @@
             "speakText": "die Medien.",
             "a": "die Medien",
             "why": "اكتب ما تسمعه حرفياً: «die Medien» تعني «الإعلام». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-rundfahrt",
+            "speakText": "die Rundfahrt.",
+            "a": "die Rundfahrt",
+            "why": "اكتب ما تسمعه حرفياً: «die Rundfahrt» تعني «الجولة (السياحية)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gebirge",
+            "speakText": "das Gebirge.",
+            "a": "das Gebirge",
+            "why": "اكتب ما تسمعه حرفياً: «das Gebirge» تعني «الجبال (سلسلة)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-burg",
+            "speakText": "die Burg.",
+            "a": "die Burg",
+            "why": "اكتب ما تسمعه حرفياً: «die Burg» تعني «القلعة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -498,6 +607,21 @@
           {
             "q": "«التجربة»؟",
             "a": "das Erlebnis"
+          },
+          {
+            "q": "Die ___ ist schön. (الجولة!)",
+            "a": "Rundfahrt",
+            "why": "die Rundfahrt الجولة (السياحية) (die! مركّبة (Rund+Fahrt) مؤنثة (die!) وجمعها die Rundfahrten.) — Die Rundfahrt ist schön."
+          },
+          {
+            "q": "Das ___ ist hoch. (الجبال!)",
+            "a": "Gebirge",
+            "why": "das Gebirge الجبال (سلسلة) (das! محايد (das!) وجمعه die Gebirge (بلا تغيير!) — اسم جماعي (der Berg = جبل واحد!).) — Das Gebirge ist hoch."
+          },
+          {
+            "q": "Die ___ ist alt. (القلعة!)",
+            "a": "Burg",
+            "why": "die Burg القلعة (die! مؤنثة (die!) وجمعها die Burgen — القلعة (der Schloss = القصر!).) — Die Burg ist alt."
           }
         ],
         "passingScore": 0.75
@@ -527,6 +651,21 @@
           {
             "q": "«يودّع»؟",
             "a": "verabschieden"
+          },
+          {
+            "q": "Die ___ ist schön. (الجولة!)",
+            "a": "Rundfahrt",
+            "why": "die Rundfahrt الجولة (السياحية) (die! مركّبة (Rund+Fahrt) مؤنثة (die!) وجمعها die Rundfahrten.) — Die Rundfahrt ist schön."
+          },
+          {
+            "q": "Das ___ ist hoch. (الجبال!)",
+            "a": "Gebirge",
+            "why": "das Gebirge الجبال (سلسلة) (das! محايد (das!) وجمعه die Gebirge (بلا تغيير!) — اسم جماعي (der Berg = جبل واحد!).) — Das Gebirge ist hoch."
+          },
+          {
+            "q": "Die ___ ist alt. (القلعة!)",
+            "a": "Burg",
+            "why": "die Burg القلعة (die! مؤنثة (die!) وجمعها die Burgen — القلعة (der Schloss = القصر!).) — Die Burg ist alt."
           }
         ],
         "passingScore": 0.75
@@ -556,6 +695,21 @@
           {
             "q": "«يودّع»؟",
             "a": "verabschieden"
+          },
+          {
+            "q": "Die ___ ist schön. (الجولة!)",
+            "a": "Rundfahrt",
+            "why": "die Rundfahrt الجولة (السياحية) (die! مركّبة (Rund+Fahrt) مؤنثة (die!) وجمعها die Rundfahrten.) — Die Rundfahrt ist schön."
+          },
+          {
+            "q": "Das ___ ist hoch. (الجبال!)",
+            "a": "Gebirge",
+            "why": "das Gebirge الجبال (سلسلة) (das! محايد (das!) وجمعه die Gebirge (بلا تغيير!) — اسم جماعي (der Berg = جبل واحد!).) — Das Gebirge ist hoch."
+          },
+          {
+            "q": "Die ___ ist alt. (القلعة!)",
+            "a": "Burg",
+            "why": "die Burg القلعة (die! مؤنثة (die!) وجمعها die Burgen — القلعة (der Schloss = القصر!).) — Die Burg ist alt."
           }
         ],
         "passingScore": 0.75
@@ -564,8 +718,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Ich hätte gern einen Ausflug. Könnte ich das Denkmal und die Galerie besuchen? Der Passagier reist ins Tal und erlebt das Gasthaus. Das Erlebnis ist wichtig: Tradition und Kultur! Der Katalog ist in der Galerie. Das Essen ist traditionell. Ich verabschiede mich, aber ich habe Heimweh. Der Abschied ist schwer: Auf Wiedersehen!",
-      "ar": "مرحباً! أودّ رحلةً. هل يمكنني زيارة النصب التذكاري والمعرض؟ الراكب يسافر إلى الوادي ويعيش بيت الضيافة. التجربة مهمة: التقاليد والثقافة! الكتالوج في المعرض. الطعام تقليدي. أودّع، لكنني أشتاق إلى الوطن. الوداع صعب: إلى اللقاء!"
+      "de": "Guten Tag! Ich hätte gern einen Ausflug. Könnte ich das Denkmal und die Galerie besuchen? Der Passagier reist ins Tal und erlebt das Gasthaus. Das Erlebnis ist wichtig: Tradition und Kultur! Der Katalog ist in der Galerie. Das Essen ist traditionell. Ich verabschiede mich, aber ich habe Heimweh. Der Abschied ist schwer: Auf Wiedersehen! Die Rundfahrt ist schön. Das Gebirge ist hoch. Die Burg ist alt.",
+      "ar": "مرحباً! أودّ رحلةً. هل يمكنني زيارة النصب التذكاري والمعرض؟ الراكب يسافر إلى الوادي ويعيش بيت الضيافة. التجربة مهمة: التقاليد والثقافة! الكتالوج في المعرض. الطعام تقليدي. أودّع، لكنني أشتاق إلى الوطن. الوداع صعب: إلى اللقاء! الجولة جميلة. الجبال مرتفعة. القلعة قديمة."
     },
     "srsBundleWordIds": [
       "abschied",
@@ -580,7 +734,10 @@
       "tal",
       "gasthaus",
       "denkmal",
-      "galerie"
+      "galerie",
+      "rundfahrt",
+      "gebirge",
+      "burg"
     ],
     "warningCards": [
       {
@@ -664,7 +821,10 @@
     "word-tal",
     "word-gasthaus",
     "word-denkmal",
-    "word-galerie"
+    "word-galerie",
+    "word-rundfahrt",
+    "word-gebirge",
+    "word-burg"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -682,7 +842,10 @@
       "tal",
       "gasthaus",
       "denkmal",
-      "galerie"
+      "galerie",
+      "rundfahrt",
+      "gebirge",
+      "burg"
     ]
   }
 }

@@ -66,7 +66,10 @@
       "abenteuer",
       "entdecken",
       "verbringen",
-      "gering"
+      "gering",
+      "huegel",
+      "landung",
+      "metropole"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Wenn ich Zeit hätte, könnte ich mehr entdecken!",
+        "de": "Wenn ich Zeit hätte, könnte ich mehr entdecken! Der Hügel ist grün. Die Landung ist gut, und die Metropole ist laut.",
         "ar": "يتسوّق ويعبر عن الأمنيات في 8 جمل!"
       },
       "situation": {
@@ -91,7 +94,7 @@
         "ar": "السوق: الشراء! النقود! التذكار!"
       },
       "successCriteria": [
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الست عشرة كلها!",
         "«wenn + حرف كان + الفعل آخراً» في جملة الشرط!",
         "الجملة الرئيسية: könnte/wäre!",
         "wenn + ist/hat واقعي ≠ wenn + hätte/wäre غير واقع!"
@@ -194,6 +197,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: das Seminar = «الندوة» · das Diplom = «الشهادة (الجامعية)» · der Lebenslauf = «السيرة الذاتية»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "التل",
+                "de": "der Hügel"
+              },
+              {
+                "ar": "الهبوط (الطائرة)",
+                "de": "die Landung"
+              },
+              {
+                "ar": "المدينة الكبرى",
+                "de": "die Metropole"
+              }
+            ],
+            "why": "der Hügel التل · die Landung الهبوط (الطائرة) · die Metropole المدينة الكبرى (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -254,6 +274,21 @@
             "q": "Sie liebt ihre ___.",
             "a": "Arbeit",
             "why": "الكلمة الناقصة «Arbeit» تعني «العمل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist grün. (التل!)",
+            "a": "Hügel",
+            "why": "der Hügel التل (der! مذكّر (der!) وجمعه die Hügel (بلا تغيير!).) — Der Hügel ist grün."
+          },
+          {
+            "q": "Die ___ ist gut. (الهبوط!)",
+            "a": "Landung",
+            "why": "die Landung الهبوط (الطائرة) (die! مؤنثة (die!) وجمعها die Landungen.) — Die Landung ist gut."
+          },
+          {
+            "q": "Die ___ ist laut. (المدينة الكبرى!)",
+            "a": "Metropole",
+            "why": "die Metropole المدينة الكبرى (die! مؤنثة (die!) وجمعها die Metropolen — قرض يوناني (المدينة الكبرى!).) — Die Metropole ist laut."
           }
         ]
       },
@@ -300,6 +335,21 @@
             "q": "~~Das ist die regel.~~",
             "a": "Das ist die Regel.",
             "why": "الخطأ في «regel»! الصواب «Regel» — راجع القاعدة (قاعدة)."
+          },
+          {
+            "q": "~~die Hügel ist grün~~",
+            "a": "der Hügel ist grün",
+            "why": "الألمانية: der Hügel (der!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Landung ist gut~~",
+            "a": "die Landung ist gut",
+            "why": "الألمانية: die Landung (die! -ung مؤنثة!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Metropole ist laut~~",
+            "a": "die Metropole ist laut",
+            "why": "الألمانية: die Metropole (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -350,6 +400,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: der Hügel · die Landung · die Metropole)",
+            "a": "Der Hügel ist grün. Die Landung ist gut, und die Metropole ist laut.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -443,6 +498,42 @@
             ],
             "a": "Das ist die richtige Idee!",
             "why": "«لينا» في الحوار: تشجيع"
+          },
+          {
+            "audioId": "word-huegel",
+            "speakText": "der Hügel.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التل",
+              "الهبوط (الطائرة)",
+              "المدينة الكبرى"
+            ],
+            "a": "التل",
+            "why": "الصوت يقول «der Hügel» — معناها «التل». ركّز!"
+          },
+          {
+            "audioId": "word-landung",
+            "speakText": "die Landung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الهبوط (الطائرة)",
+              "التل",
+              "المدينة الكبرى"
+            ],
+            "a": "الهبوط (الطائرة)",
+            "why": "الصوت يقول «die Landung» — معناها «الهبوط (الطائرة)». ركّز!"
+          },
+          {
+            "audioId": "word-metropole",
+            "speakText": "die Metropole.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المدينة الكبرى",
+              "التل",
+              "الهبوط (الطائرة)"
+            ],
+            "a": "المدينة الكبرى",
+            "why": "الصوت يقول «die Metropole» — معناها «المدينة الكبرى». ركّز!"
           }
         ]
       },
@@ -476,6 +567,24 @@
             "speakText": "die Batterie.",
             "a": "die Batterie",
             "why": "اكتب ما تسمعه حرفياً: «die Batterie» تعني «البطارية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-huegel",
+            "speakText": "der Hügel.",
+            "a": "der Hügel",
+            "why": "اكتب ما تسمعه حرفياً: «der Hügel» تعني «التل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-landung",
+            "speakText": "die Landung.",
+            "a": "die Landung",
+            "why": "اكتب ما تسمعه حرفياً: «die Landung» تعني «الهبوط (الطائرة)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-metropole",
+            "speakText": "die Metropole.",
+            "a": "die Metropole",
+            "why": "اكتب ما تسمعه حرفياً: «die Metropole» تعني «المدينة الكبرى». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -514,6 +623,21 @@
           {
             "q": "«الورقة النقدية»؟",
             "a": "der Schein"
+          },
+          {
+            "q": "Der ___ ist grün. (التل!)",
+            "a": "Hügel",
+            "why": "der Hügel التل (der! مذكّر (der!) وجمعه die Hügel (بلا تغيير!).) — Der Hügel ist grün."
+          },
+          {
+            "q": "Die ___ ist gut. (الهبوط!)",
+            "a": "Landung",
+            "why": "die Landung الهبوط (الطائرة) (die! مؤنثة (die!) وجمعها die Landungen.) — Die Landung ist gut."
+          },
+          {
+            "q": "Die ___ ist laut. (المدينة الكبرى!)",
+            "a": "Metropole",
+            "why": "die Metropole المدينة الكبرى (die! مؤنثة (die!) وجمعها die Metropolen — قرض يوناني (المدينة الكبرى!).) — Die Metropole ist laut."
           }
         ],
         "passingScore": 0.75
@@ -543,6 +667,21 @@
           {
             "q": "«المشتري»؟",
             "a": "der Käufer"
+          },
+          {
+            "q": "Der ___ ist grün. (التل!)",
+            "a": "Hügel",
+            "why": "der Hügel التل (der! مذكّر (der!) وجمعه die Hügel (بلا تغيير!).) — Der Hügel ist grün."
+          },
+          {
+            "q": "Die ___ ist gut. (الهبوط!)",
+            "a": "Landung",
+            "why": "die Landung الهبوط (الطائرة) (die! مؤنثة (die!) وجمعها die Landungen.) — Die Landung ist gut."
+          },
+          {
+            "q": "Die ___ ist laut. (المدينة الكبرى!)",
+            "a": "Metropole",
+            "why": "die Metropole المدينة الكبرى (die! مؤنثة (die!) وجمعها die Metropolen — قرض يوناني (المدينة الكبرى!).) — Die Metropole ist laut."
           }
         ],
         "passingScore": 0.75
@@ -572,6 +711,21 @@
           {
             "q": "«المشتري»؟",
             "a": "der Käufer"
+          },
+          {
+            "q": "Der ___ ist grün. (التل!)",
+            "a": "Hügel",
+            "why": "der Hügel التل (der! مذكّر (der!) وجمعه die Hügel (بلا تغيير!).) — Der Hügel ist grün."
+          },
+          {
+            "q": "Die ___ ist gut. (الهبوط!)",
+            "a": "Landung",
+            "why": "die Landung الهبوط (الطائرة) (die! مؤنثة (die!) وجمعها die Landungen.) — Die Landung ist gut."
+          },
+          {
+            "q": "Die ___ ist laut. (المدينة الكبرى!)",
+            "a": "Metropole",
+            "why": "die Metropole المدينة الكبرى (die! مؤنثة (die!) وجمعها die Metropolen — قرض يوناني (المدينة الكبرى!).) — Die Metropole ist laut."
           }
         ],
         "passingScore": 0.75
@@ -580,8 +734,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Ich möchte ein Souvenir kaufen. Wenn ich mehr Bargeld hätte, könnte ich das kaufen. Der Kauf war falsch: Ich habe etwas verwechselt! Der Käufer hat den falschen Schein. Die Anzahlung ist bezahlt. Das Bargeld ist gering, aber der Geldautomat ist weit: Die Entfernung ist groß. Wenn ich Zeit hätte, könnte ich mehr Abenteuer entdecken. Wir verbringen den Tag hier. Danke!",
-      "ar": "مرحباً! أريد شراء تذكار. لو كان لديّ نقود أكثر، لاستطعت شراء ذلك. الشراء كان خاطئاً: لقد خلطتُ بين شيء ما! المشتري معه الورقة النقدية الخاطئة. العربون مدفوع. النقود قليلة، لكن الصرّاف الآلي بعيد: المسافة كبيرة. لو كان لديّ وقت، لاكتشفتُ مغامرات أكثر. نقضي اليوم هنا. شكراً!"
+      "de": "Guten Tag! Ich möchte ein Souvenir kaufen. Wenn ich mehr Bargeld hätte, könnte ich das kaufen. Der Kauf war falsch: Ich habe etwas verwechselt! Der Käufer hat den falschen Schein. Die Anzahlung ist bezahlt. Das Bargeld ist gering, aber der Geldautomat ist weit: Die Entfernung ist groß. Wenn ich Zeit hätte, könnte ich mehr Abenteuer entdecken. Wir verbringen den Tag hier. Danke! Der Hügel ist grün. Die Landung ist gut. Die Metropole ist laut.",
+      "ar": "مرحباً! أريد شراء تذكار. لو كان لديّ نقود أكثر، لاستطعت شراء ذلك. الشراء كان خاطئاً: لقد خلطتُ بين شيء ما! المشتري معه الورقة النقدية الخاطئة. العربون مدفوع. النقود قليلة، لكن الصرّاف الآلي بعيد: المسافة كبيرة. لو كان لديّ وقت، لاكتشفتُ مغامرات أكثر. نقضي اليوم هنا. شكراً! التل أخضر. الهبوط جيد. المدينة الكبرى صاخبة."
     },
     "srsBundleWordIds": [
       "kauf",
@@ -596,7 +750,10 @@
       "abenteuer",
       "entdecken",
       "verbringen",
-      "gering"
+      "gering",
+      "huegel",
+      "landung",
+      "metropole"
     ],
     "warningCards": [
       {
@@ -679,7 +836,10 @@
     "word-abenteuer",
     "word-entdecken",
     "word-verbringen",
-    "word-gering"
+    "word-gering",
+    "word-huegel",
+    "word-landung",
+    "word-metropole"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -697,7 +857,10 @@
       "abenteuer",
       "entdecken",
       "verbringen",
-      "gering"
+      "gering",
+      "huegel",
+      "landung",
+      "metropole"
     ]
   }
 }

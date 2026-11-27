@@ -68,7 +68,8 @@
       "wenden",
       "verlassen",
       "schulden",
-      "einkauf"
+      "einkauf",
+      "mauer"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -85,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Ich ziehe in die Wohnung: Das Angebot gilt!",
+        "de": "Ich ziehe in die Wohnung: Das Angebot gilt! Die Mauer ist hoch.",
         "ar": "يحكِّ انتقاله للشقة بكل كولوكاسيونات اليوم!"
       },
       "situation": {
@@ -95,7 +96,7 @@
       "successCriteria": [
         "الشراكات: ziehen in! gelten! wenden an! verlassen!",
         "الأفعال القوية: gilt/galt! verlässt/verließ!",
-        "كلمات اليوم الخمس عشرة كلها!",
+        "كلمات اليوم الست عشرة كلها!",
         "Anrede/Gruß مهذبان!"
       ]
     },
@@ -199,6 +200,23 @@
               }
             ],
             "why": "ergänzen يُكمل («die Unterlagen ergänzen»!) · sich wenden يتجه («sich an die Behörde wenden» — an محفوظ!) · verlassen يغادر (verlässt/verließ! + Akkusativ!) · die Schulden الديون («Schulden bezahlen»!) · der Einkauf التسوّق («Einkauf machen»!) — ومراجعة: die Bestätigung التأكيد!"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الجدار",
+                "de": "die Mauer"
+              },
+              {
+                "ar": "التسوّق",
+                "de": "der Einkauf"
+              },
+              {
+                "ar": "الديون",
+                "de": "die Schulden"
+              }
+            ],
+            "why": "die Mauer الجدار · der Einkauf التسوّق · die Schulden الديون (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -259,6 +277,11 @@
             "q": "Was ___ das Handy?",
             "a": "kostet",
             "why": "الكلمة الناقصة «kostet» تعني «يُكلِّف (يَسْتَهْلِك سعراً)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist hoch. (الجدار!)",
+            "a": "Mauer",
+            "why": "die Mauer الجدار (die! مؤنثة (die!) وجمعها die Mauern.) — Die Mauer ist hoch."
           }
         ]
       },
@@ -304,6 +327,11 @@
             "q": "~~Wann Kommt der Bus an?~~",
             "a": "Wann kommt der Bus an?",
             "why": "الخطأ في «Kommt»! الصواب «kommt» — راجع القاعدة (يصل)."
+          },
+          {
+            "q": "~~der Mauer ist hoch~~",
+            "a": "die Mauer ist hoch",
+            "why": "الألمانية: die Mauer (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -339,6 +367,11 @@
             "q": "كوّن جملة فيها «freundlich» («ودود/لطيف») ثم تحدّث بها.",
             "a": "Meine Tante ist freundlich.",
             "why": "استعمل «freundlich» («ودود/لطيف») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Mauer)",
+            "a": "Die Mauer ist hoch.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -432,6 +465,18 @@
             ],
             "a": "Viel Glück in der neuen Wohnung!",
             "why": "«لينا» في الحوار: تهنئة"
+          },
+          {
+            "audioId": "word-mauer",
+            "speakText": "die Mauer.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الجدار",
+              "يتجنّب",
+              "يكسر"
+            ],
+            "a": "الجدار",
+            "why": "الصوت يقول «die Mauer» — معناها «الجدار». ركّز!"
           }
         ]
       },
@@ -465,6 +510,12 @@
             "speakText": "entscheiden.",
             "a": "entscheiden",
             "why": "اكتب ما تسمعه حرفياً: «entscheiden» تعني «يقرر». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-mauer",
+            "speakText": "die Mauer.",
+            "a": "die Mauer",
+            "why": "اكتب ما تسمعه حرفياً: «die Mauer» تعني «الجدار». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -503,6 +554,11 @@
           {
             "q": "«يُقدّم (أداء/مساعدة)»؟",
             "a": "leisten"
+          },
+          {
+            "q": "Die ___ ist hoch. (الجدار!)",
+            "a": "Mauer",
+            "why": "die Mauer الجدار (die! مؤنثة (die!) وجمعها die Mauern.) — Die Mauer ist hoch."
           }
         ],
         "passingScore": 0.75
@@ -532,6 +588,11 @@
           {
             "q": "«يكسر»؟",
             "a": "brechen"
+          },
+          {
+            "q": "Die ___ ist hoch. (الجدار!)",
+            "a": "Mauer",
+            "why": "die Mauer الجدار (die! مؤنثة (die!) وجمعها die Mauern.) — Die Mauer ist hoch."
           }
         ],
         "passingScore": 0.75
@@ -561,6 +622,11 @@
           {
             "q": "«يكسر»؟",
             "a": "brechen"
+          },
+          {
+            "q": "Die ___ ist hoch. (الجدار!)",
+            "a": "Mauer",
+            "why": "die Mauer الجدار (die! مؤنثة (die!) وجمعها die Mauern.) — Die Mauer ist hoch."
           }
         ],
         "passingScore": 0.75
@@ -569,8 +635,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Ich ziehe in die Wohnung. Das Angebot gilt heute. Ich möchte Fehler vermeiden. Die Unterlagen ergänze ich morgen. Die Zahlung leiste ich pünktlich. Der Zustand kann sich verbessern. Die Wohnung verlasse ich spät. Mit freundlichen Grüßen",
-      "ar": "أنتقل إلى الشقة. العرض يسري اليوم. أود تجنّب الأخطاء. الأوراق أُكملها غداً. الدفع أُقدّمه في الموعد. الحالة قد تتحسّن. الشقة أُغادرها متأخراً. مع تحياتي الخالصة."
+      "de": "Ich ziehe in die Wohnung. Das Angebot gilt heute. Ich möchte Fehler vermeiden. Die Unterlagen ergänze ich morgen. Die Zahlung leiste ich pünktlich. Der Zustand kann sich verbessern. Die Wohnung verlasse ich spät. Mit freundlichen Grüßen Die Mauer ist hoch.",
+      "ar": "أنتقل إلى الشقة. العرض يسري اليوم. أود تجنّب الأخطاء. الأوراق أُكملها غداً. الدفع أُقدّمه في الموعد. الحالة قد تتحسّن. الشقة أُغادرها متأخراً. مع تحياتي الخالصة. الجدار مرتفع."
     },
     "srsBundleWordIds": [
       "vermeiden",
@@ -587,7 +653,8 @@
       "wenden",
       "verlassen",
       "schulden",
-      "einkauf"
+      "einkauf",
+      "mauer"
     ],
     "warningCards": [
       {
@@ -675,7 +742,8 @@
     "word-wenden",
     "word-verlassen",
     "word-schulden",
-    "word-einkauf"
+    "word-einkauf",
+    "word-mauer"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -695,7 +763,8 @@
       "wenden",
       "verlassen",
       "schulden",
-      "einkauf"
+      "einkauf",
+      "mauer"
     ]
   }
 }

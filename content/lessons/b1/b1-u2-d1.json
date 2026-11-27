@@ -66,7 +66,9 @@
       "quadratmeter",
       "badewanne",
       "vorort",
-      "erkundigen"
+      "erkundigen",
+      "terrasse",
+      "hausmeister"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +85,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Die Wohnung ist möbliert und hat eine gute Lage.",
+        "de": "Die Wohnung ist möbliert und hat eine gute Lage. Die Terrasse ist schön. Der Hausmeister hilft.",
         "ar": "تصف شقة يبحث عنها مستأجر — بكلمات اليوم وجمل موصولة!"
       },
       "situation": {
@@ -93,7 +95,7 @@
       "successCriteria": [
         "جمل موصولة: der/die/das حسب الجنس + der/den/dem حسب الموقع!",
         "الفعل آخراً في الجملة الموصولة!",
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الخمس عشرة كلها!",
         "Anrede/Gruß مهذبان!"
       ]
     },
@@ -185,6 +187,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: die Wohnung = «شقة» · suchen = «يبحث عن» · das Zimmer = «غرفة»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "الشرفة (الواسعة)",
+                "de": "die Terrasse"
+              },
+              {
+                "ar": "حارس العمارة",
+                "de": "der Hausmeister"
+              },
+              {
+                "ar": "يستفسر (عن)",
+                "de": "sich erkundigen"
+              }
+            ],
+            "why": "die Terrasse الشرفة (الواسعة) · der Hausmeister حارس العمارة · sich erkundigen يستفسر (عن) (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -245,6 +264,16 @@
             "q": "Ich ___ um Hilfe.",
             "a": "bitte",
             "why": "الكلمة الناقصة «bitte» تعني «يطلب (من شخص)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist schön. (الشرفة!)",
+            "a": "Terrasse",
+            "why": "die Terrasse الشرفة (الواسعة) (die! مؤنثة (die!) وجمعها die Terrassen.) — Die Terrasse ist schön."
+          },
+          {
+            "q": "Der ___ hilft. (حارس العمارة!)",
+            "a": "Hausmeister",
+            "why": "der Hausmeister حارس العمارة (der! مركّب (Haus+Meister) مذكّر (der!) وجمعه die Hausmeister — والمؤنث die Hausmeisterin (وفي سويسرا: der Abwart!).) — Der Hausmeister hilft."
           }
         ]
       },
@@ -290,6 +319,16 @@
             "q": "~~Ich spreche Deutsch.~~ (ناقصة: sprechen)",
             "a": "Ich spreche Deutsch. sprechen.",
             "why": "الجملة تفتقد «sprechen» (يتحدّث) — أكملها بالكلمة الصحيحة."
+          },
+          {
+            "q": "~~der Terrasse ist schön~~",
+            "a": "die Terrasse ist schön",
+            "why": "الألمانية: die Terrasse (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Hausmeister hilft~~",
+            "a": "der Hausmeister hilft",
+            "why": "الألمانية: der Hausmeister (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -319,6 +358,11 @@
             "q": "كوّن جملة فيها «die Entschuldigung» («عفواً») ثم تحدّث بها.",
             "a": "Entschuldigung, wo ist der Bahnhof?",
             "why": "استعمل «die Entschuldigung» («عفواً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Terrasse · der Hausmeister)",
+            "a": "Die Terrasse ist schön. Der Hausmeister hilft.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -412,6 +456,30 @@
             ],
             "a": "Viel Glück morgen!",
             "why": "«لينا» في الحوار: تشجيع"
+          },
+          {
+            "audioId": "word-terrasse",
+            "speakText": "die Terrasse.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الشرفة (الواسعة)",
+              "حارس العمارة",
+              "المستأجر"
+            ],
+            "a": "الشرفة (الواسعة)",
+            "why": "الصوت يقول «die Terrasse» — معناها «الشرفة (الواسعة)». ركّز!"
+          },
+          {
+            "audioId": "word-hausmeister",
+            "speakText": "der Hausmeister.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "حارس العمارة",
+              "الشرفة (الواسعة)",
+              "المستأجر"
+            ],
+            "a": "حارس العمارة",
+            "why": "الصوت يقول «der Hausmeister» — معناها «حارس العمارة». ركّز!"
           }
         ]
       },
@@ -445,6 +513,18 @@
             "speakText": "der Abschluss.",
             "a": "der Abschluss",
             "why": "اكتب ما تسمعه حرفياً: «der Abschluss» تعني «الختام». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-terrasse",
+            "speakText": "die Terrasse.",
+            "a": "die Terrasse",
+            "why": "اكتب ما تسمعه حرفياً: «die Terrasse» تعني «الشرفة (الواسعة)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-hausmeister",
+            "speakText": "der Hausmeister.",
+            "a": "der Hausmeister",
+            "why": "اكتب ما تسمعه حرفياً: «der Hausmeister» تعني «حارس العمارة». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -483,6 +563,16 @@
           {
             "q": "«التأكيد»؟",
             "a": "die Bestätigung"
+          },
+          {
+            "q": "Die ___ ist schön. (الشرفة!)",
+            "a": "Terrasse",
+            "why": "die Terrasse الشرفة (الواسعة) (die! مؤنثة (die!) وجمعها die Terrassen.) — Die Terrasse ist schön."
+          },
+          {
+            "q": "Der ___ hilft. (حارس العمارة!)",
+            "a": "Hausmeister",
+            "why": "der Hausmeister حارس العمارة (der! مركّب (Haus+Meister) مذكّر (der!) وجمعه die Hausmeister — والمؤنث die Hausmeisterin (وفي سويسرا: der Abwart!).) — Der Hausmeister hilft."
           }
         ],
         "passingScore": 0.75
@@ -512,6 +602,16 @@
           {
             "q": "«الإعلان (المطبوع)»؟",
             "a": "das Inserat"
+          },
+          {
+            "q": "Die ___ ist schön. (الشرفة!)",
+            "a": "Terrasse",
+            "why": "die Terrasse الشرفة (الواسعة) (die! مؤنثة (die!) وجمعها die Terrassen.) — Die Terrasse ist schön."
+          },
+          {
+            "q": "Der ___ hilft. (حارس العمارة!)",
+            "a": "Hausmeister",
+            "why": "der Hausmeister حارس العمارة (der! مركّب (Haus+Meister) مذكّر (der!) وجمعه die Hausmeister — والمؤنث die Hausmeisterin (وفي سويسرا: der Abwart!).) — Der Hausmeister hilft."
           }
         ],
         "passingScore": 0.75
@@ -541,6 +641,16 @@
           {
             "q": "«الإعلان (المطبوع)»؟",
             "a": "das Inserat"
+          },
+          {
+            "q": "Die ___ ist schön. (الشرفة!)",
+            "a": "Terrasse",
+            "why": "die Terrasse الشرفة (الواسعة) (die! مؤنثة (die!) وجمعها die Terrassen.) — Die Terrasse ist schön."
+          },
+          {
+            "q": "Der ___ hilft. (حارس العمارة!)",
+            "a": "Hausmeister",
+            "why": "der Hausmeister حارس العمارة (der! مركّب (Haus+Meister) مذكّر (der!) وجمعه die Hausmeister — والمؤنث die Hausmeisterin (وفي سويسرا: der Abwart!).) — Der Hausmeister hilft."
           }
         ],
         "passingScore": 0.75
@@ -549,8 +659,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Das Inserat ist neu. Der Mieter, der die Wohnung sucht, ist freundlich. Die Wohnung ist möbliert und hat eine gute Lage. Sie hat 60 Quadratmeter. Die Bestätigung, die ich schreibe, kommt morgen. Die Frist ist kurz. Der Wohnsitz, den ich melde, ist im Vorort. Das Einkommen ist wichtig.",
-      "ar": "الإعلان جديد. المستأجر الذي يبحث عن الشقة ودود. الشقة مؤثّثة وموقعها جيد. مساحتها 60 متراً مربعاً. التأكيد الذي أكتبه يأتي غداً. المهلة قصيرة. محل الإقامة الذي أسجّله في الضاحية. الدخل مهم."
+      "de": "Das Inserat ist neu. Der Mieter, der die Wohnung sucht, ist freundlich. Die Wohnung ist möbliert und hat eine gute Lage. Sie hat 60 Quadratmeter. Die Bestätigung, die ich schreibe, kommt morgen. Die Frist ist kurz. Der Wohnsitz, den ich melde, ist im Vorort. Das Einkommen ist wichtig. Die Terrasse ist schön. Der Hausmeister hilft.",
+      "ar": "الإعلان جديد. المستأجر الذي يبحث عن الشقة ودود. الشقة مؤثّثة وموقعها جيد. مساحتها 60 متراً مربعاً. التأكيد الذي أكتبه يأتي غداً. المهلة قصيرة. محل الإقامة الذي أسجّله في الضاحية. الدخل مهم. الشرفة جميلة. حارس العمارة يساعد."
     },
     "srsBundleWordIds": [
       "mieter",
@@ -565,7 +675,9 @@
       "quadratmeter",
       "badewanne",
       "vorort",
-      "erkundigen"
+      "erkundigen",
+      "terrasse",
+      "hausmeister"
     ],
     "warningCards": [
       {
@@ -648,7 +760,9 @@
     "word-quadratmeter",
     "word-badewanne",
     "word-vorort",
-    "word-erkundigen"
+    "word-erkundigen",
+    "word-terrasse",
+    "word-hausmeister"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -666,7 +780,9 @@
       "quadratmeter",
       "badewanne",
       "vorort",
-      "erkundigen"
+      "erkundigen",
+      "terrasse",
+      "hausmeister"
     ]
   }
 }

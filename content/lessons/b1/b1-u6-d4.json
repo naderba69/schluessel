@@ -66,7 +66,10 @@
       "besserung",
       "anzeigen",
       "batterie",
-      "aushilfe"
+      "aushilfe",
+      "buehne",
+      "floete",
+      "oper"
     ],
     "borrowedWords": [],
     "grammarArsenalIds": [
@@ -83,7 +86,7 @@
   "uebung": {
     "communicativeTask": {
       "goal": {
-        "de": "Hätten Sie helfen können?",
+        "de": "Hätten Sie helfen können? Die Bühne ist groß. Die Flöte ist leise, und die Oper ist heute.",
         "ar": "يصف الطوارئ وما كان يمكن فعله في 8 جمل!"
       },
       "situation": {
@@ -91,7 +94,7 @@
         "ar": "الحادث: الإنذار! الإنقاذ! اللص!"
       },
       "successCriteria": [
-        "كلمات اليوم الثلاث عشرة كلها!",
+        "كلمات اليوم الست عشرة كلها!",
         "«hätte + مصدرين آخراً» (helfen können! rufen sollen!)",
         "كل الأدوات تأخذ hätte (haben)!",
         "«kann helfen» حاضر ≠ «hätte helfen können» ماضٍ افتراضي!"
@@ -194,6 +197,23 @@
               }
             ],
             "why": "صِل كل كلمة بمعناها الصحيح: das Seminar = «الندوة» · das Diplom = «الشهادة (الجامعية)» · der Lebenslauf = «السيرة الذاتية»"
+          },
+          {
+            "pairs": [
+              {
+                "ar": "خشبة المسرح",
+                "de": "die Bühne"
+              },
+              {
+                "ar": "الناي",
+                "de": "die Flöte"
+              },
+              {
+                "ar": "الأوبرا",
+                "de": "die Oper"
+              }
+            ],
+            "why": "die Bühne خشبة المسرح · die Flöte الناي · die Oper الأوبرا (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -254,6 +274,21 @@
             "q": "Sie liebt ihre ___.",
             "a": "Arbeit",
             "why": "الكلمة الناقصة «Arbeit» تعني «العمل» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist groß. (خشبة المسرح!)",
+            "a": "Bühne",
+            "why": "die Bühne خشبة المسرح (die! مؤنثة (die!) وجمعها die Bühnen.) — Die Bühne ist groß."
+          },
+          {
+            "q": "Die ___ ist leise. (الناي!)",
+            "a": "Flöte",
+            "why": "die Flöte الناي (die! مؤنثة (die!) وجمعها die Flöten.) — Die Flöte ist leise."
+          },
+          {
+            "q": "Die ___ ist heute. (الأوبرا!)",
+            "a": "Oper",
+            "why": "die Oper الأوبرا (die! مؤنثة (die!) وجمعها die Opern — قرض إيطالي.) — Die Oper ist heute."
           }
         ]
       },
@@ -300,6 +335,21 @@
             "q": "~~Das ist die regel.~~",
             "a": "Das ist die Regel.",
             "why": "الخطأ في «regel»! الصواب «Regel» — راجع القاعدة (قاعدة)."
+          },
+          {
+            "q": "~~der Bühne ist groß~~",
+            "a": "die Bühne ist groß",
+            "why": "الألمانية: die Bühne (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Flöte ist leise~~",
+            "a": "die Flöte ist leise",
+            "why": "الألمانية: die Flöte (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Oper ist heute~~",
+            "a": "die Oper ist heute",
+            "why": "الألمانية: die Oper (die!) — لا der أبداً! (خريطة التداخل 10-ي!)"
           }
         ]
       },
@@ -350,6 +400,11 @@
             "q": "كوّن جملة فيها «Danke» («شكراً») ثم تحدّث بها.",
             "a": "Danke! — Bitte!",
             "why": "استعمل «Danke» («شكراً») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "تكلّم عن يومك! (جملتان! استعمل كلمات اليوم الجديدة: die Bühne · die Flöte · die Oper)",
+            "a": "Die Bühne ist groß. Die Flöte ist leise, und die Oper ist heute.",
+            "why": "المراجعة بالكلام! كلمات اليوم الجديدة كلها في الجُمل."
           }
         ]
       },
@@ -443,6 +498,42 @@
             ],
             "a": "Sehr gut! Alle sind gerettet!",
             "why": "«يوسف» في الحوار: إغلاق"
+          },
+          {
+            "audioId": "word-buehne",
+            "speakText": "die Bühne.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "خشبة المسرح",
+              "الناي",
+              "الأوبرا"
+            ],
+            "a": "خشبة المسرح",
+            "why": "الصوت يقول «die Bühne» — معناها «خشبة المسرح». ركّز!"
+          },
+          {
+            "audioId": "word-floete",
+            "speakText": "die Flöte.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الناي",
+              "خشبة المسرح",
+              "الأوبرا"
+            ],
+            "a": "الناي",
+            "why": "الصوت يقول «die Flöte» — معناها «الناي». ركّز!"
+          },
+          {
+            "audioId": "word-oper",
+            "speakText": "die Oper.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الأوبرا",
+              "خشبة المسرح",
+              "الناي"
+            ],
+            "a": "الأوبرا",
+            "why": "الصوت يقول «die Oper» — معناها «الأوبرا». ركّز!"
           }
         ]
       },
@@ -476,6 +567,24 @@
             "speakText": "ärgerlich.",
             "a": "ärgerlich",
             "why": "اكتب ما تسمعه حرفياً: «ärgerlich» تعني «مزعج». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-buehne",
+            "speakText": "die Bühne.",
+            "a": "die Bühne",
+            "why": "اكتب ما تسمعه حرفياً: «die Bühne» تعني «خشبة المسرح». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-floete",
+            "speakText": "die Flöte.",
+            "a": "die Flöte",
+            "why": "اكتب ما تسمعه حرفياً: «die Flöte» تعني «الناي». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-oper",
+            "speakText": "die Oper.",
+            "a": "die Oper",
+            "why": "اكتب ما تسمعه حرفياً: «die Oper» تعني «الأوبرا». انتبه للحروف الكبيرة!"
           }
         ]
       }
@@ -514,6 +623,21 @@
           {
             "q": "«ينقذ»؟",
             "a": "retten"
+          },
+          {
+            "q": "Die ___ ist groß. (خشبة المسرح!)",
+            "a": "Bühne",
+            "why": "die Bühne خشبة المسرح (die! مؤنثة (die!) وجمعها die Bühnen.) — Die Bühne ist groß."
+          },
+          {
+            "q": "Die ___ ist leise. (الناي!)",
+            "a": "Flöte",
+            "why": "die Flöte الناي (die! مؤنثة (die!) وجمعها die Flöten.) — Die Flöte ist leise."
+          },
+          {
+            "q": "Die ___ ist heute. (الأوبرا!)",
+            "a": "Oper",
+            "why": "die Oper الأوبرا (die! مؤنثة (die!) وجمعها die Opern — قرض إيطالي.) — Die Oper ist heute."
           }
         ],
         "passingScore": 0.75
@@ -543,6 +667,21 @@
           {
             "q": "«رجال الإطفاء»؟",
             "a": "die Feuerwehr"
+          },
+          {
+            "q": "Die ___ ist groß. (خشبة المسرح!)",
+            "a": "Bühne",
+            "why": "die Bühne خشبة المسرح (die! مؤنثة (die!) وجمعها die Bühnen.) — Die Bühne ist groß."
+          },
+          {
+            "q": "Die ___ ist leise. (الناي!)",
+            "a": "Flöte",
+            "why": "die Flöte الناي (die! مؤنثة (die!) وجمعها die Flöten.) — Die Flöte ist leise."
+          },
+          {
+            "q": "Die ___ ist heute. (الأوبرا!)",
+            "a": "Oper",
+            "why": "die Oper الأوبرا (die! مؤنثة (die!) وجمعها die Opern — قرض إيطالي.) — Die Oper ist heute."
           }
         ],
         "passingScore": 0.75
@@ -572,6 +711,21 @@
           {
             "q": "«رجال الإطفاء»؟",
             "a": "die Feuerwehr"
+          },
+          {
+            "q": "Die ___ ist groß. (خشبة المسرح!)",
+            "a": "Bühne",
+            "why": "die Bühne خشبة المسرح (die! مؤنثة (die!) وجمعها die Bühnen.) — Die Bühne ist groß."
+          },
+          {
+            "q": "Die ___ ist leise. (الناي!)",
+            "a": "Flöte",
+            "why": "die Flöte الناي (die! مؤنثة (die!) وجمعها die Flöten.) — Die Flöte ist leise."
+          },
+          {
+            "q": "Die ___ ist heute. (الأوبرا!)",
+            "a": "Oper",
+            "why": "die Oper الأوبرا (die! مؤنثة (die!) وجمعها die Opern — قرض إيطالي.) — Die Oper ist heute."
           }
         ],
         "passingScore": 0.75
@@ -580,8 +734,8 @@
   },
   "zusammenfassung": {
     "summary": {
-      "de": "Guten Tag! Das Unglück ist passiert. Der Alarm ist laut und der Notruf war nötig. Die Feuerwehr rettet uns: Die Rettung kommt! Wo ist der Notausgang? Der Dieb hat die Brieftasche! Ich hätte den Dieb anzeigen sollen. Hätten Sie helfen können? Die Batterie ist leer. Die Aushilfe kommt. Gute Besserung!",
-      "ar": "مرحباً! الحادث وقع. الإنذار عالٍ ونداء الطوارئ كان ضرورياً. الإطفاء ينقذنا: الإنقاذ يصل! أين مخرج الطوارئ؟ اللص أخذ المحفظة! كان يجب أن أبلّغ عن اللص. هل كان بإمكانكم المساعدة؟ البطارية فارغة. المعين يصل. شفاءً عاجلاً!"
+      "de": "Guten Tag! Das Unglück ist passiert. Der Alarm ist laut und der Notruf war nötig. Die Feuerwehr rettet uns: Die Rettung kommt! Wo ist der Notausgang? Der Dieb hat die Brieftasche! Ich hätte den Dieb anzeigen sollen. Hätten Sie helfen können? Die Batterie ist leer. Die Aushilfe kommt. Gute Besserung! Die Bühne ist groß. Die Flöte ist leise. Die Oper ist heute.",
+      "ar": "مرحباً! الحادث وقع. الإنذار عالٍ ونداء الطوارئ كان ضرورياً. الإطفاء ينقذنا: الإنقاذ يصل! أين مخرج الطوارئ؟ اللص أخذ المحفظة! كان يجب أن أبلّغ عن اللص. هل كان بإمكانكم المساعدة؟ البطارية فارغة. المعين يصل. شفاءً عاجلاً! خشبة المسرح كبيرة. الناي هادئ. الأوبرا اليوم."
     },
     "srsBundleWordIds": [
       "notruf",
@@ -596,7 +750,10 @@
       "besserung",
       "anzeigen",
       "batterie",
-      "aushilfe"
+      "aushilfe",
+      "buehne",
+      "floete",
+      "oper"
     ],
     "warningCards": [
       {
@@ -679,7 +836,10 @@
     "word-besserung",
     "word-anzeigen",
     "word-batterie",
-    "word-aushilfe"
+    "word-aushilfe",
+    "word-buehne",
+    "word-floete",
+    "word-oper"
   ],
   "imageManifestRefs": [],
   "curriculumRef": {
@@ -697,7 +857,10 @@
       "besserung",
       "anzeigen",
       "batterie",
-      "aushilfe"
+      "aushilfe",
+      "buehne",
+      "floete",
+      "oper"
     ]
   }
 }
