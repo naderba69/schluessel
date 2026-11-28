@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u15-d6",
+  "level": "B2",
+  "unit": 15,
+  "day": 6,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Vorfreude auf den Weg: mit Selbstständigkeit und Lebensfreude geht es weiter!",
+    "ar": "الوحدة 15 (الطريق بعد الامتحان!) اليوم السادس: الفرح المتوقّع والاستقلالية وبهجة الحياة!"
+  },
+  "canDoDaily": [
+    "يصف الفرح بالقادم! (die Vorfreude!)",
+    "يصف الاستقلالية والبهجة! (die Selbstständigkeit! die Lebensfreude!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "dankbarkeit",
+      "jubel",
+      "auszeit"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الفرحة المتوقّعة كبيرة.»؟"
+        },
+        "choices": [
+          "Die Vorfreude ist groß.",
+          "Der Vorfreude ist groß.",
+          "Das Vorfreude ist groß."
+        ],
+        "answer": "Die Vorfreude ist groß.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الاستقلالية مهمة.»؟"
+        },
+        "choices": [
+          "Die Selbstständigkeit ist wichtig.",
+          "Der Selbstständigkeit ist wichtig.",
+          "Das Selbstständigkeit ist wichtig."
+        ],
+        "answer": "Die Selbstständigkeit ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "vorfreude",
+      "selbststaendigkeit",
+      "lebensfreude"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u15-s6"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Vorfreude, Selbstständigkeit, Lebensfreude: Wir schließen die drei Wochen ab!",
+        "ar": "اليوم السادس من الوحدة 15! (الفرح! الاستقلالية! البهجة!)"
+      },
+      "situation": {
+        "de": "Vorfreude, Selbstständigkeit, Lebensfreude — zusammen freuen.",
+        "ar": "فرح! استقلالية! بهجة! — نفرح معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Vorfreude (die! مركّبة!) وdie Selbstständigkeit (die! على -keit!) وdie Lebensfreude (die! مركّبة!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Vorfreude haben! Lebensfreude haben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "dankbarkeit",
+          "jubel",
+          "auszeit"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Vorfreude",
+                "ar": "الفرحة المتوقّعة"
+              },
+              {
+                "de": "die Selbstständigkeit",
+                "ar": "الاستقلالية"
+              },
+              {
+                "de": "die Lebensfreude",
+                "ar": "فرح الحياة (البهجة)"
+              }
+            ],
+            "why": "die Vorfreude الفرحة المتوقّعة (die! -e مؤنثة!) · die Selbstständigkeit الاستقلالية (die! -keit مؤنثة!) · die Lebensfreude فرح الحياة (البهجة) (die! -e مؤنثة!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Dankbarkeit",
+                "ar": "الامتنان"
+              },
+              {
+                "de": "der Jubel",
+                "ar": "الهتاف (الابتهاج)"
+              },
+              {
+                "de": "die Auszeit",
+                "ar": "استراحة (وقت للنفس)"
+              }
+            ],
+            "why": "استدعاء سابق: die Dankbarkeit الامتنان · der Jubel الهتاف (الابتهاج) · die Auszeit استراحة (وقت للنفس)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Vorfreude",
+                "ar": "الفرحة المتوقّعة"
+              },
+              {
+                "de": "die Dankbarkeit",
+                "ar": "الامتنان"
+              },
+              {
+                "de": "die Selbstständigkeit",
+                "ar": "الاستقلالية"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "dankbarkeit",
+          "jubel",
+          "auszeit"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (الفرحة المتوقّعة!)",
+            "a": "Vorfreude",
+            "why": "die Vorfreude الفرحة المتوقّعة (die! -e مؤنثة!) — Die Vorfreude ist groß."
+          },
+          {
+            "q": "die ___ ist wichtig. (الاستقلالية!)",
+            "a": "Selbstständigkeit",
+            "why": "die Selbstständigkeit الاستقلالية (die! -keit مؤنثة!) — Die Selbstständigkeit ist wichtig."
+          },
+          {
+            "q": "die ___ ist wichtig. (فرح الحياة (البهجة)!)",
+            "a": "Lebensfreude",
+            "why": "die Lebensfreude فرح الحياة (البهجة) (die! -e مؤنثة!) — Die Lebensfreude ist groß."
+          },
+          {
+            "q": "Die ___ ist groß.",
+            "a": "Dankbarkeit",
+            "why": "الكلمة الناقصة «Dankbarkeit» تعني «الامتنان» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist laut.",
+            "a": "Jubel",
+            "why": "الكلمة الناقصة «Jubel» تعني «الهتاف (الابتهاج)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist gut.",
+            "a": "Auszeit",
+            "why": "الكلمة الناقصة «Auszeit» تعني «استراحة (وقت للنفس)» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "dankbarkeit",
+          "jubel",
+          "auszeit"
+        ],
+        "items": [
+          {
+            "q": "~~der Vorfreude!~~",
+            "a": "Die Vorfreude ist groß.",
+            "why": "الألمانية: die Vorfreude (die! مركّبة على Freude!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Selbstständigkeit!~~",
+            "a": "Die Selbstständigkeit ist wichtig.",
+            "why": "الألمانية: die Selbstständigkeit (die! على -keit!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Lebensfreude!~~",
+            "a": "Die Lebensfreude ist groß.",
+            "why": "العربية: «البهجة» مذكّر! والألمانية: die Lebensfreude (die! مركّبة على Freude!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die dankbarkeit ist groß.~~",
+            "a": "Die Dankbarkeit ist groß.",
+            "why": "الخطأ في «dankbarkeit»! الصواب «Dankbarkeit» — راجع القاعدة (الامتنان)."
+          },
+          {
+            "q": "~~Der jubel ist laut.~~",
+            "a": "Der Jubel ist laut.",
+            "why": "الخطأ في «jubel»! الصواب «Jubel» — راجع القاعدة (الهتاف (الابتهاج))."
+          },
+          {
+            "q": "~~Die auszeit ist gut.~~",
+            "a": "Die Auszeit ist gut.",
+            "why": "الخطأ في «auszeit»! الصواب «Auszeit» — راجع القاعدة (استراحة (وقت للنفس))."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "dankbarkeit",
+          "jubel",
+          "auszeit"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالفرحة المتوقّعة! (جملتان!)",
+            "a": "Die Vorfreude ist groß. Die Selbstständigkeit ist wichtig.",
+            "why": "الفرحة المتوقّعة أولًا!"
+          },
+          {
+            "q": "تحدّث عن الاستقلالية! (جملتان!)",
+            "a": "Die Selbstständigkeit ist wichtig. Das ist gut.",
+            "why": "الاستقلالية — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "تحدّث عن فرح الحياة (البهجة)! (جملتان!)",
+            "a": "Die Lebensfreude ist groß. die Lebensfreude hilft.",
+            "why": "فرح الحياة (البهجة) — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Dankbarkeit» («الامتنان») ثم تحدّث بها.",
+            "a": "Die Dankbarkeit ist groß.",
+            "why": "استعمل «die Dankbarkeit» («الامتنان») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Jubel» («الهتاف (الابتهاج)») ثم تحدّث بها.",
+            "a": "Der Jubel ist laut.",
+            "why": "استعمل «der Jubel» («الهتاف (الابتهاج)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Auszeit» («استراحة (وقت للنفس)») ثم تحدّث بها.",
+            "a": "Die Auszeit ist gut.",
+            "why": "استعمل «die Auszeit» («استراحة (وقت للنفس)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "dankbarkeit",
+          "jubel",
+          "auszeit"
+        ],
+        "items": [
+          {
+            "audioId": "word-vorfreude",
+            "speakText": "die Vorfreude.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الفرحة المتوقّعة",
+              "الاستقلالية",
+              "فرح الحياة (البهجة)"
+            ],
+            "a": "الفرحة المتوقّعة",
+            "why": "الصوت يقول «die Vorfreude» — معناها «الفرحة المتوقّعة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-selbststaendigkeit",
+            "speakText": "die Selbstständigkeit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الاستقلالية",
+              "فرح الحياة (البهجة)",
+              "الفرحة المتوقّعة"
+            ],
+            "a": "الاستقلالية",
+            "why": "الصوت يقول «die Selbstständigkeit» — معناها «الاستقلالية». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-lebensfreude",
+            "speakText": "die Lebensfreude.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "فرح الحياة (البهجة)",
+              "الفرحة المتوقّعة",
+              "الاستقلالية"
+            ],
+            "a": "فرح الحياة (البهجة)",
+            "why": "الصوت يقول «die Lebensfreude» — معناها «فرح الحياة (البهجة)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-dankbarkeit",
+            "speakText": "die Dankbarkeit.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الامتنان",
+              "الهتاف (الابتهاج)",
+              "الفرحة المتوقّعة"
+            ],
+            "a": "الامتنان",
+            "why": "الكلمة المسموعة «die Dankbarkeit» تعني «الامتنان». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-jubel",
+            "speakText": "der Jubel.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الهتاف (الابتهاج)",
+              "استراحة (وقت للنفس)",
+              "الاستقلالية"
+            ],
+            "a": "الهتاف (الابتهاج)",
+            "why": "الكلمة المسموعة «der Jubel» تعني «الهتاف (الابتهاج)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-auszeit",
+            "speakText": "die Auszeit.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "استراحة (وقت للنفس)",
+              "الامتنان",
+              "فرح الحياة (البهجة)"
+            ],
+            "a": "استراحة (وقت للنفس)",
+            "why": "الكلمة المسموعة «die Auszeit» تعني «استراحة (وقت للنفس)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-dankbarkeit",
+            "speakText": "die Dankbarkeit.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الامتنان",
+              "الهتاف (الابتهاج)",
+              "الفرحة المتوقّعة"
+            ],
+            "a": "الامتنان",
+            "why": "الكلمة المسموعة «die Dankbarkeit» تعني «الامتنان». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "dankbarkeit",
+          "jubel"
+        ],
+        "items": [
+          {
+            "audioId": "word-vorfreude",
+            "speakText": "die Vorfreude.",
+            "a": "die Vorfreude",
+            "why": "اكتب ما تسمعه حرفياً: «die Vorfreude» تعني «الفرحة المتوقّعة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-selbststaendigkeit",
+            "speakText": "die Selbstständigkeit.",
+            "a": "die Selbstständigkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Selbstständigkeit» تعني «الاستقلالية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-dankbarkeit",
+            "speakText": "die Dankbarkeit.",
+            "a": "die Dankbarkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Dankbarkeit» تعني «الامتنان». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-jubel",
+            "speakText": "der Jubel.",
+            "a": "der Jubel",
+            "why": "اكتب ما تسمعه حرفياً: «der Jubel» تعني «الهتاف (الابتهاج)». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الفرحة المتوقّعة»؟",
+            "a": "die Vorfreude"
+          },
+          {
+            "q": "«الاستقلالية»؟",
+            "a": "die Selbstständigkeit"
+          },
+          {
+            "q": "«فرح الحياة (البهجة)»؟",
+            "a": "die Lebensfreude"
+          },
+          {
+            "q": "«الفرحة المتوقّعة كبيرة.»؟",
+            "a": "Die Vorfreude ist groß."
+          },
+          {
+            "q": "«الاستقلالية مهمة.»؟",
+            "a": "Die Selbstständigkeit ist wichtig."
+          },
+          {
+            "q": "«فرح الحياة كبير.»؟",
+            "a": "Die Lebensfreude ist groß."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Vorfreude",
+            "a": "الفرحة المتوقّعة"
+          },
+          {
+            "q": "die Selbstständigkeit",
+            "a": "الاستقلالية"
+          },
+          {
+            "q": "die Lebensfreude",
+            "a": "فرح الحياة (البهجة)"
+          },
+          {
+            "q": "«فرح الحياة كبير.»؟",
+            "a": "Die Lebensfreude ist groß."
+          },
+          {
+            "q": "«الاستقلالية مهمة.»؟",
+            "a": "Die Selbstständigkeit ist wichtig."
+          },
+          {
+            "q": "«الفرحة المتوقّعة كبيرة.»؟",
+            "a": "Die Vorfreude ist groß."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«فرح الحياة (البهجة)»؟",
+            "a": "die Lebensfreude"
+          },
+          {
+            "q": "«الاستقلالية»؟",
+            "a": "die Selbstständigkeit"
+          },
+          {
+            "q": "«الفرحة المتوقّعة»؟",
+            "a": "die Vorfreude"
+          },
+          {
+            "q": "die Vorfreude",
+            "a": "الفرحة المتوقّعة"
+          },
+          {
+            "q": "die Selbstständigkeit",
+            "a": "الاستقلالية"
+          },
+          {
+            "q": "die Lebensfreude",
+            "a": "فرح الحياة (البهجة)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Vorfreude ist groß. Die Selbstständigkeit ist wichtig. Die Lebensfreude ist groß. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 15 (الطريق بعد الامتحان!) اليوم السادس: الفرح المتوقّع والاستقلالية وبهجة الحياة! نتعلّم اليوم: الفرحة المتوقّعة والاستقلالية وفرح الحياة (البهجة)!"
+    },
+    "srsBundleWordIds": [
+      "vorfreude",
+      "selbststaendigkeit",
+      "lebensfreude"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Vorfreude!",
+          "de": "~~der Vorfreude ist groß.~~"
+        },
+        "correct": {
+          "ar": "die Vorfreude!",
+          "de": "Die Vorfreude ist groß."
+        },
+        "exercise": {
+          "q": "___ Vorfreude ist groß.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Vorfreude (die! مركّبة على Freude!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Selbstständigkeit!",
+          "de": "~~das Selbstständigkeit ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Selbstständigkeit!",
+          "de": "Die Selbstständigkeit ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Selbstständigkeit ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Selbstständigkeit (die! على -keit!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Lebensfreude!",
+          "de": "~~der Lebensfreude ist groß.~~"
+        },
+        "correct": {
+          "ar": "die Lebensfreude!",
+          "de": "Die Lebensfreude ist groß."
+        },
+        "exercise": {
+          "q": "___ Lebensfreude ist groß.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «البهجة» مذكّر! والألمانية: die Lebensfreude (die! مركّبة على Freude!) (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Vorfreude",
+      "https://www.duden.de/rechtschreibung/Selbststaendigkeit",
+      "https://www.duden.de/rechtschreibung/Lebensfreude"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-vorfreude",
+    "word-selbststaendigkeit",
+    "word-lebensfreude"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 15 (الطريق بعد الامتحان!) الفرحة المتوقّعة",
+    "goetheWordListOverlap": [
+      "vorfreude",
+      "selbststaendigkeit",
+      "lebensfreude"
+    ]
+  }
+}

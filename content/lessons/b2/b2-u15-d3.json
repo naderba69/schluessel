@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u15-d3",
+  "level": "B2",
+  "unit": 15,
+  "day": 3,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Wirksamkeit jeder Handlung: mit Effizienz arbeiten und die Verbesserung suchen!",
+    "ar": "الوحدة 15 (الطريق بعد الامتحان!) اليوم الثالث: الفعالية والكفاءة والتحسين!"
+  },
+  "canDoDaily": [
+    "يصف فعالية العمل! (die Wirksamkeit!)",
+    "يصف الكفاءة والتحسين! (die Effizienz! die Verbesserung!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "klarheit",
+      "gruendlichkeit",
+      "atempause"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الفعالية واضحة.»؟"
+        },
+        "choices": [
+          "Die Wirksamkeit ist klar.",
+          "Der Wirksamkeit ist klar.",
+          "Das Wirksamkeit ist klar."
+        ],
+        "answer": "Die Wirksamkeit ist klar.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«التحسين جيد.»؟"
+        },
+        "choices": [
+          "Die Verbesserung ist gut.",
+          "Der Verbesserung ist gut.",
+          "Das Verbesserung ist gut."
+        ],
+        "answer": "Die Verbesserung ist gut.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "wirksamkeit",
+      "effizienz",
+      "verbesserung"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u15-s3"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Wirksamkeit, Effizienz, Verbesserung: Wir verbessern unsere Arbeit!",
+        "ar": "اليوم الثالث من الوحدة 15! (الفعالية! الكفاءة! التحسين!)"
+      },
+      "situation": {
+        "de": "Wirksamkeit, Effizienz, Verbesserung — zusammen verbessern.",
+        "ar": "فعالية! كفاءة! تحسين! — نحسّن معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Wirksamkeit (die! على -keit!) وdie Effizienz (die! اسم مؤنث!) وdie Verbesserung (die! -ung!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Wirksamkeit zeigen! eine Verbesserung machen!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "klarheit",
+          "gruendlichkeit",
+          "atempause"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Wirksamkeit",
+                "ar": "الفعالية"
+              },
+              {
+                "de": "die Effizienz",
+                "ar": "الكفاءة (الفعالية الاقتصادية)"
+              },
+              {
+                "de": "die Verbesserung",
+                "ar": "التحسين"
+              }
+            ],
+            "why": "die Wirksamkeit الفعالية (die! -keit مؤنثة!) · die Effizienz الكفاءة (الفعالية الاقتصادية) (die! die!) · die Verbesserung التحسين (die! -ung مؤنثة!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Klarheit",
+                "ar": "الوضوح"
+              },
+              {
+                "de": "die Gründlichkeit",
+                "ar": "الاستقصاء (الدقّة في العمل)"
+              },
+              {
+                "de": "die Atempause",
+                "ar": "لحظة تنفّس (استراحة قصيرة)"
+              }
+            ],
+            "why": "استدعاء سابق: die Klarheit الوضوح · die Gründlichkeit الاستقصاء (الدقّة في العمل) · die Atempause لحظة تنفّس (استراحة قصيرة)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Wirksamkeit",
+                "ar": "الفعالية"
+              },
+              {
+                "de": "die Klarheit",
+                "ar": "الوضوح"
+              },
+              {
+                "de": "die Effizienz",
+                "ar": "الكفاءة (الفعالية الاقتصادية)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "klarheit",
+          "gruendlichkeit",
+          "atempause"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (الفعالية!)",
+            "a": "Wirksamkeit",
+            "why": "die Wirksamkeit الفعالية (die! -keit مؤنثة!) — Die Wirksamkeit ist klar."
+          },
+          {
+            "q": "die ___ ist wichtig. (الكفاءة (الفعالية الاقتصادية)!)",
+            "a": "Effizienz",
+            "why": "die Effizienz الكفاءة (الفعالية الاقتصادية) (die! die!) — Die Effizienz ist wichtig."
+          },
+          {
+            "q": "die ___ ist wichtig. (التحسين!)",
+            "a": "Verbesserung",
+            "why": "die Verbesserung التحسين (die! -ung مؤنثة!) — Die Verbesserung ist gut."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Klarheit",
+            "why": "الكلمة الناقصة «Klarheit» تعني «الوضوح» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Gründlichkeit",
+            "why": "الكلمة الناقصة «Gründlichkeit» تعني «الاستقصاء (الدقّة في العمل)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist kurz.",
+            "a": "Atempause",
+            "why": "الكلمة الناقصة «Atempause» تعني «لحظة تنفّس (استراحة قصيرة)» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "klarheit",
+          "gruendlichkeit",
+          "atempause"
+        ],
+        "items": [
+          {
+            "q": "~~der Wirksamkeit!~~",
+            "a": "Die Wirksamkeit ist klar.",
+            "why": "الألمانية: die Wirksamkeit (die! على -keit!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Effizienz!~~",
+            "a": "Die Effizienz ist wichtig.",
+            "why": "العربية: «الكفاءة» مذكّرة! والألمانية: die Effizienz (die! اسم مؤنث!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Verbesserung!~~",
+            "a": "Die Verbesserung ist gut.",
+            "why": "الألمانية: die Verbesserung (die! -ung مؤنثة دائماً!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die klarheit ist wichtig.~~",
+            "a": "Die Klarheit ist wichtig.",
+            "why": "الخطأ في «klarheit»! الصواب «Klarheit» — راجع القاعدة (الوضوح)."
+          },
+          {
+            "q": "~~Die gründlichkeit ist wichtig.~~",
+            "a": "Die Gründlichkeit ist wichtig.",
+            "why": "الخطأ في «gründlichkeit»! الصواب «Gründlichkeit» — راجع القاعدة (الاستقصاء (الدقّة في العمل))."
+          },
+          {
+            "q": "~~Die atempause ist kurz.~~",
+            "a": "Die Atempause ist kurz.",
+            "why": "الخطأ في «atempause»! الصواب «Atempause» — راجع القاعدة (لحظة تنفّس (استراحة قصيرة))."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "klarheit",
+          "gruendlichkeit",
+          "atempause"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالفعالية! (جملتان!)",
+            "a": "Die Wirksamkeit ist klar. Die Effizienz ist wichtig.",
+            "why": "الفعالية أولًا!"
+          },
+          {
+            "q": "تحدّث عن الكفاءة (الفعالية الاقتصادية)! (جملتان!)",
+            "a": "Die Effizienz ist wichtig. Das ist gut.",
+            "why": "الكفاءة (الفعالية الاقتصادية) — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "تحدّث عن التحسين! (جملتان!)",
+            "a": "Die Verbesserung ist gut. die Verbesserung hilft.",
+            "why": "التحسين — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Klarheit» («الوضوح») ثم تحدّث بها.",
+            "a": "Die Klarheit ist wichtig.",
+            "why": "استعمل «die Klarheit» («الوضوح») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Gründlichkeit» («الاستقصاء (الدقّة في العمل)») ثم تحدّث بها.",
+            "a": "Die Gründlichkeit ist wichtig.",
+            "why": "استعمل «die Gründlichkeit» («الاستقصاء (الدقّة في العمل)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Atempause» («لحظة تنفّس (استراحة قصيرة)») ثم تحدّث بها.",
+            "a": "Die Atempause ist kurz.",
+            "why": "استعمل «die Atempause» («لحظة تنفّس (استراحة قصيرة)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "klarheit",
+          "gruendlichkeit",
+          "atempause"
+        ],
+        "items": [
+          {
+            "audioId": "word-wirksamkeit",
+            "speakText": "die Wirksamkeit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الفعالية",
+              "الكفاءة (الفعالية الاقتصادية)",
+              "التحسين"
+            ],
+            "a": "الفعالية",
+            "why": "الصوت يقول «die Wirksamkeit» — معناها «الفعالية». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-effizienz",
+            "speakText": "die Effizienz.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الكفاءة (الفعالية الاقتصادية)",
+              "التحسين",
+              "الفعالية"
+            ],
+            "a": "الكفاءة (الفعالية الاقتصادية)",
+            "why": "الصوت يقول «die Effizienz» — معناها «الكفاءة (الفعالية الاقتصادية)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-verbesserung",
+            "speakText": "die Verbesserung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التحسين",
+              "الفعالية",
+              "الكفاءة (الفعالية الاقتصادية)"
+            ],
+            "a": "التحسين",
+            "why": "الصوت يقول «die Verbesserung» — معناها «التحسين». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-klarheit",
+            "speakText": "die Klarheit.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الوضوح",
+              "الاستقصاء (الدقّة في العمل)",
+              "الفعالية"
+            ],
+            "a": "الوضوح",
+            "why": "الكلمة المسموعة «die Klarheit» تعني «الوضوح». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-gruendlichkeit",
+            "speakText": "die Gründlichkeit.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الاستقصاء (الدقّة في العمل)",
+              "لحظة تنفّس (استراحة قصيرة)",
+              "الكفاءة (الفعالية الاقتصادية)"
+            ],
+            "a": "الاستقصاء (الدقّة في العمل)",
+            "why": "الكلمة المسموعة «die Gründlichkeit» تعني «الاستقصاء (الدقّة في العمل)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-atempause",
+            "speakText": "die Atempause.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "لحظة تنفّس (استراحة قصيرة)",
+              "الوضوح",
+              "التحسين"
+            ],
+            "a": "لحظة تنفّس (استراحة قصيرة)",
+            "why": "الكلمة المسموعة «die Atempause» تعني «لحظة تنفّس (استراحة قصيرة)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-klarheit",
+            "speakText": "die Klarheit.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الوضوح",
+              "الاستقصاء (الدقّة في العمل)",
+              "الفعالية"
+            ],
+            "a": "الوضوح",
+            "why": "الكلمة المسموعة «die Klarheit» تعني «الوضوح». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "klarheit",
+          "gruendlichkeit"
+        ],
+        "items": [
+          {
+            "audioId": "word-wirksamkeit",
+            "speakText": "die Wirksamkeit.",
+            "a": "die Wirksamkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Wirksamkeit» تعني «الفعالية». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-effizienz",
+            "speakText": "die Effizienz.",
+            "a": "die Effizienz",
+            "why": "اكتب ما تسمعه حرفياً: «die Effizienz» تعني «الكفاءة (الفعالية الاقتصادية)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-klarheit",
+            "speakText": "die Klarheit.",
+            "a": "die Klarheit",
+            "why": "اكتب ما تسمعه حرفياً: «die Klarheit» تعني «الوضوح». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-gruendlichkeit",
+            "speakText": "die Gründlichkeit.",
+            "a": "die Gründlichkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Gründlichkeit» تعني «الاستقصاء (الدقّة في العمل)». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الفعالية»؟",
+            "a": "die Wirksamkeit"
+          },
+          {
+            "q": "«الكفاءة (الفعالية الاقتصادية)»؟",
+            "a": "die Effizienz"
+          },
+          {
+            "q": "«التحسين»؟",
+            "a": "die Verbesserung"
+          },
+          {
+            "q": "«الفعالية واضحة.»؟",
+            "a": "Die Wirksamkeit ist klar."
+          },
+          {
+            "q": "«الكفاءة مهمة.»؟",
+            "a": "Die Effizienz ist wichtig."
+          },
+          {
+            "q": "«التحسين جيد.»؟",
+            "a": "Die Verbesserung ist gut."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Wirksamkeit",
+            "a": "الفعالية"
+          },
+          {
+            "q": "die Effizienz",
+            "a": "الكفاءة (الفعالية الاقتصادية)"
+          },
+          {
+            "q": "die Verbesserung",
+            "a": "التحسين"
+          },
+          {
+            "q": "«التحسين جيد.»؟",
+            "a": "Die Verbesserung ist gut."
+          },
+          {
+            "q": "«الكفاءة مهمة.»؟",
+            "a": "Die Effizienz ist wichtig."
+          },
+          {
+            "q": "«الفعالية واضحة.»؟",
+            "a": "Die Wirksamkeit ist klar."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«التحسين»؟",
+            "a": "die Verbesserung"
+          },
+          {
+            "q": "«الكفاءة (الفعالية الاقتصادية)»؟",
+            "a": "die Effizienz"
+          },
+          {
+            "q": "«الفعالية»؟",
+            "a": "die Wirksamkeit"
+          },
+          {
+            "q": "die Wirksamkeit",
+            "a": "الفعالية"
+          },
+          {
+            "q": "die Effizienz",
+            "a": "الكفاءة (الفعالية الاقتصادية)"
+          },
+          {
+            "q": "die Verbesserung",
+            "a": "التحسين"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Wirksamkeit ist klar. Die Effizienz ist wichtig. Die Verbesserung ist gut. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 15 (الطريق بعد الامتحان!) اليوم الثالث: الفعالية والكفاءة والتحسين! نتعلّم اليوم: الفعالية والكفاءة (الفعالية الاقتصادية) والتحسين!"
+    },
+    "srsBundleWordIds": [
+      "wirksamkeit",
+      "effizienz",
+      "verbesserung"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Wirksamkeit!",
+          "de": "~~der Wirksamkeit ist klar.~~"
+        },
+        "correct": {
+          "ar": "die Wirksamkeit!",
+          "de": "Die Wirksamkeit ist klar."
+        },
+        "exercise": {
+          "q": "___ Wirksamkeit ist klar.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Wirksamkeit (die! على -keit!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Effizienz!",
+          "de": "~~das Effizienz ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Effizienz!",
+          "de": "Die Effizienz ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Effizienz ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «الكفاءة» مذكّرة! والألمانية: die Effizienz (die! اسم مؤنث!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Verbesserung!",
+          "de": "~~der Verbesserung ist gut.~~"
+        },
+        "correct": {
+          "ar": "die Verbesserung!",
+          "de": "Die Verbesserung ist gut."
+        },
+        "exercise": {
+          "q": "___ Verbesserung ist gut.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Verbesserung (die! -ung مؤنثة دائماً!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Wirksamkeit",
+      "https://www.duden.de/rechtschreibung/Effizienz",
+      "https://www.duden.de/rechtschreibung/Verbesserung"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-wirksamkeit",
+    "word-effizienz",
+    "word-verbesserung"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 15 (الطريق بعد الامتحان!) الفعالية",
+    "goetheWordListOverlap": [
+      "wirksamkeit",
+      "effizienz",
+      "verbesserung"
+    ]
+  }
+}

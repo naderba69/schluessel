@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u15-d1",
+  "level": "B2",
+  "unit": 15,
+  "day": 1,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Festigung ist der Anfang: mit Beständigkeit und Kontinuität bleibt alles!",
+    "ar": "الوحدة 15 (الطريق بعد الامتحان!) اليوم الأول: التثبيت والاستمرارية والمتانة!"
+  },
+  "canDoDaily": [
+    "يصف عملية التثبيت! (die Festigung!)",
+    "يصف الاستمرارية! (die Beständigkeit! die Kontinuität!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "wartezeit",
+      "aufsicht",
+      "pruefungsraum"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التثبيت مهم.»؟"
+        },
+        "choices": [
+          "Die Festigung ist wichtig.",
+          "Der Festigung ist wichtig.",
+          "Das Festigung ist wichtig."
+        ],
+        "answer": "Die Festigung ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الاستمرارية تساعد.»؟"
+        },
+        "choices": [
+          "Die Beständigkeit hilft.",
+          "Der Beständigkeit hilft.",
+          "Das Beständigkeit hilft."
+        ],
+        "answer": "Die Beständigkeit hilft.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "festigung",
+      "bestaendigkeit",
+      "kontinuitaet"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u15-s1"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Festigung, Beständigkeit, Kontinuität: Wir üben weiter!",
+        "ar": "اليوم الأول من الوحدة 15! (التثبيت! الاستمرارية! المتانة!)"
+      },
+      "situation": {
+        "de": "Festigung, Beständigkeit, Kontinuität — zusammen üben.",
+        "ar": "تثبيت! استمرارية! متانة! — نثبّت معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Festigung (die! -ung!) وdie Beständigkeit (die! على -keit!) وdie Kontinuität (die! اسم مؤنث!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Festigung zeigen! Kontinuität haben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "wartezeit",
+          "aufsicht",
+          "pruefungsraum"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Festigung",
+                "ar": "التثبيت"
+              },
+              {
+                "de": "die Beständigkeit",
+                "ar": "الاستمرارية (الثبات)"
+              },
+              {
+                "de": "die Kontinuität",
+                "ar": "الاستمرارية المتّصلة"
+              }
+            ],
+            "why": "die Festigung التثبيت (die! -ung مؤنثة!) · die Beständigkeit الاستمرارية (الثبات) (die! -keit مؤنثة!) · die Kontinuität الاستمرارية المتّصلة (die! die!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Wartezeit",
+                "ar": "فترة الانتظار"
+              },
+              {
+                "de": "die Aufsicht",
+                "ar": "الإشراف (مراقبة الامتحان)"
+              },
+              {
+                "de": "der Prüfungsraum",
+                "ar": "قاعة الامتحان"
+              }
+            ],
+            "why": "استدعاء سابق: die Wartezeit فترة الانتظار · die Aufsicht الإشراف (مراقبة الامتحان) · der Prüfungsraum قاعة الامتحان"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Festigung",
+                "ar": "التثبيت"
+              },
+              {
+                "de": "die Wartezeit",
+                "ar": "فترة الانتظار"
+              },
+              {
+                "de": "die Beständigkeit",
+                "ar": "الاستمرارية (الثبات)"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "wartezeit",
+          "aufsicht",
+          "pruefungsraum"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (التثبيت!)",
+            "a": "Festigung",
+            "why": "die Festigung التثبيت (die! -ung مؤنثة!) — Die Festigung ist wichtig."
+          },
+          {
+            "q": "die ___ ist wichtig. (الاستمرارية (الثبات)!)",
+            "a": "Beständigkeit",
+            "why": "die Beständigkeit الاستمرارية (الثبات) (die! -keit مؤنثة!) — Die Beständigkeit hilft."
+          },
+          {
+            "q": "die ___ ist wichtig. (الاستمرارية المتّصلة!)",
+            "a": "Kontinuität",
+            "why": "die Kontinuität الاستمرارية المتّصلة (die! die!) — Die Kontinuität ist stark."
+          },
+          {
+            "q": "Die ___ ist lang.",
+            "a": "Wartezeit",
+            "why": "الكلمة الناقصة «Wartezeit» تعني «فترة الانتظار» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist streng.",
+            "a": "Aufsicht",
+            "why": "الكلمة الناقصة «Aufsicht» تعني «الإشراف (مراقبة الامتحان)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist groß.",
+            "a": "Prüfungsraum",
+            "why": "الكلمة الناقصة «Prüfungsraum» تعني «قاعة الامتحان» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "wartezeit",
+          "aufsicht",
+          "pruefungsraum"
+        ],
+        "items": [
+          {
+            "q": "~~der Festigung!~~",
+            "a": "Die Festigung ist wichtig.",
+            "why": "العربية: «التثبيت» مذكّر! والألمانية: die Festigung (die! -ung مؤنثة دائماً!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Beständigkeit!~~",
+            "a": "Die Beständigkeit hilft.",
+            "why": "الألمانية: die Beständigkeit (die! على -keit!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Kontinuität!~~",
+            "a": "Die Kontinuität ist stark.",
+            "why": "الألمانية: die Kontinuität (die! اسم مؤنث!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die wartezeit ist lang.~~",
+            "a": "Die Wartezeit ist lang.",
+            "why": "الخطأ في «wartezeit»! الصواب «Wartezeit» — راجع القاعدة (فترة الانتظار)."
+          },
+          {
+            "q": "~~Die aufsicht ist streng.~~",
+            "a": "Die Aufsicht ist streng.",
+            "why": "الخطأ في «aufsicht»! الصواب «Aufsicht» — راجع القاعدة (الإشراف (مراقبة الامتحان))."
+          },
+          {
+            "q": "~~Der prüfungsraum ist groß.~~",
+            "a": "Der Prüfungsraum ist groß.",
+            "why": "الخطأ في «prüfungsraum»! الصواب «Prüfungsraum» — راجع القاعدة (قاعة الامتحان)."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "wartezeit",
+          "aufsicht",
+          "pruefungsraum"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالتثبيت! (جملتان!)",
+            "a": "Die Festigung ist wichtig. Die Beständigkeit hilft.",
+            "why": "التثبيت أولًا!"
+          },
+          {
+            "q": "تحدّث عن الاستمرارية (الثبات)! (جملتان!)",
+            "a": "Die Beständigkeit hilft. Das ist gut.",
+            "why": "الاستمرارية (الثبات) — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "تحدّث عن الاستمرارية المتّصلة! (جملتان!)",
+            "a": "Die Kontinuität ist stark. die Kontinuität hilft.",
+            "why": "الاستمرارية المتّصلة — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Wartezeit» («فترة الانتظار») ثم تحدّث بها.",
+            "a": "Die Wartezeit ist lang.",
+            "why": "استعمل «die Wartezeit» («فترة الانتظار») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Aufsicht» («الإشراف (مراقبة الامتحان)») ثم تحدّث بها.",
+            "a": "Die Aufsicht ist streng.",
+            "why": "استعمل «die Aufsicht» («الإشراف (مراقبة الامتحان)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Prüfungsraum» («قاعة الامتحان») ثم تحدّث بها.",
+            "a": "Der Prüfungsraum ist groß.",
+            "why": "استعمل «der Prüfungsraum» («قاعة الامتحان») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "wartezeit",
+          "aufsicht",
+          "pruefungsraum"
+        ],
+        "items": [
+          {
+            "audioId": "word-festigung",
+            "speakText": "die Festigung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التثبيت",
+              "الاستمرارية (الثبات)",
+              "الاستمرارية المتّصلة"
+            ],
+            "a": "التثبيت",
+            "why": "الصوت يقول «die Festigung» — معناها «التثبيت». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-bestaendigkeit",
+            "speakText": "die Beständigkeit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الاستمرارية (الثبات)",
+              "الاستمرارية المتّصلة",
+              "التثبيت"
+            ],
+            "a": "الاستمرارية (الثبات)",
+            "why": "الصوت يقول «die Beständigkeit» — معناها «الاستمرارية (الثبات)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-kontinuitaet",
+            "speakText": "die Kontinuität.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الاستمرارية المتّصلة",
+              "التثبيت",
+              "الاستمرارية (الثبات)"
+            ],
+            "a": "الاستمرارية المتّصلة",
+            "why": "الصوت يقول «die Kontinuität» — معناها «الاستمرارية المتّصلة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-wartezeit",
+            "speakText": "die Wartezeit.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "فترة الانتظار",
+              "الإشراف (مراقبة الامتحان)",
+              "التثبيت"
+            ],
+            "a": "فترة الانتظار",
+            "why": "الكلمة المسموعة «die Wartezeit» تعني «فترة الانتظار». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-aufsicht",
+            "speakText": "die Aufsicht.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الإشراف (مراقبة الامتحان)",
+              "قاعة الامتحان",
+              "الاستمرارية (الثبات)"
+            ],
+            "a": "الإشراف (مراقبة الامتحان)",
+            "why": "الكلمة المسموعة «die Aufsicht» تعني «الإشراف (مراقبة الامتحان)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-pruefungsraum",
+            "speakText": "der Prüfungsraum.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "قاعة الامتحان",
+              "فترة الانتظار",
+              "الاستمرارية المتّصلة"
+            ],
+            "a": "قاعة الامتحان",
+            "why": "الكلمة المسموعة «der Prüfungsraum» تعني «قاعة الامتحان». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-wartezeit",
+            "speakText": "die Wartezeit.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "فترة الانتظار",
+              "الإشراف (مراقبة الامتحان)",
+              "التثبيت"
+            ],
+            "a": "فترة الانتظار",
+            "why": "الكلمة المسموعة «die Wartezeit» تعني «فترة الانتظار». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "wartezeit",
+          "aufsicht"
+        ],
+        "items": [
+          {
+            "audioId": "word-festigung",
+            "speakText": "die Festigung.",
+            "a": "die Festigung",
+            "why": "اكتب ما تسمعه حرفياً: «die Festigung» تعني «التثبيت». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-bestaendigkeit",
+            "speakText": "die Beständigkeit.",
+            "a": "die Beständigkeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Beständigkeit» تعني «الاستمرارية (الثبات)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-wartezeit",
+            "speakText": "die Wartezeit.",
+            "a": "die Wartezeit",
+            "why": "اكتب ما تسمعه حرفياً: «die Wartezeit» تعني «فترة الانتظار». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-aufsicht",
+            "speakText": "die Aufsicht.",
+            "a": "die Aufsicht",
+            "why": "اكتب ما تسمعه حرفياً: «die Aufsicht» تعني «الإشراف (مراقبة الامتحان)». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التثبيت»؟",
+            "a": "die Festigung"
+          },
+          {
+            "q": "«الاستمرارية (الثبات)»؟",
+            "a": "die Beständigkeit"
+          },
+          {
+            "q": "«الاستمرارية المتّصلة»؟",
+            "a": "die Kontinuität"
+          },
+          {
+            "q": "«التثبيت مهم.»؟",
+            "a": "Die Festigung ist wichtig."
+          },
+          {
+            "q": "«الاستمرارية تساعد.»؟",
+            "a": "Die Beständigkeit hilft."
+          },
+          {
+            "q": "«الاستمرارية المتّصلة قوية.»؟",
+            "a": "Die Kontinuität ist stark."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Festigung",
+            "a": "التثبيت"
+          },
+          {
+            "q": "die Beständigkeit",
+            "a": "الاستمرارية (الثبات)"
+          },
+          {
+            "q": "die Kontinuität",
+            "a": "الاستمرارية المتّصلة"
+          },
+          {
+            "q": "«الاستمرارية المتّصلة قوية.»؟",
+            "a": "Die Kontinuität ist stark."
+          },
+          {
+            "q": "«الاستمرارية تساعد.»؟",
+            "a": "Die Beständigkeit hilft."
+          },
+          {
+            "q": "«التثبيت مهم.»؟",
+            "a": "Die Festigung ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الاستمرارية المتّصلة»؟",
+            "a": "die Kontinuität"
+          },
+          {
+            "q": "«الاستمرارية (الثبات)»؟",
+            "a": "die Beständigkeit"
+          },
+          {
+            "q": "«التثبيت»؟",
+            "a": "die Festigung"
+          },
+          {
+            "q": "die Festigung",
+            "a": "التثبيت"
+          },
+          {
+            "q": "die Beständigkeit",
+            "a": "الاستمرارية (الثبات)"
+          },
+          {
+            "q": "die Kontinuität",
+            "a": "الاستمرارية المتّصلة"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Festigung ist wichtig. Die Beständigkeit hilft. Die Kontinuität ist stark. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 15 (الطريق بعد الامتحان!) اليوم الأول: التثبيت والاستمرارية والمتانة! نتعلّم اليوم: التثبيت والاستمرارية (الثبات) والاستمرارية المتّصلة!"
+    },
+    "srsBundleWordIds": [
+      "festigung",
+      "bestaendigkeit",
+      "kontinuitaet"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Festigung!",
+          "de": "~~der Festigung ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Festigung!",
+          "de": "Die Festigung ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Festigung ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «التثبيت» مذكّر! والألمانية: die Festigung (die! -ung مؤنثة دائماً!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Beständigkeit!",
+          "de": "~~das Beständigkeit hilft.~~"
+        },
+        "correct": {
+          "ar": "die Beständigkeit!",
+          "de": "Die Beständigkeit hilft."
+        },
+        "exercise": {
+          "q": "___ Beständigkeit hilft.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Beständigkeit (die! على -keit!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Kontinuität!",
+          "de": "~~der Kontinuität ist stark.~~"
+        },
+        "correct": {
+          "ar": "die Kontinuität!",
+          "de": "Die Kontinuität ist stark."
+        },
+        "exercise": {
+          "q": "___ Kontinuität ist stark.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Kontinuität (die! اسم مؤنث!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Festigung",
+      "https://www.duden.de/rechtschreibung/Bestaendigkeit",
+      "https://www.duden.de/rechtschreibung/Kontinuitaet"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-festigung",
+    "word-bestaendigkeit",
+    "word-kontinuitaet"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 15 (الطريق بعد الامتحان!) التثبيت",
+    "goetheWordListOverlap": [
+      "festigung",
+      "bestaendigkeit",
+      "kontinuitaet"
+    ]
+  }
+}

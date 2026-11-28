@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u15-d4",
+  "level": "B2",
+  "unit": 15,
+  "day": 4,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Aufbruch nach der Prüfung: der Wendepunkt ist da und der Meilenstein ist groß!",
+    "ar": "الوحدة 15 (الطريق بعد الامتحان!) اليوم الرابع: الانطلاق ونقطة التحوّل والمعلّم على الطريق!"
+  },
+  "canDoDaily": [
+    "يصف الانطلاق الجديد! (der Aufbruch!)",
+    "يصف نقطة التحوّل والمعلّم! (der Wendepunkt! der Meilenstein!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "erleichterung",
+      "ernuechterung",
+      "seufzer"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الانطلاق قريب.»؟"
+        },
+        "choices": [
+          "Der Aufbruch ist bald.",
+          "Das Aufbruch ist bald.",
+          "Die Aufbruch ist bald."
+        ],
+        "answer": "Der Aufbruch ist bald.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«نقطة التحوّل مهمة.»؟"
+        },
+        "choices": [
+          "Der Wendepunkt ist wichtig.",
+          "Das Wendepunkt ist wichtig.",
+          "Die Wendepunkt ist wichtig."
+        ],
+        "answer": "Der Wendepunkt ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "aufbruch",
+      "wendepunkt",
+      "meilenstein"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u15-s4"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Aufbruch, Wendepunkt, Meilenstein: Wir starten das Neue!",
+        "ar": "اليوم الرابع من الوحدة 15! (الانطلاق! التحوّل! المعلّم!)"
+      },
+      "situation": {
+        "de": "Aufbruch, Wendepunkt, Meilenstein — zusammen starten.",
+        "ar": "انطلاق! تحوّل! معلّم! — ننطلق معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "der Aufbruch (der! مركّب!) وder Wendepunkt (der! مركّب!) وder Meilenstein (der! مركّب!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: den Aufbruch machen! ein Meilenstein sein!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "erleichterung",
+          "ernuechterung",
+          "seufzer"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "der Aufbruch",
+                "ar": "الانطلاق"
+              },
+              {
+                "de": "der Wendepunkt",
+                "ar": "نقطة التحوّل"
+              },
+              {
+                "de": "der Meilenstein",
+                "ar": "المعلّم على الطريق (الإطار التأريخي)"
+              }
+            ],
+            "why": "der Aufbruch الانطلاق (der! der!) · der Wendepunkt نقطة التحوّل (der! der!) · der Meilenstein المعلّم على الطريق (الإطار التأريخي) (der! der!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Erleichterung",
+                "ar": "الارتياح"
+              },
+              {
+                "de": "die Ernüchterung",
+                "ar": "الصحو المؤلم (خيبة التوقّع)"
+              },
+              {
+                "de": "der Seufzer",
+                "ar": "التنهّدة"
+              }
+            ],
+            "why": "استدعاء سابق: die Erleichterung الارتياح · die Ernüchterung الصحو المؤلم (خيبة التوقّع) · der Seufzer التنهّدة"
+          },
+          {
+            "pairs": [
+              {
+                "de": "der Aufbruch",
+                "ar": "الانطلاق"
+              },
+              {
+                "de": "die Erleichterung",
+                "ar": "الارتياح"
+              },
+              {
+                "de": "der Wendepunkt",
+                "ar": "نقطة التحوّل"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "erleichterung",
+          "ernuechterung",
+          "seufzer"
+        ],
+        "items": [
+          {
+            "q": "der ___ ist wichtig. (الانطلاق!)",
+            "a": "Aufbruch",
+            "why": "der Aufbruch الانطلاق (der! der!) — Der Aufbruch ist bald."
+          },
+          {
+            "q": "der ___ ist wichtig. (نقطة التحوّل!)",
+            "a": "Wendepunkt",
+            "why": "der Wendepunkt نقطة التحوّل (der! der!) — Der Wendepunkt ist wichtig."
+          },
+          {
+            "q": "der ___ ist wichtig. (المعلّم على الطريق (الإطار التأريخي)!)",
+            "a": "Meilenstein",
+            "why": "der Meilenstein المعلّم على الطريق (الإطار التأريخي) (der! der!) — Der Meilenstein ist wichtig."
+          },
+          {
+            "q": "Die ___ ist groß.",
+            "a": "Erleichterung",
+            "why": "الكلمة الناقصة «Erleichterung» تعني «الارتياح» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist schwer.",
+            "a": "Ernüchterung",
+            "why": "الكلمة الناقصة «Ernüchterung» تعني «الصحو المؤلم (خيبة التوقّع)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Der ___ ist lang.",
+            "a": "Seufzer",
+            "why": "الكلمة الناقصة «Seufzer» تعني «التنهّدة» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "erleichterung",
+          "ernuechterung",
+          "seufzer"
+        ],
+        "items": [
+          {
+            "q": "~~die Aufbruch!~~",
+            "a": "Der Aufbruch ist bald.",
+            "why": "العربية: «الانطلاق» مؤنث! والألمانية: der Aufbruch (der! مركّب مذكّر!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Wendepunkt!~~",
+            "a": "Der Wendepunkt ist wichtig.",
+            "why": "الألمانية: der Wendepunkt (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Meilenstein!~~",
+            "a": "Der Meilenstein ist wichtig.",
+            "why": "الألمانية: der Meilenstein (der! مركّب مذكّر!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die erleichterung ist groß.~~",
+            "a": "Die Erleichterung ist groß.",
+            "why": "الخطأ في «erleichterung»! الصواب «Erleichterung» — راجع القاعدة (الارتياح)."
+          },
+          {
+            "q": "~~Die ernüchterung ist schwer.~~",
+            "a": "Die Ernüchterung ist schwer.",
+            "why": "الخطأ في «ernüchterung»! الصواب «Ernüchterung» — راجع القاعدة (الصحو المؤلم (خيبة التوقّع))."
+          },
+          {
+            "q": "~~Der seufzer ist lang.~~",
+            "a": "Der Seufzer ist lang.",
+            "why": "الخطأ في «seufzer»! الصواب «Seufzer» — راجع القاعدة (التنهّدة)."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "erleichterung",
+          "ernuechterung",
+          "seufzer"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالانطلاق! (جملتان!)",
+            "a": "Der Aufbruch ist bald. Der Wendepunkt ist wichtig.",
+            "why": "الانطلاق أولًا!"
+          },
+          {
+            "q": "تحدّث عن نقطة التحوّل! (جملتان!)",
+            "a": "Der Wendepunkt ist wichtig. Das ist gut.",
+            "why": "نقطة التحوّل — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "تحدّث عن المعلّم على الطريق (الإطار التأريخي)! (جملتان!)",
+            "a": "Der Meilenstein ist wichtig. der Meilenstein hilft.",
+            "why": "المعلّم على الطريق (الإطار التأريخي) — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Erleichterung» («الارتياح») ثم تحدّث بها.",
+            "a": "Die Erleichterung ist groß.",
+            "why": "استعمل «die Erleichterung» («الارتياح») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Ernüchterung» («الصحو المؤلم (خيبة التوقّع)») ثم تحدّث بها.",
+            "a": "Die Ernüchterung ist schwer.",
+            "why": "استعمل «die Ernüchterung» («الصحو المؤلم (خيبة التوقّع)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «der Seufzer» («التنهّدة») ثم تحدّث بها.",
+            "a": "Der Seufzer ist lang.",
+            "why": "استعمل «der Seufzer» («التنهّدة») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "erleichterung",
+          "ernuechterung",
+          "seufzer"
+        ],
+        "items": [
+          {
+            "audioId": "word-aufbruch",
+            "speakText": "der Aufbruch.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الانطلاق",
+              "نقطة التحوّل",
+              "المعلّم على الطريق (الإطار التأريخي)"
+            ],
+            "a": "الانطلاق",
+            "why": "الصوت يقول «der Aufbruch» — معناها «الانطلاق». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-wendepunkt",
+            "speakText": "der Wendepunkt.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "نقطة التحوّل",
+              "المعلّم على الطريق (الإطار التأريخي)",
+              "الانطلاق"
+            ],
+            "a": "نقطة التحوّل",
+            "why": "الصوت يقول «der Wendepunkt» — معناها «نقطة التحوّل». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-meilenstein",
+            "speakText": "der Meilenstein.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المعلّم على الطريق (الإطار التأريخي)",
+              "الانطلاق",
+              "نقطة التحوّل"
+            ],
+            "a": "المعلّم على الطريق (الإطار التأريخي)",
+            "why": "الصوت يقول «der Meilenstein» — معناها «المعلّم على الطريق (الإطار التأريخي)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-erleichterung",
+            "speakText": "die Erleichterung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الارتياح",
+              "الصحو المؤلم (خيبة التوقّع)",
+              "الانطلاق"
+            ],
+            "a": "الارتياح",
+            "why": "الكلمة المسموعة «die Erleichterung» تعني «الارتياح». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-ernuechterung",
+            "speakText": "die Ernüchterung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الصحو المؤلم (خيبة التوقّع)",
+              "التنهّدة",
+              "نقطة التحوّل"
+            ],
+            "a": "الصحو المؤلم (خيبة التوقّع)",
+            "why": "الكلمة المسموعة «die Ernüchterung» تعني «الصحو المؤلم (خيبة التوقّع)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-seufzer",
+            "speakText": "der Seufzer.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التنهّدة",
+              "الارتياح",
+              "المعلّم على الطريق (الإطار التأريخي)"
+            ],
+            "a": "التنهّدة",
+            "why": "الكلمة المسموعة «der Seufzer» تعني «التنهّدة». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-erleichterung",
+            "speakText": "die Erleichterung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الارتياح",
+              "الصحو المؤلم (خيبة التوقّع)",
+              "الانطلاق"
+            ],
+            "a": "الارتياح",
+            "why": "الكلمة المسموعة «die Erleichterung» تعني «الارتياح». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "erleichterung",
+          "ernuechterung"
+        ],
+        "items": [
+          {
+            "audioId": "word-aufbruch",
+            "speakText": "der Aufbruch.",
+            "a": "der Aufbruch",
+            "why": "اكتب ما تسمعه حرفياً: «der Aufbruch» تعني «الانطلاق». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-wendepunkt",
+            "speakText": "der Wendepunkt.",
+            "a": "der Wendepunkt",
+            "why": "اكتب ما تسمعه حرفياً: «der Wendepunkt» تعني «نقطة التحوّل». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-erleichterung",
+            "speakText": "die Erleichterung.",
+            "a": "die Erleichterung",
+            "why": "اكتب ما تسمعه حرفياً: «die Erleichterung» تعني «الارتياح». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-ernuechterung",
+            "speakText": "die Ernüchterung.",
+            "a": "die Ernüchterung",
+            "why": "اكتب ما تسمعه حرفياً: «die Ernüchterung» تعني «الصحو المؤلم (خيبة التوقّع)». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الانطلاق»؟",
+            "a": "der Aufbruch"
+          },
+          {
+            "q": "«نقطة التحوّل»؟",
+            "a": "der Wendepunkt"
+          },
+          {
+            "q": "«المعلّم على الطريق (الإطار التأريخي)»؟",
+            "a": "der Meilenstein"
+          },
+          {
+            "q": "«الانطلاق قريب.»؟",
+            "a": "Der Aufbruch ist bald."
+          },
+          {
+            "q": "«نقطة التحوّل مهمة.»؟",
+            "a": "Der Wendepunkt ist wichtig."
+          },
+          {
+            "q": "«المعلّم على الطريق مهم.»؟",
+            "a": "Der Meilenstein ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "der Aufbruch",
+            "a": "الانطلاق"
+          },
+          {
+            "q": "der Wendepunkt",
+            "a": "نقطة التحوّل"
+          },
+          {
+            "q": "der Meilenstein",
+            "a": "المعلّم على الطريق (الإطار التأريخي)"
+          },
+          {
+            "q": "«المعلّم على الطريق مهم.»؟",
+            "a": "Der Meilenstein ist wichtig."
+          },
+          {
+            "q": "«نقطة التحوّل مهمة.»؟",
+            "a": "Der Wendepunkt ist wichtig."
+          },
+          {
+            "q": "«الانطلاق قريب.»؟",
+            "a": "Der Aufbruch ist bald."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«المعلّم على الطريق (الإطار التأريخي)»؟",
+            "a": "der Meilenstein"
+          },
+          {
+            "q": "«نقطة التحوّل»؟",
+            "a": "der Wendepunkt"
+          },
+          {
+            "q": "«الانطلاق»؟",
+            "a": "der Aufbruch"
+          },
+          {
+            "q": "der Aufbruch",
+            "a": "الانطلاق"
+          },
+          {
+            "q": "der Wendepunkt",
+            "a": "نقطة التحوّل"
+          },
+          {
+            "q": "der Meilenstein",
+            "a": "المعلّم على الطريق (الإطار التأريخي)"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Aufbruch ist bald. Der Wendepunkt ist wichtig. Der Meilenstein ist wichtig. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 15 (الطريق بعد الامتحان!) اليوم الرابع: الانطلاق ونقطة التحوّل والمعلّم على الطريق! نتعلّم اليوم: الانطلاق ونقطة التحوّل والمعلّم على الطريق (الإطار التأريخي)!"
+    },
+    "srsBundleWordIds": [
+      "aufbruch",
+      "wendepunkt",
+      "meilenstein"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Aufbruch!",
+          "de": "~~die Aufbruch ist bald.~~"
+        },
+        "correct": {
+          "ar": "der Aufbruch!",
+          "de": "Der Aufbruch ist bald."
+        },
+        "exercise": {
+          "q": "___ Aufbruch ist bald.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الانطلاق» مؤنث! والألمانية: der Aufbruch (der! مركّب مذكّر!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Wendepunkt!",
+          "de": "~~die Wendepunkt ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "der Wendepunkt!",
+          "de": "Der Wendepunkt ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Wendepunkt ist wichtig.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "الألمانية: der Wendepunkt (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Meilenstein!",
+          "de": "~~das Meilenstein ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "der Meilenstein!",
+          "de": "Der Meilenstein ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Meilenstein ist wichtig.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "الألمانية: der Meilenstein (der! مركّب مذكّر!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Aufbruch",
+      "https://www.duden.de/rechtschreibung/Wendepunkt",
+      "https://www.duden.de/rechtschreibung/Meilenstein"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-aufbruch",
+    "word-wendepunkt",
+    "word-meilenstein"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 15 (الطريق بعد الامتحان!) الانطلاق",
+    "goetheWordListOverlap": [
+      "aufbruch",
+      "wendepunkt",
+      "meilenstein"
+    ]
+  }
+}

@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u15-d2",
+  "level": "B2",
+  "unit": 15,
+  "day": 2,
+  "kind": "content",
+  "ziel": {
+    "de": "Der Eifer am Morgen: mit Entschlossenheit und Hartnäckigkeit geht alles!",
+    "ar": "الوحدة 15 (الطريق بعد الامتحان!) اليوم الثاني: الجدّ والعزيمة والمثابرة!"
+  },
+  "canDoDaily": [
+    "يصف الجدّ في العمل! (der Eifer!)",
+    "يصف العزيمة والمثابرة! (die Entschlossenheit! die Hartnäckigkeit!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "anweisung",
+      "nervositaet",
+      "sammlung"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«الجدّ كبير.»؟"
+        },
+        "choices": [
+          "Der Eifer ist groß.",
+          "Das Eifer ist groß.",
+          "Die Eifer ist groß."
+        ],
+        "answer": "Der Eifer ist groß.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«المثابرة مهمة.»؟"
+        },
+        "choices": [
+          "Die Hartnäckigkeit ist wichtig.",
+          "Der Hartnäckigkeit ist wichtig.",
+          "Das Hartnäckigkeit ist wichtig."
+        ],
+        "answer": "Die Hartnäckigkeit ist wichtig.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "eifer",
+      "entschlossenheit",
+      "hartnaeckigkeit"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u15-s2"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Eifer, Entschlossenheit, Hartnäckigkeit: Wir arbeiten mit Eifer!",
+        "ar": "اليوم الثاني من الوحدة 15! (الجدّ! العزيمة! المثابرة!)"
+      },
+      "situation": {
+        "de": "Eifer, Entschlossenheit, Hartnäckigkeit — zusammen arbeiten.",
+        "ar": "جدّ! عزيمة! مثابرة! — نعمل معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "der Eifer (der! اسم مذكّر!) وdie Entschlossenheit (die! على -heit!) وdie Hartnäckigkeit (die! على -keit!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Eifer zeigen! Entschlossenheit haben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "anweisung",
+          "nervositaet",
+          "sammlung"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "der Eifer",
+                "ar": "الجدّ (الحماس)"
+              },
+              {
+                "de": "die Entschlossenheit",
+                "ar": "العزيمة"
+              },
+              {
+                "de": "die Hartnäckigkeit",
+                "ar": "المثابرة"
+              }
+            ],
+            "why": "der Eifer الجدّ (الحماس) (der! der!) · die Entschlossenheit العزيمة (die! die!) · die Hartnäckigkeit المثابرة (die! -keit مؤنثة!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Anweisung",
+                "ar": "التعليمات (الأمر)"
+              },
+              {
+                "de": "die Nervosität",
+                "ar": "العصبية (التوتر)"
+              },
+              {
+                "de": "die Sammlung",
+                "ar": "الهدوء والتركيز (التجمّع)"
+              }
+            ],
+            "why": "استدعاء سابق: die Anweisung التعليمات (الأمر) · die Nervosität العصبية (التوتر) · die Sammlung الهدوء والتركيز (التجمّع)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "der Eifer",
+                "ar": "الجدّ (الحماس)"
+              },
+              {
+                "de": "die Anweisung",
+                "ar": "التعليمات (الأمر)"
+              },
+              {
+                "de": "die Entschlossenheit",
+                "ar": "العزيمة"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "anweisung",
+          "nervositaet",
+          "sammlung"
+        ],
+        "items": [
+          {
+            "q": "der ___ ist wichtig. (الجدّ (الحماس)!)",
+            "a": "Eifer",
+            "why": "der Eifer الجدّ (الحماس) (der! der!) — Der Eifer ist groß."
+          },
+          {
+            "q": "die ___ ist wichtig. (العزيمة!)",
+            "a": "Entschlossenheit",
+            "why": "die Entschlossenheit العزيمة (die! die!) — Die Entschlossenheit ist stark."
+          },
+          {
+            "q": "die ___ ist wichtig. (المثابرة!)",
+            "a": "Hartnäckigkeit",
+            "why": "die Hartnäckigkeit المثابرة (die! -keit مؤنثة!) — Die Hartnäckigkeit ist wichtig."
+          },
+          {
+            "q": "Die ___ ist klar.",
+            "a": "Anweisung",
+            "why": "الكلمة الناقصة «Anweisung» تعني «التعليمات (الأمر)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist groß.",
+            "a": "Nervosität",
+            "why": "الكلمة الناقصة «Nervosität» تعني «العصبية (التوتر)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ hilft.",
+            "a": "Sammlung",
+            "why": "الكلمة الناقصة «Sammlung» تعني «الهدوء والتركيز (التجمّع)» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "anweisung",
+          "nervositaet",
+          "sammlung"
+        ],
+        "items": [
+          {
+            "q": "~~die Eifer!~~",
+            "a": "Der Eifer ist groß.",
+            "why": "العربية: «الجدّ» مؤنث! والألمانية: der Eifer (der! مذكّر!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Entschlossenheit!~~",
+            "a": "Die Entschlossenheit ist stark.",
+            "why": "الألمانية: die Entschlossenheit (die! على -heit!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~der Hartnäckigkeit!~~",
+            "a": "Die Hartnäckigkeit ist wichtig.",
+            "why": "الألمانية: die Hartnäckigkeit (die! على -keit!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die anweisung ist klar.~~",
+            "a": "Die Anweisung ist klar.",
+            "why": "الخطأ في «anweisung»! الصواب «Anweisung» — راجع القاعدة (التعليمات (الأمر))."
+          },
+          {
+            "q": "~~Die nervosität ist groß.~~",
+            "a": "Die Nervosität ist groß.",
+            "why": "الخطأ في «nervosität»! الصواب «Nervosität» — راجع القاعدة (العصبية (التوتر))."
+          },
+          {
+            "q": "~~Die sammlung hilft.~~",
+            "a": "Die Sammlung hilft.",
+            "why": "الخطأ في «sammlung»! الصواب «Sammlung» — راجع القاعدة (الهدوء والتركيز (التجمّع))."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "anweisung",
+          "nervositaet",
+          "sammlung"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالجدّ (الحماس)! (جملتان!)",
+            "a": "Der Eifer ist groß. Die Entschlossenheit ist stark.",
+            "why": "الجدّ (الحماس) أولًا!"
+          },
+          {
+            "q": "تحدّث عن العزيمة! (جملتان!)",
+            "a": "Die Entschlossenheit ist stark. Das ist gut.",
+            "why": "العزيمة — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "تحدّث عن المثابرة! (جملتان!)",
+            "a": "Die Hartnäckigkeit ist wichtig. die Hartnäckigkeit hilft.",
+            "why": "المثابرة — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Anweisung» («التعليمات (الأمر)») ثم تحدّث بها.",
+            "a": "Die Anweisung ist klar.",
+            "why": "استعمل «die Anweisung» («التعليمات (الأمر)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Nervosität» («العصبية (التوتر)») ثم تحدّث بها.",
+            "a": "Die Nervosität ist groß.",
+            "why": "استعمل «die Nervosität» («العصبية (التوتر)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Sammlung» («الهدوء والتركيز (التجمّع)») ثم تحدّث بها.",
+            "a": "Die Sammlung hilft.",
+            "why": "استعمل «die Sammlung» («الهدوء والتركيز (التجمّع)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "anweisung",
+          "nervositaet",
+          "sammlung"
+        ],
+        "items": [
+          {
+            "audioId": "word-eifer",
+            "speakText": "der Eifer.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الجدّ (الحماس)",
+              "العزيمة",
+              "المثابرة"
+            ],
+            "a": "الجدّ (الحماس)",
+            "why": "الصوت يقول «der Eifer» — معناها «الجدّ (الحماس)». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-entschlossenheit",
+            "speakText": "die Entschlossenheit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "العزيمة",
+              "المثابرة",
+              "الجدّ (الحماس)"
+            ],
+            "a": "العزيمة",
+            "why": "الصوت يقول «die Entschlossenheit» — معناها «العزيمة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-hartnaeckigkeit",
+            "speakText": "die Hartnäckigkeit.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المثابرة",
+              "الجدّ (الحماس)",
+              "العزيمة"
+            ],
+            "a": "المثابرة",
+            "why": "الصوت يقول «die Hartnäckigkeit» — معناها «المثابرة». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-anweisung",
+            "speakText": "die Anweisung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التعليمات (الأمر)",
+              "العصبية (التوتر)",
+              "الجدّ (الحماس)"
+            ],
+            "a": "التعليمات (الأمر)",
+            "why": "الكلمة المسموعة «die Anweisung» تعني «التعليمات (الأمر)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-nervositaet",
+            "speakText": "die Nervosität.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "العصبية (التوتر)",
+              "الهدوء والتركيز (التجمّع)",
+              "العزيمة"
+            ],
+            "a": "العصبية (التوتر)",
+            "why": "الكلمة المسموعة «die Nervosität» تعني «العصبية (التوتر)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-sammlung",
+            "speakText": "die Sammlung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "الهدوء والتركيز (التجمّع)",
+              "التعليمات (الأمر)",
+              "المثابرة"
+            ],
+            "a": "الهدوء والتركيز (التجمّع)",
+            "why": "الكلمة المسموعة «die Sammlung» تعني «الهدوء والتركيز (التجمّع)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-anweisung",
+            "speakText": "die Anweisung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "التعليمات (الأمر)",
+              "العصبية (التوتر)",
+              "الجدّ (الحماس)"
+            ],
+            "a": "التعليمات (الأمر)",
+            "why": "الكلمة المسموعة «die Anweisung» تعني «التعليمات (الأمر)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "anweisung",
+          "nervositaet"
+        ],
+        "items": [
+          {
+            "audioId": "word-eifer",
+            "speakText": "der Eifer.",
+            "a": "der Eifer",
+            "why": "اكتب ما تسمعه حرفياً: «der Eifer» تعني «الجدّ (الحماس)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-entschlossenheit",
+            "speakText": "die Entschlossenheit.",
+            "a": "die Entschlossenheit",
+            "why": "اكتب ما تسمعه حرفياً: «die Entschlossenheit» تعني «العزيمة». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-anweisung",
+            "speakText": "die Anweisung.",
+            "a": "die Anweisung",
+            "why": "اكتب ما تسمعه حرفياً: «die Anweisung» تعني «التعليمات (الأمر)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-nervositaet",
+            "speakText": "die Nervosität.",
+            "a": "die Nervosität",
+            "why": "اكتب ما تسمعه حرفياً: «die Nervosität» تعني «العصبية (التوتر)». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«الجدّ (الحماس)»؟",
+            "a": "der Eifer"
+          },
+          {
+            "q": "«العزيمة»؟",
+            "a": "die Entschlossenheit"
+          },
+          {
+            "q": "«المثابرة»؟",
+            "a": "die Hartnäckigkeit"
+          },
+          {
+            "q": "«الجدّ كبير.»؟",
+            "a": "Der Eifer ist groß."
+          },
+          {
+            "q": "«العزيمة قوية.»؟",
+            "a": "Die Entschlossenheit ist stark."
+          },
+          {
+            "q": "«المثابرة مهمة.»؟",
+            "a": "Die Hartnäckigkeit ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "der Eifer",
+            "a": "الجدّ (الحماس)"
+          },
+          {
+            "q": "die Entschlossenheit",
+            "a": "العزيمة"
+          },
+          {
+            "q": "die Hartnäckigkeit",
+            "a": "المثابرة"
+          },
+          {
+            "q": "«المثابرة مهمة.»؟",
+            "a": "Die Hartnäckigkeit ist wichtig."
+          },
+          {
+            "q": "«العزيمة قوية.»؟",
+            "a": "Die Entschlossenheit ist stark."
+          },
+          {
+            "q": "«الجدّ كبير.»؟",
+            "a": "Der Eifer ist groß."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«المثابرة»؟",
+            "a": "die Hartnäckigkeit"
+          },
+          {
+            "q": "«العزيمة»؟",
+            "a": "die Entschlossenheit"
+          },
+          {
+            "q": "«الجدّ (الحماس)»؟",
+            "a": "der Eifer"
+          },
+          {
+            "q": "der Eifer",
+            "a": "الجدّ (الحماس)"
+          },
+          {
+            "q": "die Entschlossenheit",
+            "a": "العزيمة"
+          },
+          {
+            "q": "die Hartnäckigkeit",
+            "a": "المثابرة"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Der Eifer ist groß. Die Entschlossenheit ist stark. Die Hartnäckigkeit ist wichtig. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 15 (الطريق بعد الامتحان!) اليوم الثاني: الجدّ والعزيمة والمثابرة! نتعلّم اليوم: الجدّ (الحماس) والعزيمة والمثابرة!"
+    },
+    "srsBundleWordIds": [
+      "eifer",
+      "entschlossenheit",
+      "hartnaeckigkeit"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "die Eifer!",
+          "de": "~~die Eifer ist groß.~~"
+        },
+        "correct": {
+          "ar": "der Eifer!",
+          "de": "Der Eifer ist groß."
+        },
+        "exercise": {
+          "q": "___ Eifer ist groß.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "العربية: «الجدّ» مؤنث! والألمانية: der Eifer (der! مذكّر!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Entschlossenheit!",
+          "de": "~~das Entschlossenheit ist stark.~~"
+        },
+        "correct": {
+          "ar": "die Entschlossenheit!",
+          "de": "Die Entschlossenheit ist stark."
+        },
+        "exercise": {
+          "q": "___ Entschlossenheit ist stark.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Entschlossenheit (die! على -heit!) — لا das أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "der Hartnäckigkeit!",
+          "de": "~~der Hartnäckigkeit ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Hartnäckigkeit!",
+          "de": "Die Hartnäckigkeit ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Hartnäckigkeit ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Hartnäckigkeit (die! على -keit!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Eifer",
+      "https://www.duden.de/rechtschreibung/Entschlossenheit",
+      "https://www.duden.de/rechtschreibung/Hartnaeckigkeit"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-eifer",
+    "word-entschlossenheit",
+    "word-hartnaeckigkeit"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 15 (الطريق بعد الامتحان!) الجدّ",
+    "goetheWordListOverlap": [
+      "eifer",
+      "entschlossenheit",
+      "hartnaeckigkeit"
+    ]
+  }
+}

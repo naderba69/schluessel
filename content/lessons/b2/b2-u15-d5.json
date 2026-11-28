@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "b2-u15-d5",
+  "level": "B2",
+  "unit": 15,
+  "day": 5,
+  "kind": "content",
+  "ziel": {
+    "de": "Die Würdigung der Arbeit: eine Zeremonie für alle — und der Ansporn bleibt!",
+    "ar": "الوحدة 15 (الطريق بعد الامتحان!) اليوم الخامس: التقدير والمراسم والحافز!"
+  },
+  "canDoDaily": [
+    "يصف التقدير للعمل! (die Würdigung!)",
+    "يصف المراسم والحافز! (die Zeremonie! der Ansporn!)"
+  ],
+  "warmup": {
+    "cardIds": [
+      "bewertung",
+      "bescheinigung",
+      "verlaengerung"
+    ]
+  },
+  "einstieg": {
+    "pretestItems": [
+      {
+        "prompt": {
+          "ar": "«التقدير مهم.»؟"
+        },
+        "choices": [
+          "Die Würdigung ist wichtig.",
+          "Der Würdigung ist wichtig.",
+          "Das Würdigung ist wichtig."
+        ],
+        "answer": "Die Würdigung ist wichtig.",
+        "revealNextSession": true
+      },
+      {
+        "prompt": {
+          "ar": "«الحافز جيد.»؟"
+        },
+        "choices": [
+          "Der Ansporn ist gut.",
+          "Das Ansporn ist gut.",
+          "Die Ansporn ist gut."
+        ],
+        "answer": "Der Ansporn ist gut.",
+        "revealNextSession": true
+      }
+    ]
+  },
+  "praesentation": {
+    "wordIds": [
+      "wuerdigung",
+      "zeremonie",
+      "ansporn"
+    ],
+    "borrowedWords": [],
+    "grammarArsenalIds": [
+      "ars-praesentation",
+      "ars-fragerunde"
+    ],
+    "storySentenceIds": [
+      "story-b2-u15-s5"
+    ],
+    "dualCodingRequired": true,
+    "riskFlagsShown": []
+  },
+  "uebung": {
+    "communicativeTask": {
+      "goal": {
+        "de": "Würdigung, Zeremonie, Ansporn: Wir feiern den Weg!",
+        "ar": "اليوم الخامس من الوحدة 15! (التقدير! المراسم! الحافز!)"
+      },
+      "situation": {
+        "de": "Würdigung, Zeremonie, Ansporn — zusammen feiern.",
+        "ar": "تقدير! مراسم! حافز! — نحتفل معًا!"
+      },
+      "successCriteria": [
+        "كلمات اليوم الثلاث كلها في التدريب!",
+        "die Würdigung (die! -ung!) وdie Zeremonie (die! اسم مؤنث!) وder Ansporn (der! مركّب!)",
+        "الكلام أولًا ثم التقييم!",
+        "المفردات الثابتة: Würdigung bekommen! Ansporn geben!"
+      ]
+    },
+    "stations": [
+      {
+        "type": "match",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "bewertung",
+          "bescheinigung",
+          "verlaengerung"
+        ],
+        "items": [
+          {
+            "pairs": [
+              {
+                "de": "die Würdigung",
+                "ar": "التقدير"
+              },
+              {
+                "de": "die Zeremonie",
+                "ar": "المراسم"
+              },
+              {
+                "de": "der Ansporn",
+                "ar": "الحافز"
+              }
+            ],
+            "why": "die Würdigung التقدير (die! -ung مؤنثة!) · die Zeremonie المراسم (die! -e مؤنثة!) · der Ansporn الحافز (der! der!)"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Bewertung",
+                "ar": "التقييم (الدرجة)"
+              },
+              {
+                "de": "die Bescheinigung",
+                "ar": "الشهادة (الإفادة الرسمية)"
+              },
+              {
+                "de": "die Verlängerung",
+                "ar": "التمديد"
+              }
+            ],
+            "why": "استدعاء سابق: die Bewertung التقييم (الدرجة) · die Bescheinigung الشهادة (الإفادة الرسمية) · die Verlängerung التمديد"
+          },
+          {
+            "pairs": [
+              {
+                "de": "die Würdigung",
+                "ar": "التقدير"
+              },
+              {
+                "de": "die Bewertung",
+                "ar": "التقييم (الدرجة)"
+              },
+              {
+                "de": "die Zeremonie",
+                "ar": "المراسم"
+              }
+            ],
+            "why": "خلط جديد وقديم: الجديد يُضاف إلى المحفوظ!"
+          }
+        ]
+      },
+      {
+        "type": "gap-fill",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "bewertung",
+          "bescheinigung",
+          "verlaengerung"
+        ],
+        "items": [
+          {
+            "q": "die ___ ist wichtig. (التقدير!)",
+            "a": "Würdigung",
+            "why": "die Würdigung التقدير (die! -ung مؤنثة!) — Die Würdigung ist wichtig."
+          },
+          {
+            "q": "die ___ ist wichtig. (المراسم!)",
+            "a": "Zeremonie",
+            "why": "die Zeremonie المراسم (die! -e مؤنثة!) — Die Zeremonie ist schön."
+          },
+          {
+            "q": "der ___ ist wichtig. (الحافز!)",
+            "a": "Ansporn",
+            "why": "der Ansporn الحافز (der! der!) — Der Ansporn ist gut."
+          },
+          {
+            "q": "Die ___ ist fair.",
+            "a": "Bewertung",
+            "why": "الكلمة الناقصة «Bewertung» تعني «التقييم (الدرجة)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist wichtig.",
+            "a": "Bescheinigung",
+            "why": "الكلمة الناقصة «Bescheinigung» تعني «الشهادة (الإفادة الرسمية)» — تذكر صيغتها في السياق."
+          },
+          {
+            "q": "Die ___ ist möglich.",
+            "a": "Verlängerung",
+            "why": "الكلمة الناقصة «Verlängerung» تعني «التمديد» — تذكر صيغتها في السياق."
+          }
+        ]
+      },
+      {
+        "type": "error-hunt",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "bewertung",
+          "bescheinigung",
+          "verlaengerung"
+        ],
+        "items": [
+          {
+            "q": "~~der Würdigung!~~",
+            "a": "Die Würdigung ist wichtig.",
+            "why": "الألمانية: die Würdigung (die! -ung مؤنثة دائماً!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~das Zeremonie!~~",
+            "a": "Die Zeremonie ist schön.",
+            "why": "العربية: «المراسم» مذكّرة! والألمانية: die Zeremonie (die! اسم مؤنث!) (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~die Ansporn!~~",
+            "a": "Der Ansporn ist gut.",
+            "why": "الألمانية: der Ansporn (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+          },
+          {
+            "q": "~~Die bewertung ist fair.~~",
+            "a": "Die Bewertung ist fair.",
+            "why": "الخطأ في «bewertung»! الصواب «Bewertung» — راجع القاعدة (التقييم (الدرجة))."
+          },
+          {
+            "q": "~~Die bescheinigung ist wichtig.~~",
+            "a": "Die Bescheinigung ist wichtig.",
+            "why": "الخطأ في «bescheinigung»! الصواب «Bescheinigung» — راجع القاعدة (الشهادة (الإفادة الرسمية))."
+          },
+          {
+            "q": "~~Die verlängerung ist möglich.~~",
+            "a": "Die Verlängerung ist möglich.",
+            "why": "الخطأ في «verlängerung»! الصواب «Verlängerung» — راجع القاعدة (التمديد)."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "explanationRequired": true,
+        "hints": [
+          "الأداة أولاً!",
+          "المعنى بالعربية!"
+        ],
+        "interleavedWith": [
+          "bewertung",
+          "bescheinigung",
+          "verlaengerung"
+        ],
+        "items": [
+          {
+            "q": "ابدأ بـالتقدير! (جملتان!)",
+            "a": "Die Würdigung ist wichtig. Die Zeremonie ist schön.",
+            "why": "التقدير أولًا!"
+          },
+          {
+            "q": "تحدّث عن المراسم! (جملتان!)",
+            "a": "Die Zeremonie ist schön. Das ist gut.",
+            "why": "المراسم — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "تحدّث عن الحافز! (جملتان!)",
+            "a": "Der Ansporn ist gut. der Ansporn hilft.",
+            "why": "الحافز — تحدّث بجملة كاملة!"
+          },
+          {
+            "q": "كوّن جملة فيها «die Bewertung» («التقييم (الدرجة)») ثم تحدّث بها.",
+            "a": "Die Bewertung ist fair.",
+            "why": "استعمل «die Bewertung» («التقييم (الدرجة)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Bescheinigung» («الشهادة (الإفادة الرسمية)») ثم تحدّث بها.",
+            "a": "Die Bescheinigung ist wichtig.",
+            "why": "استعمل «die Bescheinigung» («الشهادة (الإفادة الرسمية)») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          },
+          {
+            "q": "كوّن جملة فيها «die Verlängerung» («التمديد») ثم تحدّث بها.",
+            "a": "Die Verlängerung ist möglich.",
+            "why": "استعمل «die Verlängerung» («التمديد») في جملة كاملة — الجملة النموذجية توضح الاستعمال."
+          }
+        ]
+      },
+      {
+        "type": "listening",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "bewertung",
+          "bescheinigung",
+          "verlaengerung"
+        ],
+        "items": [
+          {
+            "audioId": "word-wuerdigung",
+            "speakText": "die Würdigung.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "التقدير",
+              "المراسم",
+              "الحافز"
+            ],
+            "a": "التقدير",
+            "why": "الصوت يقول «die Würdigung» — معناها «التقدير». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-zeremonie",
+            "speakText": "die Zeremonie.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "المراسم",
+              "الحافز",
+              "التقدير"
+            ],
+            "a": "المراسم",
+            "why": "الصوت يقول «die Zeremonie» — معناها «المراسم». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-ansporn",
+            "speakText": "der Ansporn.",
+            "q": "استمع: ماذا تعني الكلمة؟",
+            "choices": [
+              "الحافز",
+              "التقدير",
+              "المراسم"
+            ],
+            "a": "الحافز",
+            "why": "الصوت يقول «der Ansporn» — معناها «الحافز». ركّز على الصوت لا على الشكل!"
+          },
+          {
+            "audioId": "word-bewertung",
+            "speakText": "die Bewertung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التقييم (الدرجة)",
+              "الشهادة (الإفادة الرسمية)",
+              "التقدير"
+            ],
+            "a": "التقييم (الدرجة)",
+            "why": "الكلمة المسموعة «die Bewertung» تعني «التقييم (الدرجة)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-bescheinigung",
+            "speakText": "die Bescheinigung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "الشهادة (الإفادة الرسمية)",
+              "التمديد",
+              "المراسم"
+            ],
+            "a": "الشهادة (الإفادة الرسمية)",
+            "why": "الكلمة المسموعة «die Bescheinigung» تعني «الشهادة (الإفادة الرسمية)». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-verlaengerung",
+            "speakText": "die Verlängerung.",
+            "q": "استمع: أي معنى صحيح؟",
+            "choices": [
+              "التمديد",
+              "التقييم (الدرجة)",
+              "الحافز"
+            ],
+            "a": "التمديد",
+            "why": "الكلمة المسموعة «die Verlängerung» تعني «التمديد». قارنها بالخيارات الأخرى صوتياً."
+          },
+          {
+            "audioId": "word-bewertung",
+            "speakText": "die Bewertung.",
+            "q": "استمع جيداً: ما الكلمة؟",
+            "choices": [
+              "التقييم (الدرجة)",
+              "الشهادة (الإفادة الرسمية)",
+              "التقدير"
+            ],
+            "a": "التقييم (الدرجة)",
+            "why": "الكلمة المسموعة «die Bewertung» تعني «التقييم (الدرجة)». قارنها بالخيارات الأخرى صوتياً."
+          }
+        ]
+      },
+      {
+        "type": "dictation",
+        "explanationRequired": true,
+        "interleavedWith": [
+          "bewertung",
+          "bescheinigung"
+        ],
+        "items": [
+          {
+            "audioId": "word-wuerdigung",
+            "speakText": "die Würdigung.",
+            "a": "die Würdigung",
+            "why": "اكتب ما تسمعه حرفياً: «die Würdigung» تعني «التقدير». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-zeremonie",
+            "speakText": "die Zeremonie.",
+            "a": "die Zeremonie",
+            "why": "اكتب ما تسمعه حرفياً: «die Zeremonie» تعني «المراسم». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-bewertung",
+            "speakText": "die Bewertung.",
+            "a": "die Bewertung",
+            "why": "اكتب ما تسمعه حرفياً: «die Bewertung» تعني «التقييم (الدرجة)». انتبه للحروف الكبيرة!"
+          },
+          {
+            "audioId": "word-bescheinigung",
+            "speakText": "die Bescheinigung.",
+            "a": "die Bescheinigung",
+            "why": "اكتب ما تسمعه حرفياً: «die Bescheinigung» تعني «الشهادة (الإفادة الرسمية)». انتبه للحروف الكبيرة!"
+          }
+        ]
+      }
+    ]
+  },
+  "slider": {
+    "questionDe": "Wie viel Prozent wirst du heute schaffen?",
+    "questionAr": "كم نسبة ما تتوقع إنجازه اليوم؟",
+    "min": 0,
+    "max": 100
+  },
+  "quiz": {
+    "variants": [
+      {
+        "items": [
+          {
+            "q": "«التقدير»؟",
+            "a": "die Würdigung"
+          },
+          {
+            "q": "«المراسم»؟",
+            "a": "die Zeremonie"
+          },
+          {
+            "q": "«الحافز»؟",
+            "a": "der Ansporn"
+          },
+          {
+            "q": "«التقدير مهم.»؟",
+            "a": "Die Würdigung ist wichtig."
+          },
+          {
+            "q": "«المراسم جميلة.»؟",
+            "a": "Die Zeremonie ist schön."
+          },
+          {
+            "q": "«الحافز جيد.»؟",
+            "a": "Der Ansporn ist gut."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "die Würdigung",
+            "a": "التقدير"
+          },
+          {
+            "q": "die Zeremonie",
+            "a": "المراسم"
+          },
+          {
+            "q": "der Ansporn",
+            "a": "الحافز"
+          },
+          {
+            "q": "«الحافز جيد.»؟",
+            "a": "Der Ansporn ist gut."
+          },
+          {
+            "q": "«المراسم جميلة.»؟",
+            "a": "Die Zeremonie ist schön."
+          },
+          {
+            "q": "«التقدير مهم.»؟",
+            "a": "Die Würdigung ist wichtig."
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "q": "«الحافز»؟",
+            "a": "der Ansporn"
+          },
+          {
+            "q": "«المراسم»؟",
+            "a": "die Zeremonie"
+          },
+          {
+            "q": "«التقدير»؟",
+            "a": "die Würdigung"
+          },
+          {
+            "q": "die Würdigung",
+            "a": "التقدير"
+          },
+          {
+            "q": "die Zeremonie",
+            "a": "المراسم"
+          },
+          {
+            "q": "der Ansporn",
+            "a": "الحافز"
+          }
+        ]
+      }
+    ]
+  },
+  "zusammenfassung": {
+    "summary": {
+      "de": "Die Würdigung ist wichtig. Die Zeremonie ist schön. Der Ansporn ist gut. Die Woche der Prüfung ist gut.",
+      "ar": "الوحدة 15 (الطريق بعد الامتحان!) اليوم الخامس: التقدير والمراسم والحافز! نتعلّم اليوم: التقدير والمراسم والحافز!"
+    },
+    "srsBundleWordIds": [
+      "wuerdigung",
+      "zeremonie",
+      "ansporn"
+    ],
+    "warningCards": [
+      {
+        "commonError": {
+          "ar": "der Würdigung!",
+          "de": "~~der Würdigung ist wichtig.~~"
+        },
+        "correct": {
+          "ar": "die Würdigung!",
+          "de": "Die Würdigung ist wichtig."
+        },
+        "exercise": {
+          "q": "___ Würdigung ist wichtig.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "الألمانية: die Würdigung (die! -ung مؤنثة دائماً!) — لا der أبداً! (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "das Zeremonie!",
+          "de": "~~das Zeremonie ist schön.~~"
+        },
+        "correct": {
+          "ar": "die Zeremonie!",
+          "de": "Die Zeremonie ist schön."
+        },
+        "exercise": {
+          "q": "___ Zeremonie ist schön.",
+          "a": "die"
+        },
+        "whyArabicSpeakerFails": "العربية: «المراسم» مذكّرة! والألمانية: die Zeremonie (die! اسم مؤنث!) (خريطة التداخل 10-ي!)"
+      },
+      {
+        "commonError": {
+          "ar": "die Ansporn!",
+          "de": "~~die Ansporn ist gut.~~"
+        },
+        "correct": {
+          "ar": "der Ansporn!",
+          "de": "Der Ansporn ist gut."
+        },
+        "exercise": {
+          "q": "___ Ansporn ist gut.",
+          "a": "der"
+        },
+        "whyArabicSpeakerFails": "الألمانية: der Ansporn (der! مركّب مذكّر!) — لا die أبداً! (خريطة التداخل 10-ي!)"
+      }
+    ]
+  },
+  "gReferences": {
+    "duden": [
+      "https://www.duden.de/rechtschreibung/Wuerdigung",
+      "https://www.duden.de/rechtschreibung/Zeremonie",
+      "https://www.duden.de/rechtschreibung/Ansporn"
+    ]
+  },
+  "usedArsenalIds": [
+    "ars-praesentation",
+    "ars-fragerunde"
+  ],
+  "audioManifestRefs": [
+    "word-wuerdigung",
+    "word-zeremonie",
+    "word-ansporn"
+  ],
+  "imageManifestRefs": [],
+  "curriculumRef": {
+    "netzwerkChapter": "Netzwerk neu B2 — needs-web-verify (D417: لا تخمين حتى مصدر مُتحقَّق!) — مسار B2: الوحدة 15 (الطريق بعد الامتحان!) التقدير",
+    "goetheWordListOverlap": [
+      "wuerdigung",
+      "zeremonie",
+      "ansporn"
+    ]
+  }
+}
